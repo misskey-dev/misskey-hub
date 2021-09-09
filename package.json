@@ -1,0 +1,16 @@
+{
+  "name": "misskey-hub",
+  "version": "0.0.0",
+  "main": "index.js",
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/misskey-dev/misskey-hub.git"
+  },
+  "devDependencies": {
+    "vuepress": "^2.0.0-beta.25"
+  }
+}
