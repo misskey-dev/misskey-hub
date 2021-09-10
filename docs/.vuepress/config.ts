@@ -7,6 +7,20 @@ export default defineUserConfig<DefaultThemeOptions>({
   description: 'Official website of Misskey project',
 
   themeConfig: {
-    logo: 'https://vuejs.org/images/logo.png',
+    logo: 'https://raw.githubusercontent.com/misskey-dev/assets/main/favicon.png',
+    navbar: [
+      // NavbarItem
+      {
+        text: 'Foo',
+        link: '/foo/',
+      },
+      // NavbarGroup
+      {
+        text: 'Docs',
+        children: ['/troubleshooting.md'],
+      },
+      // string - page file path
+      '/bar/README.md',
+    ],
   },
 })
