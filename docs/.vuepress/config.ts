@@ -1,11 +1,13 @@
+import { path } from '@vuepress/utils'
 import { defineUserConfig } from 'vuepress'
 import type { DefaultThemeOptions } from 'vuepress'
 
 export default defineUserConfig<DefaultThemeOptions>({
-  lang: 'en-US',
+  lang: 'ja-JP',
   title: 'Misskey Hub',
   description: 'Official website of Misskey project',
 
+	theme: path.resolve(__dirname, './theme'),
   themeConfig: {
     logo: 'https://raw.githubusercontent.com/misskey-dev/assets/main/favicon.png',
     navbar: [
@@ -23,4 +25,6 @@ export default defineUserConfig<DefaultThemeOptions>({
       '/bar/README.md',
     ],
   },
+
+	plugins: [['@vuepress/plugin-search']]
 })
