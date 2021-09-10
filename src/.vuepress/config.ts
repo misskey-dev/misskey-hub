@@ -34,7 +34,7 @@ export default defineUserConfig<DefaultThemeOptions>({
 				{
 					text: '運営者向け',
 					children: [
-						'/docs/install',
+						'/docs/install/install',
 						'/docs/admin/troubleshooting',
 					]
 				}
