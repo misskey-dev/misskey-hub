@@ -7,7 +7,7 @@ actions:
     link: /guide/getting-started.html
     type: primary
   - text: Misskeyについて知る
-    link: /guide/
+    link: /docs/misskey
     type: secondary
   - text: Misskeyをもっと楽しむ
     link: /guide/
