@@ -5,7 +5,7 @@
       <template v-else><span class="instance-url" v-text="uniUrl" /></template>
     </div>
     <div v-if="description" v-text="description"/>
-    <div class="instance-registration">{{ ts['instances-list-setting']['registration'] }}: {{ instance.meta.features.registration ? ts['instances-list-setting']['registration-statuses'].open : ts['instances-list-setting']['registration-statuses'].close }}</div>
+    <div class="instance-registration">{{ ts['registration'] }}: {{ instance.meta.features.registration ? ts['registration-statuses'].open : ts['registration-statuses'].close }}</div>
     <div class="instance-version">{{ instance.repo }} {{ instance.meta.version }}</div>
     <div class="instance-stats">{{ numeral(instance.stats.originalNotesCount).format('0,0') }} notes
       | {{ numeral(instance.stats.originalUsersCount).format('0,0') }} users
@@ -27,6 +27,10 @@ export default defineComponent({
       type: Object,
       required: true
     },
+    ts: {
+      type: Object,
+      required: true
+    }
   },
 
   components: {
@@ -39,8 +43,6 @@ export default defineComponent({
       uniUrl,
       hasName: this.instance.meta.name && this.instance.meta.name !== uniUrl,
       numeral,
-
-			ts
     }
   },
 
