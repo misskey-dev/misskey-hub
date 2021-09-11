@@ -57,6 +57,17 @@ export default defineUserConfig<DefaultThemeOptions>({
 					link: 'https://crowdin.com/project/misskey',
 				},
 				{
+					text: '藍.moe',
+					link: 'https://xn--931a.moe',
+				},
+				{
+					text: 'アカウント',
+					children: [{
+						text: '@repo@misskey.io',
+						link: 'https://misskey.io/@repo',
+					}]
+				},
+				{
 					text: 'リポジトリ',
 					children: [{
 						text: 'misskey',

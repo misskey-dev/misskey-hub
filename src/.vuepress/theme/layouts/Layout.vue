@@ -11,7 +11,7 @@
 	<iframe v-if="aimode" class="live2d" ref="live2d" src="https://misskey-dev.github.io/mascot-web/?scale=2&y=1.4" allowtransparency></iframe>
 </template>
 
-<script>
+<script lang="ts">
 import Layout from '@vuepress/theme-default/lib/client/layouts/Layout.vue'
 
 export default {
@@ -34,6 +34,16 @@ export default {
 					body: {
 						x: ev.clientX - iframeRect.left,
 						y: ev.clientY - iframeRect.top,
+					}
+				}, '*');
+			}, { passive: true });
+
+			window.addEventListener('touchmove', ev => {
+				this.$refs.live2d.contentWindow.postMessage({
+					type: 'moveCursor',
+					body: {
+						x: ev.touches[0].clientX - iframeRect.left,
+						y: ev.touches[0].clientY - iframeRect.top,
 					}
 				}, '*');
 			}, { passive: true });
