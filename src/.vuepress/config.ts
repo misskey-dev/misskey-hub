@@ -49,6 +49,14 @@ export default defineUserConfig<DefaultThemeOptions>({
 					link: 'https://discord.gg/Wp8gVStHW3',
 				},
 				{
+					text: '寄付 (Patreon)',
+					link: 'https://www.patreon.com/syuilo',
+				},
+				{
+					text: '翻訳 (Crowdin)',
+					link: 'https://crowdin.com/project/misskey',
+				},
+				{
 					text: 'リポジトリ',
 					children: [{
 						text: 'misskey',
