@@ -1,5 +1,5 @@
 # Misskey Hub
-Built with vue-press
+[VuePress](https://github.com/vuepress/vuepress-next)を使っています。
 
 ## Develop
 ### Lunch dev server
