@@ -22,6 +22,7 @@ export default defineUserConfig<DefaultThemeOptions>({
 			children: [
 				'/docs/misskey',
 				'/docs/faq',
+				'/docs/glossary',
 				'/docs/troubleshooting',
 				{
 					text: '機能',

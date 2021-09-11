@@ -38,6 +38,9 @@ Misskeyを含む様々な分散型ソフトウェアのサーバーで構成さ�
 (読み: えむえふえむ)
 Misskey Flavored Markdownの略で、Misskey上で使用できるマークアップ言語です。詳細は[こちら。](../features/mfm)
 
+## Misskey Web
+Misskey公式のWebクライアント(インターフェイス)。Misskeyサーバーにブラウザでアクセスし、表示されるものがこれにあたります。
+
 ## NSFW
 (読み: のっとせーふふぉーわーく)
 Not Safe For Workの略。画像を「閲覧注意」扱いにし、操作なしには表示しないようにすることができる機能。
