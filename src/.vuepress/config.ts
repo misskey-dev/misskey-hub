@@ -21,6 +21,7 @@ export default defineUserConfig<DefaultThemeOptions>({
 			text: 'ドキュメント',
 			children: [
 				'/docs/misskey',
+				'/docs/misskey-hub',
 				'/docs/faq',
 				'/docs/glossary',
 				'/docs/troubleshooting',
