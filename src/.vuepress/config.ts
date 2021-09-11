@@ -68,5 +68,15 @@ export default defineUserConfig<DefaultThemeOptions>({
 		},],
 	},
 
-	plugins: [['@vuepress/plugin-search']]
+	plugins: [
+		['@vuepress/plugin-search'], 
+		[
+			'@vuepress/register-components',
+			{
+				components: {
+					Instances: path.resolve(__dirname, './components/instances.vue'),
+				},
+			},
+		],
+	]
 })
