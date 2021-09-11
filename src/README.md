@@ -15,20 +15,27 @@ actions:
     type: secondary
 ---
 
+<div class="contents">
+
 # Misskeyとは？
-Misskeyは、[オープンソース](https://github.com/misskey-dev)の分散型マイクロブログプラットフォーム、またそのプロジェクトです。
+Misskeyは、[オープンソース](https://github.com/misskey-dev)の分散型マイクロブログプラットフォーム、またそのプロジェクトです。\
 [Misskeyについて知る](/docs/getting-started)
 
 # Misskey Hubとは？
-Misskey Hubは、Misskeyに関する情報をまとめたMisskeyのオフィシャルサイトです。
+Misskey Hubは、Misskeyに関する情報をまとめたMisskeyのオフィシャルサイトです。\
 [Misskey Hubについて](/docs/misskey-hub)
 
 # Sponsors
 <div class="sponsors">
 	<a class="rss3" title="RSS3" href="https://rss3.io/" target="_blank"><img src="https://rss3.io/assets/images/Logo.svg" alt="RSS3"></a>
 </div>
+</div>
 
 <style>
+.contents {
+	text-align: center;
+}
+
 .sponsors {
 	text-align: center;
 	margin-bottom: 32px;
