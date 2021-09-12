@@ -1,29 +1,25 @@
 ---
 home: true
 heroImage: /banner.svg
-tagline: Misskey Hubは、Misskeyのオフィシャルサイトです。
+tagline: オープンソースの分散型マイクロブログプラットフォーム、Misskeyの公式サイト
 footer: (c) Misskey 2021
 actions:
   - text: Misskeyを始める
     link: /docs/getting-started
     type: primary
-  - text: Misskeyについて知る
+  - text: Misskeyとは？
     link: /docs/misskey
     type: secondary
-  - text: Misskeyをもっと楽しむ
-    link: /guide/
-    type: secondary
+features:
+  - title: 分散🪐
+    details: 複数のサーバーで独立したコミュニティが運営され、それらが相互に連合します。
+  - title: 軽量🚀
+    details: 高速で動作するNode.jsを採用しているため、多数のサーバーと連合していても軽量に動作します。
+  - title: 楽しい🍮
+    details: リアクションやカスタマイズ性の高いUIなど、特徴的な機能を備えています。
 ---
 
 <div class="contents">
-
-# Misskeyとは？
-Misskeyは、[オープンソース](https://github.com/misskey-dev)の分散型マイクロブログプラットフォーム、またそのプロジェクトです。\
-[Misskeyについて知る](/docs/getting-started)
-
-# Misskey Hubとは？
-Misskey Hubは、Misskeyに関する情報をまとめたMisskeyのオフィシャルサイトです。\
-[Misskey Hubについて](/docs/misskey-hub)
 
 # Sponsors
 <div class="sponsors">
@@ -43,12 +39,12 @@ Misskey Hubは、Misskeyに関する情報をまとめたMisskeyのオフィシ�
 
 .sponsors > .rss3 {
 	display: inline-block;
-	padding: 32px;
+	padding: 30px;
 	background: #fff;
 	border: solid 1px #000;
 }
 .sponsors > .rss3 img {
 	display: inline-block;
-	height: 50px;
+	height: 40px;
 }
 </style>
