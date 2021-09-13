@@ -3,12 +3,15 @@
 		<template #navbar-after>
 			<button @click="toggleAimode">藍モード</button>
 		</template>
+		<template #sidebar-bottom>
+			<a :class="$style.iwantyou" href="https://github.com/misskey-dev" target="_blank"><img src="https://raw.githubusercontent.com/misskey-dev/assets/main/i-want-you.png"></a>
+		</template>
 		<template #page-bottom>
-			<div class="my-footer">(c) Misskey 2021</div>
+			<div :class="$style.footer">(c) Misskey 2021</div>
 		</template>
 	</Layout>
 
-	<iframe v-if="aimode" class="live2d" ref="live2d" src="https://misskey-dev.github.io/mascot-web/?scale=2&y=1.4" allowtransparency></iframe>
+	<iframe v-if="aimode" :class="$style.live2d" ref="live2d" src="https://misskey-dev.github.io/mascot-web/?scale=2&y=1.4" allowtransparency></iframe>
 </template>
 
 <script lang="ts">
@@ -59,9 +62,19 @@ export default {
 }
 </script>
 
-<style lang="css">
-.my-footer {
+<style lang="scss" module>
+.footer {
 	text-align: center;
+}
+
+.iwantyou {
+	display: block;
+	margin: 0 32px 32px 32px;
+
+	> img {
+		display: block;
+		width: 100%;
+	}
 }
 
 .live2d {
