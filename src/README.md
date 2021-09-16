@@ -12,7 +12,7 @@ actions:
     type: secondary
 features:
   - title: 分散🪐
-    details: 複数のサーバーで独立したコミュニティが運営され、それらが相互に連合します。
+    details: 複数のサーバーで独立したコミュニティを運営することができ、それらが相互に繋がります。
   - title: 軽量🚀
     details: 高速で動作するNode.jsを採用しているため、多数のサーバーと連合していても軽量に動作します。
   - title: 楽しい🍮

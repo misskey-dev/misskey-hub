@@ -3,6 +3,8 @@ import { defineUserConfig } from 'vuepress'
 import type { DefaultThemeOptions } from 'vuepress'
 
 export default defineUserConfig<DefaultThemeOptions>({
+	base: '/misskey-hub/', // 独自ドメイン使うようになったら '/' にする
+
 	lang: 'ja-JP',
 	title: 'Misskey Hub',
 	description: 'Official website of Misskey project',
@@ -31,6 +33,7 @@ export default defineUserConfig<DefaultThemeOptions>({
 						'/docs/features/note',
 						'/docs/features/reaction',
 						'/docs/features/online-status',
+						'/docs/features/word-mute',
 						'/docs/features/mute-and-block',
 					]
 				},

@@ -1,17 +1,17 @@
 <template>
-	<Layout>
-		<template #navbar-after>
-			<button @click="toggleAimode">藍モード</button>
-		</template>
-		<template #sidebar-bottom>
-			<a :class="$style.iwantyou" href="https://github.com/misskey-dev" target="_blank"><img src="https://raw.githubusercontent.com/misskey-dev/assets/main/i-want-you.png"></a>
-		</template>
-		<template #page-bottom>
-			<div :class="$style.footer">(c) Misskey 2021</div>
-		</template>
-	</Layout>
+<Layout>
+	<template #navbar-after>
+		<button @click="toggleAimode">藍モード</button>
+	</template>
+	<template #sidebar-bottom>
+		<a :class="$style.iwantyou" href="https://github.com/misskey-dev" target="_blank"><img src="https://raw.githubusercontent.com/misskey-dev/assets/main/i-want-you.png"></a>
+	</template>
+	<template #page-bottom>
+		<div :class="$style.footer">(c) Misskey 2021</div>
+	</template>
+</Layout>
 
-	<iframe v-if="aimode" :class="$style.live2d" ref="live2d" src="https://misskey-dev.github.io/mascot-web/?scale=2&y=1.4" allowtransparency></iframe>
+<iframe v-if="aimode" :class="$style.live2d" ref="live2d" src="https://misskey-dev.github.io/mascot-web/?scale=2&y=1.4" allowtransparency></iframe>
 </template>
 
 <script lang="ts">
@@ -24,7 +24,7 @@ export default {
 
 	data() {
 		return {
-			aimode: localStorage.getItem('aimode') === 'true'
+			aimode: __VUEPRESS_SSR__ || localStorage.getItem('aimode') === 'true'
 		};
 	},
 

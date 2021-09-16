@@ -1,0 +1,45 @@
+name: GitHub Pages
+
+on:
+  # trigger deployment on every push to main branch
+  push:
+    branches:
+      - main
+  # trigger deployment manually
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          # fetch all commits to get last updated time or other git log info
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 16
+
+      - name: Cache dependencies
+        uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: npm-${{ hashFiles('package-lock.json') }}
+          restore-keys: npm-
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        if: ${{ github.ref == 'refs/heads/main' }}
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./src/.vuepress/dist
