@@ -1,5 +1,5 @@
 # プラグインストア
-Misskey Webにインストールできる[プラグイン](/docs/features/plugin.md)のコレクションです。
+Misskey Webにインストールできる[プラグイン](./docs/features/plugin.md)のコレクションです。
 
 ::: tip
 あなたのプラグインをここに載せたいときは[プラグインの提出](#プラグインの提出)をご覧ください。
