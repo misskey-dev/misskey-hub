@@ -1,5 +1,6 @@
 ---
 home: true
+title: Misskey Hub
 heroImage: /banner.svg
 tagline: オープンソースの分散型マイクロブログプラットフォーム、Misskeyの公式サイト
 footer: (c) Misskey 2021
