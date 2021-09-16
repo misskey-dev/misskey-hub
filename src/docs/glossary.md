@@ -39,7 +39,7 @@ Contents Warningの略。ノートの内容を、操作なしには表示しな�
 Misskey Flavored Markdownの略で、Misskey上で使用できるマークアップ言語です。詳細は[こちら。](../features/mfm)
 
 ## Misskey Web
-Misskey公式のWebクライアント(インターフェイス)。MisskeyサーバーにPCおよびスマートフォンのWebブラウザでアクセスすると、自動的に表示されます。
+Misskey公式のWebクライアント(インターフェイス)。MisskeyサーバーにPC・スマートフォンなどのWebブラウザからアクセスすると、自動的に表示されます。
 
 ## NSFW
 (読み: のっとせーふふぉーわーく)<br>
