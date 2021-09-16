@@ -1,8 +1,10 @@
-# Misskey Hub
-[VuePress](https://github.com/vuepress/vuepress-next)を使っています。
+# Misskey Hub(Caution! Misskey Hub is under construction)
+Misskey Hub is an Official Site of Misskey.<br>
+Misskey is an open-source,decentralized microblogging platform.<br><br>
+This website uses [VuePress](https://github.com/vuepress/vuepress-next).
 
 ## Develop
-### Lunch dev server
+### Launch dev server
 ```
 npm run dev
 ```
@@ -11,3 +13,6 @@ npm run dev
 ```
 npm run build
 ```
+
+## License
+MIT License
