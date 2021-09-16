@@ -7,7 +7,7 @@
 		<a :class="$style.iwantyou" href="https://github.com/misskey-dev" target="_blank"><img src="https://raw.githubusercontent.com/misskey-dev/assets/main/i-want-you.png"></a>
 	</template>
 	<template #page-bottom>
-		<div :class="$style.footer">(c) Misskey 2021</div>
+		<div :class="$style.footer">Copyright (c) 2021 syuilo and other contributors</div>
 	</template>
 </Layout>
 
