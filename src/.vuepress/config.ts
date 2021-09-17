@@ -3,7 +3,9 @@ import { defineUserConfig } from 'vuepress'
 import type { DefaultThemeOptions } from 'vuepress'
 
 export default defineUserConfig<DefaultThemeOptions>({
-	base: '/misskey-hub/', // 独自ドメイン使うようになったら '/' にする
+	// 独自ドメイン使う場合 '/' にする
+	// 独自ドメイン使わない場合 '/misskey-hub/' にする
+	base: '/',
 
 	lang: 'ja-JP',
 	title: 'Misskey Hub',
