@@ -7,6 +7,12 @@ MisskeyプロジェクトではそういったOS向けのネイティブアプ�
 
 ただ、サードパーティ製アプリはMisskeyの最新機能への対応がどうしても遅れてしまうため、特にこだわりがなければ、公式のMisskey Web(Webクライアント)の利用をおすすめします。なお、MisskeyのWebクライアントはPWAに対応しているので、ネイティブアプリのように動作させることも可能です。詳しくは[こちら](todo)をご覧ください。
 
+## Twitterとどう違いますか？
+TODO
+
+## 同じ分散型ソフトウェアのMastodonやPleromaとどう違いますか？
+TODO
+
 ## Mastodon向けのアプリでログインできますか？
 MisskeyはMastodonのAPIと互換性がないため、一部を除いてMastodon向けのアプリやWebクライアントなどではMisskeyを利用することはできません。<br>
 Misskey公式のMisskey Webをご利用ください。
@@ -18,6 +24,12 @@ Misskey公式のMisskey Webをご利用ください。
 ユーザーアカウントの例: `@syuilo@misskey.io`<br>
 
 ユーザーアカウントの形式は全ての分散型ソフトウェアで共通ではありませんが、この形式によって、様々な分散型ソフトウェアが実装された他のサーバーのユーザーをフォローすることができます。
+
+## misskey.ioはMisskeyプロジェクトの公式インスタンスですか？
+misskey.ioはMisskey公式インスタンスではなく、またMisskeyプロジェクトには含まれません。misskey.ioは特定のテーマを持たず汎用的で、気軽に登録できるMisskeyで最も規模の大きいインスタンスです。
+
+## 「Misskey」の名前の由来は何ですか？
+syuiloがその名前を考えていたときに偶然聴いていた、May'nの楽曲『Brain Diver』の歌詞から採られています。
 
 ## Renoteを削除するには？
 Renoteの時刻表示の隣にある「...」を押し、「Renote解除」を選択します。<br>
