@@ -1,89 +1,64 @@
-Dockerを使ったMisskey構築方法
+Dockerを使ったMisskey構築
 ================================================================
 
-このガイドはDockerを使ったMisskeyセットアップ方法について解説します。
+このガイドはDockerを使ったMisskeyセットアップ方法を説明します。
 
-*1.* Misskeyのダウンロード
+リポジトリの取得
 ----------------------------------------------------------------
-1. masterブランチからMisskeyレポジトリをクローン
-
-	`git clone -b master git://github.com/misskey-dev/misskey.git`
-
-2. misskeyディレクトリに移動
-
-	`cd misskey`
-
-3. [最新のリリース](https://github.com/misskey-dev/misskey/releases/latest)を確認
-
-	`git checkout master`
-
-*2.* 設定ファイルの作成と編集
-----------------------------------------------------------------
-
-下記コマンドで設定ファイルを作成してください。
-
 ```bash
-cd .config
-cp example.yml default.yml
-cp docker_example.env docker.env
+git clone -b master git://github.com/misskey-dev/misskey.git
+cd misskey
+git checkout master
 ```
 
-### `default.yml`の編集
-
-非Docker環境と同じ様に編集してください。  
-ただし、Postgresql、RedisとElasticsearchのホストは`localhost`ではなく、`docker-compose.yml`で設定されたサービス名になっています。  
-標準設定では次の通りです。
-
-| サービス       | ホスト名 |
-|---------------|---------|
-| Postgresql    |`db`     |
-| Redis         |`redis`  |
-| Elasticsearch |`es`     |
-
-### `docker.env`の編集
-
-このファイルはPostgresqlの設定を記述します。  
-最低限記述する必要がある設定は次の通りです。
-
-| 設定                 | 内容         |
-|---------------------|--------------|
-| `POSTGRES_PASSWORD` | パスワード    |
-| `POSTGRES_USER`     | ユーザー名    |
-| `POSTGRES_DB`       | データベース名 |
-
-*3.* Dockerの設定
+設定
 ----------------------------------------------------------------
-`docker-compose.yml`を編集してください。
+下記コマンドで、各種設定ファイルのサンプルをコピーします。
 
-*4.* Misskeyのビルド
+```bash
+cp .config/example.yml .config/default.yml
+cp .config/docker_example.env .config/docker.env
+```
+
+`default.yml`と`docker.env`をファイル内の説明に従って編集してください。
+
+::: warning
+`default.yml`の、Postgresql/Redisのホストはそれぞれ`db`/`redis`にしてください。
+:::
+
+必要に応じて、`docker-compose.yml`を編集します。(ポートを変更したい場合など)
+
+ビルド
 ----------------------------------------------------------------
 次のコマンドでMisskeyをビルドしてください:
 
-`docker-compose build`
+`sudo docker-compose build`
 
-*5.* データベースを初期化
+データベースを初期化
 ----------------------------------------------------------------
 ``` shell
-docker-compose run --rm web yarn run init
+sudo docker-compose run --rm web yarn run init
 ```
 
-*6.* 以上です！
+起動
 ----------------------------------------------------------------
 お疲れ様でした。これでMisskeyを動かす準備は整いました。
 
-### 通常起動
-`docker-compose up -d`するだけです。GLHF!
+`sudo docker-compose up -d`するだけです。GLHF!
 
-### Misskeyを最新バージョンにアップデートする方法:
+最新バージョンにアップデートする方法
+----------------------------------------------------------------
+
 1. `git stash`
 2. `git checkout master`
 3. `git pull`
 4. `git submodule update --init`
 5. `git stash pop`
-6. `docker-compose build`
+6. `sudo docker-compose build`
 7. [ChangeLog](../CHANGELOG.md)でマイグレーション情報を確認する
-8. `docker-compose stop && docker-compose up -d`
+8. `sudo docker-compose stop && sudo docker-compose up -d`
 
-### cliコマンドを実行する方法:
+cliコマンドを実行する方法
+----------------------------------------------------------------
 
-`docker-compose run --rm web node built/tools/mark-admin @example`
+`sudo docker-compose run --rm web node built/tools/mark-admin @example`
