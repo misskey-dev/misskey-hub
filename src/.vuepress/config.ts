@@ -44,6 +44,7 @@ export default defineUserConfig<DefaultThemeOptions>({
 					children: [
 						'/docs/install/install',
 						'/docs/admin/nginx',
+						'/docs/admin/push-docker-hub',
 						'/docs/admin/troubleshooting',
 					]
 				}
