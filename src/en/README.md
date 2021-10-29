@@ -2,22 +2,22 @@
 home: true
 title: Misskey Hub
 heroImage: /banner.svg
-tagline: オープンソースの分散型マイクロブログプラットフォーム、Misskeyの公式サイト
+tagline: Official web site of open-source interplanetary micro-blogging platform Misskey
 footer: Copyright (c) 2021 syuilo and other contributors
 actions:
-  - text: Misskeyを始める
+  - text: Getting started
     link: /docs/getting-started
     type: primary
-  - text: Misskeyとは？
+  - text: What is Misskey?
     link: /docs/misskey
     type: secondary
 features:
-  - title: 分散🪐
-    details: 複数のサーバーで独立したコミュニティが運営され、それらが相互に繋がります。
-  - title: 軽量🚀
-    details: 高速で動作するNode.jsを採用しているため、多数のサーバーと連合していても軽量に動作します。
-  - title: 楽しい🍮
-    details: リアクションやカスタマイズ性の高いUIなど、特徴的な機能を備えています。
+  - title: Distributed🪐
+    details: Independent communities are run on multiple servers, and these are interconnected.
+  - title: Lightweight🚀
+    details: Because it uses Node.js, which runs at high speed, it is lightweight even when federated with a large number of servers.
+  - title: Fun🍮
+    details: It has distinctive features such as reactions and a highly customizable UI.
 ---
 
 <div class="contents">
