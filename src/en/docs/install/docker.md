@@ -51,20 +51,22 @@ Well done! You can start Misskey with the following command.
 sudo docker-compose up -d
 ```
 
-GLHF!
+GLHF✨
 
 How to update your Misskey server to the latest version
 ----------------------------------------------------------------
-
-1. `git stash`
-1. `git checkout master`
-1. `git pull`
-1. `git submodule update --init`
-1. `git stash pop`
-1. `sudo docker-compose build`
-1. `sudo docker-compose stop && sudo docker-compose up -d`
+```bash
+git stash
+git checkout master
+git pull
+git submodule update --init
+git stash pop
+sudo docker-compose build
+sudo docker-compose stop && sudo docker-compose up -d
+```
 
 How to execute CLI command
 ----------------------------------------------------------------
-
-`sudo docker-compose run --rm web node built/tools/mark-admin @example`
+```bash
+sudo docker-compose run --rm web node built/tools/mark-admin @example
+```

@@ -50,20 +50,22 @@ sudo docker-compose run --rm web yarn run init
 sudo docker-compose up -d
 ```
 
-GLHF!
+GLHF✨
 
 最新バージョンにアップデートする方法
 ----------------------------------------------------------------
-
-1. `git stash`
-1. `git checkout master`
-1. `git pull`
-1. `git submodule update --init`
-1. `git stash pop`
-1. `sudo docker-compose build`
-1. `sudo docker-compose stop && sudo docker-compose up -d`
+```bash
+git stash
+git checkout master
+git pull
+git submodule update --init
+git stash pop
+sudo docker-compose build
+sudo docker-compose stop && sudo docker-compose up -d
+```
 
 cliコマンドを実行する方法
 ----------------------------------------------------------------
-
-`sudo docker-compose run --rm web node built/tools/mark-admin @example`
+```bash
+sudo docker-compose run --rm web node built/tools/mark-admin @example
+```
