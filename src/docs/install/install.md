@@ -1,10 +1,10 @@
 # Misskeyインスタンスの作成
 
 ## Dockerを使ったインストール
-[こちら](./docker)
+[こちら](./docker.html)
 
 ## bashスクリプトを使ったインストール
-[こちら](./bash)
+[こちら](./bash.html)
 
 ## 全部自力でインストール
-[こちら](./manual)
+[こちら](./manual.html)

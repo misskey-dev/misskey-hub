@@ -9,7 +9,17 @@ export default defineUserConfig<DefaultThemeOptions>({
 
 	lang: 'ja-JP',
 	title: 'Misskey Hub',
-	description: 'Official website of Misskey project',
+
+	locales: {
+		'/': {
+			lang: 'ja-JP',
+			description: 'オープンソースの分散型マイクロブログプラットフォーム、Misskeyの公式サイト',
+		},
+		'/en/': {
+			lang: 'en-US',
+			description: 'Official website of Misskey project',
+		},
+	},
 
 	theme: path.resolve(__dirname, './theme'),
 	themeConfig: {
@@ -35,6 +45,7 @@ export default defineUserConfig<DefaultThemeOptions>({
 						'/docs/features/note',
 						'/docs/features/reaction',
 						'/docs/features/online-status',
+						'/docs/features/thread-mute',
 						'/docs/features/word-mute',
 						'/docs/features/mute-and-block',
 					]
@@ -93,6 +104,14 @@ export default defineUserConfig<DefaultThemeOptions>({
 				}
 			],
 		},],
+		locales: {
+			'/': {
+				selectLanguageName: '日本語',
+			},
+			'/en/': {
+				selectLanguageName: 'English',
+			},
+		},
 	},
 
 	plugins: [['@vuepress/plugin-search']]

@@ -1,13 +1,13 @@
-Dockerを使ったMisskey構築
+Create Misskey instance with Docker
 ================================================================
 
-このガイドはDockerを使ったMisskeyセットアップ方法を説明します。
+This guide describes how to install and setup Misskey with Docker.
 
-::: tip 前提条件
-- dockerおよびdocker-composeがインストールされていること。
+::: tip Requirement
+- docker and docker-compose installed
 :::
 
-リポジトリの取得
+Get the repository
 ----------------------------------------------------------------
 ```bash
 git clone -b master git://github.com/misskey-dev/misskey.git
@@ -15,36 +15,37 @@ cd misskey
 git checkout master
 ```
 
-設定
+Configure
 ----------------------------------------------------------------
-下記コマンドで、各種設定ファイルのサンプルをコピーします。
+Copy example configuration files with following:
 
 ```bash
 cp .config/example.yml .config/default.yml
 cp .config/docker_example.env .config/docker.env
 ```
 
-`default.yml`と`docker.env`をファイル内の説明に従って編集してください。
+Edit `default.yml` and `docker.env` according to the instructions in the files.
 
 ::: warning
-`default.yml`の、Postgresql/Redisのホストはそれぞれ`db`/`redis`にしてください。
+In the `default.yml`, the hosts for Postgresql/Redis should be set to `db`/`redis` respectively.
 :::
 
-必要に応じて、`docker-compose.yml`を編集します。(ポートを変更したい場合など)
+Edit `docker-compose.yml` if necessary. (e.g. if you want to change the port).
 
-ビルドと初期化
+Build and initialize
 ----------------------------------------------------------------
-次のコマンドでMisskeyのビルドとデータベースの初期化を行います。
-これにはしばらく時間がかかります。
+The following command will build Misskey and initialize the database.
+This will take some time.
 
 ``` shell
 sudo docker-compose build
 sudo docker-compose run --rm web yarn run init
 ```
 
-起動
+Launch
 ----------------------------------------------------------------
-お疲れ様でした。以下のコマンドでMisskeyを起動できます。
+Well done! You can start Misskey with the following command.
+
 
 ```bash
 sudo docker-compose up -d
@@ -52,7 +53,7 @@ sudo docker-compose up -d
 
 GLHF!
 
-最新バージョンにアップデートする方法
+How to update your Misskey server to the latest version
 ----------------------------------------------------------------
 
 1. `git stash`
@@ -63,7 +64,7 @@ GLHF!
 1. `sudo docker-compose build`
 1. `sudo docker-compose stop && sudo docker-compose up -d`
 
-cliコマンドを実行する方法
+How to execute CLI command
 ----------------------------------------------------------------
 
 `sudo docker-compose run --rm web node built/tools/mark-admin @example`
