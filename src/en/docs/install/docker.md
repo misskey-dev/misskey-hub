@@ -9,7 +9,7 @@ This guide describes how to install and setup Misskey with Docker.
 
 Get the repository
 ----------------------------------------------------------------
-```bash
+```sh
 git clone -b master git://github.com/misskey-dev/misskey.git
 cd misskey
 git checkout master
@@ -19,7 +19,7 @@ Configure
 ----------------------------------------------------------------
 Copy example configuration files with following:
 
-```bash
+```sh
 cp .config/example.yml .config/default.yml
 cp .config/docker_example.env .config/docker.env
 ```
@@ -47,15 +47,19 @@ Launch
 Well done! You can start Misskey with the following command.
 
 
-```bash
+```sh
 sudo docker-compose up -d
 ```
 
 GLHF✨
 
-How to update your Misskey server to the latest version
+How to update your Misskey server
 ----------------------------------------------------------------
-```bash
+::: warning
+When updating, be sure to check the [release notes](https://github.com/misskey-dev/misskey/blob/master/CHANGELOG.md) to know in advance the changes and whether or not additional work is required (in most cases, it is not).
+:::
+
+```sh
 git stash
 git checkout master
 git pull
@@ -65,8 +69,10 @@ sudo docker-compose build
 sudo docker-compose stop && sudo docker-compose up -d
 ```
 
+It may take some time depending on the contents of the update and the size of the database.
+
 How to execute CLI command
 ----------------------------------------------------------------
-```bash
+```sh
 sudo docker-compose run --rm web node built/tools/mark-admin @example
 ```

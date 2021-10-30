@@ -9,7 +9,7 @@ Dockerを使ったMisskey構築
 
 リポジトリの取得
 ----------------------------------------------------------------
-```bash
+```sh
 git clone -b master git://github.com/misskey-dev/misskey.git
 cd misskey
 git checkout master
@@ -19,7 +19,7 @@ git checkout master
 ----------------------------------------------------------------
 下記コマンドで、各種設定ファイルのサンプルをコピーします。
 
-```bash
+```sh
 cp .config/example.yml .config/default.yml
 cp .config/docker_example.env .config/docker.env
 ```
@@ -46,15 +46,19 @@ sudo docker-compose run --rm web yarn run init
 ----------------------------------------------------------------
 お疲れ様でした。以下のコマンドでMisskeyを起動できます。
 
-```bash
+```sh
 sudo docker-compose up -d
 ```
 
 GLHF✨
 
-最新バージョンにアップデートする方法
+Misskeyのアップデート方法
 ----------------------------------------------------------------
-```bash
+::: warning
+アップデートの際は必ず[リリースノート](https://github.com/misskey-dev/misskey/blob/master/CHANGELOG.md)を確認し、変更点や追加で必要になる作業の有無(ほとんどの場合ありません)を予め把握するようにしてください。
+:::
+
+```sh
 git stash
 git checkout master
 git pull
@@ -64,8 +68,10 @@ sudo docker-compose build
 sudo docker-compose stop && sudo docker-compose up -d
 ```
 
+アップデート内容、およびデータベースの規模によっては時間がかかることがあります。
+
 cliコマンドを実行する方法
 ----------------------------------------------------------------
-```bash
+```sh
 sudo docker-compose run --rm web node built/tools/mark-admin @example
 ```

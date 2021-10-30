@@ -1,145 +1,157 @@
 Misskey構築の手引き
 ================================================================
 
-Misskeyサーバーの構築にご関心をお寄せいただきありがとうございます！
 このガイドではMisskeyのインストール・セットアップ方法について解説します。
 
-- [英語版もあります - English version also available](./setup.en.md)
-- [简体中文版同样可用 - Simplified Chinese version also available](./setup.zh.md)
+::: tip 前提条件
+以下のソフトウェアがインストール・設定されていること
+- **[Node.js](https://nodejs.org/en/)** (12.x, 14.x)
+- **[PostgreSQL](https://www.postgresql.org/)** (10以上)
+- **[Redis](https://redis.io/)**
+- **[Yarn](https://yarnpkg.com/)** (v1系)
+- **[FFmpeg](https://www.ffmpeg.org/)**
 
-----------------------------------------------------------------
+環境変数が次のように設定されていること
+```sh
+NODE_ENV=production
+```
+:::
 
-*1.* Misskeyユーザーの作成
+ユーザーの作成
 ----------------------------------------------------------------
 Misskeyはrootユーザーで実行しない方がよいため、代わりにユーザーを作成します。
 Debianの例:
 
-``` sh
+```sh
 adduser --disabled-password --disabled-login misskey
 ```
 
-*2.* 依存関係をインストールする
+Misskeyのインストール
 ----------------------------------------------------------------
-これらのソフトウェアをインストール・設定してください:
+```sh
+NODE_ENV=production
+su - misskey
+git clone --recursive -b master git://github.com/misskey-dev/misskey.git
+git submodule update --init
+cd misskey
+git checkout master
+yarn install
+```
 
-#### 依存関係 :package:
-* **[Node.js](https://nodejs.org/en/)** (12.x, 14.x)
-* **[PostgreSQL](https://www.postgresql.org/)** (10以上)
-* **[Redis](https://redis.io/)**
-
-##### オプション
-* [Yarn](https://yarnpkg.com/)
-	* セキュリティの観点から推奨されます。 yarn をインストールしない方針の場合は、文章中の `yarn` を適宜 `npx yarn` と読み替えてください。
-* [Elasticsearch](https://www.elastic.co/)
-	* 検索機能を有効にするためにはインストールが必要です。
-* [FFmpeg](https://www.ffmpeg.org/)
-
-*3.* Misskeyのインストール
+設定
 ----------------------------------------------------------------
-1. misskeyユーザーを使用
+設定サンプルの`.config/example.yml`をコピーし、`default.yml`にリネームします。
 
-	`su - misskey`
+```sh
+cp .config/example.yml .config/default.yml
+```
 
-2. masterブランチからMisskeyレポジトリをクローン
+`default.yml` をファイル内の指示に従って編集します。
 
-	`git clone --recursive -b master git://github.com/misskey-dev/misskey.git`
-
-3. misskeyディレクトリに移動
-
-	`cd misskey`
-
-4. [最新のリリース](https://github.com/misskey-dev/misskey/releases/latest)を確認
-
-	`git checkout master`
-
-5. Misskeyの依存パッケージをインストール
-
-	`yarn install`
-
-*4.* 設定ファイルを作成する
+ビルドと初期化
 ----------------------------------------------------------------
-1. `.config/example.yml`をコピーし名前を`default.yml`にする。
+次のコマンドでMisskeyのビルドとデータベースの初期化を行います。
+これにはしばらく時間がかかります。
 
-	`cp .config/example.yml .config/default.yml`
-
-2. `default.yml` を編集する。
-
-*5.* Misskeyのビルド
-----------------------------------------------------------------
-
-次のコマンドでMisskeyをビルドしてください:
-
-`NODE_ENV=production yarn build`
-
-Debianをお使いであれば、`build-essential`パッケージをインストールする必要があります。
-
-何らかのモジュールでエラーが発生する場合はnode-gypを使ってください:
-1. `npx node-gyp configure`
-2. `npx node-gyp build`
-3. `NODE_ENV=production yarn build`
-
-*6.* データベースを初期化
-----------------------------------------------------------------
-``` shell
+```sh
+yarn build
 yarn run init
 ```
 
-*7.* 以上です！
+::: tip
+Debianをお使いであれば、`build-essential`パッケージをインストールする必要があります。
+:::
+
+::: tip エラーが発生する場合
+何らかのモジュールでエラーが発生する場合はnode-gypを使ってください:
+```sh
+npx node-gyp configure
+npx node-gyp build
+yarn build
+```
+:::
+
+起動
 ----------------------------------------------------------------
-お疲れ様でした。これでMisskeyを動かす準備は整いました。
+お疲れ様でした。以下のコマンドでMisskeyを起動できます。
 
-### 通常起動
-`NODE_ENV=production yarn start`するだけです。GLHF!
+```sh
+yarn start
+```
 
-### systemdを用いた起動
-1. systemdサービスのファイルを作成
+GLHF✨
 
-	`/etc/systemd/system/misskey.service`
+:::: details systemdを用いた管理
 
-2. エディタで開き、以下のコードを貼り付けて保存:
+systemdサービスのファイルを作成
 
-	``` ini
-	[Unit]
-	Description=Misskey daemon
+`/etc/systemd/system/misskey.service`
 
-	[Service]
-	Type=simple
-	User=misskey
-	ExecStart=/usr/bin/npm start
-	WorkingDirectory=/home/misskey/misskey
-	Environment="NODE_ENV=production"
-	TimeoutSec=60
-	StandardOutput=syslog
-	StandardError=syslog
-	SyslogIdentifier=misskey
-	Restart=always
+エディタで開き、以下のコードを貼り付けて保存:
 
-	[Install]
-	WantedBy=multi-user.target
-	```
+``` ini
+[Unit]
+Description=Misskey daemon
 
-	CentOSで1024以下のポートを使用してMisskeyを使用する場合は`ExecStart=/usr/bin/sudo /usr/bin/npm start`に変更する必要があります。
+[Service]
+Type=simple
+User=misskey
+ExecStart=/usr/bin/npm start
+WorkingDirectory=/home/misskey/misskey
+Environment="NODE_ENV=production"
+TimeoutSec=60
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=misskey
+Restart=always
 
-3. systemdを再読み込みしmisskeyサービスを有効化
+[Install]
+WantedBy=multi-user.target
+```
 
-	`systemctl daemon-reload; systemctl enable misskey`
+::: warning
+CentOSで1024以下のポートを使用してMisskeyを使用する場合は`ExecStart=/usr/bin/sudo /usr/bin/npm start`に変更する必要があります。
+:::
 
-4. misskeyサービスの起動
+systemdを再読み込みしmisskeyサービスを有効化
 
-	`systemctl start misskey`
+```sh
+systemctl daemon-reload; systemctl enable misskey
+```
 
+misskeyサービスの起動
+
+```sh
+systemctl start misskey
+```
+
+::: tip
 `systemctl status misskey`と入力すると、サービスの状態を調べることができます。
+:::
+::::
 
-### Misskeyを最新バージョンにアップデートする方法:
-1. `git checkout master`
-2. `git pull`
-3. `git submodule update --init`
-4. `yarn install`
-5. `NODE_ENV=production yarn build`
-6. `yarn migrate`
+## Misskeyのアップデート方法
+::: warning
+アップデートの際は必ず[リリースノート](https://github.com/misskey-dev/misskey/blob/master/CHANGELOG.md)を確認し、変更点や追加で必要になる作業の有無(ほとんどの場合ありません)を予め把握するようにしてください。
+:::
 
-なにか問題が発生した場合は、`yarn clean`または`yarn cleanall`すると直る場合があります。
+masterをpullし直し、インストール、ビルド、データベースのマイグレーションを行います:
 
-----------------------------------------------------------------
+```sh
+git checkout master
+git pull
+git submodule update --init
+yarn install
+yarn build
+yarn migrate
+```
 
-なにかお困りのことがありましたらお気軽にご連絡ください。
+アップデート内容、およびデータベースの規模によっては時間がかかることがあります。
+
+アップデートが終わり次第、Misskeyプロセスを再起動してください。
+
+::: tip
+なにかビルドや起動時にエラーが発生した場合は、以下のコマンドをお試しください:
+- `yarn clean`または`yarn cleanall`
+- `npm rebuild`
+:::
