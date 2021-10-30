@@ -29,7 +29,6 @@ adduser --disabled-password --disabled-login misskey
 Misskeyのインストール
 ----------------------------------------------------------------
 ```sh
-NODE_ENV=production
 su - misskey
 git clone --recursive -b master git://github.com/misskey-dev/misskey.git
 git submodule update --init
