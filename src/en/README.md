@@ -6,10 +6,10 @@ tagline: Official web site of open-source interplanetary micro-blogging platform
 footer: Copyright (c) 2021 syuilo and other contributors
 actions:
   - text: Getting started
-    link: /docs/getting-started
+    link: ./docs/getting-started
     type: primary
   - text: What is Misskey?
-    link: /docs/misskey
+    link: ./docs/misskey
     type: secondary
 features:
   - title: Distributed🪐
