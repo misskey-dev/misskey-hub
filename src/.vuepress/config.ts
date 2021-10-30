@@ -33,8 +33,11 @@ export default defineUserConfig<DefaultThemeOptions>({
 			text: 'ブログ',
 			link: '/blog/',
 		}, {
-			text: 'プラグイン',
-			link: '/plugins/',
+			text: 'お楽しみ',
+			children: [
+				'/plugins/',
+				'/appendix/assets'
+			]
 		}, {
 			text: 'ドキュメント',
 			children: [
