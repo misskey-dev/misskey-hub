@@ -14,3 +14,45 @@ html.dark {
 	--c-warning-title: #dec340;
 	--c-warning-text: #d6d0a8;
 }
+
+.custom-container {
+	position: relative;
+
+	> i {
+		position: absolute;
+		top: 1rem;
+		left: -19px;
+		width: 30px;
+		height: 30px;
+		line-height: 30px;
+		border-radius: 100%;
+		text-align: center;
+		font-size: 14px;
+	}
+
+	> p {
+		// vuepressデフォルトテーマのミスで、details内に入れたcustom-containerのマージンが無くなってしまうため
+		margin-block-end: 1em !important;
+	}
+
+	&.tip {
+		> i {
+			background: var(--c-tip);
+			color: var(--c-tip-bg);
+		}
+	}
+
+	&.warning {
+		> i {
+			background: var(--c-warning);
+			color: var(--c-warning-bg);
+		}
+	}
+
+	&.danger {
+		> i {
+			background: var(--c-danger);
+			color: var(--c-danger-bg);
+		}
+	}
+}

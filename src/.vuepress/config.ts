@@ -10,6 +10,10 @@ export default defineUserConfig<DefaultThemeOptions>({
 	lang: 'ja-JP',
 	title: 'Misskey Hub',
 
+	head: [
+		['link', { rel: 'stylesheet', href: 'https://use.fontawesome.com/releases/v5.15.3/css/all.css', }]
+	],
+
 	locales: {
 		'/': {
 			lang: 'ja-JP',
@@ -114,5 +118,28 @@ export default defineUserConfig<DefaultThemeOptions>({
 		},
 	},
 
-	plugins: [['@vuepress/plugin-search']]
+	plugins: [
+		['@vuepress/plugin-search'],
+		['@vuepress/container',
+			{
+				type: 'tip',
+				before: (info: string, type): string => `<div class="custom-container tip"><i class="fas fa-info"></i>${info ? `<p class="custom-container-title">${info}</p>` : ''}\n`,
+				after: (): string => '</div>\n'
+			},
+		],
+		['@vuepress/container',
+			{
+				type: 'warning',
+				before: (info: string, type): string => `<div class="custom-container warning"><i class="fas fa-exclamation"></i>${info ? `<p class="custom-container-title">${info}</p>` : ''}\n`,
+				after: (): string => '</div>\n'
+			},
+		],
+		['@vuepress/container',
+			{
+				type: 'danger',
+				before: (info: string, type): string => `<div class="custom-container danger"><i class="fas fa-times"></i>${info ? `<p class="custom-container-title">${info}</p>` : ''}\n`,
+				after: (): string => '</div>\n'
+			},
+		],
+	]
 })
