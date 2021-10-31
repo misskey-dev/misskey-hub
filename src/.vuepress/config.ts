@@ -28,6 +28,7 @@ export default defineUserConfig<DefaultThemeOptions>({
 	theme: path.resolve(__dirname, './theme'),
 	themeConfig: {
 		repo: 'misskey-dev/misskey-hub',
+		docsDir: 'src',
 		logo: 'https://raw.githubusercontent.com/misskey-dev/assets/main/favicon.png',
 		navbar: [{
 			text: 'ブログ',
