@@ -7,6 +7,9 @@
 		<MkDots :class="$style.sidebarDots" space="12"/>
 		<a :class="$style.iwantyou" href="https://github.com/misskey-dev" target="_blank"><img src="https://raw.githubusercontent.com/misskey-dev/assets/main/i-want-you.png"></a>
 	</template>
+	<template #page-top>
+		<MkDots :class="$style.headerDots"/>
+	</template>
 	<template #page-bottom>
 		<MkDots :class="$style.footerDots"/>
 		<div :class="$style.footer">Copyright (c) 2021 syuilo and other contributors</div>
@@ -75,6 +78,16 @@ export default {
 	width: calc(100% - 64px);
 	height: 40px;
 	opacity: 0.2;
+}
+
+.headerDots {
+	display: block;
+	margin: 2em auto 0 auto;
+	width: 100%;
+	max-width: min(var(--content-width), calc(100% - 4rem));
+	height: 40px;
+	opacity: 1;
+	color: var(--c-brand);
 }
 
 .footerDots {
