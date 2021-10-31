@@ -80,3 +80,25 @@ html.dark {
 		}
 	}
 }
+
+.mk-page {
+	display: block;
+	margin: 1em 0;
+	padding: 1em;
+	border: solid 1px var(--c-border);
+	border-radius: 8px;
+	color: var(--c-text);
+
+	&:hover {
+		border-color: var(--c-brand);
+		text-decoration: none !important;
+	}
+
+	> header {
+		font-weight: bold;
+	}
+
+	> footer {
+		opacity: 0.7;
+	}
+}

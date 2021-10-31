@@ -1,6 +1,7 @@
 import { path } from '@vuepress/utils'
 import { defineUserConfig } from 'vuepress'
 import type { DefaultThemeOptions } from 'vuepress'
+import { generateRecentUpdatesPage } from './recent-updates-page';
 
 export default defineUserConfig<DefaultThemeOptions>({
 	// 独自ドメイン使う場合 '/' にする
@@ -152,5 +153,9 @@ export default defineUserConfig<DefaultThemeOptions>({
 			before: (info: string, type): string => `<div class="custom-container danger"><i class="fas fa-times"></i>${info ? `<p class="custom-container-title">${info}</p>` : ''}\n`,
 			after: (): string => '</div>\n'
 		},],
-	]
-})
+	],
+
+	async onInitialized(app) {
+		await generateRecentUpdatesPage(app);
+	},
+});
