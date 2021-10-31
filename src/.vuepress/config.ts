@@ -127,6 +127,9 @@ export default defineUserConfig<DefaultThemeOptions>({
 				selectLanguageName: 'English',
 			},
 		},
+		themePlugins: {
+			activeHeaderLinks: false,
+		}
 	},
 
 	plugins: [
