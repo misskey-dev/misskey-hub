@@ -13,6 +13,9 @@ html.dark {
 	--c-warning-bg: #353125;
 	--c-warning-title: #dec340;
 	--c-warning-text: #d6d0a8;
+	--c-danger: #bd3b3b;
+	--c-danger-bg: #463434;
+	--c-danger-text: #edd2d2;
 }
 
 .custom-container {
@@ -28,6 +31,7 @@ html.dark {
 		border-radius: 100%;
 		text-align: center;
 		font-size: 14px;
+		color: var(--c-bg);
 	}
 
 	> p {
@@ -38,21 +42,18 @@ html.dark {
 	&.tip {
 		> i {
 			background: var(--c-tip);
-			color: var(--c-tip-bg);
 		}
 	}
 
 	&.warning {
 		> i {
 			background: var(--c-warning);
-			color: var(--c-warning-bg);
 		}
 	}
 
 	&.danger {
 		> i {
 			background: var(--c-danger);
-			color: var(--c-danger-bg);
 		}
 	}
 }
