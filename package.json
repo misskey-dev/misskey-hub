@@ -1,7 +1,6 @@
 {
   "name": "misskey-hub",
   "version": "0.0.0",
-  "main": "index.js",
   "scripts": {
     "dev": "vuepress dev src",
     "build": "vuepress build src"
@@ -11,7 +10,8 @@
     "url": "git+https://github.com/misskey-dev/misskey-hub.git"
   },
   "devDependencies": {
-    "@vuepress/plugin-search": "^2.0.0-beta.25",
-    "vuepress": "^2.0.0-beta.25"
+    "@vuepress/plugin-register-components": "^2.0.0-beta.27",
+    "@vuepress/plugin-search": "^2.0.0-beta.27",
+    "vuepress": "^2.0.0-beta.27"
   }
 }

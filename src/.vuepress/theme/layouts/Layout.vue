@@ -4,10 +4,11 @@
 		<button @click="toggleAimode">藍モード</button>
 	</template>
 	<template #sidebar-bottom>
+		<MkDots :class="$style.sidebarDots" space="12"/>
 		<a :class="$style.iwantyou" href="https://github.com/misskey-dev" target="_blank"><img src="https://raw.githubusercontent.com/misskey-dev/assets/main/i-want-you.png"></a>
 	</template>
 	<template #page-bottom>
-		<svg :class="$style.footerDots" fill="none"><defs><pattern id="dots" x="0" y="0" width="16" height="16" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="2" fill="currentColor"></circle></pattern></defs><rect width="100%" height="100%" fill="url(#dots)"></rect></svg>
+		<MkDots :class="$style.footerDots"/>
 		<div :class="$style.footer">Copyright (c) 2021 syuilo and other contributors</div>
 	</template>
 </Layout>
@@ -68,9 +69,18 @@ export default {
 	text-align: center;
 }
 
+.sidebarDots {
+	display: block;
+	margin: 0 32px 2em 32px;
+	width: calc(100% - 64px);
+	height: 40px;
+	opacity: 0.2;
+}
+
 .footerDots {
 	display: block;
 	margin: 2em auto;
+	padding: 0 2.5rem;
 	width: 100%;
 	max-width: var(--content-width);
 	height: 70px;
