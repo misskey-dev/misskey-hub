@@ -2,11 +2,18 @@
   --c-brand: #86b300 !important;
 	--c-brand-light: #acde17 !important;
 
+	--c-bg-navbar: rgba(255, 255, 255, 0.7);
+	--c-bg-navbar-dropdown: var(--c-bg);
+	--c-bg-navbar-dropdown-shadow: rgba(0, 0, 0, 0.1);
+
 	--c-tip: #8ab942;
 }
 
 html.dark {
-	--c-bg: #1b1e21;
+	--c-bg: rgb(27, 30, 33);
+	--c-bg-navbar: rgb(27, 30, 33, 0.7);
+	--c-bg-navbar-dropdown: var(--c-bg-light);
+	--c-bg-navbar-dropdown-shadow: rgba(0, 0, 0, 0.3);
 
 	--c-tip: #678a31;
 	--c-warning: #b79a0f;
@@ -16,6 +23,22 @@ html.dark {
 	--c-danger: #bd3b3b;
 	--c-danger-bg: #463434;
 	--c-danger-text: #edd2d2;
+}
+
+.navbar {
+	backdrop-filter: blur(14px);
+	border-bottom: none !important;
+}
+
+.nav-dropdown {
+	background-color: var(--c-bg-navbar-dropdown) !important;
+	border: none !important;
+	border-radius: 8px !important;
+	box-shadow: 0px 4px 32px var(--c-bg-navbar-dropdown-shadow) !important;
+}
+
+.sidebar {
+	border-right: none !important;
 }
 
 .custom-container {
