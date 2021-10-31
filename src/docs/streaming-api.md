@@ -12,7 +12,7 @@
 
 以下の形式のURLにwebsocket接続します:
 
-```
+```:no-line-numbers
 wss://{host}/streaming?i={token}
 ```
 
