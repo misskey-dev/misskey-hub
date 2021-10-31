@@ -80,9 +80,8 @@ export default {
 .footerDots {
 	display: block;
 	margin: 2em auto;
-	padding: 0 2.5rem;
 	width: 100%;
-	max-width: var(--content-width);
+	max-width: min(var(--content-width), calc(100% - 4rem));
 	height: 70px;
 	opacity: 0.2;
 }
