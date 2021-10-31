@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkmisskey_hub=self.webpackChunkmisskey_hub||[]).push([[88],{2069:(e,t,a)=>{a.r(t),a.d(t,{default:()=>l});const l={render:function(e,t){return null}}},6425:(e,t,a)=>{a.r(t),a.d(t,{data:()=>l});const l={key:"v-3706649a",path:"/404.html",title:"",lang:"ja-JP",frontmatter:{layout:"404"},excerpt:"",headers:[],filePathRelative:null,git:{}}}}]);
