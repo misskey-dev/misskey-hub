@@ -24,12 +24,12 @@ Misskeyのロゴ、アイコンなどのアセットのコレクションです�
 <style>
 .asset {
 	display: block;
-	background-color: #888;
+	background-color: #777;
 	background-image:
-		linear-gradient(45deg, #ccc 25%, transparent 25%),
-		linear-gradient(135deg, #ccc 25%, transparent 25%),
-		linear-gradient(45deg, transparent 75%, #ccc 75%),
-		linear-gradient(135deg, transparent 75%, #ccc 75%);
+		linear-gradient(45deg, #999 25%, transparent 25%),
+		linear-gradient(135deg, #999 25%, transparent 25%),
+		linear-gradient(45deg, transparent 75%, #999 75%),
+		linear-gradient(135deg, transparent 75%, #999 75%);
 	background-size: 25px 25px; /* Must be a square */
 	background-position: 0 0, 12.5px 0, 12.5px -12.5px, 0px 12.5px; /* Must be half of one side of the square */
 	animation: asset-bg 0.5s linear infinite;
