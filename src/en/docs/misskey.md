@@ -61,7 +61,7 @@ Due to the distributed nature of Misskey, each individual server has their own a
 Generally speaking, no matter which server you join, you will still be able to connect with users from all other servers.
 
 ### How can I create my own server?
-Thank you for having an interest in creating a Misskey server. In the current year of 2021 there is no specialized Misskey hosting service, so creating a new server requires a certain amount of knowledge. Please see [here](./install/install.md) for more information regarding this.
+Thank you for having an interest in creating a Misskey server. In the current year of 2021 there is no specialized Misskey hosting service, so creating a new server requires a certain amount of knowledge. Please see [here](./install.md) for more information regarding this.
 
 ### What kind of technology does Misskey use?
 As development on Misskey progressed, the technology it has used has changed greatly.In the beginning, it used a combination of MySQL + PHP + jQuery, but currently uses the following.

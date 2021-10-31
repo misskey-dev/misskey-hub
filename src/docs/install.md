@@ -3,10 +3,10 @@ Misskeyインスタンスの構築に関心をお寄せいただきありがと�
 インスタンスの作成方法はいくつかあるので、下記から選んでガイドをお読みください。
 
 ## Dockerを使ったインストール(おすすめ)
-[こちら](./docker.html)
+[こちら](./install/docker.html)
 
 ## bashスクリプトを使ったインストール
-[こちら](./bash.html)
+[こちら](./install/bash.html)
 
 ## 全部自力でインストール
-[こちら](./manual.html)
+[こちら](./install/manual.html)

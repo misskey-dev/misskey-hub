@@ -58,9 +58,16 @@ export default defineUserConfig<DefaultThemeOptions>({
 					]
 				},
 				{
+					text: '開発者',
+					children: [
+						'/docs/api',
+						'/docs/streaming-api',
+					]
+				},
+				{
 					text: '運営者向け',
 					children: [
-						'/docs/install/install',
+						'/docs/install',
 						'/docs/admin/nginx',
 						'/docs/admin/push-docker-hub',
 						'/docs/admin/troubleshooting',
