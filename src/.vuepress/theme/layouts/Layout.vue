@@ -7,6 +7,7 @@
 		<a :class="$style.iwantyou" href="https://github.com/misskey-dev" target="_blank"><img src="https://raw.githubusercontent.com/misskey-dev/assets/main/i-want-you.png"></a>
 	</template>
 	<template #page-bottom>
+		<svg :class="$style.footerDots" fill="none"><defs><pattern id="dots" x="0" y="0" width="16" height="16" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="2" fill="currentColor"></circle></pattern></defs><rect width="100%" height="100%" fill="url(#dots)"></rect></svg>
 		<div :class="$style.footer">Copyright (c) 2021 syuilo and other contributors</div>
 	</template>
 </Layout>
@@ -65,6 +66,15 @@ export default {
 <style lang="scss" module>
 .footer {
 	text-align: center;
+}
+
+.footerDots {
+	display: block;
+	margin: 2em auto;
+	width: 100%;
+	max-width: var(--content-width);
+	height: 70px;
+	opacity: 0.2;
 }
 
 .iwantyou {
