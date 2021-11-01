@@ -2,6 +2,7 @@ import { path } from '@vuepress/utils'
 import { defineUserConfig } from 'vuepress'
 import type { DefaultThemeOptions } from 'vuepress'
 import { generateRecentUpdatesPage } from './recent-updates-page';
+import { getRelatedPages } from './related-pages';
 
 export default defineUserConfig<DefaultThemeOptions>({
 	// 独自ドメイン使う場合 '/' にする
@@ -123,9 +124,11 @@ export default defineUserConfig<DefaultThemeOptions>({
 		locales: {
 			'/': {
 				selectLanguageName: '日本語',
+				relatedPagesText: '関連するページ',
 			},
 			'/en/': {
 				selectLanguageName: 'English',
+				relatedPagesText: 'Related pages',
 			},
 		},
 		themePlugins: {
@@ -157,5 +160,6 @@ export default defineUserConfig<DefaultThemeOptions>({
 
 	async onInitialized(app) {
 		await generateRecentUpdatesPage(app);
+		await getRelatedPages(app);
 	},
 });

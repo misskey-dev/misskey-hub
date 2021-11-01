@@ -76,11 +76,13 @@ export async function generateRecentUpdatesPage(app: App) {
 	for (let i = 0; i < app.pages.length; i++) {
 		const page = app.pages[i];
 		if (page.content.includes('<!--[RECENT_UPDATES]-->')) {
-			app.pages[i] = await createPage(app, {
+			const updated = await createPage(app, {
 				path: page.path,
 				frontmatter: page.frontmatter,
 				content: page.content.replace('<!--[RECENT_UPDATES]-->', content),
 			});
+			app.pages[i].content = updated.content;
+			app.pages[i].contentRendered = updated.contentRendered;
 		}
 	}
 }

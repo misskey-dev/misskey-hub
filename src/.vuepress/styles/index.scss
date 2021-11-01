@@ -88,6 +88,7 @@ html.dark {
 	border: solid 1px var(--c-border);
 	border-radius: 8px;
 	color: var(--c-text);
+	font-weight: normal;
 
 	&:hover {
 		border-color: var(--c-brand);

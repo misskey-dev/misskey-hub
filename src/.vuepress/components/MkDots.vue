@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import {  } from 'vue'
+import {  } from 'vue';
 
 const idchars = 'abcdefghijklmnopqrstuvwxyz';
 
@@ -28,7 +28,7 @@ export default {
 
     return {
       id,
-    }
-  }
-}
+    };
+  },
+};
 </script>
