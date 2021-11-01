@@ -1,6 +1,6 @@
 <template>
 <div class="mk-related-pages" v-if="relatedPages.length > 0">
-	<div class="title">{{ themeLocale.relatedPagesText }}</div>
+	<div class="title"><i class="fas fa-link" style="margin-right: 0.5em;"></i>{{ themeLocale.relatedPagesText }}</div>
 	<div class="pages">
 		<RouterLink v-for="page in relatedPages" class="page" :to="page.path">
 			<header>{{ page.title }}</header>
