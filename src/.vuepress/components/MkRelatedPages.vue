@@ -34,7 +34,7 @@ export default {
 	width: 100%;
 	max-width: min(var(--content-width), 100% - 4rem);
 	border-top: 1px solid var(--c-border);
-	padding-top: 1rem;
+	padding-top: 1.5rem;
 
 	> .title {
 		font-weight: bold;
