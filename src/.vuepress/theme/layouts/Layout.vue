@@ -5,7 +5,7 @@
 	</template>
 	<template #sidebar-bottom>
 		<MkDots :class="$style.sidebarDots" :space="12"/>
-		<a :class="$style.iwantyou" href="https://github.com/misskey-dev" target="_blank"><img src="https://raw.githubusercontent.com/misskey-dev/assets/main/i-want-you.png"></a>
+		<MkAd :class="$style.koko9"/>
 	</template>
 	<template #page-top>
 		<MkDots :class="$style.headerDots"/>
@@ -100,7 +100,7 @@ export default {
 	opacity: 0.2;
 }
 
-.iwantyou {
+.koko9 {
 	display: block;
 	margin: 0 32px 32px 32px;
 
