@@ -55,6 +55,7 @@ export default defineUserConfig<DefaultThemeOptions>({
 					children: [
 						'/docs/features/note',
 						'/docs/features/reaction',
+						'/docs/features/mfm',
 						'/docs/features/custom-emoji',
 						'/docs/features/online-status',
 						'/docs/features/thread-mute',
