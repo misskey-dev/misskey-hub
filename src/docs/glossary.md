@@ -1,3 +1,7 @@
+---
+description: 'Misskeyに関する用語集です。'
+---
+
 # 用語集
 Misskeyに関する用語集です。
 
