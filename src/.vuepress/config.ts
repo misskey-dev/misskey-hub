@@ -124,10 +124,16 @@ export default defineUserConfig<DefaultThemeOptions>({
 		locales: {
 			'/': {
 				selectLanguageName: '日本語',
+				contributorsText: '編集者',
+				lastUpdatedText: '編集日時',
+				editLinkText: 'ページを編集',
 				relatedPagesText: '関連するページ',
 			},
 			'/en/': {
 				selectLanguageName: 'English',
+				contributorsText: 'Contributors',
+				lastUpdatedText: 'Last Updated',
+				editLinkText: 'Edit this page',
 				relatedPagesText: 'Related pages',
 			},
 		},
