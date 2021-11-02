@@ -58,6 +58,7 @@ export default defineUserConfig<DefaultThemeOptions>({
 						'/docs/features/mfm',
 						'/docs/features/custom-emoji',
 						'/docs/features/online-status',
+						'/docs/features/share-form',
 						'/docs/features/thread-mute',
 						'/docs/features/word-mute',
 						'/docs/features/mute-and-block',
