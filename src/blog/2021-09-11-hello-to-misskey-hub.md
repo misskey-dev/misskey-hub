@@ -1,5 +1,6 @@
 ---
 date: 2021-09-11
+description: 'Misskey初のオフィシャルサイト、Misskey Hubを開設しました。'
 ---
 
 # Say hello to Misskey Hub

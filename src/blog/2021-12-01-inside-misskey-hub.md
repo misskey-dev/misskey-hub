@@ -1,3 +1,7 @@
+---
+description: 'Misskey Advent Calendar 2021 1日目の記事です。Misskey Hubの実装について紹介します。'
+---
+
 # インサイド Misskey Hub
 
 ::: tip

@@ -3,6 +3,7 @@ import { defineUserConfig } from 'vuepress'
 import type { DefaultThemeOptions } from 'vuepress'
 import { generateRecentUpdatesPage } from './recent-updates-page';
 import { getRelatedPages } from './related-pages';
+import { getChildPages } from './child-pages';
 
 export default defineUserConfig<DefaultThemeOptions>({
 	// 独自ドメイン使う場合 '/' にする
@@ -133,6 +134,7 @@ export default defineUserConfig<DefaultThemeOptions>({
 				lastUpdatedText: '編集日時',
 				editLinkText: 'ページを編集',
 				relatedPagesText: '関連するページ',
+				readThisArticle: 'この記事を読む',
 			},
 			'/en/': {
 				selectLanguageName: 'English',
@@ -140,6 +142,7 @@ export default defineUserConfig<DefaultThemeOptions>({
 				lastUpdatedText: 'Last Updated',
 				editLinkText: 'Edit this page',
 				relatedPagesText: 'Related pages',
+				readThisArticle: 'Read this article',
 			},
 		},
 		themePlugins: {
@@ -172,5 +175,6 @@ export default defineUserConfig<DefaultThemeOptions>({
 	async onInitialized(app) {
 		await generateRecentUpdatesPage(app);
 		await getRelatedPages(app);
+		await getChildPages(app);
 	},
 });
