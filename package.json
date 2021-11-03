@@ -10,9 +10,14 @@
     "url": "git+https://github.com/misskey-dev/misskey-hub.git"
   },
   "devDependencies": {
+    "@types/three": "^0.133.1",
+    "@types/tinycolor2": "^1.4.3",
     "@vuepress/plugin-register-components": "^2.0.0-beta.27",
     "@vuepress/plugin-search": "^2.0.0-beta.27",
     "execa": "^5.1.1",
+    "meshline": "^2.0.3",
+    "three": "^0.134.0",
+    "tinycolor2": "^1.4.2",
     "vuepress": "^2.0.0-beta.27"
   }
 }

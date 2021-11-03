@@ -20,6 +20,10 @@ features:
     details: It has distinctive features such as reactions and a highly customizable UI.
 ---
 
+<ClientOnly>
+	<MkParticles/>
+</ClientOnly>
+
 <div class="contents">
 
 # Sponsors
@@ -29,6 +33,11 @@ features:
 </div>
 
 <style>
+.hero {
+	position: relative;
+	z-index: 2;
+}
+
 .contents {
 	text-align: center;
 }
