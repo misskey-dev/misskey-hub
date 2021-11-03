@@ -70,7 +70,7 @@ export default defineUserConfig<DefaultThemeOptions>({
 					text: '開発者',
 					children: [
 						'/docs/api',
-						'/docs/streaming-api',
+						'/docs/api/streaming',
 					]
 				},
 				{

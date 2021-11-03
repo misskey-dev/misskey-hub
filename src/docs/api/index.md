@@ -100,4 +100,4 @@ MisskeyはRESTを採用していません。
 
 APIの詳細は、[APIリファレンス](TODO)を参照してください。
 
-また、MisskeyはHTTP APIだけでなく、ストリーミングAPIも提供しています。ストリーミングAPIの詳細は[こちらのドキュメント](./streaming-api.md)を参照してください。
+また、MisskeyはHTTP APIだけでなく、ストリーミングAPIも提供しています。ストリーミングAPIの詳細は[こちらのドキュメント](./streaming/index.md)を参照してください。
