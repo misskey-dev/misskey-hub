@@ -25,9 +25,9 @@ export class Particle {
 	private material: THREE.MeshBasicMaterial;
 	private mesh: THREE.Mesh;
 
-	constructor(config, system, loader) {
+	constructor(config, system) {
 		this.system = system;
-		this.loader = loader;
+		this.loader = this.system.loader;
 
 		this.group = config.group;
 		this.x = config.x;
@@ -66,11 +66,13 @@ export class Particle {
 	}
 
 	update() {
-		let scale = 0.075 + (Math.abs(this.velocity.y) / 25)
+		const scale = 0.075 + (Math.abs(this.velocity.y) / 25)
 		this.mesh.scale.set(scale, scale, scale);
 
-		let opacity = 0.15 + (Math.abs(this.velocity.y) / 1)
-		this.mesh.material.opacity = Calc.clamp(opacity, 0.15, 1);
+		//const opacity = 0.15 + (Math.abs(this.velocity.y) / 1)
+		//this.mesh.material.opacity = Calc.clamp(opacity, 0.15, 1);
+		const opacity = 0 + (Math.abs(this.velocity.y) / 1)
+		this.mesh.material.opacity = Calc.clamp(opacity, 0, 1);
 
 		this.velocity.y += (this.base.y - this.mesh.position.y) * this.lerpFactor;
 		this.velocity.multiplyScalar(this.dampFactor);

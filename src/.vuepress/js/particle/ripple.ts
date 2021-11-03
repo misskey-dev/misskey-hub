@@ -12,7 +12,7 @@ export class Ripple {
 	private array: Ripple[];
 	private group: THREE.Object3D;
 	private sphere: THREE.Sphere;
-	private strength: number;
+	private strength: number; // 波の高さ
 	private threshold: number;
 	private growth: number;
 	private life: number;
@@ -22,15 +22,15 @@ export class Ripple {
 	private material: THREE.LineBasicMaterial;
 	private mesh: THREE.Mesh;
 
-	constructor(config, system, loader) {
+	constructor(config, system) {
 		this.system = system;
-		this.loader = loader;
+		this.loader = this.system.loader;
 
 		this.array = config.array;
 		this.group = config.group;
 		this.sphere = new THREE.Sphere(new THREE.Vector3(config.x, config.y, config.z), 0);
 		this.strength = config.strength ? config.strength : Calc.rand(7, 15);
-		this.threshold = Calc.rand(4, 16);
+		this.threshold = Calc.rand(5, 20);
 		this.growth = Calc.rand(0.2, 0.5);
 		this.life = 1;
 		this.decay = Calc.rand(0.01, 0.02);

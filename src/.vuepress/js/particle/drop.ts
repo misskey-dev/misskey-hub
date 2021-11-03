@@ -26,9 +26,9 @@ export class Drop {
 	private material: THREE.MeshBasicMaterial;
 	private mesh: THREE.Mesh;
 
-	constructor(config, system, loader) {
+	constructor(config, system) {
 		this.system = system;
-		this.loader = loader;
+		this.loader = this.system.loader;
 
 		this.array = config.array;
 		this.group = config.group;

@@ -59,7 +59,7 @@ export class Loader {
 
 		this.camera.position.x = 0;
 		this.camera.position.y = -30;
-		this.camera.position.z = 10;
+		this.camera.position.z = 0;
 	}
 
 	setupRenderer() {

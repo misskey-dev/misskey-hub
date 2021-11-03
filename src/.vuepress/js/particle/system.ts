@@ -12,8 +12,7 @@ function hexToInt(rrggbb: string): number {
 }
 
 export class System {
-
-	private loader: Loader;
+	public loader: Loader;
 	private drops: Drop[] = [];
 	private ripples: Ripple[] = [];
 	private particles: Particle[] = [];
@@ -23,13 +22,13 @@ export class System {
 	private center: THREE.Vector3;
 	private particleGroup: THREE.Object3D;
 
-	private size = 128;
-	private cols = 48;
-	private rows = 48;
+	private size = 96;
+	private cols = 32;
+	private rows = 32;
 
 	private tick: number = 0;
-	private dropTick = 15;
-	private dropTickMin = 10;
+	private dropTick = 1;
+	private dropTickMin = 25;
 	private dropTickMax = 30;
 
 	private particleColor: number;
@@ -67,7 +66,7 @@ export class System {
 					size: 0.01,
 					color: this.particleColor,
 					opacity: 0.01
-				}, this, this.loader));
+				}, this));
 			}
 		}
 	}
@@ -79,11 +78,11 @@ export class System {
 			x: x === undefined ? Calc.rand(-this.size / 2, this.size / 2) : x,
 			y: y === undefined ? Calc.rand(30, 50) : y,
 			z: z === undefined ? Calc.rand(-this.size / 2, this.size / 2) : z,
-			size: 0.1,
+			size: 0.15,
 			color: this.dropColor,
 			opacity: 0,
 			strength: strength
-		}, this, this.loader));
+		}, this));
 	}
 
 	updateDrops() {
@@ -102,7 +101,7 @@ export class System {
 			z: z,
 			color: this.rippleColor,
 			strength: strength
-		}, this, this.loader));
+		}, this));
 	}
 
 	updateRipples() {
@@ -118,17 +117,17 @@ export class System {
 			while(i--) {
 				this.particles[i].update();
 			}
-
-			if(this.tick >= this.dropTick) {
-				this.createDrop();
-				this.dropTick = Calc.randInt(this.dropTickMin, this.dropTickMax);
-				this.tick = 0;
-			}
-
-			this.updateDrops();
-			this.updateRipples();
 		}
 
+		if(this.tick >= this.dropTick) {
+			this.createDrop();
+			this.dropTick = Calc.randInt(this.dropTickMin, this.dropTickMax);
+			this.tick = 0;
+		}
+
+		this.updateDrops();
+		this.updateRipples();
+	
 		{
 			let i = this.particles.length;
 			while(i--) {
@@ -142,11 +141,11 @@ export class System {
 					particle.velocity.add(influence);
 				}
 			}
-
-			this.particleGroup.rotation.x = Math.cos(this.loader.elapsedMilliseconds * 0.0005) * 0.1;
-			this.particleGroup.rotation.y = Math.PI * 0.25 + Math.sin(this.loader.elapsedMilliseconds * 0.0005) * -0.2;
 		}
 
+		this.particleGroup.rotation.x = Math.cos(this.loader.elapsedMilliseconds * 0.0005) * 0.1;
+		this.particleGroup.rotation.y = Math.PI * 0.25 + Math.sin(this.loader.elapsedMilliseconds * 0.0005) * -0.2;
+	
 		this.tick += this.loader.deltaTimeNormal;
 	}
 }
