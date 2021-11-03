@@ -27,7 +27,7 @@ export class System {
 	private rows = 32;
 
 	private tick: number = 0;
-	private dropTick = 1;
+	private dropTick = 0;
 	private dropTickMin = 25;
 	private dropTickMax = 30;
 

@@ -3,7 +3,7 @@ import * as tinycolor from 'tinycolor2';
 import { System } from './system';
 
 export class Loader {
-	public timescale: number;
+	public timescale: number = 0.75;
 	public camera: THREE.PerspectiveCamera;
 	public clock: THREE.Clock;
 	public deltaTimeSeconds: number;
@@ -38,7 +38,6 @@ export class Loader {
 	}
 
 	setupTime() {
-		this.timescale = 1;
 		this.clock = new THREE.Clock();
 		this.deltaTimeSeconds = this.clock.getDelta() * this.timescale;
 		this.deltaTimeMilliseconds = this.deltaTimeSeconds * 1000;
