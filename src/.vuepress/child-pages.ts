@@ -1,34 +1,26 @@
 import { App, Page } from 'vuepress';
 import execa from 'execa';
 
-const getUpdatedTime = async (
+const getTimes = async (
 	filePath: string,
 	cwd: string
-): Promise<number> => {
+) => {
 	const { stdout } = await execa(
 		'git',
-		['--no-pager', 'log', '-1', '--format=%at', filePath],
+		['--no-pager', 'log', '--format=%at', filePath],
 		{
 			cwd,
 		}
 	);
 
-	return Number.parseInt(stdout, 10) * 1000;
-}
+	const logs = stdout.split('\n');
+	const newest = logs[0];
+	const oldest = logs[logs.length - 1];
 
-const getCreatedTime = async (
-	filePath: string,
-	cwd: string
-): Promise<number> => {
-	const { stdout } = await execa(
-		'git',
-		['--no-pager', 'log', '--reverse', '-1', '--format=%at', filePath],
-		{
-			cwd,
-		}
-	);
-
-	return Number.parseInt(stdout, 10) * 1000;
+	return {
+		updatedTime: Number.parseInt(newest, 10) * 1000,
+		createdTime: Number.parseInt(oldest, 10) * 1000,
+	};
 }
 
 export async function getChildPages(app: App) {
@@ -43,13 +35,16 @@ export async function getChildPages(app: App) {
 
 		if (childPages.length === 0) continue;
 
-		(page.data as any).childPages = await Promise.all(childPages.map(async p => ({
-			name: p.filePath.split('/').pop(),
-			title: p.title,
-			path: p.path,
-			summary: p.frontmatter.description || p.excerpt,
-			updatedTime: await getUpdatedTime(p.filePathRelative, cwd),
-			createdTime: await getCreatedTime(p.filePathRelative, cwd),
-		})));
+		(page.data as any).childPages = await Promise.all(childPages.map(async p => {
+			const times = await getTimes(p.filePathRelative, cwd);
+			return {
+				name: p.filePath.split('/').pop(),
+				title: p.title,
+				path: p.path,
+				summary: p.frontmatter.description || p.excerpt,
+				updatedTime: times.updatedTime,
+				createdTime: times.createdTime,
+			};
+		}));
 	}
 }
