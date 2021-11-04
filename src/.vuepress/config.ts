@@ -71,6 +71,7 @@ export default defineUserConfig<DefaultThemeOptions>({
 					children: [
 						'/docs/api',
 						'/docs/api/streaming',
+						'/docs/api/entity',
 					]
 				},
 				{
