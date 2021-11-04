@@ -1,3 +1,3 @@
 # チャンネル一覧
 
-<MkIndex></MkIndex>
+<MkIndex :sort="(a, b) => b.name - a.name"></MkIndex>
