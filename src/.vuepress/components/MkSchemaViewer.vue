@@ -27,9 +27,6 @@ export default {
 <style lang="scss" scoped>
 .mk-schema-viewer {
 	margin: 1.5rem auto;
-	background: var(--c-bg-light);
-	border-radius: 6px;
-	padding: 12px 16px 16px 16px;
 
 	> .title {
 		font-weight: bold;

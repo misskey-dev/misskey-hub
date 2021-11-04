@@ -1,24 +1,25 @@
 <template>
 <div class="mk-schema-viewer-item">
 	<div v-if="schema.$ref">
-		<code>{{ schema.$ref }}</code> (TODO: link to entity page if starts with misskey://)
+		<RouterLink v-if="schema.$ref.startsWith('misskey://')" :to="refPath"><code>{{ refName }}</code></RouterLink><span v-if="schema.nullable" class="nullable">(nullable)</span>
 	</div>
 	<div v-else-if="schema.type === 'string'" class="string">
-		<code>string</code>
+		<code>string</code><span v-if="schema.nullable" class="nullable">(nullable)</span>
 		<div v-if="schema.description" class="description">{{ schema.description }}</div>
 	</div>
 	<div v-else-if="schema.type === 'number'" class="number">
-		<code>number</code>
+		<code>number</code><span v-if="schema.nullable" class="nullable">(nullable)</span>
 		<div v-if="schema.description" class="description">{{ schema.description }}</div>
 	</div>
 	<div v-else-if="schema.type === 'boolean'" class="boolean">
-		<code>boolean</code>
+		<code>boolean</code><span v-if="schema.nullable" class="nullable">(nullable)</span>
 		<div v-if="schema.description" class="description">{{ schema.description }}</div>
 	</div>
 	<div v-else-if="schema.type === 'array'" class="array">
 		<div class="label">Array of:</div>
 		<div v-if="schema.description" class="description">{{ schema.description }}</div>
 		<MkSchemaViewerItem :schema="schema.items"/>
+		<span v-if="schema.nullable" class="nullable">(nullable)</span>
 	</div>
 	<div v-else-if="schema.type === 'object'" class="object">
 		<div class="label">Object:</div>
@@ -27,12 +28,16 @@
 			<div class="k"><code>{{ k }}</code></div>
 			<div class="v"><MkSchemaViewerItem :schema="v"/></div>
 		</div>
+		<span v-if="schema.nullable" class="nullable">(nullable)</span>
 	</div>
 </div>
 </template>
 
 <script>
 import {  } from 'vue';
+import { useRouteLocale } from '@vuepress/client';
+
+const camelToKebab = str => str[0].toLowerCase() + str.slice(1, str.length).replace(/[A-Z]/g, letter => `-${letter.toLowerCase()}`);
 
 export default {
 	props: {
@@ -43,7 +48,13 @@ export default {
 	},
 
   setup(props) {
+		const locale = useRouteLocale();
+		const refName = props.schema.$ref ? props.schema.$ref.replace('misskey://', '') : null;
 
+		return {
+			refName,
+			refPath: props.schema.$ref ? `${locale.value}docs/api/entity/${camelToKebab(refName)}.html` : null,
+		};
   },
 };
 </script>
@@ -79,7 +90,7 @@ export default {
 
 		> .kv {
 			display: flex;
-			padding-top: 0.5em;
+			padding: 0.5em 0;
 			border-top: solid 1px var(--c-border);
 
 			> .k {
