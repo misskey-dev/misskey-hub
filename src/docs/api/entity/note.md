@@ -29,6 +29,10 @@ description: "ノートを表すエンティティです。"
 		userId: {
 			type: 'string',
 		},
+		visibility: {
+			type: 'string',
+			enum: ['public', 'home', 'followers', 'specified',],
+		},
 	},
 }">
 </MkSchemaViewer>

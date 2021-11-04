@@ -5,6 +5,9 @@
 	</div>
 	<div v-else-if="schema.type === 'string'" class="string">
 		<code>string</code><span v-if="schema.nullable" class="nullable">(nullable)</span>
+		<div v-if="schema.enum" class="enum">enum:
+			<code v-for="v in schema.enum">{{ v }}</code>
+		</div>
 		<div v-if="schema.description" class="description">{{ schema.description }}</div>
 	</div>
 	<div v-else-if="schema.type === 'number'" class="number">
@@ -64,6 +67,12 @@ export default {
 	> .string {
 		> .description {
 			margin-top: 0.5em;
+		}
+
+		> .enum {
+			> * {
+				margin-right: 0.5em;
+			}
 		}
 	}
 
