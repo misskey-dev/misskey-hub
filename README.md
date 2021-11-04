@@ -1,7 +1,7 @@
-# Misskey Hub(Caution! Misskey Hub is under construction)
-Misskey Hub is an Official Site of Misskey.<br>
-Misskey is an open-source,decentralized microblogging platform.<br><br>
-This website uses [VuePress](https://github.com/vuepress/vuepress-next).
+# Misskey Hub
+Misskey Hub is an Official Site of Misskey.
+
+Built with [VuePress](https://github.com/vuepress/vuepress-next).
 
 ## Develop
 ### Launch dev server
