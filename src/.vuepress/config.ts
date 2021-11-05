@@ -82,6 +82,7 @@ export default defineUserConfig<DefaultThemeOptions>({
 						'/docs/admin/nginx',
 						'/docs/admin/push-docker-hub',
 						'/docs/admin/troubleshooting',
+						'/docs/tips/disable-timelines',
 					]
 				}
 			]
