@@ -64,6 +64,7 @@ export default defineUserConfig<DefaultThemeOptions>({
 						'/docs/features/thread-mute',
 						'/docs/features/word-mute',
 						'/docs/features/mute-and-block',
+						'/docs/features/plugin',
 					]
 				},
 				{
