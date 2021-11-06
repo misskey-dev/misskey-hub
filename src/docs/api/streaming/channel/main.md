@@ -12,72 +12,56 @@ description: "基本的な情報が流れるチャンネルです。"
 ### `notification`
 <MkSchemaViewer :schema="{
 	$ref: 'misskey://Notification'
-}">
-	<template #title>ペイロード</template>
-</MkSchemaViewer>
+}"/>
 
 通知を受け取ったときに発生します。
 
 ### `mention`
 <MkSchemaViewer :schema="{
 	$ref: 'misskey://Note'
-}">
-	<template #title>ペイロード</template>
-</MkSchemaViewer>
+}"/>
 
 メンションされたときに発生します。
 
 ### `reply`
 <MkSchemaViewer :schema="{
 	$ref: 'misskey://Note'
-}">
-	<template #title>ペイロード</template>
-</MkSchemaViewer>
+}"/>
 
 返信されたときに発生します。
 
 ### `renote`
 <MkSchemaViewer :schema="{
 	$ref: 'misskey://Note'
-}">
-	<template #title>ペイロード</template>
-</MkSchemaViewer>
+}"/>
 
 Renoteされたときに発生します。
 
 ### `follow`
 <MkSchemaViewer :schema="{
 	$ref: 'misskey://User'
-}">
-	<template #title>ペイロード</template>
-</MkSchemaViewer>
+}"/>
 
 自分が他のユーザーをフォローしたときに発生します。
 
 ### `followed`
 <MkSchemaViewer :schema="{
 	$ref: 'misskey://User'
-}">
-	<template #title>ペイロード</template>
-</MkSchemaViewer>
+}"/>
 
 他のユーザーが自分をフォローしたときに発生します。
 
 ### `unfollow`
 <MkSchemaViewer :schema="{
 	$ref: 'misskey://User'
-}">
-	<template #title>ペイロード</template>
-</MkSchemaViewer>
+}"/>
 
 自分が他のユーザーをフォロー解除したときに発生します。
 
 ### `messagingMessage`
 <MkSchemaViewer :schema="{
 	$ref: 'misskey://MessagingMessage'
-}">
-	<template #title>ペイロード</template>
-</MkSchemaViewer>
+}"/>
 
 メッセージを受け取ったときに発生します。
 

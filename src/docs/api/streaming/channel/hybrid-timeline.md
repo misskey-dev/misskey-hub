@@ -12,9 +12,7 @@ description: "ソーシャルタイムラインのノートが流れるチャン
 ### `note`
 <MkSchemaViewer :schema="{
 	$ref: 'misskey://Note'
-}">
-	<template #title>ペイロード</template>
-</MkSchemaViewer>
+}"/>
 
 ソーシャルタイムラインに新しいノートが追加されたときに発生します。
 

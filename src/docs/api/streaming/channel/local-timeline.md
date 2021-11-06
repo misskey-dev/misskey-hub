@@ -12,9 +12,7 @@ description: "ローカルタイムラインのノートが流れるチャンネ
 ### `note`
 <MkSchemaViewer :schema="{
 	$ref: 'misskey://Note'
-}">
-	<template #title>ペイロード</template>
-</MkSchemaViewer>
+}"/>
 
 ローカルタイムラインに新しいノートが追加されたときに発生します。
 

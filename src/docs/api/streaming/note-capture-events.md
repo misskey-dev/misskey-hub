@@ -13,9 +13,7 @@
 			description: 'リアクションを行ったユーザーのID',
 		},
 	}
-}">
-	<template #title>ペイロード</template>
-</MkSchemaViewer>
+}"/>
 
 対象のノートにリアクションがされた場合に発生します。
 
@@ -32,9 +30,7 @@
 			description: '投票を行ったユーザーのID',
 		},
 	}
-}">
-	<template #title>ペイロード</template>
-</MkSchemaViewer>
+}"/>
 
 対象のノートに添付されたアンケートに投票がされた場合に発生します。
 
@@ -47,8 +43,6 @@
 			description: '削除日時',
 		},
 	}
-}">
-	<template #title>ペイロード</template>
-</MkSchemaViewer>
+}"/>
 
 対象のノートが削除された場合に発生します。

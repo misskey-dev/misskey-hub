@@ -4,6 +4,7 @@ import type { DefaultThemeOptions } from 'vuepress'
 import { generateRecentUpdatesPage } from './recent-updates-page';
 import { getRelatedPages } from './related-pages';
 import { getChildPages } from './child-pages';
+import { generateEndpointPages } from './generate-endpoint-pages';
 
 export default defineUserConfig<DefaultThemeOptions>({
 	// 独自ドメイン使う場合 '/' にする
@@ -176,6 +177,7 @@ export default defineUserConfig<DefaultThemeOptions>({
 	],
 
 	async onInitialized(app) {
+		await generateEndpointPages(app);
 		await generateRecentUpdatesPage(app);
 		await getRelatedPages(app);
 		await getChildPages(app);

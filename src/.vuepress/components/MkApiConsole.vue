@@ -1,8 +1,6 @@
 <template>
-<div class="mk-schema-viewer">
-	<div class="schema">
-		<MkSchemaViewerItem :schema="schema"/>
-	</div>
+<div class="mk-api-console">
+	<input v-model="host">
 </div>
 </template>
 
@@ -11,7 +9,7 @@ import {  } from 'vue';
 
 export default {
 	props: {
-		schema: {
+		def: {
 			type: Object,
 			required: true,
 		}
@@ -24,10 +22,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.mk-schema-viewer {
+.mk-api-console {
 	margin: 1.5rem auto;
 
-	> .schema {
-	}
 }
 </style>

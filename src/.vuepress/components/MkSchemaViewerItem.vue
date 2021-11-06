@@ -1,21 +1,24 @@
 <template>
 <div class="mk-schema-viewer-item">
 	<div v-if="schema.$ref">
-		<RouterLink v-if="schema.$ref.startsWith('misskey://')" :to="refPath"><code>{{ refName }}</code></RouterLink><span v-if="schema.nullable" class="nullable">(nullable)</span>
+		<RouterLink v-if="schema.$ref.startsWith('misskey://')" :to="refPath">{{ refName }}</RouterLink><span v-if="schema.nullable" class="nullable">(nullable)</span>
 	</div>
 	<div v-else-if="schema.type === 'string'" class="string">
 		<code>string</code><span v-if="schema.nullable" class="nullable">(nullable)</span>
 		<div v-if="schema.enum" class="enum">enum:
 			<code v-for="v in schema.enum">{{ v }}</code>
 		</div>
+		<div v-if="schema.default !== undefined" class="nullable">default: <code>{{ schema.default }}</code></div>
 		<div v-if="schema.description" class="description">{{ schema.description }}</div>
 	</div>
 	<div v-else-if="schema.type === 'number'" class="number">
 		<code>number</code><span v-if="schema.nullable" class="nullable">(nullable)</span>
+		<div v-if="schema.default !== undefined" class="nullable">default: <code>{{ schema.default }}</code></div>
 		<div v-if="schema.description" class="description">{{ schema.description }}</div>
 	</div>
 	<div v-else-if="schema.type === 'boolean'" class="boolean">
 		<code>boolean</code><span v-if="schema.nullable" class="nullable">(nullable)</span>
+		<div v-if="schema.default !== undefined" class="nullable">default: <code>{{ schema.default }}</code></div>
 		<div v-if="schema.description" class="description">{{ schema.description }}</div>
 	</div>
 	<div v-else-if="schema.type === 'array'" class="array">
@@ -23,15 +26,17 @@
 		<div v-if="schema.description" class="description">{{ schema.description }}</div>
 		<MkSchemaViewerItem :schema="schema.items"/>
 		<span v-if="schema.nullable" class="nullable">(nullable)</span>
+		<div v-if="schema.default !== undefined" class="nullable">default: <code>{{ schema.default }}</code></div>
 	</div>
 	<div v-else-if="schema.type === 'object'" class="object">
 		<div class="label">Object:</div>
 		<div v-if="schema.description" class="description">{{ schema.description }}</div>
 		<div v-for="[k, v] in Object.entries(schema.properties)" class="kv">
-			<div class="k"><code>{{ k }}</code></div>
+			<div class="k">{{ k }}</div>
 			<div class="v"><MkSchemaViewerItem :schema="v"/></div>
 		</div>
 		<span v-if="schema.nullable" class="nullable">(nullable)</span>
+		<div v-if="schema.default !== undefined" class="nullable">default: <code>{{ schema.default }}</code></div>
 	</div>
 </div>
 </template>
@@ -100,10 +105,13 @@ export default {
 		> .kv {
 			display: flex;
 			padding: 0.5em 0;
-			border-top: solid 1px var(--c-border);
+			border-top: dashed 1px var(--c-border);
 
 			> .k {
-				width: 8em;
+				width: 11em;
+				padding-right: 8px;
+				font-family: var(--font-family-code);
+				word-wrap: anywhere;
 			}
 		}
 	}

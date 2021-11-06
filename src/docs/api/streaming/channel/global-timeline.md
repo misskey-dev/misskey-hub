@@ -12,9 +12,7 @@ description: "グローバルタイムラインのノートが流れるチャン
 ### `note`
 <MkSchemaViewer :schema="{
 	$ref: 'misskey://Note'
-}">
-	<template #title>ペイロード</template>
-</MkSchemaViewer>
+}"/>
 
 グローバルタイムラインに新しいノートが追加されたときに発生します。
 
