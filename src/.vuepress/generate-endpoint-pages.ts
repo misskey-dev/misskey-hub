@@ -9,10 +9,14 @@ export async function generateEndpointPages(app: App) {
 		const endpointsDir = locale + 'docs/api/endpoints/';
 		const endpointPaths = glob.sync(__dirname + '/..' + endpointsDir + '**/*.json5');
 
+		let indexContent = '# エンドポイント\n';
+
 		for (const endpointPath of endpointPaths) {
 			const name = endpointPath.slice(endpointPath.indexOf(endpointsDir)).replace(endpointsDir, '').replace('.json5', '');
 			const data = fs.readFileSync(endpointPath, 'utf-8');
 			const def = JSON5.parse(data);
+
+			indexContent += `- [${name}](./endpoints/${name}.html)\n`;
 	
 			let content = `# \`${name}\`\n${def.description}`;
 
@@ -51,6 +55,12 @@ none
 				content: content,
 			});
 			app.pages.push(page);
-		}	
+		}
+
+		const indexPage = await createPage(app, {
+			path: locale + 'docs/api/endpoints.html',
+			content: indexContent,
+		});
+		app.pages.push(indexPage);
 	}
 }

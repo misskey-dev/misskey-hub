@@ -74,6 +74,7 @@ export default defineUserConfig<DefaultThemeOptions>({
 						'/docs/api',
 						'/docs/api/streaming',
 						'/docs/api/entity',
+						'/docs/api/endpoints.html',
 					]
 				},
 				{
