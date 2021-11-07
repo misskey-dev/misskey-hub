@@ -23,6 +23,8 @@ export async function generateEndpointPages(app: App) {
 			if (def.requireCredential) {
 				content += `\n\nCredential required.\n`;
 			}
+
+			// TODO: permission
 	
 			if (def.req && Object.keys(def.req).length > 0) {
 				content += `
