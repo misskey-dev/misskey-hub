@@ -1,0 +1,11 @@
+[{
+	host: 'misskey.io',
+	lang: 'ja',
+}, {
+	host: 'gorf.space',
+	lang: 'en',
+}, {
+	host: 'sushi.ski',
+	name: 'すしすき～',
+	lang: 'ja',
+},]

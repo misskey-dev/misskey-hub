@@ -5,6 +5,7 @@ import { generateRecentUpdatesPage } from './recent-updates-page';
 import { getRelatedPages } from './related-pages';
 import { getChildPages } from './child-pages';
 import { generateEndpointPages } from './generate-endpoint-pages';
+import { getInstances } from './get-instances';
 
 export default defineUserConfig<DefaultThemeOptions>({
 	// 独自ドメイン使う場合 '/' にする
@@ -40,6 +41,7 @@ export default defineUserConfig<DefaultThemeOptions>({
 		}, {
 			text: 'お楽しみ',
 			children: [
+				'/instances',
 				'/plugins/',
 				'/appendix/assets'
 			]
@@ -178,6 +180,7 @@ export default defineUserConfig<DefaultThemeOptions>({
 	],
 
 	async onInitialized(app) {
+		await getInstances(app);
 		await generateEndpointPages(app);
 		await generateRecentUpdatesPage(app);
 		await getRelatedPages(app);
