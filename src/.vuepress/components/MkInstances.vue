@@ -39,6 +39,7 @@ export default {
 			background: #fff;
 			border: none;
 			border-radius: 10px;
+			box-shadow: 0 4px 16px rgb(0 0 0 / 10%);
 		}
 	}
 }
