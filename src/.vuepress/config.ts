@@ -83,6 +83,7 @@ export default defineUserConfig<DefaultThemeOptions>({
 					text: '運営者向け',
 					children: [
 						'/docs/install',
+						'/docs/admin/cdn',
 						'/docs/admin/nginx',
 						'/docs/admin/push-docker-hub',
 						'/docs/admin/troubleshooting',
