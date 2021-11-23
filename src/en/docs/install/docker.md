@@ -27,7 +27,7 @@ cp .config/docker_example.env .config/docker.env
 Edit `default.yml` and `docker.env` according to the instructions in the files.
 
 ::: warning
-In the `default.yml`, the hosts for Postgresql/Redis should be set to `db`/`redis` respectively.
+In the `default.yml`, the hosts that set with `localhost` from Postgresql/Redis should be set to `db`/`redis` respectively.
 :::
 
 Edit `docker-compose.yml` if necessary. (e.g. if you want to change the port).
