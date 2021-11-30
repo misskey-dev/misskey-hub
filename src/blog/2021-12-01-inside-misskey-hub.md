@@ -221,6 +221,10 @@ SSGはMisskey Hubのようなドキュメントサイトだけでなく、ブロ
 
 静的サイトはいいぞ。vuepressはいいぞ。Misskey Hubに幸あれ🙏
 
+---
+
+もしMisskeyが少しでもあなたの生活を豊かにしていると感じたら、ぜひ開発に対して[Patreonで寄付](https://www.patreon.com/syuilo)することをご検討お願いします。喜びます。
+
 ## P.S.
 藍ちゃんと**ツーショット**撮ったので見て！！！！
 ![](https://s3.arkjp.net/misskey/c3e86103-2387-4c04-bf69-99173d857586.png)
