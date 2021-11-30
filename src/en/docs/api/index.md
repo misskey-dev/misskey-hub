@@ -98,3 +98,7 @@ The access token is included in the request body JSON at the parameter `i`.
 For more information on the API, see the [API Reference](TODO).
 
 In addition to the HTTP API, Misskey also provides a streaming API. More information about the streaming API can be found [here](./streaming/).
+
+::: tip
+Your Misskey instance also provides API documentation at `/api-doc`.
+:::
