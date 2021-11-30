@@ -14,6 +14,11 @@ Usually, ActivityPub's "Like" is implemented as a favorite.
 ## Reactions from remote instances
 Since Misskey does not have likes, a "Like" from a remote instance will be displayed as a '👍' reaction.
 
+::: tip
+Your instance administrator may change this to be displayed as a '⭐' reaction.
+If you are an admin, see [here](../admin/default-reaction.md).
+:::
+
 ## See a list of all your reactions
 In Misskey Web, you can see the list of all the reactions you have made by opening the "Reactions" tab on your profile page.
 You can also choose to make this list public in the settings.

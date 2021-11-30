@@ -204,6 +204,7 @@ export default defineUserConfig<DefaultThemeOptions>({
 								'/en/docs/admin/push-docker-hub',
 								'/en/docs/admin/troubleshooting',
 								'/en/docs/tips/disable-timelines',
+								'/en/docs/admin/default-reaction',
 							]
 						}
 					]
