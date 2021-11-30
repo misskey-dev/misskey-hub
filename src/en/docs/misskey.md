@@ -81,7 +81,7 @@ While no official Misskey app for either OS exists, there are several third-part
 However, functionality of third-party applications will inevitably lag behind the official Web client, so unless you really want to use a native application, we recommend the official Web client instead. As the Misskey Web client supports PWA, it is also possible to make it act as if it was a native application instead. For details regarding this, please check [here](todo).
 
 ### Where can I download Misskey's logo or icon?
-(Coming soon)
+Please refer to the [assets collection](../appendix/assets.html).
 
 ### Who's that cute cat-eared girl that you see sometimes?
 It's Misskey's guardian deity, Ai.(They called Ai cute, yay!)
