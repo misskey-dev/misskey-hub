@@ -77,5 +77,5 @@ sudo docker-compose stop && sudo docker-compose up -d
 cliコマンドを実行する方法
 ----------------------------------------------------------------
 ```sh
-sudo docker-compose run --rm web node built/tools/mark-admin @example
+sudo docker-compose run --rm web node packages/backend/built/tools/mark-admin @example
 ```

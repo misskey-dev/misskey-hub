@@ -74,5 +74,5 @@ It may take some time depending on the contents of the update and the size of th
 How to execute CLI command
 ----------------------------------------------------------------
 ```sh
-sudo docker-compose run --rm web node built/tools/mark-admin @example
+sudo docker-compose run --rm web node packages/backend/built/tools/mark-admin @example
 ```
