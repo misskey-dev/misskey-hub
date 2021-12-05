@@ -20,7 +20,7 @@ adduser --disabled-password --disabled-login misskey
 Please install and setup these softwares:
 
 #### Dependencies :package:
-* **[Node.js](https://nodejs.org/en/)** (12.x, 14.x)
+* **[Node.js](https://nodejs.org/en/)** (16.x)
 * **[PostgreSQL](https://www.postgresql.org/)** (12.x / 13.x is preferred)
 * **[Redis](https://redis.io/)**
 
