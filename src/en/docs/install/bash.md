@@ -22,7 +22,7 @@ If you are using nginx and Cloudflare, you must configure Cloudflare:
 ## Procedures
 ### 1. SSH
 Connect to the server via SSH.  
-(If you have the desktop open, open the shell.)
+(If you have the server's desktop open, open the shell.)
 
 ### 2. Clean up
 Make sure all packages are up to date and reboot.
