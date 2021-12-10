@@ -5,8 +5,6 @@ Misskeyを簡単にインストールするためのシェルスクリプトが�
 
 また、アップデートスクリプトもあります。
 
-[**English version**](./README.en.md)
-
 ## ライセンス
 [MIT License](./LICENSE)
 
