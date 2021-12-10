@@ -1,4 +1,4 @@
-# Misskey install shell script v1.0.0
+# Misskey install shell script v1.4.0
 Misskeyを簡単にインストールするためのシェルスクリプトができました！
 
 いくつかの質問に答えるだけで、UbuntuサーバーへMisskey(v12)を簡単にインストールできます！
@@ -15,16 +15,21 @@ Misskeyを簡単にインストールするためのシェルスクリプトが�
 2. Ubuntuがインストールされたサーバー
 3. Cloudflareアカウント（推奨）
 
+Let's Encryptの認証を試行できる回数が少ないので、サーバーのネットワークやDNSの設定を十分確認してからインストールを開始してください。
+
 ## Cloudflareの設定
-nginxとCloudflareを設定する場合、Cloudflareの設定画面にて、
+Cloudflareを使う場合、Cloudflareのドメインの設定を完了してからインストールを開始するようにしてください。  
+ネームサーバーの適用には最大で3日程度かかる場合があります。
+
+また、nginxとCloudflareを設定する場合、Cloudflareの設定画面にて、
 
 - DNSを設定してください。
 - SSL/TLS設定にて、暗号化モードを「フル」に設定してください。
 
 ## 操作
 ### 1. SSH
-サーバーにSSH接続します。
-（デスクトップを開いている方はシェルを開きます。）
+サーバーにSSH接続します。  
+（サーバーのデスクトップを開いている方はシェルを開きましょう。）
 
 ### 2. 環境を最新にする
 すべてのパッケージを最新にし、再起動します。
@@ -90,7 +95,7 @@ Dockerと言っても、**MisskeyだけをDockerで実行**し、RedisやPostgre
 [docker-composeですべての機能を動かす方法については、mamemonongaさんが作成したこちらの記事がおすすめです。](https://gist.github.com/mamemomonga/5549bb69cad8e5618e5527593d4890e0)
 
 Docker Hubイメージを使う設定であれば、Misskeyのビルドが不要になるため、**一番お勧めです**。  
-ただし、マイグレーションは必要なので、Misskeyを使えない時間がゼロになるわけではありません。  
+ただし、マイグレーションは必要なので、アップデート時にMisskeyを使えない時間がゼロになるわけではありません。  
 また、Misskeyのビルド環境を準備しない(git pullしない)ので、フォークを動かしたくなった時に設定が面倒になります。
 
 ローカルでDockerをビルドする方式は、パフォーマンス面で非推奨です。
@@ -107,6 +112,16 @@ systemdは、Docker Hubにイメージを上げるまでもないものの、フ
 サーバー1台でMisskeyを構築する場合は、nginxの使用をお勧めします。
 
 ロードバランサーを設置する場合にはnginxをインストールせず、[Misskeyのnginx設定](https://github.com/misskey-dev/misskey/blob/develop/docs/examples/misskey.nginx)を参考にロードバランサーを設定するのがよいと思います。
+
+## Add more swaps!
+スワップを設定している場合、メモリが合計で3GB以上でなければスクリプトが動作しないようになっています。
+
+## 途中で失敗してまたスクリプトを実行する場合
+万が一途中で失敗してもう一度スクリプトを動作させる場合、次のことに注意してください。
+
+- RedisやPostgresのインストールが終わっている場合、「install locally」はNoにしてください。  
+  host・port設定はそのままEnterを押します。
+  ユーザー名やパスワードは、前回実行した際に指定したものを入力します。
 
 ## .envファイルについて
 インストールスクリプトは、2つの.envファイルを作成します。  
@@ -136,7 +151,7 @@ Misskeyのソースは`/home/ユーザー/ディレクトリ`としてcloneさ�
 Misskeyディレクトリへは、以下のように移動するとよいでしょう。
 
 ```
-sudo su - ユーザー
+sudo -iu ユーザー
 cd ディレクトリ
 ```
 
@@ -165,10 +180,10 @@ journalctl -t example.com
 ### Docker
 DockerはMisskeyユーザーでrootless実行されています。
 
-sudo suでMisskeyユーザーに入るときは、`XDG_RUNTIME_DIR`と`DOCKER_HOST`を変更する必要があります。
+sudo でMisskeyユーザーに入るときは、`XDG_RUNTIME_DIR`と`DOCKER_HOST`を変更する必要があります。
 
 ```
-sudo su - ユーザー
+sudo -iu ユーザー
 export XDG_RUNTIME_DIR=/run/user/$UID
 export DOCKER_HOST=unix://$XDG_RUNTIME_DIR/docker.sock
 
