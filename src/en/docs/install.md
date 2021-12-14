@@ -5,6 +5,9 @@ There are several ways to create an instance, so please choose one below and rea
 ## Using Docker (recommended)
 [See here](./install/docker.html)
 
+## Using Bash Script
+[See here](./install/bash.html)
+
 ## Manually
 
 [See here](./install/manual.html)

@@ -1,87 +1,78 @@
 # Misskey install shell script v1.4.0
-Misskeyを簡単にインストールするためのシェルスクリプトができました！
+Install Misskey with one shell script!  
 
-いくつかの質問に答えるだけで、UbuntuサーバーへMisskey(v12)を簡単にインストールできます！
+You can install misskey on an Ubuntu server just by answering some questions.  
 
-また、アップデートスクリプトもあります。
+There is also an update script.
 
-## ライセンス
+## License
 [MIT License](./LICENSE)
 
-## 準備するもの
-1. ドメイン
-2. Ubuntuがインストールされたサーバー
-3. Cloudflareアカウント（推奨）
+## Ingredients
+1. A Domain
+2. An Ubuntu Server
+3. A Cloudflare Account (recommended)
 
-Let's Encryptの認証を試行できる回数が少ないので、サーバーのネットワークやDNSの設定を十分確認してからインストールを開始してください。
+## Configure Cloudflare
+If you are using nginx and Cloudflare, you must configure Cloudflare:
 
-## Cloudflareの設定
-Cloudflareを使う場合、Cloudflareのドメインの設定を完了してからインストールを開始するようにしてください。  
-ネームサーバーの適用には最大で3日程度かかる場合があります。
+- Set DNS.
+- On SSL/TLS setting tab, switch the encryption mode to "Full".
 
-また、nginxとCloudflareを設定する場合、Cloudflareの設定画面にて、
-
-- DNSを設定してください。
-- SSL/TLS設定にて、暗号化モードを「フル」に設定してください。
-
-## 操作
+## Procedures
 ### 1. SSH
-サーバーにSSH接続します。  
-（サーバーのデスクトップを開いている方はシェルを開きましょう。）
+Connect to the server via SSH.  
+(If you have the server's desktop open, open the shell.)
 
-### 2. 環境を最新にする
-すべてのパッケージを最新にし、再起動します。
+### 2. Clean up
+Make sure all packages are up to date and reboot.
 
 ```
 sudo apt update; sudo apt full-upgrade -y; sudo reboot
 ```
 
-### 3. インストールをはじめる
-SSHを接続しなおして、Misskeyのインストールを始めましょう。
-
-ただ、インストール前に[Tips](#Tips)を読むことを強くお勧めします。
+### 3. Start the installation
+Reconnect SSH and let's start installing Misskey. 
 
 ```
 wget https://raw.githubusercontent.com/joinmisskey/bash-install/main/ubuntu.sh -O ubuntu.sh; sudo bash ubuntu.sh
 ```
 
-example.comは自分のドメインに置き換えてください。
+### 4. To update
+There is also an update script.
 
-### 4. アップデートする
-アップデートのためのスクリプトもあります。
-
-まずはダウンロードします。
+First, download the script.
 
 ```
 wget https://raw.githubusercontent.com/joinmisskey/bash-install/main/update.ubuntu.sh -O update.sh
 ```
 
-アップデートしたいときにスクリプトを実行してください。
+Run it when you want to update Misskey.
 
 ```
 sudo bash update.sh
 ```
 
-- systemd環境では、`-r`オプションでシステムのアップデートと再起動を行うことができます。
-- docker環境では、引数に更新後のリポジトリ名:タグ名を指定することができます。
+- In the systemd environment, the `-r` option can be used to update and reboot the system.
+- In the docker environment, you can specify repository:tag as an argument.
 
-## 動作を確認した環境
+## Environments in which the operation was tested
 
 ### Oracle Cloud Infrastructure
 
-このスクリプトは、Oracle Cloud InfrastructureのAlways Freeサービスで提供されている2種類のシェイプのいずれにおいても動作します。
+This script runs well on following compute shapes complemented by Oracle Cloud Infrastructure Always Free services.
 
 - VM.Standard.E2.1.Micro (AMD)
 - VM.Standard.A1.Flex (ARM) [1OCPU RAM6GB or greater]
 
-iptablesを使うようにしてください。
+Answer to use iptables.
 
 ## Issues & PRs Welcome
-上記の環境で動作しない場合、バグの可能性があります。インストールの際に指定された条件を記載の上、GitHubのIssue機能にてご報告いただければ幸いです。
+If it does not work in the above environment, it may be a bug. We would appreciate it if you could report it as an issue, with the specified requirements you entered to the script.
 
-上記以外の環境についてのサポートは難しいですが、状況を詳しくお教えいただければ解決できる可能性があります。
+It is difficult to provide assistance for environments other than the above, but we may be able to solve your problem if you provide us with details of your environment.
 
-機能の提案についても歓迎いたします。
+Suggestions for features are also welcome.
 
 # Tips
 選択肢の選び方や仕様についてなど。
