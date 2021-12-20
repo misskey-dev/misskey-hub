@@ -1,11 +1,11 @@
-# トラブルシューティング
+# マニュアルインストール時のトラブルシューティング
 
-<small>2018年10月07日 / 2021年8月20日 最終更新</small>
+<small>2018年10月07日 / 2021年12月20日 最終更新 / 文責 aqz/tamaina</small>
 
 MisskeyInstallBattle参加者が増えましたが、それに伴い時期を追うごとに重軽傷者が増加しています。\
 この記事ではそのような負傷者を減らすため、過去に事故が起きてしまった個所の傾向と対策をわかりやすく解説します。
 
-**まず最初に、[公式ドキュメント（setup.md）](https://github.com/syuilo/misskey/blob/develop/docs/setup.ja.md)を熟読してください。**
+**まず最初に、[構築の手引き](/docs/install/manual.html)を熟読してください。**
 
 また、拙著の[Ubuntu向けsystemd版解説](https://hide.ac/articles/iFwm5HDvH)、[Oracle Cloud版詳細解説](https://hide.ac/articles/csERs-7SU)も参考までにお読みいただけると幸いです。
 
@@ -19,10 +19,10 @@ Ubuntu向け解説はコピペばかりでつまらない！時間がかかる�
 
 ドメインの購入とCloudflareのセットアップ、サーバーの確保についてはご自身でご準備ください。
 
-シェルスクリプトに不具合があれば[私へのリプライ等](https://p1.a9z.dev/@aqz)やこちらのコメント欄にてお知らせいただければと思います。
+シェルスクリプトに不具合があれば[製作者(aqz)](https://p1.a9z.dev/@aqz)にお知らせいただければと思います。
 
 # インストールとビルド
-[公式ドキュメント（setup.md）](https://github.com/syuilo/misskey/blob/develop/docs/setup.ja.md)をよく読みましょう。
+[構築の手引き](/docs/install/manual.html)をよく読みましょう。
 
 ## ImageMagick関連
 ***ImageMagickは不要です！***
@@ -32,29 +32,27 @@ Misskeyのビルドには、経験則上、最低でも2GBのメモリが必要�
 サーバーをスケールアップする手もありますが、お使いのPCでビルドしてサーバーにデプロイするという手もあります。
 
 ## なんだかうまくいかない
-- [公式ドキュメント（setup.md）](https://github.com/syuilo/misskey/blob/develop/docs/setup.ja.md)をよく読みましょう。
-
-- node.jsのバージョンが古い
+- [構築の手引き](/docs/install/manual.html)をよく読みましょう。
+- node.jsのバージョンが古いかも？
   * 新しめのバージョンにしましょう。
 - インストールやビルドの際にErrorとかWARNとかが出てくることがありますが、問題ない場合もあります。とりあえず`npm start`して動作確認しちゃいましょう。
-- node-gypがインストールされていない
-  * [setup.mdのこの項目](https://github.com/syuilo/misskey/blob/develop/docs/setup.ja.md#6-misskey%E3%81%AE%E3%83%93%E3%83%AB%E3%83%89)を試す。
+- node-gypがインストールされていないかも？
+  * `apt install build-essential`を試す。
   * Windowsは[この記事](https://qiita.com/AkihiroTakamura/items/25ba516f8ec624e66ee7)も参考にしてみる。
-- これでもだめそうだったら、最初から[公式ドキュメント（setup.md）](https://github.com/syuilo/misskey/blob/develop/docs/setup.ja.md)の手順に従ってやり直してみてください。
+- これでもだめそうだったら、最初から[構築の手引き](/docs/install/manual.html)の手順に従ってやり直してみてください。
 
 ## バージョンアップ後に不具合が発生した
-- [公式ドキュメント（setup.md）](https://github.com/syuilo/misskey/blob/develop/docs/setup.ja.md)をよく読みましょう。
-- Misskeyのバージョンアップ時にはしっかり`yarn install`や`npm run migrate`してください。それでも直らない場合、`npm run clean`を試し、`npm run build && npm run migrate && npm start`してみてください。
-- node.jsのバージョンを変更した場合、`yarn rebuild && yarn install && npm run clean && npm run build`してみてください。
-- これでもだめそうだったら、最初から[公式ドキュメント（setup.md）](https://github.com/syuilo/misskey/blob/develop/docs/setup.ja.md)の手順に従ってやり直してみてください。
+- [構築の手引き](/docs/install/manual.html)をよく読みましょう。
+- Misskeyのバージョンアップ時にはしっかり`yarn install`や`npm run migrate`してください。それでも直らない場合、`npm run clean-all && yarn install`を試し、`npm run build && npm run migrate && npm start`してみてください。
+- これでもだめそうだったら、最初から[構築の手引き](/docs/install/manual.html)の手順に従ってやり直してみてください。
 
 ---
 
 # 設定
-[公式ドキュメント（setup.md）](https://github.com/syuilo/misskey/blob/develop/docs/setup.ja.md)をよく読みましょう。
+[構築の手引き](/docs/install/manual.html)をよく読みましょう。
 
 `.config/default.yml`で設定を行います。
-[`.config/example.yml`](https://github.com/syuilo/misskey/blob/develop/.config/example.yml)をコピーし、コメントに従って記述します。
+[`.config/example.yml`](https://github.com/misskey-dev/misskey/blob/develop/.config/example.yml)をコピーし、コメントに従って記述します。
 
 （YAML形式では、`#`から行末まではコメントとして扱われます。）
 
@@ -62,7 +60,7 @@ Misskeyのビルドには、経験則上、最低でも2GBのメモリが必要�
 URLとポート番号のしくみは、少し分かりにくいと思います。
 
 ### URL, ポートとTLS証明書の設定（Port and TLS settings）part A: example.ymlの解説
-リビジョン番号[85a0f69](https://github.com/misskey-dev/misskey/blob/85a0f696bcea779b02749dae596fff94a1df2467/.config/example.yml)時点での[.config/example.yml](https://github.com/syuilo/misskey/blob/develop/.config/example.yml)に、「Port and TLS settings」として説明図付きで順に書かれていますので、それに沿って設定をしていきましょう。
+リビジョン番号[85a0f69](https://github.com/misskey-dev/misskey/blob/85a0f696bcea779b02749dae596fff94a1df2467/.config/example.yml)時点での[.config/example.yml](https://github.com/misskey-dev/misskey/blob/develop/.config/example.yml)に、「Port and TLS settings」として説明図付きで順に書かれていますので、それに沿って設定をしていきましょう。
 本文の解説を日本語訳しながらやっていきます。
 
 #### URLの設定
@@ -176,7 +174,7 @@ https:
 # `npm start`やアクセス時によく遭遇するエラー
 `npm start`でサーバーを立てられたものの、その後不具合に遭遇してしまう場合もあります。
 
-まず、[公式ドキュメント（setup.md）](https://github.com/syuilo/misskey/blob/develop/docs/setup.ja.md)をよく読みましょう。
+まず、[構築の手引き](/docs/install/manual.html)をよく読みましょう。
 
 ## YAMLのエラーが出る
 `default.yml`の構文にミスがある可能性があります。
@@ -205,7 +203,7 @@ Node.jsのバージョンや、インストールの設定ももう一度よく�
 
 ## タイムラインの表示に問題が発生する、リアルタイムでTLが更新されない
 タイムラインの読み込みに失敗する場合、mongoDBやPostgreSQLのバージョンが古い可能性があります。
-mongoDBはバージョン4以上になっていますか？PostgreSQLはなるべくv13にしてください。
+PostgreSQLはなるべくv13にしてください。
 
 redisの接続も確認した方がよいでしょう。 [→ redisに接続できない？ を参照](#redisに接続できない？)
 
@@ -233,9 +231,9 @@ Amazon S3に互換性のあるオブジェクトストレージであれば利�
 以下の順序を試してみてください。
 
 1. Misskeyのドキュメントをよく読む。
-2. Googleで検索してみる（もっとも、これを読んでいる方は検索から来たものと思いますが...。検索結果には古いバージョンの記事も混じっているので注意しましょう。ツール > 期間指定で期間を指定すると吉。この記事も古くなっているかも……）。
-3. [MisskeyリポジトリのIssues](https://github.com/syuilo/misskey/issues)を検索してみる（同じエラーに遭遇している場合や、Misskeyのバグの可能性もあります）。
+2. Googleで検索してみる。
+3. [MisskeyリポジトリのIssues](https://github.com/misskey-dev/misskey/issues)を検索してみる（同じエラーに遭遇している場合や、Misskeyのバグの可能性もあります）。
 4. [Misskey Forum](https://forum.misskey.io/)を検索してみる。
 5. 検索してどうしても見つからなかったら、専門家に質問してみてください。
    1. Forumや[MisskeyのDiscordサーバー](https://discord.gg/P4yYqYBjEp)もしくは[「鯖缶工場」](https://discord.gg/mJJGAHv)で聞いてみる
-   2. 開発者（[私](https://p1.a9z.dev/@aqz)やしゅいろ）にリプライやダイレクト投稿を送信して聞いてみる
+   2. 開発者（[aqz]](https://p1.a9z.dev/@aqz)やしゅいろ）にリプライやダイレクト投稿を送信して聞いてみる
