@@ -14,7 +14,7 @@ Dockerを使ったMisskey構築
 リポジトリの取得
 ----------------------------------------------------------------
 ```sh
-git clone -b master git://github.com/misskey-dev/misskey.git
+git clone -b master git+https://github.com/misskey-dev/misskey.git
 cd misskey
 git checkout master
 ```
