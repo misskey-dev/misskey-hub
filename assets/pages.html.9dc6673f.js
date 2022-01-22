@@ -1,0 +1,1 @@
+const e={key:"v-8fd96a68",path:"/docs/features/pages.html",title:"Pages",lang:"ja-JP",frontmatter:{},excerpt:"",headers:[{level:2,title:"\u5909\u6570",slug:"\u5909\u6570",children:[]}],git:{updatedTime:1631291596e3,contributors:[{name:"syuilo",email:"Syuilotan@yahoo.co.jp",commits:1}]},filePathRelative:"docs/features/pages.md"};export{e as data};

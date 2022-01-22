@@ -1,0 +1,1 @@
+const e={key:"v-2c08eb9b",path:"/en/docs/features/plugin.html",title:"Plug-ins",lang:"en-US",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:1638643779e3,contributors:[{name:"Johann150",email:"johann.galle@protonmail.com",commits:1}]},filePathRelative:"en/docs/features/plugin.md",relatedPages:[{title:"Plugin Store",path:"/en/plugins.html",summary:""}]};export{e as data};

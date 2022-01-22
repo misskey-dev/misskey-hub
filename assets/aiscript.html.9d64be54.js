@@ -1,0 +1,1 @@
+const t={key:"v-150cb254",path:"/docs/advanced/aiscript.html",title:"AiScript",lang:"ja-JP",frontmatter:{},excerpt:"",headers:[{level:2,title:"\u4F7F\u3044\u65B9",slug:"\u4F7F\u3044\u65B9",children:[]}],git:{updatedTime:1631291596e3,contributors:[{name:"syuilo",email:"Syuilotan@yahoo.co.jp",commits:1}]},filePathRelative:"docs/advanced/aiscript.md"};export{t as data};
