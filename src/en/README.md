@@ -20,7 +20,7 @@ keyFeatures:
 sections:
   federatedSoftware:
     title: "Misskey is a <b data-marker>distributed</b> software."
-    description: "Misskey itself is a software and does not refer to a specific server (instance). Since anyone can create an instance using Misskey, there are already a variety of instances in existence. Different instances have different main topic themes, user groups, languages, and so on. Finding the right instance for you is part of the fun. Another important feature is that Misskey implements a distributed communication protocol called ActivityPub, so no matter which instance you choose, you will be able to communicate with users in other instances."
+    description: "Misskey itself is a software and does not refer to a specific server (instance). Since anyone can create an instance using Misskey, there are already a variety of instances in existence. Different instances have different main topic themes, user groups, languages, and so on. Finding the right instance for you is part of the fun (Of course, creating your own instance is also a fun thing to do!). Another important point is that Misskey implements a distributed communication protocol called ActivityPub, so no matter which instance you choose, you will be able to communicate with users in other instances."
   features:
     title: "Features"
     description: "Misskey has a variety of features, from general to special. Here are some of them."
@@ -47,7 +47,7 @@ sections:
         title: "Thread"
         description: "Of course, notes can be threaded, and the conversation can continue until you are comfortable."
   gettingStarted:
-    title: "Getting started"
+    title: "Join Misskey today!"
     find:
       title: "Find an instance"
       list: "List of instances"
