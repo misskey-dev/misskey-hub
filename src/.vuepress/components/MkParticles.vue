@@ -1,5 +1,5 @@
 <template>
-<div ref="container" :class="$style.container"></div>
+<div ref="container" :class="$style.container" :style="{ height }"></div>
 </template>
 
 <script lang="ts">
@@ -8,7 +8,11 @@ import { Loader } from '../js/particle/loader';
 
 export default {
 	props: {
-
+		height: {
+			type: String,
+			default: '700px',
+			required: false,
+		}
 	},
 
 	setup(props, context) {
@@ -29,14 +33,12 @@ export default {
 };
 </script>
 
-
 <style lang="scss" module>
 .container {
 	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
-	height: 700px;
 	pointer-events: none;
 }
 </style>

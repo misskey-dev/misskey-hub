@@ -23,12 +23,12 @@ export default {
 		},
 	},
 
-  setup() {
-    const id = Array.from(Array(32)).map(() => idchars[Math.floor(Math.random() * idchars.length)]).join('');
+	setup() {
+		const id = Array.from(Array(32)).map(() => idchars[Math.floor(Math.random() * idchars.length)]).join('');
 
-    return {
-      id,
-    };
-  },
+		return {
+			id,
+		};
+	},
 };
 </script>

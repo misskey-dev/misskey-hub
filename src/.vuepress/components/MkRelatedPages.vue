@@ -16,14 +16,14 @@ import { usePageData } from '@vuepress/client';
 import { useThemeLocaleData } from '@vuepress/plugin-theme-data/lib/client';
 
 export default {
-  setup() {
-    const page = usePageData();
+	setup() {
+		const page = usePageData();
 
-    return {
+		return {
 			themeLocale: useThemeLocaleData(),
-      relatedPages: page.value.relatedPages || [],
-    };
-  },
+			relatedPages: page.value.relatedPages || [],
+		};
+	},
 };
 </script>
 

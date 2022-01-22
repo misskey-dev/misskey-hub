@@ -16,6 +16,7 @@ export default defineUserConfig<DefaultThemeOptions>({
 	title: 'Misskey Hub',
 
 	head: [
+		['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c', }],
 		['link', { rel: 'stylesheet', href: 'https://use.fontawesome.com/releases/v5.15.3/css/all.css', }]
 	],
 
