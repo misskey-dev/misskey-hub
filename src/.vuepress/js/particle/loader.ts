@@ -1,5 +1,5 @@
 import * as THREE from 'three';
-import * as tinycolor from 'tinycolor2';
+import tinycolor from 'tinycolor2';
 import { System } from './system';
 
 export class Loader {
