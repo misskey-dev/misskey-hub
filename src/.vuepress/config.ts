@@ -7,6 +7,13 @@ import { getChildPages } from './child-pages';
 import { generateEndpointPages } from './generate-endpoint-pages';
 import { getInstances } from './get-instances';
 
+const ssrTransformCustomDir = () => {
+	return {
+		props: [],
+		needRuntime: true
+	}
+};
+
 export default defineUserConfig<DefaultThemeOptions>({
 	// 独自ドメイン使う場合 '/' にする
 	// 独自ドメイン使わない場合 '/misskey-hub/' にする
@@ -288,5 +295,19 @@ export default defineUserConfig<DefaultThemeOptions>({
 		await generateRecentUpdatesPage(app);
 		await getRelatedPages(app);
 		await getChildPages(app);
+	},
+
+	bundlerConfig: {
+		vuePluginOptions: {
+			template: {
+				ssr: true,
+				compilerOptions: {
+					directiveTransforms: {
+						'parallax': ssrTransformCustomDir,
+						'fade-in': ssrTransformCustomDir,
+					},
+				},
+			},
+		},
 	},
 });
