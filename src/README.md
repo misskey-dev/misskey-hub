@@ -10,7 +10,7 @@ keyFeatures:
     description: "Misskeyはオープンソースのソフトウェアで、誰でも自由にMisskeyを利用できます。"
   federated:
     title: "分散"
-    description: "Misskeyは分散型のプロトコルを実装しているため、異なるコミュニティ同士が繋がります。"
+    description: "Misskeyは分散型のプロトコルを実装しているため、異なるサーバーのコミュニティ同士が繋がります。"
   multifunction:
     title: "高機能"
     description: "Misskeyは他にはない様々な機能を備えていて、プロのようにmicro-blogging可能です。"
@@ -19,7 +19,7 @@ keyFeatures:
     description: "Misskeyの柔軟なWebインターフェイスにより、自分好みのUIを作れます。"
 sections:
   federatedSoftware:
-    title: "Misskeyは分散型のソフトウェア"
+    title: "Misskeyは<b data-marker>分散型</b>のソフトウェア"
     description: "Misskey自体はソフトウェアであり、特定のサーバー(インスタンス)を指すものではありません。誰でもMisskeyを使ったインスタンスを作成できるため、既に様々なインスタンスが存在しています。インスタンスによって主な話題のテーマやユーザー層、言語などは異なります。自分にあったインスタンスを探すのも楽しみのひとつです。また重要な特徴として、MisskeyはActivityPubと呼ばれる分散通信プロトコルを実装しているので、どのインスタンスを選んでも他のインスタンスのユーザーとやりとりすることができます。"
   features:
     title: "主な機能"

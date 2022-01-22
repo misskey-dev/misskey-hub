@@ -61,7 +61,7 @@
 
 	<div class="about" id="learnMore">
 		<div class="container">
-			<div class="title">{{ frontmatter.sections.federatedSoftware.title }}</div>
+			<div class="title" v-html="frontmatter.sections.federatedSoftware.title"></div>
 			<div class="description">{{ frontmatter.sections.federatedSoftware.description }}</div>
 		</div>
 		<MkDots class="dots" :space="30"/>
@@ -269,6 +269,10 @@ onMounted(() => {
 @keyframes spin {
 	0% { transform: rotate(0deg); }
 	100% { transform: rotate(360deg); }
+}
+
+b[data-marker] {
+	background: linear-gradient(transparent 70%, #bfff0080 0%);
 }
 
 #root {
