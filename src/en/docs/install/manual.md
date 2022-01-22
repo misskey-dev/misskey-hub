@@ -83,6 +83,11 @@ If you're still encountering errors about some modules, use node-gyp:
 	and empty database as named in the configuration file.
 	Make sure the database connection also works correctly when run from the
 	user that will later run Misskey, or it could cause problems later.
+	`sudo -u postgres psql`
+	`create database misskey;`
+	`create user misskey with encrypted password '{YOUR_PASSWORD}';`
+	`grant all privileges on database misskey to misskey;`
+	`\q`
 
 2. Run the database initialisation
 	`yarn run init`
