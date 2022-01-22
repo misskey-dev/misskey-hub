@@ -62,7 +62,7 @@
 	<div class="about" id="learnMore">
 		<div class="container">
 			<div class="title" v-html="frontmatter.sections.federatedSoftware.title"></div>
-			<div class="description">{{ frontmatter.sections.federatedSoftware.description }}</div>
+			<div class="description" v-html="frontmatter.sections.federatedSoftware.description"></div>
 		</div>
 		<MkDots class="dots" :space="30"/>
 	</div>
@@ -432,6 +432,7 @@ b[data-marker] {
 			right: 300px;
 			top: 128px;
 			width: 800px;
+			border-radius: 10px;
 			box-shadow: 2px 2px 32px rgba(0, 0, 0, 0.1);
 		}
 
@@ -440,6 +441,7 @@ b[data-marker] {
 			right: 650px;
 			top: 400px;
 			height: 400px;
+			border-radius: 10px;
 			box-shadow: 2px 2px 32px rgba(0, 0, 0, 0.1);
 		}
 
