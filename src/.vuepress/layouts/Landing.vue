@@ -331,7 +331,7 @@ b[data-marker] {
 				> .start {
 					display: inline-block;
 					padding: 12px 26px;
-					background: var(--c-brand);
+					background: linear-gradient(90deg, #00b332, #aacb00);
 					border-radius: 999px;
 					color: #fff;
 					font-size: 1.1em;
