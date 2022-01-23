@@ -384,6 +384,7 @@ b[data-marker] {
 			right: 0;
 			top: 0;
 			width: 1000px;
+			pointer-events: none;
 		}
 
 		> .corner2 {
@@ -391,6 +392,7 @@ b[data-marker] {
 			left: 0;
 			bottom: 0;
 			width: 1000px;
+			pointer-events: none;
 		}
 
 		> .object1 {
@@ -399,6 +401,7 @@ b[data-marker] {
 			top: -400px;
 			width: 1000px;
 			animation: 60s linear 0s infinite normal none running spin;
+			pointer-events: none;
 		}
 
 		> .object2 {
@@ -407,6 +410,7 @@ b[data-marker] {
 			bottom: -400px;
 			width: 1000px;
 			animation: 80s linear 0s infinite reverse none running spin;
+			pointer-events: none;
 		}
 
 		> .dots1 {
@@ -416,6 +420,7 @@ b[data-marker] {
 			width: 300px;
 			height: 300px;
 			color: var(--c-brand);
+			pointer-events: none;
 		}
 
 		> .dots2 {
@@ -425,6 +430,7 @@ b[data-marker] {
 			width: 300px;
 			height: 300px;
 			color: var(--c-brand);
+			pointer-events: none;
 		}
 
 		> .screenshot.desktop {
@@ -434,6 +440,7 @@ b[data-marker] {
 			width: 800px;
 			border-radius: 10px;
 			box-shadow: 2px 2px 32px rgba(0, 0, 0, 0.1);
+			pointer-events: none;
 		}
 
 		> .screenshot.mobile {
@@ -443,6 +450,7 @@ b[data-marker] {
 			height: 400px;
 			border-radius: 10px;
 			box-shadow: 2px 2px 32px rgba(0, 0, 0, 0.1);
+			pointer-events: none;
 		}
 
 		> .ai {
