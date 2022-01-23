@@ -577,7 +577,7 @@ b[data-marker] {
 			position: relative;
 			max-width: 1000px;
 			margin: 0 auto;
-			padding: 150px 50px;
+			padding: 150px 100px;
 			text-align: center;
 
 			> .title {
@@ -588,6 +588,10 @@ b[data-marker] {
 
 			> .description {
 				font-size: 1.2em;
+			}
+
+			@media (max-width: 600px) {
+				padding: 150px 50px;
 			}
 		}
 
