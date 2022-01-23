@@ -238,8 +238,10 @@ function learnMore() {
 
 onMounted(() => {
 	const lang = navigator.language.toLowerCase();
-	if (lang === 'en' || lang === 'en-us') {
-		location.href = './en';
+	if (location.pathname === '/') {
+		if (lang === 'en' || lang === 'en-us') {
+			location.href = './en';
+		}
 	}
 
 	window.setTimeout(() => {
