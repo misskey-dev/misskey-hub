@@ -22,7 +22,10 @@ export default {
 			const loder = new Loader(container.value);
 
 			onUnmounted(() => {
-				loder.destroy();
+				// トランジションして消えるようにするため
+				setTimeout(() => {
+					loder.destroy();
+				}, 1000);
 			});
 		});
 

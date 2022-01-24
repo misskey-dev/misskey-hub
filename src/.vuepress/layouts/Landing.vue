@@ -1,8 +1,16 @@
 <template>
 <div id="root">
+	<div class="bg">
+		<div v-parallax="1.2" class="object1"><img src="/top-bg-object1.svg"></div>
+		<div v-parallax="1.2" class="object2"><img src="/top-bg-object2.svg"></div>
+		<div v-parallax="1.2" class="object3"><img src="/top-bg-object2.svg"></div>
+	</div>
+
 	<div class="top">
 		<ClientOnly>
-			<MkParticles :height="'800px'"/>
+			<transition name="fade">
+				<MkParticles v-if="particleEnabled" :height="'800px'"/>
+			</transition>
 		</ClientOnly>
 
 		<div class="container">
@@ -24,9 +32,7 @@
 		</div>
 		<!--<img src="/top-corner-1.svg" class="corner1">-->
 		<!--<img src="/top-corner-2.svg" class="corner2">-->
-		<img src="/top-bg-object1.svg" class="object1">
-		<img src="/top-bg-object2.svg" class="object2">
-		<MkDots v-parallax="1.5" class="dots1" :space="30"/>
+		<MkDots v-parallax="1.4" class="dots1" :space="30"/>
 		<MkDots v-parallax="1.5" class="dots2" :space="30"/>
 		<img v-parallax="2" src="/screenshot-desktop.png" class="screenshot desktop">
 		<img v-parallax="3" src="/screenshot-mobile.png" class="screenshot mobile">
@@ -65,8 +71,9 @@
 				<div class="title" v-html="frontmatter.sections.federatedSoftware.title"></div>
 				<div class="description" v-html="frontmatter.sections.federatedSoftware.description"></div>
 			</div>
-			<MkDots class="dots" :space="30"/>
 		</div>
+
+		<MkDots class="dots" :space="30"/>
 
 		<div class="features">
 			<div class="container">
@@ -115,34 +122,40 @@
 							<div class="title">{{ frontmatter.sections.features.list.thread.title }}</div>
 							<div class="description">{{ frontmatter.sections.features.list.thread.description }}</div>
 						</div></div>
+						<div v-fade-in class="item"><div class="content">
+							<img src="/top-features-widgets.png" class="img">
+							<div class="title">{{ frontmatter.sections.features.list.widgets.title }}</div>
+							<div class="description">{{ frontmatter.sections.features.list.widgets.description }}</div>
+						</div></div>
 					</div>
 				</div>
 			</div>
 		</div>
 
+		<MkDots class="dots" :space="30"/>
+
 		<div class="start" id="gettingStarted">
-			<MkDots class="dots" :space="30"/>
 			<div class="title">{{ frontmatter.sections.gettingStarted.title }}</div>
 			<div class="container">
-				<div class="find">
+				<div v-fade-in class="find">
 					<div class="container">
-						<div class="icon"><i class="fas fa-globe"></i></div>
+						<div class="icon"><img src="/emojis/ringed-planet_1fa90.png"></div>
 						<div class="title">{{ frontmatter.sections.gettingStarted.find.title }}</div>
 						<div class="description"></div>
 						<a class="link" href="./instances.html">{{ frontmatter.sections.gettingStarted.find.list }}</a>
 					</div>
 				</div>
-				<div class="create">
+				<div v-fade-in class="create">
 					<div class="container">
-						<div class="icon"><i class="fas fa-tools"></i></div>
+						<div class="icon"><img src="/emojis/package_1f4e6.png"></div>
 						<div class="title">{{ frontmatter.sections.gettingStarted.create.title }}</div>
 						<div class="description"></div>
 						<a class="link" href="./docs/install.html">{{ frontmatter.sections.gettingStarted.create.guide }}</a>
 					</div>
 				</div>
-				<div class="docs">
+				<div v-fade-in class="docs">
 					<div class="container">
-						<div class="icon"><i class="fas fa-lightbulb"></i></div>
+						<div class="icon"><img src="/emojis/light-bulb_1f4a1.png"></div>
 						<div class="title">{{ frontmatter.sections.gettingStarted.docs.title }}</div>
 						<div class="description"></div>
 						<a class="link" href="./home.html">{{ frontmatter.sections.gettingStarted.docs.docs }}</a>
@@ -151,8 +164,9 @@
 			</div>
 		</div>
 
+		<MkDots class="dots" :space="30"/>
+
 		<div class="donation">
-			<MkDots class="dots" :space="30"/>
 			<div class="container">
 				<div class="title">{{ frontmatter.sections.donation.title }}</div>
 				<div class="description">{{ frontmatter.sections.donation.description }}</div>
@@ -176,7 +190,7 @@
 </template>
 
 <script lang="ts" setup>
-import { onMounted } from 'vue';
+import { ref, onMounted } from 'vue';
 import {
   ClientOnly,
   usePageFrontmatter,
@@ -188,16 +202,9 @@ const vParallax = {
 	mounted: (src, binding, vn) => {
 		src.style.willChange = 'transform';
 
-		const calc = () => {
-			src.style.transform = `translateY(${window.scrollY / binding.value}px)`;
-			window.requestAnimationFrame(calc);
-		};
-
 		window.addEventListener('scroll', () => {
 			src.style.transform = `translateY(${window.scrollY / binding.value}px)`;
 		}, { passive: true });
-
-		//window.requestAnimationFrame(calc);
 	}
 }
 
@@ -218,7 +225,7 @@ const vFadeIn = {
 
 		const observer = new IntersectionObserver(onIntersect, {
 			root: null,
-			rootMargin: '0px 0px -200px 0px',
+			rootMargin: '9999px 0px -300px 0px',
 			threshold: 0,
 		});
 
@@ -238,6 +245,8 @@ function learnMore() {
 	});
 }
 
+let particleEnabled = ref(true);
+
 onMounted(() => {
 	const lang = navigator.language.toLowerCase();
 	if (location.pathname === '/') {
@@ -253,6 +262,13 @@ onMounted(() => {
 			window.setTimeout(() => { row.classList.add('shown'); }, 200 * i);
 		}
 	}, 500);
+
+	window.addEventListener('scroll', () => {
+		particleEnabled.value = false;
+	}, {
+		passive: true,
+		once: true,
+	});
 });
 </script>
 
@@ -275,6 +291,16 @@ onMounted(() => {
 	}
 }
 
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 1s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
 @keyframes spin {
 	0% { transform: rotate(0deg); }
 	100% { transform: rotate(360deg); }
@@ -285,14 +311,68 @@ b[data-marker] {
 }
 
 #root {
+	position: relative;
 	font-family: "M PLUS Rounded 1c", Roboto, HelveticaNeue, Arial, sans-serif;
 	line-height: 1.5;
+	background: #f9f9f9;
+
+	> .bg {
+		position: absolute;
+    top: 0;
+		left: 0;
+		width: 100%;
+    height: 100%;
+		overflow: hidden;
+
+		> .object1 {
+			position: absolute;
+			right: -300px;
+			top: -400px;
+			width: 1000px;
+			pointer-events: none;
+			user-select: none;
+
+			> img {
+				display: block;
+				width: 100%;
+				animation: 60s linear 0s infinite normal none running spin;
+			}
+		}
+
+		> .object2 {
+			position: absolute;
+			left: -250px;
+			top: 500px;
+			width: 1000px;
+			pointer-events: none;
+			user-select: none;
+
+			> img {
+				display: block;
+				width: 100%;
+				animation: 80s linear 0s infinite reverse none running spin;
+			}
+		}
+
+		> .object3 {
+			position: absolute;
+			right: -300px;
+			top: 1400px;
+			width: 1000px;
+			pointer-events: none;
+			user-select: none;
+
+			> img {
+				display: block;
+				width: 100%;
+				animation: 80s linear 0s infinite normal none running spin;
+			}
+		}
+	}
 
 	> .top {
 		position: relative;
-		background: #f9f9f9;
-		height: 1300px;
-		overflow: hidden;
+		height: 1200px;
 
 		> .container {
 			position: relative;
@@ -386,44 +466,6 @@ b[data-marker] {
 					font-size: 2.5em;
 				}
 			}
-		}
-
-		> .corner1 {
-			position: absolute;
-			right: 0;
-			top: 0;
-			width: 1000px;
-			pointer-events: none;
-			user-select: none;
-		}
-
-		> .corner2 {
-			position: absolute;
-			left: 0;
-			bottom: 0;
-			width: 1000px;
-			pointer-events: none;
-			user-select: none;
-		}
-
-		> .object1 {
-			position: fixed;
-			right: -300px;
-			top: -400px;
-			width: 1000px;
-			animation: 60s linear 0s infinite normal none running spin;
-			pointer-events: none;
-			user-select: none;
-		}
-
-		> .object2 {
-			position: fixed;
-			left: -250px;
-			bottom: -400px;
-			width: 1000px;
-			animation: 80s linear 0s infinite reverse none running spin;
-			pointer-events: none;
-			user-select: none;
 		}
 
 		> .dots1 {
@@ -559,18 +601,28 @@ b[data-marker] {
 		background: #f9f9f980;
 		-webkit-backdrop-filter: blur(30px);
 		backdrop-filter: blur(30px);
-		margin-top: -550px;
+		margin: -400px auto 0 auto;
 		padding: 50px 0 50px 0;
-		clip-path: polygon(0% 100px, 100% 0%, 100% 100%, 0% 100%);
+		max-width: min(1300px, calc(100% - 100px));
+		border-radius: 30px;
+
+		@media (max-width: 500px) {
+			max-width: calc(100% - 50px);
+		}
 
 		> .container {
 			position: relative;
 			max-width: 1200px;
 			margin: 0 auto;
-			padding: 100px 50px;
+			padding: 30px 50px;
 			display: grid;
-			grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+			grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
 			gap: 50px;
+
+			@media (max-width: 700px) {
+				grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+				font-size: 95%;
+			}
 
 			> .item {
 				text-align: center;
@@ -599,20 +651,28 @@ b[data-marker] {
 	> .body {
 		position: relative;
 		z-index: 1;
-		background: #fff;
-		clip-path: polygon(0% 100px, 100% 0%, 100% 100%, 0% 100%);
-		margin-top: -100px;
-		overflow: hidden;
+
+		> .dots {
+			display: block;
+			width: 1200px;
+			max-width: calc(100% - 200px);
+			height: 100px;
+			margin: 50px auto;
+			color: var(--c-brand);
+		}
 
 		> .about {
 			margin: 50px 0 0 0;
 
 			> .container {
 				position: relative;
-				max-width: 1000px;
-				margin: 0 auto;
-				padding: 150px 100px;
+				max-width: min(1200px, calc(100% - 100px));
+				margin: 0 auto 50px auto;
+				padding: 100px 100px;
+				box-sizing: border-box;
 				text-align: center;
+				border-radius: 30px;
+				background: var(--panel, #fff);
 
 				> .title {
 					font-size: 2em;
@@ -624,29 +684,24 @@ b[data-marker] {
 					font-size: 1.2em;
 				}
 
-				@media (max-width: 600px) {
-					padding: 150px 50px;
+				@media (max-width: 800px) {
+					padding: 50px 50px;
 				}
-			}
 
-			> .dots {
-				display: block;
-				width: 1200px;
-				max-width: calc(100% - 200px);
-				height: 100px;
-				margin: 0 auto;
-				color: var(--c-brand);
+				@media (max-width: 500px) {
+					max-width: calc(100% - 50px);
+				}
 			}
 		}
 
 		> .features {
-			padding-top: 50px;
+			margin: 100px 0;
 
 			> .container {
 				position: relative;
-				max-width: 1200px;
+				max-width: 1300px;
 				margin: 0 auto;
-				padding: 150px 100px;
+				padding: 0 100px;
 				display: flex;
 				gap: 50px;
 
@@ -688,12 +743,15 @@ b[data-marker] {
 							}
 
 							> .content {
+								padding: 40px;
+								background: var(--panel, #fff);
+								border-radius: 20px;
+
 								> .img {
 									width: 100%;
 									aspect-ratio: 2/1;
 									object-fit: cover;
-									border-radius: 15px;
-									box-shadow: 0 4px 16px 0 rgb(0 0 0 / 10%);
+									border-radius: 10px;
 								}
 
 								> .title {
@@ -740,15 +798,6 @@ b[data-marker] {
 		> .start {
 			padding: 0 50px 50px 50px;
 
-			> .dots {
-				display: block;
-				width: 1200px;
-				max-width: calc(100% - 200px);
-				height: 100px;
-				margin: 0 auto;
-				color: var(--c-brand);
-			}
-
 			> .title {
 				font-size: 2em;
 				font-weight: bold;
@@ -763,20 +812,25 @@ b[data-marker] {
 				margin: 0 auto;
 
 				> * {
-					border-radius: 30px;
-
 					> .container {
 						position: relative;
 						max-width: 900px;
 						margin: 0 auto;
 						padding: 50px 50px;
 						text-align: center;
+						border-radius: 30px;
 
 						> .icon {
+							margin-bottom: 20px;
+
 							> i {
 								font-size: 3em;
 								color: #fff;
-								margin-bottom: 20px;
+							}
+
+							> img {
+								width: 50px;
+								vertical-align: bottom;
 							}
 						}
 
@@ -791,7 +845,7 @@ b[data-marker] {
 							font-size: 1.1em;
 							font-weight: bold;
 							padding: 12px 24px;
-							background: #fff;
+							background: #eee;
 							border-radius: 10px;
 							color: var(--c-brand);
 						}
@@ -800,18 +854,27 @@ b[data-marker] {
 
 				> .find {
 					flex: 1;
-					background: var(--c-brand);
-					color: #fff;
+
+					> .container {
+						background: var(--c-brand);
+						color: #fff;
+					}
 				}
 
 				> .create {
 					flex: 1;
-					background: var(--panel, #eee);
+
+					> .container {
+						background: var(--panel, #fff);
+					}
 				}
 
 				> .docs {
 					flex: 1;
-					background: var(--panel, #eee);
+
+					> .container {
+						background: var(--panel, #fff);
+					}
 				}
 
 				@media (max-width: 1250px) {
@@ -827,22 +890,19 @@ b[data-marker] {
 		> .donation {
 			padding-top: 100px;
 
-			> .dots {
-				display: block;
-				width: 1200px;
-				max-width: calc(100% - 200px);
-				height: 100px;
-				margin: 0 auto;
-				color: var(--c-brand);
-			}
-
 			> .container {
 				position: relative;
-				max-width: 1000px;
+				max-width: min(1000px, calc(100% - 100px));
+				box-sizing: border-box;
 				margin: 0 auto;
-				padding: 100px 50px;
+				padding: 100px 100px;
+				border-radius: 30px;
+				background: var(--panel, #fff);
 				text-align: center;
 
+				//background-image: linear-gradient(-45deg, transparent 25%, #f5f5f5 0, #f5f5f5 50%, transparent 0, transparent 75%, #f5f5f5 0, #f5f5f5);
+				//background-image: linear-gradient(-45deg, transparent 25%, #fafafa 0, #fafafa 50%, transparent 0, transparent 75%, #fafafa 0, #fafafa);
+				//background-size: 30px 30px;
 
 				> .title {
 					font-size: 2em;
@@ -858,6 +918,14 @@ b[data-marker] {
 					display: inline-block;
 					margin-top: 20px;
 				}
+
+				@media (max-width: 800px) {
+					padding: 50px 50px;
+				}
+
+				@media (max-width: 500px) {
+					max-width: calc(100% - 50px);
+				}
 			}
 		}
 
@@ -870,31 +938,19 @@ b[data-marker] {
 	> .footer {
 		position: relative;
 		z-index: 1;
-		background: #eee;
 		padding: 50px;
 		text-align: center;
 	}
 }
 
 html.dark #root {
+	background: #1a1a1a;
 	color: #dfddcc;
 
 	--panel: #222;
 
-	> .top {
-		background: #1a1a1a;
-	}
-
 	> .key-features {
-		background: #1a1a1a80;
-	}
-
-	> .body {
-		background: #111;
-	}
-
-	> .footer {
-		background: #222;
+		background: #2a2a2a80;
 	}
 }
 </style>

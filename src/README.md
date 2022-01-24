@@ -46,6 +46,9 @@ sections:
       thread:
         title: "スレッド"
         description: "もちろんノートはスレッドにすることができ、気が済むまで会話を続けられます。"
+      widgets:
+        title: "ウィジェット"
+        description: "様々な種類のウィジェットを配置し、UIを好みにカスタマイズできます。"
   gettingStarted:
     title: "Misskeyをはじめよう"
     find:

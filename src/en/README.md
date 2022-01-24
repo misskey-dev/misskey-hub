@@ -46,6 +46,9 @@ sections:
       thread:
         title: "Thread"
         description: "Of course, notes can be threaded, and the conversation can continue until you are comfortable."
+      widgets:
+        title: "Widgets"
+        description: "You can place various types of widgets to customize the UI to your taste."
   gettingStarted:
     title: "Join Misskey today!"
     find:
