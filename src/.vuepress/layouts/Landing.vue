@@ -14,7 +14,7 @@
 			<div class="tagline" id="tagline">
 				<div class="row">Interplanetary</div>
 				<div class="row">microblogging</div>
-				<div class="row">platform.🪐🚀</div>
+				<div class="row">platform.🚀</div>
 			</div>
 			<div class="description">{{ frontmatter.description }}</div>
 			<div class="buttons">
@@ -37,131 +37,133 @@
 	<div class="key-features">
 		<div class="container">
 			<div class="item">
-				<div class="icon"><i class="fas fa-code"></i></div>
+				<div class="icon"><img src="/emojis/four-leaf-clover_1f340.png"></div>
 				<div class="title">{{ frontmatter.keyFeatures.open.title }}</div>
 				<div class="description">{{ frontmatter.keyFeatures.open.description }}</div>
 			</div>
 			<div class="item">
-				<div class="icon"><i class="fas fa-project-diagram"></i></div>
+				<div class="icon"><img src="/emojis/ringed-planet_1fa90.png"></div>
 				<div class="title">{{ frontmatter.keyFeatures.federated.title }}</div>
 				<div class="description">{{ frontmatter.keyFeatures.federated.description }}</div>
 			</div>
 			<div class="item">
-				<div class="icon"><i class="fas fa-plug"></i></div>
+				<div class="icon"><img src="/emojis/package_1f4e6.png"></div>
 				<div class="title">{{ frontmatter.keyFeatures.multifunction.title }}</div>
 				<div class="description">{{ frontmatter.keyFeatures.multifunction.description }}</div>
 			</div>
 			<div class="item">
-				<div class="icon"><i class="fas fa-cog"></i></div>
+				<div class="icon"><img src="/emojis/gear_2699-fe0f.png"></div>
 				<div class="title">{{ frontmatter.keyFeatures.customizable.title }}</div>
 				<div class="description">{{ frontmatter.keyFeatures.customizable.description }}</div>
 			</div>
 		</div>
 	</div>
 
-	<div class="about" id="learnMore">
-		<div class="container">
-			<div class="title" v-html="frontmatter.sections.federatedSoftware.title"></div>
-			<div class="description" v-html="frontmatter.sections.federatedSoftware.description"></div>
+	<div class="body">
+		<div class="about" id="learnMore">
+			<div class="container">
+				<div class="title" v-html="frontmatter.sections.federatedSoftware.title"></div>
+				<div class="description" v-html="frontmatter.sections.federatedSoftware.description"></div>
+			</div>
+			<MkDots class="dots" :space="30"/>
 		</div>
-		<MkDots class="dots" :space="30"/>
-	</div>
 
-	<div class="features">
-		<div class="container">
-			<div class="h">
-				<div class="container">
-					<div class="title">{{ frontmatter.sections.features.title }}</div>
-					<div class="text">{{ frontmatter.sections.features.description }}</div>
+		<div class="features">
+			<div class="container">
+				<div class="h">
+					<div class="container">
+						<div class="title">{{ frontmatter.sections.features.title }}</div>
+						<div class="text">{{ frontmatter.sections.features.description }}</div>
+					</div>
 				</div>
-			</div>
-			<div class="list">
-				<div class="column">
-					<div v-fade-in class="item"><div class="content">
-						<img src="/top-features-note.png" class="img">
-						<div class="title">{{ frontmatter.sections.features.list.note.title }}</div>
-						<div class="description">{{ frontmatter.sections.features.list.note.description }}</div>
-					</div></div>
-					<div v-fade-in class="item"><div class="content">
-						<img src="/top-features-reaction.png" class="img">
-						<div class="title">{{ frontmatter.sections.features.list.reaction.title }}</div>
-						<div class="description">{{ frontmatter.sections.features.list.reaction.description }}</div>
-					</div></div>
-					<div v-fade-in class="item"><div class="content">
-						<img src="/top-features-theme.png" class="img">
-						<div class="title">{{ frontmatter.sections.features.list.theme.title }}</div>
-						<div class="description">{{ frontmatter.sections.features.list.theme.description }}</div>
-					</div></div>
-					<div v-fade-in class="item"><div class="content">
-						<img src="/top-features-charts.png" class="img">
-						<div class="title">{{ frontmatter.sections.features.list.charts.title }}</div>
-						<div class="description">{{ frontmatter.sections.features.list.charts.description }}</div>
-					</div></div>
-				</div>
-				<div class="column">
-					<div v-fade-in class="item"><div class="content">
-						<img src="/top-features-federation.png" class="img">
-						<div class="title">{{ frontmatter.sections.features.list.federation.title }}</div>
-						<div class="description">{{ frontmatter.sections.features.list.federation.description }}</div>
-					</div></div>
-					<div v-fade-in class="item"><div class="content">
-						<img src="/top-features-drive.png" class="img">
-						<div class="title">{{ frontmatter.sections.features.list.drive.title }}</div>
-						<div class="description">{{ frontmatter.sections.features.list.drive.description }}</div>
-					</div></div>
-					<div v-fade-in class="item"><div class="content">
-						<img src="/top-features-thread.png" class="img">
-						<div class="title">{{ frontmatter.sections.features.list.thread.title }}</div>
-						<div class="description">{{ frontmatter.sections.features.list.thread.description }}</div>
-					</div></div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="start" id="gettingStarted">
-		<MkDots class="dots" :space="30"/>
-		<div class="title">{{ frontmatter.sections.gettingStarted.title }}</div>
-		<div class="container">
-			<div class="find">
-				<div class="container">
-					<div class="icon"><i class="fas fa-globe"></i></div>
-					<div class="title">{{ frontmatter.sections.gettingStarted.find.title }}</div>
-					<div class="description"></div>
-					<a class="link" href="./instances.html">{{ frontmatter.sections.gettingStarted.find.list }}</a>
-				</div>
-			</div>
-			<div class="create">
-				<div class="container">
-					<div class="icon"><i class="fas fa-tools"></i></div>
-					<div class="title">{{ frontmatter.sections.gettingStarted.create.title }}</div>
-					<div class="description"></div>
-					<a class="link" href="./docs/install.html">{{ frontmatter.sections.gettingStarted.create.guide }}</a>
-				</div>
-			</div>
-			<div class="docs">
-				<div class="container">
-					<div class="icon"><i class="fas fa-lightbulb"></i></div>
-					<div class="title">{{ frontmatter.sections.gettingStarted.docs.title }}</div>
-					<div class="description"></div>
-					<a class="link" href="./home.html">{{ frontmatter.sections.gettingStarted.docs.docs }}</a>
+				<div class="list">
+					<div class="column">
+						<div v-fade-in class="item"><div class="content">
+							<img src="/top-features-note.png" class="img">
+							<div class="title">{{ frontmatter.sections.features.list.note.title }}</div>
+							<div class="description">{{ frontmatter.sections.features.list.note.description }}</div>
+						</div></div>
+						<div v-fade-in class="item"><div class="content">
+							<img src="/top-features-reaction.png" class="img">
+							<div class="title">{{ frontmatter.sections.features.list.reaction.title }}</div>
+							<div class="description">{{ frontmatter.sections.features.list.reaction.description }}</div>
+						</div></div>
+						<div v-fade-in class="item"><div class="content">
+							<img src="/top-features-theme.png" class="img">
+							<div class="title">{{ frontmatter.sections.features.list.theme.title }}</div>
+							<div class="description">{{ frontmatter.sections.features.list.theme.description }}</div>
+						</div></div>
+						<div v-fade-in class="item"><div class="content">
+							<img src="/top-features-charts.png" class="img">
+							<div class="title">{{ frontmatter.sections.features.list.charts.title }}</div>
+							<div class="description">{{ frontmatter.sections.features.list.charts.description }}</div>
+						</div></div>
+					</div>
+					<div class="column">
+						<div v-fade-in class="item"><div class="content">
+							<img src="/top-features-federation.png" class="img">
+							<div class="title">{{ frontmatter.sections.features.list.federation.title }}</div>
+							<div class="description">{{ frontmatter.sections.features.list.federation.description }}</div>
+						</div></div>
+						<div v-fade-in class="item"><div class="content">
+							<img src="/top-features-drive.png" class="img">
+							<div class="title">{{ frontmatter.sections.features.list.drive.title }}</div>
+							<div class="description">{{ frontmatter.sections.features.list.drive.description }}</div>
+						</div></div>
+						<div v-fade-in class="item"><div class="content">
+							<img src="/top-features-thread.png" class="img">
+							<div class="title">{{ frontmatter.sections.features.list.thread.title }}</div>
+							<div class="description">{{ frontmatter.sections.features.list.thread.description }}</div>
+						</div></div>
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
 
-	<div class="donation">
-		<MkDots class="dots" :space="30"/>
-		<div class="container">
-			<div class="title">{{ frontmatter.sections.donation.title }}</div>
-			<div class="description">{{ frontmatter.sections.donation.description }}</div>
-			<a class="patreon" href="https://www.patreon.com/syuilo"><img src="https://c5.patreon.com/external/logo/become_a_patron_button@2x.png" alt="Become a Patron!" width="200" /></a>
+		<div class="start" id="gettingStarted">
+			<MkDots class="dots" :space="30"/>
+			<div class="title">{{ frontmatter.sections.gettingStarted.title }}</div>
+			<div class="container">
+				<div class="find">
+					<div class="container">
+						<div class="icon"><i class="fas fa-globe"></i></div>
+						<div class="title">{{ frontmatter.sections.gettingStarted.find.title }}</div>
+						<div class="description"></div>
+						<a class="link" href="./instances.html">{{ frontmatter.sections.gettingStarted.find.list }}</a>
+					</div>
+				</div>
+				<div class="create">
+					<div class="container">
+						<div class="icon"><i class="fas fa-tools"></i></div>
+						<div class="title">{{ frontmatter.sections.gettingStarted.create.title }}</div>
+						<div class="description"></div>
+						<a class="link" href="./docs/install.html">{{ frontmatter.sections.gettingStarted.create.guide }}</a>
+					</div>
+				</div>
+				<div class="docs">
+					<div class="container">
+						<div class="icon"><i class="fas fa-lightbulb"></i></div>
+						<div class="title">{{ frontmatter.sections.gettingStarted.docs.title }}</div>
+						<div class="description"></div>
+						<a class="link" href="./home.html">{{ frontmatter.sections.gettingStarted.docs.docs }}</a>
+					</div>
+				</div>
+			</div>
 		</div>
-	</div>
 
-	<div class="supporters">
-		<div class="container">
-			<div class="title">サポーター</div>
+		<div class="donation">
+			<MkDots class="dots" :space="30"/>
+			<div class="container">
+				<div class="title">{{ frontmatter.sections.donation.title }}</div>
+				<div class="description">{{ frontmatter.sections.donation.description }}</div>
+				<a class="patreon" href="https://www.patreon.com/syuilo"><img src="https://c5.patreon.com/external/logo/become_a_patron_button@2x.png" alt="Become a Patron!" width="200" /></a>
+			</div>
+		</div>
+
+		<div class="supporters">
+			<div class="container">
+				<div class="title">サポーター</div>
+			</div>
 		</div>
 	</div>
 
@@ -195,7 +197,7 @@ const vParallax = {
 			src.style.transform = `translateY(${window.scrollY / binding.value}px)`;
 		}, { passive: true });
 
-		window.requestAnimationFrame(calc);
+		//window.requestAnimationFrame(calc);
 	}
 }
 
@@ -289,7 +291,7 @@ b[data-marker] {
 	> .top {
 		position: relative;
 		background: #f9f9f9;
-		height: 1200px;
+		height: 1300px;
 		overflow: hidden;
 
 		> .container {
@@ -557,9 +559,8 @@ b[data-marker] {
 		background: #f9f9f980;
 		-webkit-backdrop-filter: blur(30px);
 		backdrop-filter: blur(30px);
-		margin-top: -450px;
+		margin-top: -550px;
 		padding: 50px 0 50px 0;
-		//clip-path: polygon(0% 100px, 100% 0%, 100% calc(100% - 100px), 0% 100%);
 		clip-path: polygon(0% 100px, 100% 0%, 100% 100%, 0% 100%);
 
 		> .container {
@@ -579,290 +580,291 @@ b[data-marker] {
 						font-size: 3em;
 						color: var(--c-brand);
 					}
+
+					> img {
+						width: 70px;
+						vertical-align: bottom;
+					}
 				}
 
 				> .title {
 					font-size: 1.5em;
 					font-weight: bold;
-					margin: 20px 0 10px 0;
+					margin: 15px 0 10px 0;
 				}
 			}
 		}
 	}
 
-	> .about {
+	> .body {
 		position: relative;
 		z-index: 1;
 		background: #fff;
-		margin: -50px 0;
+		clip-path: polygon(0% 100px, 100% 0%, 100% 100%, 0% 100%);
+		margin-top: -100px;
+		overflow: hidden;
 
-		> .container {
-			position: relative;
-			max-width: 1000px;
-			margin: 0 auto;
-			padding: 150px 100px;
-			text-align: center;
+		> .about {
+			margin: 50px 0 0 0;
 
-			> .title {
-				font-size: 2em;
-				font-weight: bold;
-				margin-bottom: 20px;
-			}
+			> .container {
+				position: relative;
+				max-width: 1000px;
+				margin: 0 auto;
+				padding: 150px 100px;
+				text-align: center;
 
-			> .description {
-				font-size: 1.2em;
-			}
+				> .title {
+					font-size: 2em;
+					font-weight: bold;
+					margin-bottom: 20px;
+				}
 
-			@media (max-width: 600px) {
-				padding: 150px 50px;
-			}
-		}
+				> .description {
+					font-size: 1.2em;
+				}
 
-		> .dots {
-			display: block;
-			width: 1200px;
-			max-width: calc(100% - 200px);
-			height: 100px;
-			margin: 0 auto;
-			color: var(--c-brand);
-		}
-	}
-
-	> .features {
-		position: relative;
-		background: #fff;
-		padding-top: 50px;
-
-		> .container {
-			position: relative;
-			max-width: 1200px;
-			margin: 0 auto;
-			padding: 150px 100px;
-			display: flex;
-			gap: 50px;
-
-			> .h {
-				width: 300px;
-
-				> .container {
-					position: sticky;
-					top: 50px;
-
-					> .title {
-						font-size: 2.5em;
-						font-weight: bold;
-					}
-
-					> .text {
-						margin-top: 10px;
-						font-size: 1.3em;
-						opacity: 0.9;
-					}
+				@media (max-width: 600px) {
+					padding: 150px 50px;
 				}
 			}
 
-			> .list {
-				flex: 1;
+			> .dots {
+				display: block;
+				width: 1200px;
+				max-width: calc(100% - 200px);
+				height: 100px;
+				margin: 0 auto;
+				color: var(--c-brand);
+			}
+		}
+
+		> .features {
+			padding-top: 50px;
+
+			> .container {
+				position: relative;
+				max-width: 1200px;
+				margin: 0 auto;
+				padding: 150px 100px;
 				display: flex;
 				gap: 50px;
 
-				> .column {
-					width: 50%;
-
-					&:last-child {
-						padding-top: 100px;
-					}
-
-					> .item {
-						&:not(:last-child) {
-							margin-bottom: 60px;
-						}
-
-						> .content {
-							> .img {
-								width: 100%;
-								aspect-ratio: 2/1;
-								object-fit: cover;
-								border-radius: 15px;
-								box-shadow: 0 4px 16px 0 rgb(0 0 0 / 10%);
-							}
-
-							> .title {
-								font-size: 1.5em;
-								font-weight: bold;
-								margin: 15px 0 8px 0;
-							}
-
-							> .description {
-								font-size: 1.1em;
-								opacity: 0.9;
-							}
-						}
-					}
-				}
-			}
-
-			@media (max-width: 1250px) {
-				display: block;
-
 				> .h {
-					width: 100%;
-					text-align: center;
-					margin-bottom: 80px;
-				}
-			}
+					width: 300px;
 
-			@media (max-width: 800px) {
+					> .container {
+						position: sticky;
+						top: 50px;
+
+						> .title {
+							font-size: 2.5em;
+							font-weight: bold;
+						}
+
+						> .text {
+							margin-top: 10px;
+							font-size: 1.3em;
+							opacity: 0.9;
+						}
+					}
+				}
+
 				> .list {
-					display: block;
+					flex: 1;
+					display: flex;
+					gap: 50px;
 
 					> .column {
-						width: 100%;
-					}
-				}
-			}
+						width: 50%;
 
-			@media (max-width: 500px) {
-				padding: 100px 50px;
-			}
-		}
-	}
+						&:last-child {
+							padding-top: 100px;
+						}
 
-	> .start {
-		position: relative;
-		z-index: 1;
-		padding: 0 50px 50px 50px;
-		background: #fff;
+						> .item {
+							&:not(:last-child) {
+								margin-bottom: 60px;
+							}
 
-		> .dots {
-			display: block;
-			width: 1200px;
-			max-width: calc(100% - 200px);
-			height: 100px;
-			margin: 0 auto;
-			color: var(--c-brand);
-		}
+							> .content {
+								> .img {
+									width: 100%;
+									aspect-ratio: 2/1;
+									object-fit: cover;
+									border-radius: 15px;
+									box-shadow: 0 4px 16px 0 rgb(0 0 0 / 10%);
+								}
 
-		> .title {
-			font-size: 2em;
-			font-weight: bold;
-			margin: 100px 0 50px 0;
-			text-align: center;
-		}
+								> .title {
+									font-size: 1.5em;
+									font-weight: bold;
+									margin: 15px 0 8px 0;
+								}
 
-		> .container {
-			display: flex;
-			gap: 50px;
-			max-width: 1200px;
-			margin: 0 auto;
-
-			> * {
-				border-radius: 30px;
-
-				> .container {
-					position: relative;
-					max-width: 900px;
-					margin: 0 auto;
-					padding: 50px 50px;
-					text-align: center;
-
-					> .icon {
-						> i {
-							font-size: 3em;
-							color: #fff;
-							margin-bottom: 20px;
+								> .description {
+									font-size: 1.1em;
+									opacity: 0.9;
+								}
+							}
 						}
 					}
+				}
 
-					> .title {
-						font-size: 1.3em;
-						font-weight: bold;
-						margin-bottom: 20px;
-					}
+				@media (max-width: 1250px) {
+					display: block;
 
-					> .link {
-						display: inline-block;
-						font-size: 1.1em;
-						font-weight: bold;
-						padding: 12px 24px;
-						background: #fff;
-						border-radius: 10px;
-						color: var(--c-brand);
+					> .h {
+						width: 100%;
+						text-align: center;
+						margin-bottom: 80px;
 					}
 				}
-			}
 
-			> .find {
-				flex: 1;
-				background: var(--c-brand);
-				color: #fff;
-			}
+				@media (max-width: 800px) {
+					> .list {
+						display: block;
 
-			> .create {
-				flex: 1;
-				background: var(--panel, #eee);
-			}
+						> .column {
+							width: 100%;
+						}
+					}
+				}
 
-			> .docs {
-				flex: 1;
-				background: var(--panel, #eee);
+				@media (max-width: 500px) {
+					padding: 100px 50px;
+				}
 			}
+		}
 
-			@media (max-width: 1250px) {
+		> .start {
+			padding: 0 50px 50px 50px;
+
+			> .dots {
 				display: block;
-
-				> *:not(:last-child) {
-					margin-bottom: 30px;
-				}
+				width: 1200px;
+				max-width: calc(100% - 200px);
+				height: 100px;
+				margin: 0 auto;
+				color: var(--c-brand);
 			}
-		}
-	}
-
-	> .donation {
-		position: relative;
-		z-index: 1;
-		background: #fff;
-		padding-top: 100px;
-
-		> .dots {
-			display: block;
-			width: 1200px;
-			max-width: calc(100% - 200px);
-			height: 100px;
-			margin: 0 auto;
-			color: var(--c-brand);
-		}
-
-		> .container {
-			position: relative;
-			max-width: 1000px;
-			margin: 0 auto;
-			padding: 100px 50px;
-			text-align: center;
 
 			> .title {
 				font-size: 2em;
 				font-weight: bold;
-				margin-bottom: 20px;
+				margin: 100px 0 50px 0;
+				text-align: center;
 			}
 
-			> .description {
-				font-size: 1.2em;
-			}
+			> .container {
+				display: flex;
+				gap: 50px;
+				max-width: 1200px;
+				margin: 0 auto;
 
-			> .patreon {
-				display: inline-block;
-				margin-top: 20px;
+				> * {
+					border-radius: 30px;
+
+					> .container {
+						position: relative;
+						max-width: 900px;
+						margin: 0 auto;
+						padding: 50px 50px;
+						text-align: center;
+
+						> .icon {
+							> i {
+								font-size: 3em;
+								color: #fff;
+								margin-bottom: 20px;
+							}
+						}
+
+						> .title {
+							font-size: 1.3em;
+							font-weight: bold;
+							margin-bottom: 20px;
+						}
+
+						> .link {
+							display: inline-block;
+							font-size: 1.1em;
+							font-weight: bold;
+							padding: 12px 24px;
+							background: #fff;
+							border-radius: 10px;
+							color: var(--c-brand);
+						}
+					}
+				}
+
+				> .find {
+					flex: 1;
+					background: var(--c-brand);
+					color: #fff;
+				}
+
+				> .create {
+					flex: 1;
+					background: var(--panel, #eee);
+				}
+
+				> .docs {
+					flex: 1;
+					background: var(--panel, #eee);
+				}
+
+				@media (max-width: 1250px) {
+					display: block;
+
+					> *:not(:last-child) {
+						margin-bottom: 30px;
+					}
+				}
 			}
 		}
-	}
 
-	> .supporters {
-		position: relative;
-		z-index: 1;
-		background: #fff;
-		padding: 50px;
-		text-align: center;
+		> .donation {
+			padding-top: 100px;
+
+			> .dots {
+				display: block;
+				width: 1200px;
+				max-width: calc(100% - 200px);
+				height: 100px;
+				margin: 0 auto;
+				color: var(--c-brand);
+			}
+
+			> .container {
+				position: relative;
+				max-width: 1000px;
+				margin: 0 auto;
+				padding: 100px 50px;
+				text-align: center;
+
+
+				> .title {
+					font-size: 2em;
+					font-weight: bold;
+					margin-bottom: 20px;
+				}
+
+				> .description {
+					font-size: 1.2em;
+				}
+
+				> .patreon {
+					display: inline-block;
+					margin-top: 20px;
+				}
+			}
+		}
+
+		> .supporters {
+			padding: 50px;
+			text-align: center;
+		}
 	}
 
 	> .footer {
@@ -887,23 +889,7 @@ html.dark #root {
 		background: #1a1a1a80;
 	}
 
-	> .about {
-		background: #111;
-	}
-
-	> .features {
-		background: #111;
-	}
-
-	> .start {
-		background: #111;
-	}
-
-	> .donation {
-		background: #111;
-	}
-
-	> .supporters {
+	> .body {
 		background: #111;
 	}
 
