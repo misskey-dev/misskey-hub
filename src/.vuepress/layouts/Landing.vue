@@ -392,6 +392,7 @@ b[data-marker] {
 			top: 0;
 			width: 1000px;
 			pointer-events: none;
+			user-select: none;
 		}
 
 		> .corner2 {
@@ -400,6 +401,7 @@ b[data-marker] {
 			bottom: 0;
 			width: 1000px;
 			pointer-events: none;
+			user-select: none;
 		}
 
 		> .object1 {
@@ -409,6 +411,7 @@ b[data-marker] {
 			width: 1000px;
 			animation: 60s linear 0s infinite normal none running spin;
 			pointer-events: none;
+			user-select: none;
 		}
 
 		> .object2 {
@@ -418,6 +421,7 @@ b[data-marker] {
 			width: 1000px;
 			animation: 80s linear 0s infinite reverse none running spin;
 			pointer-events: none;
+			user-select: none;
 		}
 
 		> .dots1 {
@@ -428,6 +432,7 @@ b[data-marker] {
 			height: 300px;
 			color: var(--c-brand);
 			pointer-events: none;
+			user-select: none;
 		}
 
 		> .dots2 {
@@ -438,6 +443,7 @@ b[data-marker] {
 			height: 300px;
 			color: var(--c-brand);
 			pointer-events: none;
+			user-select: none;
 		}
 
 		> .screenshot.desktop {
@@ -448,6 +454,7 @@ b[data-marker] {
 			border-radius: 10px;
 			box-shadow: 2px 2px 32px rgba(0, 0, 0, 0.1);
 			pointer-events: none;
+			user-select: none;
 		}
 
 		> .screenshot.mobile {
@@ -458,6 +465,7 @@ b[data-marker] {
 			border-radius: 10px;
 			box-shadow: 2px 2px 32px rgba(0, 0, 0, 0.1);
 			pointer-events: none;
+			user-select: none;
 		}
 
 		> .ai {
