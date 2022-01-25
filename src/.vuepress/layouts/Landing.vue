@@ -176,7 +176,8 @@
 
 		<div class="supporters">
 			<div class="container">
-				<div class="title">サポーター</div>
+				<div class="title">{{ frontmatter.sections.sponsors.title }}</div>
+				<a class="rss3" title="RSS3" href="https://rss3.io/" target="_blank"><img src="/sponsors/rss3.svg" alt="RSS3"></a>
 			</div>
 		</div>
 	</div>
@@ -932,6 +933,22 @@ b[data-marker] {
 		> .supporters {
 			padding: 50px;
 			text-align: center;
+
+			> .container {
+				> .title {
+					font-size: 1.5em;
+					font-weight: bold;
+					margin-bottom: 20px;
+				}
+
+				> .rss3 {
+					display: block;
+
+					> img {
+						width: 150px;
+					}
+				}
+			}
 		}
 	}
 

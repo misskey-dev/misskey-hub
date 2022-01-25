@@ -63,4 +63,6 @@ sections:
   donation:
     title: "寄付のお願い"
     description: "Misskeyは非営利なため、開発資金は皆様からの寄付に頼っています。Misskeyを気に入られたら、今後も開発を続けられるようにぜひ支援をお願いします。"
+  sponsors:
+    title: "スポンサー"
 ---
