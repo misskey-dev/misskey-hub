@@ -63,4 +63,6 @@ sections:
   donation:
     title: "Donation"
     description: "Because Misskey is a non-profit, we rely on your donations to fund our development, so if you like Misskey, please consider donating so that we can continue to develop Misskey."
+  sponsors:
+    title: "Sponsors"
 ---
