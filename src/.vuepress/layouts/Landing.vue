@@ -26,8 +26,8 @@
 			</div>
 			<div class="description">{{ frontmatter.description }}</div>
 			<div class="buttons">
-				<div class="start" @click="gettingStarted">{{ frontmatter.gettingStarted }}</div>
-				<div class="more" @click="learnMore">{{ frontmatter.learnMore }}</div>
+				<a class="start" href="#gettingStarted">{{ frontmatter.gettingStarted }}</a>
+				<a class="more" href="#learnMore">{{ frontmatter.learnMore }}</a>
 			</div>
 		</div>
 		<!--<img src="/top-corner-1.svg" class="corner1">-->
@@ -234,18 +234,6 @@ const vFadeIn = {
 	}
 }
 
-function gettingStarted() {
-	document.getElementById('gettingStarted').scrollIntoView({
-		behavior: 'smooth',
-	});
-}
-
-function learnMore() {
-	document.getElementById('learnMore').scrollIntoView({
-		behavior: 'smooth',
-	});
-}
-
 let particleEnabled = ref(true);
 
 onMounted(() => {
@@ -307,6 +295,10 @@ onMounted(() => {
 
 b[data-marker] {
 	background: linear-gradient(transparent 70%, #bfff0080 0%);
+}
+
+html {
+	scroll-behavior: smooth;
 }
 
 #root {
