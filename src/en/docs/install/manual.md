@@ -30,27 +30,23 @@ Please install and setup these softwares:
 
 *3.* Install Misskey
 ----------------------------------------------------------------
-1. Connect to misskey user.
+1. Connect to the `misskey` user
 
 	`su - misskey`
 
-2. Clone the misskey repo from master branch.
+2. Clone the Misskey repository
 
-	`git clone --recursive -b master git+https://github.com/misskey-dev/misskey.git`
+	`git clone --recursive https://github.com/misskey-dev/misskey.git`
 
-3. Navigate to misskey directory
+3. Navigate to the repository
 
 	`cd misskey`
 
-4. Checkout to the [latest release](https://github.com/misskey-dev/misskey/releases/latest)
+4. Check out the [latest release](https://github.com/misskey-dev/misskey/releases/latest)
 
 	`git checkout master`
 
-5. Checkout submodules
-
-	`git submodule update --init`
-
-6. Install misskey dependencies.
+5. Install Misskey's dependencies
 
 	`yarn install`
 
