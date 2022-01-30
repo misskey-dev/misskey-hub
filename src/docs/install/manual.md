@@ -9,7 +9,7 @@ Misskey構築の手引き
 
 ::: tip 前提条件
 以下のソフトウェアがインストール・設定されていること
-- **[Node.js](https://nodejs.org/en/)** (12.x, 14.x)
+- **[Node.js](https://nodejs.org/en/)** (misskey 12 から 16 以上が必要)
 - **[PostgreSQL](https://www.postgresql.org/)** (10以上)
 - **[Redis](https://redis.io/)**
 - **[Yarn](https://yarnpkg.com/)** (v1系)
