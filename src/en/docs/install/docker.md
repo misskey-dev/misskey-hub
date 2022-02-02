@@ -10,7 +10,7 @@ This guide describes how to install and setup Misskey with Docker.
 Get the repository
 ----------------------------------------------------------------
 ```sh
-git clone -b master git+https://github.com/misskey-dev/misskey.git
+git clone -b master https://github.com/misskey-dev/misskey.git
 cd misskey
 git checkout master
 ```
