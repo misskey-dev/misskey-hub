@@ -1,71 +1,68 @@
 <template>
-<Layout>
-	<template #navbar-after>
-		<button @click="toggleAimode">藍モード</button>
-	</template>
-	<template #sidebar-bottom>
-		<MkDots :class="$style.sidebarDots" :space="12"/>
-		<MkAd :class="$style.koko9"/>
-	</template>
-	<template #page-top>
-		<MkDots :class="$style.headerDots"/>
-	</template>
-	<template #page-bottom>
-		<MkRelatedPages/>
-		<MkDots :class="$style.footerDots"/>
-		<div :class="$style.footer">Copyright (c) 2021 syuilo and other contributors</div>
-	</template>
-</Layout>
+<div>
+	<NavBar/>
+	<Transition
+		name="fade-slide-y"
+		mode="out-in"
+		@before-enter="onBeforeEnter"
+		@before-leave="onBeforeLeave"
+	>
+		<Page :key="page.path">
+			<template #top>
+				<MkDots :class="$style.headerDots"/>
+			</template>
+			<template #bottom>
+				<MkRelatedPages/>
+				<MkDots :class="$style.footerDots"/>
+				<div :class="$style.footer">Copyright (c) 2021 syuilo and other contributors</div>
+			</template>
+		</Page>
+	</Transition>
 
-<iframe v-if="aimode" :class="$style.live2d" ref="live2d" src="https://misskey-dev.github.io/mascot-web/?scale=2&y=1.4" allowtransparency></iframe>
+	<iframe v-if="aimode" :class="$style.live2d" ref="live2d" src="https://misskey-dev.github.io/mascot-web/?scale=2&y=1.4" allowtransparency></iframe>
+</div>
 </template>
 
-<script lang="ts">
-import Layout from '@vuepress/theme-default/lib/client/layouts/Layout.vue'
+<script lang="ts" setup>
+import { ref, onMounted } from 'vue';
+import { usePageData, usePageFrontmatter } from '@vuepress/client';
+import Page from '@vuepress/theme-default/lib/client/components/Page.vue';
+import NavBar from '../components/NavBar.vue';
 
-export default {
-	components: {
-		Layout,
-	},
+const page = usePageData();
 
-	data() {
-		return {
-			aimode: __VUEPRESS_SSR__ || localStorage.getItem('aimode') === 'true'
-		};
-	},
+const aimode = __VUEPRESS_SSR__ || localStorage.getItem('aimode') === 'true';
+const live2dIframe = ref();
 
-	mounted() {
-		if (this.aimode) {
-			const iframeRect = this.$refs.live2d.getBoundingClientRect();
-			window.addEventListener('mousemove', ev => {
-				this.$refs.live2d.contentWindow.postMessage({
-					type: 'moveCursor',
-					body: {
-						x: ev.clientX - iframeRect.left,
-						y: ev.clientY - iframeRect.top,
-					}
-				}, '*');
-			}, { passive: true });
-
-			window.addEventListener('touchmove', ev => {
-				this.$refs.live2d.contentWindow.postMessage({
-					type: 'moveCursor',
-					body: {
-						x: ev.touches[0].clientX - iframeRect.left,
-						y: ev.touches[0].clientY - iframeRect.top,
-					}
-				}, '*');
-			}, { passive: true });
-		}
-	},
-
-	methods: {
-		toggleAimode() {
-			localStorage.setItem('aimode', this.aimode ? 'false' : 'true');
-			location.reload();
-		}
-	}
+function toggleAimode() {
+	localStorage.setItem('aimode', aimode ? 'false' : 'true');
+	location.reload();
 }
+
+onMounted(() => {
+	if (aimode) {
+		const iframeRect = live2dIframe.value.live2d.getBoundingClientRect();
+		window.addEventListener('mousemove', ev => {
+			live2dIframe.value.contentWindow.postMessage({
+				type: 'moveCursor',
+				body: {
+					x: ev.clientX - iframeRect.left,
+					y: ev.clientY - iframeRect.top,
+				}
+			}, '*');
+		}, { passive: true });
+
+		window.addEventListener('touchmove', ev => {
+			live2dIframe.value.contentWindow.postMessage({
+				type: 'moveCursor',
+				body: {
+					x: ev.touches[0].clientX - iframeRect.left,
+					y: ev.touches[0].clientY - iframeRect.top,
+				}
+			}, '*');
+		}, { passive: true });
+	}
+});
 </script>
 
 <style lang="scss" module>
