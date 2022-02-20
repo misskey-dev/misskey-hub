@@ -103,6 +103,7 @@ Just `NODE_ENV=production npm start`. GLHF!
 
 2. Edit it, and paste this and save:
 
+	::: details
 	```
 	[Unit]
 	Description=Misskey daemon
@@ -122,6 +123,7 @@ Just `NODE_ENV=production npm start`. GLHF!
 	[Install]
 	WantedBy=multi-user.target
 	```
+	:::
 
 3. Reload systemd and enable the misskey service.
 
@@ -132,6 +134,46 @@ Just `NODE_ENV=production npm start`. GLHF!
 	`systemctl start misskey`
 
 You can check if the service is running with `systemctl status misskey`.
+
+### Launch with OpenRC
+
+1. Copy the following text to `/etc/init.d/misskey`:
+
+	::: details
+	```sh
+	#!/sbin/openrc-run
+
+	name=misskey
+	description="Misskey daemon"
+
+	command="/usr/bin/npm"
+	command_args="start"
+	command_user="misskey"
+
+	supervisor="supervise-daemon"
+	supervise_daemon_args=" -d /home/misskey/misskey -e NODE_ENV=\"production\""
+
+	pidfile="/run/${RC_SVCNAME}.pid"
+
+	depend() {
+		need net
+		use logger
+
+		# alternatively, uncomment if using nginx reverse proxy
+		#use logger nginx
+	}
+	```
+	:::
+
+2. Set the service to start on boot
+
+	`rc-update add misskey`
+
+3. Start the Misskey service
+
+	`rc-service misskey start`
+
+You can check if the service is running with `rc-service misskey status`.
 
 ### How to update your Misskey server to the latest version
 1. `git checkout master`
