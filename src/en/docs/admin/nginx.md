@@ -31,10 +31,10 @@ server {
     listen 443 ssl http2;
     listen [::]:443 ssl http2;
     server_name example.tld;
-    
+
     ssl_session_timeout 1d;
     ssl_session_cache shared:ssl_session_cache:10m;
-    ssl_session_tickets off;    
+    ssl_session_tickets off;
 
     # To use Let's Encrypt certificate
     ssl_certificate     /etc/letsencrypt/live/example.tld/fullchain.pem;
