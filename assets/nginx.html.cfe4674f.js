@@ -1,1 +1,0 @@
-const t={key:"v-7b1a978c",path:"/docs/admin/nginx.html",title:"Nginx\u8A2D\u5B9A\u4F8B",lang:"ja-JP",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:1634825584e3,contributors:[{name:"syuilo",email:"Syuilotan@yahoo.co.jp",commits:1}]},filePathRelative:"docs/admin/nginx.md"};export{t as data};
