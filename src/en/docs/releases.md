@@ -5,8 +5,7 @@ Notes for indivudual misskey releases.
 Information updates may not be translated yet. For the latest information see [GitHub](https://github.com/misskey-dev/misskey/blob/master/CHANGELOG.md).
 :::
 
-## 12.108.1
-release date: 2022-03-12
+## 12.108.1 (2022-03-12)
 
 ### Bugfixes
 - Fixed relay not working @xianonn
@@ -14,8 +13,7 @@ release date: 2022-03-12
 - Fixed a problem that OGP cannot be obtained correctly from outside @syuilo
 - Instance can't get the files from other instance when there are items in allowedPrivateNetworks in .config/default.yml @ybw2016v
 
-## 12.108.0
-release date: 2022-03-09
+## 12.108.0 (2022-03-09)
 
 ### Note
 - Node v16.14.0 or later is required from this version
@@ -33,19 +31,18 @@ release date: 2022-03-09
 - Add Pub&Sub to coalition chart @syuilo
 - Add Active to coalition chart @syuilo
 - Queries to databases that take longer than 10 seconds by default will be aborted @syuilo
-	- You can change the timeout period by setting `statement_timeout` in the configuration file `db.extra
+	- You can change the timeout period by setting `statement_timeout` in the configuration file `db.extra`
 - Client: display instance icon on splash screen @syuilo
 
 ### Bugfixes
 - Client: Fixed reaction picker height sometimes remains low and does not return @syuilo
-- Client: fixed username autocomplete not working properly @syuilo
+- Client: Fixed username autocomplete not working properly @syuilo
 - Client: Fixed difficulty in editing widgets with touch operation @xianonn
-- Client: fixed register_note_view_interruptor() not working @syuilo
+- Client: Fixed register_note_view_interruptor() not working @syuilo
 - Client: iPhone X or later(?) Fixed: Fixed page content not being fully displayed on iPhone X or later(?) @tamaina
-- Client: fix image caption on mobile @nullobsi
+- Client: Fix image caption on mobile @nullobsi
 
-## 12.107.0
-release date 2022/02/12
+## 12.107.0 (2022/02/12)
 
 ### Improvements
 - Client: add theme @syuilo
@@ -127,8 +124,8 @@ If the migration does not finish, you can delete all **records** in the table st
 - Client: Fixed no update notification dialog @syuilo
 - Client: Follows/Followers Visibility changes won't be saved unless clicking on an other checkbox @Johann150
 - API: Fix API cast @mei23
-- add instance favicon where it's missing @solfisher
-- Fixed problem with periodic resync of charts not working @syuilo
+- Add instance favicon where it's missing @solfisher
+- Fixed problems with periodic resync of charts not working @syuilo
 
 ## 12.103.1 (2022/02/02)
 
@@ -150,8 +147,7 @@ If the migration does not finish, you can delete all **records** in the table st
 - Client: hashtag retention field in submission form not working
 - Client: Fixed side view not working
 - Client: ensure that specified users does not get duplicates
-- Add `img-src` and `media-src` directives to `Content-Security-Policy` for
-  files and media proxy
+- Add `img-src` and `media-src` directives to `Content-Security-Policy` for files and media proxy
 
 ## 12.102.1 (2022/01/27)
 
@@ -162,6 +158,7 @@ If the migration does not finish, you can delete all **records** in the table st
 
 ### Note
 After the update, some custom pictograms may not be displayed. In this case, batch exporting the pictograms from the pictogram management page and then batch importing them again from the control panel will fix the problem.
+
 ⚠ It is not compatible with zips exported prior to 12.102.0. Please update before exporting.
 
 ### Changes
@@ -200,7 +197,7 @@ After the update, some custom pictograms may not be displayed. In this case, bat
 
 ### Bugfixes
 - Client: Fixed some components being hidden behind the scenes
-- fix html blockquote conversion
+- Fix html blockquote conversion
 
 ## 12.100.2 (2021/12/18)
 
@@ -214,6 +211,7 @@ After the update, some custom pictograms may not be displayed. In this case, bat
 ### Bugfixes
 - Client: Design coordination
 - Client: Improved display of various menus and reaction picker on mobile
+
 ## 12.100.0 (2021/12/17)
 
 ### Improvements
@@ -247,6 +245,7 @@ After the update, some custom pictograms may not be displayed. In this case, bat
 - Client: Fixed a problem with menus etc. being hidden behind windows
 
 ## 12.98.0 (12/03/2021)
+
 ### Improvements
 - API: /antennas/notes API now allows filtering by date
 - Client: Confirmation dialog box when voting on a survey
@@ -269,8 +268,7 @@ After the update, some custom pictograms may not be displayed. In this case, bat
 ### Changes
 - Client: Moderator badge no longer displayed in notes
 
-## 12.97.0
-release date: 2021-11-19
+## 12.97.0 (2021-11-19)
 
 ### Improvements
 - client: auto-folding also applies to renotes
