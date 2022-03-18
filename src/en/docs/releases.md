@@ -157,7 +157,7 @@ If the migration does not finish, you can delete all **records** in the table st
 ## 12.102.0 (2022/01/27)
 
 ### Note
-After the update, some custom pictograms may not be displayed. In this case, batch exporting the pictograms from the pictogram management page and then batch importing them again from the control panel will fix the problem.
+After the update, some custom emoji may not be displayed. In this case, batch exporting the emoji from the emoji management page and then batch importing them again from the control panel will fix the problem.
 
 ⚠ It is not compatible with zips exported prior to 12.102.0. Please update before exporting.
 
@@ -168,11 +168,11 @@ After the update, some custom pictograms may not be displayed. In this case, bat
   - It will be restored as a separate repository at a later date.
 - Chat UI has been removed.
 - The number of files that can be attached to a note has been increased to 16.
-- SVG custom pictograms are now converted to PNGs for display
+- SVG custom emoji are now converted to PNGs for display
 
 ### Improvments
-- Custom pictogram batch editing function
-- Batch import of custom pictograms
+- Custom emoji batch editing function
+- Batch import of custom emoji
 - Posting form now allows temporary switching of posting accounts
 - Unifying Misskey-specific IRIs in JSON-LD `@context`.
 - Improved client performance
@@ -184,8 +184,8 @@ After the update, some custom pictograms may not be displayed. In this case, bat
 ## 12.101.1 (2021/12/29)
 
 ### Bugfixes
-- Fixed SVG pictograms not displaying
-- Fixed a case where the extension of exported pictograms is false.
+- Fixed SVG emoji not displaying
+- Fixed a case where the extension of exported emoji is false.
 
 ## 12.101.0 (2021/12/29)
 
