@@ -27,9 +27,9 @@ Information updates may not be translated yet. For the latest information see [G
 - Instance default theme can be set @syuilo
 - Allow mute to set expiration date @syuilo
 - Create a notification when a survey is closed @syuilo
-- Allow up to 16 additional profiles to be saved @syuilo
-- Add Pub&Sub to coalition chart @syuilo
-- Add Active to coalition chart @syuilo
+- Allow up to 16 profile fields to be saved @syuilo
+- Add Pub&Sub to federation chart @syuilo
+- Add Active to federation chart @syuilo
 - Queries to databases that take longer than 10 seconds by default will be aborted @syuilo
 	- You can change the timeout period by setting `statement_timeout` in the configuration file `db.extra`
 - Client: display instance icon on splash screen @syuilo
