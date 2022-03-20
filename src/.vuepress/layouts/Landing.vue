@@ -950,6 +950,20 @@ html {
 	}
 }
 
+@font-face {
+	font-family: 'GoyangIlsan';
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/GoyangIlsan.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+#root:lang(ko-KR) {
+	
+
+	font-family: "M PLUS Rounded 1c", Roboto, HelveticaNeue, 'GoyangIlsan', Arial, sans-serif;
+
+}
+
 html.dark #root {
 	background: #1a1a1a;
 	color: #dfddcc;
