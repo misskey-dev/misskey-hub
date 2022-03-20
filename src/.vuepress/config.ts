@@ -36,6 +36,10 @@ export default defineUserConfig<DefaultThemeOptions>({
 			lang: 'en-US',
 			description: 'Official website of Misskey project',
 		},
+		'/ko/': {
+			lang: 'ko-KR',
+			description: '오픈소스 분산형 마이크로블로깅 플랫폼 Misskey',
+		},
 	},
 
 	theme: path.resolve(__dirname, './theme'),
@@ -245,6 +249,115 @@ export default defineUserConfig<DefaultThemeOptions>({
 						},
 						{
 							text: 'Repository',
+							children: [{
+								text: 'misskey',
+								link: 'https://github.com/misskey-dev/misskey',
+							}, {
+								text: 'misskey.js',
+								link: 'https://github.com/misskey-dev/misskey.js',
+							}, {
+								text: 'mfm.js',
+								link: 'https://github.com/misskey-dev/mfm.js',
+							}, {
+								text: 'misskey-hub',
+								link: 'https://github.com/misskey-dev/misskey-hub',
+							}]
+						}
+					],
+				},],
+			},
+			'/ko/': {
+				selectLanguageName: '한국어',
+				contributorsText: '기여자',
+				lastUpdatedText: '마지막 수정',
+				editLinkText: '이 페이지 수정하기',
+				relatedPagesText: '관련 페이지',
+				readThisArticle: '이 문서 읽기',
+				navbar: [{
+					text: '블로그',
+					link: '/ko/blog/',
+				}, {
+					text: '둘러보기',
+					children: [
+						'/ko/instances',
+						'/ko/plugins/',
+						'/ko/appendix/assets'
+					]
+				}, {
+					text: '설명서',
+					children: [
+						'/ko/docs/misskey',
+						'/ko/docs/releases',
+						'/ko/docs/misskey-hub',
+						'/ko/docs/faq',
+						'/ko/docs/glossary',
+						'/ko/docs/troubleshooting',
+						{
+							text: '기능',
+							children: [
+								'/ko/docs/features/note',
+								'/ko/docs/features/reaction',
+								'/ko/docs/features/mfm',
+								'/ko/docs/features/custom-emoji',
+								'/ko/docs/features/drive',
+								'/ko/docs/features/online-status',
+								'/ko/docs/features/share-form',
+								'/ko/docs/features/thread-mute',
+								'/ko/docs/features/word-mute',
+								'/ko/docs/features/mute-and-block',
+								'/ko/docs/features/plugin',
+							]
+						},
+						{
+							text: '개발자를 위하여',
+							children: [
+								'/ko/docs/api',
+								'/ko/docs/api/streaming',
+								'/ko/docs/api/entity',
+								'/ko/docs/api/endpoints.html',
+							]
+						},
+						{
+							text: '인스턴스 운영자를 위하여',
+							children: [
+								'/ko/docs/install',
+								'/ko/docs/admin/cdn',
+								'/ko/docs/admin/nginx',
+								'/ko/docs/admin/push-docker-hub',
+								'/ko/docs/admin/troubleshooting',
+								'/ko/docs/tips/disable-timelines',
+								'/ko/docs/admin/default-reaction',
+							]
+						}
+					]
+				}, {
+					text: '바깥 링크',
+					children: [
+						{
+							text: '공식 Discord',
+							link: 'https://discord.gg/Wp8gVStHW3',
+						},
+						{
+							text: '기부하기 (Patreon)',
+							link: 'https://www.patreon.com/syuilo',
+						},
+						{
+							text: '번역하기 (Crowdin)',
+							link: 'https://crowdin.com/project/misskey',
+						},
+						{
+							text: '藍.moe (마스코트 정보)',
+							link: 'https://xn--931a.moe',
+						},
+						{
+							text: '계정',
+							children: [{
+								text: '@repo@misskey.io',
+								link: 'https://misskey.io/@repo',
+							}]
+						},
+						{
+							text: '리포지터리',
 							children: [{
 								text: 'misskey',
 								link: 'https://github.com/misskey-dev/misskey',
