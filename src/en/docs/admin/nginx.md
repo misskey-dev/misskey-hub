@@ -13,12 +13,6 @@
 # Nginx cofig example
 
 ```nginx
-# Sample nginx configuration for Misskey
-#
-# 1. Replace example.tld to your domain
-# 2. Copy to /etc/nginx/sites-available/ and then symlink from /etc/nginx/sites-enabled/
-#    or copy to /etc/nginx/conf.d/
-
 # For WebSocket
 map $http_upgrade $connection_upgrade {
     default upgrade;
