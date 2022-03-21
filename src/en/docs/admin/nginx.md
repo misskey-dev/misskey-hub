@@ -3,7 +3,7 @@
    (The file name does not have to be "misskey".)
 2. Edit as follows:
    1. Replace example.tld with the domain you have prepared.\
-     ssl_certificate should be the path to the certificate obtained from Let's Encrypt.
+     `ssl_certificate` and `ssl_certificate_key` should be the path to the certificate obtained from Let's Encrypt.
 	 2. If using a CDN such as Cloudflare, remove 4 lines from "If it's behind another reverse proxy or CDN, remove the following."
 3. If you create `/etc/nginx/sites-available/misskey.conf`, create symlink as `/etc/nginx/sites-enabled/misskey.conf`.\
    `sudo ln -s /etc/nginx/sites-available/misskey.conf /etc/nginx/sites-enabled/misskey.conf`

@@ -3,7 +3,7 @@
    （ファイル名はmisskeyでなくても構いません。）
 2. 次のように編集します。
    1. example.tldを自分が用意したドメインに置き換えます。\
-     ssl_certificateはLet's Encryptで取得した証明書のパスになるようにします。
+     `ssl_certificate`と`ssl_certificate_key`はLet's Encryptで取得した証明書のパスになるようにします。
 	 2. CloudflareなどのCDNを使う場合は、「If it's behind another reverse proxy or CDN, remove the following.」から4行を削除します。
 3. `/etc/nginx/sites-available/misskey.conf`を作成した場合は、`/etc/nginx/sites-enabled/misskey.conf`としてシンボリックリンクを作成します。\
    `sudo ln -s /etc/nginx/sites-available/misskey.conf /etc/nginx/sites-enabled/misskey.conf`
