@@ -1,12 +1,12 @@
-# Plugin Store
-A collection of [plugins](./docs/features/plugin.md) that you can install in the Misskey web UI.
+# 플러그인 스토어
+Misskey 웹 UI에서 설치할 수 있는 [플러그인](./docs/features/plugin.md)을 모아두는 곳입니다.
 
 ::: tip
-If you would like to see your plugin here, please see [the section on submitting plugins](#Submitting-Plugins).
+직접 만든 플러그인을 스토어에 등록하시려면 [플러그인 등록하기](#플러그인-등록하기) 항목을 참조해 주세요.
 :::
 
-## Plugins
+## 플러그인
 - TODO
 
-## Submitting Plugins
+## 플러그인 등록하기
 TODO

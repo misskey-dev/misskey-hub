@@ -357,7 +357,7 @@ export default defineUserConfig<DefaultThemeOptions>({
 							}]
 						},
 						{
-							text: '리포지터리',
+							text: '리포지토리',
 							children: [{
 								text: 'misskey',
 								link: 'https://github.com/misskey-dev/misskey',

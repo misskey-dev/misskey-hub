@@ -1,3 +1,3 @@
-# Recent changes
+# 변경 사항
 
 <!--[RECENT_UPDATES]-->
