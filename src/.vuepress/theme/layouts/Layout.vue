@@ -13,7 +13,7 @@
 	<template #page-bottom>
 		<MkRelatedPages/>
 		<MkDots :class="$style.footerDots"/>
-		<div :class="$style.footer">Copyright (c) 2021 syuilo and other contributors</div>
+		<div :class="$style.footer">Copyright (c) 2022 syuilo and other contributors</div>
 	</template>
 </Layout>
 
