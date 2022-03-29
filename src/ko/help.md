@@ -1,3 +1,3 @@
-# Help
+# 도움말
 
-- [List of functions](./docs/features/index.md)
+- [기능 일람](./docs/features/index.md)

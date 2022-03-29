@@ -1,27 +1,27 @@
 ---
-description: 'collection of Misskey logos, icons, and other assets.'
+description: 'Misskey의 로고, 아이콘 등 브랜드 에셋의 모음입니다.'
 ---
 
-# Assets collection
-This is a collection of Misskey logos, icons, and other assets.
+# 에셋 모음집
+Misskey의 로고, 아이콘 등 브랜드 에셋의 모음입니다.
 
 
 ::: tip
-These assets are free to use under the **CC BY-NC-SA** license!🎉
+Misskey의 에셋은 **CC BY-NC-SA**에 따라 자유롭게 사용하실 수 있습니다!🎉
 
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="CC BY-NC-SA" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>
 :::
 
 ::: tip
-All assets are managed in [misskey-dev/assets](https://github.com/misskey-dev/assets).
+모든 에셋은 [misskey-dev/assets](https://github.com/misskey-dev/assets)에서 관리되고 있습니다.
 :::
 
-## Logo
+## 로고
 <a class="asset" href="https://raw.githubusercontent.com/misskey-dev/assets/main/misskey.svg" target="_blank" download>
 <img src="https://raw.githubusercontent.com/misskey-dev/assets/main/misskey.svg">
 </a>
 
-## Icon
+## 아이콘
 <a class="asset" href="https://raw.githubusercontent.com/misskey-dev/assets/main/icon.png" target="_blank" download>
 <img src="https://raw.githubusercontent.com/misskey-dev/assets/main/icon.png">
 </a>
