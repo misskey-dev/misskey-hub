@@ -3,7 +3,7 @@ home: true
 title: Misskey Hub
 heroImage: /banner.svg
 tagline: オープンソースの分散型マイクロブログプラットフォーム、Misskeyの公式サイト
-footer: Copyright (c) 2021 syuilo and other contributors
+footer: Copyright (c) 2022 syuilo and other contributors
 actions:
   - text: Misskeyを始める
     link: /docs/getting-started

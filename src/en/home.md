@@ -3,7 +3,7 @@ home: true
 title: Misskey Hub
 heroImage: /banner.svg
 tagline: Official web site of open-source interplanetary micro-blogging platform Misskey
-footer: Copyright (c) 2021 syuilo and other contributors
+footer: Copyright (c) 2022 syuilo and other contributors
 actions:
   - text: Getting started
     link: ./docs/getting-started
