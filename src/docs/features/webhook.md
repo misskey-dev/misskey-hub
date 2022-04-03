@@ -23,6 +23,10 @@ Webhookが登録されると、指定したイベントが発生した際に、�
 			type: 'string',
 			description: 'Webhook ID',
 		},
+		userId: {
+			type: 'string',
+			description: 'Webhook作成者のユーザーID',
+		},
 		eventId: {
 			type: 'string',
 			description: 'イベントのID',
