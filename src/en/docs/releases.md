@@ -5,6 +5,27 @@ Notes for indivudual misskey releases.
 Information updates may not be translated yet. For the latest information see [GitHub](https://github.com/misskey-dev/misskey/blob/master/CHANGELOG.md).
 :::
 
+## 12.109.0 (2022/04/02)
+
+### Improvements
+- Webhooks @syuilo
+- Bull Dashboard built in to check and manipulate job queues @syuilo
+  - To open the Bull Dashboard, you must relog (log out and log back in) to misskey once with your admin account
+- Check that installed Node.js version fulfils version requirement @ThatOneCalculator
+- Server: overall performance improvements @syuilo
+- Federation: avoid duplicate activity delivery @Johann150
+- Federation: limit federation of reactions on direct notes @Johann150
+- Client: improved deck handling on touchpad/touchscreen @tamaina
+
+### Bugfixes.
+- Email address validation was not working @ybw2016v
+- API: fix endpoint endpoint @Johann150
+- API: fix admin/meta endpoint @syuilo
+- API: improved validation and documentation for endpoints that accept different variants of input @Johann150
+- API: `notes/create`: The `mediaIds` property is now deprecated.
+  - Use `fileIds` instead, it has the same behaviour.
+- Client: fixed problem with URLs not displaying if decodeURIComponent fails due to abnormal URI encoding @tamaina
+
 ## 12.108.1 (2022-03-12)
 
 ### Bugfixes
