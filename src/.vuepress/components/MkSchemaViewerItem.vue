@@ -16,6 +16,11 @@
 		<div v-if="schema.default !== undefined" class="nullable">default: <code>{{ schema.default }}</code></div>
 		<div v-if="schema.description" class="description">{{ schema.description }}</div>
 	</div>
+	<div v-else-if="schema.type === 'integer'" class="integer">
+		<code>integer</code><span v-if="schema.nullable" class="nullable">(nullable)</span>
+		<div v-if="schema.default !== undefined" class="nullable">default: <code>{{ schema.default }}</code></div>
+		<div v-if="schema.description" class="description">{{ schema.description }}</div>
+	</div>
 	<div v-else-if="schema.type === 'boolean'" class="boolean">
 		<code>boolean</code><span v-if="schema.nullable" class="nullable">(nullable)</span>
 		<div v-if="schema.default !== undefined" class="nullable">default: <code>{{ schema.default }}</code></div>
@@ -27,6 +32,11 @@
 		<MkSchemaViewerItem :schema="schema.items"/>
 		<span v-if="schema.nullable" class="nullable">(nullable)</span>
 		<div v-if="schema.default !== undefined" class="nullable">default: <code>{{ schema.default }}</code></div>
+	</div>
+	<div v-else-if="schema.type === 'object' && schema.properties == null" class="object">
+		<code>object</code><span v-if="schema.nullable" class="nullable">(nullable)</span>
+		<div v-if="schema.default !== undefined" class="nullable">default: <code>{{ schema.default }}</code></div>
+		<div v-if="schema.description" class="description">{{ schema.description }}</div>
 	</div>
 	<div v-else-if="schema.type === 'object'" class="object">
 		<div class="label">Object:</div>
@@ -82,6 +92,12 @@ export default {
 	}
 
 	> .number {
+		> .description {
+			margin-top: 0.5em;
+		}
+	}
+
+	> .integer {
 		> .description {
 			margin-top: 0.5em;
 		}

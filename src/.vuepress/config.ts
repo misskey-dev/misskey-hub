@@ -94,6 +94,7 @@ export default defineUserConfig<DefaultThemeOptions>({
 								'/docs/api/streaming',
 								'/docs/api/entity',
 								'/docs/api/endpoints.html',
+								'/docs/features/webhook',
 							]
 						},
 						{
