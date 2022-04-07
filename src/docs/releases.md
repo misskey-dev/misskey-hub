@@ -1,6 +1,19 @@
 # リリースノート
 Misskeyのリリースノートを掲載しています。
 
+## 12.109.2
+リリース日： 2022/04/03
+
+### Bugfixes
+- API: admin/update-meta was not working @syuilo
+- Client: テーマを切り替えたり読み込んだりするとmeta[name="theme-color"]のcontentがundefinedになる問題を修正 @tamaina
+
+## 12.109.1
+リリース日: 2022/04/02
+
+### Bugfixes
+- API: Renoteが行えない問題を修正
+
 ## 12.109.0
 リリース日: 2022/04/02
 
