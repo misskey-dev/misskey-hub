@@ -1,12 +1,18 @@
-# Nginx設定例
+# Nginxの設定
+1. `/etc/nginx/conf.d/misskey.conf`もしくは`/etc/nginx/sites-available/misskey.conf`を作成し、下の設定例をコピーします。\
+   （ファイル名はmisskeyでなくても構いません。）
+2. 次のように編集します。
+   1. example.tldを自分が用意したドメインに置き換えます。\
+     `ssl_certificate`と`ssl_certificate_key`はLet's Encryptで取得した証明書のパスになるようにします。
+	 2. CloudflareなどのCDNを使う場合は、「If it's behind another reverse proxy or CDN, remove the following.」から4行を削除します。
+3. `/etc/nginx/sites-available/misskey.conf`を作成した場合は、`/etc/nginx/sites-enabled/misskey.conf`としてシンボリックリンクを作成します。\
+   `sudo ln -s /etc/nginx/sites-available/misskey.conf /etc/nginx/sites-enabled/misskey.conf`
+4. `nginx -t` で設定ファイルが正常に読み込まれるか確認します。
+5. `sudo systemctl restart nginx` でnginxを再起動します。
+
+## 設定例
 
 ```nginx
-# Sample nginx configuration for Misskey
-#
-# 1. Replace example.tld to your domain
-# 2. Copy to /etc/nginx/sites-available/ and then symlink from /etc/nginx/sites-enabled/
-#    or copy to /etc/nginx/conf.d/
-
 # For WebSocket
 map $http_upgrade $connection_upgrade {
     default upgrade;
