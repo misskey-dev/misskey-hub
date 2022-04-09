@@ -12,4 +12,8 @@
 	host: 'newskey.cc',
 	name: '𝙉𝙚𝙬𝙨𝙠𝙚𝙮.𝙘𝙘',
 	lang: 'ja',
+}, {
+	host: 'misskey.one',
+	name: 'misskey.one',
+	lang: 'ja',
 },]
