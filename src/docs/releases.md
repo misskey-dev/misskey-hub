@@ -1,6 +1,17 @@
 # リリースノート
 Misskeyのリリースノートを掲載しています。
 
+## 12.110.0
+リリース日： 2022/04/11
+
+### Improvements
+- Improve webhook @syuilo
+- Client: Show loading icon on splash screen @syuilo
+
+### Bugfixes
+- API: parameter validation of users/show was wrong
+- Federation: リモートインスタンスへのダイレクト投稿が届かない問題を修正 @syuilo
+
 ## 12.109.2
 リリース日： 2022/04/03
 
