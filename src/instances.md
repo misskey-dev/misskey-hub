@@ -4,3 +4,5 @@
 :::
 
 <MkInstances/>
+
+または、[自動生成されたインスタンス一覧](https://join.misskey.page/ja-JP/instances) からインスタンスを探すこともできます。

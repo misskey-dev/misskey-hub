@@ -2,9 +2,6 @@
 	host: 'misskey.io',
 	lang: 'ja',
 }, {
-	host: 'gorf.space',
-	lang: 'en',
-}, {
 	host: 'sushi.ski',
 	name: 'すしすき～',
 	lang: 'ja',
@@ -12,4 +9,7 @@
 	host: 'newskey.cc',
 	name: '𝙉𝙚𝙬𝙨𝙠𝙚𝙮.𝙘𝙘',
 	lang: 'ja',
-},]
+},{
+	host: 'gorf.space',
+	lang: 'en',
+}, ]
