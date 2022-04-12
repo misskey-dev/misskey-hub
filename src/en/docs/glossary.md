@@ -50,7 +50,7 @@ Ai(藍) is Misskey's official mascot.
 Those users amongst all existing ones who are continually using their account.
 
 ## Instance
-todo
+TODO
 
 ## Custom Emoji
 Emoji provided by your instance. Emoji that are not specifically provided by your instance but are available by default are called "Unicode Emoji". For details, see [here.](../docs/features/custom-emoji)
