@@ -43,7 +43,7 @@ MFM(Misskey Flavored Markdown)というMisskey独自のマークアップ言語�
 Misskey APIを利用したBotの開発が可能です。詳しくは[こちら](../docs/api)をご覧ください。
 
 ## ノートの翻訳機能はどのサービスを使用していますか？
-機械翻訳サービスの[DeepL](https://www.deepl.com/)を使用しています。
+機械翻訳サービスの[DeepL翻訳](https://www.deepl.com/)を使用しています。
 
 ## インスタンスを作成しましたが、電気通信事業の届出は必要ですか？
 ### 短い答え
