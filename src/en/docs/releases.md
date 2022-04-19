@@ -5,6 +5,27 @@ Notes for indivudual misskey releases.
 Information updates may not be translated yet. For the latest information see [GitHub](https://github.com/misskey-dev/misskey/blob/master/CHANGELOG.md).
 :::
 
+## 12.110.0 (2022/04/11)
+
+### Improvements
+- Improve webhook @syuilo
+- Client: Show loading icon on splash screen @syuilo
+
+### Bugfixes
+- API: parameter validation of users/show was wrong
+- Federation: fixed problem with direct posts to remote instances not reaching @syuilo
+
+## 12.109.2 (2022/04/03)
+
+### Bugfixes
+- API: admin/update-meta was not working @syuilo
+- Client: fix issue where meta[name="theme-color"] content was undefined when switching or loading themes @tamaina
+
+## 12.109.1 (2022/04/02)
+
+### Bugfixes
+- API: Fixed problem with Renote
+
 ## 12.109.0 (2022/04/02)
 
 ### Improvements
