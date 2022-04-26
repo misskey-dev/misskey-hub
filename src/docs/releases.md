@@ -5,7 +5,7 @@ Misskeyのリリースノートを掲載しています。
 リリース日： 2022/04/23
 
 ### Bugfixes
-- Fix GOP rendering @syuilo
+- Fix OGP rendering @syuilo
 - Improve performance of antenna, clip, and list @xianon
 
 ## 12.110.0
