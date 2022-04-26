@@ -12,7 +12,7 @@ The name "Misskey" comes from a song called "Brain Diver" by a band that syuilo 
 With anyone being able to join its development, Misskey is still continually being actively developed.
 
 ## What does "Distributed" mean?
-A <b>Distributed</b> service, also called a <b>Decentralized</b> service, refers to a service which features the division of a community into many servers that all mutually <b>communicate (federate)</b> with each other to share their contents, building a <b>network (Fediverse)</b>. Services for which only one server exists, or for which many independent server exist, are called centralized. Most services fall under the category of centralized, some examples for this are Twitter or Facebook. The advantage of distributed services is being able to select the administration or server theme that suits you freely.It's also possible for you to make your own server.Thanks to the federated nature, you will be able to access the same community, no matter which server you choose.
+A <b>Distributed</b> service, also called a <b>Decentralized</b> service, refers to a service which features the division of a community into many servers, aka an instance in Misskey, that all mutually <b>communicate (federate)</b> with each other to share their contents, building a <b>network (Fediverse)</b>. Services for which only one server exists, or for which many independent server exist, are called centralized. Most services fall under the category of centralized, some examples for this are Twitter or Facebook. The advantage of distributed services is being able to select the administration or instance theme that suits you freely.It's also possible for you to make your own instance.Thanks to the federated nature, you will be able to access the same community, no matter which instance you choose.
 
 ## Always Open-Source
 Misskey has always been, and will always be, open source.Open source means, simply speaking, <b>making the source code of software (a program) publicly available</b>.This also includes being able to adjust or redistribute the source code in its definition. The entirety of Misskey's source code is [being licensed](https://github.com/misskey-dev) under an open-source license called [AGPL](https://github.com/misskey-dev/misskey/blob/develop/LICENSE), which means anyone can freely inspect, use, adjust, change or redistribute as they see fit. Open source has many merits, including allowing anyone being able to make changes as they like, to make sure the code does not include any harmful components and being able to easily participate in its development. For realizing the distributed nature of Misskey, this concept of open source is indispensable. Using the same example as before, most profit-oriented services like Twitter, Facebook etc. are not open source.
@@ -40,9 +40,9 @@ Besides reporting bugs, please also feel free to share positive impressions such
 "Misskist" refers to the people using Misskey. By spreading the word about Misskey through introducing it to your acquaintances, the number of Misskists may increase, which serves as motivation for the developers.
 
 ### Making donations
-Misskey is not a business, and stays free to use by receiving its earnings through donations from everyone.(Depending on the instance, some revenue may be earned through showing advertisments, but these earnings go straight to the instance administrator and not to the developers of Misskey) As donations make it possible for the project to continue to be developed, they are another way of supporting Misskey. Donations are generally accepted via [Patreon](https://www.patreon.com/syuilo). By donating a certain amount of money, you can also have your username displayed on Misskey's [About page](/about-misskey).
+Misskey is not a business, and stays free to use by receiving its earnings through donations from everyone.(Depending on the instance, some revenue may be earned through showing advertisments, but these earnings go straight to the instance administrator and not to the developers of Misskey) As donations make it possible for the project to continue to be developed, they are another way of supporting Misskey. Donations are generally accepted via [Patreon](https://www.patreon.com/syuilo). By donating a certain amount of money, you can also have your username displayed on `https://YourInstanceHostname/about-misskey`.
 
-In addition to this, server administrators are also generally speaking not earning revenue.As operating a server costs money, please also consider supporting your server's administrator. This does not have a direct relation to the development of Misskey, but the existence of servers is what makes up the project, meaning the continued existence of servers is just about as important as that of the project itself.
+In addition to this, instance administrators are also generally speaking not earning revenue.As operating a instance costs money, please also consider supporting your instance's administrator. This does not have a direct relation to the development of Misskey, but the existence of instances is what makes up the project, meaning the continued existence of instances is just about as important as that of the project itself.
 
 ## Frequently Asked Questions
 ### What is this project aiming to achieve?
@@ -53,15 +53,15 @@ To put it bluntly, while this is a bit vague, Misskey is aiming to be a widely-u
 No.Misskey is being developed by an individual person and not commercialized through connection with any particular company. Development members are generally volunteers. Additionally, while there are some corporate sponsors, development is still centered around the community.
 
 ### Who is managing Misskey?
-Due to the distributed nature of Misskey, each individual server has their own administration.Therefore, not all of Misskey is managed by one individual person or company. This means that, as the development team does not control individual servers, for management-related questions you should contact your server's administration instead. You can verify who is managing your individual server on [this page](/about). If you were to create a server, then you would also become its administrator.
+Due to the distributed nature of Misskey, each individual instance has their own administration.Therefore, not all of Misskey is managed by one individual person or company. This means that, as the development team does not control individual instances, for management-related questions you should contact your instance's administration instead. You can verify who is managing your individual instance on `https://YourInstanceHostname/about`. If you were to create a instance, then you would also become its administrator.
 
-### Which server should I choose?
-[You can find an (incomplete) list of servers here.](../instances.md) Depending on the server, its community or central theme (for example, liking a show) may vary, so if there is a server that suits your interests, joining it would likely be a good choice. Besides that, server size, userbase, country or spoken language, reliance or trust in the administration team and many other things can also serve as criteria. There is however no single server that serves as the official server of Misskey.You also have the choice of creating a new server of your own.
+### Which instance should I choose?
+[You can find an (incomplete) list of instances here.](../instances.md) Depending on the instance, its community or central theme (for example, liking a show) may vary, so if there is a instance that suits your interests, joining it would likely be a good choice. Besides that, instance size, userbase, country or spoken language, reliance or trust in the administration team and many other things can also serve as criteria. There is however no single instance that serves as the official instance of Misskey.You also have the choice of creating a new instance of your own.
 
-Generally speaking, no matter which server you join, you will still be able to connect with users from all other servers.
+Generally speaking, no matter which instance you join, you will still be able to connect with users from all other instances.
 
-### How can I create my own server?
-Thank you for having an interest in creating a Misskey server. In the current year of 2022 there is no specialized Misskey hosting service, so creating a new server requires a certain amount of knowledge. Please see [here](./install.md) for more information regarding this.
+### How can I create my own instance?
+Thank you for having an interest in creating a Misskey instance. In the current year of 2022 there is no specialized Misskey hosting service, so creating a new instance requires a certain amount of knowledge. Please see [here](./install.md) for more information regarding this.
 
 ### What kind of technology does Misskey use?
 As development on Misskey progressed, the technology it has used has changed greatly.In the beginning, it used a combination of MySQL + PHP + jQuery, but currently uses the following.
@@ -84,5 +84,5 @@ However, functionality of third-party applications will inevitably lag behind th
 Please refer to the [assets collection](../appendix/assets.html).
 
 ### Who's that cute cat-eared girl that you see sometimes?
-It's Misskey's guardian deity, Ai.(They called Ai cute, yay!)
-<div class="info">ℹ️ To read more about Ai, check <a href="https://xn--931a.moe/" target="_blank">here</a> (Japanese-only).</div>
+It's Misskey's guardian deity, 藍ちゃん(Ai-chan). They called Ai cute, yay!)
+<div class="info">ℹ️ To read more about Ai-chan, check <a href="https://xn--931a.moe/" target="_blank">here</a> (Japanese-only).</div>
