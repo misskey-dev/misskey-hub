@@ -10,7 +10,7 @@ When a note meets the set conditions, it will be hidden behind text stating "(us
 You can display the note as it was by clicking on this text.
 
 ## Hard word mute
-With hard mutes, the server judges whether the content of a new incoming note meets the set conditions similar to antennas, and will completely exclude it from your timeline if so.
+With hard mutes, the instance judges whether the content of a new incoming note meets the set conditions similar to antennas, and will completely exclude it from your timeline if so.
 
 To summarize, a hard word mute has the following features:
 
