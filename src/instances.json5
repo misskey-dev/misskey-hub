@@ -12,4 +12,7 @@
 },{
 	host: 'gorf.space',
 	lang: 'en',
+}, {
+	host: 'mk.nixnet.social',
+	lang: 'en',
 }, ]
