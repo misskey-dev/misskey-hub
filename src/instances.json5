@@ -9,7 +9,11 @@
 	host: 'newskey.cc',
 	name: '𝙉𝙚𝙬𝙨𝙠𝙚𝙮.𝙘𝙘',
 	lang: 'ja',
-},{
+}, {
+	host: 'stop.voring.me',
+	name: 'ThoseFewCalculators',
+	lang: 'en',
+}, {
 	host: 'gorf.space',
 	lang: 'en',
 }, ]
