@@ -9,7 +9,7 @@ Information updates may not be translated yet. For the latest information see [G
 
 ### Bugfixes
 - Fix OGP rendering @syuilo
-- Improve performance of antenna, clip, and list @xianon
+- Improve performance of antenna, clip, and list @xianonn
 
 ## 12.110.0 (2022/04/11)
 
