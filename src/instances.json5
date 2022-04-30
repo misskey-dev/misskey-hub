@@ -14,9 +14,6 @@
 	name: 'ThoseFewCalculators',
 	lang: 'en',
 }, {
-	host: 'gorf.space',
-	lang: 'en',
-}, {
 	host: 'mk.nixnet.social',
 	name: 'NixNet Social',
 	lang: 'en',
