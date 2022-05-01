@@ -3,7 +3,7 @@ home: true
 title: Misskey Hub
 heroImage: /banner.svg
 tagline: Official web site of open-source interplanetary micro-blogging platform Misskey
-footer: Copyright (c) 2022 syuilo and other contributors
+footer: Copyright &copy; 2022 syuilo and other contributors
 actions:
   - text: Getting started
     link: ./docs/getting-started
@@ -12,11 +12,11 @@ actions:
     link: ./docs/misskey
     type: secondary
 features:
-  - title: Distributed🪐
+  - title: Distributed 🪐
     details: Independent communities are run on multiple servers, and these are interconnected.
-  - title: Lightweight🚀
+  - title: Lightweight 🚀
     details: Because it uses Node.js, which runs at high speed, it is lightweight even when federated with a large number of servers.
-  - title: Fun🍮
+  - title: Fun 🍮
     details: It has distinctive features such as reactions and a highly customizable UI.
 ---
 
@@ -27,6 +27,7 @@ features:
 <div class="contents">
 
 # Sponsors
+
 <div class="sponsors">
 	<a class="rss3" title="RSS3" href="https://rss3.io/" target="_blank"><img src="/sponsors/rss3.svg" alt="RSS3"></a>
 </div>

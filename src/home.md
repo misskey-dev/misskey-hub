@@ -3,7 +3,7 @@ home: true
 title: Misskey Hub
 heroImage: /banner.svg
 tagline: オープンソースの分散型マイクロブログプラットフォーム、Misskeyの公式サイト
-footer: Copyright (c) 2022 syuilo and other contributors
+footer: Copyright &copy; 2022 syuilo and other contributors
 actions:
   - text: Misskeyを始める
     link: /docs/getting-started
@@ -27,6 +27,7 @@ features:
 <div class="contents">
 
 # Sponsors
+
 <div class="sponsors">
 	<a class="rss3" title="RSS3" href="https://rss3.io/" target="_blank"><img src="/sponsors/rss3.svg" alt="RSS3"></a>
 </div>
