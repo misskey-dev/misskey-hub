@@ -1,10 +1,10 @@
 ---
-description: 'collection of Misskey logos, icons, and other assets.'
+description: "collection of Misskey logos, icons, and other assets."
 ---
 
 # Assets collection
-This is a collection of Misskey logos, icons, and other assets.
 
+This is a collection of Misskey logos, icons, and other assets.
 
 ::: tip
 These assets are free to use under the **CC BY-NC-SA** license!🎉
@@ -17,11 +17,13 @@ All assets are managed in [misskey-dev/assets](https://github.com/misskey-dev/as
 :::
 
 ## Logo
+
 <a class="asset" href="https://raw.githubusercontent.com/misskey-dev/assets/main/misskey.svg" target="_blank" download>
 <img src="https://raw.githubusercontent.com/misskey-dev/assets/main/misskey.svg">
 </a>
 
 ## Icon
+
 <a class="asset" href="https://raw.githubusercontent.com/misskey-dev/assets/main/icon.png" target="_blank" download>
 <img src="https://raw.githubusercontent.com/misskey-dev/assets/main/icon.png">
 </a>
@@ -48,4 +50,5 @@ All assets are managed in [misskey-dev/assets](https://github.com/misskey-dev/as
   0% {background-position: 0 0, 12.5px 0, 12.5px -12.5px, 0px 12.5px;}
   100% {background-position: 12.5px 12.5px, 25px 12.5px, 25px 0px, 12.5px 25px;}
 }
+
 </style>

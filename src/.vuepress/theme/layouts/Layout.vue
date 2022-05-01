@@ -30,7 +30,7 @@
 </template>
 
 <script lang="ts">
-import Layout from "@vuepress/theme-default/lib/client/layouts/Layout.vue";
+import Layout from '@vuepress/theme-default/lib/client/layouts/Layout.vue';
 
 export default {
 	components: {
@@ -39,7 +39,7 @@ export default {
 
 	data() {
 		return {
-			aimode: __VUEPRESS_SSR__ || localStorage.getItem("aimode") === "true",
+			aimode: __VUEPRESS_SSR__ || localStorage.getItem('aimode') === 'true',
 		};
 	},
 
@@ -84,7 +84,7 @@ export default {
 
 	methods: {
 		toggleAimode() {
-			localStorage.setItem("aimode", this.aimode ? "false" : "true");
+			localStorage.setItem('aimode', this.aimode ? 'false' : 'true');
 			location.reload();
 		},
 	},

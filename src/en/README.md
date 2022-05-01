@@ -23,11 +23,11 @@ sections:
     description: "Misskey is just a platform for server owners to make their own instances of Misskey, and they can all talk to each other! There's large instances for the masses, smaller ones for groups, fandoms, and subcultures, and even instances just for individuals and their friends. Want to have even more control? You can make your own instance on your server with relative ease, cutting ties from any large company who wants to spy on you and sell your data. Misskey is about community and sharing, not corporations and big tech. Have friends not on Misskey? No problem! Because Misskey is on the Fediverse (ActivityPub), you can interact with people on other platforms like Mastodon, PixelFed, PeerTube, and more!"
   features:
     title: "Features"
-    description: "Misskey has a wide variety of unique features that'll make you ask why you weren't here already!"
+    description: "Misskey has a wide variety of unique features!"
     list:
       note:
         title: "Note"
-        description: 'On Misskey, posts from users are called "notes". Reply, quote, add custom emojis, animated text, content warnings, attach multiple images, videos, GIFs, audio clips, or anything else!'
+        description: "On Misskey, posts from users are called \"notes\". Reply, quote, add custom emojis, animated text, content warnings, attach multiple images, videos, GIFs, audio clips, or anything else!"
       reaction:
         title: "Reactions"
         description: "You can add emoji reactions to any post! No longer are you bound by a like button, show everyone exactly how you feel with the tap of a button."
@@ -39,7 +39,7 @@ sections:
         description: "For those who need to see everything, Misskey has powerful charts for both users and admins to see what exactly is going on in your instance in real time."
       federation:
         title: "Federation"
-        description: "Not on Misskey? No problem! Not only can Misskey instances talk to other Misskey, but you can make friends with people on other networks like Mastodon and Pixelfed!"
+        description: "Not on Misskey? No problem! Not only can Misskey instances talk each other, but you can make friends with people on other networks like Mastodon and Pixelfed!"
       drive:
         title: "Drive"
         description: "Hate not being able to find something you uploaded? With Drive, you get managed and powerful cloud storage right in your social media!"

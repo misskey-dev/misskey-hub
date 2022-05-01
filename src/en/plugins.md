@@ -13,12 +13,3 @@ If you would like to see your plugin here, please see [the section on submitting
 ## Submitting Plugins
 
 TODO
-
-<style>
-	.mkAd {
-		display: none !important;
-	}
-	.aiModeButton {
-		display: none;
-	}
-</style>
