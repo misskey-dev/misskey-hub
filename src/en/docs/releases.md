@@ -5,6 +5,12 @@ Notes for indivudual misskey releases.
 Information updates may not be translated yet. For the latest information see [GitHub](https://github.com/misskey-dev/misskey/blob/master/CHANGELOG.md).
 :::
 
+## 12.110.1（2022/04/23）
+
+### Bugfixes
+- Fix GOP rendering @syuilo
+- Improve performance of antenna, clip, and list @xianonn
+
 ## 12.110.0 (2022/04/11)
 
 ### Improvements
