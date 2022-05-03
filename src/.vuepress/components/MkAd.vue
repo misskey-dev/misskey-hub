@@ -1,5 +1,5 @@
 <template>
-<a :href="ad.link" target="_blank"><img :src="ad.img"></a>
+<a :href="ad.link" target="_blank"><img :src="ad.img" alt="Misskey ad from Ai-chan!"></a>
 </template>
 
 <script>
