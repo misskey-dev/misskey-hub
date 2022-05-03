@@ -413,7 +413,7 @@ html {
 					padding: 12px 26px;
 					background: linear-gradient(90deg, #00b332, #aacb00);
 					border-radius: 999px;
-					color: #fff;
+					color: #1a1a1a;
 					font-size: 1.1em;
 					font-weight: bold;
 					margin-right: 20px;
@@ -425,7 +425,7 @@ html {
 					padding: 12px 26px;
 					background: #fff;
 					border-radius: 999px;
-					color: var(--c-brand);
+					color: #1a1a1a;
 					font-size: 1.1em;
 					font-weight: bold;
 					box-shadow: 0 8px 20px -5px rgba(0, 0, 0, 0.1);
@@ -505,9 +505,9 @@ html {
 
 		> .ai {
 			position: absolute;
-			right: 130px;
-			top: 128px;
-			height: 900px;
+			right: 250px;
+			top: 200px;
+			height: 600px;
 		}
 
 		@media (max-width: 1800px) {
@@ -526,12 +526,12 @@ html {
 			}
 
 			> .screenshot.desktop {
-				width: 600px;
+				width: 650px;
 			}
 
 			> .screenshot.mobile {
 				height: 350px;
-				right: 500px;
+				right: 150px;
 			}
 		}
 
@@ -539,9 +539,9 @@ html {
 			> .dots1 {
 				right: 600px;
 			}
-		
+
 			> .screenshot.desktop {
-				width: 500px;
+				width: 540px;
 			}
 
 			> .screenshot.mobile {
@@ -553,13 +553,13 @@ html {
 			> .dots1 {
 				right: 600px;
 			}
-		
+
 			> .screenshot.desktop {
 				right: 250px;
 			}
 
 			> .screenshot.mobile {
-				right: 450px;
+				right: 100px;
 			}
 		}
 
@@ -571,7 +571,7 @@ html {
 			> .dots2 {
 				display: none;
 			}
-		
+
 			> .screenshot.desktop {
 				display: none;
 			}
@@ -838,7 +838,7 @@ html {
 							padding: 12px 24px;
 							background: #eee;
 							border-radius: 10px;
-							color: var(--c-brand);
+							color: #1a1a1a;
 						}
 					}
 				}
@@ -847,7 +847,7 @@ html {
 					flex: 1;
 
 					> .container {
-						background: var(--c-brand);
+						background: linear-gradient(to right, var(--c-brand), #5c7a00);
 						color: #fff;
 					}
 				}
