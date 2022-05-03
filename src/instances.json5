@@ -17,4 +17,12 @@
 	host: 'mk.nixnet.social',
 	name: 'NixNet Social',
 	lang: 'en',
-}, ]
+}, {
+  host: 'jigglypuff.club',
+  name: 'Jigglypuff!',
+  lang: 'en',
+}, {
+  host: 'minidisc.tokyo',
+  name: 'ミニディスク【Ｍｉｎｉ　Ｄｉｓｕｋｕ】',
+  lang: 'en',
+},]
