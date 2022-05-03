@@ -123,11 +123,7 @@
 							<div class="description">{{ frontmatter.sections.features.list.thread.description }}</div>
 						</div></div>
 						<div v-fade-in class="item"><div class="content">
-<<<<<<< HEAD
-							<img src="/top-features-widgets.png" class="img">
-=======
 							<img src="/top-features-widgets.png" class="img widgets" alt="Widgets">
->>>>>>> ef1a88a9 (Improve English version)
 							<div class="title">{{ frontmatter.sections.features.list.widgets.title }}</div>
 							<div class="description">{{ frontmatter.sections.features.list.widgets.description }}</div>
 						</div></div>
