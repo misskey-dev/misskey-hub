@@ -184,7 +184,7 @@
 
 	<div class="footer">
 		<div class="container">
-			<div class="c">(c) 2022 Misskey</div>
+			<div class="c">&copy; 2022 Misskey, syuilo, and other contributors</div>
 		</div>
 	</div>
 </div>
