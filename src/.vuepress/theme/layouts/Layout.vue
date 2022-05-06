@@ -1,11 +1,11 @@
 <template>
 <Layout>
 	<template #navbar-after>
-		<button @click="toggleAimode">藍モード</button>
+		<button @click="toggleAimode" class="aiModeButton">藍モード</button>
 	</template>
 	<template #sidebar-bottom>
 		<MkDots :class="$style.sidebarDots" :space="12"/>
-		<MkAd :class="$style.koko9"/>
+		<MkAd :class="$style.koko9" class="mkAd"/>
 	</template>
 	<template #page-top>
 		<MkDots :class="$style.headerDots"/>
@@ -13,7 +13,7 @@
 	<template #page-bottom>
 		<MkRelatedPages/>
 		<MkDots :class="$style.footerDots"/>
-		<div :class="$style.footer">Copyright (c) 2022 syuilo and other contributors</div>
+		<div :class="$style.footer">Copyright &copy; 2022 syuilo and other contributors</div>
 	</template>
 </Layout>
 
