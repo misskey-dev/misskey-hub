@@ -1,9 +1,9 @@
 <template>
 <div id="root">
 	<div class="bg">
-		<div v-parallax="1.2" class="object1"><img src="/top-bg-object1.svg" alt="Blob"></div>
-		<div v-parallax="1.2" class="object2"><img src="/top-bg-object2.svg" alt="Blob"></div>
-		<div v-parallax="1.2" class="object3"><img src="/top-bg-object2.svg" alt="Blob"></div>
+		<div v-parallax="1.2" class="object1"><img src="/top-bg-object1.svg" aria-hidden="true"></div>
+		<div v-parallax="1.2" class="object2"><img src="/top-bg-object2.svg" aria-hidden="true"></div>
+		<div v-parallax="1.2" class="object3"><img src="/top-bg-object2.svg" aria-hidden="true"></div>
 	</div>
 
 	<div class="top">
