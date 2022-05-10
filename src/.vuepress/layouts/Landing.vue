@@ -1,9 +1,9 @@
 <template>
 <div id="root">
 	<div class="bg">
-		<div v-parallax="1.2" class="object1"><img src="/top-bg-object1.svg"></div>
-		<div v-parallax="1.2" class="object2"><img src="/top-bg-object2.svg"></div>
-		<div v-parallax="1.2" class="object3"><img src="/top-bg-object2.svg"></div>
+		<div v-parallax="1.2" class="object1"><img src="/top-bg-object1.svg" aria-hidden="true"></div>
+		<div v-parallax="1.2" class="object2"><img src="/top-bg-object2.svg" aria-hidden="true"></div>
+		<div v-parallax="1.2" class="object3"><img src="/top-bg-object2.svg" aria-hidden="true"></div>
 	</div>
 
 	<div class="top">
@@ -34,31 +34,31 @@
 		<!--<img src="/top-corner-2.svg" class="corner2">-->
 		<MkDots v-parallax="1.4" class="dots1" :space="30"/>
 		<MkDots v-parallax="1.5" class="dots2" :space="30"/>
-		<img v-parallax="2" src="/screenshot-desktop.png" class="screenshot desktop">
-		<img v-parallax="3" src="/screenshot-mobile.png" class="screenshot mobile">
-		<img v-parallax="4" src="/ai.png" class="ai">
+		<img v-parallax="2" src="/screenshot-desktop.png" class="screenshot desktop" alt="screenshot of Misskey in a PC browser">
+		<img v-parallax="3" src="/screenshot-mobile.png" class="screenshot mobile" alt="screenshot of Misskey in a mobile browser">
+		<img v-parallax="4" src="/ai.png" class="ai" alt="Ai-chan, Misskey's mascott">
 		<a href="https://github.com/misskey-dev/misskey" target="_blank" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="position: fixed; z-index: 10; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
 	</div>
 
 	<div class="key-features">
 		<div class="container">
 			<div class="item">
-				<div class="icon"><img src="/emojis/four-leaf-clover_1f340.png"></div>
+				<div class="icon"><img src="/emojis/four-leaf-clover_1f340.png" aria-hidden="true"></div>
 				<div class="title">{{ frontmatter.keyFeatures.open.title }}</div>
 				<div class="description">{{ frontmatter.keyFeatures.open.description }}</div>
 			</div>
 			<div class="item">
-				<div class="icon"><img src="/emojis/ringed-planet_1fa90.png"></div>
+				<div class="icon"><img src="/emojis/ringed-planet_1fa90.png" aria-hidden="true"></div>
 				<div class="title">{{ frontmatter.keyFeatures.federated.title }}</div>
 				<div class="description">{{ frontmatter.keyFeatures.federated.description }}</div>
 			</div>
 			<div class="item">
-				<div class="icon"><img src="/emojis/package_1f4e6.png"></div>
+				<div class="icon"><img src="/emojis/package_1f4e6.png" aria-hidden="true"></div>
 				<div class="title">{{ frontmatter.keyFeatures.multifunction.title }}</div>
 				<div class="description">{{ frontmatter.keyFeatures.multifunction.description }}</div>
 			</div>
 			<div class="item">
-				<div class="icon"><img src="/emojis/gear_2699-fe0f.png"></div>
+				<div class="icon"><img src="/emojis/gear_2699-fe0f.png" aria-hidden="true"></div>
 				<div class="title">{{ frontmatter.keyFeatures.customizable.title }}</div>
 				<div class="description">{{ frontmatter.keyFeatures.customizable.description }}</div>
 			</div>
@@ -86,44 +86,44 @@
 				<div class="list">
 					<div class="column">
 						<div v-fade-in class="item"><div class="content">
-							<img src="/top-features-note.png" class="img">
+							<img src="/top-features-note.png" class="img" alt="some notes">
 							<div class="title">{{ frontmatter.sections.features.list.note.title }}</div>
 							<div class="description">{{ frontmatter.sections.features.list.note.description }}</div>
 						</div></div>
 						<div v-fade-in class="item"><div class="content">
-							<img src="/top-features-reaction.png" class="img">
+							<img src="/top-features-reaction.png" class="img" alt="some emojis in the reaction picker">
 							<div class="title">{{ frontmatter.sections.features.list.reaction.title }}</div>
 							<div class="description">{{ frontmatter.sections.features.list.reaction.description }}</div>
 						</div></div>
 						<div v-fade-in class="item"><div class="content">
-							<img src="/top-features-theme.png" class="img">
+							<img src="/top-features-theme.png" class="img" alt="color palette">
 							<div class="title">{{ frontmatter.sections.features.list.theme.title }}</div>
 							<div class="description">{{ frontmatter.sections.features.list.theme.description }}</div>
 						</div></div>
 						<div v-fade-in class="item"><div class="content">
-							<img src="/top-features-charts.png" class="img">
+							<img src="/top-features-charts.png" class="img" alt="Charts">
 							<div class="title">{{ frontmatter.sections.features.list.charts.title }}</div>
 							<div class="description">{{ frontmatter.sections.features.list.charts.description }}</div>
 						</div></div>
 					</div>
 					<div class="column">
 						<div v-fade-in class="item"><div class="content">
-							<img src="/top-features-federation.png" class="img">
+							<img src="/top-features-federation.png" class="img" alt="logos of Misskey and other ActivityPub server software">
 							<div class="title">{{ frontmatter.sections.features.list.federation.title }}</div>
 							<div class="description">{{ frontmatter.sections.features.list.federation.description }}</div>
 						</div></div>
 						<div v-fade-in class="item"><div class="content">
-							<img src="/top-features-drive.png" class="img">
+							<img src="/top-features-drive.png" class="img" alt="a list of files in Misskey Drive">
 							<div class="title">{{ frontmatter.sections.features.list.drive.title }}</div>
 							<div class="description">{{ frontmatter.sections.features.list.drive.description }}</div>
 						</div></div>
 						<div v-fade-in class="item"><div class="content">
-							<img src="/top-features-thread.png" class="img">
+							<img src="/top-features-thread.png" class="img" alt="multiple messages arranged in a thread">
 							<div class="title">{{ frontmatter.sections.features.list.thread.title }}</div>
 							<div class="description">{{ frontmatter.sections.features.list.thread.description }}</div>
 						</div></div>
 						<div v-fade-in class="item"><div class="content">
-							<img src="/top-features-widgets.png" class="img">
+							<img src="/top-features-widgets.png" class="img" alt="sample widget showing activity as colored dots">
 							<div class="title">{{ frontmatter.sections.features.list.widgets.title }}</div>
 							<div class="description">{{ frontmatter.sections.features.list.widgets.description }}</div>
 						</div></div>
@@ -139,7 +139,7 @@
 			<div class="container">
 				<div v-fade-in class="find">
 					<div class="container">
-						<div class="icon"><img src="/emojis/ringed-planet_1fa90.png"></div>
+						<div class="icon"><img src="/emojis/ringed-planet_1fa90.png" aria-hidden="true"></div>
 						<div class="title">{{ frontmatter.sections.gettingStarted.find.title }}</div>
 						<div class="description"></div>
 						<a class="link" href="./instances.html">{{ frontmatter.sections.gettingStarted.find.list }}</a>
@@ -147,7 +147,7 @@
 				</div>
 				<div v-fade-in class="create">
 					<div class="container">
-						<div class="icon"><img src="/emojis/package_1f4e6.png"></div>
+						<div class="icon"><img src="/emojis/package_1f4e6.png" aria-hidden="true"></div>
 						<div class="title">{{ frontmatter.sections.gettingStarted.create.title }}</div>
 						<div class="description"></div>
 						<a class="link" href="./docs/install.html">{{ frontmatter.sections.gettingStarted.create.guide }}</a>
@@ -155,7 +155,7 @@
 				</div>
 				<div v-fade-in class="docs">
 					<div class="container">
-						<div class="icon"><img src="/emojis/light-bulb_1f4a1.png"></div>
+						<div class="icon"><img src="/emojis/light-bulb_1f4a1.png" aria-hidden="true"></div>
 						<div class="title">{{ frontmatter.sections.gettingStarted.docs.title }}</div>
 						<div class="description"></div>
 						<a class="link" href="./home.html">{{ frontmatter.sections.gettingStarted.docs.docs }}</a>
@@ -184,7 +184,7 @@
 
 	<div class="footer">
 		<div class="container">
-			<div class="c">(c) 2022 Misskey</div>
+			<div class="c">&copy; 2022 Misskey, syuilo, and other contributors</div>
 		</div>
 	</div>
 </div>
