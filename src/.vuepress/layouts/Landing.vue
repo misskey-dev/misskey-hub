@@ -43,22 +43,22 @@
 	<div class="key-features">
 		<div class="container">
 			<div class="item">
-				<div class="icon"><img src="/emojis/four-leaf-clover_1f340.png" alt="Four leaf clover"></div>
+				<div class="icon"><img src="/emojis/four-leaf-clover_1f340.png" aria-hidden="true"></div>
 				<div class="title">{{ frontmatter.keyFeatures.open.title }}</div>
 				<div class="description">{{ frontmatter.keyFeatures.open.description }}</div>
 			</div>
 			<div class="item">
-				<div class="icon"><img src="/emojis/ringed-planet_1fa90.png" alt="Ringed planet"></div>
+				<div class="icon"><img src="/emojis/ringed-planet_1fa90.png" aria-hidden="true"></div>
 				<div class="title">{{ frontmatter.keyFeatures.federated.title }}</div>
 				<div class="description">{{ frontmatter.keyFeatures.federated.description }}</div>
 			</div>
 			<div class="item">
-				<div class="icon"><img src="/emojis/package_1f4e6.png" alt="Package"></div>
+				<div class="icon"><img src="/emojis/package_1f4e6.png" aria-hidden="true"></div>
 				<div class="title">{{ frontmatter.keyFeatures.multifunction.title }}</div>
 				<div class="description">{{ frontmatter.keyFeatures.multifunction.description }}</div>
 			</div>
 			<div class="item">
-				<div class="icon"><img src="/emojis/gear_2699-fe0f.png" alt="Gear"></div>
+				<div class="icon"><img src="/emojis/gear_2699-fe0f.png" aria-hidden="true"></div>
 				<div class="title">{{ frontmatter.keyFeatures.customizable.title }}</div>
 				<div class="description">{{ frontmatter.keyFeatures.customizable.description }}</div>
 			</div>
@@ -139,7 +139,7 @@
 			<div class="container">
 				<div v-fade-in class="find">
 					<div class="container">
-						<div class="icon"><img src="/emojis/ringed-planet_1fa90.png" alt="Ringed planet"></div>
+						<div class="icon"><img src="/emojis/ringed-planet_1fa90.png" aria-hidden="true"></div>
 						<div class="title">{{ frontmatter.sections.gettingStarted.find.title }}</div>
 						<div class="description"></div>
 						<a class="link" href="./instances.html">{{ frontmatter.sections.gettingStarted.find.list }}</a>
@@ -147,7 +147,7 @@
 				</div>
 				<div v-fade-in class="create">
 					<div class="container">
-						<div class="icon"><img src="/emojis/package_1f4e6.png" alt="Package"></div>
+						<div class="icon"><img src="/emojis/package_1f4e6.png" aria-hidden="true"></div>
 						<div class="title">{{ frontmatter.sections.gettingStarted.create.title }}</div>
 						<div class="description"></div>
 						<a class="link" href="./docs/install.html">{{ frontmatter.sections.gettingStarted.create.guide }}</a>
@@ -155,7 +155,7 @@
 				</div>
 				<div v-fade-in class="docs">
 					<div class="container">
-						<div class="icon"><img src="/emojis/light-bulb_1f4a1.png" alt="Lightbulb"></div>
+						<div class="icon"><img src="/emojis/light-bulb_1f4a1.png" aria-hidden="true"></div>
 						<div class="title">{{ frontmatter.sections.gettingStarted.docs.title }}</div>
 						<div class="description"></div>
 						<a class="link" href="./home.html">{{ frontmatter.sections.gettingStarted.docs.docs }}</a>
