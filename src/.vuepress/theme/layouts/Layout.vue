@@ -17,7 +17,7 @@
 	</template>
 </Layout>
 
-<iframe v-if="aimode" :class="$style.live2d" ref="live2d" src="https://misskey-dev.github.io/mascot-web/?scale=2&y=1.4" allowtransparency></iframe>
+<iframe v-if="aimode" :class="$style.live2d" ref="live2d" src="https://misskey-dev.github.io/mascot-web/?scale=2&y=1.4" title="Ai-chan animated Live2D version" allowtransparency></iframe>
 </template>
 
 <script lang="ts">
