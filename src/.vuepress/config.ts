@@ -209,6 +209,7 @@ export default defineUserConfig<DefaultThemeOptions>({
 							text: 'for Admins',
 							children: [
 								'/en/docs/install',
+								'/en/docs/admin/emoji',
 								'/en/docs/admin/cdn',
 								'/en/docs/admin/nginx',
 								'/en/docs/admin/push-docker-hub',
