@@ -39,7 +39,7 @@ A type definition for this file would look like this, where `Meta` is the struct
 
 ```typescript
 class Meta {
-	metaVersion: integer;
+	metaVersion: number;
 	host: string;
 	/**
 	 * Date and time representation returned by ECMAScript `Date.prototype.toString`.
