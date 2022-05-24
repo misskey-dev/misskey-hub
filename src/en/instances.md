@@ -1,6 +1,6 @@
 # List of instances
 ::: tip
-If you would like to list your instance here, please feel free to contact us via [Discord](https://discord.gg/Wp8gVStHW3) or make a pull request on this site's [GitHub](https://github.com/misskey-dev/misskey-hub).
+We temporally stop the request to list your instance here. Sorry for inconvenience.<del> If you would like to list your instance here, please feel free to contact us via [Discord](https://discord.gg/Wp8gVStHW3) or make a pull request on this site's [GitHub](https://github.com/misskey-dev/misskey-hub).</del>
 :::
 
 <MkInstances/>
