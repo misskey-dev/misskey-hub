@@ -1,7 +1,7 @@
 # Notes
 Notes are a central concept within Misskey, and refer to content that may include text, images, surveys and more that has been posted to Misskey. In this context, "to note" is also used as a verb refering to the creation of a note.
 
-By composing a note, it will be added to the [timeline](./timeline) and become visible by your followers and other users from your server.
+By composing a note, it will be added to the [timeline](./timeline) and become visible by your followers and other users from your instance.
 
 On Misskey, it is also possible to add [Reactions](./reaction) to notes.In addition to that, you can reply to or quote notes.
 

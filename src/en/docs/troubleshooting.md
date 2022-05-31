@@ -7,7 +7,7 @@ description: 'If you run into a problem, please check this page first.'
 Please also use the [Frequently asked questions](./faq.md) page.
 :::
 
-If you run into a problem, please check this page first. In the case that you can't find your problem here, or the steps described here don't solve your issue, please contact your server's administrator or [Report it as a bug](./report-issue).
+If you run into a problem, please check this page first. In the case that you can't find your problem here, or the steps described here don't solve your issue, please contact your instance's administrator or [Report it as a bug](./report-issue).
 
 ## The client does not start
 In most of the cases, this is due your used browser's or operating system's version being outdated. Please try updating your browser or operating system to the latest version and then try again.
@@ -15,11 +15,11 @@ In most of the cases, this is due your used browser's or operating system's vers
 Although this does not happen frequently, if your client will still not start after this, it is possible for the cache to be at fault.In this case, please try clearing your cache and then try again.
 
 ## Pages cannot be loaded
-If your client does boot, but you get an error when trying to load a page, please check your network connection for errors.In addition, check that the server you are trying to access is not down.
+If your client does boot, but you get an error when trying to load a page, please check your network connection for errors.In addition, check that the instance you are trying to access is not down.
 
 Although this does not happen frequently, cases where the cache is at fault can happen.In this case, please try clearing your cache and then try again.
 
-Any remaining problems are likely related to the server you are trying to access, so please contact its administrator.
+Any remaining problems are likely related to the instance you are trying to access, so please contact its administrator.
 
 ## The client is slow
 Please try the following:
@@ -46,4 +46,4 @@ Followers-only notes cannot be renoted.
 Problems like these can arise if you are using an Adblocker. For an optimized experience on Misskey, please turn it off.
 
 ## Some parts of the Misskey Web UI are untranslated
-In most cases, this is simply a matter of the translation not having been done yet instead of being a bug.Please wait until the translation of this area has been completed. You can alternatively also [participate in translation](./misskey) yourself.
+In most cases, this is simply a matter of the translation not having been done yet instead of being a bug.Please wait until the translation of this area has been completed. You can alternatively also [participate in translation](./misskey#translating-text) yourself.
