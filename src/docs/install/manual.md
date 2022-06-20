@@ -133,6 +133,55 @@ systemctl start misskey
 :::
 ::::
 
+:::: details OpenRCを用いた管理
+
+OpenRCサービスのファイルを作成
+
+`/etc/init.d/misskey`
+
+エディタで開き、以下のコードを貼り付けて保存:
+
+``` ini
+#!/sbin/openrc-run
+
+name=misskey
+description="Misskey daemon"
+
+command="/usr/bin/npm"
+command_args="start"
+command_user="misskey"
+
+supervisor="supervise-daemon"
+supervise_daemon_args=" -d /home/misskey/misskey -e NODE_ENV=\"production\""
+
+pidfile="/run/${RC_SVCNAME}.pid"
+
+depend() {
+  need net
+  use logger
+
+  # alternatively, uncomment if using nginx reverse proxy
+  #use logger nginx
+}
+```
+
+ブート時にmisskeyサービスが起動するように設定します
+
+```sh
+rc-update add misskey
+```
+
+misskeyサービスの起動
+
+```sh
+rc-service misskey start
+```
+
+::: tip
+`rc-service misskey status`と入力すると、サービスの状態を調べることができます。
+:::
+::::
+
 ## Misskeyのアップデート方法
 ::: warning
 アップデートの際は必ず[リリースノート](https://github.com/misskey-dev/misskey/blob/master/CHANGELOG.md)を確認し、変更点や追加で必要になる作業の有無(ほとんどの場合ありません)を予め把握するようにしてください。
