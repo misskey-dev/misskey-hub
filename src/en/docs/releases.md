@@ -31,11 +31,11 @@ Information updates may not be translated yet. For the latest information see [G
 - API: `notifications/read` also accepts in arrays #7667 @tamaina
 - API: if the query meets the `username` condition, `username` is also `LIKE` searched when searching users @tamaina
 - MFM: Allow speed changes in all animated MFMs @Johann150
-- The theme color is now better validated. @Johann150<br>
-  Your own theme color may be unset if it was in an invalid format.<br>
+- The theme color is now better validated. @Johann150
+  Your own theme color may be unset if it was in an invalid format.
   Admins should check their instance settings if in doubt.
 - Perform port diagnosis at startup only when Listen fails @mei23
-- Rate limiting is now also usable for non-authenticated users. @Johann150 @mei23<br>
+- Rate limiting is now also usable for non-authenticated users. @Johann150 @mei23
   Admins should make sure the reverse proxy sets the `X-Forwarded-For` header to the original address.
 
 ### Bugfixes
