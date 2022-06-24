@@ -11,7 +11,7 @@ Information updates may not be translated yet. For the latest information see [G
 - some fixes of multiple notification read @tamaina
 - some GenerateVideoThumbnail failed @Johann150
 - Client: fix problem with widget information not being saved in Deck mode @syuilo
-- Client: edit screen appears when tring to open gallery posts @futchitwo
+- Client: edit screen appears when trying to open gallery posts @futchitwo
 
 ## 12.111.0（2022/06/11）
 
