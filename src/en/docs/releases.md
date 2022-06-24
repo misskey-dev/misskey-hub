@@ -28,7 +28,7 @@ Information updates may not be translated yet. For the latest information see [G
 - Client: make emoji stand out more on reaction button @Johann150
 - Client: display URL of QR code for TOTP registration @tamaina
 - Client: render quote renote CWs as MFM @pixeldesu
-- API: `notifications/read` also accepted in arrays #7667 @tamaina
+- API: `notifications/read` also accepts in arrays #7667 @tamaina
 - API: if the query meets the `username` condition, `username` is also `LIKE` searched when searching users @tamaina
 - MFM: Allow speed changes in all animated MFMs @Johann150
 - The theme color is now better validated. @Johann150<br>
