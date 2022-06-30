@@ -25,4 +25,8 @@
   host: 'minidisc.tokyo',
   name: 'ミニディスク【Ｍｉｎｉ　Ｄｉｓｕｋｕ】',
   lang: 'en',
+}, {
+  host: 'snug.moe',
+  name: 'Snugly Moe Moe',
+  lang: 'en',
 }, ]
