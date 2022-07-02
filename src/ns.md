@@ -40,6 +40,7 @@ Indicates that this note is quoting another note. It contains the `id` of the no
 
 This seems to be identical to `https://fedibird.com/ns#quoteUri`.
 Misskey also uses `as:quoteUrl` for this but this was not adopted to the ActivityPub specification.
+This is for compatibility with some other ActivityPub programs that operate using this.
 
 ## `_misskey_reaction`
 
