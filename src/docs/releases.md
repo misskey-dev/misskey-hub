@@ -1,6 +1,15 @@
 # リリースノート
 Misskeyのリリースノートを掲載しています。
 
+## 12.112.3
+リリース日： 2022/07/09
+
+### Improvements
+- Make active email validation configurable
+
+### Bugfixes
+- Server: Fix Attempts to update all notifications @mei23
+
 ## 12.112.2
 リリース日： 2022/07/08
 
