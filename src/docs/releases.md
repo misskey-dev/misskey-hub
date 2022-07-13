@@ -1,6 +1,16 @@
 # リリースノート
 Misskeyのリリースノートを掲載しています。
 
+## 12.113.0
+リリース日： 2022/07/13
+
+### Improvements
+- Support <plain> syntax for MFM
+
+### Bugfixes
+- Server: Fix crash at startup if TensorFlow is not supported @mei23
+- Client: URLエンコードされたルーティングを修正
+
 ## 12.112.3
 リリース日： 2022/07/09
 
