@@ -5,7 +5,7 @@ Misskeyのリリースノートを掲載しています。
 リリース日： 2022/07/13
 
 ### Improvements
-- Support <plain> syntax for MFM
+- Support `<plain>` syntax for MFM
 
 ### Bugfixes
 - Server: Fix crash at startup if TensorFlow is not supported @mei23
