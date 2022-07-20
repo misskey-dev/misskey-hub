@@ -58,7 +58,6 @@ export default defineUserConfig<DefaultThemeOptions>({
 					text: 'お楽しみ',
 					children: [
 						'/instances',
-						'/plugins/',
 						'/appendix/assets'
 					]
 				}, {
@@ -168,7 +167,6 @@ export default defineUserConfig<DefaultThemeOptions>({
 					text: 'Taking part',
 					children: [
 						'/en/instances',
-						'/en/plugins/',
 						'/en/appendix/assets'
 					]
 				}, {
