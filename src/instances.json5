@@ -25,4 +25,10 @@
   host: 'minidisc.tokyo',
   name: 'ミニディスク【Ｍｉｎｉ　Ｄｉｓｕｋｕ】',
   lang: 'en',
-}, ]
+},
+{
+  host: 'misskey.social',
+  name: 'Misskey Social',
+  lang: 'it',
+}
+]
