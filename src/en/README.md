@@ -67,6 +67,7 @@ sections:
     title: "Sponsors"
 ---
 
+<!--
 <style>
 	.ai {
 		display: none;
@@ -81,3 +82,4 @@ sections:
 		content: url("/top-features-widgets-en.png");
 	}
 </style>
+-->
