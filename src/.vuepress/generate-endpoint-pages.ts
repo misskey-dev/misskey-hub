@@ -3,33 +3,34 @@ import { App, createPage, Page } from '@vuepress/core';
 import glob from 'glob';
 import JSON5 from 'json5';
 
+const apiDefinition = JSON.parse(fs.readFileSync(__dirname + '/api.json', 'utf8'));
+const endpointPaths = Object.keys(apiDefinition.paths);
 
 export async function generateEndpointPages(app: App) {
 	for (const locale of Object.keys(app.options.locales)) {
 		const endpointsDir = locale + 'docs/api/endpoints/';
-		const endpointPaths = glob.sync(__dirname + '/..' + endpointsDir + '**/*.json5');
 
 		let indexContent = '# エンドポイント\n';
 
 		for (const endpointPath of endpointPaths) {
-			const name = endpointPath.slice(endpointPath.indexOf(endpointsDir)).replace(endpointsDir, '').replace('.json5', '');
-			const data = fs.readFileSync(endpointPath, 'utf-8');
-			const def = JSON5.parse(data);
+			const name = endpointPath.substring(1);
+			const def = apiDefinition.paths[endpointPath]['post'];
+			const requireCredential = def.security?.length > 0;
 
 			indexContent += `- [${name}](./endpoints/${name}.html)\n`;
 	
-			let content = `# \`${name}\`\n${def.description}`;
+			let content = `# \`${name}\``;
 
-			if (def.requireCredential) {
+			if (requireCredential) {
 				content += `\n\nCredential required.\n`;
 			}
 
 			// TODO: permission
 	
-			if (def.req && Object.keys(def.req).length > 0) {
+			if (def.requestBody && Object.keys(def.requestBody.content['application/json']?.schema?.properties ?? {}).length > 0) {
 				content += `
 ## Parameters
-<MkSchemaViewer :schema="${JSON.stringify(def.req).replace(/"/g, '\'')}">
+<MkSchemaViewer :schema="${JSON.stringify(def.requestBody.content['application/json']?.schema).replace(/"/g, '\'')}">
 </MkSchemaViewer>
 `;
 			} else {
@@ -39,10 +40,13 @@ none
 `;
 			}
 	
-			if (def.res) {
+			if (def.responses['200']) {
+				const ref = def.responses['200'].content['application/json'].schema.$ref;
+				const schema = ref ? apiDefinition.components.schemas[ref.replace('#/components/schemas/', '')] : def.responses['200'].content['application/json'].schema;
+
 				content += `
 ## Response
-<MkSchemaViewer :schema="${JSON.stringify(def.res).replace(/"/g, '\'')}">
+<MkSchemaViewer :schema="${JSON.stringify(schema).replace(/"/g, '\'')}" :schemas="${JSON.stringify(apiDefinition.components.schemas).replace(/"/g, '\'')}">
 </MkSchemaViewer>
 `;
 			} else {
@@ -53,7 +57,7 @@ none
 			}
 	
 			const page = await createPage(app, {
-				path: endpointPath.slice(endpointPath.indexOf(endpointsDir)).replace('.json5', '.html'),
+				path: endpointsDir + name + '.html',
 				content: content,
 			});
 			app.pages.push(page);

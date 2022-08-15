@@ -1,5 +1,5 @@
 <template>
-<Layout>
+<ParentLayout>
 	<template #navbar-after>
 		<button @click="toggleAimode" class="aiModeButton">藍モード</button>
 	</template>
@@ -15,17 +15,17 @@
 		<MkDots :class="$style.footerDots"/>
 		<div :class="$style.footer">Copyright &copy; 2022 syuilo and other contributors</div>
 	</template>
-</Layout>
+</ParentLayout>
 
 <iframe v-if="aimode" :class="$style.live2d" ref="live2d" src="https://misskey-dev.github.io/mascot-web/?scale=2&y=1.4" title="Ai-chan animated Live2D version" allowtransparency></iframe>
 </template>
 
 <script lang="ts">
-import Layout from '@vuepress/theme-default/lib/client/layouts/Layout.vue'
+import ParentLayout from '@vuepress/theme-default/lib/client/layouts/Layout.vue'
 
 export default {
 	components: {
-		Layout,
+		ParentLayout,
 	},
 
 	data() {
