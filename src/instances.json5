@@ -30,5 +30,10 @@
   host: 'misskey.social',
   name: 'Misskey Social',
   lang: 'it',
+},
+ {
+  host: 'www.foxyhole.io',
+  name: 'FoxyHole',
+  lang: 'it',
 }
 ]
