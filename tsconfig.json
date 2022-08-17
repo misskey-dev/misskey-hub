@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+		"strict": true,
+    "module": "ES2020",
+		"moduleResolution": "node",
+    "rootDir": "./src/.vuepress",
+    "paths": {
+      "@theme/*": ["./src/.vuepress/mitheme/src/client/components/*"]
+    }
+  },
+  "include": ["./src/.vuepress/components", "./src/.vuepress/mitheme/src/client", "./src/.vuepress/mitheme/src/shared"]
+}

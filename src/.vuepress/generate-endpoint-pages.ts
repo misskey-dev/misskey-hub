@@ -5,19 +5,22 @@ import JSON5 from 'json5';
 
 const apiDefinition = JSON.parse(fs.readFileSync(__dirname + '/api.json', 'utf8'));
 const endpointPaths = Object.keys(apiDefinition.paths);
+const endpointTags = Array.from(new Set(Object.values(apiDefinition.paths).flatMap(x => x.post.tags ?? [])));
+const endpointsForComponent = Object.entries(apiDefinition.paths).map(([e, x]) => ({ name: e.substring(1), tags: x.post.tags ?? [] }));
 
 export async function generateEndpointPages(app: App) {
 	for (const locale of Object.keys(app.options.locales)) {
 		const endpointsDir = locale + 'docs/api/endpoints/';
 
-		let indexContent = '# エンドポイント\n';
+		let indexContent = '# エンドポイント一覧\n';
+
+		indexContent += `
+<MkEndpoints :endpoints="${JSON.stringify(endpointsForComponent).replace(/"/g, '\'')}" :tags="${JSON.stringify(endpointTags).replace(/"/g, '\'')}"/>`;
 
 		for (const endpointPath of endpointPaths) {
 			const name = endpointPath.substring(1);
 			const def = apiDefinition.paths[endpointPath]['post'];
 			const requireCredential = def.security?.length > 0;
-
-			indexContent += `- [${name}](./endpoints/${name}.html)\n`;
 	
 			let content = `# \`${name}\``;
 

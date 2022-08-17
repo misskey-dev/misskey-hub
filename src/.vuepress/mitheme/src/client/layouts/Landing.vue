@@ -6,6 +6,8 @@
 		<div v-parallax="1.2" class="object3"><img src="/top-bg-object2.svg" aria-hidden="true"></div>
 	</div>
 
+	<Navbar @toggle-sidebar="toggleSidebar"/>
+
 	<div class="top">
 		<ClientOnly>
 			<transition name="fade">
@@ -196,6 +198,7 @@ import {
   ClientOnly,
   usePageFrontmatter,
 } from '@vuepress/client';
+import Navbar from '@theme/Navbar.vue'
 
 const frontmatter = usePageFrontmatter();
 
@@ -303,7 +306,6 @@ html {
 
 #root {
 	position: relative;
-	font-family: "M PLUS Rounded 1c", Roboto, HelveticaNeue, Arial, sans-serif;
 	line-height: 1.5;
 	background: #f9f9f9;
 
@@ -378,6 +380,7 @@ html {
 			}
 
 			> .tagline {
+				font-family: "M PLUS Rounded 1c", Roboto, HelveticaNeue, Arial, sans-serif;
 				font-size: 4em;
 				font-weight: bold;
 				margin-bottom: 40px;
@@ -701,7 +704,7 @@ html {
 
 					> .container {
 						position: sticky;
-						top: 50px;
+						top: calc(50px + var(--globalHeaderHeight, 0px));
 
 						> .title {
 							font-size: 2.5em;
