@@ -46,7 +46,7 @@
 		<div class="label">Object:</div>
 		<div v-if="schema.description" class="description">{{ schema.description }}</div>
 		<div v-for="[k, v] in Object.entries(schema.properties)" class="kv">
-			<div class="k">{{ k }}</div>
+			<div class="k">{{ k }}<span v-if="schema.required.includes(k)" class="required" title="Required">*</span></div>
 			<div class="v"><MkSchemaViewerItem :schema="v"/></div>
 		</div>
 		<span v-if="schema.nullable" class="nullable">(nullable)</span>
@@ -136,6 +136,11 @@ export default {
 				padding-right: 8px;
 				font-family: var(--font-family-code);
 				word-wrap: anywhere;
+
+				> .required {
+					margin-left: 8px;
+					color: #f00;
+				}
 			}
 		}
 	}

@@ -1,0 +1,10 @@
+{
+	'/clips/create': {
+		summary: 'クリップを作成します。',
+		description: 'クリップを作成します。',
+	},
+	'/clips/list': {
+		summary: '自分のクリップの一覧を取得します。',
+		description: '自分のクリップの一覧を取得します。',
+	},
+}

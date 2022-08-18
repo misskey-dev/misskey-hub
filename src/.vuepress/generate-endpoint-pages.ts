@@ -10,6 +10,8 @@ const endpointsForComponent = Object.entries(apiDefinition.paths).map(([e, x]) =
 
 export async function generateEndpointPages(app: App) {
 	for (const locale of Object.keys(app.options.locales)) {
+		const defLocale = JSON5.parse(fs.readFileSync(__dirname + `/api.locale.${app.options.locales[locale].lang}.json5`, 'utf8'));
+
 		const endpointsDir = locale + 'docs/api/endpoints/';
 
 		let indexContent = '# エンドポイント一覧\n';
