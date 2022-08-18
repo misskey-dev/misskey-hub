@@ -58,6 +58,13 @@ none
 none
 `;
 			}
+
+			content += `
+## OpenAPI definition
+\`\`\` js
+${JSON5.stringify(def, null, '\t')}
+\`\`\`
+`;
 	
 			const page = await createPage(app, {
 				path: endpointsDir + name + '.html',

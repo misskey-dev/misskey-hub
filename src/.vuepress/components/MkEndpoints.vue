@@ -77,6 +77,10 @@ watch(activeTags, () => {
 	> .endpoints {
 		> .endpoint {
 			display: block;
+			padding: 10px 16px;
+			margin: 12px 0;
+			border: solid 1px var(--c-border);
+			border-radius: 8px;
 		}
 	}
 }
