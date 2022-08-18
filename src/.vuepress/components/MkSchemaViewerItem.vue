@@ -1,8 +1,9 @@
 <template>
 <div class="mk-schema-viewer-item">
 	<div v-if="schema.$ref">
-		<button @click="expandRef = !expandRef">{{ refName }}</button>
-		<RouterLink v-if="schema.$ref.startsWith('#/components/schemas/')" :to="refPath">{{ refName }}</RouterLink><span v-if="schema.nullable" class="nullable">(nullable)</span>
+		<button @click="expandRef = !expandRef">{{ expandRef ? '-' : '+' }} [{{ refName }}]</button>
+		<!--<RouterLink v-if="schema.$ref.startsWith('#/components/schemas/')" :to="refPath">{{ refName }}</RouterLink>-->
+		<span v-if="schema.nullable" class="nullable">(nullable)</span>
 		<div v-if="schema.description" class="description">{{ schema.description }}</div>
 		<MkSchemaViewerItem v-if="schemas && expandRef" :schema="schemas[refName]"/>
 	</div>
