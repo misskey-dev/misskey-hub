@@ -1,5 +1,5 @@
 {
-	description: "インスタンスの情報を取得します。",
+	description: 'インスタンスの情報を取得します。',
 	requireCredential: false,
 	req: {},
 	res: {
@@ -9,37 +9,37 @@
 			notesCount: {
 				type: 'number',
 				optional: false, nullable: false,
-				description: "総ノート数です。",
+				description: '総ノート数です。',
 			},
 			originalNotesCount: {
 				type: 'number',
 				optional: false, nullable: false,
-				description: "インスタンス内（ローカル）で作成された総ノート数です。",
+				description: 'インスタンス内（ローカル）で作成された総ノート数です。',
 			},
 			usersCount: {
 				type: 'number',
 				optional: false, nullable: false,
-				description: "総ユーザ数です。",
+				description: '総ユーザ数です。',
 			},
 			originalUsersCount: {
 				type: 'number',
 				optional: false, nullable: false,
-				description: "インスタンス内（ローカル）で作成された総ユーザ数です。",
+				description: 'インスタンス内（ローカル）で作成された総ユーザ数です。',
 			},
 			instances: {
 				type: 'number',
 				optional: false, nullable: false,
-				description: "",
+				description: '',
 			},
 			driveUsageLocal: {
 				type: 'number',
 				optional: false, nullable: false,
-				description: "",
+				description: '',
 			},
 			driveUsageRemote: {
 				type: 'number',
 				optional: false, nullable: false,
-				description: "",
+				description: '',
 			},
 		},
 	},

@@ -1,5 +1,5 @@
 {
-	description: "オンラインになっているユーザ数を取得します。",
+	description: 'オンラインになっているユーザ数を取得します。',
 	requireCredential: false,
 	req: {},
 	res: {
@@ -9,7 +9,7 @@
 			count: {
 				type: 'number',
 				optional: false, nullable: false,
-				description: "現在オンライン（10分以内に何らかのアクションをとった）であるユーザ数です。",
+				description: '現在オンライン（10分以内に何らかのアクションをとった）であるユーザ数です。',
 			},
 		},
 	},

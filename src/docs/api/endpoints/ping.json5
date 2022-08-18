@@ -1,15 +1,15 @@
 {
-	description: "接続確認を行います。",
+	description: '接続確認を行います。',
 	requireCredential: false,
 	req: {},
 	res: {
-		type: "object",
+		type: 'object',
 		optional: false, nullable: false,
 		properties: {
 			pong: {
-				type: "number",
+				type: 'number',
 				optional: false, nullable: false,
-				description: "レスポンス時の時刻です。",
+				description: 'レスポンス時の時刻です。',
 			},
 		},
 	},
