@@ -1,0 +1,72 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'pages',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {
+			pageId: {
+				type: 'string',
+				format: 'misskey:id',
+			},
+			title: {
+				type: 'string',
+			},
+			name: {
+				type: 'string',
+				minLength: 1,
+			},
+			summary: {
+				type: 'string',
+				nullable: true,
+			},
+			content: {
+				type: 'array',
+				items: {
+					type: 'object',
+					additionalProperties: true,
+				},
+			},
+			variables: {
+				type: 'array',
+				items: {
+					type: 'object',
+					additionalProperties: true,
+				},
+			},
+			script: {
+				type: 'string',
+			},
+			eyeCatchingImageId: {
+				type: 'string',
+				format: 'misskey:id',
+				nullable: true,
+			},
+			font: {
+				type: 'string',
+				enum: [
+					'serif',
+					'sans-serif',
+				],
+			},
+			alignCenter: {
+				type: 'boolean',
+			},
+			hideTitleWhenPinned: {
+				type: 'boolean',
+			},
+		},
+		required: [
+			'pageId',
+			'title',
+			'name',
+			'content',
+			'variables',
+			'script',
+		],
+	},
+	res: {},
+}

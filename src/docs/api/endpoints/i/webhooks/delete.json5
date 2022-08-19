@@ -1,0 +1,21 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'webhooks',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {
+			webhookId: {
+				type: 'string',
+				format: 'misskey:id',
+			},
+		},
+		required: [
+			'webhookId',
+		],
+	},
+	res: {},
+}

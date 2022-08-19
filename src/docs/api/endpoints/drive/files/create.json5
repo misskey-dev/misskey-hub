@@ -1,0 +1,16 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'drive',
+	],
+	requireCredential: true,
+	req: {},
+	res: {
+		type: 'object',
+		optional: false,
+		nullable: false,
+		ref: 'DriveFile',
+		$ref: '#/components/schemas/DriveFile',
+	},
+}

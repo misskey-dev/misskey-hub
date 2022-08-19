@@ -1,0 +1,60 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'webhooks',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {
+			webhookId: {
+				type: 'string',
+				format: 'misskey:id',
+			},
+			name: {
+				type: 'string',
+				minLength: 1,
+				maxLength: 100,
+			},
+			url: {
+				type: 'string',
+				minLength: 1,
+				maxLength: 1024,
+			},
+			secret: {
+				type: 'string',
+				minLength: 1,
+				maxLength: 1024,
+			},
+			on: {
+				type: 'array',
+				items: {
+					type: 'string',
+					enum: [
+						'mention',
+						'unfollow',
+						'follow',
+						'followed',
+						'note',
+						'reply',
+						'renote',
+						'reaction',
+					],
+				},
+			},
+			active: {
+				type: 'boolean',
+			},
+		},
+		required: [
+			'webhookId',
+			'name',
+			'url',
+			'secret',
+			'on',
+			'active',
+		],
+	},
+	res: {},
+}

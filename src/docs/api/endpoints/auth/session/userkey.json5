@@ -1,0 +1,46 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'auth',
+	],
+	requireCredential: false,
+	req: {
+		type: 'object',
+		properties: {
+			appSecret: {
+				type: 'string',
+			},
+			token: {
+				type: 'string',
+			},
+		},
+		required: [
+			'appSecret',
+			'token',
+		],
+	},
+	res: {
+		type: 'object',
+		optional: false,
+		nullable: false,
+		properties: {
+			accessToken: {
+				type: 'string',
+				optional: false,
+				nullable: false,
+			},
+			user: {
+				type: 'object',
+				optional: false,
+				nullable: false,
+				ref: 'UserDetailedNotMe',
+				$ref: '#/components/schemas/UserDetailedNotMe',
+			},
+		},
+		required: [
+			'accessToken',
+			'user',
+		],
+	},
+}

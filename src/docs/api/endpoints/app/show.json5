@@ -1,0 +1,27 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'app',
+	],
+	requireCredential: false,
+	req: {
+		type: 'object',
+		properties: {
+			appId: {
+				type: 'string',
+				format: 'misskey:id',
+			},
+		},
+		required: [
+			'appId',
+		],
+	},
+	res: {
+		type: 'object',
+		optional: false,
+		nullable: false,
+		ref: 'App',
+		$ref: '#/components/schemas/App',
+	},
+}

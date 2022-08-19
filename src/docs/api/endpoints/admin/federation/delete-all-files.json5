@@ -1,0 +1,20 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'admin',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {
+			host: {
+				type: 'string',
+			},
+		},
+		required: [
+			'host',
+		],
+	},
+	res: {},
+}

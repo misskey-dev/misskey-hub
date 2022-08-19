@@ -1,0 +1,32 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'drive',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {
+			fileId: {
+				type: 'string',
+				format: 'misskey:id',
+			},
+		},
+		required: [
+			'fileId',
+		],
+	},
+	res: {
+		type: 'array',
+		optional: false,
+		nullable: false,
+		items: {
+			type: 'object',
+			optional: false,
+			nullable: false,
+			ref: 'Note',
+			$ref: '#/components/schemas/Note',
+		},
+	},
+}

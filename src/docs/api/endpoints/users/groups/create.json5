@@ -1,0 +1,28 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'groups',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {
+			name: {
+				type: 'string',
+				minLength: 1,
+				maxLength: 100,
+			},
+		},
+		required: [
+			'name',
+		],
+	},
+	res: {
+		type: 'object',
+		optional: false,
+		nullable: false,
+		ref: 'UserGroup',
+		$ref: '#/components/schemas/UserGroup',
+	},
+}

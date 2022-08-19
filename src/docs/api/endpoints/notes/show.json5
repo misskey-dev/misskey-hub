@@ -1,0 +1,27 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'notes',
+	],
+	requireCredential: false,
+	req: {
+		type: 'object',
+		properties: {
+			noteId: {
+				type: 'string',
+				format: 'misskey:id',
+			},
+		},
+		required: [
+			'noteId',
+		],
+	},
+	res: {
+		type: 'object',
+		optional: false,
+		nullable: false,
+		ref: 'Note',
+		$ref: '#/components/schemas/Note',
+	},
+}

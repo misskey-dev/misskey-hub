@@ -1,0 +1,185 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'notes',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {
+			visibility: {
+				type: 'string',
+				enum: [
+					'public',
+					'home',
+					'followers',
+					'specified',
+				],
+				default: 'public',
+			},
+			visibleUserIds: {
+				type: 'array',
+				uniqueItems: true,
+				items: {
+					type: 'string',
+					format: 'misskey:id',
+				},
+			},
+			text: {
+				type: 'string',
+				maxLength: 3000,
+				nullable: true,
+			},
+			cw: {
+				type: 'string',
+				nullable: true,
+				maxLength: 100,
+			},
+			localOnly: {
+				type: 'boolean',
+				default: false,
+			},
+			noExtractMentions: {
+				type: 'boolean',
+				default: false,
+			},
+			noExtractHashtags: {
+				type: 'boolean',
+				default: false,
+			},
+			noExtractEmojis: {
+				type: 'boolean',
+				default: false,
+			},
+			fileIds: {
+				type: 'array',
+				uniqueItems: true,
+				minItems: 1,
+				maxItems: 16,
+				items: {
+					type: 'string',
+					format: 'misskey:id',
+				},
+			},
+			mediaIds: {
+				deprecated: true,
+				description: 'Use `fileIds` instead. If both are specified, this property is discarded.',
+				type: 'array',
+				uniqueItems: true,
+				minItems: 1,
+				maxItems: 16,
+				items: {
+					type: 'string',
+					format: 'misskey:id',
+				},
+			},
+			replyId: {
+				type: 'string',
+				format: 'misskey:id',
+				nullable: true,
+			},
+			renoteId: {
+				type: 'string',
+				format: 'misskey:id',
+				nullable: true,
+			},
+			channelId: {
+				type: 'string',
+				format: 'misskey:id',
+				nullable: true,
+			},
+			poll: {
+				type: 'object',
+				nullable: true,
+				properties: {
+					choices: {
+						type: 'array',
+						uniqueItems: true,
+						minItems: 2,
+						maxItems: 10,
+						items: {
+							type: 'string',
+							minLength: 1,
+							maxLength: 50,
+						},
+					},
+					multiple: {
+						type: 'boolean',
+						default: false,
+					},
+					expiresAt: {
+						type: 'integer',
+						nullable: true,
+					},
+					expiredAfter: {
+						type: 'integer',
+						nullable: true,
+						minimum: 1,
+					},
+				},
+				required: [
+					'choices',
+				],
+			},
+		},
+		anyOf: [
+			{
+				properties: {
+					text: {
+						type: 'string',
+						minLength: 1,
+						maxLength: 3000,
+						nullable: false,
+					},
+				},
+				required: [
+					'text',
+				],
+			},
+			{
+				required: [
+					'fileIds',
+				],
+			},
+			{
+				required: [
+					'mediaIds',
+				],
+			},
+			{
+				properties: {
+					poll: {
+						type: 'object',
+						nullable: false,
+					},
+				},
+				required: [
+					'poll',
+				],
+			},
+			{
+				required: [
+					'renoteId',
+				],
+			},
+		],
+	},
+	res: {
+		type: 'object',
+		optional: false,
+		nullable: false,
+		properties: {
+			createdNote: {
+				type: 'object',
+				optional: false,
+				nullable: false,
+				ref: 'Note',
+				$ref: '#/components/schemas/Note',
+			},
+		},
+		required: [
+			'createdNote',
+		],
+	},
+}

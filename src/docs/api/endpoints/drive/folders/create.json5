@@ -1,0 +1,31 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'drive',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {
+			name: {
+				type: 'string',
+				default: 'Untitled',
+				maxLength: 200,
+			},
+			parentId: {
+				type: 'string',
+				format: 'misskey:id',
+				nullable: true,
+			},
+		},
+		required: [],
+	},
+	res: {
+		type: 'object',
+		optional: false,
+		nullable: false,
+		ref: 'DriveFolder',
+		$ref: '#/components/schemas/DriveFolder',
+	},
+}

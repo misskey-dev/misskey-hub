@@ -1,0 +1,41 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'drive',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		anyOf: [
+			{
+				properties: {
+					fileId: {
+						type: 'string',
+						format: 'misskey:id',
+					},
+				},
+				required: [
+					'fileId',
+				],
+			},
+			{
+				properties: {
+					url: {
+						type: 'string',
+					},
+				},
+				required: [
+					'url',
+				],
+			},
+		],
+	},
+	res: {
+		type: 'object',
+		optional: false,
+		nullable: false,
+		ref: 'DriveFile',
+		$ref: '#/components/schemas/DriveFile',
+	},
+}

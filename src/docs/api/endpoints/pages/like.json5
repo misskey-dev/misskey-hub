@@ -1,0 +1,21 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'pages',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {
+			pageId: {
+				type: 'string',
+				format: 'misskey:id',
+			},
+		},
+		required: [
+			'pageId',
+		],
+	},
+	res: {},
+}

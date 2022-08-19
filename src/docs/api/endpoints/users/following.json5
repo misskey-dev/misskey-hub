@@ -1,0 +1,68 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'users',
+	],
+	requireCredential: false,
+	req: {
+		type: 'object',
+		properties: {
+			sinceId: {
+				type: 'string',
+				format: 'misskey:id',
+			},
+			untilId: {
+				type: 'string',
+				format: 'misskey:id',
+			},
+			limit: {
+				type: 'integer',
+				minimum: 1,
+				maximum: 100,
+				default: 10,
+			},
+		},
+		anyOf: [
+			{
+				properties: {
+					userId: {
+						type: 'string',
+						format: 'misskey:id',
+					},
+				},
+				required: [
+					'userId',
+				],
+			},
+			{
+				properties: {
+					username: {
+						type: 'string',
+					},
+					host: {
+						type: 'string',
+						nullable: true,
+						description: 'The local host is represented with `null`.',
+					},
+				},
+				required: [
+					'username',
+					'host',
+				],
+			},
+		],
+	},
+	res: {
+		type: 'array',
+		optional: false,
+		nullable: false,
+		items: {
+			type: 'object',
+			optional: false,
+			nullable: false,
+			ref: 'Following',
+			$ref: '#/components/schemas/Following',
+		},
+	},
+}

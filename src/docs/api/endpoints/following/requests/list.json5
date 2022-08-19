@@ -1,0 +1,50 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'following',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {},
+		required: [],
+	},
+	res: {
+		type: 'array',
+		optional: false,
+		nullable: false,
+		items: {
+			type: 'object',
+			optional: false,
+			nullable: false,
+			properties: {
+				id: {
+					type: 'string',
+					optional: false,
+					nullable: false,
+					format: 'id',
+				},
+				follower: {
+					type: 'object',
+					optional: false,
+					nullable: false,
+					ref: 'UserLite',
+					$ref: '#/components/schemas/UserLite',
+				},
+				followee: {
+					type: 'object',
+					optional: false,
+					nullable: false,
+					ref: 'UserLite',
+					$ref: '#/components/schemas/UserLite',
+				},
+			},
+			required: [
+				'id',
+				'follower',
+				'followee',
+			],
+		},
+	},
+}

@@ -1,0 +1,53 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'messaging',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {
+			text: {
+				type: 'string',
+				nullable: true,
+				maxLength: 3000,
+			},
+			fileId: {
+				type: 'string',
+				format: 'misskey:id',
+			},
+		},
+		anyOf: [
+			{
+				properties: {
+					userId: {
+						type: 'string',
+						format: 'misskey:id',
+					},
+				},
+				required: [
+					'userId',
+				],
+			},
+			{
+				properties: {
+					groupId: {
+						type: 'string',
+						format: 'misskey:id',
+					},
+				},
+				required: [
+					'groupId',
+				],
+			},
+		],
+	},
+	res: {
+		type: 'object',
+		optional: false,
+		nullable: false,
+		ref: 'MessagingMessage',
+		$ref: '#/components/schemas/MessagingMessage',
+	},
+}

@@ -1,0 +1,29 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'notes',
+	],
+	requireCredential: false,
+	req: {
+		type: 'object',
+		properties: {
+			noteId: {
+				type: 'string',
+				format: 'misskey:id',
+			},
+			targetLang: {
+				type: 'string',
+			},
+		},
+		required: [
+			'noteId',
+			'targetLang',
+		],
+	},
+	res: {
+		type: 'object',
+		optional: false,
+		nullable: false,
+	},
+}

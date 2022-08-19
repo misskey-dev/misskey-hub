@@ -1,0 +1,32 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'clips',
+	],
+	requireCredential: false,
+	req: {
+		type: 'object',
+		properties: {
+			noteId: {
+				type: 'string',
+				format: 'misskey:id',
+			},
+		},
+		required: [
+			'noteId',
+		],
+	},
+	res: {
+		type: 'array',
+		optional: false,
+		nullable: false,
+		items: {
+			type: 'object',
+			optional: false,
+			nullable: false,
+			ref: 'Clip',
+			$ref: '#/components/schemas/Clip',
+		},
+	},
+}

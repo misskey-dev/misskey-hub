@@ -1,0 +1,21 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'account',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {
+			announcementId: {
+				type: 'string',
+				format: 'misskey:id',
+			},
+		},
+		required: [
+			'announcementId',
+		],
+	},
+	res: {},
+}

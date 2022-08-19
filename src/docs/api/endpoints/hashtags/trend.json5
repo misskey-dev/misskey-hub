@@ -1,0 +1,50 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'hashtags',
+	],
+	requireCredential: false,
+	req: {
+		type: 'object',
+		properties: {},
+		required: [],
+	},
+	res: {
+		type: 'array',
+		optional: false,
+		nullable: false,
+		items: {
+			type: 'object',
+			optional: false,
+			nullable: false,
+			properties: {
+				tag: {
+					type: 'string',
+					optional: false,
+					nullable: false,
+				},
+				chart: {
+					type: 'array',
+					optional: false,
+					nullable: false,
+					items: {
+						type: 'number',
+						optional: false,
+						nullable: false,
+					},
+				},
+				usersCount: {
+					type: 'number',
+					optional: false,
+					nullable: false,
+				},
+			},
+			required: [
+				'tag',
+				'chart',
+				'usersCount',
+			],
+		},
+	},
+}

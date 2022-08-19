@@ -1,0 +1,27 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'following',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {
+			userId: {
+				type: 'string',
+				format: 'misskey:id',
+			},
+		},
+		required: [
+			'userId',
+		],
+	},
+	res: {
+		type: 'object',
+		optional: false,
+		nullable: false,
+		ref: 'UserLite',
+		$ref: '#/components/schemas/UserLite',
+	},
+}

@@ -1,0 +1,21 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'drive',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {
+			fileId: {
+				type: 'string',
+				format: 'misskey:id',
+			},
+		},
+		required: [
+			'fileId',
+		],
+	},
+	res: {},
+}

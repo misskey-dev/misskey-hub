@@ -1,0 +1,21 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'groups',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {
+			invitationId: {
+				type: 'string',
+				format: 'misskey:id',
+			},
+		},
+		required: [
+			'invitationId',
+		],
+	},
+	res: {},
+}

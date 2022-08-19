@@ -1,0 +1,27 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'account',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {
+			noteId: {
+				type: 'string',
+				format: 'misskey:id',
+			},
+		},
+		required: [
+			'noteId',
+		],
+	},
+	res: {
+		type: 'object',
+		optional: false,
+		nullable: false,
+		ref: 'MeDetailed',
+		$ref: '#/components/schemas/MeDetailed',
+	},
+}

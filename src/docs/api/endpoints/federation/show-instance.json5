@@ -1,0 +1,31 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'federation',
+	],
+	requireCredential: false,
+	req: {
+		type: 'object',
+		properties: {
+			host: {
+				type: 'string',
+			},
+		},
+		required: [
+			'host',
+		],
+	},
+	res: {
+		oneOf: [
+			{
+				type: 'object',
+				ref: 'FederationInstance',
+				$ref: '#/components/schemas/FederationInstance',
+			},
+			{
+				type: 'null',
+			},
+		],
+	},
+}

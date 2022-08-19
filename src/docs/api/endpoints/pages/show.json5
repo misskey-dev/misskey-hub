@@ -1,0 +1,45 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'pages',
+	],
+	requireCredential: false,
+	req: {
+		type: 'object',
+		anyOf: [
+			{
+				properties: {
+					pageId: {
+						type: 'string',
+						format: 'misskey:id',
+					},
+				},
+				required: [
+					'pageId',
+				],
+			},
+			{
+				properties: {
+					name: {
+						type: 'string',
+					},
+					username: {
+						type: 'string',
+					},
+				},
+				required: [
+					'name',
+					'username',
+				],
+			},
+		],
+	},
+	res: {
+		type: 'object',
+		optional: false,
+		nullable: false,
+		ref: 'Page',
+		$ref: '#/components/schemas/Page',
+	},
+}

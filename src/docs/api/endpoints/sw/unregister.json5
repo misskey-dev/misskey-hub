@@ -1,0 +1,20 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'account',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {
+			endpoint: {
+				type: 'string',
+			},
+		},
+		required: [
+			'endpoint',
+		],
+	},
+	res: {},
+}

@@ -1,0 +1,25 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'users',
+	],
+	requireCredential: false,
+	req: {
+		type: 'object',
+		properties: {},
+		required: [],
+	},
+	res: {
+		type: 'array',
+		optional: false,
+		nullable: false,
+		items: {
+			type: 'object',
+			optional: false,
+			nullable: false,
+			ref: 'UserDetailed',
+			$ref: '#/components/schemas/UserDetailed',
+		},
+	},
+}

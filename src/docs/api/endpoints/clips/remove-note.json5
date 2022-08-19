@@ -1,0 +1,26 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'account',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {
+			clipId: {
+				type: 'string',
+				format: 'misskey:id',
+			},
+			noteId: {
+				type: 'string',
+				format: 'misskey:id',
+			},
+		},
+		required: [
+			'clipId',
+			'noteId',
+		],
+	},
+	res: {},
+}

@@ -1,0 +1,69 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'notes',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {
+			listId: {
+				type: 'string',
+				format: 'misskey:id',
+			},
+			limit: {
+				type: 'integer',
+				minimum: 1,
+				maximum: 100,
+				default: 10,
+			},
+			sinceId: {
+				type: 'string',
+				format: 'misskey:id',
+			},
+			untilId: {
+				type: 'string',
+				format: 'misskey:id',
+			},
+			sinceDate: {
+				type: 'integer',
+			},
+			untilDate: {
+				type: 'integer',
+			},
+			includeMyRenotes: {
+				type: 'boolean',
+				default: true,
+			},
+			includeRenotedMyNotes: {
+				type: 'boolean',
+				default: true,
+			},
+			includeLocalRenotes: {
+				type: 'boolean',
+				default: true,
+			},
+			withFiles: {
+				type: 'boolean',
+				default: false,
+				description: 'Only show notes that have attached files.',
+			},
+		},
+		required: [
+			'listId',
+		],
+	},
+	res: {
+		type: 'array',
+		optional: false,
+		nullable: false,
+		items: {
+			type: 'object',
+			optional: false,
+			nullable: false,
+			ref: 'Note',
+			$ref: '#/components/schemas/Note',
+		},
+	},
+}

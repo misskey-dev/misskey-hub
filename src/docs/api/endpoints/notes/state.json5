@@ -1,0 +1,47 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'notes',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {
+			noteId: {
+				type: 'string',
+				format: 'misskey:id',
+			},
+		},
+		required: [
+			'noteId',
+		],
+	},
+	res: {
+		type: 'object',
+		optional: false,
+		nullable: false,
+		properties: {
+			isFavorited: {
+				type: 'boolean',
+				optional: false,
+				nullable: false,
+			},
+			isWatching: {
+				type: 'boolean',
+				optional: false,
+				nullable: false,
+			},
+			isMutedThread: {
+				type: 'boolean',
+				optional: false,
+				nullable: false,
+			},
+		},
+		required: [
+			'isFavorited',
+			'isWatching',
+			'isMutedThread',
+		],
+	},
+}

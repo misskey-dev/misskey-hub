@@ -1,0 +1,26 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'hashtags',
+	],
+	requireCredential: false,
+	req: {
+		type: 'object',
+		properties: {
+			tag: {
+				type: 'string',
+			},
+		},
+		required: [
+			'tag',
+		],
+	},
+	res: {
+		type: 'object',
+		optional: false,
+		nullable: false,
+		ref: 'Hashtag',
+		$ref: '#/components/schemas/Hashtag',
+	},
+}

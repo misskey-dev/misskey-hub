@@ -1,0 +1,27 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'drive',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {
+			folderId: {
+				type: 'string',
+				format: 'misskey:id',
+			},
+		},
+		required: [
+			'folderId',
+		],
+	},
+	res: {
+		type: 'object',
+		optional: false,
+		nullable: false,
+		ref: 'DriveFolder',
+		$ref: '#/components/schemas/DriveFolder',
+	},
+}

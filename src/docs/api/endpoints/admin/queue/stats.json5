@@ -1,0 +1,50 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'admin',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {},
+		required: [],
+	},
+	res: {
+		type: 'object',
+		optional: false,
+		nullable: false,
+		properties: {
+			deliver: {
+				optional: false,
+				nullable: false,
+				ref: 'QueueCount',
+				$ref: '#/components/schemas/QueueCount',
+			},
+			inbox: {
+				optional: false,
+				nullable: false,
+				ref: 'QueueCount',
+				$ref: '#/components/schemas/QueueCount',
+			},
+			db: {
+				optional: false,
+				nullable: false,
+				ref: 'QueueCount',
+				$ref: '#/components/schemas/QueueCount',
+			},
+			objectStorage: {
+				optional: false,
+				nullable: false,
+				ref: 'QueueCount',
+				$ref: '#/components/schemas/QueueCount',
+			},
+		},
+		required: [
+			'deliver',
+			'inbox',
+			'db',
+			'objectStorage',
+		],
+	},
+}

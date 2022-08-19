@@ -1,0 +1,26 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'lists',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {
+			listId: {
+				type: 'string',
+				format: 'misskey:id',
+			},
+			userId: {
+				type: 'string',
+				format: 'misskey:id',
+			},
+		},
+		required: [
+			'listId',
+			'userId',
+		],
+	},
+	res: {},
+}

@@ -1,0 +1,21 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'admin',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {
+			id: {
+				type: 'string',
+				format: 'misskey:id',
+			},
+		},
+		required: [
+			'id',
+		],
+	},
+	res: {},
+}

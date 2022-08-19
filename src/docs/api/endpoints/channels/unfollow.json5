@@ -1,0 +1,21 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'channels',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {
+			channelId: {
+				type: 'string',
+				format: 'misskey:id',
+			},
+		},
+		required: [
+			'channelId',
+		],
+	},
+	res: {},
+}

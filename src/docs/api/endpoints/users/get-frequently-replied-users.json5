@@ -1,0 +1,54 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'users',
+	],
+	requireCredential: false,
+	req: {
+		type: 'object',
+		properties: {
+			userId: {
+				type: 'string',
+				format: 'misskey:id',
+			},
+			limit: {
+				type: 'integer',
+				minimum: 1,
+				maximum: 100,
+				default: 10,
+			},
+		},
+		required: [
+			'userId',
+		],
+	},
+	res: {
+		type: 'array',
+		optional: false,
+		nullable: false,
+		items: {
+			type: 'object',
+			optional: false,
+			nullable: false,
+			properties: {
+				user: {
+					type: 'object',
+					optional: false,
+					nullable: false,
+					ref: 'UserDetailed',
+					$ref: '#/components/schemas/UserDetailed',
+				},
+				weight: {
+					type: 'number',
+					optional: false,
+					nullable: false,
+				},
+			},
+			required: [
+				'user',
+				'weight',
+			],
+		},
+	},
+}

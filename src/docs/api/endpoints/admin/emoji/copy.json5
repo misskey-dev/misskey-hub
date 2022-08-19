@@ -1,0 +1,36 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'admin',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {
+			emojiId: {
+				type: 'string',
+				format: 'misskey:id',
+			},
+		},
+		required: [
+			'emojiId',
+		],
+	},
+	res: {
+		type: 'object',
+		optional: false,
+		nullable: false,
+		properties: {
+			id: {
+				type: 'string',
+				optional: false,
+				nullable: false,
+				format: 'id',
+			},
+		},
+		required: [
+			'id',
+		],
+	},
+}

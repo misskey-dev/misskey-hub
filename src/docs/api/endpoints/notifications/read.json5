@@ -1,0 +1,41 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'notifications',
+	],
+	requireCredential: true,
+	req: {
+		oneOf: [
+			{
+				type: 'object',
+				properties: {
+					notificationId: {
+						type: 'string',
+						format: 'misskey:id',
+					},
+				},
+				required: [
+					'notificationId',
+				],
+			},
+			{
+				type: 'object',
+				properties: {
+					notificationIds: {
+						type: 'array',
+						items: {
+							type: 'string',
+							format: 'misskey:id',
+						},
+						maxItems: 100,
+					},
+				},
+				required: [
+					'notificationIds',
+				],
+			},
+		],
+	},
+	res: {},
+}

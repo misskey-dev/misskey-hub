@@ -1,0 +1,73 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'users',
+	],
+	requireCredential: false,
+	req: {
+		type: 'object',
+		anyOf: [
+			{
+				properties: {
+					userId: {
+						type: 'string',
+						format: 'misskey:id',
+					},
+				},
+				required: [
+					'userId',
+				],
+			},
+			{
+				properties: {
+					userIds: {
+						type: 'array',
+						uniqueItems: true,
+						items: {
+							type: 'string',
+							format: 'misskey:id',
+						},
+					},
+				},
+				required: [
+					'userIds',
+				],
+			},
+			{
+				properties: {
+					username: {
+						type: 'string',
+					},
+					host: {
+						type: 'string',
+						nullable: true,
+						description: 'The local host is represented with `null`.',
+					},
+				},
+				required: [
+					'username',
+				],
+			},
+		],
+	},
+	res: {
+		optional: false,
+		nullable: false,
+		oneOf: [
+			{
+				type: 'object',
+				ref: 'UserDetailed',
+				$ref: '#/components/schemas/UserDetailed',
+			},
+			{
+				type: 'array',
+				items: {
+					type: 'object',
+					ref: 'UserDetailed',
+					$ref: '#/components/schemas/UserDetailed',
+				},
+			},
+		],
+	},
+}
