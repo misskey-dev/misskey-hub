@@ -1,6 +1,6 @@
 {
-	summary: '',
-	description: '',
+	summary: 'トレンドにあるハッシュタグを取得します。',
+	description: 'トレンドにあるハッシュタグを取得します。',
 	tags: [
 		'hashtags',
 	],
@@ -23,11 +23,13 @@
 					type: 'string',
 					optional: false,
 					nullable: false,
+					description: 'トレンドにあるハッシュタグ。1分ごとに更新されます。',
 				},
 				chart: {
 					type: 'array',
 					optional: false,
 					nullable: false,
+					description: '最近の投稿でハッシュタグを使用したユーザー数。10分単位で集計され、新しい順に並べられます。つまり、先頭の要素は、レスポンス時から過去10分間でのユーザー数になります。1分ごとに更新されます。',
 					items: {
 						type: 'number',
 						optional: false,
@@ -38,6 +40,7 @@
 					type: 'number',
 					optional: false,
 					nullable: false,
+					description: 'ハッシュタグを過去1時間に使用したユーザー数。1時間ごとに更新されます。',
 				},
 			},
 			required: [

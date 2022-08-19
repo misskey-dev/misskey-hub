@@ -16,6 +16,7 @@
 				minimum: 1,
 				maximum: 100,
 				default: 10,
+				description: '取得するユーザーの最大数。'
 			},
 			sort: {
 				type: 'string',
@@ -27,6 +28,7 @@
 					'+updatedAt',
 					'-updatedAt',
 				],
+				description: 'ソート順。+は降順を、-は昇順を示します。followerはユーザーのフォロワー数です。createdAt, updatedAtはそれぞれユーザーが登録した時刻、最後にアクティブだった時刻です。',
 			},
 			state: {
 				type: 'string',
@@ -35,6 +37,7 @@
 					'alive',
 				],
 				default: 'all',
+				description: 'aliveにすると、5日間以内にアクティブであったユーザーのみを取得します。',
 			},
 			origin: {
 				type: 'string',
@@ -44,6 +47,7 @@
 					'remote',
 				],
 				default: 'local',
+				description: 'ユーザーの所属インスタンスの区分。local（デフォルト）, remoteにすると、それぞれローカル・リモートユーザーのみを取得します。combinedにすると、すべてのユーザーを対象にします。',
 			},
 		},
 		required: [
