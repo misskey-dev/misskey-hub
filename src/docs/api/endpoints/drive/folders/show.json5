@@ -1,6 +1,6 @@
 {
-	summary: '',
-	description: '',
+	summary: 'フォルダーを取得します。',
+	description: 'フォルダーを取得します。',
 	tags: [
 		'drive',
 	],

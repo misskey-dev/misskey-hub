@@ -1,6 +1,6 @@
 {
-	summary: '',
-	description: '',
+	summary: 'フォルダーを削除します。',
+	description: 'フォルダーを削除します。',
 	tags: [
 		'drive',
 	],
@@ -11,6 +11,7 @@
 			folderId: {
 				type: 'string',
 				format: 'misskey:id',
+				description: 'フォルダーのid。',
 			},
 		},
 		required: [
