@@ -8,7 +8,8 @@
 	</div>
 	<div class="endpoints">
 		<RouterLink v-for="endpoint in endpoints" :key="endpoint.name" class="endpoint" :to="`./endpoints/${endpoint.name}.html`">
-			{{ endpoint.name }}
+			<div class="name">{{ endpoint.name }}</div>
+			<div class="summary">{{ endpoint.summary }}</div>
 		</RouterLink>
 	</div>
 </div>

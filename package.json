@@ -21,6 +21,7 @@
     "vuepress": "^2.0.0-beta.49"
   },
   "dependencies": {
+    "deepmerge": "^4.2.2",
     "glob": "^7.2.0",
     "json5": "^2.2.1"
   }

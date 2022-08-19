@@ -1,8 +1,11 @@
 <template>
 <div class="mk-schema-viewer-item">
-	<div v-if="schema.$ref">
+	<div v-if="schema.$ref && schema.$ref.startsWith('misskey://')">
+		<RouterLink :to="refPath">{{ refName }}</RouterLink><span v-if="schema.nullable" class="nullable">(nullable)</span>
+		<div v-if="schema.description" class="description">{{ schema.description }}</div>
+	</div>
+	<div v-else-if="schema.$ref">
 		<button @click="expandRef = !expandRef">{{ expandRef ? '-' : '+' }} [{{ refName }}]</button>
-		<!--<RouterLink v-if="schema.$ref.startsWith('#/components/schemas/')" :to="refPath">{{ refName }}</RouterLink>-->
 		<span v-if="schema.nullable" class="nullable">(nullable)</span>
 		<div v-if="schema.description" class="description">{{ schema.description }}</div>
 		<MkSchemaViewerItem v-if="schemas && expandRef" :schema="schemas[refName]"/>
@@ -71,7 +74,7 @@ export default {
 
   setup(props) {
 		const locale = useRouteLocale();
-		const refName = props.schema.$ref ? props.schema.$ref.replace('#/components/schemas/', '') : null;
+		const refName = props.schema.$ref ? props.schema.$ref.replace('#/components/schemas/', '').replace('misskey://', '') : null;
 		const expandRef = ref(false);
 		const schemas = inject('schemas');
 

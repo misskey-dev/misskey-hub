@@ -3,39 +3,32 @@ import { App, createPage, Page } from '@vuepress/core';
 import glob from 'glob';
 import JSON5 from 'json5';
 
-const apiDefinition = JSON.parse(fs.readFileSync(__dirname + '/api.json', 'utf8'));
-const endpointPaths = Object.keys(apiDefinition.paths);
-const endpointTags = Array.from(new Set(Object.values(apiDefinition.paths).flatMap(x => x.post.tags ?? [])));
-const endpointsForComponent = Object.entries(apiDefinition.paths).map(([e, x]) => ({ name: e.substring(1), tags: x.post.tags ?? [] }));
-
 export async function generateEndpointPages(app: App) {
 	for (const locale of Object.keys(app.options.locales)) {
-		const defLocale = JSON5.parse(fs.readFileSync(__dirname + `/api.locale.${app.options.locales[locale].lang}.json5`, 'utf8'));
-
 		const endpointsDir = locale + 'docs/api/endpoints/';
+		const endpointPaths = glob.sync(__dirname + '/..' + endpointsDir + '**/*.json5');
 
-		let indexContent = '# エンドポイント一覧\n';
-
-		indexContent += `
-<MkEndpoints :endpoints="${JSON.stringify(endpointsForComponent).replace(/"/g, '\'')}" :tags="${JSON.stringify(endpointTags).replace(/"/g, '\'')}"/>`;
+		let indexContent = '# エンドポイント\n';
 
 		for (const endpointPath of endpointPaths) {
-			const name = endpointPath.substring(1);
-			const def = apiDefinition.paths[endpointPath]['post'];
-			const requireCredential = def.security?.length > 0;
-	
-			let content = `# \`${name}\``;
+			const name = endpointPath.slice(endpointPath.indexOf(endpointsDir)).replace(endpointsDir, '').replace('.json5', '');
+			const data = fs.readFileSync(endpointPath, 'utf-8');
+			const def = JSON5.parse(data);
 
-			if (requireCredential) {
+			indexContent += `- [${name}](./endpoints/${name}.html)\n`;
+	
+			let content = `# \`${name}\`\n${def.description}`;
+
+			if (def.requireCredential) {
 				content += `\n\nCredential required.\n`;
 			}
 
 			// TODO: permission
 	
-			if (def.requestBody && Object.keys(def.requestBody.content['application/json']?.schema?.properties ?? {}).length > 0) {
+			if (def.req && Object.keys(def.req).length > 0) {
 				content += `
 ## Parameters
-<MkSchemaViewer :schema="${JSON.stringify(def.requestBody.content['application/json']?.schema).replace(/"/g, '\'')}">
+<MkSchemaViewer :schema="${JSON.stringify(def.req).replace(/"/g, '\'')}">
 </MkSchemaViewer>
 `;
 			} else {
@@ -45,13 +38,10 @@ none
 `;
 			}
 	
-			if (def.responses['200']) {
-				const ref = def.responses['200'].content['application/json'].schema.$ref;
-				const schema = ref ? apiDefinition.components.schemas[ref.replace('#/components/schemas/', '')] : def.responses['200'].content['application/json'].schema;
-
+			if (def.res) {
 				content += `
 ## Response
-<MkSchemaViewer :schema="${JSON.stringify(schema).replace(/"/g, '\'')}" :schemas="${JSON.stringify(apiDefinition.components.schemas).replace(/"/g, '\'')}">
+<MkSchemaViewer :schema="${JSON.stringify(def.res).replace(/"/g, '\'')}">
 </MkSchemaViewer>
 `;
 			} else {
@@ -60,16 +50,9 @@ none
 none
 `;
 			}
-
-			content += `
-## OpenAPI definition
-\`\`\` js
-${JSON5.stringify(def, null, '\t')}
-\`\`\`
-`;
 	
 			const page = await createPage(app, {
-				path: endpointsDir + name + '.html',
+				path: endpointPath.slice(endpointPath.indexOf(endpointsDir)).replace('.json5', '.html'),
 				content: content,
 			});
 			app.pages.push(page);

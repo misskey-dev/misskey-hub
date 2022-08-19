@@ -1,10 +1,104 @@
 {
-	'/clips/create': {
-		summary: 'クリップを作成します。',
-		description: 'クリップを作成します。',
-	},
-	'/clips/list': {
-		summary: '自分のクリップの一覧を取得します。',
-		description: '自分のクリップの一覧を取得します。',
+	paths: {
+		'/ping': {
+			post: {
+				summary: '接続確認を行います。',
+				description: '接続確認を行います。',
+				responses: {
+					'200': {
+						content: {
+							'application/json': {
+								schema: {
+									properties: {
+										pong: {
+											description: 'レスポンス時の時刻です。',
+										},
+									},
+								},
+							},
+						},
+					},
+				},
+			},
+		},
+		'/notes': {
+			post: {
+				summary: 'ノート一覧を取得します。',
+				description: 'ノート一覧を取得します。',
+				requestBody: {
+					content: {
+						'application/json': {
+							schema: {
+								properties: {
+									local: {
+										description: 'ローカルで作成されたノートのみを取得します。',
+									},
+									reply: {
+										description: '`true` にすると返信だけを、 `false` にすると返信以外を取得します。値を設定しなければ返信であるかそうでないかに関係なくノートを取得します。',
+									},
+									renote: {
+										description: '`true` にするとリノートだけを、 `false` にするとリノート以外を取得します。値を設定しなければリノートであるかそうでないかに関係なくノートを取得します。',
+									},
+									withFiles: {
+										description: '`true` にすると添付ファイルのあるノートだけを、 `false` にすると添付ファイルがないノートだけを取得します。値を設定しなければ添付ファイルの有無にかかわらずノートを取得します。',
+									},
+									poll: {
+										description: '`true` にすると投票を含むノートだけを、 `false` にすると含まないノートだけを取得します。値を設定しなければ投票の有無にかかわらずノートを取得します。',
+									},
+									limit: {
+										description: '取得するノートの最大数を指定します。',
+									},
+								},
+							},
+						},
+					},
+				},
+			},
+		},
+		'/get-online-users-count': {
+			post: {
+				summary: 'オンラインになっているユーザ数を取得します。',
+				description: 'オンラインになっているユーザ数を取得します。',
+				responses: {
+					'200': {
+						content: {
+							'application/json': {
+								schema: {
+									properties: {
+										count: {
+											description: '現在オンライン（10分以内に何らかのアクションをとった）であるユーザ数です。',
+										},
+									},
+								},
+							},
+						},
+					},
+				},
+			},
+		},
+		'/i/pin': {
+			post: {
+				summary: 'ノートをピン留めします。',
+				description: 'ノートをピン留めします。ピン留めされたノートはMisskey Webのプロフィールページに表示されたりします。',
+			},
+		},
+		'/i/unpin': {
+			post: {
+				summary: 'ノートをピン留めから解除します。',
+				description: 'ノートをピン留めから解除します。',
+			},
+		},
+		'/clips/create': {
+			post: {
+				summary: 'クリップを作成します。',
+				description: 'クリップを作成します。',
+			},
+		},
+		'/clips/list': {
+			post: {
+				summary: '自分のクリップの一覧を取得します。',
+				description: '自分のクリップの一覧を取得します。',
+			},
+		},
 	},
 }
