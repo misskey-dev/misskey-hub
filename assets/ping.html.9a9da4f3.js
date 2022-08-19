@@ -1,0 +1,1 @@
+const e={key:"v-5f5cff86",path:"/docs/api/endpoints/ping.html",title:"ping",lang:"ja-JP",frontmatter:{},excerpt:"",headers:[{level:2,title:"Parameters",slug:"parameters",children:[]},{level:2,title:"Response",slug:"response",children:[]}],git:{},filePathRelative:null};export{e as data};
