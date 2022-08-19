@@ -1,0 +1,46 @@
+{
+	description: 'インスタンスの情報を取得します。',
+	requireCredential: false,
+	req: {},
+	res: {
+		type: 'object',
+		optional: false, nullable: false,
+		properties: {
+			notesCount: {
+				type: 'number',
+				optional: false, nullable: false,
+				description: '総ノート数です。',
+			},
+			originalNotesCount: {
+				type: 'number',
+				optional: false, nullable: false,
+				description: 'インスタンス内（ローカル）で作成された総ノート数です。',
+			},
+			usersCount: {
+				type: 'number',
+				optional: false, nullable: false,
+				description: '総ユーザ数です。',
+			},
+			originalUsersCount: {
+				type: 'number',
+				optional: false, nullable: false,
+				description: 'インスタンス内（ローカル）で作成された総ユーザ数です。',
+			},
+			instances: {
+				type: 'number',
+				optional: false, nullable: false,
+				description: '',
+			},
+			driveUsageLocal: {
+				type: 'number',
+				optional: false, nullable: false,
+				description: '',
+			},
+			driveUsageRemote: {
+				type: 'number',
+				optional: false, nullable: false,
+				description: '',
+			},
+		},
+	},
+}
