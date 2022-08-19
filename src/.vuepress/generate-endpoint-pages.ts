@@ -3,7 +3,6 @@ import { App, createPage, Page } from '@vuepress/core';
 import glob from 'glob';
 import JSON5 from 'json5';
 
-
 export async function generateEndpointPages(app: App) {
 	for (const locale of Object.keys(app.options.locales)) {
 		const endpointsDir = locale + 'docs/api/endpoints/';

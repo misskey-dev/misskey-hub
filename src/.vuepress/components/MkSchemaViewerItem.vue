@@ -1,8 +1,14 @@
 <template>
 <div class="mk-schema-viewer-item">
-	<div v-if="schema.$ref">
-		<RouterLink v-if="schema.$ref.startsWith('misskey://')" :to="refPath">{{ refName }}</RouterLink><span v-if="schema.nullable" class="nullable">(nullable)</span>
+	<div v-if="schema.$ref && schema.$ref.startsWith('misskey://')">
+		<RouterLink :to="refPath">{{ refName }}</RouterLink><span v-if="schema.nullable" class="nullable">(nullable)</span>
 		<div v-if="schema.description" class="description">{{ schema.description }}</div>
+	</div>
+	<div v-else-if="schema.$ref">
+		<button @click="expandRef = !expandRef">{{ expandRef ? '-' : '+' }} [{{ refName }}]</button>
+		<span v-if="schema.nullable" class="nullable">(nullable)</span>
+		<div v-if="schema.description" class="description">{{ schema.description }}</div>
+		<MkSchemaViewerItem v-if="schemas && expandRef" :schema="schemas[refName]"/>
 	</div>
 	<div v-else-if="schema.type === 'string'" class="string">
 		<code>string</code><span v-if="schema.nullable" class="nullable">(nullable)</span>
@@ -43,7 +49,7 @@
 		<div class="label">Object:</div>
 		<div v-if="schema.description" class="description">{{ schema.description }}</div>
 		<div v-for="[k, v] in Object.entries(schema.properties)" class="kv">
-			<div class="k">{{ k }}</div>
+			<div class="k">{{ k }}<span v-if="schema.required.includes(k)" class="required" title="Required">*</span></div>
 			<div class="v"><MkSchemaViewerItem :schema="v"/></div>
 		</div>
 		<span v-if="schema.nullable" class="nullable">(nullable)</span>
@@ -53,7 +59,7 @@
 </template>
 
 <script>
-import {  } from 'vue';
+import { ref, inject } from 'vue';
 import { useRouteLocale } from '@vuepress/client';
 
 const camelToKebab = str => str[0].toLowerCase() + str.slice(1, str.length).replace(/[A-Z]/g, letter => `-${letter.toLowerCase()}`);
@@ -63,16 +69,20 @@ export default {
 		schema: {
 			type: Object,
 			required: true,
-		}
+		},
 	},
 
   setup(props) {
 		const locale = useRouteLocale();
-		const refName = props.schema.$ref ? props.schema.$ref.replace('misskey://', '') : null;
+		const refName = props.schema.$ref ? props.schema.$ref.replace('#/components/schemas/', '').replace('misskey://', '') : null;
+		const expandRef = ref(false);
+		const schemas = inject('schemas');
 
 		return {
 			refName,
 			refPath: props.schema.$ref ? `${locale.value}docs/api/entity/${camelToKebab(refName)}.html` : null,
+			expandRef,
+			schemas,
 		};
   },
 };
@@ -129,6 +139,11 @@ export default {
 				padding-right: 8px;
 				font-family: var(--font-family-code);
 				word-wrap: anywhere;
+
+				> .required {
+					margin-left: 8px;
+					color: #f00;
+				}
 			}
 		}
 	}

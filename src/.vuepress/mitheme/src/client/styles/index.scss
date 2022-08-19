@@ -1,0 +1,106 @@
+@use 'vars';
+@use 'vars-dark';
+@use 'normalize';
+
+@use 'code';
+@use 'code-group';
+@use 'custom-container';
+@use 'transitions';
+
+@use '@vuepress/plugin-palette/style';
+
+html {
+	touch-action: manipulation;
+	accent-color: var(--c-brand);
+	text-size-adjust: 100%;
+	tab-size: 2;
+
+	/*
+	&, * {
+		scrollbar-color: var(--scrollbarHandle) inherit;
+		scrollbar-width: thin;
+
+		&::-webkit-scrollbar {
+			width: 6px;
+			height: 6px;
+		}
+
+		&::-webkit-scrollbar-track {
+			background: inherit;
+		}
+
+		&::-webkit-scrollbar-thumb {
+			background: var(--scrollbarHandle);
+
+			&:hover {
+				background: var(--scrollbarHandleHover);
+			}
+
+			&:active {
+				background: var(--accent);
+			}
+		}
+	}
+	*/
+}
+
+.mk-page {
+	display: block;
+	margin: 1em 0;
+	padding: 1em;
+	border: solid 1px var(--c-border);
+	border-radius: 8px;
+	color: var(--c-text);
+	font-weight: normal;
+
+	&:hover {
+		border-color: var(--c-brand);
+		text-decoration: none !important;
+	}
+
+	> header {
+		font-weight: bold;
+	}
+
+	> footer {
+		opacity: 0.7;
+	}
+}
+
+.arrow {
+  display: inline-block;
+  width: 0;
+  height: 0;
+
+  &.up {
+    border: {
+      left: 4px solid transparent;
+      right: 4px solid transparent;
+      bottom: 6px solid var(--c-bg-arrow);
+    }
+  }
+
+  &.down {
+    border: {
+      left: 4px solid transparent;
+      right: 4px solid transparent;
+      top: 6px solid var(--c-bg-arrow);
+    }
+  }
+
+  &.right {
+    border: {
+      top: 4px solid transparent;
+      bottom: 4px solid transparent;
+      left: 6px solid var(--c-bg-arrow);
+    }
+  }
+
+  &.left {
+    border: {
+      top: 4px solid transparent;
+      bottom: 4px solid transparent;
+      right: 6px solid var(--c-bg-arrow);
+    }
+  }
+}

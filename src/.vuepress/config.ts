@@ -1,11 +1,14 @@
 import { path } from '@vuepress/utils'
 import { defineUserConfig } from 'vuepress'
 import type { DefaultThemeOptions } from 'vuepress'
+import { registerComponentsPlugin } from '@vuepress/plugin-register-components';
+import { containerPlugin } from '@vuepress/plugin-container'
 import { generateRecentUpdatesPage } from './recent-updates-page';
 import { getRelatedPages } from './related-pages';
 import { getChildPages } from './child-pages';
 import { generateEndpointPages } from './generate-endpoint-pages';
 import { getInstances } from './get-instances';
+import localTheme from './mitheme/src/node';
 
 const ssrTransformCustomDir = () => {
 	return {
@@ -24,6 +27,7 @@ export default defineUserConfig<DefaultThemeOptions>({
 
 	head: [
 		['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c', }],
+		['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Kosugi+Maru', }],
 		['link', { rel: 'stylesheet', href: 'https://use.fontawesome.com/releases/v5.15.3/css/all.css', }]
 	],
 
@@ -38,8 +42,7 @@ export default defineUserConfig<DefaultThemeOptions>({
 		},
 	},
 
-	theme: path.resolve(__dirname, './theme'),
-	themeConfig: {
+	theme: localTheme({
 		repo: 'misskey-dev/misskey-hub',
 		docsDir: 'src',
 		logo: 'https://raw.githubusercontent.com/misskey-dev/assets/main/favicon.png',
@@ -268,28 +271,28 @@ export default defineUserConfig<DefaultThemeOptions>({
 		themePlugins: {
 			activeHeaderLinks: false,
 		}
-	},
+	}),
 
 	plugins: [
 		['@vuepress/plugin-search'],
-		['@vuepress/register-components', {
+		registerComponentsPlugin({
 			componentsDir: path.resolve(__dirname, './components/'),
-		},],
-		['@vuepress/container', {
+		}),
+		containerPlugin({
 			type: 'tip',
 			before: (info: string, type): string => `<div class="custom-container tip"><i class="fas fa-info"></i>${info ? `<p class="custom-container-title">${info}</p>` : ''}\n`,
 			after: (): string => '</div>\n'
-		},],
-		['@vuepress/container', {
+		}),
+		containerPlugin({
 			type: 'warning',
 			before: (info: string, type): string => `<div class="custom-container warning"><i class="fas fa-exclamation"></i>${info ? `<p class="custom-container-title">${info}</p>` : ''}\n`,
 			after: (): string => '</div>\n'
-		},],
-		['@vuepress/container', {
+		}),
+		containerPlugin({
 			type: 'danger',
 			before: (info: string, type): string => `<div class="custom-container danger"><i class="fas fa-times"></i>${info ? `<p class="custom-container-title">${info}</p>` : ''}\n`,
 			after: (): string => '</div>\n'
-		},],
+		}),
 	],
 
 	async onInitialized(app) {
