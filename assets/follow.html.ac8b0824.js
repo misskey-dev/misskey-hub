@@ -1,0 +1,1 @@
+const t=JSON.parse('{"key":"v-37abd371","path":"/docs/features/follow.html","title":"\u30D5\u30A9\u30ED\u30FC","lang":"ja-JP","frontmatter":{},"excerpt":"","headers":[],"git":{"updatedTime":1631291596000,"contributors":[{"name":"syuilo","email":"Syuilotan@yahoo.co.jp","commits":1}]},"filePathRelative":"docs/features/follow.md"}');export{t as data};

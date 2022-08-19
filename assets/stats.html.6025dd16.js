@@ -1,1 +1,0 @@
-const e={key:"v-b84d0aca",path:"/docs/api/endpoints/stats.html",title:"stats",lang:"ja-JP",frontmatter:{},excerpt:"",headers:[{level:2,title:"Parameters",slug:"parameters",children:[]},{level:2,title:"Response",slug:"response",children:[]}],git:{},filePathRelative:null};export{e as data};

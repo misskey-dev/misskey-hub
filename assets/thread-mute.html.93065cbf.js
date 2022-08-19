@@ -1,1 +1,0 @@
-const t={key:"v-cb080758",path:"/docs/features/thread-mute.html",title:"\u30B9\u30EC\u30C3\u30C9\u30DF\u30E5\u30FC\u30C8",lang:"ja-JP",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:1635518696e3,contributors:[{name:"syuilo",email:"Syuilotan@yahoo.co.jp",commits:1}]},filePathRelative:"docs/features/thread-mute.md"};export{t as data};

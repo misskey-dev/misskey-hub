@@ -1,1 +1,0 @@
-const t={key:"v-5ae1102a",path:"/docs/api/endpoints.html",title:"\u30A8\u30F3\u30C9\u30DD\u30A4\u30F3\u30C8",lang:"ja-JP",frontmatter:{},excerpt:"",headers:[],git:{},filePathRelative:null};export{t as data};
