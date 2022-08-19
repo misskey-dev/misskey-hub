@@ -1,4 +1,5 @@
 {
+	summary: '自身のアカウント情報を取得します。',
 	description: '自身のアカウント情報を取得します。',
 	requireCredential: true,
 	req: {},

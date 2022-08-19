@@ -1,4 +1,5 @@
 {
+	summary: 'インスタンスの情報を取得します。',
 	description: 'インスタンスの情報を取得します。',
 	requireCredential: false,
 	req: {},

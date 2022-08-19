@@ -1,4 +1,5 @@
 {
+	summary: 'サーバーマシンについての情報を取得します。',
 	description: "サーバーマシンについての情報を取得します。",
 	requireCredential: false,
 	req: {},

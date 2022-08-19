@@ -1,4 +1,5 @@
 {
+	summary: 'オンラインになっているユーザ数を取得します。',
 	description: 'オンラインになっているユーザ数を取得します。',
 	requireCredential: false,
 	req: {},

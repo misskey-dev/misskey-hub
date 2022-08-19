@@ -1,5 +1,6 @@
 {
-	description: '接続確認を行います。',
+	summary: 'サーバーの接続確認を行います。',
+	description: 'サーバーの接続確認を行います。',
 	requireCredential: false,
 	req: {},
 	res: {

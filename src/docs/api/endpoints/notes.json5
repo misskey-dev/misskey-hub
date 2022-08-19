@@ -1,5 +1,6 @@
 {
-	description: 'ノートを取得します。',
+	summary: 'ノート一覧を取得します。',
+	description: 'ノート一覧を取得します。',
 	requireCredential: true,
 	req: {
 		type: 'object',
