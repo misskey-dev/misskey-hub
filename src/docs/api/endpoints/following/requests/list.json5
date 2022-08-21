@@ -30,14 +30,14 @@
 					optional: false,
 					nullable: false,
 					ref: 'UserLite',
-					$ref: '#/components/schemas/UserLite',
+					$ref: 'misskey://UserLite',
 				},
 				followee: {
 					type: 'object',
 					optional: false,
 					nullable: false,
 					ref: 'UserLite',
-					$ref: '#/components/schemas/UserLite',
+					$ref: 'misskey://UserLite',
 				},
 			},
 			required: [

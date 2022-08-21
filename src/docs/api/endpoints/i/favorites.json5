@@ -34,7 +34,7 @@
 			optional: false,
 			nullable: false,
 			ref: 'NoteFavorite',
-			$ref: '#/components/schemas/NoteFavorite',
+			$ref: 'misskey://NoteFavorite',
 		},
 	},
 	errors: {},

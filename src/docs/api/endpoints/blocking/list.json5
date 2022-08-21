@@ -34,7 +34,7 @@
 			optional: false,
 			nullable: false,
 			ref: 'Blocking',
-			$ref: '#/components/schemas/Blocking',
+			$ref: 'misskey://Blocking',
 		},
 	},
 	errors: {},

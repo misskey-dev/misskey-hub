@@ -11,7 +11,7 @@
 		optional: false,
 		nullable: false,
 		ref: 'DriveFile',
-		$ref: '#/components/schemas/DriveFile',
+		$ref: 'misskey://DriveFile',
 	},
 	errors: {
 		'f449b209-0c60-4e51-84d5-29486263bfd4': {

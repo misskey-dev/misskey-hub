@@ -32,7 +32,7 @@
 				optional: false,
 				nullable: false,
 				ref: 'App',
-				$ref: '#/components/schemas/App',
+				$ref: 'misskey://App',
 			},
 			token: {
 				type: 'string',

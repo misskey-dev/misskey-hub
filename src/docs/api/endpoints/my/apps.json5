@@ -30,7 +30,7 @@
 			optional: false,
 			nullable: false,
 			ref: 'App',
-			$ref: '#/components/schemas/App',
+			$ref: 'misskey://App',
 		},
 	},
 	errors: {},

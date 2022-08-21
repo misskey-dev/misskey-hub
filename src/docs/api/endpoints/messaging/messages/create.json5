@@ -48,7 +48,7 @@
 		optional: false,
 		nullable: false,
 		ref: 'MessagingMessage',
-		$ref: '#/components/schemas/MessagingMessage',
+		$ref: 'misskey://MessagingMessage',
 	},
 	errors: {
 		'17e2ba79-e22a-4cbc-bf91-d327643f4a7e': {

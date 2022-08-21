@@ -39,7 +39,7 @@
 			optional: false,
 			nullable: false,
 			ref: 'Following',
-			$ref: '#/components/schemas/Following',
+			$ref: 'misskey://Following',
 		},
 	},
 	errors: {},

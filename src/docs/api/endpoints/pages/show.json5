@@ -40,7 +40,7 @@
 		optional: false,
 		nullable: false,
 		ref: 'Page',
-		$ref: '#/components/schemas/Page',
+		$ref: 'misskey://Page',
 	},
 	errors: {
 		'222120c0-3ead-4528-811b-b96f233388d7': {

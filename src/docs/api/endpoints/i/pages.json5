@@ -34,7 +34,7 @@
 			optional: false,
 			nullable: false,
 			ref: 'Page',
-			$ref: '#/components/schemas/Page',
+			$ref: 'misskey://Page',
 		},
 	},
 	errors: {},

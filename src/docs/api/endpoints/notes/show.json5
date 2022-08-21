@@ -22,7 +22,7 @@
 		optional: false,
 		nullable: false,
 		ref: 'Note',
-		$ref: '#/components/schemas/Note',
+		$ref: 'misskey://Note',
 	},
 	errors: {
 		'24fcbfc6-2e37-42b6-8388-c29b3861a08d': {

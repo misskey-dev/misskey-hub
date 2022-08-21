@@ -22,7 +22,7 @@
 		optional: false,
 		nullable: false,
 		ref: 'UserLite',
-		$ref: '#/components/schemas/UserLite',
+		$ref: 'misskey://UserLite',
 	},
 	errors: {
 		'4e68c551-fc4c-4e46-bb41-7d4a37bf9dab': {

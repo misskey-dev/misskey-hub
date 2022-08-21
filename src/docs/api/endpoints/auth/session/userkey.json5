@@ -35,7 +35,7 @@
 				optional: false,
 				nullable: false,
 				ref: 'UserDetailedNotMe',
-				$ref: '#/components/schemas/UserDetailedNotMe',
+				$ref: 'misskey://UserDetailedNotMe',
 			},
 		},
 		required: [

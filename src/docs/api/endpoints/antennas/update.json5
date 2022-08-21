@@ -92,7 +92,7 @@
 		optional: false,
 		nullable: false,
 		ref: 'Antenna',
-		$ref: '#/components/schemas/Antenna',
+		$ref: 'misskey://Antenna',
 	},
 	errors: {
 		'10c673ac-8852-48eb-aa1f-f5b67f069290': {

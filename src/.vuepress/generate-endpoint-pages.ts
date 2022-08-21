@@ -50,6 +50,19 @@ none
 none
 `;
 			}
+
+			content += `
+## Errors
+`;
+
+			for (const [id, err] of Object.entries(def.errors)) {
+				content += `
+### ${err.code}
+ID: \`${id}\`
+
+${err.description}
+`;
+			}
 	
 			const page = await createPage(app, {
 				path: endpointPath.slice(endpointPath.indexOf(endpointsDir)).replace('.json5', '.html'),

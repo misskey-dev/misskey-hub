@@ -28,7 +28,7 @@
 		optional: false,
 		nullable: false,
 		ref: 'UserList',
-		$ref: '#/components/schemas/UserList',
+		$ref: 'misskey://UserList',
 	},
 	errors: {
 		'796666fe-3dff-4d39-becb-8a5932c1d5b7': {

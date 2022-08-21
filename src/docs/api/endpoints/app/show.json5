@@ -22,7 +22,7 @@
 		optional: false,
 		nullable: false,
 		ref: 'App',
-		$ref: '#/components/schemas/App',
+		$ref: 'misskey://App',
 	},
 	errors: {
 		'dce83913-2dc6-4093-8a7b-71dbb11718a3': {

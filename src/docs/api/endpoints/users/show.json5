@@ -58,14 +58,14 @@
 			{
 				type: 'object',
 				ref: 'UserDetailed',
-				$ref: '#/components/schemas/UserDetailed',
+				$ref: 'misskey://UserDetailed',
 			},
 			{
 				type: 'array',
 				items: {
 					type: 'object',
 					ref: 'UserDetailed',
-					$ref: '#/components/schemas/UserDetailed',
+					$ref: 'misskey://UserDetailed',
 				},
 			},
 		],

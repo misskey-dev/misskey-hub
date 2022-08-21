@@ -30,7 +30,7 @@
 			optional: false,
 			nullable: false,
 			ref: 'MessagingMessage',
-			$ref: '#/components/schemas/MessagingMessage',
+			$ref: 'misskey://MessagingMessage',
 		},
 	},
 	errors: {},

@@ -71,7 +71,7 @@
 		optional: false,
 		nullable: false,
 		ref: 'Page',
-		$ref: '#/components/schemas/Page',
+		$ref: 'misskey://Page',
 	},
 	errors: {
 		'b7b97489-0f66-4b12-a5ff-b21bd63f6e1c': {

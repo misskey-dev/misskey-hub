@@ -37,7 +37,7 @@
 		optional: false,
 		nullable: false,
 		ref: 'Clip',
-		$ref: '#/components/schemas/Clip',
+		$ref: 'misskey://Clip',
 	},
 	errors: {
 		'b4d92d70-b216-46fa-9a3f-a8c811699257': {

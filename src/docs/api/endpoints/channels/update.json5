@@ -38,7 +38,7 @@
 		optional: false,
 		nullable: false,
 		ref: 'Channel',
-		$ref: '#/components/schemas/Channel',
+		$ref: 'misskey://Channel',
 	},
 	errors: {
 		'f9c5467f-d492-4c3c-9a8d-a70dacc86512': {

@@ -27,7 +27,7 @@
 		optional: false,
 		nullable: false,
 		ref: 'UserGroup',
-		$ref: '#/components/schemas/UserGroup',
+		$ref: 'misskey://UserGroup',
 	},
 	errors: {
 		'8e31d36b-2f88-4ccd-a438-e2d78a9162db': {

@@ -22,7 +22,7 @@
 		optional: false,
 		nullable: false,
 		ref: 'UserDetailedNotMe',
-		$ref: '#/components/schemas/UserDetailedNotMe',
+		$ref: 'misskey://UserDetailedNotMe',
 	},
 	errors: {
 		'8621d8bf-c358-4303-a066-5ea78610eb3f': {

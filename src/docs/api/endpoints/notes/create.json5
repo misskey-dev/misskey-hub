@@ -175,7 +175,7 @@
 				optional: false,
 				nullable: false,
 				ref: 'Note',
-				$ref: '#/components/schemas/Note',
+				$ref: 'misskey://Note',
 			},
 		},
 		required: [

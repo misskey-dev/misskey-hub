@@ -45,7 +45,7 @@
 			optional: false,
 			nullable: false,
 			ref: 'DriveFile',
-			$ref: '#/components/schemas/DriveFile',
+			$ref: 'misskey://DriveFile',
 		},
 	},
 	errors: {},

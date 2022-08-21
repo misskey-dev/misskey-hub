@@ -31,7 +31,7 @@
 		optional: false,
 		nullable: false,
 		ref: 'DriveFolder',
-		$ref: '#/components/schemas/DriveFolder',
+		$ref: 'misskey://DriveFolder',
 	},
 	errors: {
 		'f7974dac-2c0d-4a27-926e-23583b28e98e': {

@@ -22,7 +22,7 @@
 		optional: false,
 		nullable: false,
 		ref: 'MeDetailed',
-		$ref: '#/components/schemas/MeDetailed',
+		$ref: 'misskey://MeDetailed',
 	},
 	errors: {
 		'56734f8b-3928-431e-bf80-6ff87df40cb3': {

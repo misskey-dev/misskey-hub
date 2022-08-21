@@ -22,7 +22,7 @@
 		optional: false,
 		nullable: false,
 		ref: 'Clip',
-		$ref: '#/components/schemas/Clip',
+		$ref: 'misskey://Clip',
 	},
 	errors: {
 		'c3c5fe33-d62c-44d2-9ea5-d997703f5c20': {
