@@ -20,7 +20,7 @@ import { ref, watch } from 'vue';
 
 const props = defineProps<{
 	tags: string[];
-	endpoints: { name: string; tags: string[]; }[];
+	endpoints: { name: string; summary?: string; tags: string[]; }[];
 }>();
 
 const activeTags = ref([]);
@@ -82,6 +82,21 @@ watch(activeTags, () => {
 			margin: 12px 0;
 			border: solid 1px var(--c-border);
 			border-radius: 8px;
+
+			&:hover {
+				text-decoration: none !important;
+			}
+
+			> .summary {
+				margin-top: 8px;
+				color: var(--c-text);
+				font-weight: normal;
+				font-size: 0.9em;
+
+				&:empty {
+					display: none;
+				}
+			}
 		}
 	}
 }

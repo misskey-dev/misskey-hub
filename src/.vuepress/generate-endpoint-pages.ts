@@ -8,14 +8,15 @@ export async function generateEndpointPages(app: App) {
 		const endpointsDir = locale + 'docs/api/endpoints/';
 		const endpointPaths = glob.sync(__dirname + '/..' + endpointsDir + '**/*.json5');
 
-		let indexContent = '# エンドポイント\n';
+		const endpointsForIndex = [];
 
 		for (const endpointPath of endpointPaths) {
 			const name = endpointPath.slice(endpointPath.indexOf(endpointsDir)).replace(endpointsDir, '').replace('.json5', '');
 			const data = fs.readFileSync(endpointPath, 'utf-8');
 			const def = JSON5.parse(data);
-
-			indexContent += `- [${name}](./endpoints/${name}.html)\n`;
+			endpointsForIndex.push({
+				name: name, summary: def.summary, tags: def.tags ?? []
+			});
 	
 			let content = `---
 filePath: '${`docs/api/endpoints/${name}.json5`}'
@@ -79,6 +80,13 @@ ${err.description}
 			});
 			app.pages.push(page);
 		}
+
+		const endpointTags = Array.from(new Set(endpointsForIndex.flatMap(x => x.tags)));
+
+		let indexContent = '# エンドポイント一覧\n';
+
+		indexContent += `
+<MkEndpoints :endpoints="${JSON.stringify(endpointsForIndex).replace(/"/g, '\'')}" :tags="${JSON.stringify(endpointTags).replace(/"/g, '\'')}"/>`;
 
 		const indexPage = await createPage(app, {
 			path: locale + 'docs/api/endpoints.html',
