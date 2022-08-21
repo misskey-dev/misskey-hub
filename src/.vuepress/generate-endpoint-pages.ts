@@ -28,6 +28,10 @@ filePath: '${`docs/api/endpoints/${name}.json5`}'
 				content += `\n\nCredential required.\n`;
 			}
 
+			content += `
+<MkApiConsole :name="${JSON.stringify(name).replace(/"/g, '\'')}" :def="${JSON.stringify(def).replace(/"/g, '\'')}"/>
+`;
+
 			// TODO: permission
 	
 			if (def.req && Object.keys(def.req).length > 0) {
@@ -72,7 +76,7 @@ ID: \`${id}\`
 ${err.description}
 `;
 			}
-	
+
 			const page = await createPage(app, {
 				path: endpointPath.slice(endpointPath.indexOf(endpointsDir)).replace('.json5', '.html'),
 				content: content,

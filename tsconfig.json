@@ -9,5 +9,5 @@
       "@theme/*": ["./src/.vuepress/mitheme/src/client/components/*"]
     }
   },
-  "include": ["./src/.vuepress/components", "./src/.vuepress/mitheme/src/client", "./src/.vuepress/mitheme/src/shared"]
+  "include": ["./src/.vuepress/components", "./src/.vuepress/mitheme/src/client", "./src/.vuepress/mitheme/src/shared", "src/.vuepress/client.ts"]
 }
