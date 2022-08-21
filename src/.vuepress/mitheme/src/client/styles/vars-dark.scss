@@ -4,19 +4,22 @@ html.dark {
   --c-brand-light: #349469;
 
   // background colors
-  --c-bg: #22272e;
+  --c-bg: #0e0e0e;
   --c-bg-light: #2b313a;
   --c-bg-lighter: #262c34;
+	--c-bg-navbar: #0e0e0e88;
+	--c-bg-navbar-dropdown: #222;
+	--c-bg-navbar-dropdown-shadow: rgba(0, 0, 0, 0.3);
 
   // text colors
-  --c-text: #adbac7;
+  --c-text: #ffffffde;
   --c-text-light: #96a7b7;
   --c-text-lighter: #8b9eb0;
   --c-text-lightest: #8094a8;
 
   // border colors
-  --c-border: #3e4c5a;
-  --c-border-dark: #34404c;
+  --c-border: #ffffff2f;
+  --c-border-dark: #ffffff3f;
 
   // custom container colors
   --c-tip: #318a62;

@@ -7,7 +7,9 @@
   --c-bg: #ffffff;
   --c-bg-light: #f3f4f5;
   --c-bg-lighter: #eeeeee;
-  --c-bg-navbar: var(--c-bg);
+  --c-bg-navbar: rgba(255, 255, 255, 0.7);
+	--c-bg-navbar-dropdown: #fff;
+	--c-bg-navbar-dropdown-shadow: rgba(0, 0, 0, 0.1);
   --c-bg-sidebar: var(--c-bg);
   --c-bg-arrow: #cccccc;
 
