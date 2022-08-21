@@ -76,7 +76,7 @@ export default {
 		const locale = useRouteLocale();
 		const refName = props.schema.$ref ? props.schema.$ref.replace('#/components/schemas/', '').replace('misskey://', '') : null;
 		const expandRef = ref(false);
-		const schemas = inject('schemas');
+		const schemas = inject('schemas', {});
 
 		return {
 			refName,

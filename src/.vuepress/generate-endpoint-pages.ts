@@ -28,8 +28,10 @@ export async function generateEndpointPages(app: App) {
 			if (def.req && Object.keys(def.req).length > 0) {
 				content += `
 ## Parameters
+<ClientOnly>
 <MkSchemaViewer :schema="${JSON.stringify(def.req).replace(/"/g, '\'')}">
 </MkSchemaViewer>
+</ClientOnly>
 `;
 			} else {
 				content += `
@@ -41,8 +43,10 @@ none
 			if (def.res) {
 				content += `
 ## Response
+<ClientOnly>
 <MkSchemaViewer :schema="${JSON.stringify(def.res).replace(/"/g, '\'')}">
 </MkSchemaViewer>
+</ClientOnly>
 `;
 			} else {
 				content += `
