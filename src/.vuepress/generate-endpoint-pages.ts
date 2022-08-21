@@ -29,7 +29,9 @@ filePath: '${`docs/api/endpoints/${name}.json5`}'
 			}
 
 			content += `
+<ClientOnly>
 <MkApiConsole :name="${JSON.stringify(name).replace(/"/g, '\'')}" :def="${JSON.stringify(def).replace(/"/g, '\'')}"/>
+</ClientOnly>
 `;
 
 			// TODO: permission

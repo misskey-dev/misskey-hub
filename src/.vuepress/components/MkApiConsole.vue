@@ -46,14 +46,16 @@ const props = defineProps<{
 const params = ref();
 
 const endpointBody = {};
-for (const [k, v] of Object.entries(props.def.req.properties)) {
-	endpointBody[k] =
-		v.type === 'string' ? '' :
-		v.type === 'integer' ? 0 :
-		v.type === 'boolean' ? false :
-		v.type === 'array' ? [] :
-		v.type === 'object' ? {} :
-		null;
+if (props.def.req) {
+	for (const [k, v] of Object.entries(props.def.req.properties ?? {})) {
+		endpointBody[k] =
+			v.type === 'string' ? '' :
+			v.type === 'integer' ? 0 :
+			v.type === 'boolean' ? false :
+			v.type === 'array' ? [] :
+			v.type === 'object' ? {} :
+			null;
+	}
 }
 params.value = JSON5.stringify(endpointBody, null, 2);
 
