@@ -1,7 +1,7 @@
-import { defaultTheme } from './defaultTheme'
+import { miTheme } from './miTheme'
 
 export * from '../shared'
-export * from './defaultTheme'
+export * from './miTheme'
 export * from './utils'
 
-export default defaultTheme
+export default miTheme

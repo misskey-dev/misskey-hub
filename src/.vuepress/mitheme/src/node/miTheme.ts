@@ -28,7 +28,7 @@ export interface DefaultThemeOptions extends DefaultThemeLocaleOptions {
   themePlugins?: DefaultThemePluginsOptions
 }
 
-export const defaultTheme = ({
+export const miTheme = ({
   themePlugins = {},
   ...localeOptions
 }: DefaultThemeOptions = {}): Theme => {
