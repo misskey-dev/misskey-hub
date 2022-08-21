@@ -17,7 +17,11 @@ export async function generateEndpointPages(app: App) {
 
 			indexContent += `- [${name}](./endpoints/${name}.html)\n`;
 	
-			let content = `# \`${name}\`\n${def.description}`;
+			let content = `---
+filePath: '${`docs/api/endpoints/${name}.json5`}'
+---
+
+# \`${name}\`\n${def.description}`;
 
 			if (def.requireCredential) {
 				content += `\n\nCredential required.\n`;
@@ -71,6 +75,7 @@ ${err.description}
 			const page = await createPage(app, {
 				path: endpointPath.slice(endpointPath.indexOf(endpointsDir)).replace('.json5', '.html'),
 				content: content,
+				//filePath: `${__dirname}/../docs/api/endpoints/${name}.json5`,
 			});
 			app.pages.push(page);
 		}

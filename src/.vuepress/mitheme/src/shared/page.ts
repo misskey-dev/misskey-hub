@@ -5,35 +5,14 @@ export interface DefaultThemePageData extends GitPluginPageData {
   filePathRelative: string | null
 }
 
-export interface DefaultThemePageFrontmatter {
-  home?: boolean
+export interface MiThemePageFrontmatter {
   navbar?: boolean
   pageClass?: string
 }
 
-export interface DefaultThemeHomePageFrontmatter
-  extends DefaultThemePageFrontmatter {
-  home: true
-  heroImage?: string
-  heroImageDark?: string
-  heroAlt?: string
-  heroText?: string | null
-  tagline?: string | null
-  actions?: {
-    text: string
-    link: string
-    type?: 'primary' | 'secondary'
-  }[]
-  features?: {
-    title: string
-    details: string
-  }[]
-  footer?: string
-  footerHtml?: boolean
-}
-
-export interface DefaultThemeNormalPageFrontmatter
-  extends DefaultThemePageFrontmatter {
+export interface MiThemeNormalPageFrontmatter
+  extends MiThemePageFrontmatter {
+	filePath?: string
   home?: false
   editLink?: boolean
   editLinkPattern?: string

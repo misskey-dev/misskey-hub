@@ -11,7 +11,7 @@ import type { ComputedRef, InjectionKey } from 'vue'
 import { useRoute } from 'vue-router'
 import type {
   DefaultThemeData,
-  DefaultThemeNormalPageFrontmatter,
+  MiThemeNormalPageFrontmatter,
   ResolvedSidebarItem,
   SidebarConfigArray,
   SidebarConfigObject,
@@ -40,7 +40,7 @@ export const useSidebarItems = (): SidebarItemsRef => {
  */
 export const setupSidebarItems = (): void => {
   const themeLocale = useThemeLocaleData()
-  const frontmatter = usePageFrontmatter<DefaultThemeNormalPageFrontmatter>()
+  const frontmatter = usePageFrontmatter<MiThemeNormalPageFrontmatter>()
   const sidebarItems = computed(() =>
     resolveSidebarItems(frontmatter.value, themeLocale.value)
   )
@@ -53,7 +53,7 @@ export const setupSidebarItems = (): void => {
  * It should only be resolved and provided once
  */
 export const resolveSidebarItems = (
-  frontmatter: DefaultThemeNormalPageFrontmatter,
+  frontmatter: MiThemeNormalPageFrontmatter,
   themeLocale: DefaultThemeData
 ): ResolvedSidebarItem[] => {
   // get sidebar config from frontmatter > theme data

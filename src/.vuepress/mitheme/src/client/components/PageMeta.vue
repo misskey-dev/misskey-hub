@@ -4,7 +4,7 @@ import { usePageData, usePageFrontmatter } from '@vuepress/client'
 import { computed } from 'vue'
 import type { ComputedRef } from 'vue'
 import type {
-  DefaultThemeNormalPageFrontmatter,
+  MiThemeNormalPageFrontmatter,
   DefaultThemePageData,
   NavLink,
 } from '../../shared'
@@ -14,7 +14,7 @@ import { resolveEditLink } from '../utils'
 const useEditNavLink = (): ComputedRef<null | NavLink> => {
   const themeLocale = useThemeLocaleData()
   const page = usePageData<DefaultThemePageData>()
-  const frontmatter = usePageFrontmatter<DefaultThemeNormalPageFrontmatter>()
+  const frontmatter = usePageFrontmatter<MiThemeNormalPageFrontmatter>()
 
   return computed(() => {
     const showEditLink =
@@ -37,7 +37,7 @@ const useEditNavLink = (): ComputedRef<null | NavLink> => {
       docsRepo,
       docsBranch,
       docsDir,
-      filePathRelative: page.value.filePathRelative,
+      filePathRelative: frontmatter.value.filePath ?? page.value.filePathRelative,
       editLinkPattern:
         frontmatter.value.editLinkPattern ?? themeLocale.value.editLinkPattern,
     })
@@ -54,7 +54,7 @@ const useEditNavLink = (): ComputedRef<null | NavLink> => {
 const useLastUpdated = (): ComputedRef<null | string> => {
   const themeLocale = useThemeLocaleData()
   const page = usePageData<DefaultThemePageData>()
-  const frontmatter = usePageFrontmatter<DefaultThemeNormalPageFrontmatter>()
+  const frontmatter = usePageFrontmatter<MiThemeNormalPageFrontmatter>()
 
   return computed(() => {
     const showLastUpdated =
@@ -75,7 +75,7 @@ const useContributors = (): ComputedRef<
 > => {
   const themeLocale = useThemeLocaleData()
   const page = usePageData<DefaultThemePageData>()
-  const frontmatter = usePageFrontmatter<DefaultThemeNormalPageFrontmatter>()
+  const frontmatter = usePageFrontmatter<MiThemeNormalPageFrontmatter>()
 
   return computed(() => {
     const showContributors =
