@@ -1,1 +1,0 @@
-const e=JSON.parse('{"key":"v-556aa122","path":"/docs/api/endpoints/server-info.html","title":"server-info","lang":"ja-JP","frontmatter":{},"excerpt":"","headers":[{"level":2,"title":"Parameters","slug":"parameters","children":[]},{"level":2,"title":"Response","slug":"response","children":[]}],"git":{},"filePathRelative":null}');export{e as data};
