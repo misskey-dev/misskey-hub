@@ -60,4 +60,11 @@
 			$ref: '#/components/schemas/Note',
 		},
 	},
+	errors: {
+		'620763f4-f621-4533-ab33-0577a1a3c342': {
+			id: '620763f4-f621-4533-ab33-0577a1a3c342',
+			code: 'STL_DISABLED',
+			description: '',
+		},
+	},
 }

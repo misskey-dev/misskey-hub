@@ -24,4 +24,11 @@
 		ref: 'Clip',
 		$ref: '#/components/schemas/Clip',
 	},
+	errors: {
+		'c3c5fe33-d62c-44d2-9ea5-d997703f5c20': {
+			id: 'c3c5fe33-d62c-44d2-9ea5-d997703f5c20',
+			code: 'NO_SUCH_CLIP',
+			description: '',
+		},
+	},
 }

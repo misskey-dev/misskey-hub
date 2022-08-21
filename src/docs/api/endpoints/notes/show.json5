@@ -24,4 +24,11 @@
 		ref: 'Note',
 		$ref: '#/components/schemas/Note',
 	},
+	errors: {
+		'24fcbfc6-2e37-42b6-8388-c29b3861a08d': {
+			id: '24fcbfc6-2e37-42b6-8388-c29b3861a08d',
+			code: 'NO_SUCH_NOTE',
+			description: '',
+		},
+	},
 }

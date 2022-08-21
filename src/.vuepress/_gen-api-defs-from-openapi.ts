@@ -35,6 +35,16 @@ export async function generateEndpointPages(app: App) {
 		const name = endpointPath.substring(1);
 		const def = openApiDefinition.paths[endpointPath]['post'];
 		const requireCredential = def.security?.length > 0;
+		const errors = {};
+		for (const e of Object.keys(def.responses['400']?.content['application/json'].examples)) {
+			const err = def.responses['400']?.content['application/json'].examples[e].value.error;
+			if (err.id === '3d81ceae-475f-4600-b2a8-2bc116157532') continue; // INVALID_PARAMは全API共通なため
+			errors[err.id] = {
+				id: err.id,
+				code: err.code,
+				description: '',
+			};
+		}
 		const data = {
 			summary: '',
 			description: '',
@@ -42,6 +52,7 @@ export async function generateEndpointPages(app: App) {
 			requireCredential,
 			req: def.requestBody.content['application/json']?.schema ?? {},
 			res: def.responses['200']?.content['application/json'].schema ?? {},
+			errors,
 		};
 
 		writeFile(__dirname + `/_api_/${name}.json5`, JSON5.stringify(data, null, '\t'), 'utf8');

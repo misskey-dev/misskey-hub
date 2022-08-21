@@ -70,4 +70,11 @@
 			},
 		],
 	},
+	errors: {
+		'dc94d745-1262-4e63-a17d-fecaa57efc82': {
+			id: 'dc94d745-1262-4e63-a17d-fecaa57efc82',
+			code: 'NO_SUCH_OBJECT',
+			description: '',
+		},
+	},
 }

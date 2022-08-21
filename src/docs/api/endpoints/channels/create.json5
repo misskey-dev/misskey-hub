@@ -36,4 +36,11 @@
 		ref: 'Channel',
 		$ref: '#/components/schemas/Channel',
 	},
+	errors: {
+		'cd1e9f3e-5a12-4ab4-96f6-5d0a2cc32050': {
+			id: 'cd1e9f3e-5a12-4ab4-96f6-5d0a2cc32050',
+			code: 'NO_SUCH_FILE',
+			description: '',
+		},
+	},
 }

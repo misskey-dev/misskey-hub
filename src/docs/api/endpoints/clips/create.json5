@@ -35,4 +35,5 @@
 		ref: 'Clip',
 		$ref: '#/components/schemas/Clip',
 	},
+	errors: {},
 }

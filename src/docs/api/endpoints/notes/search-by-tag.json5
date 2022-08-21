@@ -89,4 +89,5 @@
 			$ref: '#/components/schemas/Note',
 		},
 	},
+	errors: {},
 }

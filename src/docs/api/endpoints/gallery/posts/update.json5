@@ -48,4 +48,5 @@
 		ref: 'GalleryPost',
 		$ref: '#/components/schemas/GalleryPost',
 	},
+	errors: {},
 }

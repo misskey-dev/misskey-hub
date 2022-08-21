@@ -1,6 +1,9 @@
 {
 	summary: 'サーバーマシンについての情報を取得します。',
 	description: "サーバーマシンについての情報を取得します。",
+	tags: [
+		'meta',
+	],
 	requireCredential: false,
 	req: {},
 	res: {
@@ -61,4 +64,5 @@
 			}
 		},
 	},
+	errors: {},
 }

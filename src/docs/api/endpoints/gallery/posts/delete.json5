@@ -18,4 +18,11 @@
 		],
 	},
 	res: {},
+	errors: {
+		'ae52f367-4bd7-4ecd-afc6-5672fff427f5': {
+			id: 'ae52f367-4bd7-4ecd-afc6-5672fff427f5',
+			code: 'NO_SUCH_POST',
+			description: '',
+		},
+	},
 }

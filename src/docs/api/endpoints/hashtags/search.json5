@@ -36,4 +36,5 @@
 			nullable: false,
 		},
 	},
+	errors: {},
 }

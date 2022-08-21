@@ -25,4 +25,5 @@
 		ref: 'UserGroup',
 		$ref: '#/components/schemas/UserGroup',
 	},
+	errors: {},
 }

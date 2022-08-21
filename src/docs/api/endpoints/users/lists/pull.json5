@@ -23,4 +23,16 @@
 		],
 	},
 	res: {},
+	errors: {
+		'7f44670e-ab16-43b8-b4c1-ccd2ee89cc02': {
+			id: '7f44670e-ab16-43b8-b4c1-ccd2ee89cc02',
+			code: 'NO_SUCH_LIST',
+			description: '',
+		},
+		'588e7f72-c744-4a61-b180-d354e912bda2': {
+			id: '588e7f72-c744-4a61-b180-d354e912bda2',
+			code: 'NO_SUCH_USER',
+			description: '',
+		},
+	},
 }

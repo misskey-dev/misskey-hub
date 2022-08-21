@@ -52,4 +52,5 @@
 			$ref: '#/components/schemas/User',
 		},
 	},
+	errors: {},
 }

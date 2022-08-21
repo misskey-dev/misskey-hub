@@ -39,4 +39,5 @@
 		ref: 'App',
 		$ref: '#/components/schemas/App',
 	},
+	errors: {},
 }

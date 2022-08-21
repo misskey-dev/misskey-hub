@@ -23,4 +23,21 @@
 		],
 	},
 	res: {},
+	errors: {
+		'd6e76cc0-a1b5-4c7c-a287-73fa9c716dcf': {
+			id: 'd6e76cc0-a1b5-4c7c-a287-73fa9c716dcf',
+			code: 'NO_SUCH_CLIP',
+			description: '',
+		},
+		'fc8c0b49-c7a3-4664-a0a6-b418d386bb8b': {
+			id: 'fc8c0b49-c7a3-4664-a0a6-b418d386bb8b',
+			code: 'NO_SUCH_NOTE',
+			description: '',
+		},
+		'734806c4-542c-463a-9311-15c512803965': {
+			id: '734806c4-542c-463a-9311-15c512803965',
+			code: 'ALREADY_CLIPPED',
+			description: '',
+		},
+	},
 }

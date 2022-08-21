@@ -22,4 +22,21 @@
 		],
 	},
 	res: {},
+	errors: {
+		'033d0620-5bfe-4027-965d-980b0c85a3ea': {
+			id: '033d0620-5bfe-4027-965d-980b0c85a3ea',
+			code: 'NO_SUCH_NOTE',
+			description: '',
+		},
+		'71efcf98-86d6-4e2b-b2ad-9d032369366b': {
+			id: '71efcf98-86d6-4e2b-b2ad-9d032369366b',
+			code: 'ALREADY_REACTED',
+			description: '',
+		},
+		'20ef5475-9f38-4e4c-bd33-de6d979498ec': {
+			id: '20ef5475-9f38-4e4c-bd33-de6d979498ec',
+			code: 'YOU_HAVE_BEEN_BLOCKED',
+			description: '',
+		},
+	},
 }

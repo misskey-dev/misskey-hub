@@ -18,4 +18,11 @@
 		],
 	},
 	res: {},
+	errors: {
+		'bddd57ac-ceb3-b29d-4334-86ea5fae481a': {
+			id: 'bddd57ac-ceb3-b29d-4334-86ea5fae481a',
+			code: 'NO_SUCH_NOTE',
+			description: '',
+		},
+	},
 }

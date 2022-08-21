@@ -1,6 +1,9 @@
 {
 	summary: 'サーバーの接続確認を行います。',
 	description: 'サーバーの接続確認を行います。',
+	tags: [
+		'meta',
+	],
 	requireCredential: false,
 	req: {},
 	res: {
@@ -13,5 +16,9 @@
 				description: 'レスポンス時の時刻です。',
 			},
 		},
+		required: [
+			'pong',
+		],
 	},
+	errors: {},
 }

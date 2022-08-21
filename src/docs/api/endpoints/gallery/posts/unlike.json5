@@ -18,4 +18,16 @@
 		],
 	},
 	res: {},
+	errors: {
+		'c32e6dd0-b555-4413-925e-b3757d19ed84': {
+			id: 'c32e6dd0-b555-4413-925e-b3757d19ed84',
+			code: 'NO_SUCH_POST',
+			description: '',
+		},
+		'e3e8e06e-be37-41f7-a5b4-87a8250288f0': {
+			id: 'e3e8e06e-be37-41f7-a5b4-87a8250288f0',
+			code: 'NOT_LIKED',
+			description: '',
+		},
+	},
 }

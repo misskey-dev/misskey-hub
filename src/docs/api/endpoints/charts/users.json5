@@ -80,4 +80,5 @@
 			'remote.dec',
 		],
 	},
+	errors: {},
 }

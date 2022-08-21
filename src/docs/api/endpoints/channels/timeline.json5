@@ -49,4 +49,11 @@
 			$ref: '#/components/schemas/Note',
 		},
 	},
+	errors: {
+		'4d0eeeba-a02c-4c3c-9966-ef60d38d2e7f': {
+			id: '4d0eeeba-a02c-4c3c-9966-ef60d38d2e7f',
+			code: 'NO_SUCH_CHANNEL',
+			description: '',
+		},
+	},
 }

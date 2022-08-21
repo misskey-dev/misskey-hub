@@ -71,4 +71,11 @@
 			$ref: '#/components/schemas/Note',
 		},
 	},
+	errors: {
+		'27e494ba-2ac2-48e8-893b-10d4d8c2387b': {
+			id: '27e494ba-2ac2-48e8-893b-10d4d8c2387b',
+			code: 'NO_SUCH_USER',
+			description: '',
+		},
+	},
 }

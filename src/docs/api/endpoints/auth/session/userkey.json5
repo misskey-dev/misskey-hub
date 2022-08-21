@@ -43,4 +43,21 @@
 			'user',
 		],
 	},
+	errors: {
+		'fcab192a-2c5a-43b7-8ad8-9b7054d8d40d': {
+			id: 'fcab192a-2c5a-43b7-8ad8-9b7054d8d40d',
+			code: 'NO_SUCH_APP',
+			description: '',
+		},
+		'5b5a1503-8bc8-4bd0-8054-dc189e8cdcb3': {
+			id: '5b5a1503-8bc8-4bd0-8054-dc189e8cdcb3',
+			code: 'NO_SUCH_SESSION',
+			description: '',
+		},
+		'8c8a4145-02cc-4cca-8e66-29ba60445a8e': {
+			id: '8c8a4145-02cc-4cca-8e66-29ba60445a8e',
+			code: 'PENDING_SESSION',
+			description: '',
+		},
+	},
 }

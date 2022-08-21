@@ -33,4 +33,11 @@
 			'id',
 		],
 	},
+	errors: {
+		'e2785b66-dca3-4087-9cac-b93c541cc425': {
+			id: 'e2785b66-dca3-4087-9cac-b93c541cc425',
+			code: 'NO_SUCH_EMOJI',
+			description: '',
+		},
+	},
 }

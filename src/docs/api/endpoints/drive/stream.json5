@@ -41,4 +41,5 @@
 			$ref: '#/components/schemas/DriveFile',
 		},
 	},
+	errors: {},
 }

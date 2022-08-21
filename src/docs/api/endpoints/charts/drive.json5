@@ -94,4 +94,5 @@
 			'remote.decSize',
 		],
 	},
+	errors: {},
 }

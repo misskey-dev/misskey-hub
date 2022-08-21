@@ -24,4 +24,21 @@
 		ref: 'MeDetailed',
 		$ref: '#/components/schemas/MeDetailed',
 	},
+	errors: {
+		'56734f8b-3928-431e-bf80-6ff87df40cb3': {
+			id: '56734f8b-3928-431e-bf80-6ff87df40cb3',
+			code: 'NO_SUCH_NOTE',
+			description: '',
+		},
+		'72dab508-c64d-498f-8740-a8eec1ba385a': {
+			id: '72dab508-c64d-498f-8740-a8eec1ba385a',
+			code: 'PIN_LIMIT_EXCEEDED',
+			description: '',
+		},
+		'8b18c2b7-68fe-4edb-9892-c0cbaeb6c913': {
+			id: '8b18c2b7-68fe-4edb-9892-c0cbaeb6c913',
+			code: 'ALREADY_PINNED',
+			description: '',
+		},
+	},
 }

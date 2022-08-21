@@ -23,4 +23,11 @@
 		ref: 'Hashtag',
 		$ref: '#/components/schemas/Hashtag',
 	},
+	errors: {
+		'110ee688-193e-4a3a-9ecf-c167b2e6981e': {
+			id: '110ee688-193e-4a3a-9ecf-c167b2e6981e',
+			code: 'NO_SUCH_HASHTAG',
+			description: '',
+		},
+	},
 }

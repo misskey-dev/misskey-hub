@@ -24,4 +24,21 @@
 		ref: 'UserLite',
 		$ref: '#/components/schemas/UserLite',
 	},
+	errors: {
+		'5b12c78d-2b28-4dca-99d2-f56139b42ff8': {
+			id: '5b12c78d-2b28-4dca-99d2-f56139b42ff8',
+			code: 'NO_SUCH_USER',
+			description: '',
+		},
+		'd9e400b9-36b0-4808-b1d8-79e707f1296c': {
+			id: 'd9e400b9-36b0-4808-b1d8-79e707f1296c',
+			code: 'FOLLOWEE_IS_YOURSELF',
+			description: '',
+		},
+		'5dbf82f5-c92b-40b1-87d1-6c8c0741fd09': {
+			id: '5dbf82f5-c92b-40b1-87d1-6c8c0741fd09',
+			code: 'NOT_FOLLOWING',
+			description: '',
+		},
+	},
 }

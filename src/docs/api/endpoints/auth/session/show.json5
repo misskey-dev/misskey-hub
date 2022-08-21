@@ -46,4 +46,11 @@
 			'token',
 		],
 	},
+	errors: {
+		'bd72c97d-eba7-4adb-a467-f171b8847250': {
+			id: 'bd72c97d-eba7-4adb-a467-f171b8847250',
+			code: 'NO_SUCH_SESSION',
+			description: '',
+		},
+	},
 }

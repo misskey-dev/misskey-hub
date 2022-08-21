@@ -33,4 +33,5 @@
 			$ref: '#/components/schemas/App',
 		},
 	},
+	errors: {},
 }

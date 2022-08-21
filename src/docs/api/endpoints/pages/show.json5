@@ -42,4 +42,11 @@
 		ref: 'Page',
 		$ref: '#/components/schemas/Page',
 	},
+	errors: {
+		'222120c0-3ead-4528-811b-b96f233388d7': {
+			id: '222120c0-3ead-4528-811b-b96f233388d7',
+			code: 'NO_SUCH_PAGE',
+			description: '',
+		},
+	},
 }

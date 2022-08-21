@@ -29,4 +29,11 @@
 			$ref: '#/components/schemas/Clip',
 		},
 	},
+	errors: {
+		'47db1a1c-b0af-458d-8fb4-986e4efafe1e': {
+			id: '47db1a1c-b0af-458d-8fb4-986e4efafe1e',
+			code: 'NO_SUCH_NOTE',
+			description: '',
+		},
+	},
 }

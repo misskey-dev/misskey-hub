@@ -24,4 +24,11 @@
 		ref: 'DriveFolder',
 		$ref: '#/components/schemas/DriveFolder',
 	},
+	errors: {
+		'd74ab9eb-bb09-4bba-bf24-fb58f761e1e9': {
+			id: 'd74ab9eb-bb09-4bba-bf24-fb58f761e1e9',
+			code: 'NO_SUCH_FOLDER',
+			description: '',
+		},
+	},
 }

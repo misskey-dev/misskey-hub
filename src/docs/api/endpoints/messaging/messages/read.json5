@@ -18,4 +18,11 @@
 		],
 	},
 	res: {},
+	errors: {
+		'86d56a2f-a9c3-4afb-b13c-3e9bfef9aa14': {
+			id: '86d56a2f-a9c3-4afb-b13c-3e9bfef9aa14',
+			code: 'NO_SUCH_MESSAGE',
+			description: '',
+		},
+	},
 }

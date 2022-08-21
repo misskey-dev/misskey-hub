@@ -94,4 +94,21 @@
 		ref: 'Antenna',
 		$ref: '#/components/schemas/Antenna',
 	},
+	errors: {
+		'10c673ac-8852-48eb-aa1f-f5b67f069290': {
+			id: '10c673ac-8852-48eb-aa1f-f5b67f069290',
+			code: 'NO_SUCH_ANTENNA',
+			description: '',
+		},
+		'1c6b35c9-943e-48c2-81e4-2844989407f7': {
+			id: '1c6b35c9-943e-48c2-81e4-2844989407f7',
+			code: 'NO_SUCH_USER_LIST',
+			description: '',
+		},
+		'109ed789-b6eb-456e-b8a9-6059d567d385': {
+			id: '109ed789-b6eb-456e-b8a9-6059d567d385',
+			code: 'NO_SUCH_USER_GROUP',
+			description: '',
+		},
+	},
 }

@@ -22,4 +22,5 @@
 		nullable: false,
 		optional: false,
 	},
+	errors: {},
 }

@@ -43,4 +43,5 @@
 			$ref: '#/components/schemas/Clip',
 		},
 	},
+	errors: {},
 }

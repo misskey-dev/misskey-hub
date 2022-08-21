@@ -18,4 +18,11 @@
 		],
 	},
 	res: {},
+	errors: {
+		'abc2ffa6-25b2-4380-ba99-321ff3a94555': {
+			id: 'abc2ffa6-25b2-4380-ba99-321ff3a94555',
+			code: 'NO_SUCH_USER',
+			description: '',
+		},
+	},
 }

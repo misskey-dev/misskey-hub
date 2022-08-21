@@ -18,4 +18,11 @@
 		],
 	},
 	res: {},
+	errors: {
+		'50f614d9-3047-4f7e-90d8-ad6b2d5fb098': {
+			id: '50f614d9-3047-4f7e-90d8-ad6b2d5fb098',
+			code: 'NO_SUCH_WEBHOOK',
+			description: '',
+		},
+	},
 }

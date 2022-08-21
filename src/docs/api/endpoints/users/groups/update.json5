@@ -30,4 +30,11 @@
 		ref: 'UserGroup',
 		$ref: '#/components/schemas/UserGroup',
 	},
+	errors: {
+		'9081cda3-7a9e-4fac-a6ce-908d70f282f6': {
+			id: '9081cda3-7a9e-4fac-a6ce-908d70f282f6',
+			code: 'NO_SUCH_GROUP',
+			description: '',
+		},
+	},
 }

@@ -18,4 +18,16 @@
 		],
 	},
 	res: {},
+	errors: {
+		'764d9fce-f9f2-4a0e-92b1-6ceac9a7ad37': {
+			id: '764d9fce-f9f2-4a0e-92b1-6ceac9a7ad37',
+			code: 'NO_SUCH_NOTE',
+			description: '',
+		},
+		'92f4426d-4196-4125-aa5b-02943e2ec8fc': {
+			id: '92f4426d-4196-4125-aa5b-02943e2ec8fc',
+			code: 'NOT_REACTED',
+			description: '',
+		},
+	},
 }

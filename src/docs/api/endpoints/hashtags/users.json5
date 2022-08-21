@@ -63,4 +63,5 @@
 			$ref: '#/components/schemas/UserDetailed',
 		},
 	},
+	errors: {},
 }

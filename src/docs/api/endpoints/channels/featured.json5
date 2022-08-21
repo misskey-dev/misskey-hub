@@ -22,4 +22,5 @@
 			$ref: '#/components/schemas/Channel',
 		},
 	},
+	errors: {},
 }

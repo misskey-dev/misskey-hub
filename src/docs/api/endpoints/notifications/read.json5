@@ -38,4 +38,11 @@
 		],
 	},
 	res: {},
+	errors: {
+		'efa929d5-05b5-47d1-beec-e6a4dbed011e': {
+			id: 'efa929d5-05b5-47d1-beec-e6a4dbed011e',
+			code: 'NO_SUCH_NOTIFICATION',
+			description: '',
+		},
+	},
 }

@@ -25,4 +25,5 @@
 		ref: 'UserList',
 		$ref: '#/components/schemas/UserList',
 	},
+	errors: {},
 }

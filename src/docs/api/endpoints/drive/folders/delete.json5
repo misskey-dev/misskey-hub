@@ -18,4 +18,16 @@
 		],
 	},
 	res: {},
+	errors: {
+		'1069098f-c281-440f-b085-f9932edbe091': {
+			id: '1069098f-c281-440f-b085-f9932edbe091',
+			code: 'NO_SUCH_FOLDER',
+			description: '',
+		},
+		'b0fc8a17-963c-405d-bfbc-859a487295e1': {
+			id: 'b0fc8a17-963c-405d-bfbc-859a487295e1',
+			code: 'HAS_CHILD_FILES_OR_FOLDERS',
+			description: '',
+		},
+	},
 }

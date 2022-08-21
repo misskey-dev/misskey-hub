@@ -1,6 +1,9 @@
 {
 	summary: 'オンラインになっているユーザ数を取得します。',
 	description: 'オンラインになっているユーザ数を取得します。',
+	tags: [
+		'meta',
+	],
 	requireCredential: false,
 	req: {},
 	res: {
@@ -14,4 +17,5 @@
 			},
 		},
 	},
+	errors: {},
 }

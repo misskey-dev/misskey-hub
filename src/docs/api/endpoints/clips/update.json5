@@ -39,4 +39,11 @@
 		ref: 'Clip',
 		$ref: '#/components/schemas/Clip',
 	},
+	errors: {
+		'b4d92d70-b216-46fa-9a3f-a8c811699257': {
+			id: 'b4d92d70-b216-46fa-9a3f-a8c811699257',
+			code: 'NO_SUCH_CLIP',
+			description: '',
+		},
+	},
 }

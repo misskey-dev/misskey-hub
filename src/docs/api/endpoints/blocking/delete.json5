@@ -24,4 +24,21 @@
 		ref: 'UserDetailedNotMe',
 		$ref: '#/components/schemas/UserDetailedNotMe',
 	},
+	errors: {
+		'8621d8bf-c358-4303-a066-5ea78610eb3f': {
+			id: '8621d8bf-c358-4303-a066-5ea78610eb3f',
+			code: 'NO_SUCH_USER',
+			description: '',
+		},
+		'06f6fac6-524b-473c-a354-e97a40ae6eac': {
+			id: '06f6fac6-524b-473c-a354-e97a40ae6eac',
+			code: 'BLOCKEE_IS_YOURSELF',
+			description: '',
+		},
+		'291b2efa-60c6-45c0-9f6a-045c8f9b02cd': {
+			id: '291b2efa-60c6-45c0-9f6a-045c8f9b02cd',
+			code: 'NOT_BLOCKING',
+			description: '',
+		},
+	},
 }

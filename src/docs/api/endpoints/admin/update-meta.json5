@@ -327,4 +327,5 @@
 		required: [],
 	},
 	res: {},
+	errors: {},
 }

@@ -65,4 +65,16 @@
 			$ref: '#/components/schemas/Following',
 		},
 	},
+	errors: {
+		'63e4aba4-4156-4e53-be25-c9559e42d71b': {
+			id: '63e4aba4-4156-4e53-be25-c9559e42d71b',
+			code: 'NO_SUCH_USER',
+			description: '',
+		},
+		'f6cdb0df-c19f-ec5c-7dbb-0ba84a1f92ba': {
+			id: 'f6cdb0df-c19f-ec5c-7dbb-0ba84a1f92ba',
+			code: 'FORBIDDEN',
+			description: '',
+		},
+	},
 }

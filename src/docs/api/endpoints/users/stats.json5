@@ -147,4 +147,11 @@
 			'driveUsage',
 		],
 	},
+	errors: {
+		'9e638e45-3b25-4ef7-8f95-07e8498f1819': {
+			id: '9e638e45-3b25-4ef7-8f95-07e8498f1819',
+			code: 'NO_SUCH_USER',
+			description: '',
+		},
+	},
 }

@@ -18,4 +18,11 @@
 		],
 	},
 	res: {},
+	errors: {
+		'ea0e37a6-90a3-4f58-ba6b-c328ca206fc7': {
+			id: 'ea0e37a6-90a3-4f58-ba6b-c328ca206fc7',
+			code: 'NO_SUCH_NOTE',
+			description: '',
+		},
+	},
 }

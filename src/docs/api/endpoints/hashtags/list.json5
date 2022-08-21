@@ -60,4 +60,5 @@
 			$ref: '#/components/schemas/Hashtag',
 		},
 	},
+	errors: {},
 }

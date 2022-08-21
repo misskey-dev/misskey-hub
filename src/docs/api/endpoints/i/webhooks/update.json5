@@ -57,4 +57,11 @@
 		],
 	},
 	res: {},
+	errors: {
+		'fb0fea69-da18-45b1-828d-bd4fd1612518': {
+			id: 'fb0fea69-da18-45b1-828d-bd4fd1612518',
+			code: 'NO_SUCH_WEBHOOK',
+			description: '',
+		},
+	},
 }

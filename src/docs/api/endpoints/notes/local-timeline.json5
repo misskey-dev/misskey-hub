@@ -58,4 +58,11 @@
 			$ref: '#/components/schemas/Note',
 		},
 	},
+	errors: {
+		'45a6eb02-7695-4393-b023-dd3be9aaaefd': {
+			id: '45a6eb02-7695-4393-b023-dd3be9aaaefd',
+			code: 'LTL_DISABLED',
+			description: '',
+		},
+	},
 }

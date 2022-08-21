@@ -65,4 +65,5 @@
 			$ref: '#/components/schemas/FederationInstance',
 		},
 	},
+	errors: {},
 }

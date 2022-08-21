@@ -48,4 +48,11 @@
 			$ref: '#/components/schemas/Note',
 		},
 	},
+	errors: {
+		'0332fc13-6ab2-4427-ae80-a9fadffd1a6b': {
+			id: '0332fc13-6ab2-4427-ae80-a9fadffd1a6b',
+			code: 'GTL_DISABLED',
+			description: '',
+		},
+	},
 }

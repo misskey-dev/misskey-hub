@@ -42,4 +42,5 @@
 			$ref: '#/components/schemas/Following',
 		},
 	},
+	errors: {},
 }

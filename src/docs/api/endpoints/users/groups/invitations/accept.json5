@@ -18,4 +18,11 @@
 		],
 	},
 	res: {},
+	errors: {
+		'98c11eca-c890-4f42-9806-c8c8303ebb5e': {
+			id: '98c11eca-c890-4f42-9806-c8c8303ebb5e',
+			code: 'NO_SUCH_INVITATION',
+			description: '',
+		},
+	},
 }

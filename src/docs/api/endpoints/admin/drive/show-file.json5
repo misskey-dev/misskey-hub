@@ -219,4 +219,11 @@
 			'isLink',
 		],
 	},
+	errors: {
+		'caf3ca38-c6e5-472e-a30c-b05377dcc240': {
+			id: 'caf3ca38-c6e5-472e-a30c-b05377dcc240',
+			code: 'NO_SUCH_FILE',
+			description: '',
+		},
+	},
 }

@@ -34,4 +34,11 @@
 		],
 	},
 	res: {},
+	errors: {
+		'd3aae5a7-6372-4cb4-b61c-f511ffc2d7cc': {
+			id: 'd3aae5a7-6372-4cb4-b61c-f511ffc2d7cc',
+			code: 'NO_SUCH_ANNOUNCEMENT',
+			description: '',
+		},
+	},
 }

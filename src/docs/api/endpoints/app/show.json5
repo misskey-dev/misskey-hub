@@ -24,4 +24,11 @@
 		ref: 'App',
 		$ref: '#/components/schemas/App',
 	},
+	errors: {
+		'dce83913-2dc6-4093-8a7b-71dbb11718a3': {
+			id: 'dce83913-2dc6-4093-8a7b-71dbb11718a3',
+			code: 'NO_SUCH_APP',
+			description: '',
+		},
+	},
 }

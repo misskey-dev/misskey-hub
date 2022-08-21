@@ -94,4 +94,5 @@
 			'pubActive',
 		],
 	},
+	errors: {},
 }
