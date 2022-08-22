@@ -3,7 +3,7 @@
 	<el-table :data="tableData" :border="false" stripe style="width: 100%">
 		<el-table-column type="expand">
 			<template #default="props">
-				<div style="padding: 8px;">
+				<div style="padding: 8px 16px;">
 					<MkSchemaViewerItem :schema="schema.properties[props.row.name]"/>
 				</div>
 			</template>

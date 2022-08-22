@@ -40,8 +40,7 @@ filePath: '${`docs/api/endpoints/${name}.json5`}'
 				content += `
 ## Parameters
 <ClientOnly>
-<MkSchemaViewer :schema="${JSON.stringify(def.req).replace(/"/g, '\'')}">
-</MkSchemaViewer>
+<MkSchemaViewerItemObject :schema="${JSON.stringify(def.req).replace(/"/g, '\'')}"/>
 </ClientOnly>
 `;
 			} else {
@@ -55,8 +54,7 @@ none
 				content += `
 ## Response
 <ClientOnly>
-<MkSchemaViewer :schema="${JSON.stringify(def.res).replace(/"/g, '\'')}">
-</MkSchemaViewer>
+<MkSchemaViewer :schema="${JSON.stringify(def.res).replace(/"/g, '\'')}"/>
 </ClientOnly>
 `;
 			} else {
@@ -69,16 +67,14 @@ none
 			content += `
 ## Errors
 <ClientOnly>
-<MkApiErrors :errors="${JSON.stringify(def.errors).replace(/"/g, '\'')}" :common-errors="${JSON.stringify(commonDef.errors).replace(/"/g, '\'')}">
-</MkApiErrors>
+<MkApiErrors :errors="${JSON.stringify(def.errors).replace(/"/g, '\'')}" :common-errors="${JSON.stringify(commonDef.errors).replace(/"/g, '\'')}"/>
 </ClientOnly>
 `;
 
 			content += `
 ## Resources
 <ClientOnly>
-<MkApiResources :def="${JSON.stringify(def).replace(/"/g, '\'')}">
-</MkApiResources>
+<MkApiResources :def="${JSON.stringify(def).replace(/"/g, '\'')}"/>
 </ClientOnly>
 `;
 
