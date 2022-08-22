@@ -31,7 +31,6 @@
 			</template>
 		</el-table-column>
 	</el-table>
-	<div v-if="schema.description" class="description">{{ schema.description }}</div>
 </div>
 </template>
 

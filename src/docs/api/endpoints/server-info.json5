@@ -36,7 +36,7 @@
 			mem: {
 				type: "object",
 				optional: false, nullable: false,
-				description: "ストレージについての情報です。",
+				description: "メモリについての情報です。",
 				properties: {
 					total: {
 						type: "number",
