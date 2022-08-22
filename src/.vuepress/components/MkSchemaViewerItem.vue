@@ -46,14 +46,7 @@
 		<div v-if="schema.description" class="description">{{ schema.description }}</div>
 	</div>
 	<div v-else-if="schema.type === 'object'" class="object">
-		<div class="label">Object:</div>
-		<div v-if="schema.description" class="description">{{ schema.description }}</div>
-		<div v-for="[k, v] in Object.entries(schema.properties)" class="kv">
-			<div class="k">{{ k }}<span v-if="(schema.required ?? []).includes(k)" class="required" title="Required">*</span></div>
-			<div class="v"><MkSchemaViewerItem :schema="v"/></div>
-		</div>
-		<span v-if="schema.nullable" class="nullable">(nullable)</span>
-		<div v-if="schema.default !== undefined" class="nullable">default: <code>{{ schema.default }}</code></div>
+		<MkSchemaViewerItemObject :schema="schema"/>
 	</div>
 </div>
 </template>
@@ -121,9 +114,9 @@ export default {
 	}
 
 	> .object {
-		border: solid 1px var(--c-border);
-		border-radius: 6px;
-		padding: 12px 16px;
+		//border: solid 1px var(--c-border);
+		//border-radius: 6px;
+		//padding: 12px 16px;
 
 		> .label {
 			margin-bottom: 0.5em;

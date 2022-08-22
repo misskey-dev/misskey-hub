@@ -3,12 +3,12 @@
 	<el-collapse v-model="expands">
 		<el-collapse-item title="API Console" name="console">
 			<el-form :model="form" label-width="120px">
-				<el-form-item label="Host">
+				<el-form-item label="Host" :rules="[{ required: true }]">
 					<el-input v-model="host" placeholder="misskey.example.com">
 						<template #prepend>https://</template>
 					</el-input>
 				</el-form-item>
-				<el-form-item label="Endpoint">
+				<el-form-item label="Endpoint" :rules="[{ required: true }]">
 					<el-input v-model="endpoint" placeholder="foo/bar">
 						<template #prepend>https://{{ host }}/api/</template>
 					</el-input>

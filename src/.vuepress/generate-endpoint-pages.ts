@@ -7,13 +7,13 @@ export async function generateEndpointPages(app: App) {
 	for (const locale of Object.keys(app.options.locales)) {
 		const endpointsDir = locale + 'docs/api/endpoints/';
 		const endpointPaths = glob.sync(__dirname + '/..' + endpointsDir + '**/*.json5');
+		const commonDef = JSON5.parse(fs.readFileSync(`${__dirname}/..${locale}docs/api/common.json5`, 'utf-8'));
 
 		const endpointsForIndex = [];
 
 		for (const endpointPath of endpointPaths) {
 			const name = endpointPath.slice(endpointPath.indexOf(endpointsDir)).replace(endpointsDir, '').replace('.json5', '');
-			const data = fs.readFileSync(endpointPath, 'utf-8');
-			const def = JSON5.parse(data);
+			const def = JSON5.parse(fs.readFileSync(endpointPath, 'utf-8'));
 			endpointsForIndex.push({
 				name: name, summary: def.summary, tags: def.tags ?? []
 			});
@@ -68,16 +68,19 @@ none
 
 			content += `
 ## Errors
+<ClientOnly>
+<MkApiErrors :errors="${JSON.stringify(def.errors).replace(/"/g, '\'')}" :common-errors="${JSON.stringify(commonDef.errors).replace(/"/g, '\'')}">
+</MkApiErrors>
+</ClientOnly>
 `;
 
-			for (const [id, err] of Object.entries(def.errors)) {
-				content += `
-### ${err.code}
-ID: \`${id}\`
-
-${err.description}
+			content += `
+## Resources
+<ClientOnly>
+<MkApiResources :def="${JSON.stringify(def).replace(/"/g, '\'')}">
+</MkApiResources>
+</ClientOnly>
 `;
-			}
 
 			const page = await createPage(app, {
 				path: endpointPath.slice(endpointPath.indexOf(endpointsDir)).replace('.json5', '.html'),
