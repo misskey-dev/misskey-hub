@@ -20,6 +20,7 @@ export async function generateEndpointPages(app: App) {
 	
 			let content = `---
 filePath: '${`docs/api/endpoints/${name}.json5`}'
+description: '${def.summary}'
 ---
 
 # \`${name}\`\n${def.description}`;
