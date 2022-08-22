@@ -1,6 +1,6 @@
 {
-	summary: '',
-	description: '',
+	summary: 'ノートのお気に入り情報一覧を取得します。',
+	description: 'ノートのお気に入り情報一覧を取得します。',
 	tags: [
 		'account',
 	],
@@ -36,6 +36,7 @@
 			ref: 'NoteFavorite',
 			$ref: 'misskey://NoteFavorite',
 		},
+		description: 'お気に入り情報一覧。',
 	},
 	errors: {},
 }
