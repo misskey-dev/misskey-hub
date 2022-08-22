@@ -32,7 +32,6 @@
 			</div>
 			<div v-else-if="schema.type === 'array'" class="array">
 				<div class="label">Array of:</div>
-				<div v-if="schema.description" class="description">{{ schema.description }}</div>
 				<MkSchemaViewerItem :schema="schema.items"/>
 				<el-tag v-if="schema.nullable" class="ml-2" type="info">nullable</el-tag>
 			</div>
