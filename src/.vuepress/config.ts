@@ -95,7 +95,6 @@ export default defineUserConfig<DefaultThemeOptions>({
 							children: [
 								'/docs/api',
 								'/docs/api/streaming',
-								'/docs/api/entity',
 								'/docs/api/endpoints.html',
 								'/docs/features/webhook',
 							]
@@ -204,7 +203,6 @@ export default defineUserConfig<DefaultThemeOptions>({
 							children: [
 								'/en/docs/api',
 								'/en/docs/api/streaming',
-								'/en/docs/api/entity',
 								'/en/docs/api/endpoints.html',
 							]
 						},

@@ -1,4 +1,66 @@
 {
+	refs: {
+		user: {
+			type: 'object',
+			properties: {
+				id: {
+					type: 'string',
+				},
+				createdAt: {
+					type: 'string',
+				},
+				username: {
+					type: 'string',
+				},
+				host: {
+					type: 'string',
+					nullable: true,
+				},
+				name: {
+					type: 'string',
+				},
+				onlineStatus: {
+					type: 'string',
+					enum: ['online', 'active', 'offline', 'unknown',],
+				},
+				avatarUrl: {
+					type: 'string',
+				},
+				avatarBlurhash: {
+					type: 'string',
+				},
+			},
+		},
+		note: {
+			type: 'object',
+			properties: {
+				id: {
+					type: 'string',
+				},
+				createdAt: {
+					type: 'string',
+				},
+				text: {
+					type: 'string',
+					nullable: true,
+				},
+				cw: {
+					type: 'string',
+					nullable: true,
+				},
+				user: {
+					$ref: 'misskey://User',
+				},
+				userId: {
+					type: 'string',
+				},
+				visibility: {
+					type: 'string',
+					enum: ['public', 'home', 'followers', 'specified',],
+				},
+			},
+		},
+	},
 	errors: {
 		'1384574d-a912-4b81-8601-c7b1c4085df1': {
 			id: '1384574d-a912-4b81-8601-c7b1c4085df1',

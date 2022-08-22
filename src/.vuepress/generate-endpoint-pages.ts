@@ -19,7 +19,7 @@ export async function generateEndpointPages(app: App) {
 			});
 	
 			let content = `---
-filePath: '${`docs/api/endpoints/${name}.json5`}'
+filePath: '${locale + `docs/api/endpoints/${name}.json5`}'
 description: '${def.summary}'
 ---
 
@@ -99,5 +99,22 @@ description: '${def.summary}'
 			content: indexContent,
 		});
 		app.pages.push(indexPage);
+
+		for (const [k, v] of Object.entries(commonDef.refs)) {
+			const page = await createPage(app, {
+				path: locale + `docs/api/entity/${k}.html`,
+				content: `---
+filePath: '${locale + `docs/api/common.json5`}'
+description: '${v.description}'
+---
+
+# \`${k}\`
+<ClientOnly>
+<MkSchemaViewer :schema="${JSON.stringify(v).replace(/"/g, '\'')}"/>
+</ClientOnly>
+				`,
+			});
+			app.pages.push(page);
+		}
 	}
 }
