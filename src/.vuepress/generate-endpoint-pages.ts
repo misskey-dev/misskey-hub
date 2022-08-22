@@ -25,7 +25,7 @@ filePath: '${`docs/api/endpoints/${name}.json5`}'
 # \`${name}\`\n${def.description}`;
 
 			if (def.requireCredential) {
-				content += `\n\nCredential required.\n`;
+				content += `\n\n<el-alert title="クレデンシャル必須" type="success" :closable="false" />\n`;
 			}
 
 			content += `
@@ -38,41 +38,41 @@ filePath: '${`docs/api/endpoints/${name}.json5`}'
 	
 			if (def.req && Object.keys(def.req).length > 0) {
 				content += `
-## Parameters
+## パラメータ
 <ClientOnly>
 <MkSchemaViewerItemObject :schema="${JSON.stringify(def.req).replace(/"/g, '\'')}"/>
 </ClientOnly>
 `;
 			} else {
 				content += `
-## Parameters
-none
+## パラメータ
+<el-alert title="なし" type="success" :closable="false" />
 `;
 			}
 	
 			if (def.res) {
 				content += `
-## Response
+## レスポンス
 <ClientOnly>
 <MkSchemaViewer :schema="${JSON.stringify(def.res).replace(/"/g, '\'')}"/>
 </ClientOnly>
 `;
 			} else {
 				content += `
-## Response
-none
+## レスポンス
+<el-alert title="なし" type="success" :closable="false" />
 `;
 			}
 
 			content += `
-## Errors
+## エラー
 <ClientOnly>
 <MkApiErrors :errors="${JSON.stringify(def.errors).replace(/"/g, '\'')}" :common-errors="${JSON.stringify(commonDef.errors).replace(/"/g, '\'')}"/>
 </ClientOnly>
 `;
 
 			content += `
-## Resources
+## リソース
 <ClientOnly>
 <MkApiResources :def="${JSON.stringify(def).replace(/"/g, '\'')}"/>
 </ClientOnly>
