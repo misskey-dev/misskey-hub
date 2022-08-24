@@ -1,6 +1,6 @@
 {
-	summary: '',
-	description: '',
+	summary: 'ローカルタイムラインを取得します。',
+	description: 'ローカルタイムラインを取得します。ローカルタイムラインは、インスタンス内の全てのパブリックなノートが含まれます。',
 	tags: [
 		'notes',
 	],
@@ -11,7 +11,7 @@
 			withFiles: {
 				type: 'boolean',
 				default: false,
-				description: 'Only show notes that have attached files.',
+				description: 'ファイルが添付されたノートのみ取得するか否か',
 			},
 			fileType: {
 				type: 'array',
@@ -62,7 +62,7 @@
 		'45a6eb02-7695-4393-b023-dd3be9aaaefd': {
 			id: '45a6eb02-7695-4393-b023-dd3be9aaaefd',
 			code: 'LTL_DISABLED',
-			description: '',
+			description: 'ローカルタイムラインが無効になっています。',
 		},
 	},
 }

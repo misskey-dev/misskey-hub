@@ -1,6 +1,6 @@
 {
-	summary: '',
-	description: '',
+	summary: 'グローバルタイムラインを取得します。',
+	description: 'グローバルタイムラインを取得します。グローバルタイムラインは、インスタンスが受信した全てのパブリックな投稿が含まれます。',
 	tags: [
 		'notes',
 	],
@@ -11,7 +11,7 @@
 			withFiles: {
 				type: 'boolean',
 				default: false,
-				description: 'Only show notes that have attached files.',
+				description: 'ファイルが添付されたノートのみ取得するか否か',
 			},
 			limit: {
 				type: 'integer',
@@ -52,7 +52,7 @@
 		'0332fc13-6ab2-4427-ae80-a9fadffd1a6b': {
 			id: '0332fc13-6ab2-4427-ae80-a9fadffd1a6b',
 			code: 'GTL_DISABLED',
-			description: '',
+			description: 'グローバルタイムラインが無効になっています。',
 		},
 	},
 }
