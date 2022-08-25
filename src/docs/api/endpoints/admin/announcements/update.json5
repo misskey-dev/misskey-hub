@@ -1,0 +1,44 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'admin',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {
+			id: {
+				type: 'string',
+				format: 'misskey:id',
+			},
+			title: {
+				type: 'string',
+				minLength: 1,
+			},
+			text: {
+				type: 'string',
+				minLength: 1,
+			},
+			imageUrl: {
+				type: 'string',
+				nullable: true,
+				minLength: 1,
+			},
+		},
+		required: [
+			'id',
+			'title',
+			'text',
+			'imageUrl',
+		],
+	},
+	res: {},
+	errors: {
+		'd3aae5a7-6372-4cb4-b61c-f511ffc2d7cc': {
+			id: 'd3aae5a7-6372-4cb4-b61c-f511ffc2d7cc',
+			code: 'NO_SUCH_ANNOUNCEMENT',
+			description: '',
+		},
+	},
+}

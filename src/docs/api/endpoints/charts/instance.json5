@@ -1,0 +1,214 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'charts',
+	],
+	requireCredential: false,
+	req: {
+		type: 'object',
+		properties: {
+			span: {
+				type: 'string',
+				enum: [
+					'day',
+					'hour',
+				],
+			},
+			limit: {
+				type: 'integer',
+				minimum: 1,
+				maximum: 500,
+				default: 30,
+			},
+			offset: {
+				type: 'integer',
+				nullable: true,
+				default: null,
+			},
+			host: {
+				type: 'string',
+			},
+		},
+		required: [
+			'span',
+			'host',
+		],
+	},
+	res: {
+		type: 'object',
+		properties: {
+			'requests.failed': {
+				type: 'array',
+				items: {
+					type: 'number',
+				},
+			},
+			'requests.succeeded': {
+				type: 'array',
+				items: {
+					type: 'number',
+				},
+			},
+			'requests.received': {
+				type: 'array',
+				items: {
+					type: 'number',
+				},
+			},
+			'notes.total': {
+				type: 'array',
+				items: {
+					type: 'number',
+				},
+			},
+			'notes.inc': {
+				type: 'array',
+				items: {
+					type: 'number',
+				},
+			},
+			'notes.dec': {
+				type: 'array',
+				items: {
+					type: 'number',
+				},
+			},
+			'notes.diffs.normal': {
+				type: 'array',
+				items: {
+					type: 'number',
+				},
+			},
+			'notes.diffs.reply': {
+				type: 'array',
+				items: {
+					type: 'number',
+				},
+			},
+			'notes.diffs.renote': {
+				type: 'array',
+				items: {
+					type: 'number',
+				},
+			},
+			'notes.diffs.withFile': {
+				type: 'array',
+				items: {
+					type: 'number',
+				},
+			},
+			'users.total': {
+				type: 'array',
+				items: {
+					type: 'number',
+				},
+			},
+			'users.inc': {
+				type: 'array',
+				items: {
+					type: 'number',
+				},
+			},
+			'users.dec': {
+				type: 'array',
+				items: {
+					type: 'number',
+				},
+			},
+			'following.total': {
+				type: 'array',
+				items: {
+					type: 'number',
+				},
+			},
+			'following.inc': {
+				type: 'array',
+				items: {
+					type: 'number',
+				},
+			},
+			'following.dec': {
+				type: 'array',
+				items: {
+					type: 'number',
+				},
+			},
+			'followers.total': {
+				type: 'array',
+				items: {
+					type: 'number',
+				},
+			},
+			'followers.inc': {
+				type: 'array',
+				items: {
+					type: 'number',
+				},
+			},
+			'followers.dec': {
+				type: 'array',
+				items: {
+					type: 'number',
+				},
+			},
+			'drive.totalFiles': {
+				type: 'array',
+				items: {
+					type: 'number',
+				},
+			},
+			'drive.incFiles': {
+				type: 'array',
+				items: {
+					type: 'number',
+				},
+			},
+			'drive.decFiles': {
+				type: 'array',
+				items: {
+					type: 'number',
+				},
+			},
+			'drive.incUsage': {
+				type: 'array',
+				items: {
+					type: 'number',
+				},
+			},
+			'drive.decUsage': {
+				type: 'array',
+				items: {
+					type: 'number',
+				},
+			},
+		},
+		required: [
+			'requests.failed',
+			'requests.succeeded',
+			'requests.received',
+			'notes.total',
+			'notes.inc',
+			'notes.dec',
+			'notes.diffs.normal',
+			'notes.diffs.reply',
+			'notes.diffs.renote',
+			'notes.diffs.withFile',
+			'users.total',
+			'users.inc',
+			'users.dec',
+			'following.total',
+			'following.inc',
+			'following.dec',
+			'followers.total',
+			'followers.inc',
+			'followers.dec',
+			'drive.totalFiles',
+			'drive.incFiles',
+			'drive.decFiles',
+			'drive.incUsage',
+			'drive.decUsage',
+		],
+	},
+	errors: {},
+}

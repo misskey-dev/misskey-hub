@@ -6,7 +6,7 @@ description: 'MFMで使われている技術や考え方について紹介しま
 
 こんにちは、まりはちです🚀
 
-Misskey関係では主にMFM(Misskey Flavored Markdown)やAiScript、MisskeyPagesの開発で関わっています。よろしくお願いします。
+Misskey関係では主にMFM(Markup language For Misskey)やAiScript、MisskeyPagesの開発で関わっています。よろしくお願いします。
 
 今回の記事では、MFMで使われている技術や考え方について紹介しようと思います。
 少し専門的な内容を含むと思いますが、少々お付き合いください！

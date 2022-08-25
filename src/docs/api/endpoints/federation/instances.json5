@@ -1,0 +1,69 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'federation',
+	],
+	requireCredential: false,
+	req: {
+		type: 'object',
+		properties: {
+			host: {
+				type: 'string',
+				nullable: true,
+				description: 'Omit or use `null` to not filter by host.',
+			},
+			blocked: {
+				type: 'boolean',
+				nullable: true,
+			},
+			notResponding: {
+				type: 'boolean',
+				nullable: true,
+			},
+			suspended: {
+				type: 'boolean',
+				nullable: true,
+			},
+			federating: {
+				type: 'boolean',
+				nullable: true,
+			},
+			subscribing: {
+				type: 'boolean',
+				nullable: true,
+			},
+			publishing: {
+				type: 'boolean',
+				nullable: true,
+			},
+			limit: {
+				type: 'integer',
+				minimum: 1,
+				maximum: 100,
+				default: 30,
+			},
+			offset: {
+				type: 'integer',
+				default: 0,
+			},
+			sort: {
+				type: 'string',
+			},
+		},
+		required: [],
+	},
+	res: {
+		type: 'array',
+		optional: false,
+		nullable: false,
+		items: {
+			type: 'object',
+			optional: false,
+			nullable: false,
+			ref: 'FederationInstance',
+			$ref: 'misskey://FederationInstance',
+		},
+	},
+	errors: {},
+}

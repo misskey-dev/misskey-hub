@@ -1,0 +1,94 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'pages',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {
+			pageId: {
+				type: 'string',
+				format: 'misskey:id',
+			},
+			title: {
+				type: 'string',
+			},
+			name: {
+				type: 'string',
+				minLength: 1,
+			},
+			summary: {
+				type: 'string',
+				nullable: true,
+			},
+			content: {
+				type: 'array',
+				items: {
+					type: 'object',
+					additionalProperties: true,
+				},
+			},
+			variables: {
+				type: 'array',
+				items: {
+					type: 'object',
+					additionalProperties: true,
+				},
+			},
+			script: {
+				type: 'string',
+			},
+			eyeCatchingImageId: {
+				type: 'string',
+				format: 'misskey:id',
+				nullable: true,
+			},
+			font: {
+				type: 'string',
+				enum: [
+					'serif',
+					'sans-serif',
+				],
+			},
+			alignCenter: {
+				type: 'boolean',
+			},
+			hideTitleWhenPinned: {
+				type: 'boolean',
+			},
+		},
+		required: [
+			'pageId',
+			'title',
+			'name',
+			'content',
+			'variables',
+			'script',
+		],
+	},
+	res: {},
+	errors: {
+		'21149b9e-3616-4778-9592-c4ce89f5a864': {
+			id: '21149b9e-3616-4778-9592-c4ce89f5a864',
+			code: 'NO_SUCH_PAGE',
+			description: '',
+		},
+		'3c15cd52-3b4b-4274-967d-6456fc4f792b': {
+			id: '3c15cd52-3b4b-4274-967d-6456fc4f792b',
+			code: 'ACCESS_DENIED',
+			description: '',
+		},
+		'cfc23c7c-3887-490e-af30-0ed576703c82': {
+			id: 'cfc23c7c-3887-490e-af30-0ed576703c82',
+			code: 'NO_SUCH_FILE',
+			description: '',
+		},
+		'2298a392-d4a1-44c5-9ebb-ac1aeaa5a9ab': {
+			id: '2298a392-d4a1-44c5-9ebb-ac1aeaa5a9ab',
+			code: 'NAME_ALREADY_EXISTS',
+			description: '',
+		},
+	},
+}

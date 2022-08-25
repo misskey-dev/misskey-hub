@@ -1,0 +1,56 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'users',
+	],
+	requireCredential: false,
+	req: {
+		type: 'object',
+		properties: {
+			username: {
+				type: 'string',
+				nullable: true,
+			},
+			host: {
+				type: 'string',
+				nullable: true,
+			},
+			limit: {
+				type: 'integer',
+				minimum: 1,
+				maximum: 100,
+				default: 10,
+			},
+			detail: {
+				type: 'boolean',
+				default: true,
+			},
+		},
+		anyOf: [
+			{
+				required: [
+					'username',
+				],
+			},
+			{
+				required: [
+					'host',
+				],
+			},
+		],
+	},
+	res: {
+		type: 'array',
+		optional: false,
+		nullable: false,
+		items: {
+			type: 'object',
+			optional: false,
+			nullable: false,
+			ref: 'User',
+			$ref: 'misskey://User',
+		},
+	},
+	errors: {},
+}

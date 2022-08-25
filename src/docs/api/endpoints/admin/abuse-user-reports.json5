@@ -1,0 +1,142 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'admin',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {
+			limit: {
+				type: 'integer',
+				minimum: 1,
+				maximum: 100,
+				default: 10,
+			},
+			sinceId: {
+				type: 'string',
+				format: 'misskey:id',
+			},
+			untilId: {
+				type: 'string',
+				format: 'misskey:id',
+			},
+			state: {
+				type: 'string',
+				nullable: true,
+				default: null,
+			},
+			reporterOrigin: {
+				type: 'string',
+				enum: [
+					'combined',
+					'local',
+					'remote',
+				],
+				default: 'combined',
+			},
+			targetUserOrigin: {
+				type: 'string',
+				enum: [
+					'combined',
+					'local',
+					'remote',
+				],
+				default: 'combined',
+			},
+			forwarded: {
+				type: 'boolean',
+				default: false,
+			},
+		},
+		required: [],
+	},
+	res: {
+		type: 'array',
+		optional: false,
+		nullable: false,
+		items: {
+			type: 'object',
+			optional: false,
+			nullable: false,
+			properties: {
+				id: {
+					type: 'string',
+					nullable: false,
+					optional: false,
+					format: 'id',
+					example: 'xxxxxxxxxx',
+				},
+				createdAt: {
+					type: 'string',
+					nullable: false,
+					optional: false,
+					format: 'date-time',
+				},
+				comment: {
+					type: 'string',
+					nullable: false,
+					optional: false,
+				},
+				resolved: {
+					type: 'boolean',
+					nullable: false,
+					optional: false,
+					example: false,
+				},
+				reporterId: {
+					type: 'string',
+					nullable: false,
+					optional: false,
+					format: 'id',
+				},
+				targetUserId: {
+					type: 'string',
+					nullable: false,
+					optional: false,
+					format: 'id',
+				},
+				assigneeId: {
+					type: 'string',
+					nullable: true,
+					optional: false,
+					format: 'id',
+				},
+				reporter: {
+					type: 'object',
+					nullable: false,
+					optional: false,
+					ref: 'User',
+					$ref: 'misskey://User',
+				},
+				targetUser: {
+					type: 'object',
+					nullable: false,
+					optional: false,
+					ref: 'User',
+					$ref: 'misskey://User',
+				},
+				assignee: {
+					type: 'object',
+					nullable: true,
+					optional: true,
+					ref: 'User',
+					$ref: 'misskey://User',
+				},
+			},
+			required: [
+				'id',
+				'createdAt',
+				'comment',
+				'resolved',
+				'reporterId',
+				'targetUserId',
+				'assigneeId',
+				'reporter',
+				'targetUser',
+			],
+		},
+	},
+	errors: {},
+}

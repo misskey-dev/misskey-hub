@@ -1,0 +1,68 @@
+{
+	summary: 'ローカルタイムラインを取得します。',
+	description: 'ローカルタイムラインを取得します。ローカルタイムラインは、インスタンス内の全てのパブリックなノートが含まれます。',
+	tags: [
+		'notes',
+	],
+	requireCredential: false,
+	req: {
+		type: 'object',
+		properties: {
+			withFiles: {
+				type: 'boolean',
+				default: false,
+				description: 'ファイルが添付されたノートのみ取得するか否か',
+			},
+			fileType: {
+				type: 'array',
+				items: {
+					type: 'string',
+				},
+			},
+			excludeNsfw: {
+				type: 'boolean',
+				default: false,
+			},
+			limit: {
+				type: 'integer',
+				minimum: 1,
+				maximum: 100,
+				default: 10,
+			},
+			sinceId: {
+				type: 'string',
+				format: 'misskey:id',
+			},
+			untilId: {
+				type: 'string',
+				format: 'misskey:id',
+			},
+			sinceDate: {
+				type: 'integer',
+			},
+			untilDate: {
+				type: 'integer',
+			},
+		},
+		required: [],
+	},
+	res: {
+		type: 'array',
+		optional: false,
+		nullable: false,
+		items: {
+			type: 'object',
+			optional: false,
+			nullable: false,
+			ref: 'Note',
+			$ref: 'misskey://Note',
+		},
+	},
+	errors: {
+		'45a6eb02-7695-4393-b023-dd3be9aaaefd': {
+			id: '45a6eb02-7695-4393-b023-dd3be9aaaefd',
+			code: 'LTL_DISABLED',
+			description: 'ローカルタイムラインが無効になっています。',
+		},
+	},
+}

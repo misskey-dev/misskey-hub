@@ -1,0 +1,88 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'pages',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {
+			title: {
+				type: 'string',
+			},
+			name: {
+				type: 'string',
+				minLength: 1,
+			},
+			summary: {
+				type: 'string',
+				nullable: true,
+			},
+			content: {
+				type: 'array',
+				items: {
+					type: 'object',
+					additionalProperties: true,
+				},
+			},
+			variables: {
+				type: 'array',
+				items: {
+					type: 'object',
+					additionalProperties: true,
+				},
+			},
+			script: {
+				type: 'string',
+			},
+			eyeCatchingImageId: {
+				type: 'string',
+				format: 'misskey:id',
+				nullable: true,
+			},
+			font: {
+				type: 'string',
+				enum: [
+					'serif',
+					'sans-serif',
+				],
+				default: 'sans-serif',
+			},
+			alignCenter: {
+				type: 'boolean',
+				default: false,
+			},
+			hideTitleWhenPinned: {
+				type: 'boolean',
+				default: false,
+			},
+		},
+		required: [
+			'title',
+			'name',
+			'content',
+			'variables',
+			'script',
+		],
+	},
+	res: {
+		type: 'object',
+		optional: false,
+		nullable: false,
+		ref: 'Page',
+		$ref: 'misskey://Page',
+	},
+	errors: {
+		'b7b97489-0f66-4b12-a5ff-b21bd63f6e1c': {
+			id: 'b7b97489-0f66-4b12-a5ff-b21bd63f6e1c',
+			code: 'NO_SUCH_FILE',
+			description: '',
+		},
+		'4650348e-301c-499a-83c9-6aa988c66bc1': {
+			id: '4650348e-301c-499a-83c9-6aa988c66bc1',
+			code: 'NAME_ALREADY_EXISTS',
+			description: '',
+		},
+	},
+}

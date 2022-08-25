@@ -1,0 +1,26 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'admin',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {
+			reportId: {
+				type: 'string',
+				format: 'misskey:id',
+			},
+			forward: {
+				type: 'boolean',
+				default: false,
+			},
+		},
+		required: [
+			'reportId',
+		],
+	},
+	res: {},
+	errors: {},
+}

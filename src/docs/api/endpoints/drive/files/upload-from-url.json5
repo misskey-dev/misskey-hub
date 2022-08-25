@@ -1,0 +1,46 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'drive',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {
+			url: {
+				type: 'string',
+			},
+			folderId: {
+				type: 'string',
+				format: 'misskey:id',
+				nullable: true,
+				default: null,
+			},
+			isSensitive: {
+				type: 'boolean',
+				default: false,
+			},
+			comment: {
+				type: 'string',
+				nullable: true,
+				maxLength: 512,
+				default: null,
+			},
+			marker: {
+				type: 'string',
+				nullable: true,
+				default: null,
+			},
+			force: {
+				type: 'boolean',
+				default: false,
+			},
+		},
+		required: [
+			'url',
+		],
+	},
+	res: {},
+	errors: {},
+}

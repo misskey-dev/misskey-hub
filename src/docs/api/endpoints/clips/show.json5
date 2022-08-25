@@ -1,0 +1,34 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'clips',
+	],
+	requireCredential: false,
+	req: {
+		type: 'object',
+		properties: {
+			clipId: {
+				type: 'string',
+				format: 'misskey:id',
+			},
+		},
+		required: [
+			'clipId',
+		],
+	},
+	res: {
+		type: 'object',
+		optional: false,
+		nullable: false,
+		ref: 'Clip',
+		$ref: 'misskey://Clip',
+	},
+	errors: {
+		'c3c5fe33-d62c-44d2-9ea5-d997703f5c20': {
+			id: 'c3c5fe33-d62c-44d2-9ea5-d997703f5c20',
+			code: 'NO_SUCH_CLIP',
+			description: '',
+		},
+	},
+}

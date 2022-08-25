@@ -1,0 +1,15 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'notifications',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {},
+		required: [],
+	},
+	res: {},
+	errors: {},
+}

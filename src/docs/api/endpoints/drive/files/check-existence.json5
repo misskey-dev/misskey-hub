@@ -1,0 +1,25 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'drive',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {
+			md5: {
+				type: 'string',
+			},
+		},
+		required: [
+			'md5',
+		],
+	},
+	res: {
+		type: 'boolean',
+		optional: false,
+		nullable: false,
+	},
+	errors: {},
+}

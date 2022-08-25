@@ -1,0 +1,140 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'charts',
+	],
+	requireCredential: false,
+	req: {
+		type: 'object',
+		properties: {
+			span: {
+				type: 'string',
+				enum: [
+					'day',
+					'hour',
+				],
+			},
+			limit: {
+				type: 'integer',
+				minimum: 1,
+				maximum: 500,
+				default: 30,
+			},
+			offset: {
+				type: 'integer',
+				nullable: true,
+				default: null,
+			},
+		},
+		required: [
+			'span',
+		],
+	},
+	res: {
+		type: 'object',
+		properties: {
+			'local.total': {
+				type: 'array',
+				items: {
+					type: 'number',
+				},
+			},
+			'local.inc': {
+				type: 'array',
+				items: {
+					type: 'number',
+				},
+			},
+			'local.dec': {
+				type: 'array',
+				items: {
+					type: 'number',
+				},
+			},
+			'local.diffs.normal': {
+				type: 'array',
+				items: {
+					type: 'number',
+				},
+			},
+			'local.diffs.reply': {
+				type: 'array',
+				items: {
+					type: 'number',
+				},
+			},
+			'local.diffs.renote': {
+				type: 'array',
+				items: {
+					type: 'number',
+				},
+			},
+			'local.diffs.withFile': {
+				type: 'array',
+				items: {
+					type: 'number',
+				},
+			},
+			'remote.total': {
+				type: 'array',
+				items: {
+					type: 'number',
+				},
+			},
+			'remote.inc': {
+				type: 'array',
+				items: {
+					type: 'number',
+				},
+			},
+			'remote.dec': {
+				type: 'array',
+				items: {
+					type: 'number',
+				},
+			},
+			'remote.diffs.normal': {
+				type: 'array',
+				items: {
+					type: 'number',
+				},
+			},
+			'remote.diffs.reply': {
+				type: 'array',
+				items: {
+					type: 'number',
+				},
+			},
+			'remote.diffs.renote': {
+				type: 'array',
+				items: {
+					type: 'number',
+				},
+			},
+			'remote.diffs.withFile': {
+				type: 'array',
+				items: {
+					type: 'number',
+				},
+			},
+		},
+		required: [
+			'local.total',
+			'local.inc',
+			'local.dec',
+			'local.diffs.normal',
+			'local.diffs.reply',
+			'local.diffs.renote',
+			'local.diffs.withFile',
+			'remote.total',
+			'remote.inc',
+			'remote.dec',
+			'remote.diffs.normal',
+			'remote.diffs.reply',
+			'remote.diffs.renote',
+			'remote.diffs.withFile',
+		],
+	},
+	errors: {},
+}

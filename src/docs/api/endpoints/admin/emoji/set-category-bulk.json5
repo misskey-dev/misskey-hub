@@ -1,0 +1,30 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'admin',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {
+			ids: {
+				type: 'array',
+				items: {
+					type: 'string',
+					format: 'misskey:id',
+				},
+			},
+			category: {
+				type: 'string',
+				nullable: true,
+				description: 'Use `null` to reset the category.',
+			},
+		},
+		required: [
+			'ids',
+		],
+	},
+	res: {},
+	errors: {},
+}

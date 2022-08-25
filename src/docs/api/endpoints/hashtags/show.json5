@@ -1,0 +1,33 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'hashtags',
+	],
+	requireCredential: false,
+	req: {
+		type: 'object',
+		properties: {
+			tag: {
+				type: 'string',
+			},
+		},
+		required: [
+			'tag',
+		],
+	},
+	res: {
+		type: 'object',
+		optional: false,
+		nullable: false,
+		ref: 'Hashtag',
+		$ref: 'misskey://Hashtag',
+	},
+	errors: {
+		'110ee688-193e-4a3a-9ecf-c167b2e6981e': {
+			id: '110ee688-193e-4a3a-9ecf-c167b2e6981e',
+			code: 'NO_SUCH_HASHTAG',
+			description: '',
+		},
+	},
+}

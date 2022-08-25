@@ -1,0 +1,44 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'admin',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {
+			id: {
+				type: 'string',
+				format: 'misskey:id',
+			},
+			name: {
+				type: 'string',
+			},
+			category: {
+				type: 'string',
+				nullable: true,
+				description: 'Use `null` to reset the category.',
+			},
+			aliases: {
+				type: 'array',
+				items: {
+					type: 'string',
+				},
+			},
+		},
+		required: [
+			'id',
+			'name',
+			'aliases',
+		],
+	},
+	res: {},
+	errors: {
+		'684dec9d-a8c2-4364-9aa8-456c49cb1dc8': {
+			id: '684dec9d-a8c2-4364-9aa8-456c49cb1dc8',
+			code: 'NO_SUCH_EMOJI',
+			description: '',
+		},
+	},
+}

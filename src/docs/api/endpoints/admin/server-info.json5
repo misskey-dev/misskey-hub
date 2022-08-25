@@ -1,0 +1,128 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'admin',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {},
+		required: [],
+	},
+	res: {
+		type: 'object',
+		optional: false,
+		nullable: false,
+		properties: {
+			machine: {
+				type: 'string',
+				optional: false,
+				nullable: false,
+			},
+			os: {
+				type: 'string',
+				optional: false,
+				nullable: false,
+				example: 'linux',
+			},
+			node: {
+				type: 'string',
+				optional: false,
+				nullable: false,
+			},
+			psql: {
+				type: 'string',
+				optional: false,
+				nullable: false,
+			},
+			cpu: {
+				type: 'object',
+				optional: false,
+				nullable: false,
+				properties: {
+					model: {
+						type: 'string',
+						optional: false,
+						nullable: false,
+					},
+					cores: {
+						type: 'number',
+						optional: false,
+						nullable: false,
+					},
+				},
+				required: [
+					'model',
+					'cores',
+				],
+			},
+			mem: {
+				type: 'object',
+				optional: false,
+				nullable: false,
+				properties: {
+					total: {
+						type: 'number',
+						optional: false,
+						nullable: false,
+						format: 'bytes',
+					},
+				},
+				required: [
+					'total',
+				],
+			},
+			fs: {
+				type: 'object',
+				optional: false,
+				nullable: false,
+				properties: {
+					total: {
+						type: 'number',
+						optional: false,
+						nullable: false,
+						format: 'bytes',
+					},
+					used: {
+						type: 'number',
+						optional: false,
+						nullable: false,
+						format: 'bytes',
+					},
+				},
+				required: [
+					'total',
+					'used',
+				],
+			},
+			net: {
+				type: 'object',
+				optional: false,
+				nullable: false,
+				properties: {
+					interface: {
+						type: 'string',
+						optional: false,
+						nullable: false,
+						example: 'eth0',
+					},
+				},
+				required: [
+					'interface',
+				],
+			},
+		},
+		required: [
+			'machine',
+			'os',
+			'node',
+			'psql',
+			'cpu',
+			'mem',
+			'fs',
+			'net',
+		],
+	},
+	errors: {},
+}

@@ -1,0 +1,41 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'users',
+	],
+	requireCredential: false,
+	req: {
+		type: 'object',
+		properties: {
+			emailAddress: {
+				type: 'string',
+			},
+		},
+		required: [
+			'emailAddress',
+		],
+	},
+	res: {
+		type: 'object',
+		optional: false,
+		nullable: false,
+		properties: {
+			available: {
+				type: 'boolean',
+				optional: false,
+				nullable: false,
+			},
+			reason: {
+				type: 'string',
+				optional: false,
+				nullable: true,
+			},
+		},
+		required: [
+			'available',
+			'reason',
+		],
+	},
+	errors: {},
+}

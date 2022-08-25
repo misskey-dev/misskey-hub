@@ -1,0 +1,52 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'pages',
+	],
+	requireCredential: false,
+	req: {
+		type: 'object',
+		anyOf: [
+			{
+				properties: {
+					pageId: {
+						type: 'string',
+						format: 'misskey:id',
+					},
+				},
+				required: [
+					'pageId',
+				],
+			},
+			{
+				properties: {
+					name: {
+						type: 'string',
+					},
+					username: {
+						type: 'string',
+					},
+				},
+				required: [
+					'name',
+					'username',
+				],
+			},
+		],
+	},
+	res: {
+		type: 'object',
+		optional: false,
+		nullable: false,
+		ref: 'Page',
+		$ref: 'misskey://Page',
+	},
+	errors: {
+		'222120c0-3ead-4528-811b-b96f233388d7': {
+			id: '222120c0-3ead-4528-811b-b96f233388d7',
+			code: 'NO_SUCH_PAGE',
+			description: '',
+		},
+	},
+}

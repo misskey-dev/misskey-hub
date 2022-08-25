@@ -1,0 +1,38 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'drive',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {
+			name: {
+				type: 'string',
+			},
+			folderId: {
+				type: 'string',
+				format: 'misskey:id',
+				nullable: true,
+				default: null,
+			},
+		},
+		required: [
+			'name',
+		],
+	},
+	res: {
+		type: 'array',
+		optional: false,
+		nullable: false,
+		items: {
+			type: 'object',
+			optional: false,
+			nullable: false,
+			ref: 'DriveFile',
+			$ref: 'misskey://DriveFile',
+		},
+	},
+	errors: {},
+}
