@@ -1,6 +1,6 @@
 {
-	summary: '',
-	description: '',
+	summary: 'ハッシュタグの詳細を取得します。',
+	description: 'ハッシュタグの詳細を取得します。',
 	tags: [
 		'hashtags',
 	],
@@ -10,6 +10,7 @@
 		properties: {
 			tag: {
 				type: 'string',
+				description: '検索対象のハッシュタグ。',
 			},
 		},
 		required: [
@@ -27,7 +28,7 @@
 		'110ee688-193e-4a3a-9ecf-c167b2e6981e': {
 			id: '110ee688-193e-4a3a-9ecf-c167b2e6981e',
 			code: 'NO_SUCH_HASHTAG',
-			description: '',
+			description: 'ハッシュタグが存在しません。',
 		},
 	},
 }
