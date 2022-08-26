@@ -18,4 +18,11 @@
 		],
 	},
 	res: {},
+	errors: {
+		'ecad8040-a276-4e85-bda9-015a708d291e': {
+			id: 'ecad8040-a276-4e85-bda9-015a708d291e',
+			code: 'NO_SUCH_ANNOUNCEMENT',
+			description: '',
+		},
+	},
 }

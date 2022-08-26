@@ -22,6 +22,18 @@
 		optional: false,
 		nullable: false,
 		ref: 'UserLite',
-		$ref: '#/components/schemas/UserLite',
+		$ref: 'misskey://UserLite',
+	},
+	errors: {
+		'4e68c551-fc4c-4e46-bb41-7d4a37bf9dab': {
+			id: '4e68c551-fc4c-4e46-bb41-7d4a37bf9dab',
+			code: 'NO_SUCH_USER',
+			description: '',
+		},
+		'089b125b-d338-482a-9a09-e2622ac9f8d4': {
+			id: '089b125b-d338-482a-9a09-e2622ac9f8d4',
+			code: 'FOLLOW_REQUEST_NOT_FOUND',
+			description: '',
+		},
 	},
 }

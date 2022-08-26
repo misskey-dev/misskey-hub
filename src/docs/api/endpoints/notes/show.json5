@@ -1,6 +1,6 @@
 {
-	summary: '',
-	description: '',
+	summary: 'ノートを取得します。',
+	description: 'ノートを取得します。',
 	tags: [
 		'notes',
 	],
@@ -22,6 +22,13 @@
 		optional: false,
 		nullable: false,
 		ref: 'Note',
-		$ref: '#/components/schemas/Note',
+		$ref: 'misskey://Note',
+	},
+	errors: {
+		'24fcbfc6-2e37-42b6-8388-c29b3861a08d': {
+			id: '24fcbfc6-2e37-42b6-8388-c29b3861a08d',
+			code: 'NO_SUCH_NOTE',
+			description: '指定されたノートが存在しないか、アクセスが許可されていません。',
+		},
 	},
 }

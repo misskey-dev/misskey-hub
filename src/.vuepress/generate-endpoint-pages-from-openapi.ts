@@ -27,7 +27,6 @@ export async function generateEndpointPages(app: App) {
 	for (const locale of Object.keys(app.options.locales)) {
 		const defLocale = JSON5.parse(fs.readFileSync(__dirname + `/api.locale.${app.options.locales[locale].lang}.json5`, 'utf8'));
 		const _openApi = merge(openApiDefinition, defLocale, { arrayMerge: combineMerge });
-		console.log(_openApi);
 		const endpointsForComponent = Object.entries(_openApi.paths).map(([e, x]) => ({ name: e.substring(1), summary: x.post.summary, tags: x.post.tags ?? [] }));
 
 		const endpointsDir = locale + 'docs/api/endpoints/';

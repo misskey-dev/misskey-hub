@@ -11,4 +11,5 @@
 		required: [],
 	},
 	res: {},
+	errors: {},
 }

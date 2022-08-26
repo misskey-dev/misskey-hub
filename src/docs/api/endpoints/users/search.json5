@@ -48,7 +48,8 @@
 			optional: false,
 			nullable: false,
 			ref: 'User',
-			$ref: '#/components/schemas/User',
+			$ref: 'misskey://User',
 		},
 	},
+	errors: {},
 }

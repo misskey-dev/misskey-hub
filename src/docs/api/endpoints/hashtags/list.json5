@@ -62,7 +62,8 @@
 			optional: false,
 			nullable: false,
 			ref: 'Hashtag',
-			$ref: '#/components/schemas/Hashtag',
+			$ref: 'misskey://Hashtag',
 		},
 	},
+	errors: {},
 }

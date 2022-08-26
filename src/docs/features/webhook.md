@@ -16,7 +16,7 @@ Webhookが登録されると、指定したイベントが発生した際に、�
 
 リクエストペイロードは以下のプロパティが入ります。
 
-<MkSchemaViewer :schema="{
+<MkSchemaViewerItemObject :schema="{
 	type: 'object',
 	properties: {
 		hookId: {
@@ -56,7 +56,7 @@ Webhookは管理画面から個別にアクティブ状態を設定でき、一�
 ### follow
 自分が誰かをフォローした際に発生します。
 
-<MkSchemaViewer :schema="{
+<MkSchemaViewerItemObject :schema="{
 	type: 'object',
 	properties: {
 		user: {
@@ -69,7 +69,7 @@ Webhookは管理画面から個別にアクティブ状態を設定でき、一�
 ### followed
 自分が誰かからフォローされた際に発生します。
 
-<MkSchemaViewer :schema="{
+<MkSchemaViewerItemObject :schema="{
 	type: 'object',
 	properties: {
 		user: {
@@ -82,7 +82,7 @@ Webhookは管理画面から個別にアクティブ状態を設定でき、一�
 ### unfollow
 自分が誰かをフォロー解除した際に発生します。
 
-<MkSchemaViewer :schema="{
+<MkSchemaViewerItemObject :schema="{
 	type: 'object',
 	properties: {
 		user: {
@@ -95,7 +95,7 @@ Webhookは管理画面から個別にアクティブ状態を設定でき、一�
 ### note
 自分がノートを投稿した際に発生します。
 
-<MkSchemaViewer :schema="{
+<MkSchemaViewerItemObject :schema="{
 	type: 'object',
 	properties: {
 		note: {
@@ -108,7 +108,7 @@ Webhookは管理画面から個別にアクティブ状態を設定でき、一�
 ### reply
 自分のノートに返信された際に発生します。
 
-<MkSchemaViewer :schema="{
+<MkSchemaViewerItemObject :schema="{
 	type: 'object',
 	properties: {
 		note: {
@@ -121,7 +121,7 @@ Webhookは管理画面から個別にアクティブ状態を設定でき、一�
 ### renote
 自分のノートがRenoteされた際に発生します。
 
-<MkSchemaViewer :schema="{
+<MkSchemaViewerItemObject :schema="{
 	type: 'object',
 	properties: {
 		note: {
@@ -134,7 +134,7 @@ Webhookは管理画面から個別にアクティブ状態を設定でき、一�
 ### mention
 自分にメンションされた際に発生します。
 
-<MkSchemaViewer :schema="{
+<MkSchemaViewerItemObject :schema="{
 	type: 'object',
 	properties: {
 		note: {

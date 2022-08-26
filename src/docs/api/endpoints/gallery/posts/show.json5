@@ -22,6 +22,13 @@
 		optional: false,
 		nullable: false,
 		ref: 'GalleryPost',
-		$ref: '#/components/schemas/GalleryPost',
+		$ref: 'misskey://GalleryPost',
+	},
+	errors: {
+		'1137bf14-c5b0-4604-85bb-5b5371b1cd45': {
+			id: '1137bf14-c5b0-4604-85bb-5b5371b1cd45',
+			code: 'NO_SUCH_POST',
+			description: '',
+		},
 	},
 }

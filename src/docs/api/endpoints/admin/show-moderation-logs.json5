@@ -67,7 +67,7 @@
 					optional: false,
 					nullable: false,
 					ref: 'UserDetailed',
-					$ref: '#/components/schemas/UserDetailed',
+					$ref: 'misskey://UserDetailed',
 				},
 			},
 			required: [
@@ -80,4 +80,5 @@
 			],
 		},
 	},
+	errors: {},
 }

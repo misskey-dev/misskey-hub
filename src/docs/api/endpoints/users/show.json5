@@ -58,16 +58,28 @@
 			{
 				type: 'object',
 				ref: 'UserDetailed',
-				$ref: '#/components/schemas/UserDetailed',
+				$ref: 'misskey://UserDetailed',
 			},
 			{
 				type: 'array',
 				items: {
 					type: 'object',
 					ref: 'UserDetailed',
-					$ref: '#/components/schemas/UserDetailed',
+					$ref: 'misskey://UserDetailed',
 				},
 			},
 		],
+	},
+	errors: {
+		'ef7b9be4-9cba-4e6f-ab41-90ed171c7d3c': {
+			id: 'ef7b9be4-9cba-4e6f-ab41-90ed171c7d3c',
+			code: 'FAILED_TO_RESOLVE_REMOTE_USER',
+			description: '',
+		},
+		'4362f8dc-731f-4ad8-a694-be5a88922a24': {
+			id: '4362f8dc-731f-4ad8-a694-be5a88922a24',
+			code: 'NO_SUCH_USER',
+			description: '',
+		},
 	},
 }

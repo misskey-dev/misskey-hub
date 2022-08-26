@@ -18,4 +18,11 @@
 		],
 	},
 	res: {},
+	errors: {
+		'bae73e5a-5522-4965-ae19-3a8688e71d82': {
+			id: 'bae73e5a-5522-4965-ae19-3a8688e71d82',
+			code: 'NO_SUCH_WEBHOOK',
+			description: '',
+		},
+	},
 }

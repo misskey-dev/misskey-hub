@@ -19,7 +19,8 @@
 			optional: false,
 			nullable: false,
 			ref: 'UserList',
-			$ref: '#/components/schemas/UserList',
+			$ref: 'misskey://UserList',
 		},
 	},
+	errors: {},
 }

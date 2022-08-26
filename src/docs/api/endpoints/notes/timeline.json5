@@ -1,6 +1,6 @@
 {
-	summary: '',
-	description: '',
+	summary: 'ホームタイムラインを取得します。',
+	description: 'ホームタイムラインを取得します。ホームタイムラインは、自分のフォローしているユーザーのノートが含まれます。',
 	tags: [
 		'notes',
 	],
@@ -43,7 +43,7 @@
 			withFiles: {
 				type: 'boolean',
 				default: false,
-				description: 'Only show notes that have attached files.',
+				description: 'ファイルが添付されたノートのみ取得するか否か',
 			},
 		},
 		required: [],
@@ -57,7 +57,8 @@
 			optional: false,
 			nullable: false,
 			ref: 'Note',
-			$ref: '#/components/schemas/Note',
+			$ref: 'misskey://Note',
 		},
 	},
+	errors: {},
 }

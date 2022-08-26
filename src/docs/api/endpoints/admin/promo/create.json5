@@ -22,4 +22,16 @@
 		],
 	},
 	res: {},
+	errors: {
+		'ee449fbe-af2a-453b-9cae-cf2fe7c895fc': {
+			id: 'ee449fbe-af2a-453b-9cae-cf2fe7c895fc',
+			code: 'NO_SUCH_NOTE',
+			description: '',
+		},
+		'ae427aa2-7a41-484f-a18c-2c1104051604': {
+			id: 'ae427aa2-7a41-484f-a18c-2c1104051604',
+			code: 'ALREADY_PROMOTED',
+			description: '',
+		},
+	},
 }

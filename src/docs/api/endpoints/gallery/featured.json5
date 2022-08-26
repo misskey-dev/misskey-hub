@@ -19,7 +19,8 @@
 			optional: false,
 			nullable: false,
 			ref: 'GalleryPost',
-			$ref: '#/components/schemas/GalleryPost',
+			$ref: 'misskey://GalleryPost',
 		},
 	},
+	errors: {},
 }

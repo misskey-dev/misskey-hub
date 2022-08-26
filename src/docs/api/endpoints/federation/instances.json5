@@ -62,7 +62,8 @@
 			optional: false,
 			nullable: false,
 			ref: 'FederationInstance',
-			$ref: '#/components/schemas/FederationInstance',
+			$ref: 'misskey://FederationInstance',
 		},
 	},
+	errors: {},
 }

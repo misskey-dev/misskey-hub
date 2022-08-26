@@ -5,7 +5,7 @@ import { isPlainObject, isString } from '@vuepress/shared'
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
 import type {
-  DefaultThemeNormalPageFrontmatter,
+  MiThemeNormalPageFrontmatter,
   NavLink,
   ResolvedSidebarItem,
 } from '../../shared'
@@ -65,7 +65,7 @@ const resolveFromSidebarItems = (
   return null
 }
 
-const frontmatter = usePageFrontmatter<DefaultThemeNormalPageFrontmatter>()
+const frontmatter = usePageFrontmatter<MiThemeNormalPageFrontmatter>()
 const sidebarItems = useSidebarItems()
 const route = useRoute()
 

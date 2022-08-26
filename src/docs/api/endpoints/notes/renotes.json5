@@ -40,7 +40,14 @@
 			optional: false,
 			nullable: false,
 			ref: 'Note',
-			$ref: '#/components/schemas/Note',
+			$ref: 'misskey://Note',
+		},
+	},
+	errors: {
+		'12908022-2e21-46cd-ba6a-3edaf6093f46': {
+			id: '12908022-2e21-46cd-ba6a-3edaf6093f46',
+			code: 'NO_SUCH_NOTE',
+			description: '',
 		},
 	},
 }

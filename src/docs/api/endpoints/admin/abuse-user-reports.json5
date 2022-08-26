@@ -108,21 +108,21 @@
 					nullable: false,
 					optional: false,
 					ref: 'User',
-					$ref: '#/components/schemas/User',
+					$ref: 'misskey://User',
 				},
 				targetUser: {
 					type: 'object',
 					nullable: false,
 					optional: false,
 					ref: 'User',
-					$ref: '#/components/schemas/User',
+					$ref: 'misskey://User',
 				},
 				assignee: {
 					type: 'object',
 					nullable: true,
 					optional: true,
 					ref: 'User',
-					$ref: '#/components/schemas/User',
+					$ref: 'misskey://User',
 				},
 			},
 			required: [
@@ -138,4 +138,5 @@
 			],
 		},
 	},
+	errors: {},
 }

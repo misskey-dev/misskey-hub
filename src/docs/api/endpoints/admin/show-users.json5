@@ -75,7 +75,8 @@
 			nullable: false,
 			optional: false,
 			ref: 'UserDetailed',
-			$ref: '#/components/schemas/UserDetailed',
+			$ref: 'misskey://UserDetailed',
 		},
 	},
+	errors: {},
 }

@@ -18,4 +18,11 @@
 		],
 	},
 	res: {},
+	errors: {
+		'c0031718-d573-4e85-928e-10039f1fbb68': {
+			id: 'c0031718-d573-4e85-928e-10039f1fbb68',
+			code: 'NO_SUCH_CHANNEL',
+			description: '',
+		},
+	},
 }

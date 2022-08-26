@@ -36,7 +36,14 @@
 			optional: false,
 			nullable: false,
 			ref: 'Note',
-			$ref: '#/components/schemas/Note',
+			$ref: 'misskey://Note',
+		},
+	},
+	errors: {
+		'e1035875-9551-45ec-afa8-1ded1fcb53c8': {
+			id: 'e1035875-9551-45ec-afa8-1ded1fcb53c8',
+			code: 'NO_SUCH_NOTE',
+			description: '',
 		},
 	},
 }

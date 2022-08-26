@@ -18,4 +18,11 @@
 		],
 	},
 	res: {},
+	errors: {
+		'184663db-df88-4bc2-8b52-fb85f0681939': {
+			id: '184663db-df88-4bc2-8b52-fb85f0681939',
+			code: 'NO_SUCH_ANNOUNCEMENT',
+			description: '',
+		},
+	},
 }

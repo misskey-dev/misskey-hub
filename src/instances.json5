@@ -25,15 +25,16 @@
   host: 'minidisc.tokyo',
   name: 'ミニディスク【Ｍｉｎｉ　Ｄｉｓｕｋｕ】',
   lang: 'en',
-},
-{
+}, {
   host: 'misskey.social',
   name: 'Misskey Social',
   lang: 'it',
-},
- {
+}, {
+	host: 'fedi.mint.lgbt',
+	name: 'Fedimint',
+	lang: 'en',
+}, {
   host: 'www.foxyhole.io',
   name: 'FoxyHole',
   lang: 'it',
-}
-]
+}]

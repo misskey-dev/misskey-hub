@@ -1,6 +1,6 @@
 {
-	summary: '',
-	description: '',
+	summary: '通知一覧を取得します。',
+	description: '通知一覧を取得します。通知の種類をフィルタリングして取得することも可能です。',
 	tags: [
 		'account',
 	],
@@ -86,7 +86,8 @@
 			optional: false,
 			nullable: false,
 			ref: 'Notification',
-			$ref: '#/components/schemas/Notification',
+			$ref: 'misskey://Notification',
 		},
 	},
+	errors: {},
 }

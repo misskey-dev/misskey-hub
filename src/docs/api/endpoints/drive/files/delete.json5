@@ -18,4 +18,16 @@
 		],
 	},
 	res: {},
+	errors: {
+		'908939ec-e52b-4458-b395-1025195cea58': {
+			id: '908939ec-e52b-4458-b395-1025195cea58',
+			code: 'NO_SUCH_FILE',
+			description: '',
+		},
+		'5eb8d909-2540-4970-90b8-dd6f86088121': {
+			id: '5eb8d909-2540-4970-90b8-dd6f86088121',
+			code: 'ACCESS_DENIED',
+			description: '',
+		},
+	},
 }

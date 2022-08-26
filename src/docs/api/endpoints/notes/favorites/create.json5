@@ -1,6 +1,6 @@
 {
-	summary: '',
-	description: '',
+	summary: 'ノートをお気に入り登録します。',
+	description: 'ノートをお気に入り登録します。',
 	tags: [
 		'notes',
 	],
@@ -18,4 +18,16 @@
 		],
 	},
 	res: {},
+	errors: {
+		'6dd26674-e060-4816-909a-45ba3f4da458': {
+			id: '6dd26674-e060-4816-909a-45ba3f4da458',
+			code: 'NO_SUCH_NOTE',
+			description: '指定されたノートが存在しないか、アクセスが許可されていません。',
+		},
+		'a402c12b-34dd-41d2-97d8-4d2ffd96a1a6': {
+			id: 'a402c12b-34dd-41d2-97d8-4d2ffd96a1a6',
+			code: 'ALREADY_FAVORITED',
+			description: '既にお気に入り登録されています。',
+		},
+	},
 }

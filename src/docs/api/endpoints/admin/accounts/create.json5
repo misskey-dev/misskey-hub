@@ -37,6 +37,7 @@
 		required: [
 			'token',
 		],
-		$ref: '#/components/schemas/User',
+		$ref: 'misskey://User',
 	},
+	errors: {},
 }

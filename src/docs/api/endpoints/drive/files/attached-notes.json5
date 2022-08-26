@@ -26,7 +26,14 @@
 			optional: false,
 			nullable: false,
 			ref: 'Note',
-			$ref: '#/components/schemas/Note',
+			$ref: 'misskey://Note',
+		},
+	},
+	errors: {
+		'c118ece3-2e4b-4296-99d1-51756e32d232': {
+			id: 'c118ece3-2e4b-4296-99d1-51756e32d232',
+			code: 'NO_SUCH_FILE',
+			description: '',
 		},
 	},
 }

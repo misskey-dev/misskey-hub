@@ -5,7 +5,7 @@ import Sidebar from '@theme/Sidebar.vue'
 import { usePageData, usePageFrontmatter } from '@vuepress/client'
 import { computed, onMounted, onUnmounted, ref } from 'vue'
 import { useRouter } from 'vue-router'
-import type { DefaultThemePageFrontmatter } from '../../shared'
+import type { MiThemePageFrontmatter } from '../../shared'
 import {
   useScrollPromise,
   useSidebarItems,
@@ -13,7 +13,7 @@ import {
 } from '../composables'
 
 const page = usePageData()
-const frontmatter = usePageFrontmatter<DefaultThemePageFrontmatter>()
+const frontmatter = usePageFrontmatter<MiThemePageFrontmatter>()
 const themeLocale = useThemeLocaleData()
 
 // navbar

@@ -18,4 +18,11 @@
 		],
 	},
 	res: {},
+	errors: {
+		'd785b897-fcd3-4fe9-8fc3-b85c26e6c932': {
+			id: 'd785b897-fcd3-4fe9-8fc3-b85c26e6c932',
+			code: 'NO_SUCH_NOTE',
+			description: '',
+		},
+	},
 }

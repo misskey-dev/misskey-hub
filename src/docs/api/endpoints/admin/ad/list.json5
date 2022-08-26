@@ -26,4 +26,5 @@
 		required: [],
 	},
 	res: {},
+	errors: {},
 }

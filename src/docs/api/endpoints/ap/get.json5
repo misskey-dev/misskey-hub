@@ -21,4 +21,5 @@
 		optional: false,
 		nullable: false,
 	},
+	errors: {},
 }

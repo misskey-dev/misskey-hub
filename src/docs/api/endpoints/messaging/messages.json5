@@ -61,7 +61,24 @@
 			optional: false,
 			nullable: false,
 			ref: 'MessagingMessage',
-			$ref: '#/components/schemas/MessagingMessage',
+			$ref: 'misskey://MessagingMessage',
+		},
+	},
+	errors: {
+		'11795c64-40ea-4198-b06e-3c873ed9039d': {
+			id: '11795c64-40ea-4198-b06e-3c873ed9039d',
+			code: 'NO_SUCH_USER',
+			description: '',
+		},
+		'c4d9f88c-9270-4632-b032-6ed8cee36f7f': {
+			id: 'c4d9f88c-9270-4632-b032-6ed8cee36f7f',
+			code: 'NO_SUCH_GROUP',
+			description: '',
+		},
+		'a053a8dd-a491-4718-8f87-50775aad9284': {
+			id: 'a053a8dd-a491-4718-8f87-50775aad9284',
+			code: 'GROUP_ACCESS_DENIED',
+			description: '',
 		},
 	},
 }

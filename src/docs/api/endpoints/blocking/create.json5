@@ -22,6 +22,23 @@
 		optional: false,
 		nullable: false,
 		ref: 'UserDetailedNotMe',
-		$ref: '#/components/schemas/UserDetailedNotMe',
+		$ref: 'misskey://UserDetailedNotMe',
+	},
+	errors: {
+		'7cc4f851-e2f1-4621-9633-ec9e1d00c01e': {
+			id: '7cc4f851-e2f1-4621-9633-ec9e1d00c01e',
+			code: 'NO_SUCH_USER',
+			description: '',
+		},
+		'88b19138-f28d-42c0-8499-6a31bbd0fdc6': {
+			id: '88b19138-f28d-42c0-8499-6a31bbd0fdc6',
+			code: 'BLOCKEE_IS_YOURSELF',
+			description: '',
+		},
+		'787fed64-acb9-464a-82eb-afbd745b9614': {
+			id: '787fed64-acb9-464a-82eb-afbd745b9614',
+			code: 'ALREADY_BLOCKING',
+			description: '',
+		},
 	},
 }

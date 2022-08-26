@@ -56,4 +56,5 @@
 			'remote.users',
 		],
 	},
+	errors: {},
 }

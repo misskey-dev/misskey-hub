@@ -62,7 +62,19 @@
 			optional: false,
 			nullable: false,
 			ref: 'Following',
-			$ref: '#/components/schemas/Following',
+			$ref: 'misskey://Following',
+		},
+	},
+	errors: {
+		'27fa5435-88ab-43de-9360-387de88727cd': {
+			id: '27fa5435-88ab-43de-9360-387de88727cd',
+			code: 'NO_SUCH_USER',
+			description: '',
+		},
+		'3c6a84db-d619-26af-ca14-06232a21df8a': {
+			id: '3c6a84db-d619-26af-ca14-06232a21df8a',
+			code: 'FORBIDDEN',
+			description: '',
 		},
 	},
 }

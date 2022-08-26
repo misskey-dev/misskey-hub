@@ -18,4 +18,11 @@
 		],
 	},
 	res: {},
+	errors: {
+		'70ca08ba-6865-4630-b6fb-8494759aa754': {
+			id: '70ca08ba-6865-4630-b6fb-8494759aa754',
+			code: 'NO_SUCH_CLIP',
+			description: '',
+		},
+	},
 }

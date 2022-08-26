@@ -23,4 +23,21 @@
 		],
 	},
 	res: {},
+	errors: {
+		'6fef56f3-e765-4957-88e5-c6f65329b8a5': {
+			id: '6fef56f3-e765-4957-88e5-c6f65329b8a5',
+			code: 'NO_SUCH_USER',
+			description: '',
+		},
+		'a4619cb2-5f23-484b-9301-94c903074e10': {
+			id: 'a4619cb2-5f23-484b-9301-94c903074e10',
+			code: 'MUTEE_IS_YOURSELF',
+			description: '',
+		},
+		'7e7359cb-160c-4956-b08f-4d1c653cd007': {
+			id: '7e7359cb-160c-4956-b08f-4d1c653cd007',
+			code: 'ALREADY_MUTING',
+			description: '',
+		},
+	},
 }

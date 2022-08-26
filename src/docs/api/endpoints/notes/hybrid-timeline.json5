@@ -1,6 +1,6 @@
 {
-	summary: '',
-	description: '',
+	summary: 'ソーシャルタイムラインを取得します。',
+	description: 'ソーシャルタイムラインを取得します。ソーシャルタイムラインは、インスタンス内の全てのパブリックなノートと自分のフォローしているユーザーのノートが含まれます。',
 	tags: [
 		'notes',
 	],
@@ -43,7 +43,7 @@
 			withFiles: {
 				type: 'boolean',
 				default: false,
-				description: 'Only show notes that have attached files.',
+				description: 'ファイルが添付されたノートのみ取得するか否か',
 			},
 		},
 		required: [],
@@ -57,7 +57,14 @@
 			optional: false,
 			nullable: false,
 			ref: 'Note',
-			$ref: '#/components/schemas/Note',
+			$ref: 'misskey://Note',
+		},
+	},
+	errors: {
+		'620763f4-f621-4533-ab33-0577a1a3c342': {
+			id: '620763f4-f621-4533-ab33-0577a1a3c342',
+			code: 'STL_DISABLED',
+			description: 'ソーシャルタイムラインが無効になっています。',
 		},
 	},
 }

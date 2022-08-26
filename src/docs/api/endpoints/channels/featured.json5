@@ -19,7 +19,8 @@
 			optional: false,
 			nullable: false,
 			ref: 'Channel',
-			$ref: '#/components/schemas/Channel',
+			$ref: 'misskey://Channel',
 		},
 	},
+	errors: {},
 }

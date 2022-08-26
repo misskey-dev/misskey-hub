@@ -51,4 +51,11 @@
 			'status',
 		],
 	},
+	errors: {
+		'fb8c92d3-d4e5-44e7-b3d4-800d5cef8b2c': {
+			id: 'fb8c92d3-d4e5-44e7-b3d4-800d5cef8b2c',
+			code: 'INVALID_URL',
+			description: '',
+		},
+	},
 }

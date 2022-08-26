@@ -48,7 +48,14 @@
 			optional: false,
 			nullable: false,
 			ref: 'NoteReaction',
-			$ref: '#/components/schemas/NoteReaction',
+			$ref: 'misskey://NoteReaction',
+		},
+	},
+	errors: {
+		'263fff3d-d0e1-4af4-bea7-8408059b451a': {
+			id: '263fff3d-d0e1-4af4-bea7-8408059b451a',
+			code: 'NO_SUCH_NOTE',
+			description: '',
 		},
 	},
 }

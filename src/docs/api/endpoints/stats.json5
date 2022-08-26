@@ -1,6 +1,9 @@
 {
 	summary: 'インスタンスの情報を取得します。',
 	description: 'インスタンスの情報を取得します。',
+	tags: [
+		'meta',
+	],
 	requireCredential: false,
 	req: {},
 	res: {
@@ -43,5 +46,15 @@
 				description: '',
 			},
 		},
+		required: [
+			'notesCount',
+			'originalNotesCount',
+			'usersCount',
+			'originalUsersCount',
+			'instances',
+			'driveUsageLocal',
+			'driveUsageRemote',
+		],
 	},
+	errors: {},
 }

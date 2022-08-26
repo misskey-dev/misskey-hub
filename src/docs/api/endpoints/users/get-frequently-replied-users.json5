@@ -37,7 +37,7 @@
 					optional: false,
 					nullable: false,
 					ref: 'UserDetailed',
-					$ref: '#/components/schemas/UserDetailed',
+					$ref: 'misskey://UserDetailed',
 				},
 				weight: {
 					type: 'number',
@@ -49,6 +49,13 @@
 				'user',
 				'weight',
 			],
+		},
+	},
+	errors: {
+		'e6965129-7b2a-40a4-bae2-cd84cd434822': {
+			id: 'e6965129-7b2a-40a4-bae2-cd84cd434822',
+			code: 'NO_SUCH_USER',
+			description: '',
 		},
 	},
 }

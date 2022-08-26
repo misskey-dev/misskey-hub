@@ -28,7 +28,7 @@ export default defineUserConfig<DefaultThemeOptions>({
 	head: [
 		['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c', }],
 		['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Kosugi+Maru', }],
-		['link', { rel: 'stylesheet', href: 'https://use.fontawesome.com/releases/v5.15.3/css/all.css', }]
+		['link', { rel: 'stylesheet', href: 'https://use.fontawesome.com/releases/v5.15.3/css/all.css', }],
 	],
 
 	locales: {
@@ -95,7 +95,6 @@ export default defineUserConfig<DefaultThemeOptions>({
 							children: [
 								'/docs/api',
 								'/docs/api/streaming',
-								'/docs/api/entity',
 								'/docs/api/endpoints.html',
 								'/docs/features/webhook',
 							]
@@ -204,7 +203,6 @@ export default defineUserConfig<DefaultThemeOptions>({
 							children: [
 								'/en/docs/api',
 								'/en/docs/api/streaming',
-								'/en/docs/api/entity',
 								'/en/docs/api/endpoints.html',
 							]
 						},
@@ -294,6 +292,8 @@ export default defineUserConfig<DefaultThemeOptions>({
 			after: (): string => '</div>\n'
 		}),
 	],
+
+	clientConfigFile: path.resolve(__dirname, './client.ts'),
 
 	async onInitialized(app) {
 		await getInstances(app);

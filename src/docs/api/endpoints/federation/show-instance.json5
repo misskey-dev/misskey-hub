@@ -21,11 +21,12 @@
 			{
 				type: 'object',
 				ref: 'FederationInstance',
-				$ref: '#/components/schemas/FederationInstance',
+				$ref: 'misskey://FederationInstance',
 			},
 			{
 				type: 'null',
 			},
 		],
 	},
+	errors: {},
 }

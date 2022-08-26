@@ -34,7 +34,8 @@
 			optional: false,
 			nullable: false,
 			ref: 'Muting',
-			$ref: '#/components/schemas/Muting',
+			$ref: 'misskey://Muting',
 		},
 	},
+	errors: {},
 }

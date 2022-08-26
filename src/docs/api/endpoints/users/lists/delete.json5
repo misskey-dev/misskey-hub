@@ -18,4 +18,11 @@
 		],
 	},
 	res: {},
+	errors: {
+		'78436795-db79-42f5-b1e2-55ea2cf19166': {
+			id: '78436795-db79-42f5-b1e2-55ea2cf19166',
+			code: 'NO_SUCH_LIST',
+			description: '',
+		},
+	},
 }

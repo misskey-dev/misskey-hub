@@ -1,33 +1,36 @@
 html.dark {
   // brand colors
-  --c-brand: #3aa675;
-  --c-brand-light: #349469;
+  --c-brand: #86b300;
+	--c-brand-light: #acde17;
 
   // background colors
-  --c-bg: #22272e;
+  --c-bg: #0e0e0e;
   --c-bg-light: #2b313a;
   --c-bg-lighter: #262c34;
+	--c-bg-navbar: #0e0e0e88;
+	--c-bg-navbar-dropdown: #222;
+	--c-bg-navbar-dropdown-shadow: rgba(0, 0, 0, 0.3);
 
   // text colors
-  --c-text: #adbac7;
+  --c-text: #ffffffde;
   --c-text-light: #96a7b7;
   --c-text-lighter: #8b9eb0;
   --c-text-lightest: #8094a8;
 
   // border colors
-  --c-border: #3e4c5a;
-  --c-border-dark: #34404c;
+  --c-border: #ffffff2f;
+  --c-border-dark: #ffffff3f;
 
   // custom container colors
-  --c-tip: #318a62;
-  --c-warning: #ceab00;
-  --c-warning-bg: #7e755b;
-  --c-warning-title: #ceac03;
-  --c-warning-text: #362e00;
-  --c-danger: #940000;
-  --c-danger-bg: #806161;
+	--c-tip: #678a31;
+	--c-warning: #b79a0f;
+	--c-warning-bg: #353125;
+	--c-warning-title: #dec340;
+	--c-warning-text: #d6d0a8;
+  --c-danger: #bd3b3b;
+  --c-danger-bg: #463434;
   --c-danger-title: #610000;
-  --c-danger-text: #3a0000;
+  --c-danger-text: #edd2d2;
   --c-details-bg: #323843;
 
   // code blocks vars

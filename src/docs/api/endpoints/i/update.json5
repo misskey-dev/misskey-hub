@@ -388,6 +388,38 @@
 		optional: false,
 		nullable: false,
 		ref: 'MeDetailed',
-		$ref: '#/components/schemas/MeDetailed',
+		$ref: 'misskey://MeDetailed',
+	},
+	errors: {
+		'539f3a45-f215-4f81-a9a8-31293640207f': {
+			id: '539f3a45-f215-4f81-a9a8-31293640207f',
+			code: 'NO_SUCH_AVATAR',
+			description: '',
+		},
+		'0d8f5629-f210-41c2-9433-735831a58595': {
+			id: '0d8f5629-f210-41c2-9433-735831a58595',
+			code: 'NO_SUCH_BANNER',
+			description: '',
+		},
+		'f419f9f8-2f4d-46b1-9fb4-49d3a2fd7191': {
+			id: 'f419f9f8-2f4d-46b1-9fb4-49d3a2fd7191',
+			code: 'AVATAR_NOT_AN_IMAGE',
+			description: '',
+		},
+		'75aedb19-2afd-4e6d-87fc-67941256fa60': {
+			id: '75aedb19-2afd-4e6d-87fc-67941256fa60',
+			code: 'BANNER_NOT_AN_IMAGE',
+			description: '',
+		},
+		'8e01b590-7eb9-431b-a239-860e086c408e': {
+			id: '8e01b590-7eb9-431b-a239-860e086c408e',
+			code: 'NO_SUCH_PAGE',
+			description: '',
+		},
+		'0d786918-10df-41cd-8f33-8dec7d9a89a5': {
+			id: '0d786918-10df-41cd-8f33-8dec7d9a89a5',
+			code: 'INVALID_REGEXP',
+			description: '',
+		},
 	},
 }
