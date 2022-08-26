@@ -1,6 +1,6 @@
 {
-	summary: '',
-	description: '',
+	summary: 'ページを削除します。',
+	description: 'ページを削除します。',
 	tags: [
 		'pages',
 	],
@@ -11,6 +11,7 @@
 			pageId: {
 				type: 'string',
 				format: 'misskey:id',
+				description: 'ページのid。',
 			},
 		},
 		required: [
@@ -22,12 +23,12 @@
 		'eb0c6e1d-d519-4764-9486-52a7e1c6392a': {
 			id: 'eb0c6e1d-d519-4764-9486-52a7e1c6392a',
 			code: 'NO_SUCH_PAGE',
-			description: '',
+			description: 'ページが存在しません。',
 		},
 		'8b741b3e-2c22-44b3-a15f-29949aa1601e': {
 			id: '8b741b3e-2c22-44b3-a15f-29949aa1601e',
 			code: 'ACCESS_DENIED',
-			description: '',
+			description: 'ページを削除する権限がありません。所有するユーザのみがページを削除できます。',
 		},
 	},
 }

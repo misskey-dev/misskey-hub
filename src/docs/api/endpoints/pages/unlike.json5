@@ -1,6 +1,6 @@
 {
-	summary: '',
-	description: '',
+	summary: 'ページへのいいねを取り消します。',
+	description: 'ページへのいいねを取り消します。',
 	tags: [
 		'pages',
 	],
@@ -11,6 +11,7 @@
 			pageId: {
 				type: 'string',
 				format: 'misskey:id',
+				description: 'ページのid。',
 			},
 		},
 		required: [
@@ -22,12 +23,12 @@
 		'a0d41e20-1993-40bd-890e-f6e560ae648e': {
 			id: 'a0d41e20-1993-40bd-890e-f6e560ae648e',
 			code: 'NO_SUCH_PAGE',
-			description: '',
+			description: 'ページが存在しません。',
 		},
 		'f5e586b0-ce93-4050-b0e3-7f31af5259ee': {
 			id: 'f5e586b0-ce93-4050-b0e3-7f31af5259ee',
 			code: 'NOT_LIKED',
-			description: '',
+			description: 'いいねをつけていないページです。',
 		},
 	},
 }
