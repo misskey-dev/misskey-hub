@@ -1,6 +1,6 @@
 {
-	summary: '',
-	description: '',
+	summary: 'ファイルを検索します。',
+	description: 'ログイン中のユーザーのドライブから、ファイルを検索します。',
 	tags: [
 		'drive',
 	],
@@ -10,12 +10,14 @@
 		properties: {
 			name: {
 				type: 'string',
+				description: 'ファイルの名前。',
 			},
 			folderId: {
 				type: 'string',
 				format: 'misskey:id',
 				nullable: true,
 				default: null,
+				description: '親フォルダのid。null（デフォルト）であれば、ルート階層にあるファイルを検索します。',
 			},
 		},
 		required: [

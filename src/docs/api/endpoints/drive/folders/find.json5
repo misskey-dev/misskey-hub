@@ -1,6 +1,6 @@
 {
 	summary: 'フォルダーを検索します。',
-	description: 'フォルダーを検索します。',
+	description: 'ログイン中のユーザのドライブにあるフォルダーを検索します。',
 	tags: [
 		'drive',
 	],

@@ -1,6 +1,6 @@
 {
-	summary: '',
-	description: '',
+	summary: 'ファイルの名前・場所を変更します。',
+	description: 'ファイルの名前・場所を変更します。',
 	tags: [
 		'drive',
 	],
@@ -11,22 +11,27 @@
 			fileId: {
 				type: 'string',
 				format: 'misskey:id',
+				description: 'ファイルのid。',
 			},
 			folderId: {
 				type: 'string',
 				format: 'misskey:id',
 				nullable: true,
+				description: '移動先の親フォルダーのid。nullに設定すると、ファイルをルート階層に移動します。設定しなければ変更されません。',
 			},
 			name: {
 				type: 'string',
+				description: 'ファイルの新しい名前。',
 			},
 			isSensitive: {
 				type: 'boolean',
+				description: 'ファイルを閲覧注意に指定する場合はtrue, 外す場合はfalse。',
 			},
 			comment: {
 				type: 'string',
 				nullable: true,
 				maxLength: 512,
+				description: 'ファイルの新しいキャプション。',
 			},
 		},
 		required: [
@@ -44,22 +49,22 @@
 		'395e7156-f9f0-475e-af89-53c3c23080c2': {
 			id: '395e7156-f9f0-475e-af89-53c3c23080c2',
 			code: 'INVALID_FILE_NAME',
-			description: '',
+			description: 'ファイル名が不正です。',
 		},
 		'e7778c7e-3af9-49cd-9690-6dbc3e6c972d': {
 			id: 'e7778c7e-3af9-49cd-9690-6dbc3e6c972d',
 			code: 'NO_SUCH_FILE',
-			description: '',
+			description: 'ファイルが存在しません。',
 		},
 		'01a53b27-82fc-445b-a0c1-b558465a8ed2': {
 			id: '01a53b27-82fc-445b-a0c1-b558465a8ed2',
 			code: 'ACCESS_DENIED',
-			description: '',
+			description: 'ファイルを変更する権限がありません。ファイルの変更は、ファイルを所有するユーザーか、インスタンスの管理者あるいはモデレーターのみが行えます。',
 		},
 		'ea8fb7a5-af77-4a08-b608-c0218176cd73': {
 			id: 'ea8fb7a5-af77-4a08-b608-c0218176cd73',
 			code: 'NO_SUCH_FOLDER',
-			description: '',
+			description: 'フォルダーが存在しません。',
 		},
 	},
 }

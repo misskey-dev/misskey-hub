@@ -1,6 +1,6 @@
 {
 	summary: 'フォルダーを作成します。',
-	description: 'フォルダーを作成します。',
+	description: 'ログイン中のユーザのドライブにフォルダーを作成します。',
 	tags: [
 		'drive',
 	],
@@ -34,7 +34,7 @@
 		'53326628-a00d-40a6-a3cd-8975105c0f95': {
 			id: '53326628-a00d-40a6-a3cd-8975105c0f95',
 			code: 'NO_SUCH_FOLDER',
-			description: '',
+			description: 'フォルダーが存在しません。',
 		},
 	},
 }

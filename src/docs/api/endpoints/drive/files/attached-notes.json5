@@ -1,6 +1,6 @@
 {
-	summary: '',
-	description: '',
+	summary: 'ファイルが添付されているノートを取得します。',
+	description: 'ログイン中のユーザのドライブにあるファイルが添付されているノートを取得します。',
 	tags: [
 		'drive',
 	],
@@ -11,6 +11,7 @@
 			fileId: {
 				type: 'string',
 				format: 'misskey:id',
+				description: 'ファイルのid。',
 			},
 		},
 		required: [
@@ -33,7 +34,7 @@
 		'c118ece3-2e4b-4296-99d1-51756e32d232': {
 			id: 'c118ece3-2e4b-4296-99d1-51756e32d232',
 			code: 'NO_SUCH_FILE',
-			description: '',
+			description: 'ファイルが存在しません。',
 		},
 	},
 }
