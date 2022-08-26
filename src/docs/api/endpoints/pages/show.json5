@@ -1,6 +1,6 @@
 {
-	summary: '',
-	description: '',
+	summary: 'ページを取得します。',
+	description: 'ページを取得します。',
 	tags: [
 		'pages',
 	],
@@ -13,6 +13,7 @@
 					pageId: {
 						type: 'string',
 						format: 'misskey:id',
+						description: 'ページのid。',
 					},
 				},
 				required: [
@@ -23,9 +24,11 @@
 				properties: {
 					name: {
 						type: 'string',
+						description: 'ページを参照するときのパス（URLの末尾の文字列）。',
 					},
 					username: {
 						type: 'string',
+						description: 'ページを作成したユーザーのユーザー名。',
 					},
 				},
 				required: [
@@ -46,7 +49,7 @@
 		'222120c0-3ead-4528-811b-b96f233388d7': {
 			id: '222120c0-3ead-4528-811b-b96f233388d7',
 			code: 'NO_SUCH_PAGE',
-			description: '',
+			description: 'ページが存在しません。',
 		},
 	},
 }

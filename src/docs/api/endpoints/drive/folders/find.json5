@@ -1,6 +1,6 @@
 {
-	summary: '',
-	description: '',
+	summary: 'フォルダーを検索します。',
+	description: 'ログイン中のユーザのドライブにあるフォルダーを検索します。',
 	tags: [
 		'drive',
 	],
@@ -10,12 +10,14 @@
 		properties: {
 			name: {
 				type: 'string',
+				description: 'フォルダーの名前。',
 			},
 			parentId: {
 				type: 'string',
 				format: 'misskey:id',
 				nullable: true,
 				default: null,
+				description: '親フォルダーのid。null（デフォルト）であればルート階層を検索します。',
 			},
 		},
 		required: [

@@ -1,6 +1,6 @@
 {
-	summary: '',
-	description: '',
+	summary: 'ファイルの一覧を、フォルダを横断して取得します。',
+	description: 'ログイン中のユーザーのドライブにあるファイルの一覧を、フォルダを横断して取得します。',
 	tags: [
 		'drive',
 	],
@@ -17,14 +17,17 @@
 			sinceId: {
 				type: 'string',
 				format: 'misskey:id',
+				description: '指定すると、idがその値よりも大きいファイルを返します。',
 			},
 			untilId: {
 				type: 'string',
 				format: 'misskey:id',
+				description: '指定すると、idがその値よりも小さいファイルを返します。',
 			},
 			type: {
 				type: 'string',
 				pattern: '^[a-zA-Z\\/\\-*]+$',
+				description: 'ファイルのMIMEタイプ。',
 			},
 		},
 		required: [],
