@@ -1,6 +1,6 @@
 {
-	summary: '',
-	description: '',
+	summary: '指定された通知を既読にします。',
+	description: '指定された通知を既読にします。',
 	tags: [
 		'notifications',
 	],
@@ -13,6 +13,7 @@
 					notificationId: {
 						type: 'string',
 						format: 'misskey:id',
+						description: '既読にする通知のid。',
 					},
 				},
 				required: [
@@ -27,6 +28,7 @@
 						items: {
 							type: 'string',
 							format: 'misskey:id',
+							description: '既読にする通知のidの配列。',
 						},
 						maxItems: 100,
 					},
@@ -42,7 +44,7 @@
 		'efa929d5-05b5-47d1-beec-e6a4dbed011e': {
 			id: 'efa929d5-05b5-47d1-beec-e6a4dbed011e',
 			code: 'NO_SUCH_NOTIFICATION',
-			description: '',
+			description: '通知が存在しません。',
 		},
 	},
 }
