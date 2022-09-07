@@ -1,6 +1,6 @@
 {
-	summary: '',
-	description: '',
+	summary: 'Webhookを取得します。',
+	description: '与えられたidに対応するWebhookを取得します。',
 	tags: [
 		'webhooks',
 	],
@@ -11,6 +11,7 @@
 			webhookId: {
 				type: 'string',
 				format: 'misskey:id',
+				description: 'Webhookのid。',
 			},
 		},
 		required: [
@@ -22,7 +23,7 @@
 		'50f614d9-3047-4f7e-90d8-ad6b2d5fb098': {
 			id: '50f614d9-3047-4f7e-90d8-ad6b2d5fb098',
 			code: 'NO_SUCH_WEBHOOK',
-			description: '',
+			description: 'Webhookが存在しません。',
 		},
 	},
 }

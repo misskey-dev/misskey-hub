@@ -1,6 +1,6 @@
 {
-	summary: '',
-	description: '',
+	summary: 'Webhookを削除します。',
+	description: 'Webhookを削除します。',
 	tags: [
 		'webhooks',
 	],
@@ -11,6 +11,7 @@
 			webhookId: {
 				type: 'string',
 				format: 'misskey:id',
+				description: 'Webhookのid。',
 			},
 		},
 		required: [
@@ -22,7 +23,7 @@
 		'bae73e5a-5522-4965-ae19-3a8688e71d82': {
 			id: 'bae73e5a-5522-4965-ae19-3a8688e71d82',
 			code: 'NO_SUCH_WEBHOOK',
-			description: '',
+			description: 'Webhookが存在しません。',
 		},
 	},
 }
