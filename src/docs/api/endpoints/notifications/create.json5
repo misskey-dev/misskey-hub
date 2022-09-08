@@ -1,6 +1,6 @@
 {
-	summary: '',
-	description: '',
+	summary: 'アプリからの通知を行います。',
+	description: 'アプリからの通知を行います。',
 	tags: [
 		'notifications',
 	],
@@ -10,14 +10,17 @@
 		properties: {
 			body: {
 				type: 'string',
+				description: '通知の本文。',
 			},
 			header: {
 				type: 'string',
 				nullable: true,
+				description: '通知のヘッダー。アプリの名前などを設定することができます。',
 			},
 			icon: {
 				type: 'string',
 				nullable: true,
+				description: '通知のアイコン画像へのURL。',
 			},
 		},
 		required: [

@@ -1,6 +1,6 @@
 {
-	summary: '',
-	description: '',
+	summary: 'ワードミュートされたノートの数を取得します。',
+	description: 'ログイン中のユーザーの設定によりワードミュートされたノートの数を取得します。',
 	tags: [
 		'account',
 	],
@@ -19,6 +19,7 @@
 				type: 'number',
 				optional: false,
 				nullable: false,
+				description: 'ワードミュートされたノートの数。',
 			},
 		},
 		required: [

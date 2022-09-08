@@ -1,6 +1,6 @@
 {
-	summary: '',
-	description: '',
+	summary: 'フォローを拒否します。',
+	description: 'フォローリクエストを送ったユーザーからのフォローを拒否します。',
 	tags: [
 		'following',
 	],
@@ -11,6 +11,7 @@
 			userId: {
 				type: 'string',
 				format: 'misskey:id',
+				description: 'フォローを拒否するユーザーのid。',
 			},
 		},
 		required: [
@@ -22,7 +23,7 @@
 		'abc2ffa6-25b2-4380-ba99-321ff3a94555': {
 			id: 'abc2ffa6-25b2-4380-ba99-321ff3a94555',
 			code: 'NO_SUCH_USER',
-			description: '',
+			description: 'ユーザーが存在しません。',
 		},
 	},
 }
