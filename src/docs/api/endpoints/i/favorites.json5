@@ -1,0 +1,45 @@
+{
+	summary: 'ノートのお気に入り情報一覧を取得します。',
+	description: 'ノートのお気に入り情報一覧を取得します。',
+	tags: [
+		'account',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {
+			limit: {
+				type: 'integer',
+				minimum: 1,
+				maximum: 100,
+				default: 10,
+				description: '取得するお気に入り情報の最大数。',
+			},
+			sinceId: {
+				type: 'string',
+				format: 'misskey:id',
+				description: '指定すると、idがその値よりも大きいお気に入り情報を返します。',
+			},
+			untilId: {
+				type: 'string',
+				format: 'misskey:id',
+				description: '指定すると、idがその値よりも小さいお気に入り情報を返します。',
+			},
+		},
+		required: [],
+	},
+	res: {
+		type: 'array',
+		optional: false,
+		nullable: false,
+		items: {
+			type: 'object',
+			optional: false,
+			nullable: false,
+			ref: 'NoteFavorite',
+			$ref: 'misskey://NoteFavorite',
+		},
+		description: 'お気に入り情報一覧。',
+	},
+	errors: {},
+}

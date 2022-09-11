@@ -1,0 +1,51 @@
+{
+	summary: 'フォルダーの名前・場所を変更します。',
+	description: 'ログイン中のユーザのドライブにあるフォルダーの名前・場所を変更します。',
+	tags: [
+		'drive',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {
+			folderId: {
+				type: 'string',
+				format: 'misskey:id',
+				description: 'フォルダーのid。',
+			},
+			name: {
+				type: 'string',
+				maxLength: 200,
+				description: 'フォルダーの新しい名前。',
+			},
+			parentId: {
+				type: 'string',
+				format: 'misskey:id',
+				nullable: true,
+				description: '移動先の親フォルダーのid。',
+			},
+		},
+		required: [
+			'folderId',
+		],
+	},
+	res: {
+		type: 'object',
+		optional: false,
+		nullable: false,
+		ref: 'DriveFolder',
+		$ref: 'misskey://DriveFolder',
+	},
+	errors: {
+		'f7974dac-2c0d-4a27-926e-23583b28e98e': {
+			id: 'f7974dac-2c0d-4a27-926e-23583b28e98e',
+			code: 'NO_SUCH_FOLDER',
+			description: 'フォルダーが存在しません。',
+		},
+		'ce104e3a-faaf-49d5-b459-10ff0cbbcaa1': {
+			id: 'ce104e3a-faaf-49d5-b459-10ff0cbbcaa1',
+			code: 'NO_SUCH_PARENT_FOLDER',
+			description: '親フォルダーが存在しません。',
+		},
+	},
+}

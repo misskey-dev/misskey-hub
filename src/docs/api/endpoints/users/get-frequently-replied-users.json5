@@ -1,0 +1,61 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'users',
+	],
+	requireCredential: false,
+	req: {
+		type: 'object',
+		properties: {
+			userId: {
+				type: 'string',
+				format: 'misskey:id',
+			},
+			limit: {
+				type: 'integer',
+				minimum: 1,
+				maximum: 100,
+				default: 10,
+			},
+		},
+		required: [
+			'userId',
+		],
+	},
+	res: {
+		type: 'array',
+		optional: false,
+		nullable: false,
+		items: {
+			type: 'object',
+			optional: false,
+			nullable: false,
+			properties: {
+				user: {
+					type: 'object',
+					optional: false,
+					nullable: false,
+					ref: 'UserDetailed',
+					$ref: 'misskey://UserDetailed',
+				},
+				weight: {
+					type: 'number',
+					optional: false,
+					nullable: false,
+				},
+			},
+			required: [
+				'user',
+				'weight',
+			],
+		},
+	},
+	errors: {
+		'e6965129-7b2a-40a4-bae2-cd84cd434822': {
+			id: 'e6965129-7b2a-40a4-bae2-cd84cd434822',
+			code: 'NO_SUCH_USER',
+			description: '',
+		},
+	},
+}

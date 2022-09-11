@@ -3,7 +3,7 @@ description: 'MFMは、Misskeyの様々な場所で使用できる専用のマ�
 ---
 
 # MFM
-MFMは、Misskey Flavored Markdownの略で、Misskeyの様々な場所で使用できる専用のマークアップ言語です。
+MFMは、Markup language For Misskeyの略で、Misskeyの様々な場所で使用できる専用のマークアップ言語です。
 
 ::: tip
 一部の構文はMarkdownと互換性があります。

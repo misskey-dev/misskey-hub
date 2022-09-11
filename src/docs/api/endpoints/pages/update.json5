@@ -1,0 +1,105 @@
+{
+	summary: 'ページのコンテンツ・属性を変更します。',
+	description: 'ページのコンテンツ・属性を変更します。',
+	tags: [
+		'pages',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {
+			pageId: {
+				type: 'string',
+				format: 'misskey:id',
+				description: 'ページのid。',
+			},
+			title: {
+				type: 'string',
+				description: 'ページのタイトル。',
+			},
+			name: {
+				type: 'string',
+				minLength: 1,
+				description: 'ページを参照するときのパス（URLの末尾の文字列）。ページ間で重複してはいけません。',
+			},
+			summary: {
+				type: 'string',
+				nullable: true,
+				description: 'ページの要約。',
+			},
+			content: {
+				type: 'array',
+				items: {
+					type: 'object',
+					additionalProperties: true,
+				},
+				description: 'ページのコンテンツ。',
+			},
+			variables: {
+				type: 'array',
+				items: {
+					type: 'object',
+					additionalProperties: true,
+				},
+				description: 'ページで使用する変数。',
+			},
+			script: {
+				type: 'string',
+				description: 'ページで使用するスクリプト（AiScript）。',
+			},
+			eyeCatchingImageId: {
+				type: 'string',
+				format: 'misskey:id',
+				nullable: true,
+				description: 'ドライブにあるアイキャッチ画像のファイルのid。',
+			},
+			font: {
+				type: 'string',
+				enum: [
+					'serif',
+					'sans-serif',
+				],
+				description: 'ページで使用するフォント。',
+			},
+			alignCenter: {
+				type: 'boolean',
+				description: 'trueにすると、ページの内容を中央揃えにします。',
+			},
+			hideTitleWhenPinned: {
+				type: 'boolean',
+				description: 'trueにすると、ピン留めされているときにタイトルを非表示にします。',
+			},
+		},
+		required: [
+			'pageId',
+			'title',
+			'name',
+			'content',
+			'variables',
+			'script',
+		],
+	},
+	res: {},
+	errors: {
+		'21149b9e-3616-4778-9592-c4ce89f5a864': {
+			id: '21149b9e-3616-4778-9592-c4ce89f5a864',
+			code: 'NO_SUCH_PAGE',
+			description: 'ページが存在しません。',
+		},
+		'3c15cd52-3b4b-4274-967d-6456fc4f792b': {
+			id: '3c15cd52-3b4b-4274-967d-6456fc4f792b',
+			code: 'ACCESS_DENIED',
+			description: 'ページを変更する権限がありません。所有するユーザのみがページを変更できます。',
+		},
+		'cfc23c7c-3887-490e-af30-0ed576703c82': {
+			id: 'cfc23c7c-3887-490e-af30-0ed576703c82',
+			code: 'NO_SUCH_FILE',
+			description: 'ファイルが存在しません。',
+		},
+		'2298a392-d4a1-44c5-9ebb-ac1aeaa5a9ab': {
+			id: '2298a392-d4a1-44c5-9ebb-ac1aeaa5a9ab',
+			code: 'NAME_ALREADY_EXISTS',
+			description: '同じURLにページがすでに存在します。',
+		},
+	},
+}

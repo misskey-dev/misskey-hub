@@ -1,0 +1,80 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'users',
+	],
+	requireCredential: false,
+	req: {
+		type: 'object',
+		properties: {
+			sinceId: {
+				type: 'string',
+				format: 'misskey:id',
+			},
+			untilId: {
+				type: 'string',
+				format: 'misskey:id',
+			},
+			limit: {
+				type: 'integer',
+				minimum: 1,
+				maximum: 100,
+				default: 10,
+			},
+		},
+		anyOf: [
+			{
+				properties: {
+					userId: {
+						type: 'string',
+						format: 'misskey:id',
+					},
+				},
+				required: [
+					'userId',
+				],
+			},
+			{
+				properties: {
+					username: {
+						type: 'string',
+					},
+					host: {
+						type: 'string',
+						nullable: true,
+						description: 'The local host is represented with `null`.',
+					},
+				},
+				required: [
+					'username',
+					'host',
+				],
+			},
+		],
+	},
+	res: {
+		type: 'array',
+		optional: false,
+		nullable: false,
+		items: {
+			type: 'object',
+			optional: false,
+			nullable: false,
+			ref: 'Following',
+			$ref: 'misskey://Following',
+		},
+	},
+	errors: {
+		'27fa5435-88ab-43de-9360-387de88727cd': {
+			id: '27fa5435-88ab-43de-9360-387de88727cd',
+			code: 'NO_SUCH_USER',
+			description: '',
+		},
+		'3c6a84db-d619-26af-ca14-06232a21df8a': {
+			id: '3c6a84db-d619-26af-ca14-06232a21df8a',
+			code: 'FORBIDDEN',
+			description: '',
+		},
+	},
+}

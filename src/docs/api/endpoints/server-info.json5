@@ -1,0 +1,68 @@
+{
+	summary: 'サーバーマシンについての情報を取得します。',
+	description: "サーバーマシンについての情報を取得します。",
+	tags: [
+		'meta',
+	],
+	requireCredential: false,
+	req: {},
+	res: {
+		type: "object",
+		optional: false, nullable: false,
+		properties: {
+			machine: {
+				type: "string",
+				optional: false, nullable: false,
+				description: "サーバのOSで設定されたホスト名です。",
+			},
+			cpu: {
+				type: "object",
+				optional: false,
+				nullable: false,
+				description: "CPUについての情報です。",
+				properties: {
+					model: {
+						type: "string",
+						optional: false, nullable: false,
+						description: "CPUのモデルです。"
+					},
+					cores: {
+						type: "string",
+						optional: false, nullable: false,
+						description: "CPUのコア数です。"
+					},
+				}
+			},
+			mem: {
+				type: "object",
+				optional: false, nullable: false,
+				description: "メモリについての情報です。",
+				properties: {
+					total: {
+						type: "number",
+						optional: false, nullable: false,
+						description: "総容量です。",
+					},
+				}
+			},
+			fs: {
+				type: "object",
+				optional: false, nullable: false,
+				description: "ストレージについての情報です。",
+				properties: {
+					total: {
+						type: "number",
+						optional: false, nullable: false,
+						description: "総容量です。",
+					},
+					used: {
+						type: "number",
+						optional: false, nullable: false,
+						description: "使用済みの容量です。"
+					}
+				}
+			}
+		},
+	},
+	errors: {},
+}

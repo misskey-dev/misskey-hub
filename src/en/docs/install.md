@@ -9,5 +9,7 @@ There are several ways to create an instance, so please choose one below and rea
 [See here](./install/bash.html)
 
 ## Manually
-
 [See here](./install/manual.html)
+
+## Using Yunohost
+Misskey can be installed as an App on YunoHost. For more information see [the repository of the Misskey package for YunoHost](https://github.com/YunoHost-Apps/misskey_ynh).

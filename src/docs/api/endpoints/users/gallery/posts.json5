@@ -1,0 +1,47 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'users',
+	],
+	requireCredential: false,
+	req: {
+		type: 'object',
+		properties: {
+			userId: {
+				type: 'string',
+				format: 'misskey:id',
+			},
+			limit: {
+				type: 'integer',
+				minimum: 1,
+				maximum: 100,
+				default: 10,
+			},
+			sinceId: {
+				type: 'string',
+				format: 'misskey:id',
+			},
+			untilId: {
+				type: 'string',
+				format: 'misskey:id',
+			},
+		},
+		required: [
+			'userId',
+		],
+	},
+	res: {
+		type: 'array',
+		optional: false,
+		nullable: false,
+		items: {
+			type: 'object',
+			optional: false,
+			nullable: false,
+			ref: 'GalleryPost',
+			$ref: 'misskey://GalleryPost',
+		},
+	},
+	errors: {},
+}

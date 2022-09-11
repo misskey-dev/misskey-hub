@@ -1,0 +1,81 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'users',
+	],
+	requireCredential: false,
+	req: {
+		type: 'object',
+		properties: {
+			userId: {
+				type: 'string',
+				format: 'misskey:id',
+			},
+			includeReplies: {
+				type: 'boolean',
+				default: true,
+			},
+			limit: {
+				type: 'integer',
+				minimum: 1,
+				maximum: 100,
+				default: 10,
+			},
+			sinceId: {
+				type: 'string',
+				format: 'misskey:id',
+			},
+			untilId: {
+				type: 'string',
+				format: 'misskey:id',
+			},
+			sinceDate: {
+				type: 'integer',
+			},
+			untilDate: {
+				type: 'integer',
+			},
+			includeMyRenotes: {
+				type: 'boolean',
+				default: true,
+			},
+			withFiles: {
+				type: 'boolean',
+				default: false,
+			},
+			fileType: {
+				type: 'array',
+				items: {
+					type: 'string',
+				},
+			},
+			excludeNsfw: {
+				type: 'boolean',
+				default: false,
+			},
+		},
+		required: [
+			'userId',
+		],
+	},
+	res: {
+		type: 'array',
+		optional: false,
+		nullable: false,
+		items: {
+			type: 'object',
+			optional: false,
+			nullable: false,
+			ref: 'Note',
+			$ref: 'misskey://Note',
+		},
+	},
+	errors: {
+		'27e494ba-2ac2-48e8-893b-10d4d8c2387b': {
+			id: '27e494ba-2ac2-48e8-893b-10d4d8c2387b',
+			code: 'NO_SUCH_USER',
+			description: '',
+		},
+	},
+}

@@ -1,0 +1,25 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'admin',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {
+			full: {
+				type: 'boolean',
+			},
+			analyze: {
+				type: 'boolean',
+			},
+		},
+		required: [
+			'full',
+			'analyze',
+		],
+	},
+	res: {},
+	errors: {},
+}

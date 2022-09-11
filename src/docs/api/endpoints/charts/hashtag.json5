@@ -1,0 +1,60 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'charts',
+	],
+	requireCredential: false,
+	req: {
+		type: 'object',
+		properties: {
+			span: {
+				type: 'string',
+				enum: [
+					'day',
+					'hour',
+				],
+			},
+			limit: {
+				type: 'integer',
+				minimum: 1,
+				maximum: 500,
+				default: 30,
+			},
+			offset: {
+				type: 'integer',
+				nullable: true,
+				default: null,
+			},
+			tag: {
+				type: 'string',
+			},
+		},
+		required: [
+			'span',
+			'tag',
+		],
+	},
+	res: {
+		type: 'object',
+		properties: {
+			'local.users': {
+				type: 'array',
+				items: {
+					type: 'number',
+				},
+			},
+			'remote.users': {
+				type: 'array',
+				items: {
+					type: 'number',
+				},
+			},
+		},
+		required: [
+			'local.users',
+			'remote.users',
+		],
+	},
+	errors: {},
+}

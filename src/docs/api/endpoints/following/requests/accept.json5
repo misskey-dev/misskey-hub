@@ -1,0 +1,34 @@
+{
+	summary: 'フォローを許可します。',
+	description: 'フォローリクエストを送ったユーザーからのフォローを許可します。',
+	tags: [
+		'following',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {
+			userId: {
+				type: 'string',
+				format: 'misskey:id',
+				description: 'フォローを許可するユーザーのid。',
+			},
+		},
+		required: [
+			'userId',
+		],
+	},
+	res: {},
+	errors: {
+		'66ce1645-d66c-46bb-8b79-96739af885bd': {
+			id: '66ce1645-d66c-46bb-8b79-96739af885bd',
+			code: 'NO_SUCH_USER',
+			description: 'ユーザーが存在しません。',
+		},
+		'bcde4f8b-0913-4614-8881-614e522fb041': {
+			id: 'bcde4f8b-0913-4614-8881-614e522fb041',
+			code: 'NO_FOLLOW_REQUEST',
+			description: 'ユーザーからのフォローリクエストがありません。',
+		},
+	},
+}

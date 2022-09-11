@@ -1,0 +1,28 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'messaging',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {
+			messageId: {
+				type: 'string',
+				format: 'misskey:id',
+			},
+		},
+		required: [
+			'messageId',
+		],
+	},
+	res: {},
+	errors: {
+		'54b5b326-7925-42cf-8019-130fda8b56af': {
+			id: '54b5b326-7925-42cf-8019-130fda8b56af',
+			code: 'NO_SUCH_MESSAGE',
+			description: '',
+		},
+	},
+}

@@ -1,0 +1,35 @@
+{
+	summary: '指定したノートをピン留めから解除します。',
+	description: '指定したノートをピン留めから解除します。',
+	tags: [
+		'account',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {
+			noteId: {
+				type: 'string',
+				format: 'misskey:id',
+				description: 'ピン留めから解除するノートのid。',
+			},
+		},
+		required: [
+			'noteId',
+		],
+	},
+	res: {
+		type: 'object',
+		optional: false,
+		nullable: false,
+		ref: 'MeDetailed',
+		$ref: 'misskey://MeDetailed',
+	},
+	errors: {
+		'454170ce-9d63-4a43-9da1-ea10afe81e21': {
+			id: '454170ce-9d63-4a43-9da1-ea10afe81e21',
+			code: 'NO_SUCH_NOTE',
+			description: '指定されたノートが存在しないか、アクセスが許可されていません。',
+		},
+	},
+}

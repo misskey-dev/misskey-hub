@@ -1,0 +1,40 @@
+{
+	summary: 'ファイルが添付されているノートを取得します。',
+	description: 'ログイン中のユーザのドライブにあるファイルが添付されているノートを取得します。',
+	tags: [
+		'drive',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {
+			fileId: {
+				type: 'string',
+				format: 'misskey:id',
+				description: 'ファイルのid。',
+			},
+		},
+		required: [
+			'fileId',
+		],
+	},
+	res: {
+		type: 'array',
+		optional: false,
+		nullable: false,
+		items: {
+			type: 'object',
+			optional: false,
+			nullable: false,
+			ref: 'Note',
+			$ref: 'misskey://Note',
+		},
+	},
+	errors: {
+		'c118ece3-2e4b-4296-99d1-51756e32d232': {
+			id: 'c118ece3-2e4b-4296-99d1-51756e32d232',
+			code: 'NO_SUCH_FILE',
+			description: 'ファイルが存在しません。',
+		},
+	},
+}

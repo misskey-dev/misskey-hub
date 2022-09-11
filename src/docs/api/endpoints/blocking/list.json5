@@ -1,0 +1,45 @@
+{
+	summary: 'ブロックの一覧を取得します。',
+	description: 'ログイン中のユーザが設定しているブロックの一覧を取得します。',
+	tags: [
+		'account',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {
+			limit: {
+				type: 'integer',
+				minimum: 1,
+				maximum: 100,
+				default: 30,
+				description: '取得するブロックの最大数。',
+			},
+			sinceId: {
+				type: 'string',
+				format: 'misskey:id',
+				description: '指定すると、idがその値よりも大きいブロックを返します。',
+			},
+			untilId: {
+				type: 'string',
+				format: 'misskey:id',
+				description: '指定すると、idがその値よりも小さいブロックを返します。',
+			},
+		},
+		required: [],
+	},
+	res: {
+		type: 'array',
+		optional: false,
+		nullable: false,
+		description: 'ブロックの一覧。',
+		items: {
+			type: 'object',
+			optional: false,
+			nullable: false,
+			ref: 'Blocking',
+			$ref: 'misskey://Blocking',
+		},
+	},
+	errors: {},
+}

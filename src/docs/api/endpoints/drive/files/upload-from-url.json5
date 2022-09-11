@@ -1,0 +1,52 @@
+{
+	summary: 'ファイルのURLを指定して、ドライブにアップロードします。',
+	description: 'ファイルのURLを指定して、ログイン中のユーザのドライブにアップロードします。',
+	tags: [
+		'drive',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {
+			url: {
+				type: 'string',
+				description: 'ファイルのコンテンツがあるURL。',
+			},
+			folderId: {
+				type: 'string',
+				format: 'misskey:id',
+				nullable: true,
+				default: null,
+				description: '格納先の親フォルダーのid。',
+			},
+			isSensitive: {
+				type: 'boolean',
+				default: false,
+				description: 'ファイルが閲覧注意であればtrueに設定します。',
+			},
+			comment: {
+				type: 'string',
+				nullable: true,
+				maxLength: 512,
+				default: null,
+				description: 'ファイルのキャプション。',
+			},
+			marker: {
+				type: 'string',
+				nullable: true,
+				default: null,
+				description: 'アップロードを識別するためのマーカー。アップロードが完了すると、ここで指定したマーカーを含むurlUploadFinishedイベントがストリームに流されます。',
+			},
+			force: {
+				type: 'boolean',
+				default: false,
+				description: 'trueにすると、同じハッシュ値を持つファイルがすでに存在している場合でも、ファイルをアップロードします。',
+			},
+		},
+		required: [
+			'url',
+		],
+	},
+	res: {},
+	errors: {},
+}

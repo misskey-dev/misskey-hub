@@ -1,0 +1,35 @@
+{
+	summary: 'フォルダーを取得します。',
+	description: 'ログイン中のユーザのドライブにあるフォルダーを取得します。',
+	tags: [
+		'drive',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {
+			folderId: {
+				type: 'string',
+				format: 'misskey:id',
+				description: 'フォルダーのid。',
+			},
+		},
+		required: [
+			'folderId',
+		],
+	},
+	res: {
+		type: 'object',
+		optional: false,
+		nullable: false,
+		ref: 'DriveFolder',
+		$ref: 'misskey://DriveFolder',
+	},
+	errors: {
+		'd74ab9eb-bb09-4bba-bf24-fb58f761e1e9': {
+			id: 'd74ab9eb-bb09-4bba-bf24-fb58f761e1e9',
+			code: 'NO_SUCH_FOLDER',
+			description: 'フォルダーが存在しません。',
+		},
+	},
+}

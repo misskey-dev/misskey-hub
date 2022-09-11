@@ -1,0 +1,54 @@
+{
+	summary: 'トレンドにあるハッシュタグを取得します。',
+	description: 'トレンドにあるハッシュタグを取得します。',
+	tags: [
+		'hashtags',
+	],
+	requireCredential: false,
+	req: {
+		type: 'object',
+		properties: {},
+		required: [],
+	},
+	res: {
+		type: 'array',
+		optional: false,
+		nullable: false,
+		items: {
+			type: 'object',
+			optional: false,
+			nullable: false,
+			properties: {
+				tag: {
+					type: 'string',
+					optional: false,
+					nullable: false,
+					description: 'トレンドにあるハッシュタグ。1分ごとに更新されます。',
+				},
+				chart: {
+					type: 'array',
+					optional: false,
+					nullable: false,
+					description: '最近の投稿でハッシュタグを使用したユーザー数。10分単位で集計され、新しい順に並べられます。つまり、先頭の要素は、レスポンス時から過去10分間でのユーザー数になります。1分ごとに更新されます。',
+					items: {
+						type: 'number',
+						optional: false,
+						nullable: false,
+					},
+				},
+				usersCount: {
+					type: 'number',
+					optional: false,
+					nullable: false,
+					description: 'ハッシュタグを過去1時間に使用したユーザー数。1時間ごとに更新されます。',
+				},
+			},
+			required: [
+				'tag',
+				'chart',
+				'usersCount',
+			],
+		},
+	},
+	errors: {},
+}

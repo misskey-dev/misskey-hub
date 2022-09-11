@@ -1,0 +1,32 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'admin',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {
+			ids: {
+				type: 'array',
+				items: {
+					type: 'string',
+					format: 'misskey:id',
+				},
+			},
+			aliases: {
+				type: 'array',
+				items: {
+					type: 'string',
+				},
+			},
+		},
+		required: [
+			'ids',
+			'aliases',
+		],
+	},
+	res: {},
+	errors: {},
+}

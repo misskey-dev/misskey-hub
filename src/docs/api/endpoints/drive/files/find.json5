@@ -1,0 +1,40 @@
+{
+	summary: 'ファイルを検索します。',
+	description: 'ログイン中のユーザーのドライブから、ファイルを検索します。',
+	tags: [
+		'drive',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {
+			name: {
+				type: 'string',
+				description: 'ファイルの名前。',
+			},
+			folderId: {
+				type: 'string',
+				format: 'misskey:id',
+				nullable: true,
+				default: null,
+				description: '親フォルダのid。null（デフォルト）であれば、ルート階層にあるファイルを検索します。',
+			},
+		},
+		required: [
+			'name',
+		],
+	},
+	res: {
+		type: 'array',
+		optional: false,
+		nullable: false,
+		items: {
+			type: 'object',
+			optional: false,
+			nullable: false,
+			ref: 'DriveFile',
+			$ref: 'misskey://DriveFile',
+		},
+	},
+	errors: {},
+}

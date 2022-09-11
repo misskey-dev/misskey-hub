@@ -1,0 +1,90 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'messaging',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {
+			text: {
+				type: 'string',
+				nullable: true,
+				maxLength: 3000,
+			},
+			fileId: {
+				type: 'string',
+				format: 'misskey:id',
+			},
+		},
+		anyOf: [
+			{
+				properties: {
+					userId: {
+						type: 'string',
+						format: 'misskey:id',
+					},
+				},
+				required: [
+					'userId',
+				],
+			},
+			{
+				properties: {
+					groupId: {
+						type: 'string',
+						format: 'misskey:id',
+					},
+				},
+				required: [
+					'groupId',
+				],
+			},
+		],
+	},
+	res: {
+		type: 'object',
+		optional: false,
+		nullable: false,
+		ref: 'MessagingMessage',
+		$ref: 'misskey://MessagingMessage',
+	},
+	errors: {
+		'17e2ba79-e22a-4cbc-bf91-d327643f4a7e': {
+			id: '17e2ba79-e22a-4cbc-bf91-d327643f4a7e',
+			code: 'RECIPIENT_IS_YOURSELF',
+			description: '',
+		},
+		'11795c64-40ea-4198-b06e-3c873ed9039d': {
+			id: '11795c64-40ea-4198-b06e-3c873ed9039d',
+			code: 'NO_SUCH_USER',
+			description: '',
+		},
+		'c94e2a5d-06aa-4914-8fa6-6a42e73d6537': {
+			id: 'c94e2a5d-06aa-4914-8fa6-6a42e73d6537',
+			code: 'NO_SUCH_GROUP',
+			description: '',
+		},
+		'd96b3cca-5ad1-438b-ad8b-02f931308fbd': {
+			id: 'd96b3cca-5ad1-438b-ad8b-02f931308fbd',
+			code: 'GROUP_ACCESS_DENIED',
+			description: '',
+		},
+		'4372b8e2-185d-4146-8749-2f68864a3e5f': {
+			id: '4372b8e2-185d-4146-8749-2f68864a3e5f',
+			code: 'NO_SUCH_FILE',
+			description: '',
+		},
+		'25587321-b0e6-449c-9239-f8925092942c': {
+			id: '25587321-b0e6-449c-9239-f8925092942c',
+			code: 'CONTENT_REQUIRED',
+			description: '',
+		},
+		'c15a5199-7422-4968-941a-2a462c478f7d': {
+			id: 'c15a5199-7422-4968-941a-2a462c478f7d',
+			code: 'YOU_HAVE_BEEN_BLOCKED',
+			description: '',
+		},
+	},
+}
