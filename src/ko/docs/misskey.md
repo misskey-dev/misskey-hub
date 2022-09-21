@@ -1,17 +1,24 @@
-# About Misskey
+---
+description: 'Misskey에 대하여 설명하는 문서입니다.'
+---
 
-Misskey is an open-source and distributed platform for microblogging. Development was started in 2014 by syuilo in Japan. It features an abundance of features such as Drive or Reactions as well as a very high UI customizability.
+# Misskey에 대하여
 
-## History
-While Misskey started centered around Bulletin Boards as its main feature, the growth in popularity due to the addition of a timeline that let users post short messages and view them in chronological order lead to a gradual shift in the main focus of development towards this kind of functionality. Misskey was not always a decentralized service, but became decentralized through the adoption of ActivityPub in 2018. Since then, it has become a service that is acknowledged and used by many.
+Misskey는 오픈소스 분산형 마이크로블로깅 플랫폼 프로젝트입니다.
+개발은 일본의 syuilo에 의해 2014년부터 시작되었습니다.
+드라이브, 리액션 등의 풍부한 기능과, 높은 커스터마이징 자유도를 갖춘 UI가 특징입니다.
+
+## 역사
+개발 초기에는 게시판 형식을 메인으로 하는 서비스였으나, 유저가 짧은 글을 게시하고, 그 글들을 시간 순서대로 흘러가는 '타임라인' 기능을 추가한 뒤로 인기가 높아져, 나중에는 이 기능에 비중을 두고 개발이 이루어 지게 됩니다.
+당초에는 분산형이 아니었으나, 2018년에 ActivityPub을 통해 분산형 소셜 네트워킹을 지원함으로써 더욱 많은 분들에게 알려지고, 지금에까지 이릅니다.
 
 ::: tip
-The name "Misskey" comes from a song called "Brain Diver" by a band that syuilo used to listen to at the time called May'n.
+Misskey라는 이름은, syuilo가 프로젝트 이름을 구상할 때 우연히 듣고 있던 May'n의 노래 'Brain Diver'의 가사에서 따 온 것입니다.
 :::
 
-With anyone being able to join its development, Misskey is still continually being actively developed.
+누구나 개발에 참가할 수 있으며, 지금도 활발하게 개발이 진행되고 있습니다.
 
-## What does "Distributed" mean?
+## "분산형"이 무엇인가요?
 A <b>Distributed</b> service, also called a <b>Decentralized</b> service, refers to a service which features the division of a community into many servers that all mutually <b>communicate (federate)</b> with each other to share their contents, building a <b>network (Fediverse)</b>. Services for which only one server exists, or for which many independent server exist, are called centralized. Most services fall under the category of centralized, some examples for this are Twitter or Facebook. The advantage of distributed services is being able to select the administration or server theme that suits you freely.It's also possible for you to make your own server.Thanks to the federated nature, you will be able to access the same community, no matter which server you choose.
 
 ## Always Open-Source

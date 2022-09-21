@@ -1,24 +1,24 @@
-# Getting Started with Misskey
-Misskey is a program and a project.
-The server running Misskey, which is open to the public on the Internet, is called an **instance**.
-To use Misskey, you need to create an account in one of the instances and use that instance.
+# Misskey를 시작하기
+Misskey는 프로그램, 그리고 이를 관리하는 프로젝트의 이름입니다.
+인터넷에 공개되어있는 Misskey 서버를 **인스턴스**라고 부릅니다.
+여러 인스턴스 가운데 하나에 접속한 뒤, 그 인스턴스에서 계정을 생성하여 Misskey를 이용할 수 있습니다.
 
-You can select an instance of your choice from the [instance list](../instances.md).
+[인스턴스 목록](../instances.md)에서 자신에게 맞는 인스턴스를 둘러볼 수 있습니다.
 
 ::: tip
-No matter which instance you choose, you will be able to interact with users on other instances.
+어떤 인스턴스를 선택하더라도, 다른 인스턴스의 유저와 상호작용할 수 있습니다.
 
 ::: details
-Misskey has the ability to federate.
+Misskey는 '연합' 기능을 갖추고 있습니다.
 
-Misskey has built-in federation support, which allows users in different instances to follow, react, and renote in the same way as users on the same instance.
+연합 기능을 통해, 다른 인스턴스에 있는 유저라도 같은 인스턴스의 유저와 동일하게 팔로우 및 리액션, Renote 등을 할 수 있습니다.
 
-Misskey's federation is based on an open common standard called ActivityPub, and is compatible with other software such as Mastodon and Pleroma.
+Misskey의 연합 기능은 'ActivityPub'이라는, 공개된 통신규약을 기반으로 하여 Mastodon이나 Pleroma와 같은 타 소프트웨어와도 호환성을 가집니다.
 :::
 
-## Choosing an Instance
-### Instance Themes
-Some instances may have a specific theme, for example, "I like certain stuff and activities".
-It is recommended to find an instance of the theme that suits you best.
+## 인스턴스 고르기
+### 인스턴스 주제
+인스턴스에 따라 특정한 관심사나 화제를 정해둔 경우가 있습니다. 
+인스턴스를 고를 때에, 자신의 관심사에 맞는 인스턴스에 참가해 보는 것도 좋습니다.
 
-### Instance user base
+### 인스턴스의 유저 층
