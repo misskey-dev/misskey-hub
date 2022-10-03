@@ -1,4 +1,4 @@
-Create Misskey instance with Docker
+Create Misskey instance wit)h Docker
 ================================================================
 
 This guide describes how to install and setup Misskey with Docker.
