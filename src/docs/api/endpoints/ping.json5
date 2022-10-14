@@ -1,0 +1,24 @@
+{
+	summary: 'サーバーの接続確認を行います。',
+	description: 'サーバーの接続確認を行います。',
+	tags: [
+		'meta',
+	],
+	requireCredential: false,
+	req: {},
+	res: {
+		type: 'object',
+		optional: false, nullable: false,
+		properties: {
+			pong: {
+				type: 'number',
+				optional: false, nullable: false,
+				description: 'レスポンス時の時刻です。',
+			},
+		},
+		required: [
+			'pong',
+		],
+	},
+	errors: {},
+}

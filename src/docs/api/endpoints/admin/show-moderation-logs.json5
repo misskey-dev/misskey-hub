@@ -1,0 +1,84 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'admin',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {
+			limit: {
+				type: 'integer',
+				minimum: 1,
+				maximum: 100,
+				default: 10,
+			},
+			sinceId: {
+				type: 'string',
+				format: 'misskey:id',
+			},
+			untilId: {
+				type: 'string',
+				format: 'misskey:id',
+			},
+		},
+		required: [],
+	},
+	res: {
+		type: 'array',
+		optional: false,
+		nullable: false,
+		items: {
+			type: 'object',
+			optional: false,
+			nullable: false,
+			properties: {
+				id: {
+					type: 'string',
+					optional: false,
+					nullable: false,
+					format: 'id',
+				},
+				createdAt: {
+					type: 'string',
+					optional: false,
+					nullable: false,
+					format: 'date-time',
+				},
+				type: {
+					type: 'string',
+					optional: false,
+					nullable: false,
+				},
+				info: {
+					type: 'object',
+					optional: false,
+					nullable: false,
+				},
+				userId: {
+					type: 'string',
+					optional: false,
+					nullable: false,
+					format: 'id',
+				},
+				user: {
+					type: 'object',
+					optional: false,
+					nullable: false,
+					ref: 'UserDetailed',
+					$ref: 'misskey://UserDetailed',
+				},
+			},
+			required: [
+				'id',
+				'createdAt',
+				'type',
+				'info',
+				'userId',
+				'user',
+			],
+		},
+	},
+	errors: {},
+}

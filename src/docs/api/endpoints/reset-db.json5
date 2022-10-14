@@ -1,0 +1,15 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'non-productive',
+	],
+	requireCredential: false,
+	req: {
+		type: 'object',
+		properties: {},
+		required: [],
+	},
+	res: {},
+	errors: {},
+}

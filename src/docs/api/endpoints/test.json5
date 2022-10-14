@@ -1,0 +1,37 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'non-productive',
+	],
+	requireCredential: false,
+	req: {
+		type: 'object',
+		properties: {
+			required: {
+				type: 'boolean',
+			},
+			string: {
+				type: 'string',
+			},
+			default: {
+				type: 'string',
+				default: 'hello',
+			},
+			nullableDefault: {
+				type: 'string',
+				nullable: true,
+				default: 'hello',
+			},
+			id: {
+				type: 'string',
+				format: 'misskey:id',
+			},
+		},
+		required: [
+			'required',
+		],
+	},
+	res: {},
+	errors: {},
+}

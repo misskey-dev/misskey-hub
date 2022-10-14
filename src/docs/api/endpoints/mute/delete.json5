@@ -1,0 +1,39 @@
+{
+	summary: 'ユーザーのミュートを解除します。',
+	description: 'ユーザーのミュートを解除します。',
+	tags: [
+		'account',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {
+			userId: {
+				type: 'string',
+				format: 'misskey:id',
+				description: 'ミュートを解除するユーザーのid。',
+			},
+		},
+		required: [
+			'userId',
+		],
+	},
+	res: {},
+	errors: {
+		'b851d00b-8ab1-4a56-8b1b-e24187cb48ef': {
+			id: 'b851d00b-8ab1-4a56-8b1b-e24187cb48ef',
+			code: 'NO_SUCH_USER',
+			description: 'ユーザーが存在しません。',
+		},
+		'f428b029-6b39-4d48-a1d2-cc1ae6dd5cf9': {
+			id: 'f428b029-6b39-4d48-a1d2-cc1ae6dd5cf9',
+			code: 'MUTEE_IS_YOURSELF',
+			description: '自分に対してミュートを解除しようとしました。',
+		},
+		'5467d020-daa9-4553-81e1-135c0c35a96d': {
+			id: '5467d020-daa9-4553-81e1-135c0c35a96d',
+			code: 'NOT_MUTING',
+			description: '対象となるユーザーをそもそもミュートしていません。',
+		},
+	},
+}

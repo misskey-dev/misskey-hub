@@ -1,0 +1,38 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'gallery',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {
+			postId: {
+				type: 'string',
+				format: 'misskey:id',
+			},
+		},
+		required: [
+			'postId',
+		],
+	},
+	res: {},
+	errors: {
+		'56c06af3-1287-442f-9701-c93f7c4a62ff': {
+			id: '56c06af3-1287-442f-9701-c93f7c4a62ff',
+			code: 'NO_SUCH_POST',
+			description: '',
+		},
+		'f78f1511-5ebc-4478-a888-1198d752da68': {
+			id: 'f78f1511-5ebc-4478-a888-1198d752da68',
+			code: 'YOUR_POST',
+			description: '',
+		},
+		'40e9ed56-a59c-473a-bf3f-f289c54fb5a7': {
+			id: '40e9ed56-a59c-473a-bf3f-f289c54fb5a7',
+			code: 'ALREADY_LIKED',
+			description: '',
+		},
+	},
+}

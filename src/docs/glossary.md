@@ -43,7 +43,7 @@ Contents Warningの略。ノートの内容を、操作なしには表示しな�
 
 ## MFM
 (読み: えむえふえむ)<br>
-Misskey Flavored Markdownの略で、Misskey上で使用できるマークアップ言語です。詳しくは[こちら。](../docs/features/mfm)
+Markup language For Misskeyの略で、Misskey上で使用できるマークアップ言語です。詳しくは[こちら。](../docs/features/mfm)
 
 ## Misskey Web
 (読み: みすきーうぇぶ)<br>

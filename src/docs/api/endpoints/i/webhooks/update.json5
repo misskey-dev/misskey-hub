@@ -1,0 +1,73 @@
+{
+	summary: 'Webhookの設定を更新します。',
+	description: 'Webhookの設定を更新します。',
+	tags: [
+		'webhooks',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {
+			webhookId: {
+				type: 'string',
+				format: 'misskey:id',
+				description: 'Webhookのid。',
+			},
+			name: {
+				type: 'string',
+				minLength: 1,
+				maxLength: 100,
+				description: 'Webhookの名前。',
+			},
+			url: {
+				type: 'string',
+				minLength: 1,
+				maxLength: 1024,
+				description: 'URL。',
+			},
+			secret: {
+				type: 'string',
+				minLength: 1,
+				maxLength: 1024,
+				description: 'シークレット。',
+			},
+			on: {
+				type: 'array',
+				items: {
+					type: 'string',
+					enum: [
+						'mention',
+						'unfollow',
+						'follow',
+						'followed',
+						'note',
+						'reply',
+						'renote',
+						'reaction',
+					],
+				},
+				description: '対象となるイベント。',
+			},
+			active: {
+				type: 'boolean',
+				description: 'trueにすると、Webhookが有効になります。falseにすると、無効になります。Webhookを削除するには、 i/webhooks/delete エンドポイントを使用してください。',
+			},
+		},
+		required: [
+			'webhookId',
+			'name',
+			'url',
+			'secret',
+			'on',
+			'active',
+		],
+	},
+	res: {},
+	errors: {
+		'fb0fea69-da18-45b1-828d-bd4fd1612518': {
+			id: 'fb0fea69-da18-45b1-828d-bd4fd1612518',
+			code: 'NO_SUCH_WEBHOOK',
+			description: 'Webhookが存在しません。',
+		},
+	},
+}

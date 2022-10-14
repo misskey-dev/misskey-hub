@@ -1,0 +1,70 @@
+{
+	summary: 'ソーシャルタイムラインを取得します。',
+	description: 'ソーシャルタイムラインを取得します。ソーシャルタイムラインは、インスタンス内の全てのパブリックなノートと自分のフォローしているユーザーのノートが含まれます。',
+	tags: [
+		'notes',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {
+			limit: {
+				type: 'integer',
+				minimum: 1,
+				maximum: 100,
+				default: 10,
+			},
+			sinceId: {
+				type: 'string',
+				format: 'misskey:id',
+			},
+			untilId: {
+				type: 'string',
+				format: 'misskey:id',
+			},
+			sinceDate: {
+				type: 'integer',
+			},
+			untilDate: {
+				type: 'integer',
+			},
+			includeMyRenotes: {
+				type: 'boolean',
+				default: true,
+			},
+			includeRenotedMyNotes: {
+				type: 'boolean',
+				default: true,
+			},
+			includeLocalRenotes: {
+				type: 'boolean',
+				default: true,
+			},
+			withFiles: {
+				type: 'boolean',
+				default: false,
+				description: 'ファイルが添付されたノートのみ取得するか否か',
+			},
+		},
+		required: [],
+	},
+	res: {
+		type: 'array',
+		optional: false,
+		nullable: false,
+		items: {
+			type: 'object',
+			optional: false,
+			nullable: false,
+			ref: 'Note',
+			$ref: 'misskey://Note',
+		},
+	},
+	errors: {
+		'620763f4-f621-4533-ab33-0577a1a3c342': {
+			id: '620763f4-f621-4533-ab33-0577a1a3c342',
+			code: 'STL_DISABLED',
+			description: 'ソーシャルタイムラインが無効になっています。',
+		},
+	},
+}

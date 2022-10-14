@@ -1,0 +1,51 @@
+{
+	summary: 'フォローリクエストの一覧を取得します。',
+	description: 'ログイン中のユーザーに届いたフォローリクエストの一覧を取得します。',
+	tags: [
+		'following',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {},
+		required: [],
+	},
+	res: {
+		type: 'array',
+		optional: false,
+		nullable: false,
+		items: {
+			type: 'object',
+			optional: false,
+			nullable: false,
+			properties: {
+				id: {
+					type: 'string',
+					optional: false,
+					nullable: false,
+					format: 'id',
+				},
+				follower: {
+					type: 'object',
+					optional: false,
+					nullable: false,
+					ref: 'UserLite',
+					$ref: 'misskey://UserLite',
+				},
+				followee: {
+					type: 'object',
+					optional: false,
+					nullable: false,
+					ref: 'UserLite',
+					$ref: 'misskey://UserLite',
+				},
+			},
+			required: [
+				'id',
+				'follower',
+				'followee',
+			],
+		},
+	},
+	errors: {},
+}

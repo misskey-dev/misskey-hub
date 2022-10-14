@@ -1,0 +1,101 @@
+{
+	refs: {
+		user: {
+			type: 'object',
+			properties: {
+				id: {
+					type: 'string',
+				},
+				createdAt: {
+					type: 'string',
+				},
+				username: {
+					type: 'string',
+				},
+				host: {
+					type: 'string',
+					nullable: true,
+				},
+				name: {
+					type: 'string',
+				},
+				onlineStatus: {
+					type: 'string',
+					enum: ['online', 'active', 'offline', 'unknown',],
+				},
+				avatarUrl: {
+					type: 'string',
+				},
+				avatarBlurhash: {
+					type: 'string',
+				},
+			},
+		},
+		note: {
+			type: 'object',
+			properties: {
+				id: {
+					type: 'string',
+				},
+				createdAt: {
+					type: 'string',
+				},
+				text: {
+					type: 'string',
+					nullable: true,
+				},
+				cw: {
+					type: 'string',
+					nullable: true,
+				},
+				user: {
+					$ref: 'misskey://User',
+				},
+				userId: {
+					type: 'string',
+				},
+				visibility: {
+					type: 'string',
+					enum: ['public', 'home', 'followers', 'specified',],
+				},
+			},
+		},
+	},
+	errors: {
+		'1384574d-a912-4b81-8601-c7b1c4085df1': {
+			id: '1384574d-a912-4b81-8601-c7b1c4085df1',
+			code: 'CREDENTIAL_REQUIRED',
+			description: 'クレデンシャル必須のエンドポイントにクレデンシャル無しでリクエストされました。',
+		},
+		'd5826d14-3982-4d2e-8011-b9e9f02499ef': {
+			id: 'd5826d14-3982-4d2e-8011-b9e9f02499ef',
+			code: 'RATE_LIMIT_EXCEEDED',
+			description: 'レートリミットによる制限のため一時的に利用できません。',
+		},
+		'56f35758-7dd5-468b-8439-5d6fb8ec9b8e': {
+			id: '56f35758-7dd5-468b-8439-5d6fb8ec9b8e',
+			code: 'ACCESS_DENIED',
+			description: 'アクセス権限がありません。',
+		},
+		'1370e5b7-d4eb-4566-bb1d-7748ee6a1838': {
+			id: '1370e5b7-d4eb-4566-bb1d-7748ee6a1838',
+			code: 'PERMISSION_DENIED',
+			description: '与えられたクレデンシャルには必要なパーミッションがありません。',
+		},
+		'a8c724b3-6e9c-4b46-b1a8-bc3ed6258370': {
+			id: 'a8c724b3-6e9c-4b46-b1a8-bc3ed6258370',
+			code: 'YOUR_ACCOUNT_SUSPENDED',
+			description: 'アカウントが凍結されているため利用できません。',
+		},
+		'3d81ceae-475f-4600-b2a8-2bc116157532': {
+			id: '3d81ceae-475f-4600-b2a8-2bc116157532',
+			code: 'INVALID_PARAM',
+			description: 'リクエストパラメータに誤りがあります。',
+		},
+		'5d37dbcb-891e-41ca-a3d6-e690c97775ac': {
+			id: '5d37dbcb-891e-41ca-a3d6-e690c97775ac',
+			code: 'INTERNAL_ERROR',
+			description: 'サーバー内部で問題が発生しました。引き続き問題が発生する場合は管理者にお問い合わせください。',
+		},
+	},
+}

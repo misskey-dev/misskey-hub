@@ -1,0 +1,56 @@
+{
+	summary: 'Webhookを作成します。',
+	description: 'Webhookを作成します。Webhookについての詳細は該当する項目を参照してください。',
+	tags: [
+		'webhooks',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {
+			name: {
+				type: 'string',
+				minLength: 1,
+				maxLength: 100,
+				description: 'Webhookの名前。',
+			},
+			url: {
+				type: 'string',
+				minLength: 1,
+				maxLength: 1024,
+				description: 'URL。onで指定するイベントが発生すると、urlで指定したURLにHTTPリクエストが送信されます。',
+			},
+			secret: {
+				type: 'string',
+				minLength: 1,
+				maxLength: 1024,
+				description: 'シークレット。HTTPリクエストのX-Misskey-Hook-Secretの値に設定されます。',
+			},
+			on: {
+				type: 'array',
+				items: {
+					type: 'string',
+					enum: [
+						'mention',
+						'unfollow',
+						'follow',
+						'followed',
+						'note',
+						'reply',
+						'renote',
+						'reaction',
+					],
+				},
+				description: '対象となるイベント。各イベントの発生条件や、HTTPリクエストに含まれる情報については、Webhookの項目を参照してください。',
+			},
+		},
+		required: [
+			'name',
+			'url',
+			'secret',
+			'on',
+		],
+	},
+	res: {},
+	errors: {},
+}

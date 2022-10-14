@@ -1,0 +1,56 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'auth',
+	],
+	requireCredential: false,
+	req: {
+		type: 'object',
+		properties: {
+			token: {
+				type: 'string',
+			},
+		},
+		required: [
+			'token',
+		],
+	},
+	res: {
+		type: 'object',
+		optional: false,
+		nullable: false,
+		properties: {
+			id: {
+				type: 'string',
+				optional: false,
+				nullable: false,
+				format: 'id',
+			},
+			app: {
+				type: 'object',
+				optional: false,
+				nullable: false,
+				ref: 'App',
+				$ref: 'misskey://App',
+			},
+			token: {
+				type: 'string',
+				optional: false,
+				nullable: false,
+			},
+		},
+		required: [
+			'id',
+			'app',
+			'token',
+		],
+	},
+	errors: {
+		'bd72c97d-eba7-4adb-a467-f171b8847250': {
+			id: 'bd72c97d-eba7-4adb-a467-f171b8847250',
+			code: 'NO_SUCH_SESSION',
+			description: '',
+		},
+	},
+}

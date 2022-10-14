@@ -1,0 +1,44 @@
+{
+	summary: 'ハッシュタグを検索します。',
+	description: 'ハッシュタグを検索します。',
+	tags: [
+		'hashtags',
+	],
+	requireCredential: false,
+	req: {
+		type: 'object',
+		properties: {
+			limit: {
+				type: 'integer',
+				minimum: 1,
+				maximum: 100,
+				default: 10,
+				description: '取得するハッシュタグの最大数。',
+			},
+			query: {
+				type: 'string',
+				description: '検索に用いる文字列。先頭一致で検索されます。',
+			},
+			offset: {
+				type: 'integer',
+				default: 0,
+				description: '検索結果の先頭 offset 個をスキップします。',
+			},
+		},
+		required: [
+			'query',
+		],
+	},
+	res: {
+		type: 'array',
+		optional: false,
+		nullable: false,
+		items: {
+			type: 'string',
+			optional: false,
+			nullable: false,
+			description: '検索結果。使用数の降順でソートされます。'
+		},
+	},
+	errors: {},
+}

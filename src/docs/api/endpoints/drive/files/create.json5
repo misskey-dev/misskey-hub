@@ -1,0 +1,33 @@
+{
+	summary: 'ファイルをアップロードします。',
+	description: 'ログイン中のユーザのドライブにファイルをアップロードします。',
+	tags: [
+		'drive',
+	],
+	requireCredential: true,
+	req: {},
+	res: {
+		type: 'object',
+		optional: false,
+		nullable: false,
+		ref: 'DriveFile',
+		$ref: 'misskey://DriveFile',
+	},
+	errors: {
+		'f449b209-0c60-4e51-84d5-29486263bfd4': {
+			id: 'f449b209-0c60-4e51-84d5-29486263bfd4',
+			code: 'INVALID_FILE_NAME',
+			description: 'ファイル名が不正です。',
+		},
+		'bec5bd69-fba3-43c9-b4fb-2894b66ad5d2': {
+			id: 'bec5bd69-fba3-43c9-b4fb-2894b66ad5d2',
+			code: 'INAPPROPRIATE',
+			description: '不適切なコンテンツを含んでいる可能性があると判定されました。',
+		},
+		'd08dbc37-a6a9-463a-8c47-96c32ab5f064': {
+			id: 'd08dbc37-a6a9-463a-8c47-96c32ab5f064',
+			code: 'NO_FREE_SPACE',
+			description: 'ドライブに空き容量がありません。',
+		},
+	},
+}

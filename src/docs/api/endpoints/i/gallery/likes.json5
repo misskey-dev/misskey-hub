@@ -1,0 +1,61 @@
+{
+	summary: 'ギャラリーの投稿につけたいいねを取得します。',
+	description: 'ログイン中のユーザーがギャラリーの投稿につけたいいねを取得します。',
+	tags: [
+		'account',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {
+			limit: {
+				type: 'integer',
+				minimum: 1,
+				maximum: 100,
+				default: 10,
+				description: '取得するいいねの最大数。',
+			},
+			sinceId: {
+				type: 'string',
+				format: 'misskey:id',
+				description: '指定すると、idがその値よりも大きいいいねを返します。',
+			},
+			untilId: {
+				type: 'string',
+				format: 'misskey:id',
+				description: '指定すると、idがその値よりも小さいいいねを返します。',
+			},
+		},
+		required: [],
+	},
+	res: {
+		type: 'array',
+		optional: false,
+		nullable: false,
+		items: {
+			type: 'object',
+			optional: false,
+			nullable: false,
+			properties: {
+				id: {
+					type: 'string',
+					optional: false,
+					nullable: false,
+					format: 'id',
+				},
+				post: {
+					type: 'object',
+					optional: false,
+					nullable: false,
+					ref: 'GalleryPost',
+					$ref: 'misskey://GalleryPost',
+				},
+			},
+			required: [
+				'id',
+				'post',
+			],
+		},
+	},
+	errors: {},
+}

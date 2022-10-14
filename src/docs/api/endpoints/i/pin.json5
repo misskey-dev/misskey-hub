@@ -1,0 +1,45 @@
+{
+	summary: '指定したノートをピン留めに登録します。',
+	description: '指定したノートをピン留めに登録します。ピン留めされたノートはプロフィール情報に含まれ、Misskey Webではユーザーのプロフィールページで表示されます。',
+	tags: [
+		'account',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {
+			noteId: {
+				type: 'string',
+				format: 'misskey:id',
+				description: 'ピン留めに登録するノートのid。',
+			},
+		},
+		required: [
+			'noteId',
+		],
+	},
+	res: {
+		type: 'object',
+		optional: false,
+		nullable: false,
+		ref: 'MeDetailed',
+		$ref: 'misskey://MeDetailed',
+	},
+	errors: {
+		'56734f8b-3928-431e-bf80-6ff87df40cb3': {
+			id: '56734f8b-3928-431e-bf80-6ff87df40cb3',
+			code: 'NO_SUCH_NOTE',
+			description: '指定されたノートが存在しないか、アクセスが許可されていません。',
+		},
+		'72dab508-c64d-498f-8740-a8eec1ba385a': {
+			id: '72dab508-c64d-498f-8740-a8eec1ba385a',
+			code: 'PIN_LIMIT_EXCEEDED',
+			description: 'これ以上ピン留めできません。',
+		},
+		'8b18c2b7-68fe-4edb-9892-c0cbaeb6c913': {
+			id: '8b18c2b7-68fe-4edb-9892-c0cbaeb6c913',
+			code: 'ALREADY_PINNED',
+			description: '指定されたノートは既にピン留めされています。',
+		},
+	},
+}

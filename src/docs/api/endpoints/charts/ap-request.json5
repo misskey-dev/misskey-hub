@@ -1,0 +1,63 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'charts',
+	],
+	requireCredential: false,
+	req: {
+		type: 'object',
+		properties: {
+			span: {
+				type: 'string',
+				enum: [
+					'day',
+					'hour',
+				],
+			},
+			limit: {
+				type: 'integer',
+				minimum: 1,
+				maximum: 500,
+				default: 30,
+			},
+			offset: {
+				type: 'integer',
+				nullable: true,
+				default: null,
+			},
+		},
+		required: [
+			'span',
+		],
+	},
+	res: {
+		type: 'object',
+		properties: {
+			deliverFailed: {
+				type: 'array',
+				items: {
+					type: 'number',
+				},
+			},
+			deliverSucceeded: {
+				type: 'array',
+				items: {
+					type: 'number',
+				},
+			},
+			inboxReceived: {
+				type: 'array',
+				items: {
+					type: 'number',
+				},
+			},
+		},
+		required: [
+			'deliverFailed',
+			'deliverSucceeded',
+			'inboxReceived',
+		],
+	},
+	errors: {},
+}

@@ -1,0 +1,96 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'charts',
+	],
+	requireCredential: false,
+	req: {
+		type: 'object',
+		properties: {
+			span: {
+				type: 'string',
+				enum: [
+					'day',
+					'hour',
+				],
+			},
+			limit: {
+				type: 'integer',
+				minimum: 1,
+				maximum: 500,
+				default: 30,
+			},
+			offset: {
+				type: 'integer',
+				nullable: true,
+				default: null,
+			},
+			userId: {
+				type: 'string',
+				format: 'misskey:id',
+			},
+		},
+		required: [
+			'span',
+			'userId',
+		],
+	},
+	res: {
+		type: 'object',
+		properties: {
+			total: {
+				type: 'array',
+				items: {
+					type: 'number',
+				},
+			},
+			inc: {
+				type: 'array',
+				items: {
+					type: 'number',
+				},
+			},
+			dec: {
+				type: 'array',
+				items: {
+					type: 'number',
+				},
+			},
+			'diffs.normal': {
+				type: 'array',
+				items: {
+					type: 'number',
+				},
+			},
+			'diffs.reply': {
+				type: 'array',
+				items: {
+					type: 'number',
+				},
+			},
+			'diffs.renote': {
+				type: 'array',
+				items: {
+					type: 'number',
+				},
+			},
+			'diffs.withFile': {
+				type: 'array',
+				items: {
+					type: 'number',
+				},
+			},
+		},
+		required: [
+			'total',
+			'inc',
+			'dec',
+			'diffs.normal',
+			'diffs.reply',
+			'diffs.renote',
+			'diffs.withFile',
+		],
+	},
+	errors: {},
+}

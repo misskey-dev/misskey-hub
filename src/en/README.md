@@ -39,7 +39,7 @@ sections:
         description: "For those who need to see everything, Misskey has powerful charts for both users and admins to see what exactly is going on in your instance in real time."
       federation:
         title: "Federation"
-        description: "Not on Misskey? No problem! Not only can Misskey instances talk each other, but you can make friends with people on other networks like Mastodon and Pixelfed!"
+        description: "Not on Misskey? No problem! Not only can Misskey instances talk to each other, but you can make friends with people on other networks like Mastodon and Pixelfed!"
       drive:
         title: "Drive"
         description: "Hate not being able to find something you uploaded? With Drive, you get managed and powerful cloud storage right in your social media!"
@@ -67,6 +67,7 @@ sections:
     title: "Sponsors"
 ---
 
+<!--
 <style>
 	.ai {
 		display: none;
@@ -81,3 +82,4 @@ sections:
 		content: url("/top-features-widgets-en.png");
 	}
 </style>
+-->

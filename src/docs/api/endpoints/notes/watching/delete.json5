@@ -1,0 +1,28 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'notes',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {
+			noteId: {
+				type: 'string',
+				format: 'misskey:id',
+			},
+		},
+		required: [
+			'noteId',
+		],
+	},
+	res: {},
+	errors: {
+		'09b3695c-f72c-4731-a428-7cff825fc82e': {
+			id: '09b3695c-f72c-4731-a428-7cff825fc82e',
+			code: 'NO_SUCH_NOTE',
+			description: '',
+		},
+	},
+}

@@ -1,0 +1,25 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'admin',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {},
+		required: [],
+	},
+	res: {
+		type: 'object',
+		optional: false,
+		nullable: false,
+		example: {
+			migrations: {
+				count: 66,
+				size: 32768,
+			},
+		},
+	},
+	errors: {},
+}

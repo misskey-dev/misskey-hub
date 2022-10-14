@@ -7,7 +7,7 @@
 	 2. If using a CDN such as Cloudflare, remove 4 lines from "If it's behind another reverse proxy or CDN, remove the following."
 3. If you create `/etc/nginx/sites-available/misskey.conf`, create symlink as `/etc/nginx/sites-enabled/misskey.conf`.\
    `sudo ln -s /etc/nginx/sites-available/misskey.conf /etc/nginx/sites-enabled/misskey.conf`
-4. Run `nginx -t` to verify that the configuration file will be loaded successfully.
+4. Run `sudo nginx -t` to verify that the configuration file will be loaded successfully.
 5. Run `sudo systemctl restart nginx` to restart nginx.
 
 # Nginx cofig example

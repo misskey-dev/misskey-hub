@@ -1,0 +1,40 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'lists',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {
+			listId: {
+				type: 'string',
+				format: 'misskey:id',
+			},
+			name: {
+				type: 'string',
+				minLength: 1,
+				maxLength: 100,
+			},
+		},
+		required: [
+			'listId',
+			'name',
+		],
+	},
+	res: {
+		type: 'object',
+		optional: false,
+		nullable: false,
+		ref: 'UserList',
+		$ref: 'misskey://UserList',
+	},
+	errors: {
+		'796666fe-3dff-4d39-becb-8a5932c1d5b7': {
+			id: '796666fe-3dff-4d39-becb-8a5932c1d5b7',
+			code: 'NO_SUCH_LIST',
+			description: '',
+		},
+	},
+}

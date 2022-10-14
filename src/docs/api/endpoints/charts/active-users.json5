@@ -1,0 +1,105 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'charts',
+	],
+	requireCredential: false,
+	req: {
+		type: 'object',
+		properties: {
+			span: {
+				type: 'string',
+				enum: [
+					'day',
+					'hour',
+				],
+			},
+			limit: {
+				type: 'integer',
+				minimum: 1,
+				maximum: 500,
+				default: 30,
+			},
+			offset: {
+				type: 'integer',
+				nullable: true,
+				default: null,
+			},
+		},
+		required: [
+			'span',
+		],
+	},
+	res: {
+		type: 'object',
+		properties: {
+			readWrite: {
+				type: 'array',
+				items: {
+					type: 'number',
+				},
+			},
+			read: {
+				type: 'array',
+				items: {
+					type: 'number',
+				},
+			},
+			write: {
+				type: 'array',
+				items: {
+					type: 'number',
+				},
+			},
+			registeredWithinWeek: {
+				type: 'array',
+				items: {
+					type: 'number',
+				},
+			},
+			registeredWithinMonth: {
+				type: 'array',
+				items: {
+					type: 'number',
+				},
+			},
+			registeredWithinYear: {
+				type: 'array',
+				items: {
+					type: 'number',
+				},
+			},
+			registeredOutsideWeek: {
+				type: 'array',
+				items: {
+					type: 'number',
+				},
+			},
+			registeredOutsideMonth: {
+				type: 'array',
+				items: {
+					type: 'number',
+				},
+			},
+			registeredOutsideYear: {
+				type: 'array',
+				items: {
+					type: 'number',
+				},
+			},
+		},
+		required: [
+			'readWrite',
+			'read',
+			'write',
+			'registeredWithinWeek',
+			'registeredWithinMonth',
+			'registeredWithinYear',
+			'registeredOutsideWeek',
+			'registeredOutsideMonth',
+			'registeredOutsideYear',
+		],
+	},
+	errors: {},
+}
