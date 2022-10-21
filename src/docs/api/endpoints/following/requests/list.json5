@@ -1,6 +1,6 @@
 {
-	summary: '',
-	description: '',
+	summary: 'フォローリクエストの一覧を取得します。',
+	description: 'ログイン中のユーザーに届いたフォローリクエストの一覧を取得します。',
 	tags: [
 		'following',
 	],

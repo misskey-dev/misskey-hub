@@ -1,6 +1,6 @@
 {
-	summary: '',
-	description: '',
+	summary: 'インスタンスからローカルユーザーへのフォローを取得します。',
+	description: 'インスタンスからローカルユーザーへのフォローを取得します。',
 	tags: [
 		'federation',
 	],
@@ -10,20 +10,24 @@
 		properties: {
 			host: {
 				type: 'string',
+				description: 'インスタンスのホスト名。',
 			},
 			sinceId: {
 				type: 'string',
 				format: 'misskey:id',
+				description: '指定すると、idがその値よりも大きいフォローを返します。'
 			},
 			untilId: {
 				type: 'string',
 				format: 'misskey:id',
+				description: '指定すると、idがその値よりも小さいフォローを返します。'
 			},
 			limit: {
 				type: 'integer',
 				minimum: 1,
 				maximum: 100,
 				default: 10,
+				description: '取得するフォローの最大数。',
 			},
 		},
 		required: [

@@ -1,6 +1,19 @@
 # リリースノート
 Misskeyのリリースノートを掲載しています。
 
+## 12.119.0
+リリース日： 2022/09/10
+
+### Improvements
+- Client: Add following badge to user preview popup @nvisser
+- Client: mobile twitter url can be used as widget @caipira113
+- Client: Improve clock widget @syuilo
+
+### Bugfixes
+- マイグレーションに失敗する問題を修正
+- Server: 他人の通知を既読にできる可能性があるのを修正 @syuilo
+- Client: アクセストークン管理画面、アカウント管理画面表示できないのを修正 @futchitwo
+
 ## 12.118.0
 リリース日： 2022/08/07
 

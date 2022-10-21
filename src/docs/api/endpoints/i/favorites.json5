@@ -13,14 +13,17 @@
 				minimum: 1,
 				maximum: 100,
 				default: 10,
+				description: '取得するお気に入り情報の最大数。',
 			},
 			sinceId: {
 				type: 'string',
 				format: 'misskey:id',
+				description: '指定すると、idがその値よりも大きいお気に入り情報を返します。',
 			},
 			untilId: {
 				type: 'string',
 				format: 'misskey:id',
+				description: '指定すると、idがその値よりも小さいお気に入り情報を返します。',
 			},
 		},
 		required: [],

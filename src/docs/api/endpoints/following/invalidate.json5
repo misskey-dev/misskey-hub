@@ -1,6 +1,6 @@
 {
-	summary: '',
-	description: '',
+	summary: '他のユーザーからのフォローを無効にします（フォロワーを解除します）。',
+	description: '他のユーザーから、ログイン中のユーザーへのフォローを無効にします（フォロワーを解除します）。',
 	tags: [
 		'following',
 	],
@@ -11,6 +11,7 @@
 			userId: {
 				type: 'string',
 				format: 'misskey:id',
+				description: '自身をフォローしているユーザーのid。',
 			},
 		},
 		required: [
@@ -28,17 +29,17 @@
 		'5b12c78d-2b28-4dca-99d2-f56139b42ff8': {
 			id: '5b12c78d-2b28-4dca-99d2-f56139b42ff8',
 			code: 'NO_SUCH_USER',
-			description: '',
+			description: 'ユーザーが存在しません。',
 		},
 		'07dc03b9-03da-422d-885b-438313707662': {
 			id: '07dc03b9-03da-422d-885b-438313707662',
 			code: 'FOLLOWER_IS_YOURSELF',
-			description: '',
+			description: '自分をフォロワー解除しようとしました。',
 		},
 		'5dbf82f5-c92b-40b1-87d1-6c8c0741fd09': {
 			id: '5dbf82f5-c92b-40b1-87d1-6c8c0741fd09',
 			code: 'NOT_FOLLOWING',
-			description: '',
+			description: 'ユーザーにフォローされていません。',
 		},
 	},
 }
