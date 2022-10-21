@@ -1,6 +1,6 @@
 {
-	summary: '',
-	description: '',
+	summary: 'ユーザーが頻繁にリプライを送信しているユーザーを取得します。',
+	description: 'ユーザーが頻繁にリプライを送信しているユーザーを取得します。最新の1000件のノートを対象に集計を行います。',
 	tags: [
 		'users',
 	],
@@ -11,12 +11,14 @@
 			userId: {
 				type: 'string',
 				format: 'misskey:id',
+				description: 'ユーザーのid。',
 			},
 			limit: {
 				type: 'integer',
 				minimum: 1,
 				maximum: 100,
 				default: 10,
+				description: '取得するユーザーの最大数。',
 			},
 		},
 		required: [
@@ -43,6 +45,7 @@
 					type: 'number',
 					optional: false,
 					nullable: false,
+					description: 'userに送信したリプライ数を、あるユーザーに送った最大のリプライ数で割ったもの。最大のリプライの送信先がuserである場合、weightは1になります。',
 				},
 			},
 			required: [
@@ -50,12 +53,13 @@
 				'weight',
 			],
 		},
+		description: 'リプライをよく送信しているユーザーの一覧。',
 	},
 	errors: {
 		'e6965129-7b2a-40a4-bae2-cd84cd434822': {
 			id: 'e6965129-7b2a-40a4-bae2-cd84cd434822',
 			code: 'NO_SUCH_USER',
-			description: '',
+			description: 'ユーザーが存在しません。',
 		},
 	},
 }

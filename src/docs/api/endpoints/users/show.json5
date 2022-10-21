@@ -1,6 +1,6 @@
 {
-	summary: '',
-	description: '',
+	summary: 'ユーザーの情報を取得します。',
+	description: 'ユーザーの情報を取得します。',
 	tags: [
 		'users',
 	],
@@ -13,6 +13,7 @@
 					userId: {
 						type: 'string',
 						format: 'misskey:id',
+						description: 'ユーザーのid。',
 					},
 				},
 				required: [
@@ -27,6 +28,7 @@
 						items: {
 							type: 'string',
 							format: 'misskey:id',
+							description: 'ユーザーのid。',
 						},
 					},
 				},
@@ -38,11 +40,12 @@
 				properties: {
 					username: {
 						type: 'string',
+						description: 'ユーザー名。',
 					},
 					host: {
 						type: 'string',
 						nullable: true,
-						description: 'The local host is represented with `null`.',
+						description: 'ユーザーが所属するインスタンスのホスト名（ドメインなど）。ローカルユーザーを対象にする場合はnullを指定します。',
 					},
 				},
 				required: [
@@ -74,12 +77,12 @@
 		'ef7b9be4-9cba-4e6f-ab41-90ed171c7d3c': {
 			id: 'ef7b9be4-9cba-4e6f-ab41-90ed171c7d3c',
 			code: 'FAILED_TO_RESOLVE_REMOTE_USER',
-			description: '',
+			description: 'リモートユーザーの検索に失敗しました。',
 		},
 		'4362f8dc-731f-4ad8-a694-be5a88922a24': {
 			id: '4362f8dc-731f-4ad8-a694-be5a88922a24',
 			code: 'NO_SUCH_USER',
-			description: '',
+			description: 'ユーザーが存在しません。',
 		},
 	},
 }
