@@ -10,7 +10,7 @@
 4. Run `sudo nginx -t` to verify that the configuration file will be loaded successfully.
 5. Run `sudo systemctl restart nginx` to restart nginx.
 
-# Nginx cofig example
+# Nginx config example
 
 ```nginx
 # For WebSocket
