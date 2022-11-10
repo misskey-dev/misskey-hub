@@ -1,0 +1,48 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'lists',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {
+			listId: {
+				type: 'string',
+				format: 'misskey:id',
+			},
+			userId: {
+				type: 'string',
+				format: 'misskey:id',
+			},
+		},
+		required: [
+			'listId',
+			'userId',
+		],
+	},
+	res: {},
+	errors: {
+		'2214501d-ac96-4049-b717-91e42272a711': {
+			id: '2214501d-ac96-4049-b717-91e42272a711',
+			code: 'NO_SUCH_LIST',
+			description: '',
+		},
+		'a89abd3d-f0bc-4cce-beb1-2f446f4f1e6a': {
+			id: 'a89abd3d-f0bc-4cce-beb1-2f446f4f1e6a',
+			code: 'NO_SUCH_USER',
+			description: '',
+		},
+		'1de7c884-1595-49e9-857e-61f12f4d4fc5': {
+			id: '1de7c884-1595-49e9-857e-61f12f4d4fc5',
+			code: 'ALREADY_ADDED',
+			description: '',
+		},
+		'990232c5-3f9d-4d83-9f3f-ef27b6332a4b': {
+			id: '990232c5-3f9d-4d83-9f3f-ef27b6332a4b',
+			code: 'YOU_HAVE_BEEN_BLOCKED',
+			description: '',
+		},
+	},
+}

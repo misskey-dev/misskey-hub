@@ -1,0 +1,43 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'admin',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {
+			emojiId: {
+				type: 'string',
+				format: 'misskey:id',
+			},
+		},
+		required: [
+			'emojiId',
+		],
+	},
+	res: {
+		type: 'object',
+		optional: false,
+		nullable: false,
+		properties: {
+			id: {
+				type: 'string',
+				optional: false,
+				nullable: false,
+				format: 'id',
+			},
+		},
+		required: [
+			'id',
+		],
+	},
+	errors: {
+		'e2785b66-dca3-4087-9cac-b93c541cc425': {
+			id: 'e2785b66-dca3-4087-9cac-b93c541cc425',
+			code: 'NO_SUCH_EMOJI',
+			description: '',
+		},
+	},
+}

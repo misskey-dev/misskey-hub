@@ -1,0 +1,69 @@
+{
+	summary: 'ハッシュタグの一覧を取得します。',
+	description: 'ハッシュタグの一覧を取得します。',
+	tags: [
+		'hashtags',
+	],
+	requireCredential: false,
+	req: {
+		type: 'object',
+		properties: {
+			limit: {
+				type: 'integer',
+				minimum: 1,
+				maximum: 100,
+				default: 10,
+				description: '取得するハッシュタグの最大数。',
+			},
+			attachedToUserOnly: {
+				type: 'boolean',
+				default: false,
+				description: 'ユーザーが使ったハッシュタグのみを取得します。',
+			},
+			attachedToLocalUserOnly: {
+				type: 'boolean',
+				default: false,
+				description: 'ローカルユーザーが使ったハッシュタグのみを取得します。',
+			},
+			attachedToRemoteUserOnly: {
+				type: 'boolean',
+				default: false,
+				description: 'リモートユーザーが使ったハッシュタグのみを取得します。',
+			},
+			sort: {
+				type: 'string',
+				enum: [
+					'+mentionedUsers',
+					'-mentionedUsers',
+					'+mentionedLocalUsers',
+					'-mentionedLocalUsers',
+					'+mentionedRemoteUsers',
+					'-mentionedRemoteUsers',
+					'+attachedUsers',
+					'-attachedUsers',
+					'+attachedLocalUsers',
+					'-attachedLocalUsers',
+					'+attachedRemoteUsers',
+					'-attachedRemoteUsers',
+				],
+				description: 'ソート順。+ は降順、- は昇順を示します。'
+			},
+		},
+		required: [
+			'sort',
+		],
+	},
+	res: {
+		type: 'array',
+		optional: false,
+		nullable: false,
+		items: {
+			type: 'object',
+			optional: false,
+			nullable: false,
+			ref: 'Hashtag',
+			$ref: 'misskey://Hashtag',
+		},
+	},
+	errors: {},
+}

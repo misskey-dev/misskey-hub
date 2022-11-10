@@ -1,4 +1,5 @@
-[{
+[
+{
 	host: 'misskey.io',
 	lang: 'ja',
 }, {
@@ -29,4 +30,21 @@
   host: 'snug.moe',
   name: 'Snugly Moe Moe',
   lang: 'en',
-}, ]
+}, {
+  host: 'miruku.cafe',
+  name: 'Miruku',
+  lang: 'en',
+}, {
+  host: 'misskey.social',
+  name: 'Misskey Social',
+  lang: 'it',
+}, {
+	host: 'fedi.mint.lgbt',
+	name: 'Fedimint',
+	lang: 'en',
+}, {
+  host: 'www.foxyhole.io',
+  name: 'FoxyHole',
+  lang: 'it',
+}
+]

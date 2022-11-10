@@ -1,0 +1,26 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'admin',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {
+			userId: {
+				type: 'string',
+				format: 'misskey:id',
+			},
+			text: {
+				type: 'string',
+			},
+		},
+		required: [
+			'userId',
+			'text',
+		],
+	},
+	res: {},
+	errors: {},
+}

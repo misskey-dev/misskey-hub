@@ -7,18 +7,22 @@
 </template>
 
 <script>
-import {  } from 'vue';
+import { provide } from 'vue';
 
 export default {
 	props: {
 		schema: {
 			type: Object,
 			required: true,
-		}
+		},
+		schemas: {
+			type: Object,
+			required: false,
+		},
 	},
 
   setup(props) {
-
+		provide('schemas', props.schemas);
   },
 };
 </script>

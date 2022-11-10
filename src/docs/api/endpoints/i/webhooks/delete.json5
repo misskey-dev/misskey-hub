@@ -1,0 +1,29 @@
+{
+	summary: 'Webhookを削除します。',
+	description: 'Webhookを削除します。',
+	tags: [
+		'webhooks',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {
+			webhookId: {
+				type: 'string',
+				format: 'misskey:id',
+				description: 'Webhookのid。',
+			},
+		},
+		required: [
+			'webhookId',
+		],
+	},
+	res: {},
+	errors: {
+		'bae73e5a-5522-4965-ae19-3a8688e71d82': {
+			id: 'bae73e5a-5522-4965-ae19-3a8688e71d82',
+			code: 'NO_SUCH_WEBHOOK',
+			description: 'Webhookが存在しません。',
+		},
+	},
+}

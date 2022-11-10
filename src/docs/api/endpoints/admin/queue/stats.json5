@@ -1,0 +1,51 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'admin',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {},
+		required: [],
+	},
+	res: {
+		type: 'object',
+		optional: false,
+		nullable: false,
+		properties: {
+			deliver: {
+				optional: false,
+				nullable: false,
+				ref: 'QueueCount',
+				$ref: 'misskey://QueueCount',
+			},
+			inbox: {
+				optional: false,
+				nullable: false,
+				ref: 'QueueCount',
+				$ref: 'misskey://QueueCount',
+			},
+			db: {
+				optional: false,
+				nullable: false,
+				ref: 'QueueCount',
+				$ref: 'misskey://QueueCount',
+			},
+			objectStorage: {
+				optional: false,
+				nullable: false,
+				ref: 'QueueCount',
+				$ref: 'misskey://QueueCount',
+			},
+		},
+		required: [
+			'deliver',
+			'inbox',
+			'db',
+			'objectStorage',
+		],
+	},
+	errors: {},
+}

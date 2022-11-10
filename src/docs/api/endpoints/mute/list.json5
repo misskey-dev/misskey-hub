@@ -1,0 +1,45 @@
+{
+	summary: 'ミュートの一覧を取得します。',
+	description: 'ログイン中のユーザが設定しているミュートの一覧を取得します。',
+	tags: [
+		'account',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {
+			limit: {
+				type: 'integer',
+				minimum: 1,
+				maximum: 100,
+				default: 30,
+				description: '取得するミュートの最大数。',
+			},
+			sinceId: {
+				type: 'string',
+				format: 'misskey:id',
+				description: '指定すると、idがその値よりも大きいミュートを返します。',
+			},
+			untilId: {
+				type: 'string',
+				format: 'misskey:id',
+				description: '指定すると、idがその値よりも小さいミュートを返します。',
+			},
+		},
+		required: [],
+	},
+	res: {
+		type: 'array',
+		optional: false,
+		nullable: false,
+		description: 'ミュートの一覧。',
+		items: {
+			type: 'object',
+			optional: false,
+			nullable: false,
+			ref: 'Muting',
+			$ref: 'misskey://Muting',
+		},
+	},
+	errors: {},
+}

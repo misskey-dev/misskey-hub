@@ -1,0 +1,43 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'app',
+	],
+	requireCredential: false,
+	req: {
+		type: 'object',
+		properties: {
+			name: {
+				type: 'string',
+			},
+			description: {
+				type: 'string',
+			},
+			permission: {
+				type: 'array',
+				uniqueItems: true,
+				items: {
+					type: 'string',
+				},
+			},
+			callbackUrl: {
+				type: 'string',
+				nullable: true,
+			},
+		},
+		required: [
+			'name',
+			'description',
+			'permission',
+		],
+	},
+	res: {
+		type: 'object',
+		optional: false,
+		nullable: false,
+		ref: 'App',
+		$ref: 'misskey://App',
+	},
+	errors: {},
+}

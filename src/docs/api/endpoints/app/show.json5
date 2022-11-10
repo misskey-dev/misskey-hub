@@ -1,0 +1,34 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'app',
+	],
+	requireCredential: false,
+	req: {
+		type: 'object',
+		properties: {
+			appId: {
+				type: 'string',
+				format: 'misskey:id',
+			},
+		},
+		required: [
+			'appId',
+		],
+	},
+	res: {
+		type: 'object',
+		optional: false,
+		nullable: false,
+		ref: 'App',
+		$ref: 'misskey://App',
+	},
+	errors: {
+		'dce83913-2dc6-4093-8a7b-71dbb11718a3': {
+			id: 'dce83913-2dc6-4093-8a7b-71dbb11718a3',
+			code: 'NO_SUCH_APP',
+			description: '',
+		},
+	},
+}

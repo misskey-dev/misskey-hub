@@ -1,0 +1,52 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'account',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {
+			endpoint: {
+				type: 'string',
+			},
+			auth: {
+				type: 'string',
+			},
+			publickey: {
+				type: 'string',
+			},
+		},
+		required: [
+			'endpoint',
+			'auth',
+			'publickey',
+		],
+	},
+	res: {
+		type: 'object',
+		optional: false,
+		nullable: false,
+		properties: {
+			state: {
+				type: 'string',
+				optional: true,
+				nullable: false,
+				enum: [
+					'already-subscribed',
+					'subscribed',
+				],
+			},
+			key: {
+				type: 'string',
+				optional: false,
+				nullable: true,
+			},
+		},
+		required: [
+			'key',
+		],
+	},
+	errors: {},
+}

@@ -1,0 +1,23 @@
+{
+	summary: 'リモートユーザーの情報を更新します。',
+	description: 'リモートユーザーの情報を更新します。',
+	tags: [
+		'federation',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {
+			userId: {
+				type: 'string',
+				format: 'misskey:id',
+				description: 'リモートユーザーのid。',
+			},
+		},
+		required: [
+			'userId',
+		],
+	},
+	res: {},
+	errors: {},
+}

@@ -5,6 +5,64 @@ Notes for indivudual misskey releases.
 Information updates may not be translated yet. For the latest information see [GitHub](https://github.com/misskey-dev/misskey/blob/master/CHANGELOG.md).
 :::
 
+## 12.111.1（2022/06/13）
+
+### Bugfixes
+- some fixes of multiple notification read @tamaina
+- some GenerateVideoThumbnail failed @Johann150
+- Client: fix problem with widget information not being saved in Deck mode @syuilo
+- Client: edit screen appears when trying to open gallery posts @futchitwo
+
+## 12.111.0（2022/06/11）
+
+### Note
+- Node.js 16.15.0 or later is required
+
+### Improvements
+- Supports Unicode Emoji 14.0 @mei23
+- Push notifications for multiple accounts #7667 @tamaina
+- Set click and `action` for Push notifications #7667 @tamaina
+- Option to discard original image and only keep `WebPublic` one when uploading it to Drive @tamaina
+- Server: always remove completed tasks of job queue @Johann150
+- Client: allow cropping of images in avatar settings @syuilo
+- Client: make emoji stand out more on reaction button @Johann150
+- Client: display URL of QR code for TOTP registration @tamaina
+- Client: render quote renote CWs as MFM @pixeldesu
+- API: `notifications/read` also accepts in arrays #7667 @tamaina
+- API: if the query meets the `username` condition, `username` is also `LIKE` searched when searching users @tamaina
+- MFM: Allow speed changes in all animated MFMs @Johann150
+- The theme color is now better validated. @Johann150
+  Your own theme color may be unset if it was in an invalid format.
+  Admins should check their instance settings if in doubt.
+- Perform port diagnosis at startup only when Listen fails @mei23
+- Rate limiting is now also usable for non-authenticated users. @Johann150 @mei23
+  Admins should make sure the reverse proxy sets the `X-Forwarded-For` header to the original address.
+
+### Bugfixes
+- Server: keep file order of note attachement @Johann150
+- Server: fix missing foreign key for reports leading to reports page being unusable @Johann150
+- Server: fix internal in-memory caching @Johann150
+- Server: prevent crash when processing certain PNGs @syuilo
+- Server: Fix unable to generate video thumbnails @mei23
+- Server: Fix `Cannot find module` issue @mei23
+- Federation: Add rel attribute to host-meta @mei23
+- Federation: add id for activitypub follows @Johann150
+- Federation: use `source` instead of `_misskey_content` @Johann150
+- Federation: ensure resolver does not fetch local resources via HTTP(S) @Johann150
+- Federation: correctly render empty note text @Johann150
+- Federation: Fix quote renotes containing no text being federated correctly @Johann150
+- Federation: remove duplicate br tag/newline @Johann150
+- Federation: add missing authorization checks @Johann150
+- Client: fix profile picture height in mentions @tamaina
+- Client: fix abuse reports page to be able to show all reports @Johann150
+- Client: fix settings page @tamaina
+- Client: fix profile tabs @futchitwo
+- Client: fix popout URL @futchitwo
+- Client: correctly handle MiAuth URLs with query string @sn0w
+- Client: correct behavior of the function to display new Note on its details page @xianonn
+- MFM: more animated functions support `speed` parameter @futchitwo
+- MFM: limit large MFM @Johann150
+
 ## 12.110.1（2022/04/23）
 
 ### Bugfixes

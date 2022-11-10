@@ -1,0 +1,40 @@
+{
+	summary: 'フォルダーを作成します。',
+	description: 'ログイン中のユーザのドライブにフォルダーを作成します。',
+	tags: [
+		'drive',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {
+			name: {
+				type: 'string',
+				default: 'Untitled',
+				maxLength: 200,
+				description: 'フォルダーの名前。',
+			},
+			parentId: {
+				type: 'string',
+				format: 'misskey:id',
+				nullable: true,
+				description: '親フォルダーのid。null（デフォルト）であればルート階層にフォルダが作成されます。',
+			},
+		},
+		required: [],
+	},
+	res: {
+		type: 'object',
+		optional: false,
+		nullable: false,
+		ref: 'DriveFolder',
+		$ref: 'misskey://DriveFolder',
+	},
+	errors: {
+		'53326628-a00d-40a6-a3cd-8975105c0f95': {
+			id: '53326628-a00d-40a6-a3cd-8975105c0f95',
+			code: 'NO_SUCH_FOLDER',
+			description: 'フォルダーが存在しません。',
+		},
+	},
+}

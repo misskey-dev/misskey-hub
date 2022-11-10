@@ -1,0 +1,99 @@
+{
+	summary: 'ページを作成します。',
+	description: 'ページを作成します。',
+	tags: [
+		'pages',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {
+			title: {
+				type: 'string',
+				description: 'ページのタイトル。',
+			},
+			name: {
+				type: 'string',
+				minLength: 1,
+				description: 'ページを参照するときのパス（URLの末尾の文字列）。ページ間で重複してはいけません。',
+			},
+			summary: {
+				type: 'string',
+				nullable: true,
+				description: 'ページの要約。',
+			},
+			content: {
+				type: 'array',
+				items: {
+					type: 'object',
+					additionalProperties: true,
+				},
+				description: 'ページのコンテンツ。',
+			},
+			variables: {
+				type: 'array',
+				items: {
+					type: 'object',
+					additionalProperties: true,
+				},
+				description: 'ページで使用する変数。',
+			},
+			script: {
+				type: 'string',
+				description: 'ページで使用するスクリプト（AiScript）。',
+			},
+			eyeCatchingImageId: {
+				type: 'string',
+				format: 'misskey:id',
+				nullable: true,
+				description: 'ドライブにあるアイキャッチ画像のファイルのid。',
+			},
+			font: {
+				type: 'string',
+				enum: [
+					'serif',
+					'sans-serif',
+				],
+				default: 'sans-serif',
+				description: 'ページで使用するフォント。',
+			},
+			alignCenter: {
+				type: 'boolean',
+				default: false,
+				description: 'trueにすると、ページの内容を中央揃えにします。',
+			},
+			hideTitleWhenPinned: {
+				type: 'boolean',
+				default: false,
+				description: 'trueにすると、ピン留めされているときにタイトルを非表示にします。',
+			},
+		},
+		required: [
+			'title',
+			'name',
+			'content',
+			'variables',
+			'script',
+		],
+	},
+	res: {
+		type: 'object',
+		optional: false,
+		nullable: false,
+		ref: 'Page',
+		$ref: 'misskey://Page',
+		description: '作成されたページ。',
+	},
+	errors: {
+		'b7b97489-0f66-4b12-a5ff-b21bd63f6e1c': {
+			id: 'b7b97489-0f66-4b12-a5ff-b21bd63f6e1c',
+			code: 'NO_SUCH_FILE',
+			description: 'ファイルが存在しません。',
+		},
+		'4650348e-301c-499a-83c9-6aa988c66bc1': {
+			id: '4650348e-301c-499a-83c9-6aa988c66bc1',
+			code: 'NAME_ALREADY_EXISTS',
+			description: '同じURLにページがすでに存在します。',
+		},
+	},
+}

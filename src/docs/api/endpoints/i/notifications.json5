@@ -1,0 +1,101 @@
+{
+	summary: '通知一覧を取得します。',
+	description: '通知一覧を取得します。通知の種類をフィルタリングして取得することも可能です。',
+	tags: [
+		'account',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {
+			limit: {
+				type: 'integer',
+				minimum: 1,
+				maximum: 100,
+				default: 10,
+				description: '取得する通知の最大数。',
+			},
+			sinceId: {
+				type: 'string',
+				format: 'misskey:id',
+				description: '指定すると、idがその値よりも大きい通知を返します。',
+			},
+			untilId: {
+				type: 'string',
+				format: 'misskey:id',
+				description: '指定すると、idがその値よりも小さい通知を返します。',
+			},
+			following: {
+				type: 'boolean',
+				default: false,
+				description: 'trueにすると、フォローしているユーザからの通知を返します。',
+			},
+			unreadOnly: {
+				type: 'boolean',
+				default: false,
+				description: 'trueにすると、未読の通知を返します。',
+			},
+			markAsRead: {
+				type: 'boolean',
+				default: true,
+				description: 'trueにすると、取得した通知を既読にします。',
+			},
+			includeTypes: {
+				type: 'array',
+				items: {
+					type: 'string',
+					enum: [
+						'follow',
+						'mention',
+						'reply',
+						'renote',
+						'quote',
+						'reaction',
+						'pollVote',
+						'pollEnded',
+						'receiveFollowRequest',
+						'followRequestAccepted',
+						'groupInvited',
+						'app',
+					],
+				},
+				description: 'レスポンスに含める通知の種類。値を指定しない場合や空の配列を与えた場合は、すべての種類の通知を返します。',
+			},
+			excludeTypes: {
+				type: 'array',
+				items: {
+					type: 'string',
+					enum: [
+						'follow',
+						'mention',
+						'reply',
+						'renote',
+						'quote',
+						'reaction',
+						'pollVote',
+						'pollEnded',
+						'receiveFollowRequest',
+						'followRequestAccepted',
+						'groupInvited',
+						'app',
+					],
+				description: 'レスポンスから除外する通知の種類。値を指定しない場合や空の配列を与えた場合は、すべての種類の通知を返します。includeTypesとexcludeTypesを両方指定した場合、excludeTypesは無視されます。',
+				},
+			},
+		},
+		required: [],
+	},
+	res: {
+		type: 'array',
+		optional: false,
+		nullable: false,
+		items: {
+			type: 'object',
+			optional: false,
+			nullable: false,
+			ref: 'Notification',
+			$ref: 'misskey://Notification',
+		},
+	},
+	errors: {},
+}

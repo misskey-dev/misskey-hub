@@ -32,7 +32,7 @@ An abbreviation for "Home TimeLine". For details about timelines, please see [he
 An abbreviation for "Local TimeLine". For details about timelines, please see [here](../features/timeline)
 
 ## MFM
-An abbreviation for "Misskey Flavored Markdown", a markdown language available for use on Misskey. For details, see [here.](../features/mfm)
+An abbreviation for "Markup language For Misskey", a markdown language available for use on Misskey. For details, see [here.](../features/mfm)
 
 ## NSFW
 An abbreviation for "Not Safe For Work". A feature to tag an image as "NSFW" and hide it unless explicitly requested to be shown by a user.

@@ -98,6 +98,6 @@ MisskeyはRESTを採用していません。
 
 アクセストークンは、`i`というパラメータ名でリクエストボディJSONに含めます。
 
-APIの詳細は、[APIリファレンス](TODO)を参照してください。
+APIの詳細は、[APIリファレンス](./endpoints.html)を参照してください。
 
 また、MisskeyはHTTP APIだけでなく、ストリーミングAPIも提供しています。ストリーミングAPIの詳細は[こちらのドキュメント](./streaming/index.md)を参照してください。

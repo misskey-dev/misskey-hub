@@ -1,0 +1,53 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'account',
+	],
+	requireCredential: false,
+	req: {
+		type: 'object',
+		properties: {
+			clipId: {
+				type: 'string',
+				format: 'misskey:id',
+			},
+			limit: {
+				type: 'integer',
+				minimum: 1,
+				maximum: 100,
+				default: 10,
+			},
+			sinceId: {
+				type: 'string',
+				format: 'misskey:id',
+			},
+			untilId: {
+				type: 'string',
+				format: 'misskey:id',
+			},
+		},
+		required: [
+			'clipId',
+		],
+	},
+	res: {
+		type: 'array',
+		optional: false,
+		nullable: false,
+		items: {
+			type: 'object',
+			optional: false,
+			nullable: false,
+			ref: 'Note',
+			$ref: 'misskey://Note',
+		},
+	},
+	errors: {
+		'1d7645e6-2b6d-4635-b0fe-fe22b0e72e00': {
+			id: '1d7645e6-2b6d-4635-b0fe-fe22b0e72e00',
+			code: 'NO_SUCH_CLIP',
+			description: '',
+		},
+	},
+}

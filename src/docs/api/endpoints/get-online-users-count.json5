@@ -1,0 +1,21 @@
+{
+	summary: 'オンラインになっているユーザ数を取得します。',
+	description: 'オンラインになっているユーザ数を取得します。',
+	tags: [
+		'meta',
+	],
+	requireCredential: false,
+	req: {},
+	res: {
+		type: 'object',
+		optional: false, nullable: false,
+		properties: {
+			count: {
+				type: 'number',
+				optional: false, nullable: false,
+				description: '現在オンライン（10分以内に何らかのアクションをとった）であるユーザ数です。',
+			},
+		},
+	},
+	errors: {},
+}
