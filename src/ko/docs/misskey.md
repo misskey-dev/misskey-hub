@@ -107,6 +107,6 @@ However, functionality of third-party applications will inevitably lag behind th
 ### Misskey의 로고나 아이콘을 다운로드 받을 수 있나요?
 Please refer to the [assets collection](../appendix/assets.html).
 
-### 가끔 가다 고양이 귀가 붙어있는 귀여운 캐릭터가 보이는데...
+### 가끔 가다 보이는 귀여운 고양이귀 캐릭터는 무엇인가요?
 It's Misskey's guardian deity, Ai.(They called Ai cute, yay!)
 <div class="info">ℹ️ To read more about Ai, check <a href="https://xn--931a.moe/" target="_blank">here</a> (Japanese-only).</div>
