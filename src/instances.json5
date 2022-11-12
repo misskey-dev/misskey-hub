@@ -26,6 +26,10 @@
   name: 'ミニディスク【Ｍｉｎｉ　Ｄｉｓｕｋｕ】',
   lang: 'en',
 }, {
+  host: 'miruku.cafe',
+  name: 'Miruku',
+  lang: 'en',
+}, {
   host: 'misskey.social',
   name: 'Misskey Social',
   lang: 'it',

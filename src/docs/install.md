@@ -12,7 +12,8 @@ Misskeyインスタンスの構築に関心をお寄せいただきありがと�
 [こちら](./install/bash.html)
 
 ## 全部自力でインストール
-[こちら](./install/manual.html)
+[基本編](./install/manual.html)\
+[Ubuntu版詳細説明](./install/ubuntu-manual.html)
 
 ## YunoHostを使ったインストール
 MisskeyはYunoHostでAppとしてインストールできます。詳しくは、[Yunohost向けのMisskeyパッケージのリポジトリ](https://github.com/YunoHost-Apps/misskey_ynh)をご覧ください。
