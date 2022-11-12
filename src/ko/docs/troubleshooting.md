@@ -1,49 +1,71 @@
 ---
-description: 'If you run into a problem, please check this page first.'
+description: '문제가 발생한 경우, 우선 이 문서를 참고해 주세요.'
 ---
 
-# Troubleshooting
+# 문제 해결
 ::: tip
-Please also use the [Frequently asked questions](./faq.md) page.
+[자주 묻는 질문](./faq.md)의 내용도 같이 참고하시면 좋습니다.
 :::
 
-If you run into a problem, please check this page first. In the case that you can't find your problem here, or the steps described here don't solve your issue, please contact your server's administrator or [Report it as a bug](./report-issue).
+문제가 발생하였을 때, 먼저 이 문서를 참고하여 주십시오.
+해당하는 항목이 없거나, 이 문서에서 지시하는 대로 실행함에도 불구하고 해결되지 않을 때에는 서버 관리자에게 문의하거나 [버그를 신고](./report-issue)해 주십시오.
 
-## The client does not start
-In most of the cases, this is due your used browser's or operating system's version being outdated. Please try updating your browser or operating system to the latest version and then try again.
+## 웹 클라이언트가 켜지지 않아요!
+대부분의 경우, 사용하시는 브라우저 또는 운영체제가 오래되었을 경우 나타나는 현상입니다.
+브라우저 및 운영체제를 최신 버전으로 업데이트한 뒤, 다시 시도하여 주십시오.
 
-Although this does not happen frequently, if your client will still not start after this, it is possible for the cache to be at fault.In this case, please try clearing your cache and then try again.
+그럼에도 실행되지 않을 경우, 낮은 확률로 브라우저 캐시 문제일 가능성이 있습니다. 브라우저의 캐시를 초기화한 뒤, 다시 시도하여 주십시오.
 
-## Pages cannot be loaded
-If your client does boot, but you get an error when trying to load a page, please check your network connection for errors.In addition, check that the server you are trying to access is not down.
+## 페이지를 불러올 수 없어요!
+웹 클라이언트는 켜지지만 페이지를 불러올 수 없다는 오류 메시지가 나온다면, 네트워크에 문제가 없는 지 먼저 확인해 주십시오. 또한 다른 기기로도 접속을 시도하여 서버가 멈춰있는 것은 아닌지도 확인해 주십시오.
 
-Although this does not happen frequently, cases where the cache is at fault can happen.In this case, please try clearing your cache and then try again.
+낮은 확률로 브라우저 캐시 문제일 가능성이 있습니다. 브라우저의 캐시를 초기화한 뒤, 다시 시도하여 주십시오.
 
-Any remaining problems are likely related to the server you are trying to access, so please contact its administrator.
+그럼에도 실행되지 않을 경우, 서버의 문제일 가능성이 있으므로 해당 서버의 관리자에게 문의하여 주십시오.
 
-## The client is slow
-Please try the following:
+## 웹 클라이언트가 매우 느려요!
+인터넷 서비스 제공자(ISP)의 통신 장에나 점검이 진행중인 것은 아닌지, 네트워크의 통신 속도나 네트워크 설정에 문제가 없는지, 서버 측의 장애 보고나 점검 일정은 없는 지 먼저 확인하십시오. 
 
-- Activate "Reduce UI animations" in the client settings
-- Deactivate "Use blur effect for modals" in the client settings
-- Activate hardware acceleration in your browser's settings
-- Upgrade the specs of your used device
+1.Misskey 웹 설정
+메뉴의 '설정'으로 들어가셔서, '클라이언트 설정'의 '일반'에서 다음과 같이 설정해 보십시오.
 
-## Parts of the UI are weird (For example, the background is transparent)
-Broken UI display may be caused by the theme cache system when the UI is changed as part of an update. Pressing "Clear cache" in the settings will fix this.
+- '모양'의 "UI의 애니메이션을 줄이기" 켜기
+- '모양'의 "모달에 흐림 효과 사용" 끄기
+- '모양'의 "시스템 기본 글꼴을 사용" 켜기
+- '모양'의 "OS 기본 이모지를 사용" 켜기
+
+아래 설정은 Misskey의 기능을 일부 비활성화합니다.
+
+- '동작'의 "Pages 에서 AiScript 를 사용하지 않음" 끄기
+- '모양'의 "움직임이 있는 MFM의 비활성화" 켜기
+
+2.웹 브라우저 설정
+- 브라우저 설정에서 하드웨어 가속을 켜기
+- 브라우저의 애드온이나 확장 기능에 대한 설정을 점검 혹은 비활성화
+- 기타 브라우저 설정을 점검
+
+3.기타
+- 사용 중인 기기의 시스템 설정 점검
+
+## Misskey 웹 클라이언트가 이상해요! (배경이 투명해지거나 기타 문제)
+업데이트로 인해 UI의 변경 사항이 발생하였을 때, 테마 캐시 시스템의 영향으로 홈페이지가 정상적으로 표시되지 않을 수 있습니다.
+설정 메뉴에서 '캐시 비우기'를 클릭하여 해결할 수 있습니다.
 
 ::: warning
-Specifically clear the "Client's" cache. Don't clear the "Browser's" cache.
+"웹 클라이언트" 설정의 캐시 비우기입니다. "브라우저"의 캐시를 초기화하지 마십시오.
 :::
 
-## The blinking light of a notification or Antenna won't go away
-A blinking light indicates unread content.In cases where this light won't go away, there is usually unread content that has been pushed away by new incoming content. If you believe to have read all content, but the light still won't go away (likely a bug), you can forcibly mark all content as read via the user settings.
+## 알림이나 안테나의 깜빡임 표시가 사라지지 않아요!
+깜빡임 표시는 읽지 않은 컨텐츠가 있을 때에 나타납니다. 깜빡임 표시가 사라지지 않는 현상은 보통 읽지 않은 컨텐츠가 목록 어딘가에 존재하기 때문에 나타납니다.
+모든 컨텐츠를 읽은 것 같은데도 사라지지 않는다면 (버그일 가능성이 있습니다), 설정 - 알림에서 모든 알림/글/대화를 읽은 상태로 표시하도록 할 수 있습니다.
 
-## The renote button is blocked out
-Followers-only notes cannot be renoted.
+## Renote할 수 없어요!
+공개 범위가 '팔로워'이거나 '다이렉트'인 게시물은 Renote할 수 없습니다.
 
-## Specific parts of the Misskey Web UI are not being displayed
-Problems like these can arise if you are using an Adblocker. For an optimized experience on Misskey, please turn it off.
+## Misskey 웹 클라이언트에서 특정 요소가 표시되지 않아요!
+웹 브라우저의 광고 차단기와 같은 애드온 또는 확장 기능에 의해 발생하는 문제일 수도 있습니다. 애드온 또는 확장 기능의 설정을 점검하거나, 비활성화하여 주십시오.
 
-## Some parts of the Misskey Web UI are untranslated
-In most cases, this is simply a matter of the translation not having been done yet instead of being a bug.Please wait until the translation of this area has been completed. You can alternatively also [participate in translation](./misskey) yourself.
+## Misskey 웹 클라이언트에 번역되지 않은 부분이 있어요!
+대부분의 경우 Misskey 웹 클라이언트의 번역이 제때 이루어지지 않은 것이 원인이므로, 버그가 아닙니다. 불편하시겠지만 번역이 완성될 때까지 기다려 주십시오.
+
+만약 Misskey의 번역에 관심이 있으시다면 직접 [번역에 참가](./misskey)하실 수도 있습니다.
