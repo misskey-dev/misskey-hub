@@ -40,6 +40,10 @@ export default defineUserConfig<DefaultThemeOptions>({
 			lang: 'en-US',
 			description: 'Official website of Misskey project',
 		},
+		'/it/': {
+			lang: 'it-IT',
+			description: 'Sito ufficiale del progetto Misskey',
+		}
 	},
 
 	theme: localTheme({
@@ -264,6 +268,18 @@ export default defineUserConfig<DefaultThemeOptions>({
 						}
 					],
 				},],
+			},
+			'/it/': {
+				selectLanguageName: 'Italiano',
+				contributorsText: 'Collaboratori',
+				lastUpdatedText: 'Ultimo aggiornamento',
+				editLinkText: 'Modifica questa pagina',
+				relatedPagesText: 'Pagine correlate',
+				readThisArticle: 'Leggi questo articolo',
+				navbar: [{
+					text: 'Blog Giapponese',
+					link: '/blog',
+				}]
 			},
 		},
 		themePlugins: {
