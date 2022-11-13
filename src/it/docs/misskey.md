@@ -32,15 +32,31 @@ Il vantaggio dei sistemi distribuiti è quello di selezionare l'istanza, le cui 
 
 Trattandosi di software Open Source, chiunque è in grado di avviare una propria istanza, che, grazie alla capacità di federarsi, permetterà l'accesso alla community indifferentemente dalla provenienza.
 
-## Always Open-Source
+## Per sempre Open Source
 
-Misskey has always been, and will always be, open source.Open source means, simply speaking, <b>making the source code of software (a program) publicly available</b>.This also includes being able to adjust or redistribute the source code in its definition. The entirety of Misskey's source code is [being licensed](https://github.com/misskey-dev) under an open-source license called [AGPL](https://github.com/misskey-dev/misskey/blob/develop/LICENSE), which means anyone can freely inspect, use, adjust, change or redistribute as they see fit. Open source has many merits, including allowing anyone being able to make changes as they like, to make sure the code does not include any harmful components and being able to easily participate in its development. For realizing the distributed nature of Misskey, this concept of open source is indispensable. Using the same example as before, most profit-oriented services like Twitter, Facebook etc. are not open source.
+Misskey, da sempre e per sempre, rimarrà software Open Source, ovvero a sorgente aperto.
+
+Il software Open Source è disponibile a tutti, permette, oltre alla capacità di usarlo, la capacità di correggerlo, modificarlo e ri-distribuirlo.
+
+L'interezza del codice sorgente di Misskey è protetto dalla licenza [Affero General Public License](https://github.com/misskey-dev/misskey/blob/develop/LICENSE) che garantisce _le quattro libertà_.
+
+- Libertà 0: eseguire il programma, per qualsiasi scopo
+- Libertà 1: studiare come funziona e modificarlo a piacimento
+- Libertà 2: ridistribuire copie in modo solidale
+- Libertà 3: migliorare il programma e ridistribuire le modifiche affinché il pubblico possa fruirne
+
+Il vantaggio del codice studiabile da tutti è che tutti possono assicurarsi che il funzionamento non provochi danneggiamento e contribuire a migliorarne la sicurezza.
+
+Per la natura distribuita di Misskey, la necessità che sia Open Source, è basilare. Al contrario dei sistemi centralizzati citati poc'anzi.
 
 ::: tip
-Technically speaking, Misskey's source code is being managed via Git, and its repository is being hosted at [GitHub.](https://github.com/misskey-dev)
+In linguaggio tecnico, il codice sorgente di Misskey viene gestito tramite **Git** e il codice viene ospitato sul sito [GitHub.](https://github.com/misskey-dev)
 :::
 
-## Joining development and supporting the project
+## Unirsi allo sviluppo e supportare il progetto
+
+Se ti piace Misskey, per favore supportaci.
+Si può fare in
 
 If you like Misskey, please support the project.Supporting the project can be done in many ways, with some of them introduced below.Some of these do not require programming skills, so anyone can feel free to support Misskey their own way.We're always waiting for you.
 
