@@ -280,20 +280,41 @@ export default defineUserConfig<DefaultThemeOptions>({
 					text: 'Blog Giapponese',
 					link: '/blog',
 				}, {
-					text: 'I repository',
+					text: 'Collegamenti',
 					children: [{
-						text: 'misskey (la piattaforma)',
-						link: 'https://github.com/misskey-dev/misskey',
-					}, {
-						text: 'misskey.js (la SDK in NodeJS)',
-						link: 'https://github.com/misskey-dev/misskey.js',
-					}, {
-						text: 'mfm.js (il parser MFM)',
-						link: 'https://github.com/misskey-dev/mfm.js',
-					}, {
-						text: 'misskey-hub (il sito)',
-						link: 'https://github.com/misskey-dev/misskey-hub',
-					}]
+						text: 'Discord ufficiale',
+						link: 'https://discord.gg/Wp8gVStHW3',
+					},{
+						text: 'Donazioni (Patreon)',
+						link: 'https://www.patreon.com/syuilo',
+					},{
+						text: 'Traduzioni (Crowdin)',
+						link: 'https://crowdin.com/project/misskey',
+					},{
+						text: '藍.moe (la mascotte: Ai)',
+						link: 'https://xn--931a.moe',
+					},{
+						text: 'Profili',
+						children: [{
+							text: '@repo@misskey.io',
+							link: 'https://misskey.io/@repo',
+						}]
+					},{
+						text: 'Il codice sorgente',
+						children: [{
+							text: 'misskey (la piattaforma)',
+							link: 'https://github.com/misskey-dev/misskey',
+						}, {
+							text: 'misskey.js (la SDK in NodeJS)',
+							link: 'https://github.com/misskey-dev/misskey.js',
+						}, {
+							text: 'mfm.js (il parser MFM)',
+							link: 'https://github.com/misskey-dev/mfm.js',
+						}, {
+							text: 'misskey-hub (il sito)',
+							link: 'https://github.com/misskey-dev/misskey-hub',
+						}]
+					}] // Fine: menu links
 				}]  // Fine: navbar italiana
 			},
 		},
