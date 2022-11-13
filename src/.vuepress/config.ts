@@ -297,9 +297,9 @@ export default defineUserConfig<DefaultThemeOptions>({
 				}, {
 					text: 'Partecipa',
 					children: [
-						'/en/instances',
-						'/en/plugins/',
-						'/en/appendix/assets'
+						'/it/instances',
+						'/it/plugins',
+						'/it/appendix/assets'
 					]
 				}, {
 					text: 'Documentazione',

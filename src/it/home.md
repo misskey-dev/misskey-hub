@@ -2,8 +2,8 @@
 home: true
 title: Misskey Hub
 heroImage: /banner.svg
-tagline: Official web site of open-source interplanetary micro-blogging platform Misskey
-footer: Copyright &copy; 2022 syuilo and other contributors
+tagline: Sito ufficiale di Misskey, la piattaforma opensource di microblog interplanetario
+footer: Copyright &copy; 2022 syuilo ed altri co-autori
 actions:
   - text: Getting started
     link: ./docs/getting-started
@@ -27,6 +27,7 @@ features:
 <div class="contents">
 
 # Sponsors
+
 <div class="sponsors">
 	<a class="rss3" title="RSS3" href="https://rss3.io/" target="_blank"><img src="/sponsors/rss3.svg" alt="RSS3"></a>
 </div>
