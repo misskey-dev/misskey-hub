@@ -270,15 +270,47 @@ export default defineUserConfig<DefaultThemeOptions>({
 				},],
 			},
 			'/it/': {
+				selectLanguageText: 'Lingua',
 				selectLanguageName: 'Italiano',
-				contributorsText: 'Collaboratori',
+				selectLanguageAriaLabel: 'Scegli la lingua del sito',
+				contributorsText: 'Co-autori',
 				lastUpdatedText: 'Ultimo aggiornamento',
 				editLinkText: 'Modifica questa pagina',
 				relatedPagesText: 'Pagine correlate',
 				readThisArticle: 'Leggi questo articolo',
+				// 404 page messages
+				notFound: [
+					`Purtroppo qui non c'è niente`,
+					`Perché manca questa pagina?`,
+					`Pagina non trovata`,
+					`Sembra che il link sia rotto...`,
+					`Mah? Qui non c'è nulla`
+				],
+				backToHome: 'Torna alla pagina iniziale',
+				// a11y
+				openInNewWindow: 'si apre in una nuova finestra',
+				toggleColorMode: 'cambia i colori',
+				toggleSidebar: 'menu laterale di navigazione',
 				navbar: [{
 					text: 'Blog Giapponese',
 					link: '/blog',
+				}, {
+					text: 'Partecipa',
+					children: [
+						'/en/instances',
+						'/en/plugins/',
+						'/en/appendix/assets'
+					]
+				}, {
+					text: 'Documentazione',
+					children: [
+						'/en/docs/misskey',
+						'/en/docs/releases',
+						'/en/docs/misskey-hub',
+						'/en/docs/faq',
+						'/en/docs/glossary',
+						'/en/docs/troubleshooting'
+					]
 				}, {
 					text: 'Collegamenti',
 					children: [{
