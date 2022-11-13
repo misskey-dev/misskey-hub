@@ -279,7 +279,22 @@ export default defineUserConfig<DefaultThemeOptions>({
 				navbar: [{
 					text: 'Blog Giapponese',
 					link: '/blog',
-				}]
+				}, {
+					text: 'I repository',
+					children: [{
+						text: 'misskey (la piattaforma)',
+						link: 'https://github.com/misskey-dev/misskey',
+					}, {
+						text: 'misskey.js (la SDK in NodeJS)',
+						link: 'https://github.com/misskey-dev/misskey.js',
+					}, {
+						text: 'mfm.js (il parser MFM)',
+						link: 'https://github.com/misskey-dev/mfm.js',
+					}, {
+						text: 'misskey-hub (il sito)',
+						link: 'https://github.com/misskey-dev/misskey-hub',
+					}]
+				}]  // Fine: navbar italiana
 			},
 		},
 		themePlugins: {
