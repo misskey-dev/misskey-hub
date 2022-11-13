@@ -1,6 +1,6 @@
 {
-	summary: '',
-	description: '',
+	summary: 'インスタンスからのお知らせを取得します。',
+	description: 'インスタンスからのお知らせを取得します。',
 	tags: [
 		'meta',
 	],
@@ -13,18 +13,22 @@
 				minimum: 1,
 				maximum: 100,
 				default: 10,
+				description: '取得するお知らせの最大数。',
 			},
 			withUnreads: {
 				type: 'boolean',
 				default: false,
+				description: 'trueにすると、未読のお知らせのみを取得します。falseにすると、すべてのお知らせを取得します。',
 			},
 			sinceId: {
 				type: 'string',
 				format: 'misskey:id',
+				description: '指定すると、idがその値よりも大きいお知らせを返します。',
 			},
 			untilId: {
 				type: 'string',
 				format: 'misskey:id',
+				description: '指定すると、idがその値よりも小さいお知らせを返します。',
 			},
 		},
 		required: [],
@@ -76,6 +80,7 @@
 					type: 'boolean',
 					optional: true,
 					nullable: false,
+					description: 'お知らせが既読であればtrueになります。クレデンシャルを送信した場合のみ返されます。',
 				},
 			},
 			required: [

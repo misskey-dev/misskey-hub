@@ -38,12 +38,12 @@
 			driveUsageLocal: {
 				type: 'number',
 				optional: false, nullable: false,
-				description: '',
+				description: '未実装：常に0を返します。',
 			},
 			driveUsageRemote: {
 				type: 'number',
 				optional: false, nullable: false,
-				description: '',
+				description: '未実装：常に0を返します。',
 			},
 		},
 		required: [

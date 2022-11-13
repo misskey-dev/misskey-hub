@@ -1,6 +1,6 @@
 {
-	summary: '',
-	description: '',
+	summary: 'アプリを認証するためのトークンを作成します。',
+	description: 'アプリを認証するためのトークンを作成します。',
 	tags: [
 		'auth',
 	],
@@ -10,6 +10,7 @@
 		properties: {
 			appSecret: {
 				type: 'string',
+				description: 'アプリケーションのシークレットキー。',
 			},
 		},
 		required: [
@@ -25,12 +26,14 @@
 				type: 'string',
 				optional: false,
 				nullable: false,
+				description: 'セッションのトークン。',
 			},
 			url: {
 				type: 'string',
 				optional: false,
 				nullable: false,
 				format: 'url',
+				description: 'セッションのURL。',
 			},
 		},
 		required: [
@@ -42,7 +45,7 @@
 		'92f93e63-428e-4f2f-a5a4-39e1407fe998': {
 			id: '92f93e63-428e-4f2f-a5a4-39e1407fe998',
 			code: 'NO_SUCH_APP',
-			description: '',
+			description: 'アプリが存在しません。',
 		},
 	},
 }

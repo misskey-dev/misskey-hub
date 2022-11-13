@@ -1,6 +1,6 @@
 {
-	summary: '',
-	description: '',
+	summary: 'セッションの情報を取得します。',
+	description: 'セッションの情報を取得します。',
 	tags: [
 		'auth',
 	],
@@ -10,6 +10,7 @@
 		properties: {
 			token: {
 				type: 'string',
+				description: 'セッションのトークン。',
 			},
 		},
 		required: [
@@ -26,6 +27,7 @@
 				optional: false,
 				nullable: false,
 				format: 'id',
+				description: 'セッションのID。',
 			},
 			app: {
 				type: 'object',
@@ -33,11 +35,13 @@
 				nullable: false,
 				ref: 'App',
 				$ref: 'misskey://App',
+				description: 'セッションを保持するアプリ。',
 			},
 			token: {
 				type: 'string',
 				optional: false,
 				nullable: false,
+				description: 'セッションのトークン。',
 			},
 		},
 		required: [
@@ -50,7 +54,7 @@
 		'bd72c97d-eba7-4adb-a467-f171b8847250': {
 			id: 'bd72c97d-eba7-4adb-a467-f171b8847250',
 			code: 'NO_SUCH_SESSION',
-			description: '',
+			description: 'セッションが存在しません。',
 		},
 	},
 }
