@@ -304,12 +304,12 @@ export default defineUserConfig<DefaultThemeOptions>({
 				}, {
 					text: 'Documentazione',
 					children: [
-						'/en/docs/misskey',
-						'/en/docs/releases',
-						'/en/docs/misskey-hub',
-						'/en/docs/faq',
-						'/en/docs/glossary',
-						'/en/docs/troubleshooting'
+						'/it/docs/misskey',
+						'/it/docs/releases',
+						'/it/docs/misskey-hub',
+						'/it/docs/faq',
+						'/it/docs/glossary',
+						'/it/docs/troubleshooting'
 					]
 				}, {
 					text: 'Collegamenti',

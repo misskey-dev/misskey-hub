@@ -1,8 +1,8 @@
 ---
-description: "collezione di materiale promozionale su Misskey, loghi, icone disegni e altro..."
+description: "collezione di risorse grafiche su Misskey, loghi, icone disegni e altro..."
 ---
 
-# Collezione di design
+# Risorse grafiche
 
 Questa collezione contiene Loghi Misskey, icone e altri asset.
 
