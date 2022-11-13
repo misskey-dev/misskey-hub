@@ -1,10 +1,8 @@
 # Informazioni su Misskey
 
-Misskey è una piattaforma di microblog distribuita. Lo sviluppo è iniziato da @syuilo nel 2014, in Giappone.
+Misskey è una piattaforma di microblog distribuita. Lo sviluppo è stato iniziato da **@syuilo** nel 2014, in Giappone.
 
-Le caratteristiche principali di questa piattaforma federata, sono l'abbondanza di funzionalità, come ad esempio il Drive per salvare e riusare i media, come immagini, audio e video. Le reazioni, non limitate alla sola stellina o pollicione.
-
-Come anche la capacità di modificare l'interfaccia a piacere dell'utilizzatore, senza dover scrivere una linea di codice.
+La caratteristica principale di questa piattaforma federata è l'abbondanza di funzionalità, come ad esempio il Drive per salvare e riusare i media caricati, come immagini, audio e video. Le reazioni, non limitate alla sola stellina o pollicione. Come anche la capacità di modificare l'interfaccia a piacere dell'utilizzatore, senza dover scrivere una linea di codice.
 
 ## Storia
 
@@ -22,7 +20,7 @@ Finché ci saranno sviluppatori capaci di intervenire, Misskey verrà sempre svi
 
 ## Cosa significa _"Distribuito"_
 
-Un servizio **Distribuito**, altrimenti noto come **Decentralizzato** si riferisce a quella caratteristica che permette di suddividere l'insieme totale della comunità in più parti, più o meno grandi, chiamate istanze.
+Un servizio **Distribuito**, o **Decentralizzato** si riferisce a quella caratteristica che permette di suddividere l'insieme totale della comunità in più parti, più o meno grandi, chiamate istanze.
 
 Le istanze comunicano in maniera mutuale, si dice che sono **federate** da cui deriva il neologismo **Fediverso**. Il fediverso compone, dunque, la rete di piattaforme che mettono in comunicazione tra loro persone provenienti da istanze diverse.
 
@@ -55,90 +53,100 @@ In linguaggio tecnico, il codice sorgente di Misskey viene gestito tramite **Git
 
 ## Unirsi allo sviluppo e supportare il progetto
 
-Se ti piace Misskey, per favore supportaci.
-Si può fare in
+Se ti piace Misskey, per favore supporta il progetto.
+Si può fare in vari modi, di seguito speghiamo come. Alcuni di questi non richiedono la capacità di saper programmare, così tutti possono partecipare a loro modo, senza limitazioni tecniche.
 
-If you like Misskey, please support the project.Supporting the project can be done in many ways, with some of them introduced below.Some of these do not require programming skills, so anyone can feel free to support Misskey their own way.We're always waiting for you.
+### Aggiungere funzionalità o correggere malfunzionamenti
 
-### Adding features or fixing bugs
+Sei in grado di programmare sfruttando le tue capacità di sviluppo software? Allora puoi contribuire al progetto modificando il codice sorgente. Le [linee guida per contribuire](https://github.com/misskey-dev/misskey/blob/develop/CONTRIBUTING.md) ti indicheranno come fare.
 
-If you possess software engineering skills, you can contribute to the project through editing its source code. For guidelines regarding this, please see [here](https://github.com/misskey-dev/misskey/blob/develop/CONTRIBUTING.md).
+### Partecipare ai dialoghi
 
-### Participating in discussions
+Puoi contribuire condividendo la tua opinione sul funzionamento di Misskey o proponendo nuove funzionalità, come, non meno importante la segnalazione di malfunzionamenti.
+Questo avviene su [GitHub](https://github.com/misskey-dev) oppure nei [Forum](https://forum.misskey.io/).
 
-You can contribute by sharing your opinion on new or existing features, as well as by reporting bugs. Such discussions can be held at [GitHub](https://github.com/misskey-dev) or the [Forums](https://forum.misskey.io/) etc.
+### Traduzione dei testi
 
-### Translating text
+Misskey è disponibile in vari linguaggi (i18n, abbreviazione di Internationalization).
+Sebbene il linguaggio originale sia il giapponese, tanti volontari stanno traducendo Misskey nelle altre lingue, tra cui l'italiano.
 
-Misskey is available in many languages (also called i18n, which is an abbreviation for Internationalization).While the original language is generally japanese, volunteers are translating Misskey into other languages. Helping out with this translation work is also a form of contributing. Misskey uses a service called [Crowdin to manage its translations.](https://crowdin.com/project/misskey)
+Aiutare col lavoro di traduzione è un altro modo per contribuire. L'attività si svolge su un servizio chiamato [Crowdin](https://crowdin.com/project/misskey).
 
-### Sharing your impressions
+### Condividere le proprie impressioni
 
-Besides reporting bugs, please also feel free to share positive impressions such as which parts of Misskey you personally like, or things about Misskey that you find fun.As things like these serve as motivation for the developers, it also counts as indirect support for the project.
+Oltre alla segnalazione dei malfunzionamenti, puoi condividere impressioni positive, indicando ad esempio, quali funzionalità preferisci o quelle che ti divertono di più. Sembrerà una banalità ma cose come queste aiutano a motivare gli sviluppatori e contano come supporto morale al progetto.
 
-### Increasing the number of Misskists
+### Aumentare il numero di Misskist
 
-"Misskist" refers to the people using Misskey. By spreading the word about Misskey through introducing it to your acquaintances, the number of Misskists may increase, which serves as motivation for the developers.
+"Misskist" si usa per indicare le persone che usano Misskey. Spargendo la voce col passa parola, parlandone ai propri conoscenti, il numero può aumentare e contribuisce a migliorare la motivazione degli sviluppatori.
 
-### Making donations
+### Le donazioni
 
-Misskey is not a business, and stays free to use by receiving its earnings through donations from everyone.(Depending on the instance, some revenue may be earned through showing advertisments, but these earnings go straight to the instance administrator and not to the developers of Misskey) As donations make it possible for the project to continue to be developed, they are another way of supporting Misskey. Donations are generally accepted via [Patreon](https://www.patreon.com/syuilo). By donating a certain amount of money, you can also have your username displayed on Misskey's [About page](/about-misskey).
+Sviluppare Misskey non è un lavoro, lo sviluppo continuativo è determinato dalle donazioni di tutti quanti. Alcune istanze guadagnano mostrando piccoli annunci ma questi arrivano direttamente nelle tasche degli amministratori della istanza, non agli sviluppatori.
 
-In addition to this, server administrators are also generally speaking not earning revenue.As operating a server costs money, please also consider supporting your server's administrator. This does not have a direct relation to the development of Misskey, but the existence of servers is what makes up the project, meaning the continued existence of servers is just about as important as that of the project itself.
+Poiché le donazioni danno continuità allo sviluppo del progetto, sono un ulteriore modo di supportare Misskey. Si accettano donazioni tramite [Patreon](https://www.patreon.com/syuilo).
+Raggiungendo un certo corrispettivo, puoi ottenere il riconoscimento di avere la tua username in mostra nella pagina intitolata: [Informazioni sulla istanza](/about-misskey).
 
-## Frequently Asked Questions
+In aggiunta a tutto ciò, non è detto che gli amministratori di una istanza riescano a guadagnare, poiché mantenerne una funzionante ha dei costi. Supportare gli amministratori non è direttamente correlato allo sviluppo della piattaforma Misskey, ma la sopravvivenza dei server è quel che mantiene in piedi il progetto.
 
-### What is this project aiming to achieve?
+## FAQ domande frequenti
 
-To put it bluntly, while this is a bit vague, Misskey is aiming to be a widely-used all-purpose platform. Unlike other platforms, Misskey is not grounded in a specific idea (for example, anti-centralization) or vision and being developed with that in mind, so it's a bit "aimless" in this respect. On the other hand though, this creates a flexibility due to not being bound by a specific direction to go towards.
+### Qual'è l'obiettivo del progetto?
 
-<!-- TODO: ここにロードマップへのリンク -->
+Francamente Misskey mira soltanto ad essere una buona piattaforma di comunicazione a tutto tondo. Diversamente da altre, non è fondata su idee specifiche, per esempio l'anti-centralizzazione, né viene sviluppata con quello scopo. Sotto questo aspetto è un po' "senza obiettivi", il che permette di cambiare facilmente i piani se necessario.
 
-### Is Misskey being developed by a company?
+<!-- TODO: ここにロードマップへのリンク (link alla roadamap) -->
 
-No.Misskey is being developed by an individual person and not commercialized through connection with any particular company. Development members are generally volunteers. Additionally, while there are some corporate sponsors, development is still centered around the community.
+### Misskey è sviluppato da una azienda?
 
-### Who is managing Misskey?
+No. Misskey è sviluppato da una singola persona e non viene commercializzato tramite alcuna azienda. I membri del team di sviluppo di solito sono volontari. Dovessero presentarsi alcuni sponsor, lo sviluppo rimane comunque incentrato sulla comunità di utilizzatori.
 
-Due to the distributed nature of Misskey, each individual server has their own administration.Therefore, not all of Misskey is managed by one individual person or company. This means that, as the development team does not control individual servers, for management-related questions you should contact your server's administration instead. You can verify who is managing your individual server on [this page](/about). If you were to create a server, then you would also become its administrator.
+### Chi gestisce Misskey?
 
-### Which server should I choose?
+Essendo un sistema distribuito, ogni istanza, individualmente, è governata da uno o più amministratori.
+Per tanto non c'è una singola persona o azienda che controlla Misskey. Significa anche che il team di sviluppo non ha alcun controllo delle istanze individuali. Le questioni specifiche vanno risolte con gli amministratori di questa o quella istanza. Per scoprire chi sono gli amministratori di una istanza, occorre visitare la pagina: [Informazioni sull'istanza](/about).
+I creatori di una istanza, sono essi stessi gli amministratori.
 
-[You can find an (incomplete) list of servers here.](../instances.md) Depending on the server, its community or central theme (for example, liking a show) may vary, so if there is a server that suits your interests, joining it would likely be a good choice. Besides that, server size, userbase, country or spoken language, reliance or trust in the administration team and many other things can also serve as criteria. There is however no single server that serves as the official server of Misskey.You also have the choice of creating a new server of your own.
+### Quale istanza dovrei scegliere?
 
-Generally speaking, no matter which server you join, you will still be able to connect with users from all other servers.
+Abbiamo un [elenco di istanze Misskey](../instances.md), sebbene non sia completo.
+La risposta è: dipende. Dall'istanza, dalla grandezza della community o dal motivo che la anima.
+Scegliere una istanza che coincide con i tuoi interessi è probabilmente una buona scelta.
+Anche se, la quantità di persone, la velocità del servizio, l'area in cui è posizionata o la lingua parlata, potrebbero essere criteri validi per la scelta.
+Nessuna istanza è quella **ufficiale**, anche tu potresti avere la capacità di aprire la tua istanza.
+In generale, qualsiasi istanza scegli, avrai modo di connetterti con tutti gli utenti in modo trasparente.
 
-### How can I create my own server?
+### Come installo la mia istanza?
 
-Thank you for having an interest in creating a Misskey server. In the current year of 2022 there is no specialized Misskey hosting service, so creating a new server requires a certain amount of knowledge. Please see [here](./install.md) for more information regarding this.
+Grazie per l'interesse ad avviare una nuova istanza di Misskey. Fino al 2022 non ci sono servizi di hosting specializzati nella fornitura di Misskey chiavi in mano. Quindi avviare la propria istanza richiede un certo quantitativo di competenza tecnica. La [guida di installazione](./install.md) ti aiuterà con ulteriori informazioni a riguardo.
 
-### What kind of technology does Misskey use?
+### Quale tecnologia usa Misskey?
 
-As development on Misskey progressed, the technology it has used has changed greatly.In the beginning, it used a combination of MySQL + PHP + jQuery, but currently uses the following.
+Durante lo sviluppo di Misskey, la tecnologia è cambiata enormemente. All'inizio si usava una combinazione di MySQL + PHP + jQuery (denominata LAMP), ma oggi le cose sono cambiate:
 
-- Server-side: Node.js
-- Database: PostgreSQL, Redis
-- UI Framework: Vue.js
-- Programming language: TypeScript
+- Applicazione: Node.js
+- Base dati: PostgreSQL, Redis
+- Interfaccia utente: Vue.js
+- Linguaggio di programmazione: TypeScript
 
-In addition to this, from Misskey derived technology such as MFM or AiScript are also being used.
+In aggiunta a tutto ciò, c'è MFM e AiScript, che sono due tecnologie Open Source originali di Misskey.
 
-### Is this a fork of Mastodon?
+### È una derivazione di Mastodon?
 
-No.Misskey is a project completely different from Mastodon or other alike projects. It has been in development for a long time already.However, it only became a distributed network after the appearance of Mastodon. Besides both projects implementing the ActivityPub protocol, there is no relation between the two.
+No. Misskey è un progetto completamente diverso da Mastodon o altri progetti simili. Lo sviluppo si protrae da molto più tempo. Sebbene sia diventato federato e distribuito soltanto dopo l'apparizione di Mastodon. Entrambi i progetti implementano il protocollo ActivityPub, anche se non c'è relazione tra entrambi.
 
-### Are there any apps for iOS / Android available?
+### È disponibile la App per iOS o Android?
 
-While no official Misskey app for either OS exists, there are several third-party applications. For details, please check [here](./apps).
+Sebbene non esista alcuna App ufficiale di Misskey, esistono alcune [applicazioni sviluppate da terzi](./apps).
 
-However, functionality of third-party applications will inevitably lag behind the official Web client, so unless you really want to use a native application, we recommend the official Web client instead. As the Misskey Web client supports PWA, it is also possible to make it act as if it was a native application instead. For details regarding this, please check [here](todo).
+Comunque, la funzionalità di App terze, inevitabilmente rimane al passo della versione ufficiale via web. Se puoi fare a meno dalla App nativa per il tuo device, noi ti raccomandiamo di usare la versione ufficiale via web. Essa infatti supporta PWA ed è possibile fare in modo che si comporti come una App nativa. <!-- TODO: Manca il link alla PWA -->
 
-### Where can I download Misskey's logo or icon?
+### Mi serve il logo e l'icona di Misskey, come si scaricano?
 
-Please refer to the [assets collection](../appendix/assets.html).
+Abbiamo a disposizione diverse [risorse grafiche](../appendix/assets.html).
 
-### Who's that cute cat-eared girl that you see sometimes?
+### Chi è quella ragazza carina con le orecchie da gatto?
 
-It's Misskey's guardian deity, Ai.(They called Ai cute, yay!)
+Si tratta della dea guardiana di Misskey, si chiama Ai.
 
-<div class="info">ℹ️ To read more about Ai, check <a href="https://xn--931a.moe/" target="_blank">here</a> (Japanese-only).</div>
+<div class="info">ℹ️ Per ulteriori <a href="https://xn--931a.moe/" target="_blank">informazioni su Ai</a> sul sito dedicato, in giapponese.</div>
