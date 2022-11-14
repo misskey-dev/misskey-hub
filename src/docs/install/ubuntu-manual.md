@@ -85,7 +85,7 @@ Node.jsは、サーバーサイドJavaScript環境であり、Misskeyの基本�
 
     sudo apt install -y curl
 
-    curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
+    curl -sL https://deb.nodesource.com/setup_18.x | sudo -E bash -
 
     sudo apt install -y nodejs
 
@@ -100,17 +100,11 @@ PostgreSQLは、オブジェクト関係データベース管理システムで�
 
 #### インストール
 
-シェルスクリプトを実行し、最新バージョン（v13）をインストールしよう。
+シェルスクリプトを実行し、最新バージョン（v15）をインストールしよう。
 
-    sudo apt install curl ca-certificates gnupg lsb-release
+    sudo apt install -y postgresql-common
 
-    curl https://www.postgresql.org/media/keys/ACCC4CF8.asc | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/apt.postgresql.org.gpg >/dev/null
-
-    sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
-
-    sudo apt update
-
-    sudo apt install -y postgresql-15
+    sudo sh /usr/share/postgresql-common/pgdg/apt.postgresql.org.sh -i -v 15;
 
     # systemctlでデーモンの状態を確認。
     systemctl status postgresql
@@ -136,8 +130,11 @@ Misskeyで使うユーザーを作成する。\
 
 ### Redis
 
-Redisは、NoSQLのインメモリデータベースソフトであり、データベースや連合との通信を管理するなどのために必要だ。
+Redisは、NoSQLのインメモリデータベースソフトであり、データベースや連合との通信を管理するなどのために必要だ。  
+redis.ioのドキュメントに従いインストールする。 https://redis.io/docs/getting-started/installation/install-redis-on-linux/
 
+    sudo apt install -y curl ca-certificates gnupg2 lsb-release
+		
     curl -fsSL https://packages.redis.io/gpg | sudo gpg --dearmor -o /usr/share/keyrings/redis-archive-keyring.gpg
 
     echo "deb [signed-by=/usr/share/keyrings/redis-archive-keyring.gpg] https://packages.redis.io/deb $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/redis.list
@@ -162,7 +159,7 @@ nginxは、主としてリバースプロキシに用いられるWebサーバー
 
 nginx.orgのドキュメント http://nginx.org/en/linux_packages.html#Ubuntu に従ってインストールする。
 
-    sudo apt install gnupg2 ubuntu-keyring
+    sudo apt install ubuntu-keyring
 
     curl https://nginx.org/keys/nginx_signing.key | gpg --dearmor | sudo tee /usr/share/keyrings/nginx-archive-keyring.gpg >/dev/null
 
