@@ -32,7 +32,7 @@ MisskeyだけをDockerで動作させる方法は解説を断念しました。\
 
 ## はじめに
 
-この記事では、[リポジトリに同梱されている **『Misskey構築の手引き』** (setup.md)](https://github.com/syuilo/misskey/blob/master/docs/setup.ja.md) を基に、一般的なUbuntuサーバーへMisskeyをインストールし公開する方法の一挙手一投足を解説する。
+この記事では、[Misskey構築の手引き (manual.html)](./manual.html)を基に、一般的なUbuntuサーバーへMisskeyをインストールし公開する方法の一挙手一投足を解説する。
 
 Bashのコマンド入力、いくつかの設定ファイルの編集、そしてブラウザの操作だけで設定が完了するようにしている。インストールするソフトウェアについて簡単に説明しているが、気にする必要はない。
 
