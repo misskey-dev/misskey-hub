@@ -1,49 +1,60 @@
 ---
-description: 'If you run into a problem, please check this page first.'
+description: "Se ti capita un problema, prima di tutto leggi questa pagina"
 ---
 
-# Troubleshooting
+# Risoluzione autonoma dei problemi
+
 ::: tip
-Please also use the [Frequently asked questions](./faq.md) page.
+Potrebbero interessarti anche le [FAQ, domande poste di frequente](./faq.md)
 :::
 
-If you run into a problem, please check this page first. In the case that you can't find your problem here, or the steps described here don't solve your issue, please contact your server's administrator or [Report it as a bug](./report-issue).
+Se ti capita un problema, prima di tutto leggi questa pagina. Nel caso non trovassi il tuo problema qui, oppure i passi descritti non lo risolvono, per favore, contatta gli amministratori della tua istanza. Se non riesci nemmeno così, allora [Segnala un malfunzionamento](./report-issue).
 
-## The client does not start
-In most of the cases, this is due your used browser's or operating system's version being outdated. Please try updating your browser or operating system to the latest version and then try again.
+## Non si avvia la web app
 
-Although this does not happen frequently, if your client will still not start after this, it is possible for the cache to be at fault.In this case, please try clearing your cache and then try again.
+Il più delle volte, è causato dalla obsolescenza del sistema operativo o del browser usato per collegarsi. Prova ad aggiornare il browser o il sistema operativo all'ultima versione e riprova.
 
-## Pages cannot be loaded
-If your client does boot, but you get an error when trying to load a page, please check your network connection for errors.In addition, check that the server you are trying to access is not down.
+Sebbene sia molto raro, se continua a non funzionare, riprova dopo aver rimosso la cronologia e i dati di navigazione.
 
-Although this does not happen frequently, cases where the cache is at fault can happen.In this case, please try clearing your cache and then try again.
+## Impossibile caricare le pagine
 
-Any remaining problems are likely related to the server you are trying to access, so please contact its administrator.
+L'interfaccia web si apre ma ottieni un errore quando provi a caricare una pagina. In questo caso controlla che la connessione alla rete sia funzionante. Se tutto va bene, verifica che l'istanza sia effettivamente funzionante.
 
-## The client is slow
-Please try the following:
+Sebbene sia molto raro, se continua a non funzionare, riprova dopo aver rimosso la cronologia e i dati di navigazione.
 
-- Activate "Reduce UI animations" in the client settings
-- Deactivate "Use blur effect for modals" in the client settings
-- Activate hardware acceleration in your browser's settings
-- Upgrade the specs of your used device
+Dovessi avere ancora problemi, allora si tratta dell'istanza, informa subito gli amministratori.
 
-## Parts of the UI are weird (For example, the background is transparent)
-Broken UI display may be caused by the theme cache system when the UI is changed as part of an update. Pressing "Clear cache" in the settings will fix this.
+## Caricamento lento
+
+Prova queste cose:
+
+- Nelle _Impostazioni Client_, attiva: "Riduci le animazioni"
+- Nelle _Impostazioni Client_, disattiva: "Usa l'effeto sfuocatura"
+- Attiva l'opzione "Accelerazione hardware" nelle impostazioni del browser
+- Migliora le caratteristiche del tuo dispositivo
+
+## Parti della interfaccia grafica sono strane (es: sfondi trasparenti)
+
+Malfunzionamenti di questo tipo possono succedere dopo il rilascio di un aggiornamento. Premere il bottone _"Cancella la cache"_ nella pagina "Impostazione", risolverà il problema.
 
 ::: warning
-Specifically clear the "Client's" cache. Don't clear the "Browser's" cache.
+Non intendiamo la cache o cronologia del browser, si intende proprio l'impostazione specifica del profilo.
 :::
 
-## The blinking light of a notification or Antenna won't go away
-A blinking light indicates unread content.In cases where this light won't go away, there is usually unread content that has been pushed away by new incoming content. If you believe to have read all content, but the light still won't go away (likely a bug), you can forcibly mark all content as read via the user settings.
+## La segnalazione lampeggiante di una Antenna non vuole andare via
 
-## The renote button is blocked out
-Followers-only notes cannot be renoted.
+La segnalazione lampeggiante indica note non lette. Nel caso in cui non scomparisse, significa che qualche ulteriore nota viene spedita in fondo da nuove note in arrivo.
+Se pensi che sia un conteggio errato, puoi **indicare tutto come letto** tramite le impostazioni utente.
 
-## Specific parts of the Misskey Web UI are not being displayed
-Problems like these can arise if you are using an Adblocker. For an optimized experience on Misskey, please turn it off.
+## Il bottone _Rinota_ è bloccato
 
-## Some parts of the Misskey Web UI are untranslated
-In most cases, this is simply a matter of the translation not having been done yet instead of being a bug.Please wait until the translation of this area has been completed. You can alternatively also [participate in translation](./misskey) yourself.
+Le note con livello di privacy _Per i soli follower_ non possono essere rinotate.
+
+## Non si vedono parti specifiche della interfaccia web
+
+Potrebbero sorgere provlemi di questo tipo quando usi una estensione AdBlocker, di blocco pubblicità.
+Per un uso ottimale, per favore disattiva il tuo AdBlocker.
+
+## Alcune parti risultano non tradotte
+
+Potrebbe essere che effettivamente quella parte non sia stata ancora tradotta, anziché un malfunzionamento. Aspetta qualche tempo, oppure [partecipa alla traduzione](./misskey).

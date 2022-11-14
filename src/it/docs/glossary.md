@@ -9,19 +9,19 @@ The protocol (method) used for enabling the distributed nature of Misskey. By ad
 
 ## AiScript
 
-A programming language available for use on Misskey. For details, see [here.](../advanced/aiscript)
+[Linguaggio di programmazione](../advanced/aiscript) per estendere le funzioni nell'interfaccia web di Misskey.
 
 ## API
 
-An interface that can be used for interacting with Misskey through a program, available for each individiual instance. For details, see [here.](../docs/api)
+Interfaccia di programmazione dell'applicazione, serve per interagire con Misskey in modo programmato e automatizzato. [Informazioni sulle API](../docs/api)
 
 ## Bot
 
-An account that is being controlled by a program.
+Contrazione di: Robot. Si tratta di un profilo non presidiato, programmato per svolgere attività automatizzate.
 
 ## CW
 
-An abbreviation of "Content Warning". A feature to hide the content of a note unless explicitly requested to be shown by a user. Mainly used to hide the content of long notes or to prevent posting spoilers publicly. For details, see [here.](../docs/features/note.html#cw)
+Abbreviazione di [Content Warning](../docs/features/note.html#cw). Una funzionalità per nascondere i contenuti espliciti o sensibili, affinché non risultino visibili inavvertitamente ma solo su richiesta.
 
 ## Fediverso
 
@@ -29,11 +29,11 @@ Network di [istanze](#istanza) composto da varie piattaforme intercomunicanti, i
 
 ## GTL
 
-An abbreviation for "Global TimeLine". For details about timelines, please see [here](../features/timeline).
+Abbreviazione di [Global TimeLine](../features/timeline)
 
 ## HTL
 
-An abbreviation for "Home TimeLine". For details about timelines, please see [here](../features/timeline)
+Abbreviazione di [Home TimeLine](../features/timeline)
 
 ## Istanza
 
@@ -41,76 +41,77 @@ Piattaforma aggregatrice di profili, che dialoga con altre istanze nel [Fedivers
 
 ## LTL
 
-An abbreviation for "Local TimeLine". For details about timelines, please see [here](../features/timeline)
+Abbreviazione di [Local TimeLine](../features/timeline)
 
 ## MFM
 
-An abbreviation for "Markup language For Misskey", a markdown language available for use on Misskey. For details, see [here.](../features/mfm)
+Abbreviazione di [Markup For Misskey](../features/mfm), si tratta di un linguaggio di marcatura di tipo _MarkDown_ usabile nella interfaccia web di Misskey.
 
 ## NSFW
 
-An abbreviation for "Not Safe For Work". A feature to tag an image as "NSFW" and hide it unless explicitly requested to be shown by a user.
+Abbreviazione di [Not Safe For Work]. Pubblicando una nota con questa parola in un hashtag: `#nsfw` si permette al fediverso di nascondere i contenuti espliciti e renderli visibili solamente a chi ne fa richiesta.
 
-## Renote
+## Rinota
 
-The act of quoting an existing note, sharing an existing note, or the note created as a result of these acts. For details, see [here.](../docs/features/note.html#renote)
+L'azione di citare una nota esistente, condividendola per intero. [Maggiori informazioni](../docs/features/note.html#renote).
 
 ## STL
 
-An abbreviation for "Social TimeLine". For details about timelines, please see [here.](../features/timeline)
+Abbreviazione di [Social TimeLine](../features/timeline)
 
 ## Ai(藍)
 
-Ai(藍) is Misskey's official mascot.
+Ai(藍) è un personaggio di fantasia, la mascotte di Misskey.
 
-## Active users
+## Profili attivi
 
-Those users amongst all existing ones who are continually using their account.
+Sono i profili che producono attività recente.
 
-## Custom Emoji
+## Emoji personalizzati
 
-Emoji provided by your instance. Emoji that are not specifically provided by your instance but are available by default are called "Unicode Emoji". For details, see [here.](../docs/features/custom-emoji)
+Emoticon messe a disposizione sull'istanza. Alcuni di essi sono disponibili automaticamente, come sui dispositivi mobili, si chiamano _"Emoji Unicode"_. [Maggiori informazioni](../docs/features/custom-emoji)
 
-## Control Panel
+## Pannello di controllo
 
-TODO
+Una interfaccia web amministrativa che permette di gestire l'istanza, come le segnalazioni, l'andamento delle federazioni, l'assistenza ai profili.
 
-## Silence
+## Silenziare
 
-A state in which the visibility of the notes by said user cannot be set to "Public" anymore. Can be set for individual users by the discretion of Moderators. For details, see [here.](../features/silence)
+Caratteristica del profilo. Un [profilo silenziato](../features/silence) non potrà più aggiungere _note pubbliche_ finché non otterrà la revoca.
 
-## Job Queue
+## Job Queue - Coda di lavoro
 
-A system used for sequentially broadcasting activities to other instances etc.
+Sistema per la distribuzione delle attività da e verso altre istanze.
 
-## Suspend
+## Sospensione
 
-A state which makes the account of a user unusable.
+Caratteristica reversibile che rende un profilo inutilizzabile. Di solito viene attribuita dagli amministratori di una istanza nei confronti di profili che violano il regolamento.
 
 ## Drive
 
-A feature allowing users to organize the files they have uploaded to Misskey. For details, see [here.](../features/drive)
+Funzionalità che permette ai profili di [organizzare i file caricati](../features/drive)
+su Misskey.
 
-## Notes
+## Note
 
-Content which may include text, images, surveys and others that has been posted to Misskey. For details, see [here.](../docs/features/note)
+Contenuto inserito su Misskey, che può includere: testo, immagini, audio, video, sondaggio. [Maggiori informazioni](../docs/features/note)
 
 ## Misskist
 
-Users of Misskey.
+Nome di fantasia usato per riferirsi alle persone che utilizzano Misskey
 
-## Moderator
+## Moderatore
 
-Users with the authority to manage the community of a instance by deactivating spam accounts, silencing users, deleting inappropriate posts, etc.
+Persone autorizzate dagli amministratori a gestire la comunità di una istanza. Possono attivare-disattivare i profili, silenziarli, eliminare note inappropriate.
 
-## Remote
+## Remoto
 
-Used in context of instances separate from your own. Also used as prefix in other words like "Remote user". The opposite of "Local".
+Un profilo o una nota, che risiedono su un'altra istanza. L'opposto di _Locale_.
 
-## Federation
+## Federazione
 
-The act of sharing information created on one's instance with other instances.
+L'attività di condividere le informazioni tra istanze
 
-## Local
+## Locale
 
-Used in context of your own instance.Also used as prefix in other words like "Local users", "local timeline". The opposite of "Remote".
+Un profilo o una nota, che risiedono sulla propria istanza. L'opposto di _Remoto_.
