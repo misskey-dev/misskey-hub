@@ -309,7 +309,28 @@ export default defineUserConfig<DefaultThemeOptions>({
 						'/it/docs/misskey-hub',
 						'/it/docs/faq',
 						'/it/docs/glossary',
-						'/it/docs/troubleshooting'
+						'/it/docs/troubleshooting',
+						{
+							text: 'Per gli sviluppatori',
+							children: [
+								'/it/docs/api',
+								'/it/docs/api/streaming',
+								'/it/docs/api/endpoints.html',
+							]
+						},
+						{
+							text: 'Per gli amministratori',
+							children: [
+								'/it/docs/install',
+								'/it/docs/admin/emoji',
+								'/it/docs/admin/cdn',
+								'/it/docs/admin/nginx',
+								'/it/docs/admin/push-docker-hub',
+								'/it/docs/admin/troubleshooting',
+								'/it/docs/tips/disable-timelines',
+								'/it/docs/admin/default-reaction',
+							]
+						}
 					]
 				}, {
 					text: 'Collegamenti',
