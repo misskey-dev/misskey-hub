@@ -41,4 +41,8 @@
   host: 'www.foxyhole.io',
   name: 'FoxyHole',
   lang: 'it',
+}, {
+  host: 'misskey.icu',
+  name: 'Misskey.ICU',
+  lang: 'de',
 }]
