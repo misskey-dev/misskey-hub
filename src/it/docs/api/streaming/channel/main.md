@@ -1,93 +1,113 @@
 ---
-description: "This channel provides basic information."
+description: "Questo canale fornisce informazioni di base"
 ---
 
 # `main`
-This channel provides basic information.
 
-## Parameters
-none
+Questo canale fornisce informazioni di base
 
-## Events
+## Parametri
+
+nessuno
+
+## Eventi
+
 ### `notification`
+
 <MkSchemaViewer :schema="{
 	$ref: 'misskey://Notification'
 }"/>
 
-Occurs when you receive a notification.
+Avviene quando ricevi una notifica
 
 ### `mention`
+
 <MkSchemaViewer :schema="{
 	$ref: 'misskey://Note'
 }"/>
 
-Occurs when a message is sent.
+Avviene quando il profilo viene nominato
 
 ### `reply`
+
 <MkSchemaViewer :schema="{
 	$ref: 'misskey://Note'
 }"/>
 
-Occurs when a reply is received.
+Avviene quando si riceve una risposta
 
 ### `renote`
+
 <MkSchemaViewer :schema="{
 	$ref: 'misskey://Note'
 }"/>
 
-Occurs when one of your notes is renoted.
+Avviene quando è _"Rinotata"_ una delle tue Note
 
 ### `follow`
+
 <MkSchemaViewer :schema="{
 	$ref: 'misskey://User'
 }"/>
 
-Occurs when you follow another user.
+Avviene quando segui un altro profilo
 
 ### `followed`
+
 <MkSchemaViewer :schema="{
 	$ref: 'misskey://User'
 }"/>
 
-Occurs when another user follows you.
+Avviene quando un altro profilo ti segue
 
 ### `unfollow`
+
 <MkSchemaViewer :schema="{
 	$ref: 'misskey://User'
 }"/>
 
-Occurs when you unfollow another user.
+Avviene quando un altro profilo smette di seguirti
 
 ### `messagingMessage`
+
 <MkSchemaViewer :schema="{
 	$ref: 'misskey://MessagingMessage'
 }"/>
 
-Occurs when a chat message is received.
+Avviene alla ricezione di un messaggio di chat
 
 ### `readAllNotifications`
-Occurs when all notifications have been read.
+
+Avviene quando sono state lette tutte le notifiche
 
 ### `unreadNotification`
-Occurs when there is a new notification.
+
+Avviene quando c'è una nuova notifica
 
 ### `unreadMention`
-Occurs when there is a new mention.
+
+Avviene quando c'è una nuova menzione
 
 ### `readAllUnreadMentions`
-Occurs when all mentions have been seen.
+
+Avviene quando sono state lette tutte le menzioni
 
 ### `unreadSpecifiedNote`
-Occurs when there is a new direct note.
+
+Avviene quando c'è una nuova Nota diretta
 
 ### `readAllUnreadSpecifiedNotes`
-Occurs when all direct notes have been read.
+
+Avviene quando sono state lette tutte le Note dirette
 
 ### `unreadMessagingMessage`
-Occurs when there is a new  chat message.
+
+Avviene quando c'è un nuovo messaggio nella chat
 
 ### `readAllMessagingMessages`
-Occurs when all chat messages have been read.
 
-## Operations
-none
+Avviene quando sono stati letti tutti i messaggi in chat
+
+## Operazioni
+
+nessuna

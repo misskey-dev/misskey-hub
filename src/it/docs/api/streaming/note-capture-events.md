@@ -1,48 +1,51 @@
-# Note Capture Events
+# Gli eventi di _cattura Nota_
 
 ## `reacted`
+
 <MkSchemaViewer :schema="{
 	type: 'object',
 	properties: {
 		reaction: {
 			type: 'string',
-			description: 'type of reaction',
+			description: 'tipo di reazione',
 		},
 		userId: {
 			type: 'string',
-			description: 'ID of the user who made the reaction',
+			description: 'ID del profilo che ha reagito',
 		},
 	}
 }"/>
 
-Occurs when a reaction is made to the target note.
+Avviene quando c'è una reazione alla Nota specificata
 
 ## `pollVoted`
+
 <MkSchemaViewer :schema="{
 	type: 'object',
 	properties: {
 		choice: {
 			type: 'number',
-			description: 'choice ID',
+			description: 'ID della scelta',
 		},
 		userId: {
 			type: 'string',
-			description: 'ID of the user who cast the vote',
+			description: 'ID del profilo che ha votato',
 		},
 	}
 }"/>
 
-Occurs when the survey attached to the target note is voted on.
+Avviene quando c'è un voto alla nota con sondaggio
 
 ## `deleted`
+
 <MkSchemaViewer :schema="{
 	type: 'object',
 	properties: {
 		deletedAt: {
 			type: 'string',
-			description: 'deletion time',
+			description: 'orario di eliminazione',
 		},
 	}
 }"/>
 
-Occurs when the target note is deleted.
+Avviene quando la Nota specifica viene eliminata

@@ -1,20 +1,25 @@
 ---
-description: "Channel where nots from the home timeline are streamed."
+description: "Canale in cui è convogliato il flusso di Note della Timeline Home"
 ---
 
 # `homeTimeline`
-Channel where nots from the home timeline are streamed.
 
-## Parameters
-none
+Canale in cui è convogliato il flusso di Note della Timeline Home
 
-## Events
+## Parametri
+
+nessuno
+
+## Eventi
+
 ### `note`
+
 <MkSchemaViewer :schema="{
 	$ref: 'misskey://Note'
 }"/>
 
-Occurs when a new note is added to the home timeline.
+Avviene quando una nuova Nota si aggiunge alla Timeline Home
 
-## Operations
-none
+## Operazioni
+
+nessuna

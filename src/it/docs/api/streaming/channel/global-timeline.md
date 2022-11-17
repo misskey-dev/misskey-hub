@@ -1,20 +1,25 @@
 ---
-description: "Channel where nots from the global timeline are streamed."
+description: "Canale in cui è convogliato il flusso di Note della Timeline Federata"
 ---
 
 # `globalTimeline`
-Channel where nots from the global timeline are streamed.
 
-## Parameters
-none
+Canale in cui è convogliato il flusso di Note della Timeline Federata
 
-## Events
+## Parametri
+
+nessuno
+
+## Eventi
+
 ### `note`
+
 <MkSchemaViewer :schema="{
 	$ref: 'misskey://Note'
 }"/>
 
-Occurs when a new note is added to the global timeline.
+Avviene quando una nuova Nota si aggiunge alla Timeline Federata
 
-## Operations
-none
+## Operazioni
+
+nessuna
