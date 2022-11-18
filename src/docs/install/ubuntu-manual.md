@@ -126,7 +126,7 @@ Misskeyで使うユーザーを作成する。\
 データベースを作成。データベース名をmk1としている。
 
     CREATE DATABASE mk1 OWNER misskey;
-    exit
+    ¥q
 
 ### Redis
 
