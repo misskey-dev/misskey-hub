@@ -212,23 +212,23 @@ Git（バージョン管理ソフト）およびbuild-essential（Misskeyのビ�
 
 次では、接続許可をホワイトリスト形式とし、22番SSHポートを接続回数制限を設けながら開放、80番HTTPポート及び443番HTTPSポートを開放とした。
 
-    ufw enable
+    sudo ufw enable
 
-    ufw default deny
+    sudo ufw default deny
 
-    ufw limit 22
+    sudo ufw limit 22
 
-    ufw allow 80
+    sudo ufw allow 80
 
-    ufw allow 443
+    sudo ufw allow 443
 
 ufwのステータスを確認しておく。
 
-    ufw status
+    sudo ufw status
 
 systemctlで永続化する。
 
-    systemctl enable ufw
+    sudo systemctl enable ufw
 
 ::: tip
 ufwは、netfilter(iptables)を人間が操作しやすいようにするアプリだ。インストールスクリプトは、OCI環境ではnetfilterを直接操作する。
@@ -272,11 +272,11 @@ dns_cloudflare_email（下の例ではbar@fuga.foo）にはCloudFlareで登録�
 
 これを保存し、パーミッションを600に設定。
 
-    chmod 600 /etc/cloudflare/cloudflare.ini
+    sudo chmod 600 /etc/cloudflare/cloudflare.ini
 
 準備ができたのでコマンドを実行する。**途中の2箇所のexample.tldは自分のものに置き換えること**。
 
-    certbot certonly --dns-cloudflare --dns-cloudflare-credentials /etc/cloudflare/cloudflare.ini --dns-cloudflare-propagation-seconds 60 --server https://acme-v02.api.letsencrypt.org/directory -d example.tld -d *.example.tld
+    sudo certbot certonly --dns-cloudflare --dns-cloudflare-credentials /etc/cloudflare/cloudflare.ini --dns-cloudflare-propagation-seconds 60 --server https://acme-v02.api.letsencrypt.org/directory -d example.tld -d *.example.tld
 
 \*Congratulations!\*と表示されたらOK。生成された.pemファイルのパスは今後使うので記録しておくこと。
 
@@ -288,7 +288,7 @@ dns_cloudflare_email（下の例ではbar@fuga.foo）にはCloudFlareで登録�
 
 misskeyユーザーに変更。
 
-    su - misskey
+    sudo su - misskey
 
 Gitでファイル類を展開。
 
@@ -359,7 +359,7 @@ nginxの設定を行う。
 
 /etc/nginx/conf.d/misskey.confを作成する。
 
-    nano /etc/nginx/conf.d/misskey.conf
+    sudo nano /etc/nginx/conf.d/misskey.conf
 
 [Misskey Hub](https://misskey-hub.net/docs/admin/nginx.html)の設定例をnanoへコピー＆ペーストし、次の部分を自分のものに書き換える。
 
@@ -371,15 +371,15 @@ nginxの設定を行う。
 
 設定ファイルがきちんと機能するか確認。
 
-    nginx -t
+    sudo nginx -t
 
 OKならば、nginxデーモンを再起動。
 
-    systemctl restart nginx
+    sudo systemctl restart nginx
 
 ステータスを確認。
 
-    systemctl status nginx
+    sudo systemctl status nginx
 
 activeであればOK。
 
@@ -387,7 +387,7 @@ activeであればOK。
 
 misskeyユーザーにログインし直す。
 
-    su - misskey
+    sudo su - misskey
 
 ビルドをする。yes we can…
 
@@ -448,7 +448,7 @@ CloudFlareのDNS設定が正しいIPアドレスになっているかもう一�
 
 /etc/systemd/system/misskey.serviceを作成する。
 
-    nano /etc/systemd/system/misskey.service
+    sudo nano /etc/systemd/system/misskey.service
 
 次の内容を貼り付け、保存する。
 
@@ -472,15 +472,15 @@ CloudFlareのDNS設定が正しいIPアドレスになっているかもう一�
 
 systemdを設定し、misskeyデーモンを開始。
 
-    systemctl daemon-reload
+    sudo systemctl daemon-reload
 
-    systemctl enable misskey
+    sudo systemctl enable misskey
 
-    systemctl start misskey
+    sudo systemctl start misskey
 
 systemctlでデーモンの状態を確認。起動に少し時間がかかるため、15秒程度待ってからのほうが良い。
 
-    systemctl status misskey
+    sudo systemctl status misskey
 
 activeならOK。
 
