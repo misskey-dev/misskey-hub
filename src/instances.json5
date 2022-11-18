@@ -42,7 +42,7 @@
   name: 'FoxyHole',
   lang: 'it',
 }, {
-  host: 'misskey.icu',
-  name: 'Misskey.ICU',
+  host: 'kitsune.moe',
+  name: 'Kitsune.MOE',
   lang: 'de',
 }]
