@@ -1,53 +1,50 @@
-# Managing Custom Emoji
+# Gestione delle emoji personalizzati
 
-Custom emoji can be managed by administrators or moderators by going to the instance settings and then the custom emoji submenu.
-By default you will see a list of the current locally installed emoji.
-At the start this list will be empty, but you can add custom emoji in different ways.
+Possono essere gestiti solamente da amministratori o moderatori, tramite il **Pannello di controllo**, nel menu **Emoji Personalizzati**.
 
-## Copying Emoji from another Instance
+La pagina di mostra l'elenco delle emoji attualmente installate. All'inizio l'elenco sarà vuoto ma puoi aggiungerne in vari modi.
 
-Emoji can be easily copied from another instance.
-To do this, switch to the "remote" tab in the custom emoji settings.
-You can search emoji by name and/or host they are from.
+## Copiare le Emoji
 
-When you have found an emoji you want, click it to open a small menu which will allow you to import the emoji.
+Puoi copiarle da altre istanze, scegli il pannello **Remoto** nel menu **Emoji Personalizzati**.
+Puoi cercarli per nome della emoji o della istanza di provenienza.
 
-Please note that Emoji may be subject to copyright and you are responsible for checking whether you may legally use another emoji.
+Quando hai trovato quella che ti piace, clicca per aprire il menu di importazione.
 
-## Individual Emoji Import
+Considera che quella emoji potrebbe essere soggetta al diritto d'autore e marchi brevettati, gli amministratori sono legalmente responsabili per qualsiasi violazione.
 
-If you have an image file that you would like to turn into a custom emoji you can import the image as an emoji.
-This works just like attaching files to a note:
-You can choose to upload a new file, pick a file from your Misskey drive or upload a file from another URL.
+## Importazione individuale
+
+Se hai una immagine che vuoi convertire in una emoji personalizzata, puoi importarla. Funziona come allegare una immagine ad una nota.
+Carichi un nuovo file, scegli dal tuo Drive o indichi la URL dove si trova l'immagine.
 
 ::: danger
-When you import emoji from your drive, the file will remain inside your drive.
-Misskey does not make a copy of this file so if you delete it, the emoji will be broken.
+Quando importi la emoji dal tuo Drive, il file rimarrà lì dove si trova.
+Misskey non lo copia, se fosse eliminato la emoji risulterebbe rotta.
 :::
 
-The emoji will be added to the instance and you will then be able to edit or delete it as usual.
+## Importazione massiccia
 
-## Bulk Emoji import
+Le emoji possono essere importate in modo massiccio da pacchetti in formato ZIP, organizzate in modo speciale.
 
-Emojis can be imported in bulk as packed ZIP files with a special format.
-This ability can be found in the three dots menu in the top right corner of the custom emoji menu.
+Questa funzionalità si trova nel menu a pallini (...) in alto a destra nella pagina **Emoji Personalizzati**.
 
 ::: warning
-Bulk emoji import may overwrite existing emoji or otherwise mess up your instance.
-Be sure to only import emoji from trusted sources, ideally only ones you exported yourself.
+Una importazione massiccia potrebbe sovrascrivere quelle esistenti oppure danneggiare la tua istanza.
+Assicurati di importare emoji solamente da fonti affidabili. L'ideale sarebbe che fossero importate solo quelle esportate da te.
 :::
 
-### Packed emoji format
+### Formato del pacchetto emoji
 
-At the top level is a file called `meta.json` which contains information about the emoji contained in the packed file.
-A type definition for this file would look like this, where `Meta` is the structure of the whole file.
+Alla radice c'è il file `meta.json` che contiene informazioni sulle emoji contenute nel pacchetto.
+Segue un esempio di un ipotetico pacchetto, in cui `Meta` è la struttura del file completo.
 
 ```typescript
 class Meta {
 	metaVersion: number;
 	host: string;
 	/**
-	 * Date and time representation returned by ECMAScript `Date.prototype.toString`.
+	 * Rappresentazione del giorno e orario, come restituito da ECMAScript `Date.prototype.toString`.
 	 */
 	exportedAt: string;
 	emojis: Emoji[];
@@ -71,41 +68,40 @@ class Emoji {
 }
 ```
 
-The fields of `Meta` are currently not used or checked when importing emoji, except for the `emojis` field.
+Gli attributi di `Meta` in questo momento non vengono utilizzati o controllati in fase di importazione, tranne che per l'attributo `emojis`.
 
-For each `Emoji`:
-- `downloaded`: should always be true. If the field is missing or not truthy, the emoji will not be imported.
-- `fileName`: name of the image file inside the packed file.
-- `emoji`: data associated with the emoji as it was stored in the database. Currently most of these fields are
-  not even checked for existence. The following are currently used:
-  - `name`: name of the emoji for the user, e.g. `blobfox` if a user should type in `:blobfox:` to get the emoji.
-    If a previous emoji with the same name exists, it **will be overwritten**!
-  - `category`: category of the emoji
-  - `aliases`: list of strings that should be added as aliases. The admin UI calls these "tags".
+Per ogni `Emoji`:
 
-## Editing and Deleting Emoji
+- `downloaded`: dovrebbe essere sempre _True_, se il valore è mancante o diverso, non verrà importata
+- `fileName`: nome dell'immagine all'interno del pacchetto
+- `emoji`: metadati associati alla emoji come stanno nel database. Attualmente, alcuni non vengono nemmeno verificati. Ad esempio:
+  - `name`: nome della emoji `sorrisone` se occorre scrivere `:sorrisone:` per attivarla. Attenzione: Se esiste già una con lo stesso nome, questa verrà sovrascritta!
+  - `category`: categoria di emoji
+  - `aliases`: lista di parole sinonimi del nome. Nella interfaccia web sono i: "tags".
 
-The properties of an emoji can be edited by clicking it in the list of local emoji.
-When you click on a custom emoji, a dialog for editing the properties will open.
-This dialog will also allow you to delete an emoji.
+## Modificare ed eliminare
+
+Le proprietà di una emoji si modificano cliccandola nella lista di quelle _Locali_
+Comparirà una finestra di dialogo in cui modificare i parametri oppure eliminare la emoji.
 
 ::: danger
-When you delete a custom emoji, old notes that contain it will still have the text name of the emoji in it.
-The emoji will no longer be rendered correctly.
+Quando elimini una emoji personalizzata, le vecchie note che la contenevano inizieranno a mostrare invece il testo (campo `name`). E non potranno essere più rappresentate correttamente.
 :::
 
-Note that remote emoji can not be edited or deleted.
+Le emoji remote non si possono modificare, né eliminare.
 
-Each emoji can have a name and a category and several tags.
-The category is used for structuring the emoji picker.
-Meanwhile the tags can be used as alternate names by which the emoji can be found when searching in the emoji picker.
+Ogni emoji può avere solo un nome, una categoria ma più tag.
+La categoria si usa per raggrupparle nella finestrella di selezione.
+I tag possono essere usati come alternativa ai nomi, poiché sono ricercabili.
 
-When you are done editing, save your changes by clicking the check mark in the top right corner of the dialog.
+Quando hai finito con le modifiche, ricordati di salvare cliccando il baffetto di spunta (✔️) nell'angolo in alto a destra.
 
-### Bulk Editing
+### Modifiche massiccie
 
-Emoji can be edited in bulk by checking the box below the search field.
-With this enabled, clicking on an emoji will select it instead of opening the editing dialog.
+Le emoji si possono modificare in modo massiccio attivando la selezione multipla **"Select Mode"**
 
-The Editing options will be displayed as buttons below the checkbox.
-To return to the normal behaviour just uncheck the box again.
+In questo modo, cliccando le emoji non si aprirà la finestra di dialogo, ma verranno evidenziate, indicando quali siano selezionate per la modifica.
+
+Le modifiche che si possono svolgere vengono mostrate come bottoni. Ogni bottone avvia la modifica massiccia di quel parametro, per tutte le emoji evidenziate.
+
+Per terminare le modifiche, disattivare il campo _Select Mode_

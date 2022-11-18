@@ -1,2 +1,5 @@
-# Changing the default Reaction
-You can change the default reaction that is used when an ActivityPub "Like" is received from '👍' to '⭐' by changing the boolean value `meta.useStarForReactionFallback` in the databse respectively.
+# Cambiare la reazione predefinita
+
+Puoi cambiare la reazione predefinita che viene utilizzata quando si riceve un Like nello standard di ActivityPub.
+
+Per ottenere ⭐ _stelline_ anziché 👍 _pollicioni_, modifica nel database, il valore booleano di `meta.useStarForReactionFallback`.
