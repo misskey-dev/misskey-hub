@@ -1,6 +1,6 @@
 {
-	summary: '',
-	description: '',
+	summary: 'クリップを作成します。',
+	description: 'クリップを作成します。',
 	tags: [
 		'clips',
 	],
@@ -12,16 +12,19 @@
 				type: 'string',
 				minLength: 1,
 				maxLength: 100,
+				description: 'クリップの名前。',
 			},
 			isPublic: {
 				type: 'boolean',
 				default: false,
+				description: 'trueにすると、他のユーザーやログインしていないクライアントにクリップを公開します。'
 			},
 			description: {
 				type: 'string',
 				nullable: true,
 				minLength: 1,
 				maxLength: 2048,
+				description: 'クリップの説明。',
 			},
 		},
 		required: [

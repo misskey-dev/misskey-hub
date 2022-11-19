@@ -1,6 +1,6 @@
 {
-	summary: '',
-	description: '',
+	summary: 'ノートを検索します。',
+	description: 'ノートを検索します。',
 	tags: [
 		'notes',
 	],
@@ -10,6 +10,7 @@
 		properties: {
 			query: {
 				type: 'string',
+				description: '検索クエリ。',
 			},
 			sinceId: {
 				type: 'string',
