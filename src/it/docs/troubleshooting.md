@@ -5,41 +5,53 @@ description: "Se ti capita un problema, prima di tutto leggi questa pagina"
 # Risoluzione autonoma dei problemi
 
 ::: tip
-Potrebbero interessarti anche le [FAQ, domande poste di frequente](./faq.md)
+Per favore, leggi anche le [FAQ, domande frequenti](./faq.md)
 :::
 
-Se ti capita un problema, prima di tutto leggi questa pagina. Nel caso non trovassi il tuo problema qui, oppure i passi descritti non lo risolvono, per favore, contatta gli amministratori della tua istanza. Se non riesci nemmeno così, allora [Segnala un malfunzionamento](./report-issue).
+Se ti capita un problema, prima di tutto leggi questa pagina.
+Se non trovi suggerimenti utili o la procedura non risolve il problema, contatta l'amministratore dell'istanza oppure [apri una segnalazione](./report-issue) in inglese o giapponese.
 
-## Non si avvia la web app
+## Il client non si avvia
 
-Il più delle volte, è causato dalla obsolescenza del sistema operativo o del browser usato per collegarsi. Prova ad aggiornare il browser o il sistema operativo all'ultima versione e riprova.
+Probabilmente è successo perché la versione del browser o del sistema operativo non è aggiornata. Riprova dopo aver aggiornato.
 
-Sebbene sia molto raro, se continua a non funzionare, riprova dopo aver rimosso la cronologia e i dati di navigazione.
+Capita raramente, se comunque non si avvia, potrebbe essere dovuto alla memorizzazione _cache_. Svuota la cache del browser e riprova.
 
-## Impossibile caricare le pagine
+## La pagina non può essere caricata
 
-L'interfaccia web si apre ma ottieni un errore quando provi a caricare una pagina. In questo caso controlla che la connessione alla rete sia funzionante. Se tutto va bene, verifica che l'istanza sia effettivamente funzionante.
+Se il client si avvia, ma viene visualizzato un errore che indica di non riuscire a caricare la pagina, verificare la presenza di problemi nella rete. Inoltre, controlla se il server è online.
 
-Sebbene sia molto raro, se continua a non funzionare, riprova dopo aver rimosso la cronologia e i dati di navigazione.
+Capita raramente, ma potrebbe essere dovuto alla memorizzazione _cache_. Svuota la cache del browser e riprova.
 
-Dovessi avere ancora problemi, allora si tratta dell'istanza, informa subito gli amministratori.
+Se hai ancora problemi, contatta l'amministratore dell'istanza poiché sembra essere un problema del server.
 
-## Caricamento lento
+## Il client è lento
 
-Prova queste cose:
+Controllare la connessione col provider di servizi Internet, controllare la velocità di comunicazione della rete e le impostazioni di rete, quindi verificare se si sono verificati guasti o interventi di manutenzione al server.
+Successivamente, controllare le seguenti impostazioni.
 
-- Nelle _Impostazioni Client_, attiva: "Riduci le animazioni"
-- Nelle _Impostazioni Client_, disattiva: "Usa l'effeto sfuocatura"
-- Attiva l'opzione "Accelerazione hardware" nelle impostazioni del browser
-- Migliora le caratteristiche del tuo dispositivo
+### Impostazioni Generali
 
-## Parti della interfaccia grafica sono strane (es: sfondi trasparenti)
+Nel _Menu impostazioni_, apri _Impostazioni client_, alla voce **Generali** e controlla le seguenti impostazioni:
 
-Malfunzionamenti di questo tipo possono succedere dopo il rilascio di un aggiornamento. Premere il bottone _"Cancella la cache"_ nella pagina "Impostazione", risolverà il problema.
+- Attiva "Ridurre le animazioni dell'interfaccia"
+- Disattiva "Usa effetto sfocatura per i modali"
+- Attiva "Usa carattere predefinito del sistema"
+- Attiva "Usare le emoji native del sistema"
 
-::: warning
-Non intendiamo la cache o cronologia del browser, si intende proprio l'impostazione specifica del profilo.
-:::
+Si prega di controllare eventualmente anche le seguenti impostazioni, con la consapevolezza che mancheranno alcune funzioni di Misskey:
+
+- Attiva "Disabilita AIscript nelle pagine"
+- Attiva "Disabilita i MFM animati"
+
+### Impostazioni del browser
+
+- Attiva l'accelerazione hardware nelle impostazioni del tuo browser
+- Controlla le impostazioni dei componenti aggiuntivi e delle estensioni del browser o disattivale
+
+### Altre impostazioni
+
+Controlla le impostazioni di sistema sul tuo PC o smartphone, ad esempio che non ci siano altre applicazioni a consumare risorse.
 
 ## La segnalazione lampeggiante di una Antenna non vuole andare via
 
