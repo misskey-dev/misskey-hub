@@ -1,15 +1,21 @@
-# Create your own Misskey instance
-Thank you for your interest in building a Misskey instance 🚀
-There are several ways to create an instance, so please choose one below and read the guide.
+# Crea la tua istanza Misskey
 
-## Using Docker (recommended)
-[See here](./install/docker.html)
+Grazie per il tuo interesse nel costruire una istanza Misskey 🚀
 
-## Using Bash Script
-[See here](./install/bash.html)
+Ci sono vari modi per crearne una, scegli tra quelli elencati e segui la relativa guida.
 
-## Manually
-[See here](./install/manual.html)
+## Usando Docker (raccomandato)
 
-## Using Yunohost
-Misskey can be installed as an App on YunoHost. For more information see [the repository of the Misskey package for YunoHost](https://github.com/YunoHost-Apps/misskey_ynh).
+Se vuoi eseguire l'istanza in un container segui la [guida di installazione con Docker](./install/docker.html)
+
+## Usando uno script bash
+
+Se vuoi usare uno script automatico, segui la [guida installazione con script bash](./install/bash.html)
+
+## In modo manuale
+
+Se vuoi svolgere l'installazione passo passo, segui la [guida installazione manuale](./install/manual.html)
+
+## Usando YunoHost
+
+Misskey può essere installato come App di YunoHost, la documentazione si trova nel [repository della versione Misskey per YunoHost](https://github.com/YunoHost-Apps/misskey_ynh).
