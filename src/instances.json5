@@ -41,4 +41,8 @@
   host: 'www.foxyhole.io',
   name: 'FoxyHole',
   lang: 'it',
+}, {
+  host: 'kitsune.moe',
+  name: 'Kitsune.MOE',
+  lang: 'de',
 }]
