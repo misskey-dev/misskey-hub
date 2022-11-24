@@ -40,6 +40,10 @@ export default defineUserConfig<DefaultThemeOptions>({
 			lang: 'en-US',
 			description: 'Official website of Misskey project',
 		},
+		'/it/': {
+			lang: 'it-IT',
+			description: 'Sito ufficiale del progetto Misskey',
+		}
 	},
 
 	theme: localTheme({
@@ -264,6 +268,107 @@ export default defineUserConfig<DefaultThemeOptions>({
 						}
 					],
 				},],
+			},
+			'/it/': {
+				selectLanguageText: 'Lingua',
+				selectLanguageName: 'Italiano',
+				selectLanguageAriaLabel: 'Scegli la lingua del sito',
+				contributorsText: 'Co-autori',
+				lastUpdatedText: 'Ultimo aggiornamento',
+				editLinkText: 'Modifica questa pagina',
+				relatedPagesText: 'Pagine correlate',
+				readThisArticle: 'Leggi questo articolo',
+				// 404 page messages
+				notFound: [
+					`Purtroppo qui non c'è niente`,
+					`Perché manca questa pagina?`,
+					`Pagina non trovata`,
+					`Sembra che il link sia rotto...`,
+					`Mah? Qui non c'è nulla`
+				],
+				backToHome: 'Torna alla pagina iniziale',
+				// a11y
+				openInNewWindow: 'si apre in una nuova finestra',
+				toggleColorMode: 'cambia i colori',
+				toggleSidebar: 'menu laterale di navigazione',
+				navbar: [{
+					text: 'Blog Giapponese',
+					link: '/blog',
+				}, {
+					text: 'Partecipa',
+					children: [
+						'/it/instances',
+						'/it/plugins',
+						'/it/appendix/assets'
+					]
+				}, {
+					text: 'Documentazione',
+					children: [
+						'/it/docs/misskey',
+						'/it/docs/releases',
+						'/it/docs/misskey-hub',
+						'/it/docs/faq',
+						'/it/docs/glossary',
+						'/it/docs/troubleshooting',
+						{
+							text: 'Per gli sviluppatori',
+							children: [
+								'/it/docs/api',
+								'/it/docs/api/streaming',
+								'/it/docs/api/endpoints.html',
+							]
+						},
+						{
+							text: 'Per gli amministratori',
+							children: [
+								'/it/docs/install',
+								'/it/docs/admin/emoji',
+								'/it/docs/admin/cdn',
+								'/it/docs/admin/nginx',
+								'/it/docs/admin/push-docker-hub',
+								'/it/docs/admin/troubleshooting',
+								'/it/docs/tips/disable-timelines',
+								'/it/docs/admin/default-reaction',
+							]
+						}
+					]
+				}, {
+					text: 'Collegamenti',
+					children: [{
+						text: 'Discord ufficiale',
+						link: 'https://discord.gg/Wp8gVStHW3',
+					},{
+						text: 'Donazioni (Patreon)',
+						link: 'https://www.patreon.com/syuilo',
+					},{
+						text: 'Traduzioni (Crowdin)',
+						link: 'https://crowdin.com/project/misskey',
+					},{
+						text: '藍.moe (la mascotte: Ai)',
+						link: 'https://xn--931a.moe',
+					},{
+						text: 'Profili',
+						children: [{
+							text: '@repo@misskey.io',
+							link: 'https://misskey.io/@repo',
+						}]
+					},{
+						text: 'Il codice sorgente',
+						children: [{
+							text: 'misskey (la piattaforma)',
+							link: 'https://github.com/misskey-dev/misskey',
+						}, {
+							text: 'misskey.js (la SDK in NodeJS)',
+							link: 'https://github.com/misskey-dev/misskey.js',
+						}, {
+							text: 'mfm.js (il parser MFM)',
+							link: 'https://github.com/misskey-dev/mfm.js',
+						}, {
+							text: 'misskey-hub (il sito)',
+							link: 'https://github.com/misskey-dev/misskey-hub',
+						}]
+					}] // Fine: menu links
+				}]  // Fine: navbar italiana
 			},
 		},
 		themePlugins: {
