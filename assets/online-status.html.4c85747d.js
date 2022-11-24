@@ -1,0 +1,1 @@
+const t=JSON.parse('{"key":"v-b4502094","path":"/it/docs/features/online-status.html","title":"Status di presenza","lang":"it-IT","frontmatter":{},"excerpt":"","headers":[],"git":{"updatedTime":1669265755000,"contributors":[{"name":"Tassoman","email":"tassoman@users.noreply.github.com","commits":1}]},"filePathRelative":"it/docs/features/online-status.md"}');export{t as data};
