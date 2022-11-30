@@ -45,4 +45,8 @@
   host: 'kitsune.moe',
   name: 'Kitsune.MOE',
   lang: 'de',
+}, {
+  host: 'misskey.cf',
+  name: 'misskey.cf',
+  lang: 'ja',
 }]
