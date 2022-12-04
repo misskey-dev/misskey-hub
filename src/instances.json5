@@ -49,4 +49,8 @@
   host: 'misskey.cf',
   name: 'misskey.cf',
   lang: 'ja',
+}, {
+  host: 'm.netw0rk.io',
+  name: 'netw0rk Misskey',
+  lang: 'en',
 }]
