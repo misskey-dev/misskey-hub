@@ -1,6 +1,6 @@
 {
-	summary: '',
-	description: '',
+	summary: 'ノートのリアクションを取得します。',
+	description: 'ノートのリアクションを取得します。',
 	tags: [
 		'notes',
 	],
@@ -11,20 +11,24 @@
 			noteId: {
 				type: 'string',
 				format: 'misskey:id',
+				description: 'ノートのid。',
 			},
 			type: {
 				type: 'string',
 				nullable: true,
+				description: 'リアクションの種類。リアクションはUnicode絵文字もしくはカスタム絵文字です。カスタム絵文字の場合はコロンで絵文字名を括ります。', 
 			},
 			limit: {
 				type: 'integer',
 				minimum: 1,
 				maximum: 100,
 				default: 10,
+				description: '取得するリアクションの最大数。',
 			},
 			offset: {
 				type: 'integer',
 				default: 0,
+				description: '検索結果の先頭 offset 個をスキップします。'
 			},
 			sinceId: {
 				type: 'string',

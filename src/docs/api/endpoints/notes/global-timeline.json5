@@ -11,7 +11,7 @@
 			withFiles: {
 				type: 'boolean',
 				default: false,
-				description: 'ファイルが添付されたノートのみ取得するか否か',
+				description: 'trueにすると、ファイルが添付されたノートのみを取得します。',
 			},
 			limit: {
 				type: 'integer',

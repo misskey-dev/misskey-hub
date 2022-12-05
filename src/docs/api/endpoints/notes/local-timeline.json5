@@ -1,6 +1,6 @@
 {
 	summary: 'ローカルタイムラインを取得します。',
-	description: 'ローカルタイムラインを取得します。ローカルタイムラインは、インスタンス内の全てのパブリックなノートが含まれます。',
+	description: 'ローカルタイムラインを取得します。ローカルタイムラインには、インスタンス内の全てのパブリックなノートが含まれます。',
 	tags: [
 		'notes',
 	],
@@ -11,37 +11,44 @@
 			withFiles: {
 				type: 'boolean',
 				default: false,
-				description: 'ファイルが添付されたノートのみ取得するか否か',
+				description: 'trueにすると、ファイルが添付されたノートのみを取得します。',
 			},
 			fileType: {
 				type: 'array',
 				items: {
 					type: 'string',
 				},
+				description: '指定された種類のファイルが添付された投稿のみを取得します。',
 			},
 			excludeNsfw: {
 				type: 'boolean',
 				default: false,
+				description: 'trueにすると、CWが付与されたノートと、NSFW指定されたファイルが添付されたノートを除外します。fileTypeが指定されている場合のみ有効です（添付ファイルのないCW付きのノートは除外されません）。',
 			},
 			limit: {
 				type: 'integer',
 				minimum: 1,
 				maximum: 100,
 				default: 10,
+				description: '取得するノートの最大数。',
 			},
 			sinceId: {
 				type: 'string',
 				format: 'misskey:id',
+				description: '指定すると、idがその値よりも大きいノートを返します。',
 			},
 			untilId: {
 				type: 'string',
 				format: 'misskey:id',
+				description: '指定すると、idがその値よりも小さいノートを返します。',
 			},
 			sinceDate: {
 				type: 'integer',
+				description: 'エポック秒で日時を指定すると、その日時より後に作成されたノートを返します。',
 			},
 			untilDate: {
 				type: 'integer',
+				description: 'エポック秒で日時を指定すると、その日時より前に作成されたノートを返します。',
 			},
 		},
 		required: [],
