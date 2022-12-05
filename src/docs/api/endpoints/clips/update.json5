@@ -1,6 +1,6 @@
 {
-	summary: '',
-	description: '',
+	summary: 'クリップの情報を更新します。',
+	description: 'クリップの情報を更新します。',
 	tags: [
 		'clips',
 	],
@@ -11,20 +11,24 @@
 			clipId: {
 				type: 'string',
 				format: 'misskey:id',
+				description: 'クリップのid。',
 			},
 			name: {
 				type: 'string',
 				minLength: 1,
 				maxLength: 100,
+				description: 'クリップの名前。',
 			},
 			isPublic: {
 				type: 'boolean',
+				description: 'trueにすると、クリップが全体に公開されます。',
 			},
 			description: {
 				type: 'string',
 				nullable: true,
 				minLength: 1,
 				maxLength: 2048,
+				description: 'クリップの説明。',
 			},
 		},
 		required: [
@@ -43,7 +47,7 @@
 		'b4d92d70-b216-46fa-9a3f-a8c811699257': {
 			id: 'b4d92d70-b216-46fa-9a3f-a8c811699257',
 			code: 'NO_SUCH_CLIP',
-			description: '',
+			description: 'クリップが存在しません。',
 		},
 	},
 }
