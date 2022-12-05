@@ -87,3 +87,7 @@ Per sviluppare un profilo di tipo BOT occorre fare uso delle [API Misskey](../do
 ## Che servizio di traduzione viene utilizzato?
 
 Le istanze Misskey possono usare il servizio di traduzione [DeepL](https://www.deepl.com/)
+
+## Posso pubblicare un servizio con «Misskey» nel nome?
+
+Il marchio «Misskey» è in attesa di registrazione (2022-054788) a partire da novembre 2022. Viene concesso di pubblicare un servizio che riporta la parola «Misskey» nel nome, non è previsto alcun pagamento.
