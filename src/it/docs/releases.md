@@ -6,6 +6,12 @@ Elenco delle note su ogni rilascio di Misskey, tradotte in italiano.
 Attenzione, i rilasci non tradotti in italiano, sono visibili nella pagina [GitHub](https://github.com/misskey-dev/misskey/blob/master/CHANGELOG.md) del progetto. Abbiate cura di prenderne visione, per ottenere informazioni aggiornate puntualmente.
 :::
 
+## Rilascio 12.119.2 (2022-12-03)
+
+### Soluzioni
+
+- Server: Mitigazione rischio DoS su ActivityPub @skehmatics
+
 ## Rilascio 12.119.0 (2022-09-10)
 
 ### Miglioramenti
