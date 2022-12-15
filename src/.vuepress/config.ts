@@ -88,6 +88,7 @@ export default defineUserConfig<DefaultThemeOptions>({
 								'/docs/features/charts',
 								'/docs/features/online-status',
 								'/docs/features/share-form',
+								'/docs/features/ads',
 								'/docs/features/thread-mute',
 								'/docs/features/word-mute',
 								'/docs/features/mute-and-block',
