@@ -31,7 +31,7 @@ For more information about Mentions, see [here](./mention.md).
 ### Hashtags
 
 ::: tip
-For more information about hashtags, see [here](./hashtag.md).
+For more information about hashtags, see [here](./hashtag).
 :::
 
 ```:no-line-numbers
@@ -41,7 +41,7 @@ For more information about hashtags, see [here](./hashtag.md).
 ### Custom Emoji
 
 ::: tip
-For more information about custom emoji, see [here](./custom-emoji.md).
+For more information about custom emoji, see [here](./custom-emoji).
 :::
 
 ```:no-line-numbers

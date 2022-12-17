@@ -1,6 +1,6 @@
 # Favorites
 
-This function allows you to mark a [note](./note.md) as a favorite.
+This function allows you to mark a [note](./note) as a favorite.
 You can view your favorited notes on the [Favorite](./my/favorites) page.
 Other users will not be notified that you have added their note to your favorites, and only you can see your favorites.
 
