@@ -1,4 +1,5 @@
 # Online Status
+
 A user's **online status** is an indication of their Misskey usage status.
 Your online status is displayed as an indicator in the corner of the user icon on your user page and elsewhere.
 
@@ -11,7 +12,7 @@ Your online status is displayed as an indicator in the corner of the user icon o
 	<tr>
 		<td>🟢 green</td>
 		<td>online</td>
-		<td>Misskey is used right now.</td>
+		<td>Misskey is being used right now.</td>
 	</tr>
 	<tr>
 		<td>🟡 yellow</td>
@@ -26,7 +27,7 @@ Your online status is displayed as an indicator in the corner of the user icon o
 	<tr>
 		<td>⚫ grey</td>
 		<td>unknown</td>
-		<td>The status is not private or not available for remote users etc.</td>
+		<td>The status is private or not available for remote users etc.</td>
 	</tr>
 </table>
 
