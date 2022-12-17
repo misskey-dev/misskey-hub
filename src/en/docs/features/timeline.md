@@ -20,6 +20,10 @@ Posts of users you are following and all local users's posts that do not have th
 
 All local users' posts that do not have the visibility of "Home" and all remote users' posts that do not have the visibility of "Home" that reach the server. Abbreviated as GTL.
 
+## Custom Timelines
+
+Misskey has other features where you can create timelines with more granularity. See [Lists](./list.md) and [Antennas](./antenna.md) for details.
+
 ## Comparison
 
 | Source                |            |        |   Timeline |       |            |
