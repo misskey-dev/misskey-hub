@@ -24,7 +24,6 @@ Displays an image that you can select from your drive.
 
 Displays text in a text area tag. This block does not support MFM but variable interpolation is allowed.
 
-
 ### Embedded Note
 
 TODO
