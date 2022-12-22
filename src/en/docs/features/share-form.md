@@ -1,9 +1,10 @@
-# Share form
-When you open `/share` in Misskey Web, you can open a sharing submission form. This sharing form is useful if you want users to share the content of your page with Misskey from an external web page.
+# Share Form
 
-You can specify a number of options for the URL, including the shared content as a query parameter.
+When you open `/share` in Misskey Web, you open a sharing submission form. This sharing form is useful if you want users to share the content of your page with Misskey from an external web page.
 
-## Query parameters
+You can specify a number of options in the URL, including the shared content, as a query parameters.
+
+## Query Parameters
 
 ::: tip
 All parameters are **optional**.
@@ -15,7 +16,8 @@ All parameters are **optional**.
 | `text` | main body |
 | `url` | URL, inserted after the main body |
 
-### Reply information
+### Reply Information
+
 You can make the note being composed a reply to a given note by specifying one of the following.
 
 | name | description |
@@ -23,15 +25,17 @@ You can make the note being composed a reply to a given note by specifying one o
 | `replyId` | ID of the note you are replying to |
 | `replyUri` | URL to reply to (specify the remote note object) |
 
-### Renote information
+### Renote Information
+
 You can make the note being composed a renote of a given note by specifying one of the following.
 
 | name | description |
 | ---- | ---- |
 | `renoteId` | ID of the note to renote |
-| `renoteUri` | URL of the note to renote(specify the remote note object) |
+| `renoteUri` | URL of the note to renote (specify the remote note object) |
 
 ### Publication Scope
+
 The following options allow to select a scope.
 
 | name | description |
@@ -46,6 +50,7 @@ If `visibility` is set to `specified`, either `visibleUserIds` or `visibleAccts`
 :::
 
 ### Attachments
+
 You can specify attachments with the following options.
 
 | name | description |
