@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-55b53ddd","path":"/en/docs/features/follow.html","title":"Follow","lang":"en-US","frontmatter":{},"excerpt":"","headers":[],"git":{"updatedTime":1671667742000,"contributors":[{"name":"Sam Smucny","email":"smucny.sam@gmail.com","commits":1}]},"filePathRelative":"en/docs/features/follow.md"}');export{e as data};
