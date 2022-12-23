@@ -82,16 +82,27 @@ export default defineUserConfig<DefaultThemeOptions>({
 							children: [
 								'/docs/features/note',
 								'/docs/features/reaction',
+								'/docs/features/timeline',
 								'/docs/features/mfm',
 								'/docs/features/custom-emoji',
 								'/docs/features/drive',
+								'/docs/features/deck',
 								'/docs/features/charts',
 								'/docs/features/online-status',
 								'/docs/features/share-form',
+								'/docs/features/ads',
 								'/docs/features/thread-mute',
 								'/docs/features/word-mute',
 								'/docs/features/mute-and-block',
 								'/docs/features/plugin',
+								'/docs/features/antenna',
+								'/docs/features/clip',
+								'/docs/features/favorite',
+								'/docs/features/follow',
+								'/docs/features/pages',
+								'/docs/features/theme',
+								'/docs/features/thread-mute',
+								'/docs/features/widgets',
 							]
 						},
 						{
@@ -112,6 +123,7 @@ export default defineUserConfig<DefaultThemeOptions>({
 								'/docs/admin/push-docker-hub',
 								'/docs/admin/troubleshooting',
 								'/docs/tips/disable-timelines',
+								'/docs/features/silence',
 							]
 						}
 					]
@@ -191,15 +203,27 @@ export default defineUserConfig<DefaultThemeOptions>({
 							children: [
 								'/en/docs/features/note',
 								'/en/docs/features/reaction',
+								'/en/docs/features/timeline',
 								'/en/docs/features/mfm',
 								'/en/docs/features/custom-emoji',
 								'/en/docs/features/drive',
+								'/en/docs/features/deck',
+								'/en/docs/features/charts',
 								'/en/docs/features/online-status',
 								'/en/docs/features/share-form',
+								'/en/docs/features/ads',
 								'/en/docs/features/thread-mute',
 								'/en/docs/features/word-mute',
 								'/en/docs/features/mute-and-block',
 								'/en/docs/features/plugin',
+								'/en/docs/features/antenna',
+								'/en/docs/features/clip',
+								'/en/docs/features/favorite',
+								'/en/docs/features/follow',
+								'/en/docs/features/pages',
+								'/en/docs/features/theme',
+								'/en/docs/features/thread-mute',
+								'/en/docs/features/widgets'
 							]
 						},
 						{
@@ -208,6 +232,7 @@ export default defineUserConfig<DefaultThemeOptions>({
 								'/en/docs/api',
 								'/en/docs/api/streaming',
 								'/en/docs/api/endpoints.html',
+								'/en/docs/features/webhook',
 							]
 						},
 						{
@@ -221,6 +246,7 @@ export default defineUserConfig<DefaultThemeOptions>({
 								'/en/docs/admin/troubleshooting',
 								'/en/docs/tips/disable-timelines',
 								'/en/docs/admin/default-reaction',
+								'/en/docs/features/silence',
 							]
 						}
 					]
