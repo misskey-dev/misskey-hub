@@ -10,15 +10,17 @@
 		properties: {
 			query: {
 				type: 'string',
-				description: '検索クエリ。',
+				description: '検索クエリ。クエリが本文に含まれるノートを検索します。',
 			},
 			sinceId: {
 				type: 'string',
 				format: 'misskey:id',
+				description: '指定すると、idがその値よりも大きいノートを返します。',
 			},
 			untilId: {
 				type: 'string',
 				format: 'misskey:id',
+				description: '指定すると、idがその値よりも小さいノートを返します。',
 			},
 			limit: {
 				type: 'integer',
@@ -42,12 +44,14 @@
 				format: 'misskey:id',
 				nullable: true,
 				default: null,
+				description: '指定すると、そのユーザが作成したノートを検索します。',
 			},
 			channelId: {
 				type: 'string',
 				format: 'misskey:id',
 				nullable: true,
 				default: null,
+				description: '指定すると、そのチャンネルに属するノートを検索します。userIdと併せて指定した場合、channelIdは無視されます。',
 			},
 		},
 		required: [

@@ -1,6 +1,6 @@
 {
-	summary: '',
-	description: '',
+	summary: 'ノートへの返信を取得します。',
+	description: 'ノートへの返信を取得します。',
 	tags: [
 		'notes',
 	],
@@ -11,20 +11,24 @@
 			noteId: {
 				type: 'string',
 				format: 'misskey:id',
+				description: 'ノートのid。',
 			},
 			sinceId: {
 				type: 'string',
 				format: 'misskey:id',
+				description: '指定すると、idがその値よりも大きいノートを返します。',
 			},
 			untilId: {
 				type: 'string',
 				format: 'misskey:id',
+				description: '指定すると、idがその値よりも小さいノートを返します。',
 			},
 			limit: {
 				type: 'integer',
 				minimum: 1,
 				maximum: 100,
 				default: 10,
+				description: '取得するノートの最大数。',
 			},
 		},
 		required: [

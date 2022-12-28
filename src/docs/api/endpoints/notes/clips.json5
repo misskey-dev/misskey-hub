@@ -1,6 +1,6 @@
 {
-	summary: '',
-	description: '',
+	summary: 'ノートを含むクリップを取得します。',
+	description: 'ノートを含むクリップを取得します。',
 	tags: [
 		'clips',
 	],
@@ -11,7 +11,7 @@
 			noteId: {
 				type: 'string',
 				format: 'misskey:id',
-				description: '',
+				description: 'ノートのid。',
 			},
 		},
 		required: [

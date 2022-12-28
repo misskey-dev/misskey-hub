@@ -33,10 +33,12 @@
 			sinceId: {
 				type: 'string',
 				format: 'misskey:id',
+				description: '指定すると、idがその値よりも大きいリアクションを返します。',
 			},
 			untilId: {
 				type: 'string',
 				format: 'misskey:id',
+				description: '指定すると、idがその値よりも小さいリアクションを返します。',
 			},
 		},
 		required: [
@@ -59,7 +61,7 @@
 		'263fff3d-d0e1-4af4-bea7-8408059b451a': {
 			id: '263fff3d-d0e1-4af4-bea7-8408059b451a',
 			code: 'NO_SUCH_NOTE',
-			description: '',
+			description: '指定されたノートが存在しないか、アクセスが許可されていません。',
 		},
 	},
 }

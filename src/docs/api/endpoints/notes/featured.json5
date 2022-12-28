@@ -1,6 +1,6 @@
 {
-	summary: '',
-	description: '',
+	summary: 'ハイライトされたノートを取得します。',
+	description: 'ハイライトされたノートを取得します。結果はノートの作成時刻の降順にソートされます（最新のものが先頭）。',
 	tags: [
 		'notes',
 	],
@@ -13,10 +13,12 @@
 				minimum: 1,
 				maximum: 100,
 				default: 10,
+				description: '取得するノートの最大数。',
 			},
 			offset: {
 				type: 'integer',
 				default: 0,
+				description: '検索結果の先頭 offset 個をスキップします。',
 			},
 		},
 		required: [],

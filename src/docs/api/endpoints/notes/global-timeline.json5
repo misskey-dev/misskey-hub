@@ -1,6 +1,6 @@
 {
-	summary: 'グローバルタイムラインを取得します。',
-	description: 'グローバルタイムラインを取得します。グローバルタイムラインは、インスタンスが受信した全てのパブリックな投稿が含まれます。',
+	summary: 'グローバルタイムライン (GTL) を取得します。',
+	description: 'グローバルタイムライン (GTL) を取得します。グローバルタイムラインは、インスタンスが受信した全てのパブリックな投稿が含まれます。',
 	tags: [
 		'notes',
 	],
@@ -18,20 +18,25 @@
 				minimum: 1,
 				maximum: 100,
 				default: 10,
+				description: '取得するノートの最大数。',
 			},
 			sinceId: {
 				type: 'string',
 				format: 'misskey:id',
+				description: '指定すると、idがその値よりも大きいノートを返します。',
 			},
 			untilId: {
 				type: 'string',
 				format: 'misskey:id',
+				description: '指定すると、idがその値よりも小さいノートを返します。',
 			},
 			sinceDate: {
 				type: 'integer',
+				description: 'エポック秒で日時を指定すると、その日時より後に作成されたノートを返します。',
 			},
 			untilDate: {
 				type: 'integer',
+				description: 'エポック秒で日時を指定すると、その日時より前に作成されたノートを返します。',
 			},
 		},
 		required: [],

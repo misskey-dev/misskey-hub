@@ -1,6 +1,6 @@
 {
-	summary: '',
-	description: '',
+	summary: '指定したノートのRenoteを解除します。',
+	description: '指定したノートのRenoteを解除します。',
 	tags: [
 		'notes',
 	],
@@ -11,6 +11,7 @@
 			noteId: {
 				type: 'string',
 				format: 'misskey:id',
+				description: 'ノートのid。',
 			},
 		},
 		required: [
@@ -22,7 +23,7 @@
 		'efd4a259-2442-496b-8dd7-b255aa1a160f': {
 			id: 'efd4a259-2442-496b-8dd7-b255aa1a160f',
 			code: 'NO_SUCH_NOTE',
-			description: '',
+			description: 'ノートが存在しません。',
 		},
 	},
 }
