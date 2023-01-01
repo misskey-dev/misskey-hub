@@ -80,6 +80,7 @@ server {
         proxy_cache cache1;
         proxy_cache_lock on;
         proxy_cache_use_stale updating;
+        proxy_force_ranges on;
         add_header X-Cache $upstream_cache_status;
     }
 }
