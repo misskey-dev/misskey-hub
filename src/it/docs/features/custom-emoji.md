@@ -1,4 +1,4 @@
-# Emoji Personalizzati
+# Le emoji personalizzate
 
 Si tratta di una caratteristica che ti permette di usare come emoji qualsiasi immagine fornita dalla tua istanza.
 

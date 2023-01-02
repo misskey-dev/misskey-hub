@@ -34,22 +34,27 @@ sections:
         description: "Puoi reagire con qualsiasi emoji! Oltre alla stellina e il pollicione, esprimi come ti senti cliccando un solo bottone."
       theme:
         title: "Temi"
-        description: "Why be limited by just a Light or Dark theme when you can change all the colors? Use Misskey's intuitive theming functions to make Misskey just how you like it."
+        description: "
+				Perché limitarsi solo a Giorno/Notte, quando puoi cambiare qualsiasi colore? Tramite le funzioni intuitive di Misskey oggi puoi personalizzare l'interfaccia come desideri."
       charts:
         title: "Grafici"
-        description: "For those who need to see everything, Misskey has powerful charts for both users and admins to see what exactly is going on in your instance in real time."
+        description: "
+				Se hai la manìa del controllo, Misskey ti mette a disposizione grafici pontentissimi che permettono di monitorare, in tempo reale, come sta andando l'istanza."
       federation:
         title: "Federazione"
-        description: "Not on Misskey? No problem! Not only can Misskey instances talk to each other, but you can make friends with people on other networks like Mastodon and Pixelfed!"
+        description: "
+				Non sei ancora su Misskey?! Non c'è problema. Le istanze Misskey parlano l'una con l'altra, oltre a Mastodon, Pixelfed, PeerTube, Soapbox e Pleroma. Puoi raggiungere le tue amicizie in tutto il Fediverso!"
       drive:
         title: "Drive"
-        description: "Hate not being able to find something you uploaded? With Drive, you get managed and powerful cloud storage right in your social media!"
+        description: "
+				Hai perso qualcosa di utile che avevi caricato in precedenza? Il Drive ti permette di gestire lo spazio disponibile per gli allegati, direttamente sul tuo profilo!"
       thread:
         title: "Argomenti"
-        description: "Have a lot on your mind? Make a thread! Each post can have up to 3,000 characters by default, and you can keep the conversation going for hours."
+        description: "
+				Hai molte cose da dire? Organizzalo in un thread. Ogni Nota ti mette a disposizione 3000 caratteri (di solito). Le converazioni possono andare di lungo per ore!"
       widgets:
         title: "Riquadri"
-        description: "Have everything at your fingertips with over a dozen customizable widgets!"
+        description: "Personalizza la tua interfaccia client con svariati riquadri pesonalizzabili, il calendario, le notifiche, l'orologio, le statistiche..."
   gettingStarted:
     title: "Entra subito in Misskey!"
     find:
@@ -63,7 +68,7 @@ sections:
       docs: "Documentazione"
   donation:
     title: "Donazioni"
-    description: "Because Misskey is a non-profit, we rely on your donations to fund our development. If you like Misskey, please consider donating so that we can continue to make Misskey awesome for years to come!"
+    description: "Poiché Misskey è una organizzazione autogestita, senza incassi, per sopravvivere, si affida alla vostra generosità. Dunque, considera l'opzione di una donazione per progredirne la qualità negli anni!"
   sponsors:
     title: "Sponsor"
 ---
