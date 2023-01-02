@@ -186,7 +186,7 @@
 
 	<div class="footer">
 		<div class="container">
-			<div class="c">&copy; 2022 Misskey, syuilo, and other contributors</div>
+			<div class="c">&copy; 2023 Misskey, syuilo, and other contributors</div>
 		</div>
 	</div>
 </div>
