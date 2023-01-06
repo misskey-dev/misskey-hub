@@ -1,22 +1,22 @@
-Create Misskey instance with Docker
-================================================================
+# Create Misskey instance with Docker
 
 This guide describes how to install and setup Misskey with Docker.
 
-::: tip Requirement
-- docker and docker-compose installed
-:::
+::: 팁 Requirement
 
-Get the repository
-----------------------------------------------------------------
+- docker and docker-compose installed
+  :::
+
+## Get the repository
+
 ```sh
 git clone -b master https://github.com/misskey-dev/misskey.git
 cd misskey
 git checkout master
 ```
 
-Configure
-----------------------------------------------------------------
+## Configure
+
 Copy example configuration files with following:
 
 ```sh
@@ -32,20 +32,19 @@ In the `default.yml`, the hosts that set with `localhost` from Postgresql/Redis 
 
 Edit `docker-compose.yml` if necessary. (e.g. if you want to change the port).
 
-Build and initialize
-----------------------------------------------------------------
+## Build and initialize
+
 The following command will build Misskey and initialize the database.
 This will take some time.
 
-``` shell
+```shell
 sudo docker-compose build
 sudo docker-compose run --rm web yarn run init
 ```
 
-Launch
-----------------------------------------------------------------
-Well done! You can start Misskey with the following command.
+## Launch
 
+Well done! You can start Misskey with the following command.
 
 ```sh
 sudo docker-compose up -d
@@ -53,8 +52,8 @@ sudo docker-compose up -d
 
 GLHF✨
 
-How to update your Misskey server
-----------------------------------------------------------------
+## How to update your Misskey server
+
 ::: warning
 When updating, be sure to check the [release notes](https://github.com/misskey-dev/misskey/blob/master/CHANGELOG.md) to know in advance the changes and whether or not additional work is required (in most cases, it is not).
 :::
@@ -71,8 +70,8 @@ sudo docker-compose stop && sudo docker-compose up -d
 
 It may take some time depending on the contents of the update and the size of the database.
 
-How to execute CLI command
-----------------------------------------------------------------
+## How to execute CLI command
+
 ```sh
 sudo docker-compose run --rm web node packages/backend/built/tools/foo bar
 ```

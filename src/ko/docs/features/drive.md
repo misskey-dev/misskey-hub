@@ -1,7 +1,7 @@
 # Drive
 Drive is a feature that allows you to manage your files on Misskey.
 
-::: tip
+::: 팁
 Technically speaking, the drive can be seen as an interface where all the files are centrally managed on Misskey's system, which is also open to users.
 :::
 
