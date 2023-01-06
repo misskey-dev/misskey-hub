@@ -4,6 +4,12 @@ description: 'Misskey exposes an API that you can use to develop Misskey clients
 
 # Misskey API
 
+::: 안내
+이 문서는 아직 국문으로 번역되지 않아, 영문으로 제공됩니다.
+
+API 레퍼런스는 [여기](/docs/api/endpoints)를 참고해주세요.
+:::
+
 Misskey exposes an API that you can use to develop Misskey clients, Misskey-connected web services, bots, etc. ("Applications").
 We also have a streaming API, so you can create applications with real-time capabilities.
 
