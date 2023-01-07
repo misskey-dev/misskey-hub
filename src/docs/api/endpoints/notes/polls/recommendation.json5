@@ -1,6 +1,6 @@
 {
-	summary: '',
-	description: '',
+	summary: 'アンケート付きのおすすめのノートの一覧を取得します。',
+	description: 'アンケート付きのおすすめのノートの一覧を取得します。',
 	tags: [
 		'notes',
 	],
@@ -13,10 +13,12 @@
 				minimum: 1,
 				maximum: 100,
 				default: 10,
+				description: '取得するノートの最大数。',
 			},
 			offset: {
 				type: 'integer',
 				default: 0,
+				description: '検索結果の先頭offset個をスキップします。',
 			},
 		},
 		required: [],

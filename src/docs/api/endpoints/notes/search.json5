@@ -1,6 +1,6 @@
 {
-	summary: '',
-	description: '',
+	summary: 'ノートを検索します。',
+	description: 'ノートを検索します。',
 	tags: [
 		'notes',
 	],
@@ -10,24 +10,29 @@
 		properties: {
 			query: {
 				type: 'string',
+				description: '検索クエリ。クエリが本文に含まれるノートを検索します。',
 			},
 			sinceId: {
 				type: 'string',
 				format: 'misskey:id',
+				description: '指定すると、idがその値よりも大きいノートを返します。',
 			},
 			untilId: {
 				type: 'string',
 				format: 'misskey:id',
+				description: '指定すると、idがその値よりも小さいノートを返します。',
 			},
 			limit: {
 				type: 'integer',
 				minimum: 1,
 				maximum: 100,
 				default: 10,
+				description: '取得するノートの最大数。',
 			},
 			offset: {
 				type: 'integer',
 				default: 0,
+				description: '検索結果の先頭offset個をスキップします。',
 			},
 			host: {
 				type: 'string',
@@ -39,12 +44,14 @@
 				format: 'misskey:id',
 				nullable: true,
 				default: null,
+				description: '指定すると、そのユーザが作成したノートを検索します。',
 			},
 			channelId: {
 				type: 'string',
 				format: 'misskey:id',
 				nullable: true,
 				default: null,
+				description: '指定すると、そのチャンネルに属するノートを検索します。userIdと併せて指定した場合、channelIdは無視されます。',
 			},
 		},
 		required: [

@@ -1,6 +1,6 @@
 {
-	summary: '',
-	description: '',
+	summary: 'クリップを削除します。',
+	description: 'ログイン中のユーザーが作成したクリップを削除します。',
 	tags: [
 		'clips',
 	],
@@ -11,6 +11,7 @@
 			clipId: {
 				type: 'string',
 				format: 'misskey:id',
+				description: 'クリップのid。',
 			},
 		},
 		required: [
@@ -22,7 +23,7 @@
 		'70ca08ba-6865-4630-b6fb-8494759aa754': {
 			id: '70ca08ba-6865-4630-b6fb-8494759aa754',
 			code: 'NO_SUCH_CLIP',
-			description: '',
+			description: 'クリップが存在しません。',
 		},
 	},
 }
