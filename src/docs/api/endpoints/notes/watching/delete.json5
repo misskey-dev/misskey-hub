@@ -1,6 +1,6 @@
 {
-	summary: '',
-	description: '',
+	summary: 'ノートのウォッチを解除します。',
+	description: 'ノートのウォッチを解除します。',
 	tags: [
 		'notes',
 	],
@@ -11,6 +11,7 @@
 			noteId: {
 				type: 'string',
 				format: 'misskey:id',
+				description: 'ノートのid。',
 			},
 		},
 		required: [
@@ -22,7 +23,7 @@
 		'09b3695c-f72c-4731-a428-7cff825fc82e': {
 			id: '09b3695c-f72c-4731-a428-7cff825fc82e',
 			code: 'NO_SUCH_NOTE',
-			description: '',
+			description: 'ノートが存在しません。',
 		},
 	},
 }

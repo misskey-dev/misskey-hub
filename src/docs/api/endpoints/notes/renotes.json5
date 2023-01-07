@@ -1,6 +1,6 @@
 {
-	summary: '',
-	description: '',
+	summary: 'ノートに対するRenote一覧を取得します。',
+	description: 'ノートに対するRenote一覧を取得します。',
 	tags: [
 		'notes',
 	],
@@ -11,20 +11,24 @@
 			noteId: {
 				type: 'string',
 				format: 'misskey:id',
+				description: 'ノートのid。',
 			},
 			limit: {
 				type: 'integer',
 				minimum: 1,
 				maximum: 100,
 				default: 10,
+				description: '取得するノートの最大数。',
 			},
 			sinceId: {
 				type: 'string',
 				format: 'misskey:id',
+				description: '指定すると、idがその値よりも大きいノートを返します。',
 			},
 			untilId: {
 				type: 'string',
 				format: 'misskey:id',
+				description: '指定すると、idがその値よりも小さいノートを返します。',
 			},
 		},
 		required: [
@@ -47,7 +51,7 @@
 		'12908022-2e21-46cd-ba6a-3edaf6093f46': {
 			id: '12908022-2e21-46cd-ba6a-3edaf6093f46',
 			code: 'NO_SUCH_NOTE',
-			description: '',
+			description: '指定されたノートが存在しないか、アクセスが許可されていません。',
 		},
 	},
 }

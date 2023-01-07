@@ -1,6 +1,6 @@
 {
-	summary: '',
-	description: '',
+	summary: 'ログイン中のユーザーが作成したクリップの一覧を取得します。',
+	description: 'ログイン中のユーザーが作成したクリップの一覧を取得します。',
 	tags: [
 		'clips',
 	],

@@ -1,6 +1,6 @@
 {
-	summary: '',
-	description: '',
+	summary: '関連するノートを取得します。',
+	description: '関連するノートを取得します。',
 	tags: [
 		'notes',
 	],
@@ -11,16 +11,19 @@
 			noteId: {
 				type: 'string',
 				format: 'misskey:id',
+				description: 'ノートのid。',
 			},
 			limit: {
 				type: 'integer',
 				minimum: 1,
 				maximum: 100,
 				default: 10,
+				description: '取得するノートの最大数。',
 			},
 			offset: {
 				type: 'integer',
 				default: 0,
+				description: '結果の先頭offset個をスキップします。',
 			},
 		},
 		required: [
@@ -43,7 +46,7 @@
 		'e1035875-9551-45ec-afa8-1ded1fcb53c8': {
 			id: 'e1035875-9551-45ec-afa8-1ded1fcb53c8',
 			code: 'NO_SUCH_NOTE',
-			description: '',
+			description: 'ノートが存在しません。',
 		},
 	},
 }

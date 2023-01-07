@@ -1,10 +1,10 @@
 ---
-description: 'Misskey의 로고, 아이콘 등 브랜드 에셋의 모음입니다.'
+description: "Misskey의 로고, 아이콘 등 브랜드 에셋의 모음입니다."
 ---
 
 # 에셋 모음집
-Misskey의 로고, 아이콘 등 브랜드 에셋의 모음입니다.
 
+Misskey의 로고, 아이콘 등 브랜드 에셋의 모음입니다.
 
 ::: tip
 Misskey의 에셋은 **CC BY-NC-SA**에 따라 자유롭게 사용하실 수 있습니다!🎉
@@ -17,11 +17,13 @@ Misskey의 에셋은 **CC BY-NC-SA**에 따라 자유롭게 사용하실 수 있
 :::
 
 ## 로고
+
 <a class="asset" href="https://raw.githubusercontent.com/misskey-dev/assets/main/misskey.svg" target="_blank" download>
 <img src="https://raw.githubusercontent.com/misskey-dev/assets/main/misskey.svg">
 </a>
 
 ## 아이콘
+
 <a class="asset" href="https://raw.githubusercontent.com/misskey-dev/assets/main/icon.png" target="_blank" download>
 <img src="https://raw.githubusercontent.com/misskey-dev/assets/main/icon.png">
 </a>

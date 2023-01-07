@@ -73,7 +73,7 @@
 			},
 			mediaIds: {
 				deprecated: true,
-				description: 'Use `fileIds` instead. If both are specified, this property is discarded.',
+				description: 'fileIds を使用してください。fileIds と mediaIds が指定された場合、 mediaIds は無視されます。',
 				type: 'array',
 				uniqueItems: true,
 				minItems: 1,
