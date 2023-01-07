@@ -5,7 +5,9 @@ description: "The streaming API provides real-time information (e.g., new posts 
 # Streaming API
 
 ::: 팁
-You should read the [Misskey API documentation](../index.md) first.
+이 문서는 아직 국문으로 번역되지 않아 영문으로 제공됩니다.
+
+읽기 전에, [Misskey API 문서](../)를 먼저 읽고 와 주세요.
 :::
 
 The streaming API provides real-time information (e.g., new posts in the timeline, reactions, followers, etc.) and various other operations.

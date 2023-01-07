@@ -1,80 +1,79 @@
 ---
-description: 'Misskey exposes an API that you can use to develop Misskey clients, Misskey-connected web services, bots, etc. ("Applications").'
+description: 'Misskey는 클라이언트, 연동 웹 서비스, 봇 등("어플리케이션"이라 합니다)을 개발할 수 있도록 API를 제공합니다.'
 ---
 
 # Misskey API
 
 ::: 안내
-이 문서는 아직 국문으로 번역되지 않아, 영문으로 제공됩니다.
+이 문서는 아직 국문으로 번역되지 않아, 일부 영문으로 제공됩니다.
 
 API 레퍼런스는 [여기](/docs/api/endpoints)를 참고해주세요.
 :::
 
-Misskey exposes an API that you can use to develop Misskey clients, Misskey-connected web services, bots, etc. ("Applications").
-We also have a streaming API, so you can create applications with real-time capabilities.
+Misskey는 클라이언트, 연동 웹 서비스, 봇 등("어플리케이션"이라 합니다)을 개발할 수 있도록 API를 제공합니다.
+스트리밍 API도 제공하고 있어, 실시간 호환성을 가진 어플리케이션을 제작할수도 있습니다.
 
 ::: 팁
-By using the official Misskey SDK or third party libraries, you can use the API more conveniently, for example by simplifying some of the steps described in this document.
-See [here](TODO) for more information about libraries.
+공식 Misskey SDK나 서드파티 라이브러리를 이용하면 이 문서의 몇몇 단계를 간소화하는 등 API를 더 간편하게 이용할 수 있습니다. [여기](TODO)를 통해 자세히 알아보세요.
 :::
 
-To start using the API, you will need to obtain an **access token** associated with the account you wish to use the API with.
-This document will walk you through the process of obtaining an access token and then show you how to use the API in a basic way.
+API를 사용하려면, 먼저 API를 사용하려는 계정과 연결된 **엑세스 토큰**을 얻어야 합니다.
+이 문서에서는 엑세스 토큰을 얻는 과정과 API를 활용하는 기본적인 방법을 알아봅니다.
 
-## Getting an access token
+## 엑세스 토큰 얻기
 
-The API generally requires an access token to make a request.
-An access token is a set of credentials associated with a user, which identifies the user using the API and controls what operations each access token is authorised to perform.
+API는 일반적으로 요청을 생성하기 위해 액세스 토큰이 필요합니다.
+액세스 토큰은 사용자를 식별하고 API를 통한 작업을 제어하는 자격 증명 집합입니다.
 
 ::: 팁
-There is a one-to-many relationship between a user and the access token associated with that user, and multiple access tokens can be issued for a given user.
+사용자와 엑세스 토큰 사이에는 한 개에서 여러 개의 연결이 존재하며, 한 사용자가 여러 엑세스 토큰을 생성하는 것도 가능합니다.
 :::
 
-You can easily [obtain an access token for yourself](#Manually-issue-an-access-token), or you can [obtain an access token for an user who will be using your application](#Request-an-access-token-to-be-issued).
+엑세스 토큰은 손쉽게 [직접 얻거나](#엑세스-토큰-수동으로-생성하기) [어플리케이션을 사용하려는 유저로부터 얻을](#엑세스-토큰-생성-요청하기) 수 있습니다.
 
-### Manually issue an access token
+### 엑세스 토큰 수동으로 생성하기
 
-You can issue your own access token in Misskey Web under 'Settings > API'.
+엑세스 토큰은 Misskey Web의 '설정 > API'에서 생성할 수 있습니다.
 
-::: danger
-Please do not share your access token with anyone.
+::: 경고
+엑세스 토큰은 다른 사람과 공유하지 마십시오.
 :::
 
-### Request an access token to be issued
+### 엑세스 토큰 생성 요청하기
 
-To obtain an access token for a user of the application ( simply "the user"), you can request it to be issued in the following way.
+어플리케이션의 사용자로부터 엑세스 토큰을 얻으려면, 뒤에 설명되어 있는 방법으로 요청할 수 있습니다.
 
-#### Step 1
+#### 1단계
 
-Generate a UUID. This will be referred to as the **session ID** from now on.
+UUID를 생성하세요. 이 UUID는 앞으로 **세션 ID**라 부르게 됩니다.
 
-::: danger
-This session ID should be generated each time and should not be reused.
+::: 경고
+이 세션 ID는 매번 생성해야 하며, 재사용되어서는 안 됩니다.
 :::
 
-#### Step 2
+#### 2단계
 
-The application authentication form should be displayed in the user's browser. The authentication form can be opened with a URL similar to this:
+어플리케이션의 인증 폼이 사용자의 브라우저에 표시될 것입니다. 인증 폼은 이러한 URL로 표시될 것입니다:
 
 ```:no-line-numbers
 https://{host}/miauth/{session}
 ```
 
-where
+여기에서
 
-- `{host}` is the host of the user's instance (usually this is entered by the user) and
-- `{session}` is the session ID.
+- `{host}`는 사용자의 인스턴스 호스트(주로 사용자로부터 직접 입력받습니다)이고,
+- `{session}`은 세션 ID입니다.
 
-You can also set a few options as query parameters to the URL:
+이 URL의 쿼리 파라미터로 몇몇 옵션을 지정할 수도 있습니다:
 
-| name         | description                                                                                                                                                   |
-| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `name`       | application name                                                                                                                                              |
-| `icon`       | application icon image URL。                                                                                                                                  |
-| `callback`   | The URL to which the user will be redirected after authentication, with the session ID added to the redirect with the query parameter `session`.              |
-| `permission` | The permissions that the application requires. <br>List the permissions to be requested, separated by `,`. The list of permissions can be found [here](TODO). |
+| 이름         | 설명                                                                                                                             |
+| ------------ | -------------------------------------------------------------------------------------------------------------------------------- |
+| `name`       | 어플리케이션 이름                                                                                                                |
+| `icon`       | 어플리케이션 아이콘 이미지 URL                                                                                                   |
+| `callback`   | 인증 후 사용자가 돌아갈 URL입니다. 쿼리 파라미터로 `session`이 추가됩니다.                                                       |
+| `permission` | 어플리케이션이 요청하는 권한입니다.<br>권한은 `,`로 구분된 목록으로 요청됩니다. 권한 목록은 [여기](TODO)에서 확인할 수 있습니다. |
 
-::: 팁 Example
+::: 예시
 
 ```:no-line-numbers
 https://misskey.io/miauth/c1f6d42b-468b-4fd2-8274-e58abdedef6f?name=MyApp&callback=https%3A%2F%2Fmyapp.example.com%2Fcallback&permisson=write:notes,write:following,read:drive
@@ -82,7 +81,7 @@ https://misskey.io/miauth/c1f6d42b-468b-4fd2-8274-e58abdedef6f?name=MyApp&callba
 
 :::
 
-#### Step 3
+#### 3단계
 
 After the user has been granted application access, a POST request to a URL of the following form will return JSON containing the access token as a response.
 
