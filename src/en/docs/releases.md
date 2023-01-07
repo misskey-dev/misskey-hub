@@ -5,7 +5,174 @@ Notes for indivudual misskey releases.
 Information updates may not be translated yet. For the latest information see [GitHub](https://github.com/misskey-dev/misskey/blob/master/CHANGELOG.md).
 :::
 
-## 12.111.1（2022/06/13）
+## 12.119.0
+Released at: 2022/09/10
+
+### Improvements
+- Client: Add following badge to user preview popup @nvisser
+- Client: mobile twitter url can be used as widget @caipira113
+- Client: Improve clock widget @syuilo
+
+### Bugfixes
+- Fix an issue that can cause migration failures
+- Server: Fix an issue that allows marking others' notification as read @syuilo
+- Client: Fix an issue where 'Manage access tokens' and 'Manage Accounts' page is not shown @futchitwo
+
+## 12.118.0
+Released at: 2022/08/07
+
+### Improvements
+- Client: Preference backups feature
+- Client: Add vi-VN language support
+- Client: Add unix time widget @syuilo
+
+### Bugfixes
+- Server: Fix blocking users from remote instances @xianonn
+- Client: Fix webhook page freeze after webhook is first created @syuilo
+- Client: Fix broken MiAuth page @syuilo
+- Client: Fix an issue where drag-and-drop to the post form doesn't work with some applications @m-hayabusa
+
+## 12.117.1
+Released at: 2022/07/19
+
+### Improvements
+- Client: UI brushup @syuilo
+
+### Bugfixes
+- Server: Fix an issue where upload fails intermittently @acid-chicken
+- Client: Fix an issue where reaction picker is shown behind other in-app windows @syuilo
+- Client: Fix user information lookup retry feature @xianonn
+- Client: Update MFM cheatsheet behavior @syuilo
+- Client: Fix an issue that prevents changing 'Receive notifications from this instance' setting @syuilo
+
+## 12.117.0
+Released at: 2022/07/18
+
+### Improvements
+- Client: Support maximizing windows @syuilo
+- Client: Shift-clicking on the link opens it in-app @syuilo
+- Client: Ctrl-clicking on the link will force page transition on Deck UI @syuilo
+- Client: UI brushup @syuilo
+
+## 12.116.1
+Released at: 2022/07/17
+
+### Bugfixes
+- Client: Fix an issue that prevents 'Show in page' button from working on Deck UI @syuilo
+- Error During Migration Run to 12.111.x
+
+## 12.116.0
+Released at: 2022/07/16
+
+### Improvements
+- Client: registry editor @syuilo
+- Client: UI brushup @syuilo
+
+### Bugfixes
+- Error During Migration Run to 12.111.x
+- Server: TypeError: Cannot convert undefined or null to object @syuilo
+
+## 12.115.0
+Released at: 2022/07/16
+
+### Improvements
+- Client: Easier account switching on the Deck @syuilo
+- Client: UI brushup @syuilo
+
+## 12.114.0
+Released at: 2022/07/15
+
+### Improvements
+- Add article order shuffle feature to the RSS ticker @syuilo
+
+### Bugfixes
+- Fix an issue that prevents client from booting @syuilo
+
+## 12.113.0
+Released at: 2022/07/13
+
+### Improvements
+- Support `<plain>` syntax for MFM
+
+### Bugfixes
+- Server: Fix crash at startup if TensorFlow is not supported @mei23
+- Client: Fix routing of the URL encoded string
+
+## 12.112.3
+Released at: 2022/07/09
+
+### Improvements
+- Make active email validation configurable
+
+### Bugfixes
+- Server: Fix Attempts to update all notifications @mei23
+
+## 12.112.2
+Released at: 2022/07/08
+
+### Bugfixes
+- Fix Docker doesn't work @mei23  
+  Still not working on arm64 environment. (See 12.112.0)
+
+## 12.112.1
+Released at: 2022/07/07
+
+same as 12.112.0
+
+## 12.112.0
+Released at: 2022/07/07
+
+### Known issues
+- Installation is currently not working on arm64 environment. This will be fixed in the next version.
+
+### Changes
+- Highlight menu has been merged into the Explore menu.
+- Custom Emoji page has been merged into the Instance Information page.
+- Federation page has been merged into the Instance Information page.
+- Mentions menu has been merged into the Notification menu.
+- Direct notes menu has been merged into the Notifications menu.
+- You can now access Antennas via the top icon of the Timeline, instead of the main menu.
+- You can now access Lists via the top icon of the Timeline, instead of the main menu.
+
+### Improvements
+- Server: Allow GET method for some endpoints @syuilo
+- Server: Auto NSFW detection @syuilo
+- Server: Add rate limit to i/notifications @tamaina
+- Client: Improve control panel @syuilo
+- Client: Show warning in control panel when there is an unresolved abuse report @syuilo
+- Client: Statusbars @syuilo
+- Client: Add instance-cloud widget @syuilo
+- Client: Add rss-ticker widget @syuilo
+- Client: Removing entries from a clip @futchitwo
+- Client: Poll highlights in explore page @syuilo
+- Client: Improve deck UI @syuilo
+- Client: Word mute also checks content warnings @Johann150
+- Client: Page reload from menu @syuilo
+- Client: Improve emoji picker performance @syuilo
+- Client: For notes with specified visibility, show recipients when hovering over visibility symbol. @Johann150
+- Client: Make widgets available again on a tablet @syuilo
+- Add possibility to leave moderation notes on users @syuilo
+- Make possible to delete an account by admin @syuilo
+- Improve player detection in URL preview @mei23
+- Add Badge Image to Push Notification #8012 @tamaina
+- Server: Improve performance
+- Server: Supports IPv6 on Redis transport. @mei23  
+  IPv4/IPv6 is used by default. You can tune this behavior via `redis.family`.
+- Server: Add possibility to log IP addresses of users @syuilo
+- Add additional drive capacity change support @CyberRex0
+
+### Bugfixes
+- Server: Fix GenerateVideoThumbnail failed @mei23
+- Server: Ensure temp directory cleanup @Johann150
+- favicons of federated instances not showing @syuilo
+- Admin: The checkbox for blocking an instance works again @Johann150
+- Client: Prevent access to user pages when not logged in @pixeldesu @Johann150
+- Client: Disable some hotkeys (e.g. for creating a post) for not logged in users @pixeldesu
+- Client: Ask users that are not logged in to log in when trying to vote in a poll @Johann150
+- Instance mutes also apply in antennas etc. @Johann150
+
+## 12.111.1
+Released at: 2022/06/13
 
 ### Bugfixes
 - some fixes of multiple notification read @tamaina
@@ -13,7 +180,8 @@ Information updates may not be translated yet. For the latest information see [G
 - Client: fix problem with widget information not being saved in Deck mode @syuilo
 - Client: edit screen appears when trying to open gallery posts @futchitwo
 
-## 12.111.0（2022/06/11）
+## 12.111.0
+Released at: 2022/06/11
 
 ### Note
 - Node.js 16.15.0 or later is required
@@ -69,7 +237,8 @@ Information updates may not be translated yet. For the latest information see [G
 - Fix GOP rendering @syuilo
 - Improve performance of antenna, clip, and list @xianonn
 
-## 12.110.0 (2022/04/11)
+## 12.110.0
+Released at: 2022/04/11
 
 ### Improvements
 - Improve webhook @syuilo
@@ -79,18 +248,21 @@ Information updates may not be translated yet. For the latest information see [G
 - API: parameter validation of users/show was wrong
 - Federation: fixed problem with direct posts to remote instances not reaching @syuilo
 
-## 12.109.2 (2022/04/03)
+## 12.109.2
+Released at: 2022/04/03
 
 ### Bugfixes
 - API: admin/update-meta was not working @syuilo
 - Client: fix issue where meta[name="theme-color"] content was undefined when switching or loading themes @tamaina
 
-## 12.109.1 (2022/04/02)
+## 12.109.1
+Released at: 2022/04/02
 
 ### Bugfixes
 - API: Fixed problem with Renote
 
-## 12.109.0 (2022/04/02)
+## 12.109.0
+Released at: 2022/04/02
 
 ### Improvements
 - Webhooks @syuilo
@@ -111,7 +283,8 @@ Information updates may not be translated yet. For the latest information see [G
   - Use `fileIds` instead, it has the same behaviour.
 - Client: fixed problem with URLs not displaying if decodeURIComponent fails due to abnormal URI encoding @tamaina
 
-## 12.108.1 (2022-03-12)
+## 12.108.1
+Released at: 2022-03-12
 
 ### Bugfixes
 - Fixed relay not working @xianonn
@@ -119,7 +292,8 @@ Information updates may not be translated yet. For the latest information see [G
 - Fixed a problem that OGP cannot be obtained correctly from outside @syuilo
 - Instance can't get the files from other instance when there are items in allowedPrivateNetworks in .config/default.yml @ybw2016v
 
-## 12.108.0 (2022-03-09)
+## 12.108.0
+Released at: 2022-03-09
 
 ### Note
 - Node v16.14.0 or later is required from this version
@@ -148,7 +322,8 @@ Information updates may not be translated yet. For the latest information see [G
 - Client: iPhone X or later(?) Fixed: Fixed page content not being fully displayed on iPhone X or later(?) @tamaina
 - Client: Fix image caption on mobile @nullobsi
 
-## 12.107.0 (2022/02/12)
+## 12.107.0
+Released at: 2022/02/12
 
 ### Improvements
 - Client: add theme @syuilo
@@ -159,7 +334,8 @@ Information updates may not be translated yet. For the latest information see [G
 - Client: take screen safe area into account of the device @syuilo
 - Client: Fixed issue with sidebar post button not showing in some environments @syuilo
 
-## 12.106.3 (2022/02/11)
+## 12.106.3
+Released at: 2022/02/11
 
 ### Improvements
 - Client: adjust margins on smart phones @syuilo
@@ -167,19 +343,22 @@ Information updates may not be translated yet. For the latest information see [G
 ### Bugfixes
 - Client: fixed issue with note details not showing @syuilo
 
-## 12.106.2 (2022/02/11)
+## 12.106.2
+Released at: 2022/02/11
 
 ### Bugfixes
 - Client: Fixed an issue where deleted notes did not automatically disappear from the timeline @syuilo
 - Client: Fixed an issue where the number of reactions may be incorrect @syuilo
 - Fixed problem with migration not working in some environments @syuilo
 
-## 12.106.1 (2022/02/11)
+## 12.106.1
+Released at: 2022/02/11
 
 ### Bugfixes
 - Client: fixed problem with word mute not saving @syuilo
 
-## 12.106.0 (2022/02/11)
+## 12.106.0
+Released at: 2022/02/11
 
 ### Improvements
 - Improve federation chart @syuilo
@@ -191,7 +370,8 @@ Information updates may not be translated yet. For the latest information see [G
 ### Bugfixes
 - validate regular expressions in word mutes @Johann150
 
-## 12.105.0 (2022/02/09)
+## 12.105.0
+Released at: 2022/02/09
 
 ### Improvements
 - Allow to set the theme color of the instance @syuilo
@@ -199,7 +379,8 @@ Information updates may not be translated yet. For the latest information see [G
 #### Bugfixes
 - Fixed migration failure in some environments @syuilo
 
-## 12.104.0 (2022/02/09)
+## 12.104.0
+Released at: 2022/02/09
 
 ### Note
 Please run `npm run clean` before building.
@@ -233,12 +414,14 @@ If the migration does not finish, you can delete all **records** in the table st
 - Add instance favicon where it's missing @solfisher
 - Fixed problems with periodic resync of charts not working @syuilo
 
-## 12.103.1 (2022/02/02)
+## 12.103.1
+Released at: 2022/02/02
 
 ### Bugfixes
 - Client: Fixed an issue with tooltip display position being incorrect.
 
-## 12.103.0 (2022/02/02)
+## 12.103.0
+Released at: 2022/02/02
 
 ### Improvements
 - Client: Allow instance information to be reacquired from the coalition instance page.
@@ -255,12 +438,14 @@ If the migration does not finish, you can delete all **records** in the table st
 - Client: ensure that specified users does not get duplicates
 - Add `img-src` and `media-src` directives to `Content-Security-Policy` for files and media proxy
 
-## 12.102.1 (2022/01/27)
+## 12.102.1
+Released at: 2022/01/27
 
 ### Bugfixes
 - Fixed problem with chat not displaying
 
-## 12.102.0 (2022/01/27)
+## 12.102.0
+Released at: 2022/01/27
 
 ### Note
 After the update, some custom emoji may not be displayed. In this case, batch exporting the emoji from the emoji management page and then batch importing them again from the control panel will fix the problem.
@@ -287,13 +472,15 @@ After the update, some custom emoji may not be displayed. In this case, batch ex
 ### Bugfixes
 - Fixed handling of upload errors
 
-## 12.101.1 (2021/12/29)
+## 12.101.1
+Released at: 2021/12/29
 
 ### Bugfixes
 - Fixed SVG emoji not displaying
 - Fixed a case where the extension of exported emoji is false.
 
-## 12.101.0 (2021/12/29)
+## 12.101.0
+Released at: 2021/12/29
 
 ### Improvements
 - Client: Improved accuracy of note previews
@@ -305,20 +492,23 @@ After the update, some custom emoji may not be displayed. In this case, batch ex
 - Client: Fixed some components being hidden behind the scenes
 - Fix html blockquote conversion
 
-## 12.100.2 (2021/12/18)
+## 12.100.2
+Released at: 2021/12/18
 
 ### Bugfixes
 - Client: Fixed issue where Deck column increases/decreases were not properly reflected until page was reloaded.
 - Client: Fixed some components being hidden behind the scenes
 - Client: Fixed heavy load on custom emoji list page
 
-## 12.100.1 (2021/12/17)
+## 12.100.1
+Released at: 2021/12/17
 
 ### Bugfixes
 - Client: Design coordination
 - Client: Improved display of various menus and reaction picker on mobile
 
-## 12.100.0 (2021/12/17)
+## 12.100.0
+Released at: 2021/12/17
 
 ### Improvements
 - Client: Improved display of various menus and reaction picker on mobile
@@ -326,16 +516,20 @@ After the update, some custom emoji may not be displayed. In this case, batch ex
 ### Bugfixes
 - Client: Fixed some components hiding in the background
 
-## 12.99.3 (2021/12/14)
+## 12.99.3
+Released at: 2021/12/14
 
 ### Bugfixes
 - Client: Fixed problem with autocomplete being hidden behind dialogs
 
-## 12.99.2 (2021/12/14)
+## 12.99.2
+Released at: 2021/12/14
 
-## 12.99.1 (2021/12/14)
+## 12.99.1
+Released at: 2021/12/14
 
-## 12.99.0 (2021/12/14)
+## 12.99.0
+Released at: 2021/12/14
 
 ### Improvements
 - Added a user-level instance mute in user settings
@@ -350,7 +544,8 @@ After the update, some custom emoji may not be displayed. In this case, batch ex
 - Client: Fixed an issue where clip settings could not be edited.
 - Client: Fixed a problem with menus etc. being hidden behind windows
 
-## 12.98.0 (12/03/2021)
+## 12.98.0
+Released at: 12/03/2021
 
 ### Improvements
 - API: /antennas/notes API now allows filtering by date

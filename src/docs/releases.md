@@ -1,6 +1,12 @@
 # リリースノート
 Misskeyのリリースノートを掲載しています。
 
+## 12.119.1
+リリース日： 2022/12/03
+
+### Bugfixes
+- Server: Mitigate AP reference chain DoS vector @skehmatics
+
 ## 12.119.0
 リリース日： 2022/09/10
 

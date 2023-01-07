@@ -44,6 +44,10 @@ export default defineUserConfig<DefaultThemeOptions>({
 			lang: 'ko-KR',
 			description: '오픈소스 분산형 마이크로블로깅 플랫폼 Misskey',
 		},
+		'/it/': {
+			lang: 'it-IT',
+			description: 'Sito ufficiale del progetto Misskey',
+		}
 	},
 
 	theme: localTheme({
@@ -82,16 +86,27 @@ export default defineUserConfig<DefaultThemeOptions>({
 							children: [
 								'/docs/features/note',
 								'/docs/features/reaction',
+								'/docs/features/timeline',
 								'/docs/features/mfm',
 								'/docs/features/custom-emoji',
 								'/docs/features/drive',
+								'/docs/features/deck',
 								'/docs/features/charts',
 								'/docs/features/online-status',
 								'/docs/features/share-form',
+								'/docs/features/ads',
 								'/docs/features/thread-mute',
 								'/docs/features/word-mute',
 								'/docs/features/mute-and-block',
 								'/docs/features/plugin',
+								'/docs/features/antenna',
+								'/docs/features/clip',
+								'/docs/features/favorite',
+								'/docs/features/follow',
+								'/docs/features/pages',
+								'/docs/features/theme',
+								'/docs/features/thread-mute',
+								'/docs/features/widgets',
 							]
 						},
 						{
@@ -112,6 +127,7 @@ export default defineUserConfig<DefaultThemeOptions>({
 								'/docs/admin/push-docker-hub',
 								'/docs/admin/troubleshooting',
 								'/docs/tips/disable-timelines',
+								'/docs/features/silence',
 							]
 						}
 					]
@@ -191,15 +207,27 @@ export default defineUserConfig<DefaultThemeOptions>({
 							children: [
 								'/en/docs/features/note',
 								'/en/docs/features/reaction',
+								'/en/docs/features/timeline',
 								'/en/docs/features/mfm',
 								'/en/docs/features/custom-emoji',
 								'/en/docs/features/drive',
+								'/en/docs/features/deck',
+								'/en/docs/features/charts',
 								'/en/docs/features/online-status',
 								'/en/docs/features/share-form',
+								'/en/docs/features/ads',
 								'/en/docs/features/thread-mute',
 								'/en/docs/features/word-mute',
 								'/en/docs/features/mute-and-block',
 								'/en/docs/features/plugin',
+								'/en/docs/features/antenna',
+								'/en/docs/features/clip',
+								'/en/docs/features/favorite',
+								'/en/docs/features/follow',
+								'/en/docs/features/pages',
+								'/en/docs/features/theme',
+								'/en/docs/features/thread-mute',
+								'/en/docs/features/widgets'
 							]
 						},
 						{
@@ -208,6 +236,7 @@ export default defineUserConfig<DefaultThemeOptions>({
 								'/en/docs/api',
 								'/en/docs/api/streaming',
 								'/en/docs/api/endpoints.html',
+								'/en/docs/features/webhook',
 							]
 						},
 						{
@@ -221,6 +250,7 @@ export default defineUserConfig<DefaultThemeOptions>({
 								'/en/docs/admin/troubleshooting',
 								'/en/docs/tips/disable-timelines',
 								'/en/docs/admin/default-reaction',
+								'/en/docs/features/silence',
 							]
 						}
 					]
@@ -377,6 +407,106 @@ export default defineUserConfig<DefaultThemeOptions>({
 						}
 					],
 				},],
+			'/it/': {
+				selectLanguageText: 'Lingua',
+				selectLanguageName: 'Italiano',
+				selectLanguageAriaLabel: 'Scegli la lingua del sito',
+				contributorsText: 'Co-autori',
+				lastUpdatedText: 'Ultimo aggiornamento',
+				editLinkText: 'Modifica questa pagina',
+				relatedPagesText: 'Pagine correlate',
+				readThisArticle: 'Leggi questo articolo',
+				// 404 page messages
+				notFound: [
+					`Purtroppo qui non c'è niente`,
+					`Perché manca questa pagina?`,
+					`Pagina non trovata`,
+					`Sembra che il link sia rotto...`,
+					`Mah? Qui non c'è nulla`
+				],
+				backToHome: 'Torna alla pagina iniziale',
+				// a11y
+				openInNewWindow: 'si apre in una nuova finestra',
+				toggleColorMode: 'cambia i colori',
+				toggleSidebar: 'menu laterale di navigazione',
+				navbar: [{
+					text: 'Blog Giapponese',
+					link: '/blog',
+				}, {
+					text: 'Partecipa',
+					children: [
+						'/it/instances',
+						'/it/plugins',
+						'/it/appendix/assets'
+					]
+				}, {
+					text: 'Documentazione',
+					children: [
+						'/it/docs/misskey',
+						'/it/docs/releases',
+						'/it/docs/misskey-hub',
+						'/it/docs/faq',
+						'/it/docs/glossary',
+						'/it/docs/troubleshooting',
+						{
+							text: 'Per gli sviluppatori',
+							children: [
+								'/it/docs/api',
+								'/it/docs/api/streaming',
+								'/it/docs/api/endpoints.html',
+							]
+						},
+						{
+							text: 'Per gli amministratori',
+							children: [
+								'/it/docs/install',
+								'/it/docs/admin/emoji',
+								'/it/docs/admin/cdn',
+								'/it/docs/admin/nginx',
+								'/it/docs/admin/push-docker-hub',
+								'/it/docs/admin/troubleshooting',
+								'/it/docs/tips/disable-timelines',
+								'/it/docs/admin/default-reaction',
+							]
+						}
+					]
+				}, {
+					text: 'Collegamenti',
+					children: [{
+						text: 'Discord ufficiale',
+						link: 'https://discord.gg/Wp8gVStHW3',
+					},{
+						text: 'Donazioni (Patreon)',
+						link: 'https://www.patreon.com/syuilo',
+					},{
+						text: 'Traduzioni (Crowdin)',
+						link: 'https://crowdin.com/project/misskey',
+					},{
+						text: '藍.moe (la mascotte: Ai)',
+						link: 'https://xn--931a.moe',
+					},{
+						text: 'Profili',
+						children: [{
+							text: '@repo@misskey.io',
+							link: 'https://misskey.io/@repo',
+						}]
+					},{
+						text: 'Il codice sorgente',
+						children: [{
+							text: 'misskey (la piattaforma)',
+							link: 'https://github.com/misskey-dev/misskey',
+						}, {
+							text: 'misskey.js (la SDK in NodeJS)',
+							link: 'https://github.com/misskey-dev/misskey.js',
+						}, {
+							text: 'mfm.js (il parser MFM)',
+							link: 'https://github.com/misskey-dev/mfm.js',
+						}, {
+							text: 'misskey-hub (il sito)',
+							link: 'https://github.com/misskey-dev/misskey-hub',
+						}]
+					}] // Fine: menu links
+				}]  // Fine: navbar italiana
 			},
 		},
 		themePlugins: {

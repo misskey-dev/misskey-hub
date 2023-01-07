@@ -17,6 +17,7 @@
 					'specified',
 				],
 				default: 'public',
+				description: 'ノートの公開範囲。',
 			},
 			visibleUserIds: {
 				type: 'array',
@@ -25,32 +26,39 @@
 					type: 'string',
 					format: 'misskey:id',
 				},
+				description: 'ノートを閲覧可能なユーザーのidのリスト。visibilityがspecifiedの場合のみ適用されます。',
 			},
 			text: {
 				type: 'string',
 				maxLength: 3000,
 				nullable: true,
+				description: 'ノートの本文。',
 			},
 			cw: {
 				type: 'string',
 				nullable: true,
 				maxLength: 100,
+				description: 'ノートのCW。',
 			},
 			localOnly: {
 				type: 'boolean',
 				default: false,
+				description: 'trueにすると、ローカルのみに投稿されます。',
 			},
 			noExtractMentions: {
 				type: 'boolean',
 				default: false,
+				description: 'trueにすると、本文からメンションを展開しません。',
 			},
 			noExtractHashtags: {
 				type: 'boolean',
 				default: false,
+				description: 'trueにすると、本文からハッシュタグを展開しません。',
 			},
 			noExtractEmojis: {
 				type: 'boolean',
 				default: false,
+				description: 'trueにすると、本文から絵文字を展開しません。',
 			},
 			fileIds: {
 				type: 'array',
@@ -61,6 +69,7 @@
 					type: 'string',
 					format: 'misskey:id',
 				},
+				description: '添付するファイルのid。',
 			},
 			mediaIds: {
 				deprecated: true,
@@ -78,16 +87,19 @@
 				type: 'string',
 				format: 'misskey:id',
 				nullable: true,
+				description: '返信先のノートのid。',
 			},
 			renoteId: {
 				type: 'string',
 				format: 'misskey:id',
 				nullable: true,
+				description: 'Renote対象のノートのid。',
 			},
 			channelId: {
 				type: 'string',
 				format: 'misskey:id',
 				nullable: true,
+				description: '投稿先のチャンネルのid。',
 			},
 			poll: {
 				type: 'object',
@@ -103,24 +115,29 @@
 							minLength: 1,
 							maxLength: 50,
 						},
+						description: '選択肢。',
 					},
 					multiple: {
 						type: 'boolean',
 						default: false,
+						description: 'trueにすると、複数選択を許容します。',
 					},
 					expiresAt: {
 						type: 'integer',
 						nullable: true,
+						description: '投票の締め切り。エポック秒で指定します。',
 					},
 					expiredAfter: {
 						type: 'integer',
 						nullable: true,
 						minimum: 1,
+						description: '指定すると、ノート作成からexpiredAfter秒後に投票を締め切ります。expiresAtと併せて指定した場合、expiresAtが優先されます。',
 					},
 				},
 				required: [
 					'choices',
 				],
+				description: '投票に関するパラメータ。',
 			},
 		},
 		anyOf: [
@@ -202,7 +219,7 @@
 		'3ac74a84-8fd5-4bb0-870f-01804f82ce15': {
 			id: '3ac74a84-8fd5-4bb0-870f-01804f82ce15',
 			code: 'CANNOT_REPLY_TO_A_PURE_RENOTE',
-			description: '単純なRenoteをに返信することはできません。',
+			description: '単純なRenoteに返信することはできません。',
 		},
 		'04da457d-b083-4055-9082-955525eda5a5': {
 			id: '04da457d-b083-4055-9082-955525eda5a5',
