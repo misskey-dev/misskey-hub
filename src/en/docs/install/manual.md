@@ -119,8 +119,8 @@ Just `NODE_ENV=production npm start`. GLHF!
 	WorkingDirectory=/home/misskey/misskey
 	Environment="NODE_ENV=production"
 	TimeoutSec=60
-	StandardOutput=syslog
-	StandardError=syslog
+	StandardOutput=journal
+	StandardError=journal
 	SyslogIdentifier=misskey
 	Restart=always
 

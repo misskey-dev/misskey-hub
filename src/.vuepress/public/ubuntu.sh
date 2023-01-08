@@ -807,8 +807,8 @@ ExecStart=$(command -v npm) start
 WorkingDirectory=/home/$misskey_user/$misskey_directory
 Environment="NODE_ENV=production"
 TimeoutSec=60
-StandardOutput=syslog
-StandardError=syslog
+StandardOutput=journal
+StandardError=journal
 SyslogIdentifier="$host"
 Restart=always
 
