@@ -725,6 +725,7 @@ if [ $method != "systemd" ]; then
 		fi
 
 		systemctl restart postgresql;
+		systemctl enable postgresql;
 	fi
 	#endregion
 fi
@@ -754,6 +755,7 @@ if $redis_local; then
 		read -r -p "Press Enter key to continue> "
 	fi
 	systemctl restart redis-server;
+	systemctl enable redis-server;
 fi
 #endregion
 
