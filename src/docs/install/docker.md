@@ -42,8 +42,8 @@ cp .config/docker_example.env .config/docker.env
 これにはしばらく時間がかかります。
 
 ``` shell
-sudo docker-compose build
-sudo docker-compose run --rm web yarn run init
+sudo docker compose build
+sudo docker compose run --rm web yarn run init
 ```
 
 起動
