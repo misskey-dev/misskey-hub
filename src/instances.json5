@@ -49,4 +49,8 @@
   host: 'misskey.cf',
   name: 'misskey.cf',
   lang: 'ja',
+}, {
+  host: 'misskey.kindworld.one',
+  name: 'KindWorld',
+  lang: 'ja',
 }]
