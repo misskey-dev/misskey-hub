@@ -35,8 +35,8 @@ Misskeyのインストール
 ```sh
 su - misskey
 git clone --recursive -b master https://github.com/misskey-dev/misskey.git
-git submodule update --init
 cd misskey
+git submodule update --init
 git checkout master
 yarn install
 ```
