@@ -1,0 +1,1 @@
+const t=JSON.parse('{"key":"v-47336d9d","path":"/it/docs/features/plugin.html","title":"Plug-ins","lang":"it-IT","frontmatter":{},"excerpt":"","headers":[],"git":{"updatedTime":1669265755000,"contributors":[{"name":"Tassoman","email":"tassoman@users.noreply.github.com","commits":1}]},"filePathRelative":"it/docs/features/plugin.md"}');export{t as data};

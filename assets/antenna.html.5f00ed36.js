@@ -1,0 +1,1 @@
+const t=JSON.parse('{"key":"v-d801f202","path":"/it/docs/features/antenna.html","title":"Le Antenne","lang":"it-IT","frontmatter":{},"excerpt":"","headers":[],"git":{"updatedTime":1673602436000,"contributors":[{"name":"Tassoman","email":"tassoman@users.noreply.github.com","commits":1}]},"filePathRelative":"it/docs/features/antenna.md"}');export{t as data};
