@@ -241,8 +241,12 @@ let particleEnabled = ref(true);
 
 onMounted(() => {
 	const lang = navigator.language.toLowerCase();
-	if (location.pathname === '/' && !lang.startsWith('ja')) {
-		location.href = '/en';
+	if (location.pathname === '/' && lang.startsWith('it')) {
+		location.href  = '/it/';
+	} else {
+		if (location.pathname === '/' && !lang.startsWith('ja')) {
+			location.href = '/en/';
+		}
 	}
 
 	window.setTimeout(() => {
