@@ -144,7 +144,7 @@
 						<div class="icon"><img src="/emojis/ringed-planet_1fa90.png" aria-hidden="true"></div>
 						<div class="title">{{ frontmatter.sections.gettingStarted.find.title }}</div>
 						<div class="description"></div>
-						<a class="link" href="./instances.html">{{ frontmatter.sections.gettingStarted.find.list }}</a>
+						<RouterLink class="link" to="./instances.html">{{ frontmatter.sections.gettingStarted.find.list }}</RouterLink>
 					</div>
 				</div>
 				<div v-fade-in class="create">
@@ -152,7 +152,7 @@
 						<div class="icon"><img src="/emojis/package_1f4e6.png" aria-hidden="true"></div>
 						<div class="title">{{ frontmatter.sections.gettingStarted.create.title }}</div>
 						<div class="description"></div>
-						<a class="link" href="./docs/install.html">{{ frontmatter.sections.gettingStarted.create.guide }}</a>
+						<RouterLink class="link" to="./docs/install.html">{{ frontmatter.sections.gettingStarted.create.guide }}</RouterLink>
 					</div>
 				</div>
 				<div v-fade-in class="docs">
@@ -160,7 +160,7 @@
 						<div class="icon"><img src="/emojis/light-bulb_1f4a1.png" aria-hidden="true"></div>
 						<div class="title">{{ frontmatter.sections.gettingStarted.docs.title }}</div>
 						<div class="description"></div>
-						<a class="link" href="./home.html">{{ frontmatter.sections.gettingStarted.docs.docs }}</a>
+						<RouterLink class="link" to="./home.html">{{ frontmatter.sections.gettingStarted.docs.docs }}</RouterLink>
 					</div>
 				</div>
 			</div>
