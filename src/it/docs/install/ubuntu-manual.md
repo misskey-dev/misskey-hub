@@ -411,8 +411,8 @@ ExecStart=/usr/bin/npm start
 WorkingDirectory=/home/misskey/misskey
 Environment="NODE_ENV=production"
 TimeoutSec=60
-StandardOutput=syslog
-StandardError=syslog
+StandardOutput=journal
+StandardError=journal
 SyslogIdentifier=misskey
 Restart=always
 
