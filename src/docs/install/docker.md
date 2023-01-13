@@ -42,8 +42,8 @@ cp .config/docker_example.env .config/docker.env
 これにはしばらく時間がかかります。
 
 ``` shell
-sudo docker-compose build
-sudo docker-compose run --rm web yarn run init
+sudo docker compose build
+sudo docker compose run --rm web yarn run init
 ```
 
 起動
@@ -51,7 +51,7 @@ sudo docker-compose run --rm web yarn run init
 お疲れ様でした。以下のコマンドでMisskeyを起動できます。
 
 ```sh
-sudo docker-compose up -d
+sudo docker compose up -d
 ```
 
 GLHF✨
@@ -68,8 +68,8 @@ git checkout master
 git pull
 git submodule update --init
 git stash pop
-sudo docker-compose build
-sudo docker-compose stop && sudo docker-compose up -d
+sudo docker compose build
+sudo docker compose stop && sudo docker compose up -d
 ```
 
 アップデート内容、およびデータベースの規模によっては時間がかかることがあります。
@@ -77,5 +77,5 @@ sudo docker-compose stop && sudo docker-compose up -d
 cliコマンドを実行する方法
 ----------------------------------------------------------------
 ```sh
-sudo docker-compose run --rm web node packages/backend/built/tools/foo bar
+sudo docker compose run --rm web node packages/backend/built/tools/foo bar
 ```
