@@ -5,19 +5,19 @@ heroImage: /banner.svg
 tagline: Sito ufficiale di Misskey, la piattaforma opensource di microblog interplanetario
 footer: Copyright &copy; 2023 syuilo ed altri co-autori
 actions:
-  - text: Getting started
+  - text: Inizia con Misskey
     link: ./docs/getting-started
     type: primary
-  - text: What is Misskey?
-    link: ./docs/misskey
+  - text: Che cos'è Misskey?
+    link: ./docs/misskey.html
     type: secondary
 features:
-  - title: Distributed 🪐
-    details: Independent communities are run on multiple servers, and these are interconnected.
-  - title: Lightweight 🚀
-    details: Because it uses Node.js, which runs at high speed, it is lightweight even when federated with a large number of servers.
-  - title: Fun 🍮
-    details: It has distinctive features such as reactions and a highly customizable UI.
+  - title: Distribuita 🪐
+    details: Le comunità indipendenti si organizzano sui propri server, sebbene siano interconnesse.
+  - title: Leggera 🚀
+    details: Grazie al linguaggio di programmazione NodeJS e la capacità di sfruttare le risorse in modo efficiente, la piattaforma risulta leggera anche quando c'è traffico.
+  - title: Divertente 🍮
+    details: Le funzionalità uniche, come le reazioni infite e la personalizzazione, permettono di cambiare il divertimento ogni giorno, se lo desideri.
 ---
 
 <ClientOnly>
