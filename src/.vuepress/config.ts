@@ -149,8 +149,8 @@ export default defineUserConfig<DefaultThemeOptions>({
 						{
 							text: 'アカウント',
 							children: [{
-								text: '@repo@misskey.io',
-								link: 'https://misskey.io/@repo',
+								text: '@repo@p1.a9z.dev',
+								link: 'https://p1.a9z.dev/@repo',
 							}]
 						},
 						{
@@ -272,8 +272,8 @@ export default defineUserConfig<DefaultThemeOptions>({
 						{
 							text: 'Accounts',
 							children: [{
-								text: '@repo@misskey.io',
-								link: 'https://misskey.io/@repo',
+								text: '@repo@p1.a9z.dev',
+								link: 'https://p1.a9z.dev/@repo',
 							}]
 						},
 						{
@@ -403,8 +403,8 @@ export default defineUserConfig<DefaultThemeOptions>({
 					},{
 						text: 'Profili',
 						children: [{
-							text: '@repo@misskey.io',
-							link: 'https://misskey.io/@repo',
+							text: '@repo@p1.a9z.dev',
+							link: 'https://p1.a9z.dev/@repo',
 						}]
 					},{
 						text: 'Il codice sorgente',
