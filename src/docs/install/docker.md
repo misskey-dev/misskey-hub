@@ -24,17 +24,12 @@ git checkout master
 下記コマンドで、各種設定ファイルのサンプルをコピーします。
 
 ```sh
-cp .config/example.yml .config/default.yml
+cp .config/docker_example.yml .config/default.yml
 cp .config/docker_example.env .config/docker.env
 ```
 
-`default.yml`と`docker.env`をファイル内の説明に従って編集してください。
-
-::: warning
-`default.yml`の、Postgresql/Redisのホストはそれぞれ`db`/`redis`にしてください。
-:::
-
-必要に応じて、`docker-compose.yml`を編集します。(ポートを変更したい場合など)
+`default.yml`と`docker.env`をファイル内の説明に従って編集してください。  
+また、必要に応じて、`docker-compose.yml`を編集します。(ポートを変更したい場合など)
 
 ビルドと初期化
 ----------------------------------------------------------------
