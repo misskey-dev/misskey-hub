@@ -9,15 +9,16 @@ Misskey構築の手引き
 
 ::: tip 前提条件
 以下のソフトウェアがインストール・設定されていること
-- **[Node.js](https://nodejs.org/en/)** (16.x以上)
-- **[PostgreSQL](https://www.postgresql.org/)** (10以上)
+- **[Node.js](https://nodejs.org/en/)** (18.13.x以上)
+- **[PostgreSQL](https://www.postgresql.org/)** (15以上)
 - **[Redis](https://redis.io/)**
-- **[Yarn](https://yarnpkg.com/)** (v1系)
 - **[FFmpeg](https://www.ffmpeg.org/)**
 
-環境変数が次のように設定されていること
+Debian/Ubuntuをお使いであれば、`build-essential`パッケージをインストールしておくと良いです。
+
+corepackが有効化されていること
 ```sh
-NODE_ENV=production
+sudo corepack enable
 ```
 :::
 
@@ -33,12 +34,12 @@ adduser --disabled-password --disabled-login misskey
 Misskeyのインストール
 ----------------------------------------------------------------
 ```sh
-su - misskey
-git clone --recursive -b master https://github.com/misskey-dev/misskey.git
+sudo -iu misskey
+git clone --recursive https://github.com/misskey-dev/misskey.git
 cd misskey
-git submodule update --init
 git checkout master
-yarn install
+git submodule update --init
+NODE_ENV=production pnpm install --frozen-lockfile
 ```
 
 設定
@@ -57,29 +58,16 @@ cp .config/example.yml .config/default.yml
 これにはしばらく時間がかかります。
 
 ```sh
-yarn build
-yarn run init
+NODE_ENV=production pnpm run build
+pnpm run init
 ```
-
-::: tip
-Debianをお使いであれば、`build-essential`パッケージをインストールする必要があります。
-:::
-
-::: tip エラーが発生する場合
-何らかのモジュールでエラーが発生する場合はnode-gypを使ってください:
-```sh
-npx node-gyp configure
-npx node-gyp build
-yarn build
-```
-:::
 
 起動
 ----------------------------------------------------------------
 お疲れ様でした。以下のコマンドでMisskeyを起動できます。
 
 ```sh
-yarn start
+NODE_ENV=production pnpm run start
 ```
 
 GLHF✨
@@ -119,13 +107,14 @@ CentOSで1024以下のポートを使用してMisskeyを使用する場合は`Ex
 systemdを再読み込みしmisskeyサービスを有効化
 
 ```sh
-systemctl daemon-reload; systemctl enable misskey
+sudo systemctl daemon-reload
+sudo systemctl enable misskey
 ```
 
 misskeyサービスの起動
 
 ```sh
-systemctl start misskey
+sudo systemctl start misskey
 ```
 
 ::: tip
@@ -144,17 +133,21 @@ masterをpullし直し、インストール、ビルド、データベースの�
 git checkout master
 git pull
 git submodule update --init
-yarn install
-yarn build
-yarn migrate
+NODE_ENV=production pnpm install --frozen-lockfile
+NODE_ENV=production pnpm run build
+pnpm run migrate
 ```
 
 アップデート内容、およびデータベースの規模によっては時間がかかることがあります。
 
 アップデートが終わり次第、Misskeyプロセスを再起動してください。
 
+```sh
+sudo systemctl restart misskey
+```
+
 ::: tip
 ビルドや起動時にエラーが発生した場合は、以下のコマンドをお試しください:
-- `yarn clean`または`yarn cleanall`
-- `npm rebuild`
+- `pnpm run clean`または`pnpm run clean-all`
+- `pnpm rebuild`
 :::

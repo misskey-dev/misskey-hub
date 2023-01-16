@@ -41,7 +41,7 @@ Costruisci i container necessari e popola il database.
 
 ```shell
 sudo docker-compose build
-sudo docker-compose run --rm web yarn run init
+sudo docker-compose run --rm web pnpm run init
 ```
 
 ## Avvio

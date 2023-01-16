@@ -42,8 +42,8 @@ Misskeyのビルドには、経験則上、最低でも2GBのメモリが必要�
 - これでもだめそうだったら、最初から[構築の手引き](/docs/install/manual.html)の手順に従ってやり直してみてください。
 
 ## バージョンアップ後に不具合が発生した
-- [構築の手引き](/docs/install/manual.html)をよく読みましょう。
-- Misskeyのバージョンアップ時にはしっかり`yarn install`や`npm run migrate`してください。それでも直らない場合、`npm run clean-all && yarn install`を試し、`npm run build && npm run migrate && npm start`してみてください。
+- [構築の手引き](/docs/install/manual.html)およびリリースノートをよく読みましょう。
+- Misskeyのバージョンアップ時にはしっかり`pnpm install`や`pnpm run migrate`してください。それでも直らない場合、`pnpm run clean-all && pnpm install`を試し、`pnpm run build && pnpm run migrate && pnpm start`してみてください。
 - これでもだめそうだったら、最初から[構築の手引き](/docs/install/manual.html)の手順に従ってやり直してみてください。
 
 ---

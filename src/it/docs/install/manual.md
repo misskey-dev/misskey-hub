@@ -12,16 +12,14 @@ Occorre installare il seguente software
 - **[Node.js](https://nodejs.org/en/)** (16.x o successivo)
 - **[PostgreSQL](https://www.postgresql.org/)** (10 o successivo)
 - **[Redis](https://redis.io/)**
-- **[Yarn](https://yarnpkg.com/)** (serie v1)
 - **[FFmpeg](https://www.ffmpeg.org/)**
 
-:::
-Variabili d'ambiente
+Debian/Ubuntuをお使いであれば、`build-essential`パッケージをインストールしておくと良いです。
 
+corepackが有効化されていること
 ```sh
-NODE_ENV=production
+sudo corepack enable
 ```
-
 :::
 
 ## Creazione utente
@@ -35,12 +33,12 @@ adduser --disabled-password --disabled-login misskey
 ## Installazione Misskey
 
 ```sh
-su - misskey
-git clone --recursive -b master https://github.com/misskey-dev/misskey.git
-git submodule update --init
+sudo -iu misskey
+git clone --recursive https://github.com/misskey-dev/misskey.git
 cd misskey
 git checkout master
-yarn install
+git submodule update --init
+NODE_ENV=production pnpm install --frozen-lockfile
 ```
 
 ## Variabili d'ambiente
@@ -58,23 +56,12 @@ Modifica `default.yml` seguendo le indicazioni nel file.
 Avvia la build e inizializza il DB, potrebbe richiedere un po' di tempo.
 
 ```sh
-yarn build
-yarn run init
+NODE_ENV=production pnpm run build
+pnpm run init
 ```
 
 ::: tip
 Chi usa Debian/Ubuntu ha bisogno del pacchetto `build-essential`
-:::
-
-::: tip
-Se ricevi un messaggio di errore per qualche modulo, usa `node-gyp`:
-
-```sh
-npx node-gyp configure
-npx node-gyp build
-yarn build
-```
-
 :::
 
 ## Avviamento
@@ -82,7 +69,7 @@ yarn build
 Al termine avvia Misskey usando:
 
 ```sh
-yarn start
+NODE_ENV=production pnpm run start
 ```
 
 :::: Configurazione di systemd
@@ -118,9 +105,9 @@ Se usi Misskey su CentOS e una porta inferiore a 1024, Devi configurare `ExecSta
 Ricarica systemd, abilita e avvia il servizio
 
 ```sh
-systemctl daemon-reload;
-systemctl enable misskey
-systemctl start misskey
+sudo systemctl daemon-reload
+sudo systemctl enable misskey
+sudo systemctl start misskey
 ```
 
 ::: tip
@@ -141,19 +128,23 @@ Ottieni il codice sorgente dal branch `master` e le migrazioni del database:
 git checkout master
 git pull
 git submodule update --init
-yarn install
-yarn build
-yarn migrate
+NODE_ENV=production pnpm install --frozen-lockfile
+NODE_ENV=production pnpm run build
+pnpm run migrate
 ```
 
 A seconda della grandezza del database e dal contenuto degli aggiornamenti, potrebbe impiegarci più o meno tempo.
 
 Riavvia il servizio Misskey al termine dell'aggiornamento.
 
+```sh
+sudo systemctl restart misskey
+```
+
 ::: tip
 Se ricevi errori in fase di compilazione, prova i seguenti comandi:
 
-- `yarn clean` oppure `yarn cleanall`
-- `npm rebuild`
+- `pnpm run clean`または`pnpm run clean-all`
+- `pnpm rebuild`
 
 :::

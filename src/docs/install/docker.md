@@ -43,7 +43,7 @@ cp .config/docker_example.env .config/docker.env
 
 ``` shell
 sudo docker compose build
-sudo docker compose run --rm web yarn run init
+sudo docker compose run --rm web pnpm run init
 ```
 
 起動
