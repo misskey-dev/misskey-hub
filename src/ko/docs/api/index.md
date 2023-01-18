@@ -83,23 +83,23 @@ https://misskey.io/miauth/c1f6d42b-468b-4fd2-8274-e58abdedef6f?name=MyApp&callba
 
 #### 3단계
 
-After the user has been granted application access, a POST request to a URL of the following form will return JSON containing the access token as a response.
+사용자가 어플리케이션 엑세스 권한을 부여하면, 다음 양식으로 POST 요청을 전송하면 토큰이 포함된 JSON이 응답으로 전송됩니다.
 
 ```:no-line-numbers
 https://{host}/api/miauth/{session}/check
 ```
 
-where
+여기에서
 
-- `{host}` is the host of the user's instance and
-- `{session}` is the session ID.
+- `{host}`는 사용자의 인스턴스이며
+- `{session}`은 세션 ID입니다.
 
-The properties included in the response are as follows:
+응답에 포함된 항목은 다음과 같습니다:
 
-| name    | description                |
-| ------- | -------------------------- |
-| `token` | access token for the user  |
-| `user`  | information about the user |
+| 이름    | 설명                      |
+| ------- | ------------------------- |
+| `token` | 사용자에 대한 엑세스 토큰 |
+| `user`  | 사용자 정보               |
 
 ## Using the API
 

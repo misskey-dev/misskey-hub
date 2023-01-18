@@ -2,10 +2,9 @@
 
 This guide describes how to install and setup Misskey with Docker.
 
-::: 팁 Requirement
-
-- docker and docker-compose installed
-  :::
+::: Requirement
+docker and docker-compose installed
+:::
 
 ## Get the repository
 
