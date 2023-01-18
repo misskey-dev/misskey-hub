@@ -59,7 +59,7 @@ Displays a digital clock.
 
 ### UNIX Clock
 
-Dixplays the seconds elapsed since the UNIX Epoch (1970-01-01T00:00:00Z).
+Displays the seconds elapsed since the UNIX Epoch (1970-01-01T00:00:00Z).
 
 ### Federation
 
