@@ -153,8 +153,8 @@ export default defineUserConfig<DefaultThemeOptions>({
 						{
 							text: 'アカウント',
 							children: [{
-								text: '@repo@misskey.io',
-								link: 'https://misskey.io/@repo',
+								text: '@repo@p1.a9z.dev',
+								link: 'https://p1.a9z.dev/@repo',
 							}]
 						},
 						{
@@ -276,8 +276,8 @@ export default defineUserConfig<DefaultThemeOptions>({
 						{
 							text: 'Accounts',
 							children: [{
-								text: '@repo@misskey.io',
-								link: 'https://misskey.io/@repo',
+								text: '@repo@p1.a9z.dev',
+								link: 'https://p1.a9z.dev/@repo',
 							}]
 						},
 						{
@@ -449,6 +449,34 @@ export default defineUserConfig<DefaultThemeOptions>({
 						'/it/docs/glossary',
 						'/it/docs/troubleshooting',
 						{
+							text: 'Caratteristiche',
+							children: [
+								'/it/docs/features/note',
+								'/it/docs/features/reaction',
+								'/it/docs/features/timeline',
+								'/it/docs/features/mfm',
+								'/it/docs/features/custom-emoji',
+								'/it/docs/features/drive',
+								'/it/docs/features/deck',
+								'/it/docs/features/charts',
+								'/it/docs/features/online-status',
+								'/it/docs/features/share-form',
+								'/it/docs/features/ads',
+								'/it/docs/features/thread-mute',
+								'/it/docs/features/word-mute',
+								'/it/docs/features/mute-and-block',
+								'/it/docs/features/plugin',
+								'/it/docs/features/antenna',
+								'/it/docs/features/clip',
+								'/it/docs/features/favorite',
+								'/it/docs/features/follow',
+								'/it/docs/features/pages',
+								'/it/docs/features/theme',
+								'/it/docs/features/thread-mute',
+								'/it/docs/features/widgets',
+							]
+						},
+						{
 							text: 'Per gli sviluppatori',
 							children: [
 								'/it/docs/api',
@@ -487,8 +515,8 @@ export default defineUserConfig<DefaultThemeOptions>({
 					},{
 						text: 'Profili',
 						children: [{
-							text: '@repo@misskey.io',
-							link: 'https://misskey.io/@repo',
+							text: '@repo@p1.a9z.dev',
+							link: 'https://p1.a9z.dev/@repo',
 						}]
 					},{
 						text: 'Il codice sorgente',
@@ -559,4 +587,6 @@ export default defineUserConfig<DefaultThemeOptions>({
 			},
 		},
 	},
+
+	shouldPrefetch: false,
 });

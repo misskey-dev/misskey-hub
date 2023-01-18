@@ -32,7 +32,7 @@ In generale, per creare Misskey sono necessari almeno 2GB di memoria. Assicurati
 
 ## Fallimento dell'aggiornamento
 
-- Assicurati che abbiano funzionato sia `yarn install` che `npm run migrate` durante l'aggiornamento di Misskey. Se non funzionano, prova con `npm run clean-all && yarn install` e `npm run build && npm run migrate && npm start`.
+- Assicurati che abbiano funzionato sia `pnpm install` che `pnpm run migrate` durante l'aggiornamento di Misskey. Se non funzionano, prova con `pnpm run clean-all && pnpm install` e `pnpm run build && pnpm run migrate && pnpm start`.
 - Se non sembra funzionare, riprova dall'inizio seguendo i passaggi nella [guida di installazione](../install/manual.html).
 
 ## Configurazione ambiente

@@ -24,17 +24,12 @@ git checkout master
 下記コマンドで、各種設定ファイルのサンプルをコピーします。
 
 ```sh
-cp .config/example.yml .config/default.yml
+cp .config/docker_example.yml .config/default.yml
 cp .config/docker_example.env .config/docker.env
 ```
 
-`default.yml`と`docker.env`をファイル内の説明に従って編集してください。
-
-::: warning
-`default.yml`の、Postgresql/Redisのホストはそれぞれ`db`/`redis`にしてください。
-:::
-
-必要に応じて、`docker-compose.yml`を編集します。(ポートを変更したい場合など)
+`default.yml`と`docker.env`をファイル内の説明に従って編集してください。  
+また、必要に応じて、`docker-compose.yml`を編集します。(ポートを変更したい場合など)
 
 ビルドと初期化
 ----------------------------------------------------------------
@@ -42,8 +37,8 @@ cp .config/docker_example.env .config/docker.env
 これにはしばらく時間がかかります。
 
 ``` shell
-sudo docker-compose build
-sudo docker-compose run --rm web yarn run init
+sudo docker compose build
+sudo docker compose run --rm web pnpm run init
 ```
 
 起動
@@ -51,7 +46,7 @@ sudo docker-compose run --rm web yarn run init
 お疲れ様でした。以下のコマンドでMisskeyを起動できます。
 
 ```sh
-sudo docker-compose up -d
+sudo docker compose up -d
 ```
 
 GLHF✨
@@ -68,8 +63,8 @@ git checkout master
 git pull
 git submodule update --init
 git stash pop
-sudo docker-compose build
-sudo docker-compose stop && sudo docker-compose up -d
+sudo docker compose build
+sudo docker compose stop && sudo docker compose up -d
 ```
 
 アップデート内容、およびデータベースの規模によっては時間がかかることがあります。
@@ -77,5 +72,5 @@ sudo docker-compose stop && sudo docker-compose up -d
 cliコマンドを実行する方法
 ----------------------------------------------------------------
 ```sh
-sudo docker-compose run --rm web node packages/backend/built/tools/foo bar
+sudo docker compose run --rm web node packages/backend/built/tools/foo bar
 ```

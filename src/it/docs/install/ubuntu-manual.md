@@ -72,6 +72,8 @@ curl -sL https://deb.nodesource.com/setup_18.x | sudo -E bash -
 sudo apt install -y nodejs
 
 node -v
+
+sudo corepack enable
 ```
 
 Ti occorre la versione `v18.x.y`. Se appare un'altra versione, come la `v8.x.y` allora l'installazione non è andata a buon fine. Potresti usare il [progetto Node Version Manager](https://github.com/nvm-sh/nvm#about).
@@ -273,7 +275,11 @@ cd misskey
 git checkout master
 ```
 
-Installa le librerie necessarie: `npx yarn install`
+Installa le librerie necessarie: 
+
+```
+NODE_ENV=production pnpm install --frozen-lockfile
+```
 
 ## Configurazione di Misskey
 
@@ -372,7 +378,7 @@ Possibili soluzioni:
 
 ## Avvia Misskey
 
-`NODE_ENV=production npx yarn start`
+`NODE_ENV=production pnpm run start`
 
 Quando leggi: **Now listening on port 3000 on**, accedi alla URL indicata.
 
@@ -449,13 +455,13 @@ su - misskey
 
 git pull;
 
-npx yarn install;
+NODE_ENV=production pnpm install --frozen-lockfile
 
-npm run clean;
+pnpm run clean;
 
-NODE_ENV=production npm run build;
+NODE_ENV=production pnpm run build;
 
-npm run migrate;
+pnpm run migrate;
 
 exit
 ```

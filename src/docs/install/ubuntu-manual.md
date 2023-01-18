@@ -91,6 +91,9 @@ Node.jsは、サーバーサイドJavaScript環境であり、Misskeyの基本�
     # Node.jsがインストールされたので、バージョンを確認する。
     node -v
 
+    # corepack enable
+    sudo corepack enable
+
 v18.x.xなどと表示されればOK。v8.x.xのように低いバージョンが表示された場合は、正しくインストールが行えていないため、サーバーを再起動してもう一度インストールし直すなどしてみよう。
 
 ### PostgreSQL
@@ -299,7 +302,7 @@ Gitでファイル類を展開。
 
 必要なnpmパッケージをインストール。
 
-    npx yarn install
+    NODE_ENV=production pnpm install --frozen-lockfile
 
 ## Misskeyを設定する
 
@@ -391,7 +394,7 @@ misskeyユーザーにログインし直す。
 ビルドをする。yes we can…
 
     cd misskey
-    NODE_ENV=production npm run build
+    NODE_ENV=production pnpm run build
 
 ::: tip
 開発環境の場合、`NODE_ENV=production`は不要です。以降のコマンドでも同様に削除してください。
@@ -409,11 +412,11 @@ RAMが足りない場合、以下のような解決策が考えられる。
 
 ## データベースの初期化
 
-    npm run init
+    pnpm run init
 
 ## Misskeyを起動する
 
-    NODE_ENV=production npx yarn start
+    NODE_ENV=production pnpm run start
 
 **Now listening on port 3000 on** [**http://example.tld**](http://example.tld) と表示されたら、設定したURLにアクセスする。
 
@@ -499,7 +502,7 @@ Misskeyサーバーに自分のアカウントを登録・ログインし、設�
 <https://github.com/joinmisskey/bash-install/blob/main/update.systemd.sh>
 
 手作業でやる場合は次の通りです。\
-[→ manual.html#Misskeyのアップデート方法 (yarnはnpx yarnに読み替えます)](https://misskey-hub.net/docs/install/manual.html#misskey%E3%81%AE%E3%82%A2%E3%83%83%E3%83%95%E3%82%9A%E3%83%86%E3%82%99%E3%83%BC%E3%83%88%E6%96%B9%E6%B3%95)
+[→ manual.html#Misskeyのアップデート方法](https://misskey-hub.net/docs/install/manual.html#misskey%E3%81%AE%E3%82%A2%E3%83%83%E3%83%95%E3%82%9A%E3%83%86%E3%82%99%E3%83%BC%E3%83%88%E6%96%B9%E6%B3%95)
 
 作業中はMisskeyを使うことができません。
 
@@ -508,10 +511,10 @@ Misskeyサーバーに自分のアカウントを登録・ログインし、設�
     su - misskey
 
     git pull;
-    npx yarn install;
-    npm run clean;
-    NODE_ENV=production npm run build;
-    npm run migrate;
+    NODE_ENV=production pnpm install --frozen-lockfile
+    pnpm run clean;
+    NODE_ENV=production pnpm run build;
+    pnpm run migrate;
 
     exit
 

@@ -5,6 +5,168 @@ Notes for indivudual misskey releases.
 Information updates may not be translated yet. For the latest information see [GitHub](https://github.com/misskey-dev/misskey/blob/master/CHANGELOG.md).
 :::
 
+## 13.0.0
+Released at: 2023/01/16
+
+### TL;DR
+- New features (Role system, Misskey Play, New widgets, New charts, 🍪👈, etc)
+- Rewriten backend
+- Better performance (backend and frontend)
+- Various usability improvements
+- Various UI tweaks
+
+### Notable features
+- Role
+	- User policies can be managed more flexibly than before. For example, "instance patrons can create up to 30 antennas," "many users cannot see LTL, but only those who have permission can view it," "it is an invitation-only instance, but any user can invite others," and of course, it is also possible to set up automatic role assignment by combining multiple conditions, such as "Local users and users who have created their accounts less than one day ago are not allowed to make public posts."
+- Misskey Play
+	- Misskey Play is a new platform that replaces the traditional dynamic Pages. It specializes in dynamic content (applications) and allows for the creation of much more flexible applications than Pages.
+
+### Changes
+#### For server admins
+- Node.js 18.x or later is required
+- PostgreSQL 15.x is required
+	- Misskey not using 15 specific features at 13.0.0, but may do so in the future.
+- Elasticsearch support has been removed
+	- Instead, we envision a mechanism that allows you to set up an arbitrary search provider in the future. With this mechanism, Elasticsearch will still be available.
+- Migrated from Yarn to pnpm  
+  It is recommended to activate corepack: `sudo corepack enable`
+- Instance blocking will now also apply to subdomains
+- With the introduction of roles, several functions have been integrated with roles
+	- Moderators have been merged into roles. Please keep a record of the moderator list in advance and create a moderator role and reassign it. After the update, the moderator information will be lost.
+	- Silences have been merged into roles. It is recommended to record the list of silences beforehand, as previous users will be pardoned.
+	- Per-user drive capacity settings have been integrated into roles.
+	- Instance default drive capacity settings have been integrated into roles. After updating, please edit the drive capacity for the base role or conditional role.
+	- LTL/GTL release status has been integrated into the role.
+- Docker is no longer run as root; if you are running Docker and not using object storage, run `chown -hR 991.991 . /files`. 
+  https://github.com/misskey-dev/misskey/pull/9560
+
+#### For users
+- Note watch function has been removed
+- Notification of poll voted has been removed
+- Formula embedding in notes has been removed
+- It is no longer possible to create new dynamic Pages
+	- Instead, a Misskey Play feature is implemented that allows for more flexible dynamic content creation using AiScript.
+- AiScript has been updated to 0.12.2
+	- About changengs of 0.12.x: https://github.com/syuilo/aiscript/blob/master/CHANGELOG.md#0120
+	- Plug-ins less than 0.12.x cannot be loaded
+- iOS 15 and below are no longer supported
+- Firefox 110 and below are no longer supported
+  - In 109, you can use it without problems by enabling the ContainerQueries flag.
+
+#### For app developers
+- API: meta responses no longer include the `emojis` property
+	- To get custom emoji list information, request to `emojis` endpoint
+- API: custom emoji entities no longer include the `url` property
+	- To display an emoji image, request `<instance host>/emoji/<emoji name>.webp` which will return the image.
+	- e.g. `https://p1.a9z.dev/emoji/misskey.webp`
+	- remote: `https://p1.a9z.dev/emoji/syuilo_birth_present@mk.f72u.net.webp`
+- API: `user` and `note` entities no longer contain the `emojis` property
+- API: `user` entities no longer contain the `avatarColor` and `bannerColor` properties
+- API: `instance` entities no longer contain the `latestStatus`, `lastCommunicatedAt`, and `latestRequestSentAt` properties
+- API: The `caughtAt` of the `instance` entity has been renamed to `firstRetrievedAt`.
+
+### Improvements
+- Role system @syuilo
+- Misskey Play @syuilo
+- Introduce retention-rate aggregation @syuilo
+- Make possible to export favorited notes @syuilo
+- Add per user pv chart @syuilo
+- Push notification of Antenna note @tamaina
+- AVIF support @tamaina
+- Add Cloudflare Turnstile CAPTCHA support @CyberRex0
+- Rate limits can now be adjusted per user @syuilo
+- Non-moderator users assigned to roles with permissions can now issue instance invitation codes @syuilo
+- Non-moderator users with assigned roles can now add, edit, and delete custom emoji @syuilo
+- Allow users to set the number of clips and notes within a clip @syuilo
+- Allowed to set the number of users in user list and user list @syuilo
+- Maximum number of characters for hardword mute @syuilo
+- Maximum number of webhooks that can be created @syuilo
+- Can set the number of notes that can be pinned @syuilo
+- Server: signToActivityPubGet is set to true by default @syuilo
+- Server: improve syslog performance @syuilo
+- Server: Use undici instead of node-fetch and got @tamaina
+- Server: Judge instance block by endsWith @tamaina
+- Server: improve note scoring for featured notes @CyberRex0
+- Server: Relaxed character limit for survey choices @syuilo
+- Server: Relaxed character limit for profile @syuilo
+- Server: add rate limits for some endpoints @syuilo
+- Server: improve stats api performance @syuilo
+- Server: improve nodeinfo performance @syuilo
+- Server: delete outdated notifications regularly to improve db performance @syuilo
+- Server: delete outdated hard-mutes regularly to improve db performance @syuilo
+- Server: delete outdated notes of antenna regularly to improve db performance @syuilo
+- Server: improve activitypub deliver performance @syuilo
+- Client: use tabler-icons instead of fontawesome to better design @syuilo
+- Client: Add new gabber kick sounds (thanks for noizenecio)
+- Client: Add link to user RSS feed in profile menu @ssmucny
+- Client: Compress non-animated PNG files @saschanaz
+- Client: YouTube window player @sim1222
+- Client: show readable error when rate limit exceeded @syuilo
+- Client: enhance dashboard of control panel @syuilo
+- Client: Vite is upgraded to v4 @syuilo, @tamaina
+- Client: HMR is available while yarn dev @tamaina
+- Client: Implement the button to subscribe push notification @tamaina
+- Client: Implement the toggle to or not to close push notifications when notifications or messages are read @tamaina
+- Client: show Unicode emoji tooltip with its name in MkReactionsViewer.reaction @saschanaz
+- Client: OpenSearch support @SoniEx2 @chaoticryptidz
+- Client: Support remote objects in search @SoniEx2
+- Client: user activity page @syuilo
+- Client: Make widgets of universal/classic sync between devices @tamaina
+- Client: add user list widget @syuilo
+- Client: Add AiScript App widget
+- Client: add profile widget @syuilo
+- Client: add instance info widget @syuilo
+- Client: Improve RSS widget @tamaina
+- Client: add heatmap of daily active users to about page @syuilo
+- Client: introduce fluent emoji @syuilo
+- Client: add new theme @syuilo
+- Client: add new mfm function (position, fg, bg) @syuilo
+- Client: show fireworks when visit user who today is birthday @syuilo
+- Client: show bot warning on screen when logged in as bot account @syuilo
+- Client: AiScript can refer to custom emoji list @syuilo
+- Client: improve overall performance of client @syuilo
+- Client: ui tweaks @syuilo
+- Client: clicker game @syuilo
+
+### Bugfixes
+- Server: Fix @tensorflow/tfjs-core's MODULE_NOT_FOUND error @ikuradon
+- Server: Fixed a problem that sentences in quotes are nyaized @kabo2468
+- Server: Bug fix for Pinned Users lookup on instance @squidicuzz
+- Server: Fix peers API returning suspended instances @ineffyble
+- Server: trim long text of note from ap @syuilo
+- Server: Ap inbox max payload size limited to 64kb @syuilo
+- Server: add limit to number of antennae created @syuilo
+- Server: Fixed duplicate error IDs in pages/like @syuilo
+- Server: Fixed that summary values are not updated depending on pages/update parameters @syuilo
+- Server: Escape SQL LIKE @mei23
+- Server: fix problem with certain PNG image uploads failing @usbharu
+- Server: fix problem with OGP rendering with URLs of non-public clips @syuilo
+- Server: Antenna timeline (streaming) picks up key posts of users not followed @syuilo
+- Server: follow request list api pagination @sim1222
+- Server: Fixed an issue where an error when drive capacity is exceeded is not properly responded @syuilo
+- Client: Fixed a problem that user name is not auto-completed in password manager @massongit
+- Client: Fixed a problem that date strings are displayed as custom pictograms @syuilo
+- Client: case insensitive emoji search @saschanaz
+- Client: Fixed that there is no way to close widget drawer when screen width is narrow @syuilo
+- Client: Fixed InApp window sometimes becoming inoperable @tamaina
+- Client: use proxied image for instance icon @syuilo
+- Client: Fixed an issue where the content cannot be saved in the Webhook edit screen @m-hayabusa
+- Client: Fixed issue where blocks cannot be moved in Page edit @syuilo
+- Client: update emoji picker immediately on all input @saschanaz
+- Client: fixed tooltip of chart may remain on screen @syuilo
+- Client: fix wrong link in tutorial @syuilo
+
+### Special thanks
+- All contributors
+- All who have created instances for the beta test
+- All who participated in the beta test
+
+## 12.119.1
+Released at: 2022/12/03
+
+### Bugfixes
+- Server: Mitigate AP reference chain DoS vector @skehmatics
+
 ## 12.119.0
 Released at: 2022/09/10
 

@@ -1,9 +1,13 @@
-# Misskey install shell script v1.4.0
+# Misskey install shell script v3.0.0
+
 Misskeyを簡単にインストールするためのシェルスクリプトができました！
 
 いくつかの質問に答えるだけで、UbuntuサーバーへMisskey(v12)を簡単にインストールできます！
 
 また、アップデートスクリプトもあります。
+
+[v12の場合はこちら](https://github.com/joinmisskey/bash-install/blob/a096e874f93d493aa68975a31be9ce12d644e767/README.md)  
+[**English version**](./README.en.md)
 
 ## ライセンス
 [MIT License](./LICENSE)
@@ -49,6 +53,8 @@ example.comは自分のドメインに置き換えてください。
 
 ### 4. アップデートする
 アップデートのためのスクリプトもあります。
+
+アップデートスクリプトは、環境のアップデートは行いません。CHANGELOG（日本語）および[GitHubのリリース一覧（英語）](https://github.com/joinmisskey/bash-install/releases)を参考に、適宜マイグレーション操作を行なってください。
 
 まずはダウンロードします。
 
@@ -109,7 +115,7 @@ systemdは、Docker Hubにイメージを上げるまでもないものの、フ
 ## nginxを使うかどうか
 サーバー1台でMisskeyを構築する場合は、nginxの使用をお勧めします。
 
-ロードバランサーを設置する場合にはnginxをインストールせず、[Misskeyのnginx設定](https://github.com/misskey-dev/misskey/blob/develop/docs/examples/misskey.nginx)を参考にロードバランサーを設定するのがよいと思います。
+ロードバランサーを設置する場合にはnginxをインストールせず、[Misskeyのnginx設定](https://misskey-hub.net/docs/admin/nginx.html)を参考にロードバランサーを設定するのがよいと思います。
 
 ## Add more swaps!
 スワップを設定している場合、メモリが合計で3GB以上でなければスクリプトが動作しないようになっています。
@@ -188,6 +194,12 @@ export DOCKER_HOST=unix://$XDG_RUNTIME_DIR/docker.sock
 # プロセス一覧を表示
 docker ps
 
+# ビルド (リポジトリ: local/misskey:latest)
+docker build -t local/misskey:latest ./misskey
+
+# docker run
+docker run -d -p 3000:3000 --add-host=docker_host:10.0.0.1 -v /home/misskey/misskey/files:/misskey/files -v "/home/misskey/misskey/.config/default.yml":/misskey/.config/default.yml:ro --restart unless-stopped -t "local/misskey:latest"
+
 # ログを表示
 docker logs --tail 50 -f コンテナID
 ```
@@ -208,14 +220,12 @@ requirepassとbindを`/etc/redis/misskey.conf`で設定しています。
 Dockerでは、起動後にマイグレーションをするため、すぐにアクセスできません。  
 マイグレーションが終わっているかどうか確認してみてください。
 
-それでもアップデート後にアクセスできない、ということが稀にあります。
-
-もしくは、yarn installに失敗しているというものです。  
+systemdの場合では、pnpm installに失敗している可能性があります。  
 
 Misskeyディレクトリで次の内容を実行し、もう一度アップデートを実行してみてください。
 
 ```
-npm run cleanall
+pnpm run clean-all
 ```
 
 journalctlでログを確認すると、たいていre2が云々という記述が見当たります。
