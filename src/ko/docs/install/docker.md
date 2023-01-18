@@ -39,7 +39,7 @@ This will take some time.
 
 ```shell
 sudo docker-compose build
-sudo docker-compose run --rm web yarn run init
+sudo docker-compose run --rm web pnpm run init
 ```
 
 ## Launch

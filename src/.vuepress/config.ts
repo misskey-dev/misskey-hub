@@ -385,8 +385,8 @@ export default defineUserConfig<DefaultThemeOptions>({
 						{
 							text: '계정',
 							children: [{
-								text: '@repo@misskey.io',
-								link: 'https://misskey.io/@repo',
+								text: '@repo@p1.a9z.dev',
+								link: 'https://p1.a9z.dev/@repo',
 							}]
 						},
 						{
