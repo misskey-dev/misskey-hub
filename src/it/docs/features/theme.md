@@ -51,8 +51,11 @@ Il tema è un oggetto JSON5 che assomiglia a questo:
 `props`下にはテーマのスタイルを定義します。
 キーが CSS の変数名になり、バリューで中身を指定します。
 なお、この`props`オブジェクトはベーステーマから継承されます。
-ベーステーマは、このテーマの`base`が`light`なら[\_light.json5](https://github.com/misskey-dev/misskey/blob/develop/src/client/themes/_light.json5)で、`dark`なら[\_dark.json5](https://github.com/misskey-dev/misskey/blob/develop/src/client/themes/_dark.json5)です。
+ベーステーマは、このテーマの`base`が`light`なら[_light.json5]で、`dark`なら[_dark.json5]です。
 つまり、このテーマ内の`props`に`panel`というキーが無くても、そこにはベーステーマの`panel`があると見なされます。
+
+[_light.json5]: https://github.com/misskey-dev/misskey/blob/develop/packages/frontend/src/themes/_light.json5
+[_dark.json5]:  https://github.com/misskey-dev/misskey/blob/develop/packages/frontend/src/themes/_dark.json5
 
 #### Sintassi per i valori
 
