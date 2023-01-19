@@ -1,13 +1,13 @@
-# Advertisements
+# 광고
 
-Misskey can display ads in the instance timeline and other places if enabled by the instance administrator.
-You can reduce how often an ad is shown by clicking in the upper right corner of it.
+Misskey는 인스턴스 관리자가 활성화한 경우 인스턴스 타임라인 및 기타 위치에 광고를 표시할 수 있습니다.
+광고의 오른쪽 상단을 클릭하면 광고가 표시되는 빈도를 줄일 수 있습니다.
 
 ::: 팁
-If the total number of ads being shown on the instance is small then an ad may still be shown to you often even after you choose to reduce how often it is displayed.
+인스턴스에 표시되는 총 광고 수가 적은 경우 광고 표시 빈도를 줄이도록 선택한 후에도 광고가 계속 표시될 수 있습니다.
 :::
 
-## Configuring Ads (Admins)
+## 광고 구성(관리자)
 
-You can add, edit, and delete ads from the control panel of your instance.
-In there you can set any image, destination URL, shape, and display percentage for the ad.
+인스턴스의 제어판에서 광고를 추가, 편집 및 삭제할 수 있습니다.
+여기에서 광고의 이미지, 광고의 URL 주소, 모양 및 표시 비율을 설정할 수 있습니다.

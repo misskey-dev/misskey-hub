@@ -1,8 +1,8 @@
-# Antenna
+# 안테나
 
-Antenna is a feature that allows you to freely set conditions for a custom timeline and automatically collect matching notes.
+안테나는 사용자 지정 타임라인에 대한 조건을 자유롭게 설정하고 조건에 맞는 노트를 자동으로 수집하는 기능입니다.
 
-Antenna conditions can include conditions to include/exclude certain keywords and tags in different combinations as well as other options.
-When a note matching an antenna's conditions is posted, the note will automatically be added to that antenna's timeline.
+안테나 조건에는 특정 단어 및 태그를 다양한 조합으로 포함/제외하는 조건 및 기타 옵션이 포함될 수 있습니다.
+안테나에 설정한 조건과 맞는 노트가 게시되면 해당 안테나의 타임라인에 노트가 자동으로 추가됩니다.
 
-To create an antenna, click "Add" in the Manage antennas page. Then fill in the options to customize your antenna.
+안테나를 생성하려면 안테나 관리 페이지에서 "추가"를 클릭하십시오. 그런 다음 옵션을 입력하여 안테나를 사용자 정의하십시오.

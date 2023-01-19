@@ -1,98 +1,101 @@
-# Widgets
+# 위젯 종류
 
-A widget is a small display element that can be added to the Misskey UI to display and interact with information.
-By default they are displayed on the right side of the screen or accessed from the stack icon in the mobile web app navigation menu.
+위젯은 정보를 표시하고 상호작용하기 위해 Misskey UI에 추가 할 수 있는 작은 구성 요소(인터페이스)입니다. 기본적으로 화면 오른쪽에 표시되거나 모바일 웹 앱에서 탐색 메뉴(가로 3줄 줄무늬 아이콘, 햄버거 버튼)에서 접근할 수 있습니다.
 
-To edit widgets, switch to widget edit mode at the bottom of the widget view. In widget edit mode you can add, delete, and reorder widgets.
+위젯을 편집하려면 위젯 보기 하단에서 위젯 편집 모드로 전환하세요. 위젯 편집 모드에서 위젯을 추가, 삭제 및 재정렬할 수 있습니다.
 
-After you close out of the widget layout editor, you can also configure settings for each widget's behavior.
+위젯 레이아웃 편집기를 닫은 후 각 위젯의 동작에 대한 설정을 구성할 수도 있습니다.
 
-## List of Available Widgets
 
-### Notifications
+## 사용할 수 있는 위젯 목록
 
-Shows a list of your notifications. You can change the types of notifications shown by opening the notification widget menu. If you disable "User global settings" you can choose to only show certain types of notifications.
+### 알림 목록
 
-### Timeline
+알림 목록을 표시합니다. 알림 위젯 메뉴를 열어 표시되는 알림 유형을 변경할 수 있습니다. "사용자 전역 설정"을 비활성화하면 특정 유형의 알림만 표시합니다.
 
-Display a timeline. You can choose from one of the standard timelines (Home, Local, Social, and Global) or one of your custom user [Lists](./list.md) or [Antennas](./antenna.md).
+### 타임라인
 
-### RSS Reader
+타임라인을 표시합니다. 표준 타임라인(홈, 로컬, 소셜 및 글로벌) 중 하나 또는 사용자 지정 [목록](./list.md) 또는 [안테나](./antenna.md) 중 하나를 선택할 수 있습니다.
 
-Displays a list of items from an RSS feed. You can provide any valid RSS feed URL in the configuration.
+### RSS 리더
 
-### RSS-Ticker
+RSS 피드 목록을 표시합니다. 설정에 맞는 RSS 피드 URL을 수신받을 수 있습니다.
 
-Similar to the RSS Reader, but the ticker shows the feed as a scrolling ticker on a single line. There are also more options to customize how the the feed will be refreshed and displayed.
+### RSS 티커
 
-### Trending
+RSS 리더와 유사하지만 RSS 피드 목록을 한 줄에 스크롤 되는 형태로 표시합니다. 추가로 피드가 갱신되고 표시되는 방법을 사용자가 설정할 수 있습니다.
 
-Displays trending [Hashtags](./hashtag.md) as well as statistics of how many users have mentioned it and a graph of that hashtag's activity.
 
-### Activity
+### 트렌드(유행)
 
-Displays a visualization of activity over time.
+유행하는 [해시태그](./hashtag.md)를 언급한 사용자 수에 대한 통계와 해시태그의 빈도를 그래프로 표시합니다.
 
-### Online Users
+### 활동
 
-Displays the number of users that are active on this instance.
+시간별 활동에 대한 시각화를 표시합니다.
 
-### Photos
+### 온라인 사용자
 
-Displays a gallery of your recent photos.
+이 인스턴스에서 접속자 수를 표시합니다.
 
-### Slideshow
+### 사진 목록
 
-Displays a slideshow of photos one of your specified drive folders. To select the drive folder, left-click on the slideshow widget after you have exited the widget layout editor. Then select the checkbox of folders you want included in the slideshow and click the check mark to confirm.
+본인이 올린 최근 사진을 표시합니다.
 
-### Calendar
+### 슬라이드쇼
 
-Displays the current date as well as a graphic showing the date progression.
+지정한 드라이브 폴더의 사진 중 하나를 슬라이드 쇼로 표시합니다. 드라이브 폴더를 선택하려면 위젯 레이아웃 편집기를 종료한 상태에서 슬라이드 쇼 위젯을 마우스 왼쪽 클릭을 하여 메뉴를 띄웁니다. 그런 다음 슬라이드 쇼에 포함할 폴더를 체크하여 선택하고 "확인" 버튼을 누릅니다.
 
-### Clock
+### 달력
 
-Displays an analog clock. The analog clock has many options to customize its appearance.
+한 달 전체 날짜와 현재 날짜를 그래픽 형태의 달력으로 표시합니다.
 
-### Digital Clock
+### 시계
 
-Displays a digital clock.
+아날로그 시계입니다. 사용자가 선택할 수 있는 다양한 시계 모양이 있습니다.
 
-### UNIX Clock
+### 디지털시계
 
-Dixplays the seconds elapsed since the UNIX Epoch (1970-01-01T00:00:00Z).
+디지털시계입니다.
 
-### Federation
+### 유닉스 시계
 
-List of federated instances and graphs of their recent activity.
+UNIX Epoch(1970-01-01T00:00:00Z) 이후 경과된 초를 표시합니다.
 
-### Instance Cloud
+### 연합우주(Fediverse, Federation)
 
-An interactive animation that shows federated instances.
+연합 인스턴스 목록 및 최근 활동 그래프를 표시합니다.
 
-### Sticky Notes
+### 인스턴스 클라우드
 
-A text area where you can jot down short notes for yourself. You can save your sticky note and it will be available wherever you access Misskey Web.
+연합 인스턴스를 보여주는 대화형 애니메이션입니다.
 
-### Posting Form
+### 스티커 메모
 
-A widget form of the [Note](./note.md) composition menu.
+간단한 메모를 직접 기록할 수 있는 문자형 위젯입니다. 스티커 메모를 저장할 수 있으며, Misskey Web에 접속하여 스티커 메모를 볼 수 있습니다.
 
-### Server Metrics
+### 노트 개시 위젯(Posting Form)
 
-A display of the server metrics. The type of metrics displayed can changed by clicking the arrows in the header of the widget.
+[노트](./note.md) 구성 요소의 위젯 형태입니다.
 
-### Job Queue
+### 서버 메트릭
 
-A display of the server job queue statistics.
+서버 상태를 표시합니다. 서버 메트릭 상단에 있는 화살표를 클릭하여 표시 형식을 변경할 수 있습니다.
+
+### 작업 대기열
+
+서버 작업 대기열(Queue) 통계를 표시합니다.
 
 ### AiScript Console
 
-A widget version that you can use to test and execute [AiScript](../advanced/aiscript.md) programs. This is a widget version of the Scratchpad page accessible through the help menu.
+AiScript 프로그램을 테스트하고 실행하는 데 사용할 수 있는 위젯입니다. 도움말 메뉴를 통해 접근할 수 있는 Scratchpad 페이지의 위젯입니다.
 
-### Button
+참고: [AiScript](../advanced/aiscript.md)는 JavaScript기반 경량 스크립팅 언어입니다.
 
-An interactive button that when clicked runs your own custom [AiScript](../advanced/aiscript.md) program.
+### 버튼
+
+클릭하면 사용자 지정 [AiScript](../advanced/aiscript.md) 프로그램을 실행하는 대화형 버튼입니다.
 
 ### Ai
 
-A digital version of the Misskey mascot, Ai, that will follow you around the site.
+Misskey 곳곳을 돌아다니는 Misskey의 디지털 마스코트 Ai입니다.

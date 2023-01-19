@@ -1,10 +1,10 @@
-# Clip
+# 클립
 
-Clip is a feature that allows you to create collections of notes.
-The notes can be your own or created by others.
-You can create multiple clips and manage them by giving a name and description to each.
-You can also choose to make your clips public to make them available to other users.
+클립은 노트 모음을 만들 수 있는 기능입니다.
+노트는 자신 또는 다른 사람이 게시한 것일 수도 있습니다.
+여러 클립을 만들고 각각에 이름과 설명을 지정하여 관리할 수 있습니다.
+다른 사용자가 클립을 사용할 수 있도록 클립을 공개하도록 선택할 수도 있습니다.
 
-To create a clip, click "Add" from the clip management page.
+클립을 생성하려면 클립 관리 페이지에서 "추가"를 클릭하십시오.
 
-To add notes to a clip, choose the "Clip" option on the note's menu. Then select the clip to add the note to.
+클립에 노트를 추가하려면 노트 메뉴에서 "클립" 옵션을 선택하십시오. 그런 다음 노트를 추가할 클립을 선택합니다.

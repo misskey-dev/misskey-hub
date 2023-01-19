@@ -1,20 +1,21 @@
-# Word mute
-Through setting up word mutes, you can make notes satisfying set conditions not appear on your timeline anymore.
+# word mute(스팸 등록)
+차단하고 싶으신 단어를 설정하시면 해당 단어가 포함된 노트가 표시되지 않습니다.
 
-There are two types of word mutes: soft and hard.Below is an explanation of the setup process and effect of both.
+word mute에는 soft word mute와 hard word mute 두 종류로 나뉘며 아래에 각각의 설정에 따른 동작 방식에 대해 설명합니다.
 
-## Soft word mute
-With soft mutes, the word mute is processed within the client (app) you are using.
+## soft word mute(클라이언트에서 차단)
+soft word mute는 클라이언트(앱) 즉, 사용자의 앱에서 차단 조건에 맞는 단어가 포함된 노트를 차단합니다.
 
-When a note meets the set conditions, it will be hidden behind text stating "(username) said something".  
-You can display the note as it was by clicking on this text.
+차단된 노트는 "(사용자명)이 무언가를 언급했습니다"라는 문구로 표시되며, 서버 자체에는 해당 노트 내용이 저장되어 있으므로 클릭 시 차단된 내용을 표시합니다.
 
-## Hard word mute
-With hard mutes, the server judges whether the content of a new incoming note meets the set conditions similar to antennas, and will completely exclude it from your timeline if so.
+soft word mute를 지원하지 않는 앱에서는 soft word mute 기능을 사용할 수 없습니다.
 
-To summarize, a hard word mute has the following features:
+## hard word mute(서버에서 차단)
+hard word mute는 서버에서 차단이 이루어집니다. 노트 본문 내용을 분석하고 차단하고자 하는 단어와 일치하면 타임라인에서 노트를 개시되지 않으며 안테나 기능에서도 차단됩니다.
 
-- Only new notes created after configuration will be affected by the mute.
-- If the conditions are changed, previously hard muted notes will still remain muted.
-- Timelines will not be filled with "(...) said something".
-- Hard mutes will function even for apps without functionality for soft mutes.
+즉, hard word mute는 다음과 같은 특징이 있습니다.
+
+- hard word mute가 설정된 이후 시점부터 새로운 게시물에만 차단 됩니다.
+- hard word mute를 해제하더라도 서버에 저장하지 않으므로 이미 차단된 노트는 복원되지 않습니다.
+- 사용자에게 "(사용자명)이 무언가를 언급했습니다"와 같이 타임라인에 표시되지도 않습니다.
+- 서버 자체에서 차단 되므로 soft word mute를 지원하지 않는 앱에서도 hard word mute는 적용됩니다.
