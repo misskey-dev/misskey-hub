@@ -1,6 +1,24 @@
 # リリースノート
 Misskeyのリリースノートを掲載しています。
 
+## 13.1.0
+リリース日： 2023/01/21
+
+### Improvements
+- 実績機能
+- Playのプリセットを追加
+- Playのscriptの文字数制限を緩和
+- AiScript GUIの強化
+- リアクション一覧詳細ダイアログを表示できるように
+- 存在しないカスタム絵文字をテキストで表示するように
+- Alt text in image viewer
+- ジョブキューのプロセスとWebサーバーのプロセスを分離
+
+### Bugfixes
+- playを削除する手段がなかったのを修正
+- The … button on notes does nothing when not logged in
+- twitterと連携するときに autwh is not a function になるのを修正
+
 ## 13.0.0
 リリース日： 2023/01/16
 
