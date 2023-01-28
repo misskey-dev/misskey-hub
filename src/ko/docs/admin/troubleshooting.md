@@ -1,6 +1,6 @@
 # Troubleshooting guide
 
-::: 경고
+::: warning
 이 문서는 아직 국문/영문으로 번역되지 않았으며, 일문도 상당히 오래된 것으로 확인되고 있습니다.
 
 이 페이지는 여기에서 제공되지 않으며, [일본어 버전](/docs/admin/troubleshooting)만 제공되고 있습니다.

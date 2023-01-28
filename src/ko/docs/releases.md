@@ -2,7 +2,7 @@
 
 미스키 릴리스에 대한 릴리스 노트입니다.
 
-::: 팁
+::: tip
 최신 정보는 업데이트되지 않았을 수 있습니다. 최신 정보는 [GitHub](https://github.com/misskey-dev/misskey/blob/master/CHANGELOG.md)(일본어, 영어) 또는 [일본어 Misskey Hub](../docs/releases)에서 확인해주세요.
 :::
 
