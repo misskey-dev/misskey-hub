@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-5e06e28d","path":"/ko/docs/advanced/develop-bot.html","title":"Bot \uB9CC\uB4E4\uAE30","lang":"ko-KR","frontmatter":{},"excerpt":"","headers":[],"git":{"updatedTime":1674214301000,"contributors":[{"name":"jdh5968","email":"jdh59681@naver.com","commits":1}]},"filePathRelative":"ko/docs/advanced/develop-bot.md"}');export{e as data};
