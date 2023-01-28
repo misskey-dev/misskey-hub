@@ -6,6 +6,10 @@ This guide describes how to install and setup Misskey.
 
 ----------------------------------------------------------------
 
+::: danger
+Never change the domain name (hostname) of an instance once you start using it!
+:::
+
 *1.* Install dependencies
 ----------------------------------------------------------------
 Please install and setup these softwares:

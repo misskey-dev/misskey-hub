@@ -16,6 +16,10 @@ There is also an update script.
 2. An Ubuntu Server
 3. A Cloudflare Account (recommended)
 
+::: danger
+Never change the domain name (hostname) of an instance once you start using it!
+:::
+
 ## Configure Cloudflare
 If you are using nginx and Cloudflare, you must configure Cloudflare:
 

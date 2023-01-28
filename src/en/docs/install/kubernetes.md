@@ -1,6 +1,9 @@
 # Create Misskey Instance with Kubernetes/TrueNAS
 This guide describes how to install and setup Misskey using Kubernetes and Helm charts.
 
+::: danger
+Never change the domain name (hostname) of an instance once you start using it!
+:::
 
 ## TrueCharts and TrueNAS Scale
 The Helm chart for Misskey is hosted on TrueCharts which is a repository designed to be used with TrueNAS Scale, but its charts can also be installed as normal Helm charts. The [TrueCharts](https://truecharts.org/docs/charts/incubator/misskey) site has a list of all the charts available as well as documentation on how to install. The TrueCharts [Discord](https://discord.gg/Ax9ZgzKx9t) server is also a resource that can be used if you have questions. Misskey is currently on the *incubator* train.

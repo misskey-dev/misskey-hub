@@ -2,7 +2,11 @@
 Thank you for your interest in building a Misskey instance 🚀
 There are several ways to create an instance, so please choose one below and read the guide.
 
-## Using Docker (recommended)
+::: danger
+Never change the domain name (hostname) of an instance once you start using it!
+:::
+
+## Using Docker
 [See here](./install/docker.html)
 
 ## Using Bash Script

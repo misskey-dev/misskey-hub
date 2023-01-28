@@ -42,6 +42,10 @@ Le indicazioni sono specifiche per il sistema operativo Ubuntu, alcune parti pot
 Se prepari un ambiente di sviluppo, dominio e Cloudflare non servono
 :::
 
+::: danger
+Never change the domain name (hostname) of an instance once you start using it!
+:::
+
 ## Come usare l'editor Nano
 
 L'editor di testo si apre con questo comando. `nano /percorso/al/file`. Il cursore si muove coi tasti freccia, home, end ecc... Per uscire, premi `CTRL+x`, successivamente, decidi se salvare le modifiche, premi `Y` per accettare.

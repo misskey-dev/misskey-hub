@@ -6,6 +6,10 @@ description: "Questa guida spiega come installare e configurare Misskey"
 
 Questa guida spiega come installare e configurare Misskey
 
+::: danger
+Never change the domain name (hostname) of an instance once you start using it!
+:::
+
 ::: tip
 Occorre installare il seguente software
 
