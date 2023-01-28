@@ -7,8 +7,12 @@ Dockerを使ったMisskey構築
 
 このガイドはDockerを使ったMisskeyセットアップ方法を説明します。
 
+::: danger
+一度使用を始めたインスタンスのドメイン・ホスト名は、決して変更しないでください！
+:::
+
 ::: tip 前提条件
-- dockerおよびdocker-composeがインストールされていること。
+- DockerおよびDocker Composeがインストールされていること。
 :::
 
 リポジトリの取得
@@ -26,6 +30,7 @@ git checkout master
 ```sh
 cp .config/docker_example.yml .config/default.yml
 cp .config/docker_example.env .config/docker.env
+cp ./docker-compose.yml.example ./docker-compose.yml
 ```
 
 `default.yml`と`docker.env`をファイル内の説明に従って編集してください。  

@@ -6,8 +6,12 @@ description: "Questa guida spiega come installare Misskey dentro Docker"
 
 Questa guida spiega come installare Misskey dentro Docker
 
+::: danger
+Never change the domain name (hostname) of an instance once you start using it!
+:::
+
 ::: tip
-Requisiti iniziali: installare **Docker** e **docker-compose**
+Requisiti iniziali: installare **Docker** e **Docker Compose**
 :::
 
 ## Ottieni il codice sorgente
@@ -25,13 +29,10 @@ Copia la configurazione d'esempio, su quella di default.
 ```sh
 cp .config/example.yml .config/default.yml
 cp .config/docker_example.env .config/docker.env
+cp ./docker-compose.yml.example ./docker-compose.yml
 ```
 
 Modificare sia `default.yml` che `docker.env` come indicato nei file.
-
-::: warning
-Il file `default.yml` imposta PostgreSQL e Redis come container `db` e `redis`
-:::
 
 Modificare `docker-compose.yml` secondo le necessità (ad esempio se intendi cambiare porta)
 
@@ -40,8 +41,8 @@ Modificare `docker-compose.yml` secondo le necessità (ad esempio se intendi cam
 Costruisci i container necessari e popola il database.
 
 ```shell
-sudo docker-compose build
-sudo docker-compose run --rm web pnpm run init
+sudo docker compose build
+sudo docker compose run --rm web pnpm run init
 ```
 
 ## Avvio
@@ -49,7 +50,7 @@ sudo docker-compose run --rm web pnpm run init
 Questo comando avvia i container e li imposta come servizio al riavvio.
 
 ```sh
-sudo docker-compose up -d
+sudo docker compose up -d
 ```
 
 ## Aggiornare Misskey in Docker
@@ -64,8 +65,8 @@ git checkout master
 git pull
 git submodule update --init
 git stash pop
-sudo docker-compose build
-sudo docker-compose stop && sudo docker-compose up -d
+sudo docker compose build
+sudo docker compose stop && sudo docker compose up -d
 ```
 
 L'attività potrebbe richiedere del tempo, a seconda della grandezza del database e del contenuto dell'aggiornamento.
@@ -75,5 +76,5 @@ L'attività potrebbe richiedere del tempo, a seconda della grandezza del databas
 Per eseguire uno script nel container `web`
 
 ```sh
-sudo docker-compose run --rm web node packages/backend/built/tools/foo bar
+sudo docker compose run --rm web node packages/backend/built/tools/foo bar
 ```
