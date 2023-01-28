@@ -1,4 +1,4 @@
-# Nginx configuration example
+# Nginx 설정 예시
 
 ```nginx
 # Sample nginx configuration for Misskey

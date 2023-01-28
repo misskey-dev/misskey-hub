@@ -64,10 +64,8 @@ Misskey와 같이, 소프트웨어의 소스 코드가 공개되어 있는 상�
 ## 제어판
 Misskey 인스턴스의 설정 화면.
 
-<!--
-## Silence
-A state in which the visibility of the notes by said user cannot be set to "Public" anymore.Can be set for individual users by the discretion of Moderators.For details, see [here.](../features/silence)
--->
+## 사일런스
+사용자의 모든 노트가 "공개"로 표시되지 못하는 상태. 모더레이터에 의해 사용자별로 설정 가능합니다. 자세한 것은 [다음 문서](./features/silence.md)를 참고해 주세요.
 
 ## 작업 대기열
 활동을 타 서버에 전송하는 등의 작업을 순서대로 진행하는 데에 쓰이는 시스템.
