@@ -1,9 +1,9 @@
-# Release Notes
+# 릴리스 노트
 
-Notes for indivudual misskey releases.
+미스키 릴리스에 대한 릴리스 노트입니다.
 
-::: tip
-Information updates may not be translated yet. For the latest information see [GitHub](https://github.com/misskey-dev/misskey/blob/master/CHANGELOG.md).
+::: 팁
+최신 정보는 업데이트되지 않았을 수 있습니다. 최신 정보는 [GitHub](https://github.com/misskey-dev/misskey/blob/master/CHANGELOG.md)(일본어, 영어) 또는 [일본어 Misskey Hub](../docs/releases)에서 확인해주세요.
 :::
 
 ## 13.0.0
