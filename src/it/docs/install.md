@@ -8,7 +8,7 @@ Ci sono vari modi per crearne una, scegli tra quelli elencati e segui la relativ
 Never change the domain name (hostname) of an instance once you start using it!
 :::
 
-## Usando Docker (raccomandato)
+## Usando Docker Compose
 
 Se vuoi eseguire l'istanza in un container segui la [guida di installazione con Docker](./install/docker.html)
 

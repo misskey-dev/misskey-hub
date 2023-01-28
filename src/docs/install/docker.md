@@ -2,10 +2,10 @@
 description: 'このガイドはDockerを使ったMisskeyセットアップ方法を説明します。'
 ---
 
-Dockerを使ったMisskey構築
+Docker Composeを使ったMisskey構築
 ================================================================
 
-このガイドはDockerを使ったMisskeyセットアップ方法を説明します。
+このガイドはDocker Composeを使ったMisskeyセットアップ方法を説明します。
 
 ::: danger
 一度使用を始めたインスタンスのドメイン・ホスト名は、決して変更しないでください！

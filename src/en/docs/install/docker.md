@@ -1,7 +1,7 @@
-Create Misskey instance with Docker
+Create Misskey instance with Docker Compose
 ================================================================
 
-This guide describes how to install and setup Misskey with Docker.
+This guide describes how to install and setup Misskey with Docker Compose.
 
 ::: danger
 Never change the domain name (hostname) of an instance once you start using it!
