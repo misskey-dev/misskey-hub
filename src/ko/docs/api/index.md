@@ -4,7 +4,7 @@ description: 'Misskey는 클라이언트, 연동 웹 서비스, 봇 등("어플�
 
 # Misskey API
 
-::: 안내
+::: tip
 이 문서는 아직 국문으로 번역되지 않아, 일부 영문으로 제공됩니다.
 
 API 레퍼런스는 [여기](/docs/api/endpoints)를 참고해주세요.
