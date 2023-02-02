@@ -307,7 +307,6 @@ export default defineUserConfig<DefaultThemeOptions>({
                 ],
             },
             '/it/': {
-                selectLanguageText: 'Lingua',
                 selectLanguageName: 'Italiano',
                 selectLanguageAriaLabel: 'Scegli la lingua del sito',
                 contributorsText: 'Co-autori',

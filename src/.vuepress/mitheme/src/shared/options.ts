@@ -26,11 +26,6 @@ export interface DefaultThemePluginsOptions {
   }
 
   /**
-   * Enable @vuepress/plugin-external-link-icon or not
-   */
-  externalLinkIcon?: boolean
-
-  /**
    * Enable @vuepress/plugin-git or not
    */
   git?: boolean
@@ -111,13 +106,6 @@ export interface DefaultThemeLocaleData extends LocaleData {
    * Used for the repository text of navbar
    */
   repoLabel?: string
-
-  /**
-   * Navbar language selection config
-   *
-   * Text of the language selection dropdown
-   */
-  selectLanguageText?: string
 
   /**
    * Navbar language selection config
