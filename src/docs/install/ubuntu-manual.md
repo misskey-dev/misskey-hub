@@ -297,7 +297,7 @@ misskeyユーザーに変更。
 
 Gitでファイル類を展開。
 
-    git clone -b master https://github.com/misskey-dev/misskey.git
+    git clone -b master https://github.com/misskey-dev/misskey.git --recurse-submodules
 
     cd misskey
 
