@@ -93,9 +93,7 @@ const isActive = computed(() => {
     :aria-label="linkAriaLabel"
     v-bind="$attrs"
   >
-    <slot name="before" />
-    {{ item.text }}
-    <slot name="after" />
+    <slot name="before" />{{ item.text }}<slot name="after" />
   </RouterLink>
   <a
     v-else
@@ -106,8 +104,7 @@ const isActive = computed(() => {
     :aria-label="linkAriaLabel"
     v-bind="$attrs"
   >
-    <slot name="before" />
-    {{ item.text }}
+    <slot name="before" />{{ item.text }}
     <AutoLinkExternalIcon v-if="isBlankTarget" />
     <slot name="after" />
   </a>

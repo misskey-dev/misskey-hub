@@ -59,7 +59,7 @@ import SidebarItems from '@theme/SidebarItems.vue'
         .navbar-dropdown
         .navbar-dropdown-item
         a.router-link-active::after {
-        top: calc(1rem - 2px);
+        top: calc(50% - 3px);
       }
     }
 

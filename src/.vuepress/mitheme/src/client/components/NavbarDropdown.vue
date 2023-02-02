@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import AutoLink from '@theme/AutoLink.vue'
 import DropdownTransition from '@theme/DropdownTransition.vue'
-import { computed, ref, toRefs, watch } from 'vue'
+import { computed, ref, toRefs, watch, nextTick } from 'vue'
 import type { PropType } from 'vue'
 import { useRoute } from 'vue-router'
 import type { NavbarItem, ResolvedNavbarItem } from '../../shared'
@@ -20,7 +20,47 @@ const dropdownAriaLabel = computed(
 )
 
 const open = ref(false)
+const dropdownEl = ref<HTMLUListElement>();
+const rootEl = ref<HTMLDivElement>();
 const route = useRoute()
+
+const onHover = async () => {
+  await nextTick();
+
+  if (!rootEl.value || !dropdownEl.value) return;
+
+  const rootBR = rootEl.value.getBoundingClientRect();
+
+  let left = rootBR.left;
+  const top = rootBR.top + rootEl.value.offsetHeight;
+
+  let width = dropdownEl.value.scrollWidth;
+  const height = dropdownEl.value.scrollHeight;
+
+  if (width > window.innerWidth) {
+    width = window.innerWidth;
+    left = 0;
+  } else {
+    if (left + width - window.scrollX > window.innerWidth) {
+      left = window.innerWidth - width + window.scrollX;
+    }
+
+    if (left < 0) {
+      left = 0;
+    }
+  }
+
+  dropdownEl.value.style.top = `${top}px`;
+  dropdownEl.value.style.left = `${left}px`;
+
+  if (width) dropdownEl.value.style.width = `${width}px`;
+  else dropdownEl.value.style.width = '';
+};
+
+watch(open, value => {
+  if (value) onHover();
+});
+
 watch(
   () => route.path,
   () => {
@@ -50,12 +90,14 @@ const isLastItemOfArray = (item: unknown, arr: unknown[]): boolean =>
 </script>
 
 <template>
-  <div class="navbar-dropdown-wrapper" :class="{ open }">
+  <div class="navbar-dropdown-wrapper" ref="rootEl" :class="{ open }" @touchstart.self="onHover" @mouseover.self="onHover">
     <button
       class="navbar-dropdown-title"
       type="button"
       :aria-label="dropdownAriaLabel"
       @click="handleDropdown"
+      @touchstart.self="onHover"
+      @mouseover.self="onHover"
     >
       <span class="title">{{ item.text }}</span>
       <span class="arrow down" />
@@ -72,7 +114,7 @@ const isLastItemOfArray = (item: unknown, arr: unknown[]): boolean =>
     </button>
 
     <DropdownTransition>
-      <ul v-show="open" class="navbar-dropdown">
+      <ul v-show="open" class="navbar-dropdown" ref="dropdownEl">
         <li
           v-for="child in item.children"
           :key="child.text"
@@ -166,6 +208,7 @@ const isLastItemOfArray = (item: unknown, arr: unknown[]): boolean =>
   }
 
   .navbar-dropdown {
+    list-style: none;
 		background-color: var(--c-bg-navbar-dropdown);
 		border: none;
 		border-radius: 8px;
@@ -176,9 +219,8 @@ const isLastItemOfArray = (item: unknown, arr: unknown[]): boolean =>
       line-height: 1.7rem;
 
       .navbar-dropdown-subtitle {
-        margin: 0.45rem 0 0;
-        border-top: 1px solid var(--c-border);
-        padding: 1rem 0 0.45rem 0;
+        margin: 0.45rem 0;
+        padding: 1rem 0 0.3rem 0;
         font-size: 0.9rem;
 
         & > span {
@@ -196,6 +238,7 @@ const isLastItemOfArray = (item: unknown, arr: unknown[]): boolean =>
       }
 
       .navbar-dropdown-subitem-wrapper {
+        margin: 0;
         padding: 0;
         list-style: none;
 
@@ -206,12 +249,12 @@ const isLastItemOfArray = (item: unknown, arr: unknown[]): boolean =>
 
       a {
         display: block;
-        line-height: 1.7rem;
+        line-height: 1.1rem;
         position: relative;
         border-bottom: none;
         font-weight: 400;
         margin-bottom: 0;
-        padding: 0 1.5rem 0 1.25rem;
+        padding: 0.25rem 1.5rem 0.25rem 1.25rem;
 
         &:hover {
           color: var(--c-text-accent);
@@ -228,7 +271,7 @@ const isLastItemOfArray = (item: unknown, arr: unknown[]): boolean =>
             border-top: 3px solid transparent;
             border-bottom: 3px solid transparent;
             position: absolute;
-            top: calc(50% - 2px);
+            top: calc(50% - 3px);
             left: 9px;
           }
         }
@@ -258,12 +301,17 @@ const isLastItemOfArray = (item: unknown, arr: unknown[]): boolean =>
     }
 
     .navbar-dropdown {
+      width: 100% !important;
+      padding: 1rem 0;
+      border-radius: 8px 0 0 8px;
       @include dropdown_wrapper;
 
       .navbar-dropdown-item {
+        margin-bottom: 6px;
+
         .navbar-dropdown-subtitle {
+          margin-top: 15px;
           border-top: 0;
-          margin-top: 0;
           padding-top: 0;
           padding-bottom: 0;
         }
@@ -271,7 +319,6 @@ const isLastItemOfArray = (item: unknown, arr: unknown[]): boolean =>
         .navbar-dropdown-subtitle,
         & > a {
           font-size: 15px;
-          line-height: 2rem;
         }
 
         .navbar-dropdown-subitem {
@@ -290,7 +337,7 @@ const isLastItemOfArray = (item: unknown, arr: unknown[]): boolean =>
     &:hover .navbar-dropdown,
     &.open .navbar-dropdown {
       // override the inline style.
-      display: block !important;
+      display: flex !important;
     }
 
     &.open:blur {
@@ -299,20 +346,27 @@ const isLastItemOfArray = (item: unknown, arr: unknown[]): boolean =>
 
     .navbar-dropdown {
       display: none;
+      flex-wrap: wrap;
+      flex-direction: column;
+      width: auto;
+      max-width: 100vw;
       // Avoid height shaked by clicking
       height: auto !important;
       box-sizing: border-box;
       max-height: calc(100vh - 2.7rem);
-      overflow-y: auto;
-      position: absolute;
+      overflow: auto;
+      position: fixed;
       top: 100%;
-      right: 0;
       background-color: var(--c-bg-navbar-dropdown);
       padding: 0.6rem 0;
       text-align: left;
       border-radius: 8px;
-      white-space: nowrap;
+      white-space: break-spaces;
       margin: 0;
+    }
+
+    .navbar-dropdown-item {
+      max-width: 17rem;
     }
   }
 }
