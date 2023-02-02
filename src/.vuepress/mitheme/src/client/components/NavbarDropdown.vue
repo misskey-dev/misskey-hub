@@ -202,6 +202,7 @@ const isLastItemOfArray = (item: unknown, arr: unknown[]): boolean =>
     display: none;
     font-weight: 600;
     font-size: inherit;
+
     &:hover {
       color: var(--c-text-accent);
     }
@@ -335,6 +336,7 @@ const isLastItemOfArray = (item: unknown, arr: unknown[]): boolean =>
     height: 1.8rem;
 
     &:hover .navbar-dropdown,
+    &:active .navbar-dropdown,
     &.open .navbar-dropdown {
       // override the inline style.
       display: flex !important;
