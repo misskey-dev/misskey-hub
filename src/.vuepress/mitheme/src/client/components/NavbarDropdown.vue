@@ -96,8 +96,8 @@ const isLastItemOfArray = (item: unknown, arr: unknown[]): boolean =>
       type="button"
       :aria-label="dropdownAriaLabel"
       @click="handleDropdown"
-      @touchstart.self="onHover"
-      @mouseover.self="onHover"
+      @touchstart="onHover"
+      @mouseover="onHover"
     >
       <span class="title">{{ item.text }}</span>
       <span class="arrow down" />
