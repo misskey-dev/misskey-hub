@@ -6,7 +6,7 @@ import ToggleSidebarButton from '@theme/ToggleSidebarButton.vue'
 import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
 import { useThemeLocaleData } from '../composables'
 
-defineEmits(['toggle-sidebar'])
+const emit = defineEmits(['toggle-sidebar'])
 
 const themeLocale = useThemeLocaleData()
 
@@ -70,7 +70,7 @@ function getCssValue(el: HTMLElement | null, property: string): number {
 
 <template>
   <header ref="navbar" class="navbar">
-    <ToggleSidebarButton @toggle="$emit('toggle-sidebar')" />
+    <ToggleSidebarButton @toggle="emit('toggle-sidebar')" />
 
     <span ref="navbarBrand">
       <NavbarBrand />
