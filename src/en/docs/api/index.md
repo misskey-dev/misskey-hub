@@ -38,7 +38,7 @@ To obtain an access token for a user of the application ( simply "the user"), yo
 
 以下に説明する方法は、アプリを作成せずインスタントにアクセストークンを発行する、MiAuthと呼ばれるものです。
 
-[アプリ作成方式でのアクセストークン取得方法もあります（旧来型）。](api/app)
+[アプリ作成方式でのアクセストークン取得方法もあります（旧来型）。](./app)
 :::
 
 #### Step 1
