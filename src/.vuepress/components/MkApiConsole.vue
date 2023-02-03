@@ -84,6 +84,9 @@ function request() {
 			body: JSON.stringify(data),
 			credentials: 'omit',
 			cache: 'no-cache',
+			headers: {
+				'Content-Type': 'application/json',
+			},
 		}).then(async (res) => {
 			const body = res.status === 204 ? null : await res.json();
 
