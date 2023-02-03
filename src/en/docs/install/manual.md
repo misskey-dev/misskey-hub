@@ -198,3 +198,7 @@ You can check if the service is running with `rc-service misskey status`.
 If you encounter any problems with updating, please try the following:
 1. `pnpm run clean` or `pnpm run clean-all`
 2. Retry update (Don't forget `pnpm install`
+
+If you are getting `has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.`
+
+add `add_header 'Access-Control-Allow-Origin' '*' always;` after proxy_redirect off; in the nginx config
