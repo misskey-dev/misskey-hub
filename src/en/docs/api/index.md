@@ -34,6 +34,13 @@ Please do not share your access token with anyone.
 ### Request an access token to be issued
 To obtain an access token for a user of the application ( simply "the user"), you can request it to be issued in the following way.
 
+::: tip
+
+以下に説明する方法は、アプリを作成せずインスタントにアクセストークンを発行する、MiAuthと呼ばれるものです。
+
+[アプリ作成方式でのアクセストークン取得方法もあります（旧来型）。](api/app)
+:::
+
 #### Step 1
 Generate a UUID. This will be referred to as the **session ID** from now on.
 

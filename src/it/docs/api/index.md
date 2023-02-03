@@ -42,6 +42,13 @@ Fai attenzione! Non condividere il token con nessuno, deve rimanere segreto, alt
 
 Per richiedere il token di accesso per un altro profile, occorre inizializzare la richiesta come indicato.
 
+::: tip
+
+以下に説明する方法は、アプリを作成せずインスタントにアクセストークンを発行する、MiAuthと呼ばれるものです。
+
+[アプリ作成方式でのアクセストークン取得方法もあります（旧来型）。](api/app)
+:::
+
 #### Passo 1
 
 Genera un UUID (identificativo unico dell'utente). Da ora in poi lo chiameremo _ID Sessione_.
