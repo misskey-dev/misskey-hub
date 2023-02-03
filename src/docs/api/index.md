@@ -90,14 +90,28 @@ https://{host}/api/miauth/{session}/check
 
 ## APIの利用
 アクセストークンが取得できたら、各種エンドポイントにリクエストすることでAPIの利用が行えます。
-**HTTP APIはすべてPOSTで、リクエスト/レスポンスともにJSON形式です。**
+
+::: tip
+
+- HTTP APIはすべてPOSTで、リクエスト/レスポンスともにJSON形式です（drive/files/createを除く）。
+- 要求ヘッダーに`Content-Type: application/json`を指定します。
+- アクセストークンは、`i`というパラメータ名でリクエストボディJSONに含めます。
+
+:::
+
+アクセストークン付きのボディの例（metaの場合）:
+
+```json
+{
+    "i": "HogEFugA1341",
+    "detail": false
+}
+```
+
+APIの詳細は、[APIリファレンス](./endpoints.html)を参照してください。
 
 ::: warning
 MisskeyはRESTを採用していません。
 :::
-
-アクセストークンは、`i`というパラメータ名でリクエストボディJSONに含めます。
-
-APIの詳細は、[APIリファレンス](./endpoints.html)を参照してください。
 
 また、MisskeyはHTTP APIだけでなく、ストリーミングAPIも提供しています。ストリーミングAPIの詳細は[こちらのドキュメント](./streaming/index.md)を参照してください。

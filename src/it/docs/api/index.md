@@ -100,15 +100,31 @@ Le proprietà incluse nella risposta sono le seguenti:
 
 Una volta che hai ottenuto il **token di accesso** puoi usare le API inviando richieste HTTP alle varie risorse.
 
-**Tutte le API HTTP ascoltano richieste POST ed entrambe le richieste/risposte sono in formato JSON.**
 
-::: warning
-Le API di Misskey non sono RESTful.
+::: tip
+
+- HTTP APIはすべてPOSTで、リクエスト/レスポンスともにJSON形式です（drive/files/createを除く）。
+- 要求ヘッダーに`Content-Type: application/json`を指定します。
+- アクセストークンは、`i`というパラメータ名でリクエストボディJSONに含めます。
+
 :::
+
+アクセストークン付きのボディの例（metaの場合）:
+
+```json
+{
+    "i": "HogEFugA1341",
+    "detail": false
+}
+```
 
 Il **token di accesso** deve essere incluso nel corpo nella richiesta, in un parametro chiamato `i`. Per avere maggiori informazioni sulle API, vedere il catalogo.
 
 In aggiunta alle API HTTP, Misskey mette a disposizione anche le [Streaming API](./streaming/).
+
+::: warning
+Le API di Misskey non sono RESTful.
+:::
 
 ::: tip
 La tua istanza Misskey mette a disposizione il **Catalogo delle API** e la documentazione, al seguente indirizzo: `/api-doc`

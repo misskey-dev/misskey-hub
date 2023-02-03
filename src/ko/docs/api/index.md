@@ -4,7 +4,7 @@ description: 'Misskey는 클라이언트, 연동 웹 서비스, 봇 등("어플�
 
 # Misskey API
 
-::: 안내
+::: tip
 이 문서는 아직 국문으로 번역되지 않아, 일부 영문으로 제공됩니다.
 
 API 레퍼런스는 [여기](/docs/api/endpoints)를 참고해주세요.
@@ -13,7 +13,7 @@ API 레퍼런스는 [여기](/docs/api/endpoints)를 참고해주세요.
 Misskey는 클라이언트, 연동 웹 서비스, 봇 등("어플리케이션"이라 합니다)을 개발할 수 있도록 API를 제공합니다.
 스트리밍 API도 제공하고 있어, 실시간 호환성을 가진 어플리케이션을 제작할수도 있습니다.
 
-::: 팁
+::: tip
 공식 Misskey SDK나 서드파티 라이브러리를 이용하면 이 문서의 몇몇 단계를 간소화하는 등 API를 더 간편하게 이용할 수 있습니다. [여기](TODO)를 통해 자세히 알아보세요.
 :::
 
@@ -25,7 +25,7 @@ API를 사용하려면, 먼저 API를 사용하려는 계정과 연결된 **엑�
 API는 일반적으로 요청을 생성하기 위해 액세스 토큰이 필요합니다.
 액세스 토큰은 사용자를 식별하고 API를 통한 작업을 제어하는 자격 증명 집합입니다.
 
-::: 팁
+::: tip
 사용자와 엑세스 토큰 사이에는 한 개에서 여러 개의 연결이 존재하며, 한 사용자가 여러 엑세스 토큰을 생성하는 것도 가능합니다.
 :::
 
@@ -102,20 +102,35 @@ https://{host}/api/miauth/{session}/check
 | `user`  | 사용자 정보               |
 
 ## Using the API
-
 Once you have your API access token, you can use the API by making requests to the various endpoints.
-**All HTTP APIs are POST and both request/response are in JSON format.**
+
+::: tip
+
+- All HTTP APIs are POST, and both request and response are in JSON format (excluding drive/files/create).
+- Specify `Content-Type: application/json` in the request header.
+- The access token is included in the request body JSON with the parameter name `i`.
+
+:::
+
+Example of a body with an access token (for meta):
+
+```json
+{
+    "i": "HogEFugA1341",
+    "detail": false
+}
+```
+
+The access token is included in the request body JSON at the parameter `i`.
+
+For more information on the API, see the [API Reference](./endpoints.html).
 
 ::: warning
 Misskey does not use REST.
 :::
 
-The access token is included in the request body JSON at the parameter `i`.
-
-For more information on the API, see the [API Reference](TODO).
-
 In addition to the HTTP API, Misskey also provides a streaming API. More information about the streaming API can be found [here](./streaming/).
 
-::: 팁
+::: tip
 Your Misskey instance also provides API documentation at `/api-doc`.
 :::

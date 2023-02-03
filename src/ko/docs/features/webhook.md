@@ -1,6 +1,6 @@
 # Webhook
 
-::: 팁
+::: tip
 This feature is available as of Misskey version 12.109.0.
 :::
 
