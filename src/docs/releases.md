@@ -1,6 +1,18 @@
 # リリースノート
 Misskeyのリリースノートを掲載しています。
 
+## 13.3.2
+リリース日： 2023/02/04
+
+### Improvements
+- 外部メディアプロキシへの対応を強化しました  
+  外部メディアプロキシのFastify実装を作りました  
+  https://github.com/misskey-dev/media-proxy
+- Server: improve performance
+
+### Bugfixes
+- Client: validate urls to improve security
+
 ## 13.3.1
 リリース日： 2023/02/04
 
