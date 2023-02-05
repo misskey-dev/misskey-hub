@@ -1,5 +1,5 @@
 <template>
-<div id="root">
+<div id="root" :class="{ ['sidebar-open']: isSidebarOpen }">
 	<div class="bg">
 		<div v-parallax="1.2" class="object1"><img src="/top-bg-object1.svg" aria-hidden="true"></div>
 		<div v-parallax="1.2" class="object2"><img src="/top-bg-object2.svg" aria-hidden="true"></div>
@@ -7,6 +7,15 @@
 	</div>
 
 	<Navbar @toggle-sidebar="toggleSidebar"/>
+
+    <div class="sidebar-mask" @click="toggleSidebar(false)" />
+
+    <Sidebar>
+      	<template #bottom>
+			<MkDots :class="$style.sidebarDots" :space="12"/>
+        	<MkAd :class="$style.koko9" class="mkAd"/>
+      	</template>
+    </Sidebar>
 
 	<div class="top">
 		<ClientOnly>
@@ -199,6 +208,7 @@ import {
   usePageFrontmatter,
 } from '@vuepress/client';
 import Navbar from '@theme/Navbar.vue'
+import Sidebar from '@theme/Sidebar.vue'
 
 const frontmatter = usePageFrontmatter();
 
@@ -238,6 +248,10 @@ const vFadeIn = {
 }
 
 let particleEnabled = ref(true);
+const isSidebarOpen = ref(false);
+const toggleSidebar = (to?: boolean): void => {
+  isSidebarOpen.value = typeof to === 'boolean' ? to : !isSidebarOpen.value;
+}
 
 onMounted(() => {
 	const lang = navigator.language.toLowerCase();
@@ -955,6 +969,78 @@ html {
 		padding: 50px;
 		text-align: center;
 	}
+
+	.sidebar {
+		font-size: 16px;
+		width: var(--sidebar-width);
+		position: fixed;
+		z-index: 10;
+		margin: 0;
+		top: var(--globalHeaderHeight);
+		left: 0;
+		bottom: 0;
+		box-sizing: border-box;
+		overflow-y: auto;
+		scrollbar-width: thin;
+		scrollbar-color: var(--c-brand) var(--c-border);
+		background-color: var(--c-bg-sidebar);
+		transition: transform var(--t-transform), background-color var(--t-color),
+			border-color var(--t-color);
+
+		padding-top: var(--globalHeaderHeight);
+		transform: translateX(-100%);
+
+		&::-webkit-scrollbar {
+			width: 7px;
+		}
+		&::-webkit-scrollbar-track {
+			background-color: var(--c-border);
+		}
+		&::-webkit-scrollbar-thumb {
+			background-color: var(--c-brand);
+		}
+	}
+
+	.sidebar-mask {
+		position: fixed;
+		z-index: 9;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		display: none;
+	}
+
+	&.sidebar-open {
+		.sidebar-mask {
+			display: block;
+		}
+
+		.sidebar {
+			transform: translateX(0);
+		}
+
+		.navbar > .toggle-sidebar-button .icon {
+			span {
+				&:nth-child(1) {
+					transform: rotate(45deg) translate3d(5.5px, 5.5px, 0);
+				}
+
+				&:nth-child(2) {
+					transform: scale3d(0, 1, 1);
+				}
+
+				&:nth-child(3) {
+					transform: rotate(-45deg) translate3d(6px, -6px, 0);
+				}
+
+				&:nth-child(1),
+				&:nth-child(3) {
+					transform-origin: center;
+				}
+			}
+		}
+	}
 }
 
 @font-face {
@@ -980,5 +1066,35 @@ html.dark #root {
 	> .key-features {
 		background: #2a2a2a80;
 	}
+}
+</style>
+
+<style lang="scss" module>
+.sidebarDots {
+	display: block;
+	margin: 0 32px 2em 32px;
+	width: calc(100% - 64px);
+	height: 40px;
+	opacity: 0.2;
+}
+
+.koko9 {
+	display: block;
+	margin: 0 32px 32px 32px;
+
+	> img {
+		display: block;
+		width: 100%;
+	}
+}
+
+.live2d {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	width: 300px;
+	height: 600px;
+	border: none;
+	pointer-events: none;
 }
 </style>

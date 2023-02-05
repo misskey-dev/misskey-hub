@@ -12,7 +12,6 @@ export const DEFAULT_LOCALE_OPTIONS: DefaultThemeLocaleOptions = {
   navbar: [],
   logo: null,
   repo: null,
-  selectLanguageText: 'Languages',
   selectLanguageAriaLabel: 'Select language',
 
   // sidebar

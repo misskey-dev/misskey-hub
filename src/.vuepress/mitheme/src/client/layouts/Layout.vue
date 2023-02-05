@@ -83,21 +83,21 @@ const onBeforeLeave = scrollPromise.pending
 
     <div class="sidebar-mask" @click="toggleSidebar(false)" />
 
-      <Sidebar>
-        <template #bottom>
-					<MkDots :class="$style.sidebarDots" :space="12"/>
-          <MkAd :class="$style.koko9" class="mkAd"/>
-        </template>
-      </Sidebar>
+    <Sidebar>
+      <template #bottom>
+				<MkDots :class="$style.sidebarDots" :space="12"/>
+        <MkAd :class="$style.koko9" class="mkAd"/>
+      </template>
+    </Sidebar>
 
-      <Transition
-        name="fade-slide-y"
-        mode="out-in"
-        @before-enter="onBeforeEnter"
-        @before-leave="onBeforeLeave"
-      >
-        <Page :key="page.path"/>
-      </Transition>
+    <Transition
+      name="fade-slide-y"
+      mode="out-in"
+      @before-enter="onBeforeEnter"
+      @before-leave="onBeforeLeave"
+    >
+      <Page :key="page.path"/>
+    </Transition>
   </div>
 </template>
 

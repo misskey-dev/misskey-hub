@@ -6,7 +6,7 @@ import ToggleSidebarButton from '@theme/ToggleSidebarButton.vue'
 import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
 import { useThemeLocaleData } from '../composables'
 
-defineEmits(['toggle-sidebar'])
+const emit = defineEmits(['toggle-sidebar'])
 
 const themeLocale = useThemeLocaleData()
 
@@ -70,7 +70,7 @@ function getCssValue(el: HTMLElement | null, property: string): number {
 
 <template>
   <header ref="navbar" class="navbar">
-    <ToggleSidebarButton @toggle="$emit('toggle-sidebar')" />
+    <ToggleSidebarButton @toggle="emit('toggle-sidebar')" />
 
     <span ref="navbarBrand">
       <NavbarBrand />
@@ -192,7 +192,8 @@ function getCssValue(el: HTMLElement | null, property: string): number {
 }
 
 @media (min-width: $MQMobile) {
-  .navbar-items a {
+  .navbar-items a,
+  .navbar-items button {
     &:hover,
     &.router-link-active {
       color: var(--c-text);
@@ -246,27 +247,6 @@ function getCssValue(el: HTMLElement | null, property: string): number {
 @media screen and (max-width: $MQMobile) {
   .toggle-sidebar-button {
     display: block;
-  }
-}
-
-/**
- * toggle color mode button
- */
-.toggle-color-mode-button {
-  display: flex;
-  margin: auto;
-  margin-left: 1rem;
-  border: 0;
-  background: none;
-  color: var(--c-text);
-  opacity: 0.8;
-  cursor: pointer;
-  &:hover {
-    opacity: 1;
-  }
-  .icon {
-    width: 1.25rem;
-    height: 1.25rem;
   }
 }
 

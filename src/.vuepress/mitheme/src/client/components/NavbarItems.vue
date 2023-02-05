@@ -9,6 +9,7 @@ import { useRouter } from 'vue-router'
 import type { NavbarGroup, NavbarItem, ResolvedNavbarItem } from '../../shared'
 import { useNavLink, useThemeLocaleData } from '../composables'
 import { resolveRepoType } from '../utils'
+import { IconLanguageHiragana, IconBrandGithub, IconBrandGitlab, IconBrandBitbucket, IconBrandGit } from '@tabler/icons-vue'
 
 /**
  * Get navbar config of select language dropdown
@@ -30,10 +31,9 @@ const useNavbarSelectLanguage = (): ComputedRef<ResolvedNavbarItem[]> => {
     const currentHash = router.currentRoute.value.hash
 
     const languageDropdown: ResolvedNavbarItem = {
-      text: themeLocale.value.selectLanguageText ?? 'unknown language',
+      icon: IconLanguageHiragana,
       ariaLabel:
         themeLocale.value.selectLanguageAriaLabel ??
-        themeLocale.value.selectLanguageText ??
         'unknown language',
       children: localePaths.map((targetLocalePath) => {
         // target locale config of this language link
@@ -106,16 +106,48 @@ const useNavbarRepo = (): ComputedRef<ResolvedNavbarItem[]> => {
   })
 
   return computed(() => {
-    if (!repoLink.value || !repoLabel.value) {
+    if (!repoLink.value) {
       return []
     }
 
-    return [
-      {
-        text: repoLabel.value,
-        link: repoLink.value,
-      },
-    ]
+    switch (repoLabel.value) {
+      case 'GitHub':
+        return [
+          {
+            icon: IconBrandGithub,
+            link: repoLink.value,
+            ariaLabel: 'GitHub repository',
+            noExternalIcon: true,
+          },
+        ]
+      case 'GitLab':
+        return [
+          {
+            icon: IconBrandGitlab,
+            link: repoLink.value,
+            ariaLabel: 'GitLab repository',
+            noExternalIcon: true,
+          },
+        ]
+      case 'Bitbucket':
+        return [
+          {
+            icon: IconBrandBitbucket,
+            link: repoLink.value,
+            ariaLabel: 'Bitbucket repository',
+            noExternalIcon: true,
+          },
+        ]
+      default:
+        return [
+          {
+            icon: IconBrandGit,
+            link: repoLink.value,
+            ariaLabel: 'Repository',
+            noExternalIcon: true,
+          },
+        ]
+    }
   })
 }
 
@@ -152,7 +184,7 @@ const navbarLinks = computed(() => [
 <template>
   <nav v-if="navbarLinks.length" class="navbar-items">
     <div v-for="item in navbarLinks" :key="item.text" class="navbar-item">
-      <NavbarDropdown v-if="item.children" :item="item" />
+      <NavbarDropdown v-if="'children' in item" :item="item" />
       <AutoLink v-else :item="item" />
     </div>
   </nav>

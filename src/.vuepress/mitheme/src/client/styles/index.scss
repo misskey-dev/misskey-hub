@@ -119,3 +119,15 @@ html {
 ._mono {
 	font-family: var(--font-family-code);
 }
+
+svg.tabler-icon {
+    height: 2.2ex;
+    width: 2.2ex;
+}
+
+._icon_middle {
+	display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    top: -2px;
+}

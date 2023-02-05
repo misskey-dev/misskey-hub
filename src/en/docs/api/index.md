@@ -34,6 +34,13 @@ Please do not share your access token with anyone.
 ### Request an access token to be issued
 To obtain an access token for a user of the application ( simply "the user"), you can request it to be issued in the following way.
 
+::: tip
+
+以下に説明する方法は、アプリを作成せずインスタントにアクセストークンを発行する、MiAuthと呼ばれるものです。
+
+[アプリ作成方式でのアクセストークン取得方法もあります（旧来型）。](./app)
+:::
+
 #### Step 1
 Generate a UUID. This will be referred to as the **session ID** from now on.
 
@@ -87,15 +94,31 @@ The properties included in the response are as follows:
 
 ## Using the API
 Once you have your API access token, you can use the API by making requests to the various endpoints.
-**All HTTP APIs are POST and both request/response are in JSON format.**
+
+::: tip
+
+- All HTTP APIs are POST, and both request and response are in JSON format (excluding drive/files/create).
+- Specify `Content-Type: application/json` in the request header.
+- The access token is included in the request body JSON with the parameter name `i`.
+
+:::
+
+Example of a body with an access token (for meta):
+
+```json
+{
+    "i": "HogEFugA1341",
+    "detail": false
+}
+```
+
+The access token is included in the request body JSON at the parameter `i`.
+
+For more information on the API, see the [API Reference](./endpoints.html).
 
 ::: warning
 Misskey does not use REST.
 :::
-
-The access token is included in the request body JSON at the parameter `i`.
-
-For more information on the API, see the [API Reference](TODO).
 
 In addition to the HTTP API, Misskey also provides a streaming API. More information about the streaming API can be found [here](./streaming/).
 

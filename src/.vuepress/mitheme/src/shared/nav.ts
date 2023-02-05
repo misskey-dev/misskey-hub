@@ -1,8 +1,12 @@
 /**
  * Base nav item, displayed as text
  */
+import type { SVGProps } from '@tabler/icons-vue'
+import type { FunctionalComponent } from 'vue'
+
 export interface NavItem {
-  text: string
+  icon?: (props: SVGProps) => FunctionalComponent<SVGProps>
+  text?: string
   ariaLabel?: string
 }
 
@@ -21,6 +25,7 @@ export interface NavLink extends NavItem {
   rel?: string
   target?: string
   activeMatch?: string
+  noExternalIcon?: boolean
 }
 
 /**

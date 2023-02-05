@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useThemeLocaleData } from '../composables'
 
-defineEmits(['toggle'])
+const emit = defineEmits(['toggle'])
 
 const themeLocale = useThemeLocaleData()
 </script>
@@ -13,7 +13,7 @@ const themeLocale = useThemeLocaleData()
     aria-expanded="false"
     role="button"
     tabindex="0"
-    @click="$emit('toggle')"
+    @click="emit('toggle')"
   >
     <div class="icon" aria-hidden="true">
       <span></span>

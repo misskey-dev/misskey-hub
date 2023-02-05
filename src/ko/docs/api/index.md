@@ -43,6 +43,13 @@ API는 일반적으로 요청을 생성하기 위해 액세스 토큰이 필요�
 
 어플리케이션의 사용자로부터 엑세스 토큰을 얻으려면, 뒤에 설명되어 있는 방법으로 요청할 수 있습니다.
 
+::: tip
+
+以下に説明する方法は、アプリを作成せずインスタントにアクセストークンを発行する、MiAuthと呼ばれるものです。
+
+[アプリ作成方式でのアクセストークン取得方法もあります（旧来型）。](./app)
+:::
+
 #### 1단계
 
 UUID를 생성하세요. 이 UUID는 앞으로 **세션 ID**라 부르게 됩니다.
@@ -102,17 +109,32 @@ https://{host}/api/miauth/{session}/check
 | `user`  | 사용자 정보               |
 
 ## Using the API
-
 Once you have your API access token, you can use the API by making requests to the various endpoints.
-**All HTTP APIs are POST and both request/response are in JSON format.**
+
+::: tip
+
+- All HTTP APIs are POST, and both request and response are in JSON format (excluding drive/files/create).
+- Specify `Content-Type: application/json` in the request header.
+- The access token is included in the request body JSON with the parameter name `i`.
+
+:::
+
+Example of a body with an access token (for meta):
+
+```json
+{
+    "i": "HogEFugA1341",
+    "detail": false
+}
+```
+
+The access token is included in the request body JSON at the parameter `i`.
+
+For more information on the API, see the [API Reference](./endpoints.html).
 
 ::: warning
 Misskey does not use REST.
 :::
-
-The access token is included in the request body JSON at the parameter `i`.
-
-For more information on the API, see the [API Reference](TODO).
 
 In addition to the HTTP API, Misskey also provides a streaming API. More information about the streaming API can be found [here](./streaming/).
 
