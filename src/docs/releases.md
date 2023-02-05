@@ -1,6 +1,31 @@
 # リリースノート
 Misskeyのリリースノートを掲載しています。
 
+## 13.4.0
+リリース日： 2023/02/05
+
+### Improvements
+- ロールにアイコンを設定してユーザー名の横に表示できるように
+- feat: timeline page for non-login users
+- 実績の単なるラッキーの獲得確立を調整
+- Add Thai language support
+
+### Bugfixes
+- fix(server): 自分のノートをお気に入りに登録しても実績解除される問題を修正
+- fix(server): clean up file in FileServer
+- fix(server): Deny UNIX domain socket
+- fix(server): validate filename and emoji name to improve security
+- fix(client): validate input response in aiscript
+- fix(client): add webhook delete button
+- fix(client): tweak notification style
+- fix(client): インラインコードを折り返して表示する
+
+## 13.3.3
+リリース日： 2023/02/04
+
+### Bugfixes
+- Server: improve security
+
 ## 13.3.2
 リリース日： 2023/02/04
 
