@@ -15,6 +15,7 @@ import { computed, toRefs } from 'vue'
 import type { PropType } from 'vue'
 import { useRoute } from 'vue-router'
 import type { NavLink } from '../../shared'
+import { IconExternalLink } from '@tabler/icons-vue'
 
 const props = defineProps({
   item: {
@@ -93,7 +94,10 @@ const isActive = computed(() => {
     :aria-label="linkAriaLabel"
     v-bind="$attrs"
   >
-    <slot name="before" />{{ item.text }}<slot name="after" />
+    <slot name="before" />
+    <template v-if="item.icon">
+      <component :is="item.icon" class="tabler-icon _icon_middle" />
+    </template>{{ item.text }}<slot name="after" />
   </RouterLink>
   <a
     v-else
@@ -104,8 +108,17 @@ const isActive = computed(() => {
     :aria-label="linkAriaLabel"
     v-bind="$attrs"
   >
-    <slot name="before" />{{ item.text }}
-    <AutoLinkExternalIcon v-if="isBlankTarget" />
+    <slot name="before" />
+    <template v-if="item.icon">
+      <component :is="item.icon" class="tabler-icon _icon_middle" />
+    </template>{{ item.text }}
+    <IconExternalLink v-if="isBlankTarget && !item.noExternalIcon" class="tabler-icon _icon_middle" :class="$style.icon" />
     <slot name="after" />
   </a>
 </template>
+
+<style lang="scss" module>
+.icon {
+  color: var(--external-link-icon-color);
+}
+</style>

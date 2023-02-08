@@ -55,3 +55,30 @@ const toggleColorMode = (): void => {
     </svg>
   </button>
 </template>
+
+<style lang="scss">
+/**
+ * toggle color mode button
+ */
+.toggle-color-mode-button {
+  display: flex;
+  margin: auto;
+  margin-left: 1rem;
+  border: 0;
+  background: none;
+  color: var(--c-text);
+  opacity: 0.8;
+  cursor: pointer;
+  padding-top: 5px;
+
+  &:hover {
+    opacity: 1;
+    color: var(--c-text-accent);
+  }
+
+  .icon {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+}
+</style>

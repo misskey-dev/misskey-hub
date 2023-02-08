@@ -2,7 +2,6 @@ import type { Page, Theme } from '@vuepress/core'
 import { activeHeaderLinksPlugin } from '@vuepress/plugin-active-header-links'
 import { backToTopPlugin } from '@vuepress/plugin-back-to-top'
 import { containerPlugin } from '@vuepress/plugin-container'
-import { externalLinkIconPlugin } from '@vuepress/plugin-external-link-icon'
 import { gitPlugin } from '@vuepress/plugin-git'
 import { mediumZoomPlugin } from '@vuepress/plugin-medium-zoom'
 import { nprogressPlugin } from '@vuepress/plugin-nprogress'
@@ -111,22 +110,6 @@ export const miTheme = ({
             type: 'code-group-item',
             before: (info) => `<CodeGroupItem title="${info}">\n`,
             after: () => '</CodeGroupItem>\n',
-          })
-        : [],
-
-      // @vuepress/plugin-external-link-icon
-      themePlugins.externalLinkIcon !== false
-        ? externalLinkIconPlugin({
-            locales: Object.entries(localeOptions.locales || {}).reduce(
-              (result, [key, value]) => {
-                result[key] = {
-                  openInNewWindow:
-                    value.openInNewWindow ?? localeOptions.openInNewWindow,
-                }
-                return result
-              },
-              {}
-            ),
           })
         : [],
 

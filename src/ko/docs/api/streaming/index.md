@@ -4,7 +4,7 @@ description: "The streaming API provides real-time information (e.g., new posts 
 
 # Streaming API
 
-::: 팁
+::: tip
 이 문서는 아직 국문으로 번역되지 않아 영문으로 제공됩니다.
 
 읽기 전에, [Misskey API 문서](../)를 먼저 읽고 와 주세요.
@@ -27,7 +27,7 @@ where
 - `{host}` is the host of the instance you want to connect to.
 - `{token}` is the users access token.
 
-::: 팁
+::: tip
 You can also connect without the access token, but this will limit the information you receive and operations you can perform.
 :::
 
@@ -42,7 +42,7 @@ To receive such events, you need to join a **channel** on the stream, as describ
 Misskey's streaming API has the concept of channels. This is a mechanism for separating the information to be sent and received.
 By joining channels on the stream, you will be able to receive various kinds of information and send information.
 
-::: 팁
+::: tip
 You can join multiple channels simultaneously on a single stream connection.
 :::
 
@@ -71,7 +71,7 @@ where
 - `id` is an arbitrary ID for interacting with that channel. This is necessary to identify which channel the message is coming from, because a stream contains multiple channels. This ID can be something like a UUID or a random number.
 - `params` are parameters required when joining a channel. Different channels require different parameters when connecting. When connecting to a channel that does not require parameters, this property can be omitted.
 
-::: 팁
+::: tip
 The ID is not per channel but per channel connection, because a channel may be needed multiple times but with different parameters.
 :::
 

@@ -6,12 +6,9 @@ import type { PropType } from 'vue'
 import { useRoute } from 'vue-router'
 import type { NavbarItem, ResolvedNavbarItem } from '../../shared'
 
-const props = defineProps({
-  item: {
-    type: Object as PropType<Exclude<ResolvedNavbarItem, NavbarItem>>,
-    required: true,
-  },
-})
+const props = defineProps<{
+  item: Exclude<ResolvedNavbarItem, NavbarItem>
+}>()
 
 const { item } = toRefs(props)
 
@@ -35,7 +32,6 @@ const onHover = async () => {
   const top = rootBR.top + rootEl.value.offsetHeight;
 
   let width = dropdownEl.value.scrollWidth;
-  const height = dropdownEl.value.scrollHeight;
 
   if (width > window.innerWidth) {
     width = window.innerWidth;
@@ -99,6 +95,9 @@ const isLastItemOfArray = (item: unknown, arr: unknown[]): boolean =>
       @touchstart="onHover"
       @mouseover="onHover"
     >
+      <template v-if="item.icon" >
+        <component :is="item.icon" class="tabler-icon _icon_middle" />
+      </template>
       <span class="title">{{ item.text }}</span>
       <span class="arrow down" />
     </button>
@@ -109,6 +108,9 @@ const isLastItemOfArray = (item: unknown, arr: unknown[]): boolean =>
       :aria-label="dropdownAriaLabel"
       @click="open = !open"
     >
+      <template v-if="item.icon" >
+        <component :is="item.icon" class="tabler-icon _icon_middle" />
+      </template>
       <span class="title">{{ item.text }}</span>
       <span class="arrow" :class="open ? 'down' : 'right'" />
     </button>
@@ -186,14 +188,23 @@ const isLastItemOfArray = (item: unknown, arr: unknown[]): boolean =>
     font-weight: 500;
     color: var(--c-text);
 
+    &.router-link-active,
     &:hover {
       border-color: transparent;
+      color: var(--c-text-accent);
     }
 
     .arrow {
       vertical-align: middle;
       margin-top: -1px;
       margin-left: 0.4rem;
+    }
+  }
+
+  &:hover {
+    .navbar-dropdown-title {
+      border-color: transparent;
+      color: var(--c-text-accent);
     }
   }
 
@@ -209,6 +220,7 @@ const isLastItemOfArray = (item: unknown, arr: unknown[]): boolean =>
   }
 
   .navbar-dropdown {
+    cursor: auto;
     list-style: none;
 		background-color: var(--c-bg-navbar-dropdown);
 		border: none;
