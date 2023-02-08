@@ -1,6 +1,16 @@
 # リリースノート
 Misskeyのリリースノートを掲載しています。
 
+## 13.5.2
+リリース日： 2023/02/08
+
+### Changes
+- Revert: perf(client): do not render custom emojis in user names
+
+### Bugfixes
+- Client: register_note_view_interruptor not working
+- Client: ログイントークンの再生成が出来ない
+
 ## 13.5.0
 リリース日： 2023/02/08
 
