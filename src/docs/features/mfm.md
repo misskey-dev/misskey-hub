@@ -59,7 +59,7 @@ MFMは、Markup language For Misskeyの略で、Misskeyの様々な場所で使�
 ---
 
 ::: tip
-使用可能なより多くの構文はMisskey Webの**MFMチートシート**で確認できます。
+使用可能なより多くの構文はMisskey Webの **MFMチートシート** `/mfm-cheat-sheet` で確認できます。
 :::
 
 ## 開発者向け情報
