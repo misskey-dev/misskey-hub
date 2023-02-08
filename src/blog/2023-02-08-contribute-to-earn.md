@@ -6,7 +6,7 @@ description: 'Misskey開発に貢献すると報奨金がもらえるキャン�
 Misskey開発に貢献すると報奨金がもらえるキャンペーンを行います。  
 We offer campaigns you to recieve rewards for contributing to the development of Misskey.
 
-https://misskey.io/notes/9auj9aj1ww
+<https://misskey.io/notes/9auj9aj1ww>
 
 ::: tip
 条件や報奨金の額は、予告なく変更になる場合があります。  
@@ -20,7 +20,7 @@ In addition to those, benefits are being paid at irregular intervals based on co
 報奨金の原資はパトロンの皆様からの寄付で成り立っています。  
 Rewards come from donations from patrons.
 
-[**寄付について / About Donations**](../docs/donate.html)
+[**→ 寄付について / About Donations**](../docs/donate.html)
 :::
 
 ## カバレッジ上げ / Increase Coverage
@@ -28,7 +28,7 @@ Codecovのカバレッジを1%上げるごとに、次に挙げる報奨金を�
 You will receive following rewards for every 1% increase of Codecov coverage:
 
 1. 1500JPY by syuilo
-2. 3500JPY by misskey.io https://misskey.io/notes/9az5he1l9i  
+2. 3500JPY by misskey.io <https://misskey.io/notes/9az5he1l9i>  
    （支払い方法は銀行振込かPayPal.me / By PayPal.me but the amount may vary for overseas transfers.）
 
 ## 型エラー潰し / Type Errors Buster
@@ -45,15 +45,15 @@ You will receive all of the following rewards if you report vulnerabilities to u
 
 1. 程度に応じて（しゅいろ） / According to the degree by syuilo
 2. Critical is 10000JPY、High is 30000JPY by @ryotak@misskey.io
-   Check the details: https://misskey.io/notes/9az6dpm0nt
+   Check the details: <https://misskey.io/notes/9az6dpm0nt>
 3. Critical is 10000JPY、High is 30000JPY by @AureoleArk@misskey.io
-   https://misskey.io/notes/9az75r71ld
+   <https://misskey.io/notes/9az75r71ld>
 
 脆弱性報告の方法 / How to report security issues:  
-https://github.com/misskey-dev/misskey/blob/develop/SECURITY.md
+<https://github.com/misskey-dev/misskey/blob/develop/SECURITY.md>
 
 ## メモリリーク解消で1万円程度進呈 / Eliminate Memory Leaks
 バックエンドもしくはフロントエンドのメモリリークを解消すると、2万円程度進呈します。  
 You will receive 20000JPY when you can eliminate memory leaks in the backend or frontend.
 
-https://misskey.io/notes/9az626p0ve
+<https://misskey.io/notes/9az626p0ve>
