@@ -6,7 +6,7 @@
 :::
 
 ## TrueCharts と TrueNAS Scale
-MisskeyのHelmChartsはTrueChartsで公開されていますが、HelmChartsとしてインストールすることもできます。
+MisskeyのHelmChartsはTrueNAS Scaleで使用するためのTrueChartsで公開されていますが、HelmChartsとしてインストールすることもできます。
 
 [TrueCharts](https://truecharts.org/charts/description_list) のサイトには利用可能なすべてのChartsやインストール方法などのドキュメントがあります。
 
