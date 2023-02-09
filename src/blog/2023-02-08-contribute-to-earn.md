@@ -54,7 +54,7 @@ You will receive all of the following rewards if you report vulnerabilities to u
 
 ## バックエンドのメモリリーク解消で2万円程度進呈 / Eliminate Memory Leaks in the Backend
 バックエンドのメモリリークを解消すると、2万円程度進呈します。  
-You will receive 10000JPY when you can eliminate memory leaks in the backend.
+You will receive 20000JPY when you can eliminate memory leaks in the backend.
 
 ## フロントエンドのメモリリーク解消で2万円程度進呈 / Eliminate Memory Leaks in the Frontend
 フロントエンドのメモリリークを解消すると、2万円程度進呈します。  
