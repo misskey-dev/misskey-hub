@@ -1,6 +1,17 @@
 # リリースノート
 Misskeyのリリースノートを掲載しています。
 
+## 13.5.4
+リリース日： 2023/02/09
+
+### Improvements
+- Server: UIのHTML（ノートなどの特別なページを除く）のキャッシュ時間を15秒から30秒に
+- i/notificationsのレートリミットを緩和
+
+### Bugfixes
+- fix(client): validate url to improve security
+- fix(client): dateの初期値が正常に入らない時がある
+
 ## 13.5.3
 リリース日： 2023/02/09
 
