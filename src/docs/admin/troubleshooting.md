@@ -236,4 +236,4 @@ Amazon S3に互換性のあるオブジェクトストレージであれば利�
 4. [Misskey Forum](https://forum.misskey.io/)を検索してみる。
 5. 検索してどうしても見つからなかったら、専門家に質問してみてください。
    1. Forumや[MisskeyのDiscordサーバー](https://discord.gg/P4yYqYBjEp)もしくは[「鯖缶工場」](https://discord.gg/mJJGAHv)で聞いてみる
-   2. 開発者（[aqz]](https://p1.a9z.dev/@aqz)やしゅいろ）にリプライやダイレクト投稿を送信して聞いてみる
+   2. 開発者（[aqz](https://p1.a9z.dev/@aqz)やしゅいろ）にリプライやダイレクト投稿を送信して聞いてみる
