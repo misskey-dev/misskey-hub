@@ -15,7 +15,7 @@ MisskeyのHelmChartsはTrueNAS Scaleで使用するためのTrueChartsで公開�
 現在、Misskeyは*incubator* trainで進行中です。
 
 
-::: 必須条件
+::: 前提条件
 - TrueNAS Scale
 または
 - KubernetesクラスターとHelm
