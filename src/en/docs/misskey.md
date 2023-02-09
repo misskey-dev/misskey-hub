@@ -40,9 +40,7 @@ Besides reporting bugs, please also feel free to share positive impressions such
 "Misskist" refers to the people using Misskey. By spreading the word about Misskey through introducing it to your acquaintances, the number of Misskists may increase, which serves as motivation for the developers.
 
 ### Making donations
-Misskey is not a business, and stays free to use by receiving its earnings through donations from everyone.(Depending on the instance, some revenue may be earned through showing advertisments, but these earnings go straight to the instance administrator and not to the developers of Misskey) As donations make it possible for the project to continue to be developed, they are another way of supporting Misskey. Donations are generally accepted via [Patreon](https://www.patreon.com/syuilo). By donating a certain amount of money, you can also have your username displayed on Misskey's [About page](/about-misskey).
-
-In addition to this, server administrators are also generally speaking not earning revenue.As operating a server costs money, please also consider supporting your server's administrator. This does not have a direct relation to the development of Misskey, but the existence of servers is what makes up the project, meaning the continued existence of servers is just about as important as that of the project itself.
+[Please take a look here](./donate.md)
 
 ## Frequently Asked Questions
 ### What is this project aiming to achieve?
