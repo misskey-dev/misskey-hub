@@ -26,14 +26,14 @@ MisskeyのHelmChartsはTrueNAS Scaleで使用するためのTrueChartsで公開�
 
 *incubator* trainを追加し、Misskeyをインストールします。
 
-必ずすべき設定はURLです。
+設定の URL の欄は必ず変更してください。
 
-TrueChartsはデフォルトでTraefikを使用してサービスをHTTPSで外部に公開しますが、手動でやることにより他のソフトウェアを使用することもできます。
+TrueChartsはデフォルトでTraefikを使用してサービスをHTTPSで外部に公開しますが、手動ですることにより他のソフトウェアを使用することもできます。
 
 ## Helmを使用して手動で構築
 TrueNAS Scaleを使用していない場合はHelmを使用して、Misskeyをインストールすることができます。
 
-values.yamlの `misskey` の中身 `url` を必ず書き換えてください。
+values.yamlの `misskey:` の `url:` を必ず書き換えてください。
 
 他の個所は、必要に応じて書き換えてください。
 
