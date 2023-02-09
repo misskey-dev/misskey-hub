@@ -1,6 +1,38 @@
 # リリースノート
 Misskeyのリリースノートを掲載しています。
 
+## 13.5.3
+リリース日： 2023/02/09
+
+### Improvements
+- Client: デッキにチャンネルカラムを追加
+
+## 13.5.2
+リリース日： 2023/02/08
+
+### Changes
+- Revert: perf(client): do not render custom emojis in user names
+
+### Bugfixes
+- Client: register_note_view_interruptor not working
+- Client: ログイントークンの再生成が出来ない
+
+## 13.5.0
+リリース日： 2023/02/08
+
+### Changes
+- perf(client): do not render custom emojis in user names
+
+### Improvements
+- Client: disableShowingAnimatedImagesのデフォルト値をprefers-reduced-motionにする
+- enhance(client): tweak medialist style
+
+### Bugfixes
+- fix docker health check
+- Client: MkEmojiPickerでもChromeで検索ダイアログで変換確定するとそのまま検索されてしまうのを修正
+- fix(mfm): default degree not used in rotate
+- fix(server): validate urls from ap to improve security
+
 ## 13.4.0
 リリース日： 2023/02/05
 

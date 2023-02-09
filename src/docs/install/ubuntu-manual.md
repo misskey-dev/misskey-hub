@@ -59,7 +59,9 @@ OSの違い、Misskey本体や依存するソフトウェアのバージョン�
 
 今回はテキストエディターにnanoを使う。次のように起動する。
 
-    nano /path/to/file
+```sh
+nano /path/to/file
+```
 
 一般的な矢印ボタンやHome/Endなどを利用してカーソルを移動できる。
 
@@ -71,7 +73,9 @@ OSの違い、Misskey本体や依存するソフトウェアのバージョン�
 
 Misskeyはrootで実行しない方がよいため、専用のユーザーを作成する。
 
-    sudo adduser --disabled-password --disabled-login misskey
+```
+sudo adduser --disabled-password --disabled-login misskey
+```
 
 ::: tip
 開発環境の場合はユーザーを分ける必要はありません
@@ -85,17 +89,19 @@ Misskeyはrootで実行しない方がよいため、専用のユーザーを作
 
 Node.jsは、サーバーサイドJavaScript環境であり、Misskeyの基本的な実行環境である。
 
-    sudo apt install -y curl
+```sh
+sudo apt install -y curl
 
-    curl -sL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+curl -sL https://deb.nodesource.com/setup_18.x | sudo -E bash -
 
-    sudo apt install -y nodejs
+sudo apt install -y nodejs
 
-    # Node.jsがインストールされたので、バージョンを確認する。
-    node -v
+# Node.jsがインストールされたので、バージョンを確認する。
+node -v
 
-    # corepack enable
-    sudo corepack enable
+# corepack enable
+sudo corepack enable
+```
 
 v18.x.xなどと表示されればOK。v8.x.xのように低いバージョンが表示された場合は、正しくインストールが行えていないため、サーバーを再起動してもう一度インストールし直すなどしてみよう。
 
@@ -107,12 +113,14 @@ PostgreSQLは、オブジェクト関係データベース管理システムで�
 
 シェルスクリプトを実行し、最新バージョン（v15）をインストールしよう。
 
-    sudo apt install -y postgresql-common
+```
+sudo apt install -y postgresql-common
 
-    sudo sh /usr/share/postgresql-common/pgdg/apt.postgresql.org.sh -i -v 15;
+sudo sh /usr/share/postgresql-common/pgdg/apt.postgresql.org.sh -i -v 15;
 
-    # systemctlでデーモンの状態を確認。
-    systemctl status postgresql
+# systemctlでデーモンの状態を確認。
+systemctl status postgresql
+```
 
 activeならOK。
 
@@ -120,37 +128,47 @@ activeならOK。
 
 psqlを起動。
 
-    sudo -u postgres psql
+```sh
+sudo -u postgres psql
+```
 
 Misskeyで使うユーザーを作成する。\
 ユーザー名をmisskey、パスワードをhogeとする場合は次のようになる。\
 （LinuxのユーザーとPostgreSQLのユーザーは別物なので、混同しないよう注意すること。）
 
-    CREATE ROLE misskey LOGIN CREATEDB PASSWORD 'hoge';
+```sql
+CREATE ROLE misskey LOGIN CREATEDB PASSWORD 'hoge';
+```
 
 データベースを作成。データベース名をmk1としている。
 
-    CREATE DATABASE mk1 OWNER misskey;
-    ¥q
+```sql
+CREATE DATABASE mk1 OWNER misskey;
+¥q
+```
 
 ### Redis
 
 Redisは、NoSQLのインメモリデータベースソフトであり、データベースや連合との通信を管理するなどのために必要だ。  
 redis.ioのドキュメントに従いインストールする。 https://redis.io/docs/getting-started/installation/install-redis-on-linux/
 
-    sudo apt install -y curl ca-certificates gnupg2 lsb-release
+```sh
+sudo apt install -y curl ca-certificates gnupg2 lsb-release
 		
-    curl -fsSL https://packages.redis.io/gpg | sudo gpg --dearmor -o /usr/share/keyrings/redis-archive-keyring.gpg
+curl -fsSL https://packages.redis.io/gpg | sudo gpg --dearmor -o /usr/share/keyrings/redis-archive-keyring.gpg
 
-    echo "deb [signed-by=/usr/share/keyrings/redis-archive-keyring.gpg] https://packages.redis.io/deb $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/redis.list
+echo "deb [signed-by=/usr/share/keyrings/redis-archive-keyring.gpg] https://packages.redis.io/deb $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/redis.list
 
-    sudo apt update
+sudo apt update
 
-    sudo apt install -y redis
+sudo apt install -y redis
+```
 
 systemctlでデーモンの状態を確認。
 
-    systemctl status redis-server
+```sh
+systemctl status redis-server
+```
 
 activeならOK。
 
@@ -164,44 +182,56 @@ nginxは、主としてリバースプロキシに用いられるWebサーバー
 
 nginx.orgのドキュメント http://nginx.org/en/linux_packages.html#Ubuntu に従ってインストールする。
 
-    sudo apt install ubuntu-keyring
+```sh
+sudo apt install ubuntu-keyring
 
-    curl https://nginx.org/keys/nginx_signing.key | gpg --dearmor | sudo tee /usr/share/keyrings/nginx-archive-keyring.gpg >/dev/null
+curl https://nginx.org/keys/nginx_signing.key | gpg --dearmor | sudo tee /usr/share/keyrings/nginx-archive-keyring.gpg >/dev/null
 
-    gpg --dry-run --quiet --no-keyring --import --import-options import-show /usr/share/keyrings/nginx-archive-keyring.gpg
+gpg --dry-run --quiet --no-keyring --import --import-options import-show /usr/share/keyrings/nginx-archive-keyring.gpg
+```
 
 このとき出力に 573BFD6B3D8FBC641079A6ABABF5BD827BD9BF62 とあるか確認する。
 
-    echo "deb [signed-by=/usr/share/keyrings/nginx-archive-keyring.gpg] http://nginx.org/packages/ubuntu `lsb_release -cs` nginx" | sudo tee /etc/apt/sources.list.d/nginx.list
+```sh
+echo "deb [signed-by=/usr/share/keyrings/nginx-archive-keyring.gpg] http://nginx.org/packages/ubuntu `lsb_release -cs` nginx" | sudo tee /etc/apt/sources.list.d/nginx.list
 
-    echo -e "Package: *\nPin: origin nginx.org\nPin: release o=nginx\nPin-Priority: 900\n" | sudo tee /etc/apt/preferences.d/99nginx
+echo -e "Package: *\nPin: origin nginx.org\nPin: release o=nginx\nPin-Priority: 900\n" | sudo tee /etc/apt/preferences.d/99nginx
 
-    sudo apt update
+sudo apt update
 
-    sudo apt install -y nginx
+sudo apt install -y nginx
+```
 
 systemctlでデーモンの状態を確認。
 
-    systemctl status nginx
+```sh
+systemctl status nginx
+```
 
 activeならOK。そうでなければ、次のコマンドを実行。
 
-    sudo systemctl start nginx
+```sh
+sudo systemctl start nginx
 
-    sudo systemctl enable nginx
+sudo systemctl enable nginx
+```
 
 <http://localhost> にアクセスし、\*Welcome to nginx!\*と表示されればOK。\
 curlで確認するのもよいだろう。
 
-    curl http://localhost
+```sh
+curl http://localhost
+```
 
 ### その他
 
 Git（バージョン管理ソフト）およびbuild-essential（Misskeyのビルド時に必要）をインストールする。
 
-    sudo apt update
+```sh
+sudo apt update
 
-    sudo apt install -y git build-essential
+sudo apt install -y git build-essential
+```
 
 ## 追加の設定とインストール
 
@@ -217,23 +247,29 @@ Git（バージョン管理ソフト）およびbuild-essential（Misskeyのビ�
 
 次では、接続許可をホワイトリスト形式とし、22番SSHポートを接続回数制限を設けながら開放、80番HTTPポート及び443番HTTPSポートを開放とした。
 
-    sudo ufw enable
+```sh
+sudo ufw enable
 
-    sudo ufw default deny
+sudo ufw default deny
 
-    sudo ufw limit 22
+sudo ufw limit 22
 
-    sudo ufw allow 80
+sudo ufw allow 80
 
-    sudo ufw allow 443
+sudo ufw allow 443
+```
 
 ufwのステータスを確認しておく。
 
-    sudo ufw status
+```sh
+sudo ufw status
+```
 
 systemctlで永続化する。
 
-    sudo systemctl enable ufw
+```sh
+sudo systemctl enable ufw
+```
 
 ::: tip
 ufwは、netfilter(iptables)を人間が操作しやすいようにするアプリだ。インストールスクリプトは、OCI環境ではnetfilterを直接操作する。
@@ -257,7 +293,9 @@ HTTPS･WSS通信に使用する証明書をCloudFlareを使う方式でLet’s 
 
 certbotとCloudFlareプラグインをインストール
 
-    sudo apt install -y certbot python3-certbot-dns-cloudflare
+```sh
+sudo apt install -y certbot python3-certbot-dns-cloudflare
+```
 
 CloudflareのAPIキーを取得する。以下の手順で取得されたい。
 
@@ -267,21 +305,29 @@ CloudflareのAPIキーを取得する。以下の手順で取得されたい。
 
 CloudFlareの情報を記載した設定ファイル/etc/cloudflare/cloudflare.iniを作成する。
 
-    mkdir /etc/cloudflare
-    nano /etc/cloudflare/cloudflare.ini
+```sh
+mkdir /etc/cloudflare
+nano /etc/cloudflare/cloudflare.ini
+```
 
 dns_cloudflare_email（下の例ではbar@fuga.foo）にはCloudFlareで登録しているメールアドレスを設定する。
 
-    dns_cloudflare_email = bar@fuga.foo
-    dns_cloudflare_api_key = xxxxxxxxxxxxxxxxxxxxxxxxxx
+```sh
+dns_cloudflare_email = bar@fuga.foo
+dns_cloudflare_api_key = xxxxxxxxxxxxxxxxxxxxxxxxxx
+```
 
 これを保存し、パーミッションを600に設定。
 
-    sudo chmod 600 /etc/cloudflare/cloudflare.ini
+```sh
+sudo chmod 600 /etc/cloudflare/cloudflare.ini
+```
 
 準備ができたのでコマンドを実行する。**途中の2箇所のexample.tldは自分のものに置き換えること**。
 
-    sudo certbot certonly --dns-cloudflare --dns-cloudflare-credentials /etc/cloudflare/cloudflare.ini --dns-cloudflare-propagation-seconds 60 --server https://acme-v02.api.letsencrypt.org/directory -d example.tld -d *.example.tld
+```sh
+sudo certbot certonly --dns-cloudflare --dns-cloudflare-credentials /etc/cloudflare/cloudflare.ini --dns-cloudflare-propagation-seconds 60 --server https://acme-v02.api.letsencrypt.org/directory -d example.tld -d *.example.tld
+```
 
 \*Congratulations!\*と表示されたらOK。生成された.pemファイルのパスは今後使うので記録しておくこと。
 
@@ -293,19 +339,25 @@ dns_cloudflare_email（下の例ではbar@fuga.foo）にはCloudFlareで登録�
 
 misskeyユーザーに変更。
 
-    sudo su - misskey
+```sh
+sudo su - misskey
+```
 
 Gitでファイル類を展開。
 
-    git clone -b master https://github.com/misskey-dev/misskey.git --recurse-submodules
+```sh
+git clone -b master https://github.com/misskey-dev/misskey.git --recurse-submodules
 
-    cd misskey
+cd misskey
 
-    git checkout master
+git checkout master
+```
 
 必要なnpmパッケージをインストール。
 
-    NODE_ENV=production pnpm install --frozen-lockfile
+```sh
+NODE_ENV=production pnpm install --frozen-lockfile
+```
 
 ## Misskeyを設定する
 
@@ -313,7 +365,9 @@ Gitでファイル類を展開。
 
 設定ファイル.config/default.ymlを作成。
 
-    nano .config/default.yml
+```sh
+nano .config/default.yml
+```
 
 次の内容を貼り付け、適宜置き換える。設定値の変更が必要な箇所は●で、これまでの流れの中で設定した値を用いる箇所は〇で示した。
 
@@ -325,32 +379,33 @@ Gitでファイル類を展開。
 開発環境の場合、urlは`url: http://localhost:3000`と指定します。
 :::
 
-    # ● Misskeyを公開するURL
-    url: https://example.tld/
+```yml
+# ● Misskeyを公開するURL
+url: https://example.tld/
+# ポートを3000とする。
+port: 3000
 
-    # 　 ポートを3000とする。
-    port: 3000
+# ● PostgreSQLの設定。
+db:
+  host: localhost
+  port: 5432
+  db  : mk1 # 〇 PostgreSQLのデータベース名
+  user: misskey # 〇 PostgreSQLのユーザー名
+  pass: hoge # ● PostgreSQLのパスワード
 
-    # ● PostgreSQLの設定。
-    db:
-      host: localhost
-      port: 5432
-      db  : mk1 # 〇 PostgreSQLのデータベース名
-      user: misskey # 〇 PostgreSQLのユーザー名
-      pass: hoge # ● PostgreSQLのパスワード
+# 　 Redisの設定。
+redis:
+  host: localhost
+  port: 6379
 
-    # 　 Redisの設定。
-    redis:
-      host: localhost
-      port: 6379
+# 　 IDタイプの設定。
+id: 'aid'
 
-    # 　 IDタイプの設定。
-    id: 'aid'
-
-    # 　 syslog
-    syslog:
-      host: localhost
-      port: 514
+# 　 syslog
+syslog:
+  host: localhost
+  port: 514
+```
 
 指定できたら保存する。
 
@@ -360,11 +415,15 @@ nginxの設定を行う。
 
 ルート権限で行う。
 
-    exit
+```sh
+exit
+```
 
 /etc/nginx/conf.d/misskey.confを作成する。
 
-    sudo nano /etc/nginx/conf.d/misskey.conf
+```sh
+sudo nano /etc/nginx/conf.d/misskey.conf
+```
 
 [Misskey Hub](https://misskey-hub.net/docs/admin/nginx.html)の設定例をnanoへコピー＆ペーストし、次の部分を自分のものに書き換える。
 
@@ -376,15 +435,21 @@ nginxの設定を行う。
 
 設定ファイルがきちんと機能するか確認。
 
-    sudo nginx -t
+```sh
+sudo nginx -t
+```
 
 OKならば、nginxデーモンを再起動。
 
-    sudo systemctl restart nginx
+```sh
+sudo systemctl restart nginx
+```
 
 ステータスを確認。
 
-    sudo systemctl status nginx
+```sh
+sudo systemctl status nginx
+```
 
 activeであればOK。
 
@@ -392,12 +457,16 @@ activeであればOK。
 
 misskeyユーザーにログインし直す。
 
-    sudo su - misskey
+```sh
+sudo su - misskey
+```
 
 ビルドをする。yes we can…
 
-    cd misskey
-    NODE_ENV=production pnpm run build
+```sh
+cd misskey
+NODE_ENV=production pnpm run build
+```
 
 ::: tip
 開発環境の場合、`NODE_ENV=production`は不要です。以降のコマンドでも同様に削除してください。
@@ -415,11 +484,15 @@ RAMが足りない場合、以下のような解決策が考えられる。
 
 ## データベースの初期化
 
-    pnpm run init
+```sh
+pnpm run init
+```
 
 ## Misskeyを起動する
 
-    NODE_ENV=production pnpm run start
+```sh
+NODE_ENV=production pnpm run start
+```
 
 **Now listening on port 3000 on** [**http://example.tld**](http://example.tld) と表示されたら、設定したURLにアクセスする。
 
@@ -449,43 +522,53 @@ CloudFlareのDNS設定が正しいIPアドレスになっているかもう一�
 
 ルート権限で行う。
 
-    exit
+```sh
+exit
+```sh
 
 /etc/systemd/system/misskey.serviceを作成する。
 
-    sudo nano /etc/systemd/system/misskey.service
+```sh
+sudo nano /etc/systemd/system/misskey.service
+```
 
 次の内容を貼り付け、保存する。
 
-    [Unit]
-    Description=Misskey daemon
+```
+[Unit]
+Description=Misskey daemon
 
-    [Service]
-    Type=simple
-    User=misskey
-    ExecStart=/usr/bin/npm start
-    WorkingDirectory=/home/misskey/misskey
-    Environment="NODE_ENV=production"
-    TimeoutSec=60
-    StandardOutput=journal
-    StandardError=journal
-    SyslogIdentifier=misskey
-    Restart=always
+[Service]
+Type=simple
+User=misskey
+ExecStart=/usr/bin/npm start
+WorkingDirectory=/home/misskey/misskey
+Environment="NODE_ENV=production"
+TimeoutSec=60
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=misskey
+Restart=always
 
-    [Install]
-    WantedBy=multi-user.target
+[Install]
+WantedBy=multi-user.target
+```
 
 systemdを設定し、misskeyデーモンを開始。
 
-    sudo systemctl daemon-reload
+```sh
+sudo systemctl daemon-reload
 
-    sudo systemctl enable misskey
+sudo systemctl enable misskey
 
-    sudo systemctl start misskey
+sudo systemctl start misskey
+```
 
 systemctlでデーモンの状態を確認。起動に少し時間がかかるため、15秒程度待ってからのほうが良い。
 
-    sudo systemctl status misskey
+```sh
+sudo systemctl status misskey
+```
 
 activeならOK。
 
@@ -505,26 +588,32 @@ Misskeyサーバーに自分のアカウントを登録・ログインし、設�
 
 作業中はMisskeyを使うことができません。
 
-    sudo systemctl stop misskey
+```sh
+sudo systemctl stop misskey
 
-    su - misskey
+su - misskey
 
-    git pull;
-    NODE_ENV=production pnpm install --frozen-lockfile
-    pnpm run clean;
-    NODE_ENV=production pnpm run build;
-    pnpm run migrate;
+git pull;
+NODE_ENV=production pnpm install --frozen-lockfile
+pnpm run clean;
+NODE_ENV=production pnpm run build;
+pnpm run migrate;
 
-    exit
+exit
+```
 
 ### Case 1: apt upgradeをする場合
 
-    sudo apt update -y
-    sudo apt full-upgrade -y
-    sudo reboot
+```sh
+sudo apt update -y
+sudo apt full-upgrade -y
+sudo reboot
+```
 
 再起動後はMisskeyは自動で起動します。
 
 ### Case 2: そのまま起動
 
-    sudo systemctl start misskey
+```sh
+sudo systemctl start misskey
+```
