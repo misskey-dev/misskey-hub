@@ -52,8 +52,8 @@ You will receive all of the following rewards if you report vulnerabilities to u
 脆弱性報告の方法 / How to report security issues:  
 <https://github.com/misskey-dev/misskey/blob/develop/SECURITY.md>
 
-## バックエンドのメモリリーク解消で1万円程度進呈 / Eliminate Memory Leaks in the Backend
-バックエンドのメモリリークを解消すると、1万円程度進呈します。  
+## バックエンドのメモリリーク解消で2万円程度進呈 / Eliminate Memory Leaks in the Backend
+バックエンドのメモリリークを解消すると、2万円程度進呈します。  
 You will receive 10000JPY when you can eliminate memory leaks in the backend.
 
 ## フロントエンドのメモリリーク解消で2万円程度進呈 / Eliminate Memory Leaks in the Frontend
