@@ -15,10 +15,11 @@ MisskeyのHelmChartsはTrueNAS Scaleで使用するためのTrueChartsで公開�
 現在、Misskeyは*incubator* trainで進行中です。
 
 
-::: 必須条件
+::: 前提条件
 - TrueNAS Scale
 または
 - KubernetesクラスターとHelm
+
 :::
 
 ## TrueNAS Scale
@@ -48,4 +49,4 @@ helm install misskey TrueCharts/misskey
 ## Misskey のアップグレード
 Misskey をアップグレードするには、TrueNAS Scale に内蔵されているアップグレード機能を使用するか、kubernetes を手動で実行している場合は [helm repo update](https://helm.sh/docs/helm/helm_repo_update/) または [helm upgrade](https://helm.sh/docs/helm/helm_upgrade/) を使用することができます。
 
-問題が発生する可能性も考え、アップグレード前にデータをバックアックすることを強くお勧めします。
+問題が発生する可能性も考え、アップグレード前にデータをバックアップすることを強くお勧めします。
