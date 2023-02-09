@@ -21,3 +21,6 @@ Misskeyインスタンスの構築に関心をお寄せいただきありがと�
 
 ## YunoHostを使ったインストール
 MisskeyはYunoHostでAppとしてインストールできます。詳しくは、[Yunohost向けのMisskeyパッケージのリポジトリ](https://github.com/YunoHost-Apps/misskey_ynh)をご覧ください。
+
+## Kubernetes/TrueNASを使ったインストール
+[こちら](./install/kubernetes.html)
