@@ -1,6 +1,18 @@
 # リリースノート
 Misskeyのリリースノートを掲載しています。
 
+## 13.5.6
+リリース日： 2023/02/10
+
+### Improvements
+- 非ログイン時にMiAuthを踏んだ際にMiAuthであることを表示する
+- /auth/のUIをアップデート
+- 利用規約同意UIの調整
+- クロップ時の質問を分かりやすく
+
+### Bugfixes
+- fix: prevent clipping audio plyr's tooltip
+
 ## 13.5.4
 リリース日： 2023/02/09
 
