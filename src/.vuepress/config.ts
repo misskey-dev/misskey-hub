@@ -76,8 +76,10 @@ export default defineUserConfig<DefaultThemeOptions>({
                             '/docs/misskey',
                             '/docs/releases',
                             '/docs/misskey-hub',
+														'/docs/donate',
                             '/docs/faq',
                             '/docs/glossary',
+														'/docs/notes',
                             '/docs/troubleshooting',
                             {
                                 text: '機能', children: [
