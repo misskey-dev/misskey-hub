@@ -44,9 +44,9 @@ You will receive rewards according to the degree if you maintain the documentati
 You will receive all of the following rewards if you report vulnerabilities to us:
 
 1. 程度に応じて（しゅいろ） / According to the degree by syuilo
-2. Critical is 10000JPY, High is 30000JPY by @ryotak@misskey.io  
+2. Critical is 10000JPY, High is 3000JPY by @ryotak@misskey.io  
    Check the details: <https://misskey.io/notes/9az6dpm0nt>
-3. Critical is 10000JPY, High is 30000JPY by @AureoleArk@misskey.io  
+3. Critical is 10000JPY, High is 3000JPY by @AureoleArk@misskey.io  
    <https://misskey.io/notes/9az75r71ld>
 
 脆弱性報告の方法 / How to report security issues:  
