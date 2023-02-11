@@ -1,22 +1,22 @@
-# Create your own Misskey instance
-Thank you for your interest in building a Misskey instance 🚀
-There are several ways to create an instance, so please choose one below and read the guide.
+# Créer votre propre instance Misskey
+Merci de votre intérêt à créer votre instance Misskey 🚀
+Il existe différentes façons de créer votre instance, choisissez en une en bas et suivez le guide.
 
-::: danger
-Never change the domain name (hostname) of an instance once you start using it!
+::: Danger
+Ne changez jamais le nom de domaine (hostname) d’une instance une fois celle-ci lancée !
 :::
 
-## Using Docker
-[See here](./install/docker.html)
+## Via Docker
+[Voir ici](./install/docker.html).
 
-## Using Bash Script
-[See here](./install/bash.html)
+## Via script Bash
+[Voir ici](./install/bash.html).
 
-## Manually
-[See here](./install/manual.html)
+## Manuellement
+[Voir ici](install/manual.html).
 
-## Using Yunohost
-Misskey can be installed as an App on YunoHost. For more information see [the repository of the Misskey package for YunoHost](https://github.com/YunoHost-Apps/misskey_ynh).
+## Via Yunohost
+Misskey peut être installé en tant qu’application sur YunoHost. Pour plus d’informations, voir le [dépot du paquet Misskey sur YunoHost](https://github.com/YunoHost-Apps/misskey_ynh).
 
-## Using Kubernetes/TrueNAS Scale
-[See here](./install/kubernetes.html)
+## Via Kubernetes/TrueNAS Scale
+[Voir ici](./install/kubernetes.html).

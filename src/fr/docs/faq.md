@@ -1,28 +1,28 @@
-# Frequently Asked Questions
-This document will list answers to frequently asked questions regarding the usage of Misskey. Answers to frequently asked questions related to Misskey as a project can be found [here](../misskey#frequently-asked-questions).
+# Foire Aux Questions
+Ce document liste les réponses aux questions fréquentes au sujet de l’usage de Misskey. Les réponses concernant le projet Misskey dans son ensemble sont consultables [ici](../misskey#frequently-asked-questions).
 
-## "Are there any apps for iOS / Android available?"
-While no official Misskey app for either OS exists, there are several third-party applications. For details, please check [here](./apps).
+## « Existe-t’il une application Android/iOS ? »
+Bien qu’il n’existe pas d’application Misskey officielle pour d’autres systèmes d’exploitations, il existe de nombreuses applications tierces. Pour les détails, voir [ici](./apps).
 
-However, functionality of third-party applications will inevitably lag behind the official Web client, so unless you really want to use a native application, we recommend the official Web client instead. As the Misskey Web client supports PWA, it is also possible to make it act as if it was a native application instead. For details regarding this, please check [here](todo).
+À noter que les fonctionnalités de ces applications seront nécessairement en retard par rapport au client Web officiel, à moins que vous ne souhaitiez vraiment utiliser une application, nous vous recommendons d’utiliser le client Web officiel. Celui-ci prend en charge PWA ce qui rend possible son utilisation en tant qu’application. Pour plus de détails, voir [ici](todo).
 
-## "Can't I log in through a Mastodon client?"
-As Misskey is not compatible with the Mastodon API, barring some exceptions, using Mastodon clients to log into Misskey is not possible.
+## « Est-il possible de se connecter via un client Mastodon ? »
+Misskey n’est pas compatible avec l’API Mastodon, sauf exceptions, il n’est pas possible d’utiliser un client Mastodon pour se connecter à Misskey.
 
-## "What do I do when I want to follow users from other servers?"
-Select the search bar from the menu and enter their username including their host server. E.g.: `@syuilo@misskey.io`
+## « Comment suivre des personnes d’autres serveurs ? »
+Sélectionnez la barre de recherche dans le menu et entrez leur pseudonyme en incluant leur serveur (ex : `@syuilo@misskey.io`).
 
-## "How do I take back a Renote?"
-Press the three dots ("...") displayed next to the renote timestamp and select "Take back Renote". To read more about Renotes, please check [here](../features/note#renote).
+## « Comment annuler une ReNote ? »
+Sélectionnez les points de suspension (« … ») à proximité de la date de publication puis « Annuler ReNote ». Pour plus de détails à propos des ReNotes, voir [ici](../features/note#renote).
 
-## "I don't want the preview of an URL to be displayed."
-You can prevent an URL from being previewed using MFM. Please check the MFM Cheatsheet which you can see it in your instance with typing a following URL `https://YourInstanceHostname/mfm-cheat-sheet`.
+## « Je ne veux pas de prévisualisation des liens »
+La prévisualisation des liens URL peut être évitée à l’aide de MFM. Un pense-bête MFM est constultable dans votre instance via l’URL `https://NomDeVotreInstance/mfm-cheat-sheet`.
 
-## "I want to add custom emoji."
-Only administrators can add, edit or delete custom emoji. If you'd like to do either of these things, please ask your instance administrator.
+## « Je veux ajouter des émoticônes personnalisés »
+Seule l’administration du serveur peut ajouter, modifier, et supprimer des émoticônes personnalisées. C’est auprès d’elle qu’il faut se renseigner.
 
-## "I want to develop a Bot."
-It is possible to develop a Bot using the Misskey API. Please, [see here](../docs/api).
+## « Je veux développer un Bot »
+Le développement de Bot est possible via l’API Misskey. Voir [ici](../docs/api).
 
-## Which service does the note translation function use?
-[DeepL](https://www.deepl.com/) is being used for this.
+## « Quel service est utilisé pour la fonction de traduction de Note ? »
+[DeepL](https://www.deepl.com/) est utilisé pour cela.

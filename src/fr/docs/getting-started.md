@@ -1,24 +1,24 @@
-# Getting Started with Misskey
-Misskey is a program and a project.
-The server running Misskey, which is open to the public on the Internet, is called an **instance**.
-To use Misskey, you need to create an account in one of the instances and use that instance.
+# Débuter avec Misskey
+Misskey est à la fois un logiciel et un projet.
+Le serveur utilisant Misskey, et accessible au public sur Internet, est appelé une **instance**.
+Pour utiliser Misskey, vous devez créer un compte sur une instance et vous y connecter.
 
-You can select an instance of your choice from the [instance list](../instances.md).
+Vous pouvez sélectionner l’instance de votre choix depuis la [liste des instances](../instances.md).
 
-::: tip
-No matter which instance you choose, you will be able to interact with users on other instances.
+::: Astuce
+Peu importe l’importe choisie, vous serez en capacité de communiquer avec les autres instances.
 
-::: details
-Misskey has the ability to federate.
+::: Détails
+Misskey est capable de fédération.
 
-Misskey has built-in federation support, which allows users in different instances to follow, react, and renote in the same way as users on the same instance.
+Misskey prend en charge la fédération de manière native, cela permet à différentes instances d’échanger, se suivre, réagir, et citer comme pour des notes comme sur une instance unique.
 
-Misskey's federation is based on an open common standard called ActivityPub, and is compatible with other software such as Mastodon and Pleroma.
+La fédération de Misskey est pasée sur le standard libre ActivityPub, et est compatible avec d’autres logiciels comme Mastodon et Pleroma.
 :::
 
-## Choosing an Instance
-### Instance Themes
-Some instances may have a specific theme, for example, "I like certain stuff and activities".
-It is recommended to find an instance of the theme that suits you best.
+## Choisir une instance
+### Instance thématique
+Certaines instances ont des thèmes spécifiques, par autour d’activités.
+Il est recommandé de choisir une instance dont le thème vous correspond.
 
-### Instance user base
+### Membre d’une instance

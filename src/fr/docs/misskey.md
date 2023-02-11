@@ -1,86 +1,86 @@
-# About Misskey
+# À propos de Misskey
 
-Misskey is an open-source and distributed platform for microblogging. Development was started in 2014 by syuilo in Japan. It features an abundance of features such as Drive or Reactions as well as a very high UI customizability.
+Misskey est une plateforme libre et distribuée de microblogage. Son développement a débuté en 2014 par syuilo au Japon. De nombreuses fonctions sont disponibles comme Drive ou Réactions ainsi qu’une grande flexibilité de l’interface.
 
-## History
-While Misskey started centered around Bulletin Boards as its main feature, the growth in popularity due to the addition of a timeline that let users post short messages and view them in chronological order lead to a gradual shift in the main focus of development towards this kind of functionality. Misskey was not always a decentralized service, but became decentralized through the adoption of ActivityPub in 2018. Since then, it has become a service that is acknowledged and used by many.
+## Historique
+D’abord pensé comme un tableau public, le gain en popularité suite à l’ajout d’un fil d’actualité (permettant aux membres de publier des messages courts et de les visualiser dans un ordre chronologique) a opéré un changement graduel du développement vers ce type de fonctionnalité. Misskey n’a pas toujours été un service décentralisé et l’est devenu avec l’adoption d’ActivityPub en 2018. C’est depuis lors un service utilisé et reconnu par la population.
 
-::: tip
-The name "Misskey" comes from a song called "Brain Diver" by a band that syuilo used to listen to at the time called May'n.
+::: Astuce
+Le nom « Misskey » vient de la chanson « Brain Diver » d’un groupe, alors appelé May’n, que syuilo écoutait.
 :::
 
-With anyone being able to join its development, Misskey is still continually being actively developed.
+Tout le monde pouvant participer à son développement, Misskey est encore activement développé.
 
-## What does "Distributed" mean?
-A <b>Distributed</b> service, also called a <b>Decentralized</b> service, refers to a service which features the division of a community into many servers that all mutually <b>communicate (federate)</b> with each other to share their contents, building a <b>network (Fediverse)</b>. Services for which only one server exists, or for which many independent server exist, are called centralized. Most services fall under the category of centralized, some examples for this are Twitter or Facebook. The advantage of distributed services is being able to select the administration or server theme that suits you freely.It's also possible for you to make your own server.Thanks to the federated nature, you will be able to access the same community, no matter which server you choose.
+## Que signifie « Distribué » ?
+Un service <b>distribué</b> ou <b>décentralizé</b>, désigne un service où la communauté est divisée en différents serveurs capable de <b>communiquer (fédération)</b> entre eux pour partager leurs contenus, construisant ainsi un  <b>réseau (Fédivers)</b>. Les services reposant sur un serveur unique, ou des serveurs indépendants, sont considérés comme centralisés. La plupart font partie de cette dernière catégorie, comme Twitter ou Facebook. L’avantage de services distribués est de pouvoir librement choisir l’équipe d’administration ou le serveur qui nous correspond. Il est également possible de créer son propre serveur. Grâce à la fédération, il est possible d’accéder à la même communauté peu importe le serveur choisi.
 
-## Always Open-Source
-Misskey has always been, and will always be, open source.Open source means, simply speaking, <b>making the source code of software (a program) publicly available</b>.This also includes being able to adjust or redistribute the source code in its definition. The entirety of Misskey's source code is [being licensed](https://github.com/misskey-dev) under an open-source license called [AGPL](https://github.com/misskey-dev/misskey/blob/develop/LICENSE), which means anyone can freely inspect, use, adjust, change or redistribute as they see fit. Open source has many merits, including allowing anyone being able to make changes as they like, to make sure the code does not include any harmful components and being able to easily participate in its development. For realizing the distributed nature of Misskey, this concept of open source is indispensable. Using the same example as before, most profit-oriented services like Twitter, Facebook etc. are not open source.
+## Code ouvert
+Misskey a toujours été, et sera toujours, libre. De manière simplifiée, cela signifie <b>rendre visible au public le code source d’un logiciel.</b>. Cela permet également de modifier ou redistribuer le code. L’intégralité du [code de Misskey](https://github.com/misskey-dev) est sous licence [AGPL](https://github.com/misskey-dev/misskey/blob/develop/LICENSE), ce qui signifie que vous êtes libre de l’auditer, utiliser, modifier, et redistribuer de manière à assurer qu’il ne contient rien de dangereux et pouvoir participer à son développement. Pour concrétiser la nature distribuée de Misskey, cet aspect libre est indispensable. Comme précédemment, les services à but lucratif comme Twitter ou Facebook n’ont pas de code ouvert.
 
-::: tip
-Technically speaking, Misskey's source code is being managed via Git, and its repository is being hosted at [GitHub.](https://github.com/misskey-dev)
+::: Astuce
+Techniquement, le code source de Misskey est géré via Git, et son dépot est hébergé sur [GitHub.](https://github.com/misskey-dev).
 :::
 
-## Joining development and supporting the project
-If you like Misskey, please support the project.Supporting the project can be done in many ways, with some of them introduced below.Some of these do not require programming skills, so anyone can feel free to support Misskey their own way.We're always waiting for you.
+## Contribuer au développement et supporter le projet
+Si Misskey vous plaît, il est possible de supporter le projet de différentes manières, certaines étant décrites ci-dessous. Certaines ne nécessitent pas de compétence en programmation et tout le monde peut contribuer à sa manière. Nous vous accueillerons volontiers.
 
-### Adding features or fixing bugs
-If you possess software engineering skills, you can contribute to the project through editing its source code. For guidelines regarding this, please see [here](https://github.com/misskey-dev/misskey/blob/develop/CONTRIBUTING.md).
+### Ajouter des fonctions ou résoudre des problèmes
+Si vous possédez des compétences logicielles, vous pouvez contribuer au projet en modifiant son code source. Pour les règles à ce sujet, voir [ici](https://github.com/misskey-dev/misskey/blob/develop/CONTRIBUTING.md).
 
-### Participating in discussions
-You can contribute by sharing your opinion on new or existing features, as well as by reporting bugs. Such discussions can be held at [GitHub](https://github.com/misskey-dev) or the [Forums](https://forum.misskey.io/) etc.
+### Participer aux discussions
+Vous pouvez contribuer en partageant votre opinion sur des fonctions existantes ou en développement, ainsi qu’en signalant des problèmes. Ces discussions ont lieu sur [GitHub](https://github.com/misskey-dev) ou le [Forums](https://forum.misskey.io/).
 
-### Translating text
-Misskey is available in many languages (also called i18n, which is an abbreviation for Internationalization).While the original language is generally japanese, volunteers are translating Misskey into other languages. Helping out with this translation work is also a form of contributing. Misskey uses a service called [Crowdin to manage its translations.](https://crowdin.com/project/misskey)
+### Traduction
+Misskey est disponible dans de multiples langues (également appelé i18n, une abréviation de Internationalisation). La langue initiale étant le japonais, des bénévoles l’ont traduit dans d’autres langues. Aider à la traduction est une forme de contribution, Misskey utilise pour cela le service [Crowdin](https://crowdin.com/project/misskey).
 
-### Sharing your impressions
-Besides reporting bugs, please also feel free to share positive impressions such as which parts of Misskey you personally like, or things about Misskey that you find fun.As things like these serve as motivation for the developers, it also counts as indirect support for the project.
+### Partager vos impressions
+Au delà des problèmes, n’hésitez pas à donner votre opinion sur les fonctions que vous appréciez ou trouvez amusantes. Cela constitue une motivation supplémentaire pour l’équipe de développement, et compte comme une forme indirecte de soutien du projet.
 
-### Increasing the number of Misskists
-"Misskist" refers to the people using Misskey. By spreading the word about Misskey through introducing it to your acquaintances, the number of Misskists may increase, which serves as motivation for the developers.
+### Augmenter le nombre de Misskists
+« Misskist » est le nom donné aux personnes utilisant Misskey. En parlant de Misskey dans votre entourage, le nombre de Misskists augmente et constitue une motivation pour l’équipe de développmeent.
 
-### Making donations
-[Please take a look here](./donate.md)
+### Faire une donation
+[Voir ici](./donate.md)
 
-## Frequently Asked Questions
-### What is this project aiming to achieve?
-To put it bluntly, while this is a bit vague, Misskey is aiming to be a widely-used all-purpose platform. Unlike other platforms, Misskey is not grounded in a specific idea (for example, anti-centralization) or vision and being developed with that in mind, so it's a bit "aimless" in this respect. On the other hand though, this creates a flexibility due to not being bound by a specific direction to go towards.
+## Foire Aux Questions
+### Quel est l’objectif de ce projet ?
+En résumé, et bien que vague, Misskey vise à être une plateforme généraliste populaire. Contrairement aux autres plateformes, Misskey n’est pas fixé dans une idée (ex : anti-centralisation) ou une vision unique, ce qui est reflété dans son développement qui est parfois un peu « exploratoire ». À l’inverse, cela permet une flexibilité en n’ayant pas de direction unique.
 <!-- TODO: ここにロードマップへのリンク -->
 
-### Is Misskey being developed by a company?
-No.Misskey is being developed by an individual person and not commercialized through connection with any particular company. Development members are generally volunteers. Additionally, while there are some corporate sponsors, development is still centered around the community.
+### Est-ce que Misskey est développée par une entreprise ?
+Non. Misskey n’est pas développée par une personne unique et n’est pas commercialisée en lien avec quelqu’entreprise qu’il soit. Le développement est porté par des bénévoles. De plus, bien qu’il y ait des sponsors commerciaux, le développement est centré sur la communauté.
 
-### Who is managing Misskey?
-Due to the distributed nature of Misskey, each individual server has their own administration.Therefore, not all of Misskey is managed by one individual person or company. This means that, as the development team does not control individual servers, for management-related questions you should contact your server's administration instead. You can verify who is managing your individual server on [this page](/about). If you were to create a server, then you would also become its administrator.
+### Qui contrôle Misskey ?
+De part sa nature distribuée, chaque serveur a sa propre équipe d’administration. Misskey n’est ainsi pas contrôlé par une personne ou un une entreprise. Cela signifie que l’équipe de développement n’a pas de contrôle sur ces serveurs, pour les questions liées au management, c’est votre administration qu’il faut contacter. Vous retrouverez les informations sur votre serveur sur [cette page](/about). Créer votre propre serveur ferait de vous la tête de son équipe d’administration.
 
-### Which server should I choose?
-[You can find an (incomplete) list of servers here.](../instances.md) Depending on the server, its community or central theme (for example, liking a show) may vary, so if there is a server that suits your interests, joining it would likely be a good choice. Besides that, server size, userbase, country or spoken language, reliance or trust in the administration team and many other things can also serve as criteria. There is however no single server that serves as the official server of Misskey.You also have the choice of creating a new server of your own.
+### Quel serveur choisir ?
+Vous trouverez une [liste incomplète des serveur ici](../instances.md). Selon votre serveur, sa communauté et son thème peuvent varier et il est pertinent de rejoindre un serveur qui vous corresponde. De la même façon, la taille du serveur, le nombre de membre, la langue parlé, la notoriété de l’administration et divers autres critères peuvent orienter votre choix. Il n’existe pas de serveur officiel unique. Vous pouvez également créer votre propre serveur.
 
-Generally speaking, no matter which server you join, you will still be able to connect with users from all other servers.
+En général, peu importe le serveur que vous rejoignez, vous aurez accès au contenu de tous les autres serveurs.
 
-### How can I create my own server?
-Thank you for having an interest in creating a Misskey server. In the current year of 2022 there is no specialized Misskey hosting service, so creating a new server requires a certain amount of knowledge. Please see [here](./install.md) for more information regarding this.
+### Comment créer son propre serveur ?
+Merci de votre intérêt dans la création d’un serveur Misskey. En 2022, il n’existe pas de service spécialisé dans l’hébergement Misskey, créer un serveur requiert un certain niveau de connaissances. Pour plus d’informations, voir [ici](./install.md).
 
-### What kind of technology does Misskey use?
-As development on Misskey progressed, the technology it has used has changed greatly.In the beginning, it used a combination of MySQL + PHP + jQuery, but currently uses the following.
-- Server-side: Node.js
-- Database: PostgreSQL, Redis
-- UI Framework: Vue.js
-- Programming language: TypeScript
+### Sur quelle technologie repose Misskey ?
+Au fil du développement, Misskey a utilisé de nombreuses technologies. Originellement sur une combinaison de MySQL + PHP + jQuery, sont actuellement utilisés :
+- Server : Node.js
+- Base de données : PostgreSQL, Redis
+- Interface : Vue.js
+- Langage de programmation : TypeScript
 
-In addition to this, from Misskey derived technology such as MFM or AiScript are also being used.
+De plus, Misskey dispose de ses propres technologies dérivées comme MFM ou AiScript.
 
-### Is this a fork of Mastodon?
-No.Misskey is a project completely different from Mastodon or other alike projects. It has been in development for a long time already.However, it only became a distributed network after the appearance of Mastodon. Besides both projects implementing the ActivityPub protocol, there is no relation between the two.
+### Quelle différence avec Mastodon ?
+Misskey est un projet complètement différent de Mastodon et autres dérivés. Son développement est en cours depuis de nombreuses années déjà mais il n’est devenu un réseau distribué qu’après l’apparition de Mastodon. La seule similitude des deux projets est la prise en charge du protocole ActivityPub.
 
-### Are there any apps for iOS / Android available?
-While no official Misskey app for either OS exists, there are several third-party applications. For details, please check [here](./apps).
+### Existe-t’il des applications Android/iOs ?
+Bien qu’il n’existe pas d’application Misskey officielle pour d’autres systèmes d’exploitation, il existe des applications tierces. Pour plus de détails, voir [ici](./apps).
 
-However, functionality of third-party applications will inevitably lag behind the official Web client, so unless you really want to use a native application, we recommend the official Web client instead. As the Misskey Web client supports PWA, it is also possible to make it act as if it was a native application instead. For details regarding this, please check [here](todo).
+Seulement, les fonctionnalités de ces applications sera forcément en retard par rapport au client Web officiel. À moins de vouloir utiliser une application native, nous recommendons d’utiliser le client Web officiel. Celui-ci prenant en charge WPA, il est également possible d’en faire une application native. Pour plus de détails, voir [ici](todo].
 
-### Where can I download Misskey's logo or icon?
-Please refer to the [assets collection](../appendix/assets.html).
+### Où télécharger le logo ou l’icône Misskoy ?
+Vous les trouverez dans les [ressources](../appendix/assets.html).
 
-### Who's that cute cat-eared girl that you see sometimes?
-It's Misskey's guardian deity, Ai.(They called Ai cute, yay!)
-<div class="info">ℹ️ To read more about Ai, check <a href="https://xn--931a.moe/" target="_blank">here</a> (Japanese-only).</div>
+### Qui est cette fille aux oreilles de chat que l’on voit parfois ?
+C’est l’ange gardien de Misskey, Ai (On l’a trouvé mignonne, youpi !).
+<div class="info">ℹ️  Pour plus d’informations sur Ai, voir <a href="https://xn--931a.moe/" target="_blank">ici</a> (Japonais).</div>
