@@ -1,14 +1,14 @@
-# About Misskey Hub
-Misskey Hub is Misskey's official website, which provides documentation, a documentation blog, a plugin store and more.
-We aim to be the place for "everything Misskey".
+# À propos de Misskey Hub
+Misskey Hub est le site officiel Misskey. On y trouve, entre autres, la documentation, les actualités, et le catalogue d’extensions.
+L’objectif est d’en faire un pilier central pour tout ce qui a lien avec  Misskey.
 
-Misskey Hub is [open source](https://github.com/misskey-dev/misskey-hub).
+Misskey Hub est [libre](https://github.com/misskey-dev/misskey-hub).
 
-::: tip
-Misskey Hub is a static site built with [VuePress](https://github.com/vuepress/vuepress-next).
+::: Astuce
+Misskey Hub est un site static construit via [VuePress](https://github.com/vuepress/vuepress-next).
 :::
 
-- [change log](../updates.md)
+- [Journal de modifications](../updates.md)
 
-## Contributing to Misskey Hub
-Additional documentation and translations are welcome.
+## Contribuer à Misskey Hub
+Tout aide à la documentation et la traduction est la bienvenue.

@@ -1,7 +1,6 @@
-# Troubleshooting guide
+# Guide de dépannage
+::: Attention
+Cette page n’est pas encore traduite. Vous trouverez le contenu dans la version [japonaise exclusivement](/docs/admin/troubleshooting.html).
 
-::: warning
-Sorry, this page is not translated yet. If you can, please edit this page to translate the [Japanese version](/docs/admin/troubleshooting.html).
-
-Until then, try using a machine translator.
+En attendant, veuillez utiliser un traducteur automatique.
 :::

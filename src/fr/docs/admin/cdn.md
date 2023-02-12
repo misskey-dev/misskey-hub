@@ -1,17 +1,17 @@
-# Set up a CDN
-When publishing your Misskey instance, we strongly recommend using a CDN such as [Cloudflare](https://www.cloudflare.com/).
+# Configurer un CDN
+En publiant votre instance Misskey, nous recommandons d’utiliser un CDN comme [Cloudflare](https://www.cloudflare.com/).
 
-Using a CDN has the following advantages
-- You can have static content cached, which reduces the load on your server
-- The IP address of the server is less exposed, which can mitigate DoS attacks etc.
+Utiliser un CDN présente les avantages suivants :
+- Le contenu statique peut être mis en cache, ce qui réduit la charge sur votre serveur ;
+- L’adresse IP de votre serveur est moins exposée, ce qui limite les risques d’attaque DoS et autres.
 
-## Caching
-Misskey Web is completely static and does not require a server to run. Therefore the whole Misskey Web can be cached in a CDN.
-The Misskey API cannot be cached.
+## Mise en cache
+Misskey Web est complétement statique et ne nécessite pas de serveur. Il peut de fait être intégralement mis en cache par un CDN.
+L’API Misskey ne peut pas être mise en cache.
 
-You need to configure the following settings in your CDN
-- Cache all requests except `/api/*`.
+Vous devez configurer l’option suivante dans votre CDN :
+- Mettre en cache toutes les requêtes sauf `/api/*`.
 
-::: tip
-You don't need to clear the cache when you update Misskey.
+::: Astuce
+Pas besoin de vider le cache lorsque vous mettez à jour Misskey.
 ::::

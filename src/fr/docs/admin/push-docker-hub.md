@@ -1,6 +1,6 @@
-# How to use GitHub Actions to push to Docker Hub
-::: warning
-Sorry, this page is not translated yet. If you can, please edit this page to translate the [Japanese version](/docs/admin/push-docker-hub.md).
+# Comment utiliser GitHub Actions pour pousser vers un Docker Hub
+::: Attention
+Cette page n’est pas encore traduite. Le contenu est disponible en [japonais exclusivement](/docs/admin/push-docker-hub.md).
 
-Until then, try using a machine translator.
+En attendant, essayez d’utiliser un traducteur automatique.
 :::

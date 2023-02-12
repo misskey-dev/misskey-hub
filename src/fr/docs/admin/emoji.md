@@ -1,46 +1,46 @@
-# Managing Custom Emoji
+# Émoticônes personnalisées
 
-Custom emoji can be managed by administrators or moderators by going to the instance settings and then the custom emoji submenu.
-By default you will see a list of the current locally installed emoji.
-At the start this list will be empty, but you can add custom emoji in different ways.
+Les émoticônes personnalisées peuvent être modifiées par l’administration et la modération via les paramètres d’instance dans le menu correspondant.
+Par défaut, vous verrez une liste des émoticônes installées localement.
+Au démarrage, cette liste sera vide, mais vous pouvez l’alimenter de différentes manières.
 
-## Copying Emoji from another Instance
+## Copier depuis d’autres instances
 
-Emoji can be easily copied from another instance.
-To do this, switch to the "remote" tab in the custom emoji settings.
-You can search emoji by name and/or host they are from.
+Les émoticônes peuvent être facilement copiées depuis d’autres instances.
+Pour cela, utiliser l’ongles « Remote » dans les paramètres.
+Vous pouvez alors chercher des émoticônes par nom ou instance.
 
-When you have found an emoji you want, click it to open a small menu which will allow you to import the emoji.
+Cliquez sur l’émoticône de votre choix pour ouvrir un menu qui vous permettra de l’importer.
 
-Please note that Emoji may be subject to copyright and you are responsible for checking whether you may legally use another emoji.
+À noter que les droits d’auteur s’appliquent et qu’il est de votre responsabilité de vous assurer que vous pouvez l’utiliser.
 
-## Individual Emoji Import
+## Import individuel
 
-If you have an image file that you would like to turn into a custom emoji you can import the image as an emoji.
-This works just like attaching files to a note:
-You can choose to upload a new file, pick a file from your Misskey drive or upload a file from another URL.
+Si vous disposez d’une image que vous souhaiter utiliser, celle-ci peut être importée.
+Cela fonctionne comme en joignant des fichiers à une note :
+Vous pouvez choisir de téléverser un nouveau fichier, et le sélectionner depuis votre Drive Misskey ou une URL distante.
 
-::: danger
-When you import emoji from your drive, the file will remain inside your drive.
-Misskey does not make a copy of this file so if you delete it, the emoji will be broken.
+::: Attention
+En important une émoticône sur votre Drive, le fichier y restera.
+Misskey ne fait pas de copies de ce fichier et si vous le supprimez celui-ci sera cassé.
 :::
 
-The emoji will be added to the instance and you will then be able to edit or delete it as usual.
+L’émoticône sera ajoutée à l’instance et vous pourez la modifier ou supprimer.
 
-## Bulk Emoji import
+## Import en masse
 
-Emojis can be imported in bulk as packed ZIP files with a special format.
-This ability can be found in the three dots menu in the top right corner of the custom emoji menu.
+Les émoticônes peuvent être importées en masse à partir d’un format spécial au sein d’une archive ZIP.
+Cette fonction est disponible dans le menu du coin supérieur droit de l’onglet d’émoticônes personnalisées.
 
-::: warning
-Bulk emoji import may overwrite existing emoji or otherwise mess up your instance.
-Be sure to only import emoji from trusted sources, ideally only ones you exported yourself.
+::: Attention
+L’import en masse peut écraser les émoticônes existant et créer de nombreux problèmes sur l’instance.
+Assurez vous de n’importer que depuis des sources de confiance, voire que vous aurez-vous même exporté dans l’idéal.
 :::
 
-### Packed emoji format
+### Format émoticône empaquetée
 
-At the top level is a file called `meta.json` which contains information about the emoji contained in the packed file.
-A type definition for this file would look like this, where `Meta` is the structure of the whole file.
+À la racine se trouve un fichier `meta.json` contenant les informations à propos des émoticônes contenus.
+Un exemple de définition de type pour ce fichier serait comme suit, où `Meta` est la structure du fichier complet :
 
 ```typescript
 class Meta {
@@ -71,41 +71,39 @@ class Emoji {
 }
 ```
 
-The fields of `Meta` are currently not used or checked when importing emoji, except for the `emojis` field.
+Les champs de `Meta` ne sont actuellement pas utilisés ou vérifiés lors d’un import à l’exception de `emojis`.
 
-For each `Emoji`:
-- `downloaded`: should always be true. If the field is missing or not truthy, the emoji will not be imported.
-- `fileName`: name of the image file inside the packed file.
-- `emoji`: data associated with the emoji as it was stored in the database. Currently most of these fields are
-  not even checked for existence. The following are currently used:
-  - `name`: name of the emoji for the user, e.g. `blobfox` if a user should type in `:blobfox:` to get the emoji.
-    If a previous emoji with the same name exists, it **will be overwritten**!
-  - `category`: category of the emoji
-  - `aliases`: list of strings that should be added as aliases. The admin UI calls these "tags".
+Pour chaque `Emoji` :
+- `downloaded` : doit toujours être `true`, à défaut l’émoticône ne sera pas importée ;
+- `fileName` : nom du fichier au sein de l’archive ;
+- `emoji` : les données associées comme stockées dans la base de données. Généralement les champs ne sont pas vérifiés.
+Seul les suivants sont utilisés :
+  - `name` : nom de l’émoticône (ex : `blobfox` s’il faut taper `:blobfox:` pour utiliser l’émoticône) ;
+    Si une émoticône utilisait ce nom, elle ** sera écrasée** !
+  - `category` : catégorie de l’émoticône ;
+  - `aliases` : liste de mots pouvant être utilisés comme alias. Référencés dans l’interface administration comme « étiquettes ».
 
-## Editing and Deleting Emoji
+## Modifier et supprimer
 
-The properties of an emoji can be edited by clicking it in the list of local emoji.
-When you click on a custom emoji, a dialog for editing the properties will open.
-This dialog will also allow you to delete an emoji.
+Les propriétés d’une émoticône peuvent être modifiése en la sélectionnant dans la liste locale.
+Un menu permet de la modifier ou supprimer.
 
-::: danger
-When you delete a custom emoji, old notes that contain it will still have the text name of the emoji in it.
-The emoji will no longer be rendered correctly.
+::: Attention
+En supprimant une émoticône personnalisées, les anciennes notes seront modifiées.
 :::
 
-Note that remote emoji can not be edited or deleted.
+À noter que les émoticônes distantes ne peuvent être modifiées ou supprimées.
 
-Each emoji can have a name and a category and several tags.
-The category is used for structuring the emoji picker.
-Meanwhile the tags can be used as alternate names by which the emoji can be found when searching in the emoji picker.
+Chaque émoticône peut avoir un nom, une catégorie, et plusieurs étiquettes.
+La catégorie est utilisée pour la structure de l’assistant de sélection.
+Les étiquettes sont utilisées comme noms altenatifs permettant de trouver une émoticône.
 
-When you are done editing, save your changes by clicking the check mark in the top right corner of the dialog.
+Une fois les modifications faites, validez les en cliquant sur le symbole dans le coin supérieur droit.
 
-### Bulk Editing
+### Modification en masse
 
-Emoji can be edited in bulk by checking the box below the search field.
-With this enabled, clicking on an emoji will select it instead of opening the editing dialog.
+Les émoticônes peuvent être modifiées en masse en cochant la case sous le champ de recherche.
+Cela permet de sélectionner les émoticônes plutôt que d’ouvrir la fenêtre de modifications.
 
-The Editing options will be displayed as buttons below the checkbox.
-To return to the normal behaviour just uncheck the box again.
+Les options de modifications seront disponibles via un bouton à proximité de la case à cocher.
+Pour revenir au comportement normal, décocher la case à nouveau.
