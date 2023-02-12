@@ -1,23 +1,23 @@
-# Word Mute
+# Ignorer un mot
 
-Through setting up word mutes, you can make notes matching certain conditions not appear on your timeline anymore.
+Vous permet d’exclure de vos fils des notes contenant certains mots.
 
-There are two types of word mutes: soft and hard. Below is an explanation of the setup process and effect of both.
+Le filtre peut être strict ou libre.
 
-## Soft Word Mute
+## Filtre libre
 
-With soft mutes, the word mute is processed within the client (app) you are using.
+Avec un filtre libre, celui-ci a lieu au sein du client que vous utilisez.
 
-When a note meets the set conditions, it will be hidden behind text stating "(username) said something".  
-You can display the hidden note contents by clicking on this text.
+Quand une note rempli des conditions, elle est cachée par le texte « (membre) a dit quelquechose »
+Vous pouvez afficher le contenu de la note en cliquant sur ce texte.
 
-## Hard Word Mute
+## Filtre strict
 
-With hard mutes, the server judges whether the content of a new incoming note meets the set conditions similar to antennas, and will completely exclude it from your timeline if so.
+Avec un filtre strict, le serveur juge du contenu des notes et excluent de vos fils celles remplissant des conditions définies.
 
-To summarize, a hard word mute has the following features:
+Pour résumer, avec un filtre strict :
 
-- Only new notes created after configuration will be affected by the mute.
-- If the conditions are changed, previously hard muted notes will still remain muted.
-- Timelines will not be filled with "(...) said something".
-- Hard mutes will function even for apps without functionality for soft mutes.
+- seulement les nouvelles notes sont affectées ;
+- si les conditions sont changées, les anciennes notes resteront exclues ;
+- les fils n’afficheront pas de note « (…) a dit quelquechose » ;
+- fonctionne peu importe l’application.

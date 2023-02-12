@@ -1,5 +1,5 @@
-# Follow
+# Abonnement
 
-When you follow a user, you will see their posts on your home timeline; however, their replies to other users will not be included.
+En s’abonnant à une personne, vous verrez ses publications sur votre fil d’accueil, à l’exception des réponses.
 
-To follow a user, click the "Follow" button on the user's profile page. To unfollow a user, click the button again.
+Pour vous abonner à une personne, cliquer sur le bouton « Suivre » de sa page de profil. Cliquer une nouvelle fois pour mettre fin à l’abonnement.

@@ -1,7 +1,7 @@
-# Favorites
+# Favoris
 
-This function allows you to mark a [note](./note) as a favorite.
-You can view your favorited notes on the [Favorite](./my/favorites) page.
-Other users will not be notified that you have added their note to your favorites, and only you can see your favorites.
+Cette fonction permet de marquer une [note](./note) comme favori.
+Vous pouvez consulter vos favories sur la page [Favoris](./my/favorites).
+Les autres personnes ne reçoivent pas de notification quand une note est placée en favori, seulement vous pouvez les voir.
 
-To favorite a note, press "Add to favorites" in the note's menu. To un-favorite a note, click "Remove from favorites" in the note's menu.
+Pour ajouter un favori, cliquer sur « Ajouter aux favoris » dans le menu de la note. À l’inverse, sélectionner « Retirer des favoris » pour l’enlever.

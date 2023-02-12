@@ -1,5 +1,5 @@
-# Plug-ins
+# Extensions
 
-Misskey Web has a plugin facility that allows users to extend the functionality of Misskey Web.
+Misskey Web offre une fonction d’extension qui permet d’étendre les fonctionnalités de base.
 
-For information on how to create a plugin, see [this document](./advanced/create-plugin.md).
+Pour plus d’informations sur la création d’extensions, vour [ici]((./advanced/create-plugin.md).

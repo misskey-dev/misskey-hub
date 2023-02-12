@@ -1,58 +1,58 @@
-# Share Form
+# Formulaire de partage
 
-When you open `/share` in Misskey Web, you open a sharing submission form. This sharing form is useful if you want users to share the content of your page with Misskey from an external web page.
+Depuis la page `/share` sur Misskey Web, vous accédez à un formulaire de partage. Celui-ci permet au contenu de vos pages Misskey d’être partagé vers des pages web externes.
 
-You can specify a number of options in the URL, including the shared content, as a query parameters.
+Différentes options sont disponibles dans l’URL, dont le contenu partagé, en tant que paramètres de requête.
 
-## Query Parameters
+## Paramètres de requête
 
-::: tip
-All parameters are **optional**.
+::: Astuce
+Tous les paramètres sont **facultatifs**.
 :::
 
-| name | description |
+| nom | description |
 | ---- | ---- |
-| `title` | title, will be inserted before the main body in brackets |
-| `text` | main body |
-| `url` | URL, inserted after the main body |
+| `title` | titre, sera inséré avant le corps principal entre crochets |
+| `text` | corps principal |
+| `url` | URL, insérée après le corps principal |
 
-### Reply Information
+### Information de réponse
 
-You can make the note being composed a reply to a given note by specifying one of the following.
+Vous pouvez faire d’une note une réponse à une autre en indiquant :
 
-| name | description |
+| nom | description |
 | ---- | ---- |
-| `replyId` | ID of the note you are replying to |
-| `replyUri` | URL to reply to (specify the remote note object) |
+| `replyId` | ID de la note à laquelle répondre |
+| `replyUri` | URL de la note à laquelle répondre |
 
-### Renote Information
+### Information de renote
 
-You can make the note being composed a renote of a given note by specifying one of the following.
+Vous pouvez faire d’une note une renote en iniquant :
 
-| name | description |
+| nom | description |
 | ---- | ---- |
-| `renoteId` | ID of the note to renote |
-| `renoteUri` | URL of the note to renote (specify the remote note object) |
+| `renoteId` | ID de la note à renoter |
+| `renoteUri` | URL de la note à renoter |
 
-### Publication Scope
+### Portée de publication
 
-The following options allow to select a scope.
+Les options suivantes vous permettent de sélectionner la portée :
 
-| name | description |
+| nom | description |
 | ---- | ---- |
-| `visibility` | one of `public`, `home`, `followers`, `specified` |
-| `localOnly` | 0(false) or 1(true) |
-| `visibleUserIds` | target user IDs |
-| `visibleAccts` | target user [acct](../glossary.md#acct)s (comma separated) |
+| `visibility` | `public`, `home`, `followers`, ou `specified` |
+| `localOnly` | 0(false) ou 1(true) |
+| `visibleUserIds` | ID du profil cible |
+| `visibleAccts` | [acct](../glossary.md#acct) des profils cibles (séparés par des virgules) |
 
-::: warning
-If `visibility` is set to `specified`, either `visibleUserIds` or `visibleAccts` must be set too.
+::: Attention
+Si `visibility` est réglé sur `specified`,  `visibleUserIds` ou `visibleAccts` sont nécessaires.
 :::
 
-### Attachments
+### Pièces-jointes
 
-You can specify attachments with the following options.
+Vous pouvez préciser des pièces-jointes avec les options suivantes :
 
-| name | description |
+| nom | description |
 | ---- | ---- |
-| `fileIds` | IDs of files to be attached (comma separated) |
+| `fileIds` | ID des fichiers à joindre (séparés par des virgules) |

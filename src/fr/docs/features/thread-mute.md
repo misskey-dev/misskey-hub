@@ -1,15 +1,15 @@
-# Thread mute
+# Ignore un fil
 
-::: tip
-This feature is available since version 12.95.0.
+::: Astuce
+Cette fonction est disponible depuis la version 12.95.0.
 :::
 
-Thread Mute mutes the thread of a given note. This includes all replies connected to the uppermost note.
+Cette fonction permet d’ignorer le fil lié à une note spécifique. Cela inclus les réponses à la note racine.
 
-If you mute a thread, you will no longer be notified of new replies to that thread, nor will any of the replies mention you.
+En ignorant un fil, vous recevrez plus de notifications de nouvelles réponses, quand bien même celle-ci vous mentionnent.
 
-To mute a thread in Misskey Web, open the menu of any note belonging to the thread in question or the note from which it originated and select 'Mute Thread'.
+Pour ignorer un fil sur Misskey Web, ouvrez le menu d’une note du fil et sélectionner « Ignorer le fil ».
 
-::: warning
-The entire thread will be muted, regardless of which note in the thread the mute operation is performed from.
+::: Attention
+Le fil entier sera ignoré, peu importe de la note que vous sélectionnez.
 :::

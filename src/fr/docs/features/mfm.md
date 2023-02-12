@@ -1,24 +1,24 @@
 ---
-description: 'MFM is a dedicated markup language that can be used in various places on Misskey.'
+description: 'MFM est un langage de balise spécifique à Misskey.'
 ---
 
 # MFM
-MFM, which stands for Misskey Flavoured Markdown, is a dedicated markup language that can be used in various places on Misskey.
+MFM, abréviation de Misskey Flavoured Markdown, est un langage de balise spécifique à Misskey.
 
-::: tip
-Some of the syntax is compatible with Markdown.
+::: Astuce
+Une partie de la syntaxe est compatible avec Markdown.
 :::
 
-## examples of where misskey is allowed
-- note body
-- content warnings
-- user name
-- user profile
+## Exemples de champs prenant en charge le MFM
+- corps de note ;
+- avertissement de contenu ;
+- pseudonyme ;
+- profil.
 
-## Syntax
+## Syntaxe
 ### Mentions
-::: tip
-For more information about Mentions, see [here](./mention.md).
+::: Astuce
+Pour plus d’informations sur les mentions, voir [ici](./mention.md).
 :::
 
 ```:no-line-numbers
@@ -28,33 +28,33 @@ For more information about Mentions, see [here](./mention.md).
 @alice@example.com
 ```
 
-### Hashtags
+### Mot-croisillon
 
-::: tip
-For more information about hashtags, see [here](./hashtag).
+::: Astuce
+Pour plus d’informations sur les mots-croisillons, voir [ici](./hashtag).
 :::
 
 ```:no-line-numbers
 #misskey
 ```
 
-### Custom Emoji
+### Émoticône personnalisé
 
-::: tip
-For more information about custom emoji, see [here](./custom-emoji).
+::: Astuce
+Pour plus d’informations sur les émoticônes personnalisés, voir [ici](./custom-emoji).
 :::
 
 ```:no-line-numbers
 :misskey:
 ```
 
-### Links
+### Liens
 
 ```:no-line-numbers
 [example link](https://example.com)
 ```
 
-### Bold
+### Gras
 
 ```:no-line-numbers
 **Bold**
@@ -62,11 +62,11 @@ For more information about custom emoji, see [here](./custom-emoji).
 
 ---
 
-::: tip
-More available syntax can be found in the **MFM cheat sheet** provided by the Misskey web UI under `/mfm-cheat-sheet` on your instance.
+::: Astuce
+Plus de détails sur la syntaxe sont disponibles sur le **pense-bête MFM** de l’interface web Misskey sur la page `/mfm-cheat-sheet` de votre instance.
 :::
 
-## Information for Developers
+## Informations pour le développement
 
-The parser implementation of MFM is available as a library, making it easier to embed MFM in your clients.
-- [misskey-dev/mfm.js](https://github.com/misskey-dev/mfm.js) - parser implementation in JavaScript
+L’analyse syntaxique de MFM est disponible comme librairie, facilitant son implémentation dans vos applications.
+- [misskey-dev/mfm.js](https://github.com/misskey-dev/mfm.js) - Analyseur syntaxique en JavaScript.

@@ -1,21 +1,21 @@
 # Webhook
 
-::: tip
-This feature is available as of Misskey version 12.109.0.
+::: Astuce
+Cette fonction est disponible à partir de la version 12.109.0.
 :::
 
-::: warning
-This is an experimental feature and may be unstable or subject to change in the future.
+::: Attention
+C’est une fonction expérimentale qui peut être instable ou être modifiée à l’avenir.
 :::
 
-Misskey provides a webhook which allows you to receive various events from Misskey in real time.
+Misskey fournit un webhook qui vous permet de recevoir des évènements Misskey en temps réel.
 
-You can manage your webhooks by going to Settings > Webhook.
+Vous pouvez les gérer via la section éponyme de vos paramètres.
 
-Once a webhook is registered, an HTTP request is sent to the specified URL each time the specified event occurs. The request method will be POST and contain JSON in its body.
-In addition, the request header will contain the secret that was set during registration with the name `X-Misskey-Hook-Secret`. You can use this secret to verify that the request is legitimate.
+Une fois défini, une requête HTTP est envoyée à l’URL indiquée chaque fois qu’un évènement défini survient. La requête sera en POST et contiendra du JSON.
+De pluis, l’entête de requête contient une clé secrète définie lors de la création avec le nom `X-Misskey-Hook-Secret`. Celui-ci vous permet de vérifier l’authenticité de la requête.
 
-The payload wil contain the following properties.
+Les propriétés suivantes seront transmises :
 
 <MkSchemaViewerItemObject :schema="{
 	type: 'object',
@@ -47,17 +47,17 @@ The payload wil contain the following properties.
 	}
 }"/>
 
-If the destination server returns a 5XX error or does not respond, the request is resent after a time delay.
+Si le serveur de destination retourne une erreur 5xx ou ne répond pas, la requête est renvoyée après un certain délai.
 
-Webhooks can individually have their active status changed from the administration screen to temporarily stop sending requests.
+Les webhooks peuvent être désactivés individuellement depuis le tableau d’administration pour arrêter les requêtes.
 
-## Event
+## Évènement
 
-The following is a description and payload for each event type.
+Ci-dessous une description de chaque type d’évènement.
 
 ### follow
 
-Occurs when you follow someone.
+Lorsque vous suivez une personne.
 
 <MkSchemaViewerItemObject :schema="{
 	type: 'object',
@@ -71,7 +71,7 @@ Occurs when you follow someone.
 
 ### followed
 
-Occurs when you are followed by someone.
+Lorsqu’une personne vous suit.
 
 <MkSchemaViewerItemObject :schema="{
 	type: 'object',
@@ -85,7 +85,7 @@ Occurs when you are followed by someone.
 
 ### unfollow
 
-Occurs when you unfollow someone.
+Lorsque vous arrêtez de suivre une personne.
 
 <MkSchemaViewerItemObject :schema="{
 	type: 'object',
@@ -99,7 +99,7 @@ Occurs when you unfollow someone.
 
 ### note
 
-Occurs when you post a note.
+Lorsque vous publiez une note.
 
 <MkSchemaViewerItemObject :schema="{
 	type: 'object',
@@ -113,7 +113,7 @@ Occurs when you post a note.
 
 ### reply
 
-Occurs when someone has replied to your note.
+Lorsqu’une personne répond à votre note.
 
 <MkSchemaViewerItemObject :schema="{
 	type: 'object',
@@ -127,7 +127,7 @@ Occurs when someone has replied to your note.
 
 ### renote
 
-Occurs when your note is renoted.
+Lorsque votre note est renotée.
 
 <MkSchemaViewerItemObject :schema="{
 	type: 'object',
@@ -141,7 +141,7 @@ Occurs when your note is renoted.
 
 ### mention
 
-Occurs when someone has mentioned you.
+Lorsqu’une personne vous mentionne.
 
 <MkSchemaViewerItemObject :schema="{
 	type: 'object',

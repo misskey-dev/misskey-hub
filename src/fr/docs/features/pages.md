@@ -1,52 +1,52 @@
 # Pages
 
-Misskey Pages are a feature where you can create custom web pages. In them you can include different types of media and formatting. and even run programming scripts. Like with many other areas of Misskey, you can format your content using [MFM](./mfm.md).
+La fonction Pages permet de créer des pages web personnalisées. Vous pouvez y inclure du contenu multimédia, du formatage, et même lancer des scripts. Comme les autres fonctions de Misskey, votre contenu peut utiliser le format [MFM](./mfm.md).
 
-Pages in Misskey are composed of different types of Blocks, and the blocks can be moved around using drag-and-drop.
+Les pages sont composées de différents blocs, pouvant être déplacés par glisser-déposer.
 
-## Content Blocks
+## Blocs de contenu
 
-Content blocks display different types of content to the user.
+Les blocs de contenu affichent différent types de contenu.
 
 ### Section
 
-A grouping block that can contain other blocks. Each content block has a title that it will display at its top.
+Un groupe de blocs pouvant contenir d’autres blocs. Chaque bloc de contenu possède un titre qui sera affiché comme en-tête.
 
-### Text
+### Texte
 
-Displays text content to the user. The text content can be formatted and can include variables interpolation (See Variables below).
+Affiche un texte. Celui-ci peut être formaté et contenir des variables (Voir la section correspondante).
 
 ### Images
 
-Displays an image that you can select from your drive.
+Affiche une image depuis votre stockage.
 
-### Text Area
+### Zone de texte
 
-Displays text in a text area tag. This block does not support MFM but variable interpolation is allowed.
+Affiche du texte avec une étiquette `text area`. Ce bloc ne prend pas en charge le MFM mais autorise l’interpolation de variable.
 
-### Embedded Note
-
-TODO
-
-### Canvas
+### Note interne
 
 TODO
 
-## Input Blocks
+### Canevas
 
-Input blocks can be used to create interactive pages with form elements. These blocks can be used to interact with the variables and scripts in a page.
+TODO
 
-## Special Blocks
+## Bloc d’entrée
 
-Special blocks provide unique features for your page. This includes a note posting form and page control flow.
+Les blocs d’entrée permettent de créer des pages interactives avec des formulaires. Ces blocs peuvent être utilisés pour interagir avec les variables et les script d’une page.
+
+## Blocs spéciaux
+
+Les blocs spéciaux fournissent des fonctions uniques à votre page. Par exemple le fait un formulaire de publication de note et le contrôle de page.
 
 ## Variables
 
-Variables can be used to create dynamic pages. You can embed the value of a variable by writing <b>{ variable name }</b> in the text. For example, in <b>Hello { thing } world!</b>, if the value of the variable (thing) was <b>ai</b>, then the text would become <b>Hello ai world!</b>.
+Les variables sont utilisées pour des pages dynamiques. Vous pouvez indiquer la valeur d’une variable via <b>{ nom de variable }</b> dans le texte. Par exemple dans <b>Hello { thing } world!</b>, si la valeur de la variable (thing) est <b>ai</b>, alors le texte deviendrait <b>Hello ai world!</b>.
 
-Variables are evaluated from top to bottom, so you cannot refer to a variable defined below you in a given variable. For example, if there are three variables, <b>A, B, C</b>, that are defined in that order, <b>A</b> and <b>B</b> can be referenced inside of <b>C</b>'s definition; however, <b>B</b> and <b>C</b> cannot be referenced inside of <b>A</b>'s.
+Les variables sont évaluées de haut en bas, et il n’est pas possible d’appeler une variable avant qu’elle ne soit définie.Par exemple, soit <b>A, B, C</b> définies dans cet ordre, <b>A</b> et <b>B</b> peuvent être appelées dans <b>C</b> mais  <b>B</b> et <b>C</b> ne peuvent pas être appelées dans <b>A</b>.
 
-To receive input from the user, place an "Input" block on the page and set the "Variable Name" to the name of the variable in which you want to store the value (the variable will automatically be created by the block).
-The variable can the be used to perform actions in response to user input.
+Pour recevoir une entrée, placez un bloc « Entrée » sur la page et utilisez le nom de variable pour indiquer la variable où enregistrer la valeur entrée (la variable sera automatiquement créée).
+La variable peut ensuite être utilisée pour réaliser des actions en fonction de l’entrée.
 
-Functions can be used to encapsulate value calculations in a reusable form. To create a function, create a variable of type "Function". A function can have slots (arguments), and the values of the slots are available as variables within the function. There are also functions called higher-order functions that take another function as an argument. Functions can be predefined or instantiated in-line in slots of such higher order functions.
+Les fonctions peuvent être utilisées pour répéter des groupes de calculs. Pour cela, créez une variable de type « Fonction ». Une fonction peut avoir différents arguments, dont les valeurs sont disponibles comme variables au sein de la fonction. Il existe différentes fonctions d’ordre primaire, appelant d’autres fonctions comme arguments. Les fonctions peuvent être prédéfinies ou placées à même l’emplacement d’argument.

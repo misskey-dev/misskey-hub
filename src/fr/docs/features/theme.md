@@ -1,15 +1,15 @@
-# Theme
+# Thème
 
-You can change the look and feel of the Missky client by applying a theme.
+Vous pouvez changer l’apparence et le comportement du client Misskey en appliquant un thème.
 
-## Theme Settings
+## Options de thème
 
-Settings > Themes
+Paramètres > Themes
 
-## Creating a Theme
+## Créer un thème
 
-The theme object code is written using JSON5.
-The theme has an object type like the one shown below.
+Le code du thème utilise des fichiers JSONs.
+Chaque objet du thème sera de format :
 
 ``` js
 {
@@ -37,47 +37,47 @@ The theme has an object type like the one shown below.
 
 ```
 
-* `id` ... Unique theme ID. A UUID is recommended.
-* `name` ... Theme name
-* `author` ... Theme author
-* `desc` ... Theme description (Object)
-* `base` ... light or dark theme
-	* Use `light` for a light theme and `dark` for a dark theme.
-	* The theme inherits the base theme that is set here.
-* `props` ... Theme style definition. Explained in the following sections.
+* `id` ... ID unique du thème, UUID recommandé ;
+* `name` ... Nom du thème ;
+* `author` ... Créateur·ice du thème ;
+* `desc` ... Description du thème (Objet) ;
+* `base` ... Thème clair ou sombre ;
+	* Utilisez `light` pour un thème clair ou `dark` pour un thème sombre ;
+	* Le thème hérite du thème de base décrit ici.
+* `props` ... Définition du style de thème. Expliqué ci-dessous.
 
-### Theme Style Definition
+### Définition du style de thème
 
-Define the theme style within the `props`.
-The keys are the names of CSS variables, and the values specify the contents.
-Furthermore, this `props` object inherits from the base theme.
-The base theme is [_light.json5] if the `base` of this theme is `light` and [_dark.json5] if `dark`.
-That is, if there is no `props` key named `panel` in this theme, then it is set to the `panel` in the base theme.
+Défini le style de thème au sein des `props`.
+Les clés sont les noms des variables CSS, et les valeurs indiquent les contenus.
+L’objet `props` hérite du thème de base.
+Le thème de base est [_light.json5] si la `base` du thème est `light` et [_dark.json5] pour `dark`.
+À défaut de clé `props` nommée `panel` dans ce thème, celui du thème de base sera utilisé.
 
-[_light.json5]: https://github.com/misskey-dev/misskey/blob/develop/packages/frontend/src/themes/_light.json5
-[_dark.json5]:  https://github.com/misskey-dev/misskey/blob/develop/packages/frontend/src/themes/_dark.json5
+[_light.json5] : https://github.com/misskey-dev/misskey/blob/develop/packages/frontend/src/themes/_light.json5
+[_dark.json5] :  https://github.com/misskey-dev/misskey/blob/develop/packages/frontend/src/themes/_dark.json5
 
-#### Value Syntax
+#### Syntaxe des valeurs
 
-* Colors expressed with hexadecimal
-	* example: `#00ff00`
-* Colors expressed with `rgb(r, g, b)` format
-	* example: `rgb(0, 255, 0)`
-* Colors that contain alpha/transparency values expressed with `rgb(r, g, b, a)` format
-	* example: `rgba(0, 255, 0, 0.5)`
-* Other key value reference
-	* `@{key name}` is a reference to the value of another key. Replace `{key name}` with the name of the key you wish to reference.
-	* example: `@panel`
-* Constant (discussed below) reference
-	* `${constant name}` is a reference to a constant. Replace `{constant name}` with the name of the constant you with to reference.
-	* example: `$main`
-* Functions (discussed below)
+* Couleurs héxadécimales ;
+	* exemple : `#00ff00`
+* Couleurs au format `rgb(r, g, b)` ;
+	* exemple : `rgb(0, 255, 0)`
+* Couleurs contenant une valeur de transparence/alpha au format `rgb(r, g, b, a)` ;
+	* exemple : `rgba(0, 255, 0, 0.5)`
+* Références à la valeur d’autres clés ;
+	* `@{key name}` est une référence à la valeur d’une autre clé. Remplacez `{key name}` par le nom d’une de vos clé en référence.
+	* exemple : `@panel`
+* Référence constante ;
+	* `${constant name}` est une référence vers une constante. Remplacez `{constant name` par le nom d’une constante choisie en référence.
+	* exemple : `$main`
+* Fonctions ;
 	* `:{関数名}<{引数}<{色}`
 
-#### Constants
+#### Constantes
 
-Constants are useful when you have values that you do not want to output as CSS variables, but want to use as values for other CSS variables."I don't want to output it as a CSS variable, but I do want to use it as a value for other CSS variables.
+Les constantes permettent de définir des valeurs utiles pour d’autres variables CSS.
 
-#### Functions
+#### Fonctions
 
 WIP

@@ -1,72 +1,72 @@
-# Charts
+# Diagrammes
 
-Misskey can generate and display charts for an instance's various federated data sources.
-Charts allow you to get a visual depiction of the usage, federation status, and activity of each user.
+Misskey peut générer et afficher des diagrammes à partir des nombreuses données fédérées d’une instance.
+Les diagrammes vous permettent d’avoir une interprétation visuelle de l’utilisation, l’état de fédération, et l’activité de chaque membre.
 
-Instance charts can be viewed from the *instance information* page (accessible by clicking the instance logo in the navigation menu).
+Les diagrammes d’une instance sont consultables via la page d’*informations d’une instance* (acessible en cliquant sur le logo de l’instance dans le menu de navigation).
 
-Below is a description of each chart and its contents.
+Ci-dessous sont décrit chaque diagramme et son contenu.
 
-## Federation Chart
+## Diagramme de fédération
 
-This chart shows information about federated instances.
+Ce diagramme indique les informations sur les instances fédérées.
 
-### Pub
+### Publication
 
-The number of instances that this instance is publishing activities to.
+Le nombre d’instances vers lesquelles sont transmises les activitées de cette instance.
 
-### Sub
+### Abonnement
 
-The number of instances that this instance is receiving activities from.
+Le nombre d’instances depuis lesquelles sont reçues les activités.
 
-### Received
+### Réception
 
-The number of instances that have sent an activity to this instance.
+Le nombre d’instances qui ont envoyées des activités sur cette instance.
 
-### Delivered
+### Envoi
 
-The number of instances that this instance has delivered an activity to.
+Le nombre d’instances qui ont ont reçu une activité de cette instance.
 
-### Stalled
+### En pause
 
-The number of instances where an error was encountered when delivering an activity.
+Le nombre d’instance où une erreur empêche la reception d’activités.
 
-## Active Users Chart
+## Diagramme de membres en activité
 
-Chart of user activity on this instance.
+Diagramme de l’activité des membres de cette instance.
 
-### Read & Write
+### Lecture & Écriture
 
-The number of users that have read and written.
+Le nombre de membres ayant lu et écrit.
 
-### Read
+### Lecture
 
-The number of users that have read.
+Le nombre de membres ayant lu.
 
-### Write
+### Écriture
 
-The number of users that have written.
+Le nombre de membres ayant écrit.
 
-### < Week
+### < Semaine
 
-The number of users with an account less than one week old.
+Le nombre de comptes de moins d’une semaine.
 
-### < Month
+### < Mois
 
-The number of users with an account less than one month old.
+Le nombre de comptes de moins d’un mois.
 
-### < Year
+### < An
 
-The number of users with an account less than one year old.
+Le nombre de comptes de moins d’un an.
 
-### > Week
+### > Semaine
 
-The number of users with an account older than one week.
+Le nombre de comptes de plus d’une semaine.
 
-### > Month
+### > Mois
 
-The number of users with an account older than one month.
+Le nombre de comptes de plus d’un mois.
 
-### > Year
+### > An
 
-The number of users with an account older than one year.
+Le nombre de comptes de plus d’un an.

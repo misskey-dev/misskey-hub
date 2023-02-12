@@ -1,8 +1,8 @@
-# Antenna
+# Antenne
 
-Antenna is a feature that allows you to freely set conditions for a custom timeline and automatically collect matching notes.
+Antenne est une fonction qui vous permet de définir des conditions pour un fil personnalisé et recevoir automatiquement les notes y correspondant.
 
-Antenna conditions can include conditions to include/exclude certain keywords and tags in different combinations as well as other options.
-When a note matching an antenna's conditions is posted, the note will automatically be added to that antenna's timeline.
+Les conditions peuvent inclure ou exclure certains mots-clés et étiquettes en combinaison avec d’autres options.
+Si une note remplissant ces conditions est publiée, elle sera automatiquement ajoutée àu fil de cette antenne.
 
-To create an antenna, click "Add" in the Manage antennas page. Then fill in the options to customize your antenna.
+Pour créer une antenne, cliquez sur « Ajouter » sur la page de gestion des antennes et remplissez les champs pour la personnaliser.

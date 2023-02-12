@@ -1,43 +1,44 @@
-# Timeline
+# Fil
 
-The timeline displays [notes](.note) in reverse chronological order.
-There are different types of timelines as shown below, and the notes displayed differ depending on the type.
-Note that some types of timelines may be disabled by the instance.
+Le fil affiche les [notes](.note) dans l’ordre anti-chronologique.
+Les différents types de fil sont décit ci-dessous, chacun affichant certaines notes.
+À noter que certains fils peuvent être désactivés sur des instances.
 
-## Home
+## Accueil
 
-Posts by users you are following will be displayed. Abbreviated as HTL.
+Les notes de personnes que vous suivez. Abrégé en HTL.
 
 ## Local
 
-All local users' posts that do not have the visibility of "Home" will be shown. Abbreviated as LTL.
+Les notes de personnes de votre instance et que vous ne suivez pas. Abrégé en LTL.
+All local users' posts that do not have the visibility of "Accueil" will be shown. Abbreviated as LTL.
 
 ## Social
 
-Posts of users you are following and all local users's posts that do not have the visibility of "Home" will be shown. Abbreviated as STL. Think of it as STL = HTL + LTL.
+Les notes de personnes que vous suivez ou qui font partie de votre instance. Abrégé STL, comprendre que STL = HTL + LTL.
 
 ## Global
 
-All local users' posts that do not have the visibility of "Home" and all remote users' posts that do not have the visibility of "Home" that reach the server. Abbreviated as GTL.
+Toutes les notes accessibles depuis votre serveur. Abrégé GTL.
 
-## Custom Timelines
+## Fils personnalisés
 
-Misskey has other features where you can create timelines with more granularity. See [Lists](./list.md) and [Antennas](./antenna.md) for details.
+Une des fonctions Misskey est de créer ses propres fils. Voir [listes](./list.md) et [antennes](./antenna.md) pour plus de détails.
 
-## Comparison
+## Comparaison
 
-| Source                |            |        |   Timeline |       |            |
-|-----------------------|------------|--------|---------|------------|------------|
-| User                  | Visibility | Home   | Local    | Social     | Global |
-| Local (Followers)     | Public     | ✔      | ✔        | ✔          | ✔          |
-|                       | Home       | ✔      |          | ✔          |            |
-|                       | Followers  | ✔      |          | ✔          |            |
-| Remote (Followers)    | Public     | ✔      |          | ✔          | ✔          |
-|                       | Home       | ✔      |          | ✔          |            |
-|                       | Followers  | ✔      |          | ✔          |            |
-| local (Non-followers) | Public     |        | ✔        | ✔          | ✔          |
-|                       | Home       |        |          |            |            |
-|                       | Followers  |        |          |            |            |
-| Remote (Non-followers)| Public     |        |          |            | ✔          |
-|                       | Home       |        |          |            |            |
-|                       | Followers  |        |          |            |            |
+| Source                |            |           |   Fil    |            |            |
+|-----------------------|------------|-----------|----------|------------|------------|
+| Membre                | Visibilité | Accueil   | Local    | Social     | Global     |
+| Local (Abonnés)       | Public     | ✔         | ✔        | ✔          | ✔          |
+|                       | Accueil    | ✔         |          | ✔          |            |
+|                       | Abonnés    | ✔         |          | ✔          |            |
+| Distant (Abonnés)     | Public     | ✔         |          | ✔          | ✔          |
+|                       | Accueil    | ✔         |          | ✔          |            |
+|                       | Abonnés    | ✔         |          | ✔          |            |
+| Local (Non-Abonnés)   | Public     |           | ✔        | ✔          | ✔          |
+|                       | Accueil    |           |          |            |            |
+|                       | Abonnés    |           |          |            |            |
+| Distant (Non-Abonnés) | Public     |           |          |            | ✔          |
+|                       | Accueil    |           |          |            |            |
+|                       | Abonnés    |           |          |            |            |

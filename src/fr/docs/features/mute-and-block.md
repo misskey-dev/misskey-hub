@@ -1,56 +1,55 @@
-# Muting and Blocking
+# Ignorer et Bloquer
 
-If you don't like a user, you can mute them to make them disappear from your timelines.
-Alternatively, you can block a user to prevent them from seeing your content or engaging with you in any way.
-People won't know that you have muted them, but they will know that you have blocked them. It is up to you to decide which option you prefer.
+Si une personne ne vous plaît pas, il vous est possible de l’ignorer de sorte à ce que son activité n’apparaîsse pas dans vos fils.
+Autrement, il est possible de bloquer une personne pour l’empêcher de voir votre activité et d’interagir de quelque façon que ce soit.
+Les personnes ne sont pas notifiée que vous les ignorez mais sauront si vous les avez bloqué. À vous de décider quelle option vous préférez.
 
-::: tip
-Mute and block can be used together.
+::: Astuce
+Ignorer et bloquer peuvent être utilisés ensemble.
 :::
 
-::: warning
-Please consider reporting any users who violate the Terms of Service to the moderators.
+::: Attention
+Pensez à signaler à la modération toute personne qui violerait les conditions générales d’utilisation.
 :::
 
-In Misskey Web, you can see the list of users you have muted or blocked by going to Settings > Mute & Block.
+Dans Misskey Web, vous pouvez voir une liste des personnes que vous avez bloqué ou ignoré dans la section éponyme des paramètres.
 
-## Muting
+## Ignorer
+En ignorant une personne, n’apparaîtront plus sur Misskey :
 
-If you mute a user, the following content about that user will no longer appear in Misskey:
+- ses publications (et leurs réponses) dans votre fil et résultats de recherche ;
+- les notifications de cette personne ;
+- l’historique de messages instantanés avec cette personne ;
+- etc…
 
-- the user's posts (and replies and Renotes to those posts) in the timeline and post search results
-- notifications from that user
-- message history with the user in Misskey chat
-- etc.
+Pour l’ignorer, ouvrez le menu sur son profil et cliquez sur le bouton « Ignorer ».
 
-To mute a user in Misskey Web, open the menu on the user's profile page and press the "Mute" button.
-
-::: tip
-They will not be notified that you have muted them, and they will not know that you have muted them.
+::: Astuce
+Ces personnes ne sauront pas que vous les ignorez.
 :::
 
-## Blocking
-If you block a user, they will not be able to see your content and they will not be able to do any the following actions:
+## Bloquer
+Si vous bloquez une personne, elle ne pourra plus voir votre activité et ne pourra plus :
 
-- follow you
-- add you to a user list
-- reply or renote you
-- react or vote in one of your polls
-- send a message to you
-- etc.
+- vous suivre ;
+- vous ajouter à une liste ;
+- vous répondre ou vous renoter ;
+- réagir ou voter sur une de vos publications ;
+- vous envoyer de message ;
+- etc…
 
-Also,
+De plus ;
 
-- if the user is already following you when you block them, they will unfollow you
-- if the user has you in their user lists when you block them, you will be removed from those lists
+- si la personne vous suit et que vous la bloquez, elle ne vous suivra plus ;
+- si la personne vous avait dans une liste, vous en serez automatiquement retiré.
 
-To block a user on Misskey Web, open the menu on the user's profile page and press the "Block" button.
+Pour bloquer une personne, ouvrez le menu sur son profil et cliquez sur le bouton « Bloquer ».
 
-::: warning
-You will not be notified that you have been blocked by someone, but you will know indirectly that you have been blocked because you will not be able to take any of the above actions, such as following someone.
+::: Attention
+Vous ne recevrez pas de notification si une personne vous bloque, vous le saurez indirectement en étant incapable d’interagir avec son contenu.
 :::
 
-::: warning
-The other person will not be able to see your content, but they will be able to see it if they switch accounts or log out. Blocking is only a simple, but useful feature.
-You can change your privacy settings in Settings > Privacy to make it more difficult for blocked users to view your content by requiring approval for follow requests and setting your default note visibility to "Followers".
+::: Attention
+Une personne bloquée pourra tout de même voir votre contenu en se déconnectant ou changeant de compte. Bloquer est une fonction simple mais pratique.
+Vous pouvez modifier vos paramètres de manière à rendre la tâche plus difficile aux personnes bloquées en demandant systématiquement votre autorisation pour vous suivre et en limitant votre visibilité auxpersonnes qui vous suivent.
 :::

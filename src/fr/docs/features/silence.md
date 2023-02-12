@@ -1,9 +1,9 @@
-# Silence
+# Limité
 
-Silence is one of the states that an account can be set to.
+Un des états pouvant être appliqué à un compte.
 
-When your account is silenced, you cannot set the visibility of your notes to Public.
-Home, Followers, and Direct are still selectable, so even if your account is silenced, followers and direct visitors to your page will still be able to view your posts.
-They will just not be able to view them in the GTL (Global Timeline) or LTL (Local Timeline).
+Lorsqu’un compte est limité, vous ne pouvez pas publier de notes publiques.
+Accueil, personnes abonnées, et directe, restent disponibles et même si votre compte est limité vos publications restent visibles sur votre profil et par les personnes abonnées.
+Il ne sera seulement pas possible de vour vos notes sur les fils globaux et locaux.
 
-The silence status of an account is set by the instance moderators.
+Un compte peut être limité par la modération d’une instance.

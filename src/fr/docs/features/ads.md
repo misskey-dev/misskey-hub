@@ -1,13 +1,13 @@
-# Advertisements
+# Publicités
 
-Misskey can display ads in the instance timeline and other places if enabled by the instance administrator.
-You can reduce how often an ad is shown by clicking in the upper right corner of it.
+Misskey peut afficher des publicités dans les fils et d’autres emplacements de l’interface si activé par l’administration.
+Vous pouvez réduire la fréquence d’apparition d’une publicité en cliquant dans son coin supérieur droit.
 
-::: tip
-If the total number of ads being shown on the instance is small then an ad may still be shown to you often even after you choose to reduce how often it is displayed.
+::: Astuce
+Si le nombre total de publicités d’une instance est limité, une publicité peut apparaître souvent même si vous choisissez de réduire sa fréquence d’apparition.
 :::
 
-## Configuring Ads (Admins)
+## Configurer les publicités (Administration)
 
-You can add, edit, and delete ads from the control panel of your instance.
-In there you can set any image, destination URL, shape, and display percentage for the ad.
+Vous pouvez ajouter, modifier, et supprimer les publicités via le tableau de bord de votre instance.
+Vous pouvez choisir l’image, l’URL de destination, la forme, et la fréquence d’apparition de la publicité.
