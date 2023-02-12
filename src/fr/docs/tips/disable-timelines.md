@@ -1,10 +1,10 @@
-# Disabling the LTL/STL/GTL
-In Misskey, it's possible to individually deactivate the LTL/STL/GTL.You can enable or disable these individual timelines via the instance control panel.
+# Désactiver les  LTL/STL/GTL
+Dans Misskey, il est possible d’activer ou désactiver individuellement les LTL/STL/GTL depuis le tableau de bord de l’instance.
 
-As all posts across your instance can be seen in both the LTL and STL, they have the advantage of making it easy for new users to find others that they are interested in without having to use the manual user search. At the same time however, this means that following other users to see their posts is less important and inappropriate posts may be shown to users more frequently. Additionally, the experience becomes more alike that of a Chatroom, which in turn may make it more difficult for new users to join in one conversations with those who have been taking part for a long time. As the weight of these advantages and disadvantages may vary from server to server, the choice of using or not using them has been left to each individual instance. If you feel like the demerits outweigh the merits, please consider deactivating these respective timelines.
+Toutes les publications de votre instance étant disponibles dans le LTL et le STL, ils permettent aux nouveaux membres de trouver des personnes qui les intéressent sans avoir à manuellement les rechercher. À l’inverse, cela rend moins important de suivre des personnes pour voir leur activité et les publications inappropriées peuvent apparaître plus fréquemment. De plus, l’expérience se rapproche d’un salon de discussion où il est plus difficile de trouver sa place parmi les personnes plus anciennes. Cette balance variant selon les serveurs, le choix a été laissé à chaque instance. Si vous penser que les coûts sont trop importants, nous vous invitons à désactiver ces fils.
 
-::: warning
-Disabling timelines can lead to confusion and possibly to a short-time drop in users.Therefore, please carefully consider the effects of disabling a timeline, and explain the reasoning for doing so in advance, so that your users can prepare by e.g. following users they often talk with on the LTL/STL.
+::: Attention
+Désactiver ces fils peuvent amener une certaine confusion et entraîner une diminution temporaire du nombre de membres. Pensez à bien réflechir à cela avant tout action, et de l’expliquer à vos membres en leur laissant le temps de se préparer en s’abonnant aux personnes avec qui elles interagissent fréquemment.
 :::
 
-Additionally, Administrators / Moderators will be able to continue viewing these timelines even after they have been disabled.
+L’administration et la modération aura toujours accès à ces fils même désactivés.
