@@ -1,93 +1,93 @@
 ---
-description: "This channel provides basic information."
+description: "Ce canal fournit des informations basiques."
 ---
 
 # `main`
-This channel provides basic information.
+Ce canal fournit des informations basiques.
 
-## Parameters
-none
+## Paramètres
+Aucun
 
-## Events
+## Évènements
 ### `notification`
 <MkSchemaViewer :schema="{
 	$ref: 'misskey://Notification'
 }"/>
 
-Occurs when you receive a notification.
+Lorsque vous recevez une notification.
 
 ### `mention`
 <MkSchemaViewer :schema="{
 	$ref: 'misskey://Note'
 }"/>
 
-Occurs when a message is sent.
+Lorqu’un message est envoyé.
 
 ### `reply`
 <MkSchemaViewer :schema="{
 	$ref: 'misskey://Note'
 }"/>
 
-Occurs when a reply is received.
+Lors de la réception d’une réponse.
 
 ### `renote`
 <MkSchemaViewer :schema="{
 	$ref: 'misskey://Note'
 }"/>
 
-Occurs when one of your notes is renoted.
+Lorqu’une de vos notes est renotée.
 
 ### `follow`
 <MkSchemaViewer :schema="{
 	$ref: 'misskey://User'
 }"/>
 
-Occurs when you follow another user.
+Lorqsue vous vous abonnez à une autre personne.
 
 ### `followed`
 <MkSchemaViewer :schema="{
 	$ref: 'misskey://User'
 }"/>
 
-Occurs when another user follows you.
+Lorsqu’une autre personne vous suit.
 
 ### `unfollow`
 <MkSchemaViewer :schema="{
 	$ref: 'misskey://User'
 }"/>
 
-Occurs when you unfollow another user.
+Lorsque vous arrêtez de suivre une autre personne.
 
 ### `messagingMessage`
 <MkSchemaViewer :schema="{
 	$ref: 'misskey://MessagingMessage'
 }"/>
 
-Occurs when a chat message is received.
+Lorsqu’un message instantané est reçu.
 
 ### `readAllNotifications`
-Occurs when all notifications have been read.
+Lorsque toutes les notifications ont été lues.
 
 ### `unreadNotification`
-Occurs when there is a new notification.
+Lorsqu’il y a de nouvelles notifications.
 
 ### `unreadMention`
-Occurs when there is a new mention.
+Lorsqu’il y a une nouvelle mention.
 
 ### `readAllUnreadMentions`
-Occurs when all mentions have been seen.
+Lorsque toutes les mentions ont été vues.
 
 ### `unreadSpecifiedNote`
-Occurs when there is a new direct note.
+Lorqu’il y a de nouvelles notes directes.
 
 ### `readAllUnreadSpecifiedNotes`
-Occurs when all direct notes have been read.
+Lorsque toutes les notes directes ont été lues.
 
 ### `unreadMessagingMessage`
-Occurs when there is a new  chat message.
+Lorsqu’il y a un nouveau message instantané.
 
 ### `readAllMessagingMessages`
-Occurs when all chat messages have been read.
+Lorsque ltous les messages instantanés ont été lus.
 
-## Operations
-none
+## Opérations
+Aucune

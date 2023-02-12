@@ -1,4 +1,4 @@
-# Note Capture Events
+# Évènements de capture de note
 
 ## `reacted`
 <MkSchemaViewer :schema="{
@@ -15,7 +15,7 @@
 	}
 }"/>
 
-Occurs when a reaction is made to the target note.
+Lorsqu’une personne réagit à une note.
 
 ## `pollVoted`
 <MkSchemaViewer :schema="{
@@ -32,7 +32,7 @@ Occurs when a reaction is made to the target note.
 	}
 }"/>
 
-Occurs when the survey attached to the target note is voted on.
+Lorsque qu’une personne participe à un sondage.
 
 ## `deleted`
 <MkSchemaViewer :schema="{
@@ -45,4 +45,4 @@ Occurs when the survey attached to the target note is voted on.
 	}
 }"/>
 
-Occurs when the target note is deleted.
+Lorsqu’une note est supprimée.

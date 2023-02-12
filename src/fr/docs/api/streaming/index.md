@@ -1,51 +1,51 @@
 ---
-description: 'The streaming API provides real-time information (e.g., new posts in the timeline, reactions, followers, etc.) and various other operations.'
+description: 'L’API de flux fournit des informations en temps réel (ex : nouvelles notes, réactions, abonnements, etc…) ainsi que d’autres opérations.'
 ---
 
-# Streaming API
+# API de flux
 
-::: tip
-You should read the [Misskey API documentation](../index.md) first.
+::: Astuce
+Assurez-vous d’avoir lu la [documention API Misskey](../index.md) au préalable.
 :::
 
-The streaming API provides real-time information (e.g., new posts in the timeline, reactions, followers, etc.) and various other operations.
+L’API de flux fournit des informations en temps réel (ex : nouvelles notes, réactions, abonnements, etc…) ains que d’autres opérations.
 
-## Connecting to the stream.
+## Se connecter au flux
 
-To use the streaming API, you have to connect to the Misskey server using **websocket**.
+Pour utiliser l’API vous devez vous connecter au serveur Misskey via **websocket**.
 
-The websocket URL looks like this:
+L’URL de celui-ci ressemble à :
 
 ```:no-line-numbers
 wss://{host}/streaming?i={token}
 ```
 
-where
-- `{host}` is the host of the instance you want to connect to.
-- `{token}` is the users access token.
+où
+- `{host}` est le nom de l’hôte de l’instance ;
+- `{token}` est la clé d’accès.
 
-::: tip
-You can also connect without the access token, but this will limit the information you receive and operations you can perform.
+::: Astuce
+Vous pouvez vous connecter sans clé d’accès, mais cela limitera les informations reçues et les opérations possibles.
 :::
 
-Once you are connected to the stream, you can subscribe to posts as described below, but at this stage you cannot, for example, receive new posts from your timeline.
+Une fois la connexion établie, vous pourrez vous abonner aux publications décrites ci-dessous. Il n’est pas encore possible, par exemple, de recevoir les nouvelles publications de votre fil.
 
-To receive such events, you need to join a **channel** on the stream, as described below.
+Pour recevoir ces évènements, vous devez rejoindre un **canal** sur le flux, tel que décrit ci-dessous.
 
-**All data should be encoded as JSON.**
+**Toutes les données sont au format JSON**
 
-## Channel
-Misskey's streaming API has the concept of channels. This is a mechanism for separating the information to be sent and received.
-By joining channels on the stream, you will be able to receive various kinds of information and send information.
+## Canal
+L’API de flux Misskey utilise un concept de canaux. Ce mécanisme sépare les informations reçus et envoyées.
+En rejoignant des canux, vous aurez la possibilité de recevoir et envoyer de nombreuses informations.
 
-::: tip
-You can join multiple channels simultaneously on a single stream connection.
+::: Astuce
+Vous pouvez rejoindre plusieurs canaux simultanément via un flux unique.
 :::
 
-The following sections describe how to use the channels. To see what channels are available, please refer to the [Channel List](./channel/index.md).
+Les sections suivantes décrivent comment utiliser les canaux. Pour voir quels canaux sont disponible, se référer à la [liste des canaux](./channel/index.md).
 
-### Joining a channel
-To join a channel, send the following JSON data on the stream:
+### Rejoindre un canal
+Pour rejoindre un canad, envoyez les données JSON suivant sur le flux :
 
 ```js
 {
@@ -60,19 +60,19 @@ To join a channel, send the following JSON data on the stream:
 }
 ```
 
-where
-- `channel` is the name of the channel you want to connect to. The types of channels are described later in this section.
-- `id` is an arbitrary ID for interacting with that channel. This is necessary to identify which channel the message is coming from, because a stream contains multiple channels. This ID can be something like a UUID or a random number.
-- `params` are parameters required when joining a channel. Different channels require different parameters when connecting. When connecting to a channel that does not require parameters, this property can be omitted.
+où
+- `channel` est le nom du canal auquel se connecter. Les type de canaux sont décrits par la suite ;
+- `id` est un identifiant arbitraire pour interragir avec ce canal. Il est nécessaire pour identifier de quel canal le message provient, un flux pouvant contenir différent canaux. Cet identifiant peut être un UUID ou un nombre aléatoire ;
+- `params` sont les paramètres requis pour rejoindre un canal. Chaque canal requiert des paramètres propres. Si un canal n’en demande pas, alors cette propriété peut être laissée vide.
 
-::: tip
-The ID is not per channel but per channel connection, because a channel may be needed multiple times but with different parameters.
+::: Astuce
+L’identifiant n’est pas unique par canal mais par connexion car un canal peut être utilisé plusieurs fois avec différents paramètres.
 :::
 
-### Receiving messages from channels
-For example, a timeline channel will send out a message when there is a new post. By receiving the message, you will know in real time that a new post has been published on your timeline.
+### Recevoir des messages de canaux
+Lors de la réception d’un message indiquant une nouvelle publication sur un canal, vous saurez en temps réel qu’une nouvelle publication est disponible sur votre fil.
 
-When a channel issues a message, the following JSON data is sent:
+Quand un canal génère un message, les données JSON suivantes sont envoyées :
 ```js
 {
 	type: 'channel',
@@ -86,15 +86,15 @@ When a channel issues a message, the following JSON data is sent:
 }
 ```
 
-where
-- `id` is the ID that you set when connecting to that channel as mentioned above. This lets you know from which channel (instantiation) this message is coming.
-- `type` is the type of message. The types of messages that get sent depend on the channel.
-- `body` holds the content of the message. The content of the message depends on the channel.
+où
+- `id` est l’identifiant utilisé lors de la connexion au canal. Cela vous permet de savoir de quel canal le message vient ;
+- `type` est le type de message. Selon le canal, celui-ci diffère ;
+- `body` contient le contenu du message, celui-ci diffère selon le canal.
 
-### Sending a message to a channel
-On some channels, it is also possible to send messages and perform other operations in addition to receiving messages.
+### Envoyer un message via un canal
+Sur certains canaux, il est également possible d’envoyer des messages et d’effectuer d’autres opérations en plus de la réception.
 
-To send a message to a channel, send the following JSON data to the stream:
+Pour envoyer un message à un canal, envoyez les données JSON suivantes :
 ```js
 {
 	type: 'channel',
@@ -108,13 +108,13 @@ To send a message to a channel, send the following JSON data to the stream:
 }
 ```
 
-where
-- `id` is the ID that you set when connecting to that channel as mentioned above. This lets you determine which channel (instantiation) the message is for.
-- `type` is the type of message. Different channels accept different types of messages.
-- `body` contains the content of the message. Different channels accept different message contents.
+où
+- `id` est l’identifiant utilisé lors de la connexion au canal. Cela vous permet d’indiquer à quel canal le message est destiné ;
+- `type` est le type de message, celui-ci diffère selon les canaux ;
+- `body` contient le corps du message, celui-ci diffère selon les canaux.
 
-### Disconnecting from a channel
-To disconnect from a channel (instantiation), send the following JSON data to the stream:
+### Se déconnecter d’un canal
+Pour se déconnecter d’un canal, envoyez les données JSON suivantes :
 ```js
 {
 	type: 'disconnect',
@@ -124,22 +124,22 @@ To disconnect from a channel (instantiation), send the following JSON data to th
 }
 ```
 
-where
-- `id` is the ID that you set when connecting to that channel as mentioned above. This lets you determine which channel (instantiation) you want to disconnect from.
+où
+- `id` est l’identifiant utilisé lors de la connexion au canal. Cela permet d’indiquer de quel canal se déconnecter.
 
-## Capturing Notes
-Misskey provides a mechanism called note capture. This is the ability to receive a stream of events for a given note.
+## Capturer des notes
+Misskey propose un mécanisme de capture de note. Cela permet de recevoir un flux d’évènements pour une note spécifique.
 
-For example, let's say you grab a timeline and display it to your users. Let's say someone reacts to one of the posts in the timeline.
-However, since the client has no way of knowing that a note has been reacted to, it is not possible to reflect the reaction in the timeline in real time.
+Par exemple, si vous affichez un fil et qu’une personne réagit à une des publications, le client ne peut pas savoir de quelle publication il s’agit et il n’est pas possible d’afficher la réaction en temps réel.
 
-To solve this problem, Misskey provides a note capture mechanism. When you capture a note, you will receive events related to that note, and you can display reactions to it in real time.
+En capturant une note, vous recevrez les évènements qui y sont liés, et pourrez afficher les réactions en temps réel.
 
-The following sections describe how to use the note capture function. To see what kind of capture events are available, see the [Capture Events List](./note-capture-events.md).
+La section suivante décrit l’usage de cette fonction. Pour voir les type d’évènements sont capturables, vour la [liste](./note-capture-events.md).
 
-### Capturing a Note
+### Capturer une note
 
-To capture a note, send the following JSON data to the stream:
+Pour capturer une note, envoyer les données JSON suivantes :
+
 ```js
 {
 	type: 'subNote',
@@ -149,12 +149,12 @@ To capture a note, send the following JSON data to the stream:
 }
 ```
 
-where
-- `id` is the ID of the note you want to capture.
+où
+- `id` est l’identifiant de la note à capturer.
 
-When you send this message, you are asking Misskey to capture the note, and events related to that note will then be streamed to you.
+En envoyant ce message, vous demandez à Misskey de capturer la note, et les évènements qui y sont liés vous seront relayés.
 
-For example, when a note gets a reaction, you will see a message like the following:
+Si une note reçoit une réacton, vous recevrez un message au format suivant :
 ```js
 {
 	type: 'noteUpdated',
@@ -169,16 +169,14 @@ For example, when a note gets a reaction, you will see a message like the follow
 }
 ```
 
-where
-- `body.id` will be set to the ID of the post that triggered the event.
-- `body.type` will be the type of the event.
-- `body.body` will contain the details of the event.
+où
+- `body.id` est l’identifiant de la note ;
+- `body.type` est letype d’évènement ;
+- `body.body` contient les détails de l’évènement.
 
-### Un-capturing a Note
+### Dé-capturer une note
 
-If you no longer want to receive events related to a note, such as when it no longer appears on your screen, you can remove the capture request.
-
-Send the following JSON data:
+Pour ne plus recevoir d’évènements liés à une note, par exemple si celle-ci n’est plus affichée à l’écran. envoyez les données JSON suivantes :
 ```js
 {
 	type: 'unsubNote',
@@ -188,7 +186,7 @@ Send the following JSON data:
 }
 ```
 
-where
-- `id` is the ID of the note you want to uncapture.
+où
+- `id` est l’identifiant de la note.
 
-Once you send this message, no more events related to that note will be sent to you.
+Une fois ce message envoyé, les évènements liés à cette note ne vous seront plus transmises.

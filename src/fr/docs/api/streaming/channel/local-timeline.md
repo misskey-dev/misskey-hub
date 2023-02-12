@@ -1,20 +1,20 @@
 ---
-description: "Channel where nots from the local timeline are streamed."
+description: "Canal de notes du fil public local."
 ---
 
 # `localTimeline`
-Channel where nots from the local timeline are streamed.
+Canal de notes du fil public local.
 
-## Parameters
-none
+## Paramètres
+Aucun
 
-## Events
+## Évènements
 ### `note`
 <MkSchemaViewer :schema="{
 	$ref: 'misskey://Note'
 }"/>
 
-Occurs when a new note is added to the local timeline.
+Lorsqu’une nouvelle note est ajoutée dans le fil public local.
 
-## Operations
-none
+## Opérations
+Aucune

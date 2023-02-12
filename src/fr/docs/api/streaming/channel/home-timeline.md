@@ -1,20 +1,20 @@
 ---
-description: "Channel where nots from the home timeline are streamed."
+description: "Canal de notes du fil d’accueil."
 ---
 
 # `homeTimeline`
-Channel where nots from the home timeline are streamed.
+Canal de notes du fil d’accueil.
 
-## Parameters
-none
+## Paramètres
+Aucun
 
-## Events
+## Évènements
 ### `note`
 <MkSchemaViewer :schema="{
 	$ref: 'misskey://Note'
 }"/>
 
-Occurs when a new note is added to the home timeline.
+Lorsqu’une nouvelle note est ajoutée au fil d’accueil.
 
-## Operations
-none
+## Opérations
+Aucune

@@ -1,20 +1,20 @@
 ---
-description: "Channel where nots from the global timeline are streamed."
+description: "Canal des notes du fil public global."
 ---
 
 # `globalTimeline`
-Channel where nots from the global timeline are streamed.
+Canal des notes venant du fil public global.
 
-## Parameters
-none
+## Paramètres
+Aucun
 
-## Events
+## Évènements
 ### `note`
 <MkSchemaViewer :schema="{
 	$ref: 'misskey://Note'
 }"/>
 
-Occurs when a new note is added to the global timeline.
+Lorsqu’une nouvelle note est ajoutée dans le fil public global.
 
-## Operations
-none
+## Opérations
+Aucune
