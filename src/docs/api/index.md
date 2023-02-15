@@ -103,6 +103,7 @@ https://{host}/api/miauth/{session}/check
 - HTTP APIはすべてPOSTで、リクエスト/レスポンスともにJSON形式です（drive/files/createを除く）。
 - 要求ヘッダーに`Content-Type: application/json`を指定します。
 - アクセストークンは、`i`というパラメータ名でリクエストボディJSONに含めます。
+- ベースURLは`https://{インスタンスのドメイン}/api`です。
 
 :::
 
