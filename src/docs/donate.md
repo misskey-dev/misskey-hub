@@ -3,6 +3,7 @@ Misskeyはビジネスではなく、利用は無料であるため、収益は�
 寄付をしていただければ、今後も開発を続けることが可能になり、プロジェクトへの貢献になります。以下の方法で受け付けています。
 - [PayPal](https://paypal.me/syuilo)
 - [Patreon](https://www.patreon.com/syuilo)
+- [Open Collective](https://opencollective.com/misskey)
 - 仮想通貨: `0xF1121108E21C92aAC7814137DD67e0d48eAC7Fdc`
 
 ::: tip
