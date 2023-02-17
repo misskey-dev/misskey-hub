@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-2bca8840","path":"/fr/docs/features/follow.html","title":"Abonnement","lang":"ja-JP","frontmatter":{},"excerpt":"","headers":[],"git":{"updatedTime":1676220875000,"contributors":[{"name":"Lejun","email":"lejun@gmx.fr","commits":2}]},"filePathRelative":"fr/docs/features/follow.md"}');export{e as data};
