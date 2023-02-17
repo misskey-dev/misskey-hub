@@ -1,0 +1,4 @@
+# Donations à ce projet
+Misskey n’est pas une entreprise, et reste gratuit à utiliser grâce à vos dons. (Selon l’instance, des revenus peuvent être générés via des publicités, mais ceux-ci vont directement à l’administration de l’instance et non à l’équipe de développement de Misskey.) Les dons assurent la pérénnité du projet et son développement, et constituent une autre forme de soutenir Misskey. Généralement acceptés via [Patreon](https://www.patreon.com/syuilo), en faisant un don votre nom peut apparaître sur la [page À Propos](/about-misskey) de Misskey.
+
+À cela s’ajoute que l’administration des serveurs n’est généralement pas rémunéré. La maintenance du serveur ayant un certain coût, nous vous invitons à également aider l’administration de votre serveur. Bien que n’ayant pas de lien direct avec le développement de Misskey, c’est l’existence de ces serveurs qui matérialise ce projet rendant leur activité aussi importante que Misskey même.
