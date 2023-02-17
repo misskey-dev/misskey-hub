@@ -48,7 +48,7 @@ sections:
         description: "Vous avez la parlotte ? Faites un fil ! Chaque publication peut contenir jusqu’à 3000 caractères par défaut, de quoi faire durer vos conversations durant de longues heures."
       widgets:
         title: "Extensions"
-        description: "Disposez de nombreuses fonctions à portée de doigt avec plus d’une douzaine d’extensions personnalisables !$
+        description: "Disposez de nombreuses fonctions à portée de doigt avec plus d’une douzaine d’extensions personnalisables !"
   gettingStarted:
     title: "Rejoignez Misskey aujourd’hui !"
     find:
