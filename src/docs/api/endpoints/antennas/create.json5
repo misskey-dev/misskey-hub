@@ -20,15 +20,9 @@
 					'all',
 					'users',
 					'list',
-					'group',
 				],
 			},
 			userListId: {
-				type: 'string',
-				format: 'misskey:id',
-				nullable: true,
-			},
-			userGroupId: {
 				type: 'string',
 				format: 'misskey:id',
 				nullable: true,
@@ -93,11 +87,6 @@
 		'95063e93-a283-4b8b-9aa5-bcdb8df69a7f': {
 			id: '95063e93-a283-4b8b-9aa5-bcdb8df69a7f',
 			code: 'NO_SUCH_USER_LIST',
-			description: '',
-		},
-		'aa3c0b9a-8cae-47c0-92ac-202ce5906682': {
-			id: 'aa3c0b9a-8cae-47c0-92ac-202ce5906682',
-			code: 'NO_SUCH_USER_GROUP',
 			description: '',
 		},
 	},
