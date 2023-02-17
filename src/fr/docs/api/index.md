@@ -67,11 +67,9 @@ Vous pouvez également ajouter des options telles que des paramètres dans l’U
 | `callback` | L’URL de redirection après identificaton, avec l’ID session en tant que `session`. |
 | `permission` | Les permissions requises par l’application. <br>Liste les permissions à demander, séparées par `,`. La liste complète est consultable [ici](TODO). |
 
-::: Exemple
 ```:no-line-numbers
 https://misskey.io/miauth/c1f6d42b-468b-4fd2-8274-e58abdedef6f?name=MyApp&callback=https%3A%2F%2Fmyapp.example.com%2Fcallback&permisson=write:notes,write:following,read:drive
 ```
-:::
 
 #### Étape 3
 Après l’identification, une requête POST à une URL du format suivant retournera en un JSON contenant la clé d’accès :
