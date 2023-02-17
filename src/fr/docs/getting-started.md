@@ -5,7 +5,7 @@ Pour utiliser Misskey, vous devez créer un compte sur une instance et vous y co
 
 Vous pouvez sélectionner l’instance de votre choix depuis la [liste des instances](../instances.md).
 
-::: Astuce
+::: tip
 Peu importe l’importe choisie, vous serez en capacité de communiquer avec les autres instances.
 
 ::: Détails

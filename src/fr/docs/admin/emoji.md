@@ -20,7 +20,7 @@ Si vous disposez d’une image que vous souhaiter utiliser, celle-ci peut être 
 Cela fonctionne comme en joignant des fichiers à une note :
 Vous pouvez choisir de téléverser un nouveau fichier, et le sélectionner depuis votre Drive Misskey ou une URL distante.
 
-::: Attention
+::: warning
 En important une émoticône sur votre Drive, le fichier y restera.
 Misskey ne fait pas de copies de ce fichier et si vous le supprimez celui-ci sera cassé.
 :::
@@ -32,7 +32,7 @@ L’émoticône sera ajoutée à l’instance et vous pourez la modifier ou supp
 Les émoticônes peuvent être importées en masse à partir d’un format spécial au sein d’une archive ZIP.
 Cette fonction est disponible dans le menu du coin supérieur droit de l’onglet d’émoticônes personnalisées.
 
-::: Attention
+::: warning
 L’import en masse peut écraser les émoticônes existant et créer de nombreux problèmes sur l’instance.
 Assurez vous de n’importer que depuis des sources de confiance, voire que vous aurez-vous même exporté dans l’idéal.
 :::
@@ -88,7 +88,7 @@ Seul les suivants sont utilisés :
 Les propriétés d’une émoticône peuvent être modifiése en la sélectionnant dans la liste locale.
 Un menu permet de la modifier ou supprimer.
 
-::: Attention
+::: warning
 En supprimant une émoticône personnalisées, les anciennes notes seront modifiées.
 :::
 

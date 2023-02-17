@@ -12,11 +12,11 @@ Ajouter une note à vos [favoris](./favorite) vous permet de la retrouver facile
 
 Pour composer une note, cliquez sur l’un des boutons avec une icône de crayon de votre écran pour ovurir l’onglet (en tête de votre fil ou en pied de votre menu de navigation). Insérez le contenu souhaité et cliquez sur « Noter » pour la publier. Les notes peuvent contenir du texte, des fichiers multimédias, et des [sondages](./poll). De plus, vous pouvez utiliser le [MFM](./mfm) au sein de votre texte pour inclure des [mentions](./mention) et des [mots-croisillons](./hashtag). D’autres options comme l’avertissement de contenu (CW) ou la visibilité de note sont expliquées plus bas.
 
-::: Astuce
+::: tip
 Si vous êtes sur un ordinateur et qu’une image est dans votre presse-papier, vous pouvez l’insérer dans une note avec le raccourci usuel au sein du champ de texte.
 :::
 
-::: Astuce
+::: tip
 Vous pouvez également utiliser <kbd class="key">Ctrl + Entrée</kbd> dans le champ de texte pour publier la note.
 :::
 
@@ -24,7 +24,7 @@ Vous pouvez également utiliser <kbd class="key">Ctrl + Entrée</kbd> dans le ch
 
 Désigne l’action de citer ou partager une note existante. La note résultante est appelée une Renote/RN du verbe renoter. Généralement, cette fonction est utilisée pour partager une note qui vous plait à votre propre cercle, ou pour republier une de vos anciennes notes. Bien que possible, renoter plusieurs fois la même note peut être mal vu.
 
-::: Attention
+::: warning
 Si la visibilité de votre note est limitée à Directe ou aux personnes qui vous suivent, il ne sera pas possible de la renoter.
 :::
 
@@ -42,7 +42,7 @@ Il est possible de régler la visibilité de chaque note. En cliquant sur l’ic
 
 Votre note sera visible pour tout le monde et sera affichée dans tous les fils.
 
-::: Attention
+::: warning
 Cette option n’est pas disponible si votre compte est <a href="./silence">limité</a>.
 :::
 
@@ -74,7 +74,7 @@ Cette option permet à votre note de pas apparaître sur d’autres instances.
 
 En épinglant une note à votre profil, celle-ci sera constamment affichée en en-tête. Pour l’épingler, sélectionnez l’option dans le menu d’une note.
 
-::: Astuce
+::: tip
 Il est possible d’épingler plusieurs notes à son profil.
 :::
 

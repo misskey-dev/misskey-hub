@@ -34,6 +34,6 @@ Votre état est affiché comme indicateur dans le coin de votre icône de profil
 Votre état de connexion change automatiquement et ne peut pas être réglé manuellement.
 Vous pouvez le rendre privé.
 
-::: Attention
+::: warning
 Certaines fonctions comme les suggestions de membres, peuvent se baser sur votre état de connexion. Le rendre privé peut vous rendre difficile à trouver.
 :::

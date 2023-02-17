@@ -4,7 +4,7 @@ description: 'L’API de flux fournit des informations en temps réel (ex : nou
 
 # API de flux
 
-::: Astuce
+::: tip
 Assurez-vous d’avoir lu la [documention API Misskey](../index.md) au préalable.
 :::
 
@@ -24,7 +24,7 @@ où
 - `{host}` est le nom de l’hôte de l’instance ;
 - `{token}` est la clé d’accès.
 
-::: Astuce
+::: tip
 Vous pouvez vous connecter sans clé d’accès, mais cela limitera les informations reçues et les opérations possibles.
 :::
 
@@ -38,7 +38,7 @@ Pour recevoir ces évènements, vous devez rejoindre un **canal** sur le flux, t
 L’API de flux Misskey utilise un concept de canaux. Ce mécanisme sépare les informations reçus et envoyées.
 En rejoignant des canux, vous aurez la possibilité de recevoir et envoyer de nombreuses informations.
 
-::: Astuce
+::: tip
 Vous pouvez rejoindre plusieurs canaux simultanément via un flux unique.
 :::
 
@@ -65,7 +65,7 @@ où
 - `id` est un identifiant arbitraire pour interragir avec ce canal. Il est nécessaire pour identifier de quel canal le message provient, un flux pouvant contenir différent canaux. Cet identifiant peut être un UUID ou un nombre aléatoire ;
 - `params` sont les paramètres requis pour rejoindre un canal. Chaque canal requiert des paramètres propres. Si un canal n’en demande pas, alors cette propriété peut être laissée vide.
 
-::: Astuce
+::: tip
 L’identifiant n’est pas unique par canal mais par connexion car un canal peut être utilisé plusieurs fois avec différents paramètres.
 :::
 

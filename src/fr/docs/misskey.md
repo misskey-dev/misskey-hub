@@ -5,7 +5,7 @@ Misskey est une plateforme libre et distribuée de microblogage. Son développem
 ## Historique
 D’abord pensé comme un tableau public, le gain en popularité suite à l’ajout d’un fil d’actualité (permettant aux membres de publier des messages courts et de les visualiser dans un ordre chronologique) a opéré un changement graduel du développement vers ce type de fonctionnalité. Misskey n’a pas toujours été un service décentralisé et l’est devenu avec l’adoption d’ActivityPub en 2018. C’est depuis lors un service utilisé et reconnu par la population.
 
-::: Astuce
+::: tip
 Le nom « Misskey » vient de la chanson « Brain Diver » d’un groupe, alors appelé May’n, que syuilo écoutait.
 :::
 
@@ -17,7 +17,7 @@ Un service <b>distribué</b> ou <b>décentralizé</b>, désigne un service où l
 ## Code ouvert
 Misskey a toujours été, et sera toujours, libre. De manière simplifiée, cela signifie <b>rendre visible au public le code source d’un logiciel.</b>. Cela permet également de modifier ou redistribuer le code. L’intégralité du [code de Misskey](https://github.com/misskey-dev) est sous licence [AGPL](https://github.com/misskey-dev/misskey/blob/develop/LICENSE), ce qui signifie que vous êtes libre de l’auditer, utiliser, modifier, et redistribuer de manière à assurer qu’il ne contient rien de dangereux et pouvoir participer à son développement. Pour concrétiser la nature distribuée de Misskey, cet aspect libre est indispensable. Comme précédemment, les services à but lucratif comme Twitter ou Facebook n’ont pas de code ouvert.
 
-::: Astuce
+::: tip
 Techniquement, le code source de Misskey est géré via Git, et son dépot est hébergé sur [GitHub.](https://github.com/misskey-dev).
 :::
 

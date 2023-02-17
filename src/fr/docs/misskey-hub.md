@@ -4,7 +4,7 @@ L’objectif est d’en faire un pilier central pour tout ce qui a lien avec  Mi
 
 Misskey Hub est [libre](https://github.com/misskey-dev/misskey-hub).
 
-::: Astuce
+::: tip
 Misskey Hub est un site static construit via [VuePress](https://github.com/vuepress/vuepress-next).
 :::
 

@@ -1,5 +1,5 @@
 # Liste d’instances
-::: Astuce
+::: tip
 Si vous souhaitez voir votre instance dans cette liste, contactez nous via [Discord](https://discord.gg/Wp8gVStHW3) ou faites une PullRequest sur le dépot [GitHub](https://github.com/misskey-dev/misskey-hub) de ce site.
 :::
 

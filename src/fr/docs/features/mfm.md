@@ -5,7 +5,7 @@ description: 'MFM est un langage de balise spécifique à Misskey.'
 # MFM
 MFM, abréviation de Misskey Flavoured Markdown, est un langage de balise spécifique à Misskey.
 
-::: Astuce
+::: tip
 Une partie de la syntaxe est compatible avec Markdown.
 :::
 
@@ -17,7 +17,7 @@ Une partie de la syntaxe est compatible avec Markdown.
 
 ## Syntaxe
 ### Mentions
-::: Astuce
+::: tip
 Pour plus d’informations sur les mentions, voir [ici](./mention.md).
 :::
 
@@ -30,7 +30,7 @@ Pour plus d’informations sur les mentions, voir [ici](./mention.md).
 
 ### Mot-croisillon
 
-::: Astuce
+::: tip
 Pour plus d’informations sur les mots-croisillons, voir [ici](./hashtag).
 :::
 
@@ -40,7 +40,7 @@ Pour plus d’informations sur les mots-croisillons, voir [ici](./hashtag).
 
 ### Émoticône personnalisé
 
-::: Astuce
+::: tip
 Pour plus d’informations sur les émoticônes personnalisés, voir [ici](./custom-emoji).
 :::
 
@@ -62,7 +62,7 @@ Pour plus d’informations sur les émoticônes personnalisés, voir [ici](./cus
 
 ---
 
-::: Astuce
+::: tip
 Plus de détails sur la syntaxe sont disponibles sur le **pense-bête MFM** de l’interface web Misskey sur la page `/mfm-cheat-sheet` de votre instance.
 :::
 

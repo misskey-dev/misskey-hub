@@ -5,13 +5,13 @@ description: 'Liste de logos, icônes, et autres ressources Misskey.'
 # Liste de ressources
 Voici une liste de logos, icônes, et autres ressources Misskey.
 
-::: Astuce
+::: tip
 Ces ressources sont libres d’utilisation sous la licence **CC BY-NC-SA** !🎉
 
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="CC BY-NC-SA" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>
 :::
 
-::: Astuce
+::: tip
 Toutes les ressources sont disponibles dans [misskey-dev/assets](https://github.com/misskey-dev/assets).
 :::
 

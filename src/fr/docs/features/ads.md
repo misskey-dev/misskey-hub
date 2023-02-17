@@ -3,7 +3,7 @@
 Misskey peut afficher des publicités dans les fils et d’autres emplacements de l’interface si activé par l’administration.
 Vous pouvez réduire la fréquence d’apparition d’une publicité en cliquant dans son coin supérieur droit.
 
-::: Astuce
+::: tip
 Si le nombre total de publicités d’une instance est limité, une publicité peut apparaître souvent même si vous choisissez de réduire sa fréquence d’apparition.
 :::
 

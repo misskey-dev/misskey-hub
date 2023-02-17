@@ -4,11 +4,11 @@ Si une personne ne vous plaît pas, il vous est possible de l’ignorer de sorte
 Autrement, il est possible de bloquer une personne pour l’empêcher de voir votre activité et d’interagir de quelque façon que ce soit.
 Les personnes ne sont pas notifiée que vous les ignorez mais sauront si vous les avez bloqué. À vous de décider quelle option vous préférez.
 
-::: Astuce
+::: tip
 Ignorer et bloquer peuvent être utilisés ensemble.
 :::
 
-::: Attention
+::: warning
 Pensez à signaler à la modération toute personne qui violerait les conditions générales d’utilisation.
 :::
 
@@ -24,7 +24,7 @@ En ignorant une personne, n’apparaîtront plus sur Misskey :
 
 Pour l’ignorer, ouvrez le menu sur son profil et cliquez sur le bouton « Ignorer ».
 
-::: Astuce
+::: tip
 Ces personnes ne sauront pas que vous les ignorez.
 :::
 
@@ -45,11 +45,11 @@ De plus ;
 
 Pour bloquer une personne, ouvrez le menu sur son profil et cliquez sur le bouton « Bloquer ».
 
-::: Attention
+::: warning
 Vous ne recevrez pas de notification si une personne vous bloque, vous le saurez indirectement en étant incapable d’interagir avec son contenu.
 :::
 
-::: Attention
+::: warning
 Une personne bloquée pourra tout de même voir votre contenu en se déconnectant ou changeant de compte. Bloquer est une fonction simple mais pratique.
 Vous pouvez modifier vos paramètres de manière à rendre la tâche plus difficile aux personnes bloquées en demandant systématiquement votre autorisation pour vous suivre et en limitant votre visibilité auxpersonnes qui vous suivent.
 :::

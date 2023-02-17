@@ -6,7 +6,7 @@ Différentes options sont disponibles dans l’URL, dont le contenu partagé, en
 
 ## Paramètres de requête
 
-::: Astuce
+::: tip
 Tous les paramètres sont **facultatifs**.
 :::
 
@@ -45,7 +45,7 @@ Les options suivantes vous permettent de sélectionner la portée :
 | `visibleUserIds` | ID du profil cible |
 | `visibleAccts` | [acct](../glossary.md#acct) des profils cibles (séparés par des virgules) |
 
-::: Attention
+::: warning
 Si `visibility` est réglé sur `specified`,  `visibleUserIds` ou `visibleAccts` sont nécessaires.
 :::
 

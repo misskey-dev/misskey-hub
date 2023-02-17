@@ -6,7 +6,7 @@ description: 'Misskey offre une API pour développer son propre client Misskey, 
 Misskey dispose d’une APi pour développer son propre client Misskey, des services liés, des bots, etc… (« Applications »).
 Il existe également un flux API pour créer des applications avec des fonctions en temps réel.
 
-::: Astuce
+::: tip
 En utilisant le SDK officiel Misskey ou une librairie tierce, vous pouvez utiliser l’API de manière à simplifier des étapes décrites dans ce document.
 Voir [ici](TODO) pour plus d’informations à propos des librairies.
 :::
@@ -18,7 +18,7 @@ Ce document vous accompagne dans l’obtention de cette clé et montre comment l
 L’API requiert une clé d’accès pour ses requêtes.
 Une clé d’accès est un ensemble de données associée à une personne, l’identifiant comme utilisant l’API et contrôlant les opérations qui sont effectuées.
 
-::: Astuce
+::: tip
 La clé est nominative et ne peut être utilisée que par une personne, plusieurs clés peuvent être possédées par une personne.
 :::
 
@@ -27,14 +27,14 @@ Vous pouvez facilement [obtenir votre clé d’accès](#Méthode-manuelle), ou u
 ### Méthode manuelle
 Vous pouvez créer votre propre clé d’accès via l’interface Misskey Web dans la section API des paramètres.
 
-::: Attention
+::: warning
 Ne communiquez pas cette clé.
 :::
 
 ### Demander une clé d’accès
 Pour obtenir une clé d’accès pour une personne utilisant votre application, suivre les étapes suivantes :
 
-::: Astuce
+::: tip
 以下に説明する方法は、アプリを作成せずインスタントにアクセストークンを発行する、MiAuthと呼ばれるものです。
 
 [アプリ作成方式でのアクセストークン取得方法もあります（旧来型）。](./app)
@@ -43,7 +43,7 @@ Pour obtenir une clé d’accès pour une personne utilisant votre application, 
 #### Étape 1
 Générer un UUID, ci-après dénommé **ID session**.
 
-::: Attention
+::: warning
 Cet ID session est à usage unique.
 :::
 
@@ -93,7 +93,7 @@ Les propriétés incluses dans la réponse sont les suivantes :
 ## Utilisation de l’API
 Une fois la clé en main, vous pouvez utiliser l’API pour faire des requêtes.
 
-::: Astuce
+::: tip
 - Toutes les API HTTP sont POST, et les requête comme les réponses sont au format JSON (à l’exception de drive/files/create ;
 - Indiquez `Content-Type: application/json` dans l’entête de requête ;
 - La clé d’accès est dans le corps de requête JSON avec comme valeur de name `i`.
@@ -112,12 +112,12 @@ La clé d’accès est incluse dans le corps de requête JSON comme paramètre `
 
 Pour plus d’informations à propos de l’API voir [référence API](./endpoints.html).
 
-::: Attention
+::: warning
 Misskey n’utilise pas REST.
 :::
 
 En plus de l’API HTTP, Misskey fourni un flux API. Plus d’informations à ce sujet [ici](.streaming/).
 
-::: Astuce
+::: tip
 Votre instance Misskey dispose de sa propre documentation d’API à `/api-doc`.
 :::

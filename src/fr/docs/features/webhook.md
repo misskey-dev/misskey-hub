@@ -1,10 +1,10 @@
 # Webhook
 
-::: Astuce
+::: tip
 Cette fonction est disponible à partir de la version 12.109.0.
 :::
 
-::: Attention
+::: warning
 C’est une fonction expérimentale qui peut être instable ou être modifiée à l’avenir.
 :::
 

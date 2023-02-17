@@ -2,7 +2,7 @@
 
 Drive est une fonction permettant de gérer vos fichiers sur Misskey.
 
-::: Astuce
+::: tip
 Techniquement, Drive est une interface centrale pour gérer tout le système Misskey qui est également disponible aux membres.
 :::
 
@@ -12,7 +12,7 @@ Les fichiers téléversés sur Drive peuvent être téléchargés à tout moment
 
 Vous pouvez également créer des dossiers sur votre Drive pour rassembler des fichiers ensemble.
 
-::: Attention
+::: warning
 Pour le moment, la suppression d’un fichier sur le drive entraîne la suppression de **tout contenu (note, pages, etc…)** rattaché.
 :::
 

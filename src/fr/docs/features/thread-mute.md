@@ -1,6 +1,6 @@
 # Ignore un fil
 
-::: Astuce
+::: tip
 Cette fonction est disponible depuis la version 12.95.0.
 :::
 
@@ -10,6 +10,6 @@ En ignorant un fil, vous recevrez plus de notifications de nouvelles réponses, 
 
 Pour ignorer un fil sur Misskey Web, ouvrez le menu d’une note du fil et sélectionner « Ignorer le fil ».
 
-::: Attention
+::: warning
 Le fil entier sera ignoré, peu importe de la note que vous sélectionnez.
 :::

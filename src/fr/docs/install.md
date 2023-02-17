@@ -2,7 +2,7 @@
 Merci de votre intérêt à créer votre instance Misskey 🚀
 Il existe différentes façons de créer votre instance, choisissez en une en bas et suivez le guide.
 
-::: Danger
+::: danger
 Ne changez jamais le nom de domaine (hostname) d’une instance une fois celle-ci lancée !
 :::
 

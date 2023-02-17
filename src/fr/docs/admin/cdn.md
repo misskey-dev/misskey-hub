@@ -12,6 +12,6 @@ L’API Misskey ne peut pas être mise en cache.
 Vous devez configurer l’option suivante dans votre CDN :
 - Mettre en cache toutes les requêtes sauf `/api/*`.
 
-::: Astuce
+::: tip
 Pas besoin de vider le cache lorsque vous mettez à jour Misskey.
 ::::

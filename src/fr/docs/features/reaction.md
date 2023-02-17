@@ -17,7 +17,7 @@ Les réactions étant exclusives à Misskey, l’action sera généralement trad
 
 Misskey ne possédant pas de « J’aime », ce type d’action depuis d’autres instances seront affichées comme un '👍'.
 
-::: Astuce
+::: tip
 L’administration de votre serveur peut modifier cela pour un '⭐'.
 Pour cela, voir [ici](../admin/default-reaction.md).
 :::
