@@ -47,17 +47,35 @@ const params = ref();
 
 const endpointBody = {};
 if (props.def.req) {
-	for (const [k, v] of Object.entries(props.def.req.properties ?? {})) {
-		endpointBody[k] =
-			v.type === 'string' ? '' :
-			v.type === 'integer' ? 0 :
-			v.type === 'boolean' ? false :
-			v.type === 'array' ? [] :
-			v.type === 'object' ? {} :
+	const getDefault = function(type) {
+		const defaultType =
+			type === 'string' ? '' :
+			type === 'integer' ? 0 :
+			type === 'boolean' ? false :
+			type === 'array' ? [] :
+			type === 'object' ? {} :
 			null;
+		return defaultType
+	}
+	for (const [k, v] of Object.entries(props.def.req.properties ?? {})) {
+		console.log(v)
+		if (v.type === 'array' && 'items' in v) {
+			if (v.items.type === 'object'){
+				let itemType = [];
+				for (const [i, j] of Object.entries(v.items.properties ?? {})) {
+					itemType.push(getDefault(j.type))
+				}
+				let required = Object.fromEntries(v.items.required.map(
+					key => [key, itemType[v.items.required.indexOf(key)]]
+				));
+				endpointBody[k] = [required];
+				continue;
+			}
+		}
+		endpointBody[k] = getDefault(v.type)
 	}
 }
-params.value = JSON5.stringify(endpointBody, null, 2);
+params.value = JSON.stringify(endpointBody, null, 2);
 
 const endpoint = ref(props.name);
 const host = ref(localStorage.getItem('host') ?? '');
@@ -76,7 +94,7 @@ watch(token, () => {
 function request() {
 	const promise = new Promise((resolve, reject) => {
 		const data = {
-			...params.value,
+			...JSON.parse(params.value),
 			i: token.value && token.value.trim() !== '' ? token.value : undefined,
 		};
 		fetch(`https://${host.value}/api/${endpoint.value}`, {
