@@ -4,6 +4,7 @@ Misskeyはビジネスではなく、利用は無料であるため、収益は�
 - [PayPal](https://paypal.me/syuilo)
 - [Patreon](https://www.patreon.com/syuilo)
 - 仮想通貨: `0xF1121108E21C92aAC7814137DD67e0d48eAC7Fdc`
+- [Amazonの欲しいものリスト](https://www.amazon.jp/hz/wishlist/ls/4JG4P6XKX9KD?ref_=wl_share)
 
 ::: tip
 額に応じて以下の返礼を用意しています。
