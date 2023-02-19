@@ -60,11 +60,11 @@ if (props.def.req) {
 	for (const [k, v] of Object.entries(props.def.req.properties ?? {})) {
 		if (v.type === 'array' && 'items' in v) {
 			if (v.items.type === 'object'){
-				let itemType = [];
+				let itemProperty = [];
 				for (const [i, j] of Object.entries(v.items.properties)) {
-					itemType.push([i, getDefault(j.type)])
+					itemProperty.push([i, getDefault(j.type)])
 				}
-				let required = Object.fromEntries(new Map(itemType));
+				let required = Object.fromEntries(new Map(itemProperty));
 				endpointBody[k] = [required];
 				continue;
 			}
