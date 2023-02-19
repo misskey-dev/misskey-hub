@@ -55,7 +55,7 @@ if (props.def.req) {
 			type === 'array' ? [] :
 			type === 'object' ? {} :
 			null
-		)
+		);
 	}
 	for (const [k, v] of Object.entries(props.def.req.properties ?? {})) {
 		if (v.type === 'array' && 'items' in v) {
