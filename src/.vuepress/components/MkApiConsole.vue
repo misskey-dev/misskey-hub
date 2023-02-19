@@ -58,7 +58,6 @@ if (props.def.req) {
 		return defaultType
 	}
 	for (const [k, v] of Object.entries(props.def.req.properties ?? {})) {
-		console.log(v)
 		if (v.type === 'array' && 'items' in v) {
 			if (v.items.type === 'object'){
 				let itemType = [];
