@@ -48,14 +48,14 @@ const params = ref();
 const endpointBody = {};
 if (props.def.req) {
 	const getDefault = function(type) {
-		const defaultType =
+		return (
 			type === 'string' ? '' :
 			type === 'integer' ? 0 :
 			type === 'boolean' ? false :
 			type === 'array' ? [] :
 			type === 'object' ? {} :
-			null;
-		return defaultType
+			null
+		)
 	}
 	for (const [k, v] of Object.entries(props.def.req.properties ?? {})) {
 		if (v.type === 'array' && 'items' in v) {
