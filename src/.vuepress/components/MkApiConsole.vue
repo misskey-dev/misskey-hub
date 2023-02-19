@@ -61,12 +61,10 @@ if (props.def.req) {
 		if (v.type === 'array' && 'items' in v) {
 			if (v.items.type === 'object'){
 				let itemType = [];
-				for (const [i, j] of Object.entries(v.items.properties ?? {})) {
-					itemType.push(getDefault(j.type))
+				for (const [i, j] of Object.entries(v.items.properties)) {
+					itemType.push([i, getDefault(j.type)])
 				}
-				let required = Object.fromEntries(v.items.required.map(
-					key => [key, itemType[v.items.required.indexOf(key)]]
-				));
+				let required = Object.fromEntries(new Map(itemType));
 				endpointBody[k] = [required];
 				continue;
 			}
