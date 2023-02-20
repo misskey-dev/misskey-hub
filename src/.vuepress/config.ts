@@ -99,6 +99,7 @@ export default defineUserConfig<DefaultThemeOptions>({
                                     '/docs/features/mute-and-block',
                                     '/docs/features/plugin',
                                     '/docs/features/antenna',
+                                    '/docs/features/channels',
                                     '/docs/features/clip',
                                     '/docs/features/favorite',
                                     '/docs/features/follow',
