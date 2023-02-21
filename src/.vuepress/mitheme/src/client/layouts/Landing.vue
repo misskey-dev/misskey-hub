@@ -383,7 +383,7 @@ html {
 
 	> .top {
 		position: relative;
-    padding-top: var(--globalHeaderHeight);
+		padding-top: var(--globalHeaderHeight);
 		height: 1200px;
 
 		> .container {
@@ -484,7 +484,7 @@ html {
 		> .dots1 {
 			position: absolute;
 			right: 900px;
-      top: calc(200px + var(--globalHeaderHeight, 0px));
+			top: calc(200px + var(--globalHeaderHeight, 0px));
 			width: 300px;
 			height: 300px;
 			color: var(--c-brand);
@@ -495,7 +495,7 @@ html {
 		> .dots2 {
 			position: absolute;
 			right: 120px;
-      top: calc(500px + var(--globalHeaderHeight, 0px));
+			top: calc(500px + var(--globalHeaderHeight, 0px));
 			width: 300px;
 			height: 300px;
 			color: var(--c-brand);
@@ -506,7 +506,7 @@ html {
 		> .screenshot.desktop {
 			position: absolute;
 			right: 300px;
-      top: calc(128px + var(--globalHeaderHeight, 0px));
+			top: calc(128px + var(--globalHeaderHeight, 0px));
 			width: 800px;
 			border-radius: 10px;
 			box-shadow: 2px 2px 32px rgba(0, 0, 0, 0.1);
@@ -517,7 +517,7 @@ html {
 		> .screenshot.mobile {
 			position: absolute;
 			right: 650px;
-      top: calc(400px + var(--globalHeaderHeight, 0px));
+			top: calc(400px + var(--globalHeaderHeight, 0px));
 			height: 400px;
 			border-radius: 10px;
 			box-shadow: 2px 2px 32px rgba(0, 0, 0, 0.1);
@@ -528,7 +528,7 @@ html {
 		> .ai {
 			position: absolute;
 			right: 130px;
-      top: calc(128px + var(--globalHeaderHeight, 0px));
+			top: calc(128px + var(--globalHeaderHeight, 0px));
 			height: 900px;
 		}
 
