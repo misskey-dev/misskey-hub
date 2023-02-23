@@ -14,6 +14,5 @@ Misskey Web에 익숙해졌다면 유저가 개발하는 비공식 앱을 사용
 - **Milktea** (Android): 타임라인과 특정 검색 결과를 탭에서 빠르게 액세스할 수 있습니다. 다른 사용자에게 별명을 지정할 수도 있습니다. [Google Play](https://play.google.com/store/apps/details?id=jp.panta.misskeyandroidclient) [소스 코드](https://github.com/pantasystem/Milktea)
 - **Misscat** (iOS): 스마트폰에 적합한 직관적인 조작성을 제공하는 것을 목표로 개발되고 있었으나, 2021년 5월을 끝으로 개발이 중지되었습니다. [공식 사이트](https://yuiga.dev/misscat/) [App Store](https://apps.apple.com/app/id1505059993) [소스 코드](https://github.com/YuigaWada/MissCat)
 - **SocialHub** (iOS): Misskey, 마스토돈, 트위터, Slack, Tumblr 등을 지원하는 유료 앱입니다. [공식 사이트](https://uakihir0.github.io/socialhub/) [App Store](https://apps.apple.com/us/app/socialhub-socialmedia-client/id1474451582)
-- **Subway Tooter** (Android): 강력한 필터링 기능, 여러 타임라인을 병렬로 표시하는 태블릿 모드 등을 갖추고 있습니다. 마스토돈 클라이언트지만, Misskey에도 부분적으로 대응합니다. [Google Play](https://play.google.com/store/apps/details?id=jp.juggler.subwaytooter) [소스 코드](https://github.com/tateisu/SubwayTooter)
 
 그럼에도, Misskey는 활발하게 기능이 업데이트되고 있어 최신 기능에 대한 대응이 늦어질 수 있습니다. 특별한 고집이 없다면 Misskey Web의 이용을 추천합니다.

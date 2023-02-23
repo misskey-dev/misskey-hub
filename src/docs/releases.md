@@ -1,6 +1,97 @@
 # リリースノート
 Misskeyのリリースノートを掲載しています。
 
+## 13.7.2
+リリース日： 2023/02/23
+
+### Note
+13.7.0以前からアップデートする場合は全ての通知が削除されます。
+
+### Improvements
+- enhance: make pwa icon maskable
+- chore(client): tweak custom emoji size
+
+### Bugfixes
+- マイグレーションが失敗することがあるのを修正
+
+## 13.7.0
+リリース日： 2023/02/22
+
+### Changes
+- チャット機能が削除されました
+
+### Improvements
+- Server: URLプレビュー（summaly）はプロキシを通すように
+- Client: 2FA設定のUIをまともにした
+- セキュリティキーの名前を変更できるように
+- enhance(client): add quiz preset for play
+- 広告開始時期を設定できるように
+- みつけるで公開ロール一覧とそのメンバーを閲覧できるように
+- enhance(client): MFMのx3, x4が含まれていたらノートをたたむように
+- enhance(client): make possible to reload page of window
+
+### Bugfixes
+- ユーザー検索ダイアログでローカルユーザーを絞って検索できない問題を修正
+- fix(client): MkHeader及びデッキのカラムでチャンネル一覧を選択したとき、最大5個までしか表示されない
+- 管理画面の広告を10個以上見えるように
+- Moderation note が保存できない
+- ユーザーのハッシュタグ検索が機能していないのを修正
+
+## 13.6.1
+リリース日： 2023/02/12
+
+### Improvements
+- アニメーションを少なくする設定の時、MkPageHeaderのタブアニメーションを無効化
+- Backend: activitypub情報がcorsでブロックされないようヘッダーを追加
+- enhance: レートリミットを0%にできるように
+- チャンネル内Renoteを行えるように
+
+### Bugfixes
+- Client: ユーザーページでアクティビティを見ることができない問題を修正
+
+## 13.6.0
+リリース日： 2023/02/11
+
+### Improvements
+- MkPageHeaderをごっそり変えた
+  * モバイルではヘッダーは上下に分割され、下段にタブが表示されるように
+  * iconOnlyのタブ項目がアクティブな場合にはタブのタイトルを表示するように
+  * メインタイムラインではタイトルを表示しない
+  * メインタイムラインかつモバイルで表示される左上のアバターを選択するとアカウントメニューが開くように
+- ユーザーページのノート一覧をタブとして分離
+- コンディショナルロールもバッジとして表示可能に
+- enhance(client): ロールをより簡単に付与できるように
+- enhance(client): 一度見たノートのRenoteは省略して表示するように
+- enhance(client): 迷惑になる可能性のある投稿を行う前に警告を表示
+- リアクションの数が多い場合の表示を改善
+- 一部のMFM構文をopt-outに
+
+### Bugfixes
+- Client: ユーザーページでタブがほとんど見れないことがないように
+
+## 13.5.6
+リリース日： 2023/02/10
+
+### Improvements
+- 非ログイン時にMiAuthを踏んだ際にMiAuthであることを表示する
+- /auth/のUIをアップデート
+- 利用規約同意UIの調整
+- クロップ時の質問を分かりやすく
+
+### Bugfixes
+- fix: prevent clipping audio plyr's tooltip
+
+## 13.5.4
+リリース日： 2023/02/09
+
+### Improvements
+- Server: UIのHTML（ノートなどの特別なページを除く）のキャッシュ時間を15秒から30秒に
+- i/notificationsのレートリミットを緩和
+
+### Bugfixes
+- fix(client): validate url to improve security
+- fix(client): dateの初期値が正常に入らない時がある
+
 ## 13.5.3
 リリース日： 2023/02/09
 

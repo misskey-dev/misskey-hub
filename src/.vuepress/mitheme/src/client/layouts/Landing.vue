@@ -169,7 +169,7 @@
 						<div class="icon"><img src="/emojis/light-bulb_1f4a1.png" aria-hidden="true"></div>
 						<div class="title">{{ frontmatter.sections.gettingStarted.docs.title }}</div>
 						<div class="description"></div>
-						<RouterLink class="link" to="./home.html">{{ frontmatter.sections.gettingStarted.docs.docs }}</RouterLink>
+						<RouterLink class="link" to="./docs/misskey.html">{{ frontmatter.sections.gettingStarted.docs.docs }}</RouterLink>
 					</div>
 				</div>
 			</div>
@@ -181,7 +181,7 @@
 			<div class="container">
 				<div class="title">{{ frontmatter.sections.donation.title }}</div>
 				<div class="description">{{ frontmatter.sections.donation.description }}</div>
-				<a class="patreon" href="https://www.patreon.com/syuilo"><img src="https://c5.patreon.com/external/logo/become_a_patron_button@2x.png" alt="Become a Patron!" width="200" /></a>
+				<RouterLink class="link" to="./docs/donate.html">{{ frontmatter.learnMore }}</RouterLink>
 			</div>
 		</div>
 
@@ -926,9 +926,16 @@ html {
 					font-size: 1.2em;
 				}
 
-				> .patreon {
+				> .link {
 					display: inline-block;
 					margin-top: 20px;
+					padding: 12px 26px;
+					background: linear-gradient(90deg, #00b332, #aacb00);
+					border-radius: 999px;
+					color: #fff;
+					font-size: 1.1em;
+					font-weight: bold;
+					box-shadow: 0 8px 20px -5px #86b30088;
 				}
 
 				@media (max-width: 800px) {

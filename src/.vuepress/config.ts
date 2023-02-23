@@ -76,8 +76,10 @@ export default defineUserConfig<DefaultThemeOptions>({
                             '/docs/misskey',
                             '/docs/releases',
                             '/docs/misskey-hub',
+														'/docs/donate',
                             '/docs/faq',
                             '/docs/glossary',
+														'/docs/notes',
                             '/docs/troubleshooting',
                             {
                                 text: '機能', children: [
@@ -102,7 +104,6 @@ export default defineUserConfig<DefaultThemeOptions>({
                                     '/docs/features/follow',
                                     '/docs/features/pages',
                                     '/docs/features/theme',
-                                    '/docs/features/thread-mute',
                                     '/docs/features/widgets',
                                 ]
                             },
@@ -187,7 +188,6 @@ export default defineUserConfig<DefaultThemeOptions>({
                                     '/en/docs/features/follow',
                                     '/en/docs/features/pages',
                                     '/en/docs/features/theme',
-                                    '/en/docs/features/thread-mute',
                                     '/en/docs/features/widgets',
                                 ]
                             },
@@ -375,7 +375,6 @@ export default defineUserConfig<DefaultThemeOptions>({
                                     '/it/docs/features/follow',
                                     '/it/docs/features/pages',
                                     '/it/docs/features/theme',
-                                    '/it/docs/features/thread-mute',
                                     '/it/docs/features/widgets',
                                 ]
                             },

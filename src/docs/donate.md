@@ -4,10 +4,13 @@ Misskeyはビジネスではなく、利用は無料であるため、収益は�
 - [PayPal](https://paypal.me/syuilo)
 - [Patreon](https://www.patreon.com/syuilo)
 - 仮想通貨: `0xF1121108E21C92aAC7814137DD67e0d48eAC7Fdc`
+- [Amazonの欲しいものリスト](https://www.amazon.jp/hz/wishlist/ls/4JG4P6XKX9KD?ref_=wl_share)
 
 ::: tip
 額に応じて以下の返礼を用意しています。
-- 3,000円以上: Misskeyのクレジットへのお名前の記載
+- 1,000円以上: お使いのmisskey.ioアカウントにmiバッジ付与
+- 3,000円以上: ↑ + Misskeyのクレジットへのお名前の記載
+- 10,000円以上: ↑ + Misskeyのクレジットへのお名前+任意のアイコンの掲載
 
 クレジットへの記載は自動で行われないため、ご希望の方はお申し付けください。
 :::

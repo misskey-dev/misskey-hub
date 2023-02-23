@@ -119,24 +119,6 @@ $[font.cursive MisskeyでFediverseの世界が広がります]
 $[font.fantasy MisskeyでFediverseの世界が広がります]
 ```
 
-### 大きく
-内容を大きく表示します。
-```:no-line-numbers
-$[x2 🍮]
-```
-
-### とても大きく
-内容をとても大きく表示します。
-```:no-line-numbers
-$[x3 🍮]
-```
-
-### 究極に大きく
-内容を究極に大きく表示します。
-```:no-line-numbers
-$[x4 🍮]
-```
-
 ### ぼかし
 内容をぼかすことができます。ポインターを上に乗せるとはっきり見えるようになります。
 ```:no-line-numbers
@@ -148,12 +130,6 @@ $[blur MisskeyでFediverseの世界が広がります]
 ```:no-line-numbers
 <plain>**bold** @mention #hashtag `code` $[x2 🍮]</plain>
 ```
-
----
-
-::: tip
-使用可能なより多くの構文はMisskey Webの **MFMチートシート** `/mfm-cheat-sheet` で確認できます。
-:::
 
 ## 開発者向け情報
 MFMのパーサー実装はライブラリとして公開されており、簡単にクライアントにMFMを組み込むことが可能です。

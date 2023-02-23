@@ -53,4 +53,9 @@
   host: 'misskey.kindworld.one',
   name: 'KindWorld',
   lang: 'ja',
+},
+ {
+  host: 'vrsocial.network',
+  name: 'VRSocial',
+  lang: 'en',
 }]
