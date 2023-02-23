@@ -1,70 +1,70 @@
-# Pages
+# 페이지
 
-Misskey Pages are a feature where you can create custom web pages. In them you can include different types of media and formatting. and even run programming scripts. Like with many other areas of Misskey, you can format your content using [MFM](./mfm.md).
+미스키 페이지는 미즈키 내에 자신만의 게시글을 생성할 수 있는 기능입니다. 페이지에 여러가지 미디어나 함수, 심지어는 스크립트 실행도 첨부할 수 있습니다. 미즈키의 다른 기능들과 마찬가지로, 페이지 내에 미즈키 전용 마크다운 언어인 [MFM](./mfm.md)를 적용시킬 수 있습니다.
 
-Pages in Misskey are composed of different types of Blocks, and the blocks can be moved around using drag-and-drop.
+페이지는 여러 종류의 블록으로 구성되어 있으며, 이 블록들은 드래그-드롭을 통해 배치 정리가 가능합니다. 
 
-## Content Blocks
+## 콘텐츠
 
-Content blocks display different types of content to the user.
+여러가지 종류의 콘텐츠를 유저에게 보여주는 블록입니다.
 
-### Section
+### 섹션
 
-A grouping block that can contain other blocks. Each content block has a title that it will display at its top.
+여러 블록들을 하나의 그룹으로 묶어주는 블록입니다. 각 섹션 블록은 제목을 가지며, 블록의 상단에 표기됩니다.
 
-### Text
+### 텍스트
 
-Displays text content to the user. The text content can be formatted and can include variables interpolation (See Variables below).
+텍스트를 입력하는 블록입니다. 해당 블록 내의 텍스트에 문법을 적용시키거나 변수를 넣어 동적인 기능을 작동시키게 할 수 있습니다. 자세한 건 아래의 변수 란을 확인해주세요.
 
-### Images
+### 이미지
 ::: tip
 이 기능은 Misskey v12까지만 지원됩니다. Misskey v13에서는 해당 기능이 삭제되었습니다.
 :::
 
-Displays an image that you can select from your drive.
+드라이브로부터 이미지를 가져와 페이지에 삽입할 수 있습니다.
 
-### Text Area
+### 여러 줄 텍스트 입력
 ::: tip
 이 기능은 Misskey v12까지만 지원됩니다. Misskey v13에서는 해당 기능이 삭제되었습니다.
 :::
 
-Displays text in a text area tag. This block does not support MFM but variable interpolation is allowed.
+여러 줄의 텍스트를 하나의 영역으로 묶어둡니다. 이 블록에 MFM를 적용시킬 수 없으나, 변수를 적용시킬 수 있습니다. 
 
-### Embedded Note
+### 노트필기
 
 TODO
 
-### Canvas
+### 캔버스
 ::: tip
 이 기능은 Misskey v12까지만 지원됩니다. Misskey v13에서는 해당 기능이 삭제되었습니다.
 :::
 
 TODO
 
-## Input Blocks
+## 입력
 ::: tip
 이 기능은 Misskey v12까지만 지원됩니다. Misskey v13에서는 해당 기능이 삭제되었습니다.
 :::
 
-Input blocks can be used to create interactive pages with form elements. These blocks can be used to interact with the variables and scripts in a page.
+입력 블록을 통해 동적 페이지를 만들 수 있습니다. 입력 블록을 통해 페이지의 변수나 스크립트와 상호작용 하는 것이 가능합니다.
 
-## Special Blocks
+## 특수
 ::: tip
 이 기능은 Misskey v12까지만 지원됩니다. Misskey v13에서는 해당 기능이 삭제되었습니다.
 :::
 
-Special blocks provide unique features for your page. This includes a note posting form and page control flow.
+특수 블록은 해당 페이지만을 위한 고유한 기능을 제공합니다. 제공되는 기능에는 양식에 따른 노트 작성과 페이지 내 흐름 제어 등이 포함됩니다.
 
-## Variables
+## 변수
 ::: tip
 이 기능은 Misskey v12까지만 지원됩니다. Misskey v13에서는 해당 기능이 삭제되었습니다.
 :::
 
-Variables can be used to create dynamic pages. You can embed the value of a variable by writing <b>{ variable name }</b> in the text. For example, in <b>Hello { thing } world!</b>, if the value of the variable (thing) was <b>ai</b>, then the text would become <b>Hello ai world!</b>.
+변수는 동적 페이지를 만들 때 사용할 수 있습니다. 텍스트 내에 <b>{ 변수명 }</b>를 적으면 변수의 값이 반영됩니다. 예를 들어, <b>안녕하세요 { 이름 } !</b>라고 적고 변수 (이름)의 값이 <b>ai</b>라면, 문장이 <b>안녕하세요 ai !</b>로 출력됩니다.
 
-Variables are evaluated from top to bottom, so you cannot refer to a variable defined below you in a given variable. For example, if there are three variables, <b>A, B, C</b>, that are defined in that order, <b>A</b> and <b>B</b> can be referenced inside of <b>C</b>'s definition; however, <b>B</b> and <b>C</b> cannot be referenced inside of <b>A</b>'s.
+변수는 위에서부터 아래 순으로 선언됩니다. 또한, 스크립트 상 아직 정의되지 않은 변수를 미리 호출하는 것이 불가능합니다. 예시로 세 가지 변수인 <b>A, B, C</b>가 순서대로 정의되었다고 가정합니다. 이 경우 <b>A</b>랑 <b>B</b>는 <b>C</b>를 정의할 때에 참조자로 사용할 수 있습니다. 그러나 <b>B</b>와 <b>C</b>는 <b>A</b>를 정의할 때에 참조자로 사용할 수 없습니다.
 
-To receive input from the user, place an "Input" block on the page and set the "Variable Name" to the name of the variable in which you want to store the value (the variable will automatically be created by the block).
-The variable can the be used to perform actions in response to user input.
+사용자에게 값을 받기 위해서는 "입력" 블록을 이용하여 값을 저장하고자 하는 변수의 "변수명"을 지정해야 합니다(변수는 입력 블록에 의해 자동으로 생성됩니다).
+변수는 사용자의 입력에 따른 반응을 실행을 할 때 사용할 수 있습니다.
 
-Functions can be used to encapsulate value calculations in a reusable form. To create a function, create a variable of type "Function". A function can have slots (arguments), and the values of the slots are available as variables within the function. There are also functions called higher-order functions that take another function as an argument. Functions can be predefined or instantiated in-line in slots of such higher order functions.
+함수는 값연산을 재활용할 수 있는 형태로 캡슐화 해줍니다. 함수를 만들고자 한다면 "함수" 종류인 변수를 생성하면 됩니다. 함수는 슬롯(전달인자)들을 가질 수 있으며, 슬롯의 값은 함수 내의 변수값으로 지정할 수 있습니다. 또한, 다른 함수를 전달인자로 삼는 더 상위의 함수를 생성할 수 있습니다. 하위 함수는 상위 함수 내에서 미리 선언되거나 인스턴트화 될 수 있습니다.
