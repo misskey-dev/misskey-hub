@@ -1,6 +1,19 @@
 # リリースノート
 Misskeyのリリースノートを掲載しています。
 
+## 13.7.2
+リリース日： 2023/02/23
+
+### Note
+13.7.0以前からアップデートする場合は全ての通知が削除されます。
+
+### Improvements
+- enhance: make pwa icon maskable
+- chore(client): tweak custom emoji size
+
+### Bugfixes
+- マイグレーションが失敗することがあるのを修正
+
 ## 13.7.0
 リリース日： 2023/02/22
 
