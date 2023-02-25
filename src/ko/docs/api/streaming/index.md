@@ -5,7 +5,7 @@ description: "The streaming API provides real-time information (e.g., new posts 
 # Streaming API
 
 ::: tip
-이 문서는 아직 국문으로 번역되지 않아 영문으로 제공됩니다.
+이 문서는 현재 영문으로 제공됩니다.
 
 읽기 전에, [Misskey API 문서](../)를 먼저 읽고 와 주세요.
 :::

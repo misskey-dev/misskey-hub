@@ -1,38 +1,17 @@
 # 온라인 상태
-A user's **online status** is an indication of their Misskey usage status.
-Your online status is displayed as an indicator in the corner of the user icon on your user page and elsewhere.
+사용자의 **온라인 상태**는 해당 사용자의 Misskey 이용 상태를 표시합니다.
+자신의 온라인 상태는 사용자 페이지 등의 사용자 아이콘 구석에 인디케이터로서 나타납니다.
 
-<table>
-	<tr>
-		<th>Colour</th>
-		<th>State</th>
-		<th>Description</th>
-	</tr>
-	<tr>
-		<td>🟢 green</td>
-		<td>online</td>
-		<td>Misskey is used right now.</td>
-	</tr>
-	<tr>
-		<td>🟡 yellow</td>
-		<td>active</td>
-		<td>The user is absent but Misskey is still being used.</td>
-	</tr>
-	<tr>
-		<td>🔴 red</td>
-		<td>offline</td>
-		<td>Misskey is not used.</td>
-	</tr>
-	<tr>
-		<td>⚫ grey</td>
-		<td>unknown</td>
-		<td>The status is not private or not available for remote users etc.</td>
-	</tr>
-</table>
+| 색상      | 상태       | 설명                                                                 |
+|-----------|------------|----------------------------------------------------------------------|
+| 🟢 초록색 | 온라인     | 현재 Misskey를 사용하고 있습니다.                                    |
+| 🟡 노란색 | 액티브     | 사용자가 Misskey로부터 로그아웃되어 있지만 여전히 사용하고 있습니다. |
+| 🔴 빨간색 | 오프라인   | Misskey를 사용하고 있지 않습니다.                                    |
+| ⚫ 회색   | 알 수 없음 | 상태가 공개로 표시되어 있지 않거나 리모트 사용자 등입니다.           |
 
-Your online status will change automatically and cannot be set manually.
-You can set your online status to be private.
+온라인 상태는 자동으로 설정되며 직접 변경할 수 없습니다.
+온라인 상태를 비공개 표시할 수는 있습니다.
 
 ::: warning
-Some features, such as user suggestions, may be based on online status, so making your status private may make it harder for other users to find you.
+사용자 추천 등의 몇몇 기능은 온라인 상태와 관련되어 있는 경우가 있습니다. 따라서, 온라인 상태를 비공개로 설정하면 다른 사용자가 당신을 찾기 어렵게 만들 수 있습니다.
 :::

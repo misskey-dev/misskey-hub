@@ -1,30 +1,23 @@
 # 덱 UI
+덱 UI는 Misskey에서 사용할 수 있는 사용자 인터페이스 중 하나입니다. "칼럼"을 통해 좌우로 손쉽게 커스텀 가능하고 정보 확인도 손쉬운 UI를 만들 수 있습니다.
+덱 옵션은 노트북과 같이 폭이 특히 넓은 화면에서만 사용 가능합니다.
 
-Deck UI is one of the available UIs in Misskey. It is characterized by the ability to build highly customizable and informative UIs by displaying multiple views, called "columns", side by side.
-The deck option is only available on sufficiently large screens like a laptop computer.
+## 칼럼 추가
+덱의 배경을 우클릭해 "칼럼 추가"를 누르면 추가할 수 있습니다. 화면 오른쪽의 '+' 아이콘을 눌러도 추가할 수 있습니다.
 
-## Adding Columns
+## 칼럼 이동
+칼럼은 드래그 드롭 또는 "이동" 옵션(칼럼의 헤더를 우클릭하면 표시)을 통해 위치 변경이 가능합니다.
 
-You can add a column by right-clicking on the deck background and selecting "Add Column". You can also click the '+' icon on the right side of the screen.
+## 세로로 칼럼 분할하기
+칼럼은 가로와 세로로 정렬할 수 있습니다. 칼럼의 메뉴를 열어 "왼쪽에 쌓기"를 선택하면 선택된 칼럼을 왼쪽 칼럼 아래쪽으로 이동합니다.
+쌓인 칼럼은 "오른쪽으로 빼기"를 선택해 원래대로 돌려놓을 수 있습니다.
 
-## Move Columns
+## 칼럼 레이아웃 설정하기
+칼럼 메뉴에서 "칼럼 설정"을 선택해 레이아웃 설정을 변경할 수 있습니다. 여기에서 각 칼럼의 이름과 폭을 설정할 수 있습니다.
+칼럼이 flexible로 설정되어 있으면 설정된 폭 이상으로, 화면의 가로 공간 전체를 채울 때까지 확장할 수 있습니다.
 
-Columns can be repositioned by drag-and-drop or by using the column menu "Move" option (right-click on the column header).
+## 덱 설정
+덱과 관련된 설정은 우하단의 설정 메뉴(톱니바퀴 아이콘)에서 확인할 수 있습니다.
 
-## Horizontal Division of Columns
-
-Columns can be arranged vertically as well as horizontally. Open the column's menu and select "Stack with the left column" to move the current column below the column to its left.
-To unstack a column, select "Pop column to the right" from the column's menu.
-
-## Configure Column Layout
-
-Select "Column settings" in the column menu to edit column layout settings. Here you can change the column name and width.
-If the colum is set to flexible then it will expand beyond its set width to fill remaining horizontal space on the screen.
-
-## Deck Settings
-
-Deck-related settings can be changed in the settings menu (click the gear icon in the bottom right of the screen.
-
-## Deck Profiles
-
-You can create/load a deck profile by clicking on the menu in the top right of the screen. Choose "New profile" to create a new blank deck to customize. Select another profile to switch to it. The trash button deletes the current profile.
+## 덱 프로필
+화면 우상단의 메뉴를 클릭해 덱 프로필을 만들 수 있습니다. "새 프로필"을 선택하면 새로운 빈 덱을 만들어 수정할 수 있습니다. 다른 프로필을 누르면 전환합니다. 휴지통 버튼을 누르면 현재 프로필을 삭제합니다.
