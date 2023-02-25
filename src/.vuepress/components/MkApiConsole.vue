@@ -95,7 +95,7 @@ function request() {
 			} else if (res.status === 204) {
 				resolve();
 			} else {
-				reject(body.error);
+				resolve(body.error);
 			}
 		}).catch(reject);
 	});
