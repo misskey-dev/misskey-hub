@@ -18,7 +18,7 @@ Some of the syntax is compatible with Markdown.
 ## Syntax
 ### Mentions
 ::: tip
-For more information about Mentions, see [here](. /mention.md).
+For more information about Mentions, see [here](./mention.md).
 :::
 
 ```:no-line-numbers
@@ -29,8 +29,9 @@ For more information about Mentions, see [here](. /mention.md).
 ```
 
 ### Hashtags
+
 ::: tip
-For more information about hashtags, see [here](. /hashtag.md).
+For more information about hashtags, see [here](./hashtag).
 :::
 
 ```:no-line-numbers
@@ -38,8 +39,9 @@ For more information about hashtags, see [here](. /hashtag.md).
 ```
 
 ### Custom Emoji
+
 ::: tip
-For more information about custom emoji, see [here](./custom-emoji.md).
+For more information about custom emoji, see [here](./custom-emoji).
 :::
 
 ```:no-line-numbers
@@ -47,11 +49,13 @@ For more information about custom emoji, see [here](./custom-emoji.md).
 ```
 
 ### Links
+
 ```:no-line-numbers
 [example link](https://example.com)
 ```
 
 ### Bold
+
 ```:no-line-numbers
 **Bold**
 ```
@@ -63,5 +67,6 @@ More available syntax can be found in the **MFM cheat sheet** provided by the Mi
 :::
 
 ## Information for Developers
+
 The parser implementation of MFM is available as a library, making it easier to embed MFM in your clients.
 - [misskey-dev/mfm.js](https://github.com/misskey-dev/mfm.js) - parser implementation in JavaScript
