@@ -60,6 +60,69 @@
 				},
 			},
 		},
+		DriveFile: {
+			type: 'object',
+			properties: {
+				id: {
+					type: 'string',
+				},
+				createdAt: {
+					type: 'string',
+				},
+				name: {
+					type: 'string',
+				},
+				md5: {
+					type: 'string',
+				},
+				size: {
+					type: 'integer',
+				},
+				isSensitive: {
+					type: 'boolean',
+				},
+				blurhash: {
+					type: 'string',
+				},
+				properties: {
+					type: 'object',
+					properties: {
+						width: {
+							type: 'integer',
+						},
+						height: {
+							type: 'integer',
+						},
+					}
+				},
+				url: {
+					type: 'string'
+				},
+				thumbnailUrl: {
+					type: 'string',
+				},
+				comment: {
+					type: 'string',
+					nullable: true,
+				},
+				folderId: {
+					type: 'string',
+					nullable: true,
+				},
+				folder: {
+					type: 'string',
+					nullable: true,
+				},
+				userId: {
+					type: 'string',
+					nullable: true,
+				},
+				user: {
+					type: 'string',
+					nullable: true,
+				},
+			}
+		}
 	},
 	errors: {
 		'1384574d-a912-4b81-8601-c7b1c4085df1': {
