@@ -282,7 +282,6 @@ export default defineUserConfig<DefaultThemeOptions>({
                                 text: '개발자를 위하여', children: [
                                     '/ko/docs/api',
                                     '/ko/docs/api/streaming',
-                                    '/ko/docs/api/entity',
                                     '/ko/docs/api/endpoints.html',
 																		'/ko/docs/features/webhook',
                                 ]
