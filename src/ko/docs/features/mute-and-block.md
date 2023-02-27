@@ -1,34 +1,31 @@
-# Muting and Blocking
-
-If you don't like a user, you can mute them to make them disappear from your timelines.
-Alternatively, you can block a user to prevent them from seeing your content or engaging with you in any way.
-People won't know that you have muted them, but they will know that you have blocked them. It is up to you to decide which option you prefer.
+# 뮤트와 블록
+사용자가 마음에 들지 않는다면 뮤트해 타임라인에서 표시되지 않도록 할 수 있습니다.
+또는 블록을 해 당신의 콘텐츠를 보거나 관련 활동을 하지 못하도록 할 수도 있습니다.
+상대방은 뮤트된 것은 알 수 없지만 차단된 것은 알 수 있습니다.
 
 ::: tip
-Mute and block can be used together.
+뮤트와 블록은 동시에 쓸 수도 있습니다.
 :::
 
 ::: warning
-Please consider reporting any users who violate the Terms of Service to the moderators.
+서비스 약관을 위반하는 사용자는 관리진에게 보고해 주세요.
 :::
 
-In Misskey Web, you can see the list of users you have muted or blocked by going to Settings > Mute & Block.
+Misskey Web에서 설정 > 뮤트 및 차단 메뉴로 들어가면 뮤트하거나 차단한 사용자의 목록을 볼 수 있습니다.
 
-## Muting
+## 뮤트
+사용자를 뮤트하면, 사용자에 대한 다음 항목이 더이상 표시되지 않습니다:
+- 사용자의 게시물(해당 게시물에 대한 답글과 리노트 포함) 및 검색 결과
+- 해당 사용자로부터의 알림
+- 해당 사용자와의 Misskey 대화 기록 등
 
-If you mute a user, the following content about that user will no longer appear in Misskey:
-
-- the user's posts (and replies and Renotes to those posts) in the timeline and post search results
-- notifications from that user
-- message history with the user in Misskey chat
-- etc.
-
-To mute a user in Misskey Web, open the menu on the user's profile page and press the "Mute" button.
+Misskey Web에서 사용자를 뮤트하려면, 사용자의 프로필 페이지에서 메뉴를 열어 "뮤트"를 선택하세요.
 
 ::: tip
-They will not be notified that you have muted them, and they will not know that you have muted them.
+뮤트를 했다는 알림은 발송되지 않으며, 뮤트된 사용자도 자신이 뮤트되었다는 사실을 알 수 없습니다.
 :::
 
+<!--TODO 여기부터 번역 재개 https://papago.naver.com/ 활용-->
 ## Blocking
 If you block a user, they will not be able to see your content and they will not be able to do any the following actions:
 
