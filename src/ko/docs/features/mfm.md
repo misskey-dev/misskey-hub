@@ -86,16 +86,15 @@ Misskey를 위한 마크다운 문법인 MFM은 Misskey 내의 여러 곳에서 
 
 ### 코드 블록
 ` 마크를 3겹으로 감싸 여러 줄의 코드를 나타낼 수 있습니다.
-<plain>
-```
+<div class="language-text ext-text"><pre v-pre class="language-text"><code>```
 ~~(#i, 100) {
-	<: ? ((i % 15) = 0) "FizzBuzz"
+	&lt;: ? ((i % 15) = 0) "FizzBuzz"
 	.? .? ((i % 3) = 0) "Fizz"
 	.? .? ((i % 5) = 0) "Buzz"
 	. . i
 }
 ```
-</plain>
+</code></pre></div>
 
 ### 반전
 내용을 상하 또는 좌우로 반전시킵니다.
