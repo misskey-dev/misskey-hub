@@ -1,4 +1,7 @@
 # Webhook
+::: info
+본 문서는 번역되지 않아 영문으로 제공됩니다.
+:::
 
 ::: tip
 This feature is available as of Misskey version 12.109.0.
@@ -52,11 +55,9 @@ If the destination server returns a 5XX error or does not respond, the request i
 Webhooks can individually have their active status changed from the administration screen to temporarily stop sending requests.
 
 ## Event
-
 The following is a description and payload for each event type.
 
 ### follow
-
 Occurs when you follow someone.
 
 <MkSchemaViewerItemObject :schema="{
@@ -70,7 +71,6 @@ Occurs when you follow someone.
 }"/>
 
 ### followed
-
 Occurs when you are followed by someone.
 
 <MkSchemaViewerItemObject :schema="{
@@ -84,7 +84,6 @@ Occurs when you are followed by someone.
 }"/>
 
 ### unfollow
-
 Occurs when you unfollow someone.
 
 <MkSchemaViewerItemObject :schema="{
@@ -98,7 +97,6 @@ Occurs when you unfollow someone.
 }"/>
 
 ### note
-
 Occurs when you post a note.
 
 <MkSchemaViewerItemObject :schema="{
@@ -112,7 +110,6 @@ Occurs when you post a note.
 }"/>
 
 ### reply
-
 Occurs when someone has replied to your note.
 
 <MkSchemaViewerItemObject :schema="{
@@ -126,7 +123,6 @@ Occurs when someone has replied to your note.
 }"/>
 
 ### renote
-
 Occurs when your note is renoted.
 
 <MkSchemaViewerItemObject :schema="{
@@ -140,7 +136,6 @@ Occurs when your note is renoted.
 }"/>
 
 ### mention
-
 Occurs when someone has mentioned you.
 
 <MkSchemaViewerItemObject :schema="{

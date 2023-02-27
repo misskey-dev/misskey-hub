@@ -1,7 +1,3 @@
----
-description: 'MFM is a dedicated markup language that can be used in various places on Misskey.'
----
-
 # MFM
 Misskey를 위한 마크다운 문법인 MFM은 Misskey 내의 여러 곳에서 활용할 수 있는 마크업 언어입니다.
 

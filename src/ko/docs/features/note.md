@@ -1,70 +1,95 @@
 # 노트
-Notes are a central concept within Misskey, and refer to content that may include text, images, surveys and more that has been posted to Misskey. In this context, "to note" is also used as a verb refering to the creation of a note.
+노트는 Misskey에서 이용되는 가장 중심적인 개념이며, Misskey에 게시된 텍스트, 이미지, 설문조사(투표) 등을 포함하는 콘텐츠를 말합니다.
+이러한 맥락에서, "노트하다"는 것은 이러한 노트를 작성하는 의미로서의 동사로도 이용됩니다.
 
-By composing a note, it will be added to the [timeline](./timeline) and become visible by your followers and other users from your server.
+노트를 작성하면 노트가 [타임라인](./timeline.md)에 추가되고 팔로워 및 서버의 다른 사용자도 확인할 수 있습니다.
 
-On Misskey, it is also possible to add [Reactions](./reaction) to notes.In addition to that, you can reply to or quote notes.
+Misskey에서는 각 노트에 대해 [반응을 추가](./reaction.md)하는 것도 가능합니다. 답장을 만들거나 인용할 수도 있습니다.
 
-By adding a note to your [Favorites](./favorite), you can easily look back at it at a later point in time.
+노트를 [즐겨찾기에 추가](./favorite.md)하면 나중에 해당 노트를 손쉽게 확인할 수 있습니다.
 
-## Composing notes
-To compose a note, press the button with a pencil icon on the upper part of your screen to open the posting form.Enter the content you want to post in the form, and press the "Note" button to publish it. Notes can contain text as well as files such as images or videos and also [Surveys](./poll).In addition, by using [MFM](./mfm) within your text, you can additionally include [Mentions](./mention) and [Hashtags](./hashtag). There are also other settings such as CW or note visibility (explained later).
+## 노트 작성
+노트를 작성하려면, 화면에 연필 아이콘이 있는 버튼을 선택해 양식을 엽니다. 여기에서 게시할 내용을 입력하고 "노트" 버튼을 눌러 게시합니다.
+노트는 텍스트와 이미지 또는 비디오와 같은 파일을 포함할 수 있으며 [설문조사(투표)](./poll.md)도 포함할 수 있습니다.
+또한 텍스트 내에서 [MFM](./mfm.md)를 이용해 멘션 및 [해시태그](./hashtag.md)를 추가로 포함할 수도 있습니다.
+콘텐츠 경고(CW) 또는 노트 가시성과 같은 기타 설정도 가능합니다.
 
 ::: tip
-If you are on a computer and have an image saved in your clipboard, you can attach it to your note by using the usual paste shortcut within the text box.
+컴퓨터 등 키보드가 연결된 환경에서, 키보드의 <kbd class="key">N</kbd> 키 혹은 <kbd class="key">P</kbd> 키를 입력해 노트 작성 양식을 열 수도 있습니다.
+여기에서 `N`은 "노트(Note)", `P`는 "포스트(Post)"의 약호입니다.
 :::
 
 ::: tip
-You can also press <kbd class="key">Ctrl + Enter</kbd> within the text box to publish your note.
+컴퓨터를 이용하고 있고 클립보드에 이미지가 저장되어 있다면, 단순히 붙여넣는 것만으로도 이미지를 첨부할 수 있습니다.
 :::
 
-## Renote
-The act of quoting an existing note, sharing an existing note, or the note created as a result of these acts are all called Renote (or "renoting" as verb). Most of the time, this is used when you want to share a note you like to your own followers, or when you want a share a note that you posted in the past once more. While it is possible to renote the same note multiple times, please be aware that doing so may be seen as annoying by others.
+::: tip
+키보드 커서가 텍스트 입력 상자를 가리키고 있을 때 키보드의 <kbd class="key">Ctrl + Enter</kbd>를 입력해 노트를 전송할 수 있습니다.
+:::
+
+## 리노트
+기존 노트를 인용하거나 공유하는 행위를 "리노트하다"라고 하고, 이러한 행위로 만들어진 노트를 "리노트"라고 부릅니다.
+일반적으로, 팔로워에게 마음에 드는 노트를 공유하거나 과거의 노트를 다시 포스트할 때 활용할 수 있습니다.
+한 노트를 여러 번 리노트하는 것도 당연히 가능하지만, 다른 팔로워가 귀찮아할 수도 있습니다.
 
 ::: warning
-If you've set your note's visibility to Followers-only or Direct, then renoting it will not be possible.
+팔로워 전용 노트 혹은 다이렉트 노트는 리노트할 수 없습니다.
 :::
 
-To take back a renote, press the "..." next to the renote timestamp and select "Take back Renote".
+리노트를 취소하려면 리노트 타임스탬프의 "..."를 선택해 "리노트 취소"를 선택하면 됩니다.
 
-## CW
-An abbreviation of "Content Warning", resulting in the content of a note being hidden unless explicitly requested to be shown by a viewing user.It is mainly used to hide the content of long notes or to prevent posting spoilers publicly. To enable CW for a note, press the "Hide content" button (eye icon) in the post form.By doing so a new text input area will appear, where you can write a summary of the content hidden by the CW.
-
-## Visiblility
-It's possible to individually set where your note will be visible (Visibility) for each of your notes.By pressing the icon to the left of the "Note" button in the post form, you can choose from the visibility settings listed below.
-
-### Public
-Your note will be visible to all users and will show up on all timelines (home, local, social, global).
+## 콘텐츠 경고
+해당 콘텐츠를 보는 사용자가 별도로 표시하겠다는 요청을 보내지 않는 이상 내용 및 첨부 사항이 숨겨지는 설정입니다. CW(**C**ontent **W**arning) 혹은 NSFW(**N**ot **S**afe **F**or **W**ork)로도 불립니다.
+장문의 내용을 숨기거나 스포일러를 일차적으로 차단하는 용도로 이용할 수 있습니다. 아니면 NSFW 콘텐츠를 숨기는 데에도 활용 가능합니다.
+노트에 대해 CW를 활성화하려면 노트 작성 양식에서 "내용 숨기기"(눈 아이콘) 버튼을 누릅니다. 이렇게 하면 CW에 의해 숨겨진 내용을 요약 작성할 수 있는 별도의 입력 영역이 나타납니다.
 
 ::: warning
-This visibility will be unavailable if your account is <a href="./silence">silenced</a>.
+CW를 통해 내용을 가리더라도, 내용을 언제든 확인할 수 있습니다.
+CW를 이용할 때 각 인스턴스의 이용 약관을 위반하지 않도록 주의해 주세요.
 :::
 
-### Home
-Your note will be visible to all users, but will not show up on the local, social or global timeline for non-followers.
+## 가시성
+각 노트에 대해 가시성을 별도 설정할 수 있습니다.
+노트 작성 양식에서 "노트" 버튼 옆의 아이콘을 선택하면 가시성 설정 메뉴가 표시되며, 여기에서 노트가 어떻게 보이는지를 설정할 수 있습니다.
 
-### Followers
-Your note will only be visible to those that are following you.The note will show up on all timelines of your followers.
+::: warning
+[사일런스](./silence.md)되어 있는 경우 사일런스한 계정에는 표시되지 않습니다.
+:::
 
-### Direct
-Your note will only be visible to individually specified users.The note will show up on all timelines of the specified users.
+### 공개
+모든 사용자에게 노트가 공개됩니다. 홈, 로컬, 소셜, 글로벌 타임라인에도 모두 노출됩니다.
 
-### The "Local only" option
-If you enable this option, your note won't be federated to remote instances.
+::: warning
+[사일런스](./silence.md)되어 있는 경우 사일런스한 계정에는 표시되지 않습니다.
+:::
 
-### Visibility comparison
-<table>
-    <tr><th></th><th>Public</th><th>Home</th><th>Followers</th><th>Direct</th></tr>
-    <tr><th>LTL/STL/GTL of Followers</th><td>✔</td><td>✔</td><td>✔</td><td></td></tr>
-    <tr><th>LTL/STL/GTL of Others</th><td>✔</td><td></td><td></td><td></td></tr>
-</table>
+### 홈
+모든 사용자에게 노트가 공개되지만, 팔로워가 아닌 사용자의 타임라인에는 표시되지 않습니다.
+게시자의 프로필에서는 계속해서 노트를 확인할 수 있습니다.
 
-## Pin to profile
-By pinning a note to your profile it will be constantly displayed on your profile page. To pin a note, open the note menu and press "Pin to profile".
+### 팔로워
+게시자를 팔로우하는 계정에서만 노트를 확인할 수 있습니다. 팔로워의 타임라인에 노트가 표시됩니다.
+
+### 다이렉트
+별도로 지정한 사용자에게만 노트가 표시됩니다. 지정된 사용자의 타임라인에 노트가 표시됩니다.
+
+### "로컬 전용" 설정
+이 설정을 활성화하면, 리모트 인스턴스로 노트가 전달되지 않습니다.
+
+### 가시성 비교
+| 홈, 로컬, 소셜, 글로벌 타임라인 | 공개 | 홈 | 팔로워 | 다이렉트        |
+|---------------------------------|------|----|--------|-----------------|
+| 팔로워의 타임라인               | ✔    | ✔  | ✔      | 지정된 경우에만 |
+| 팔로워가 아닌 사람의 타임라인   | ✔    |    |        | 지정된 경우에만 |
+
+## 프로필에 고정
+노트를 프로필에 고정하면 해당 노트가 프로필 페이지의 상단에 계속 표시됩니다.
+노트를 고정하려면 노트의 메뉴를 열어 "프로필에 고정"을 선택하세요.
 
 ::: tip
-It's also possible to pin multiple notes to your profile.
+여러 노트를 동시에 고정할 수도 있습니다.
 :::
 
-## Watch
-You can get notifications for replies, reactions etc. for a note that is not yours by watching it. To watch a note, select "Watch" from the respective note's menu.
+## 지켜보기
+자신이 작성하지 않은 노트에 대해 답변, 리엑션 등의 알림을 받을 수 있습니다.
+노트를 지켜보려면 해당 노트의 메뉴에 "지켜보기"를 선택하세요.

@@ -1,12 +1,9 @@
-# Misskey install shell script v3.0.0
+# Misskey install shell script v1.4.0
 Install Misskey with one shell script!  
 
 You can install misskey on an Ubuntu server just by answering some questions.  
 
 There is also an update script.
-
-[For v12](./bash-v165.md)  
-[For older versions](./bash-v140.md)
 
 ## License
 [MIT License](./LICENSE)
@@ -43,9 +40,6 @@ wget https://raw.githubusercontent.com/joinmisskey/bash-install/main/ubuntu.sh -
 
 ### 4. To update
 There is also an update script.
-
-The update script does not update the environment.  
-Please refer to CHANGELOG (Japanese) and [GitHub release list (English)](https://github.com/joinmisskey/bash-install/releases) and perform migration operations accordingly.
 
 First, download the script.
 
@@ -185,12 +179,6 @@ export DOCKER_HOST=unix://$XDG_RUNTIME_DIR/docker.sock
 # プロセス一覧を表示
 docker ps
 
-# ビルド (リポジトリ: local/misskey:latest)
-docker build -t local/misskey:latest ./misskey
-
-# docker run
-docker run -d -p 3000:3000 --add-host=docker_host:10.0.0.1 -v /home/misskey/misskey/files:/misskey/files -v "/home/misskey/misskey/.config/default.yml":/misskey/.config/default.yml:ro --restart unless-stopped -t "local/misskey:latest"
-
 # ログを表示
 docker logs --tail 50 -f コンテナID
 ```
@@ -211,12 +199,14 @@ requirepassとbindを`/etc/redis/misskey.conf`で設定しています。
 Dockerでは、起動後にマイグレーションをするため、すぐにアクセスできません。  
 マイグレーションが終わっているかどうか確認してみてください。
 
-systemdの場合では、pnpm installに失敗している可能性があります。  
+それでもアップデート後にアクセスできない、ということが稀にあります。
+
+もしくは、yarn installに失敗しているというものです。  
 
 Misskeyディレクトリで次の内容を実行し、もう一度アップデートを実行してみてください。
 
 ```
-pnpm run clean-all
+npm run cleanall
 ```
 
 journalctlでログを確認すると、たいていre2が云々という記述が見当たります。
