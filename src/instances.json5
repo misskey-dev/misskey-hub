@@ -58,4 +58,8 @@
   host: 'vrsocial.network',
   name: 'VRSocial',
   lang: 'en',
+}, {
+  host: 'msk.ilnk.info',
+  name: 'えとねるん(EtonernROY)',
+  lang: 'ja',
 }]
