@@ -1,6 +1,6 @@
 {
-	summary: '',
-	description: '',
+	summary: 'チャンネルの情報を取得します。',
+	description: 'チャンネルの情報を取得します。',
 	tags: [
 		'channels',
 	],
@@ -11,6 +11,7 @@
 			channelId: {
 				type: 'string',
 				format: 'misskey:id',
+				description: 'チャンネルのid。',
 			},
 		},
 		required: [
@@ -28,7 +29,7 @@
 		'6f6c314b-7486-4897-8966-c04a66a02923': {
 			id: '6f6c314b-7486-4897-8966-c04a66a02923',
 			code: 'NO_SUCH_CHANNEL',
-			description: '',
+			description: 'チャンネルが存在しません。',
 		},
 	},
 }

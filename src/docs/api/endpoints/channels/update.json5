@@ -1,6 +1,6 @@
 {
-	summary: '',
-	description: '',
+	summary: 'チャンネルの情報を更新します。',
+	description: 'チャンネルの情報を更新します。',
 	tags: [
 		'channels',
 	],
@@ -11,22 +11,26 @@
 			channelId: {
 				type: 'string',
 				format: 'misskey:id',
+				description: 'チャンネルのid。',
 			},
 			name: {
 				type: 'string',
 				minLength: 1,
 				maxLength: 128,
+				description: 'チャンネルの新しい名前。',
 			},
 			description: {
 				type: 'string',
 				nullable: true,
 				minLength: 1,
 				maxLength: 2048,
+				description: 'チャンネルの新しい説明。',
 			},
 			bannerId: {
 				type: 'string',
 				format: 'misskey:id',
 				nullable: true,
+				description: 'チャンネルの新しいバナーに使用する、ドライブ上の画像ファイルのid。ログイン中のユーザー自身がアップロードしたものを指定してください。nullにするとバナーを外します。',
 			},
 		},
 		required: [
@@ -44,17 +48,17 @@
 		'f9c5467f-d492-4c3c-9a8d-a70dacc86512': {
 			id: 'f9c5467f-d492-4c3c-9a8d-a70dacc86512',
 			code: 'NO_SUCH_CHANNEL',
-			description: '',
+			description: 'チャンネルが存在しません。',
 		},
 		'1fb7cb09-d46a-4fdf-b8df-057788cce513': {
 			id: '1fb7cb09-d46a-4fdf-b8df-057788cce513',
 			code: 'ACCESS_DENIED',
-			description: '',
+			description: 'チャンネルの情報を更新する権限がありません。チャンネルの作成者のみが情報を更新できます。',
 		},
 		'e86c14a4-0da2-4032-8df3-e737a04c7f3b': {
 			id: 'e86c14a4-0da2-4032-8df3-e737a04c7f3b',
 			code: 'NO_SUCH_FILE',
-			description: '',
+			description: 'ファイルが存在しないか、ログイン中のユーザー以外によってアップロードされたものです。', 
 		},
 	},
 }
