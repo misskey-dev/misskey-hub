@@ -1,42 +1,38 @@
 ---
-description: MiAuth導入以前のアクセストークン取得方法について説明する。
+description: MiAuth의 도입 이전의 액세스 토큰 취득 방법을 설명합니다.
 ---
 
-# アプリ作成方式でのアクセストークン取得方法
+# 앱 생성 방식에서의 액세스 토큰 취득 방법
+MiAuth의 도입(12.27.0) 이전의 기존 액세스 토큰 취득 방법에 대해 설명합니다.
+12.27.0 이전 버전의 인스턴스에서는 이 방식만 사용할 수 있습니다.
 
-MiAuth導入（12.27.0）より前の、旧来のアクセストークン取得方法について説明します。  
-12.27.0未満のバージョンのインスタンスではこの旧来の方式を使用する必要があります。
-
-## 1. アプリケーションの作成
-[`app/create`エンドポイント](endpoints/app/create.html)に情報を送信し、`appSecret`を取得します。
-
+## 1. 어플리케이션 작성
+[`app/create 엔드포인트`](endpoints/app/create.html)로 정보를 보내, `appSecret`을 취득합니다.
 ```json
 {
-    // アプリの名前
+    // 앱 이름
     "name": "test",
-    // アプリの説明
+    // 앱 설명
     "description": "my test application",
-    // アプリのパーミッション
+    // 앱 권한
     "permission": ["write:notes"]
 }
 ```
 
-この時、`callbackUrl`でお好きなURLを含めると、次のアクセス許可操作が終了したときに`token`をクエリ文字列に含めながらそこにコールバックするようになります。
+이때 `callbackUrl`에서 원하는 URL을 포함시키면, 다음 접근 허가 조작이 종료되었을 때 `token`을 쿼리 문자열에 포함시켜 리턴합니다.
 
-## 2. ユーザーに認証させる
-[`auth/session/generate`エンドポイント](endpoints/auth/session/generate)に`appSecret`をPOSTします。
-
+## 2. 사용자에게 인증
+[`auth/session/generate` 엔드포인트](endpoints/auth/session/generate)에 `appSecret`을 POST 요청합니다.
 ```json
 {
     "appSecret": "fAb12cD34Ef56gH78Ij16kL32Mn64oPf"
 }
 ```
 
-`token`（ここでは仮に`798b9f6e-248d-43a7-a919-fabc664027f1`）と`url`を返してくるので、まずはこのurlにウェブブラウザでアクセスし「アクセスを許可」を選択。
+`token`(여기에서는 `798b9f6e-248d-43a7-a919-fabc664027f1`)과 `url`을 반환하므로, 우선 해당 URL에 접속해 "액세스 허가"를 선택해야 합니다.
 
-## 3. accessTokenを問い合わせる
-2が終わったことが確認できたら、[`auth/session/userkey`エンドポイント](endpoints/auth/session/userkey)に`appSecret`と先ほどの`token`をPOSTします。
-
+## 3. accessToken 요청
+액세스 허가를 확인하면 [`auth/session/userkey` 엔드포인트](endpoints/auth/session/userkey)에 `appSecret`과 `token`을 POST합니다.
 ```json
 {
   "appSecret": "fAb12cD34Ef56gH78Ij16kL32Mn64oPf",
@@ -44,11 +40,10 @@ MiAuth導入（12.27.0）より前の、旧来のアクセストークン取得�
 }
 ```
 
-ここで取得できる文字列は`accessToken`と呼ばれます。`accessToken`は一度限りしか取得できません。
+여기서 취득할 수있는 문자열을 `accessToken`이라 부릅니다. `accessToken`은 한 번만 취득할 수 있습니다.
 
-## 4. iを生成
-`i`は、Node.jsであれば以下のようなコードで生成でき、設定画面で取得するものとは違って64桁の16進数となります。
-
+## 4. i 생성
+Node.js에서 `i`는 다음과 같이 생성하며, 설정 화면에서 취득하는 것과는 달리 64자리 16진수로 발급됩니다.
 ```javascript
 const crypto = require("crypto")
 const i = crypto.createHash("sha256")
@@ -57,12 +52,12 @@ const i = crypto.createHash("sha256")
 console.log(i)
 ```
 
-## 5. 実際にテストする
+## 5. 실제 작동 확인
 ```javascript
 fetch("https://misskey.io/api/notes/create", {
     method: 'POST',
     body: JSON.stringify({
-        i: "/* ここにiを入力 */",
+        i: "/* 여기에 i를 입력 */",
         text: "Hello Misskey API World with My Application!"
     }),
     headers: {

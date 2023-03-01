@@ -1,43 +1,37 @@
 # 타임라인
+타임라인은 [노트](./note.md)를 시간 역순으로 표시합니다.
+아래와 같은 타임라인이 존재하며, 이 종류에 따라 다른 노트가 표시됩니다.
+몇몇 타임라인은 인스턴스에 따라 비활성화되어 있을 수도 있습니다.
 
-The timeline displays [notes](.note) in reverse chronological order.
-There are different types of timelines as shown below, and the notes displayed differ depending on the type.
-Note that some types of timelines may be disabled by the instance.
+## 홈
+팔로우하고 있는 사용자의 노트를 표시합니다.
 
-## Home
+## 로컬
+로컬 사용자의 모든 공개 노트를 표시합니다.
 
-Posts by users you are following will be displayed. Abbreviated as HTL.
+## 소셜
+로컬 사용자의 모든 공개 노트와 함께 팔로우하고 있는 사용자의 노트를 표시합니다. 홈 타임라인과 로컬 타임라인이 합쳐진 형태입니다.
 
-## Local
+## 글로벌
+모든 로컬 및 글로벌 사용자의 공개 노트를 표시합니다.
 
-All local users' posts that do not have the visibility of "Home" will be shown. Abbreviated as LTL.
+## 커스텀 타임라인
+Misskey는 더 일반적인 방식으로 타임라인을 설정할 수 있는 기능을 제공합니다. [리스트](TODO)와 [안테나](./antenna.md)를 확인해보세요.
 
-## Social
+## 비교
 
-Posts of users you are following and all local users's posts that do not have the visibility of "Home" will be shown. Abbreviated as STL. Think of it as STL = HTL + LTL.
-
-## Global
-
-All local users' posts that do not have the visibility of "Home" and all remote users' posts that do not have the visibility of "Home" that reach the server. Abbreviated as GTL.
-
-## Custom Timelines
-
-Misskey has other features where you can create timelines with more granularity. See [Lists](./list.md) and [Antennas](./antenna.md) for details.
-
-## Comparison
-
-| Source                |            |        |   Timeline |       |            |
-|-----------------------|------------|--------|---------|------------|------------|
-| User                  | Visibility | Home   | Local    | Social     | Global |
-| Local (Followers)     | Public     | ✔      | ✔        | ✔          | ✔          |
-|                       | Home       | ✔      |          | ✔          |            |
-|                       | Followers  | ✔      |          | ✔          |            |
-| Remote (Followers)    | Public     | ✔      |          | ✔          | ✔          |
-|                       | Home       | ✔      |          | ✔          |            |
-|                       | Followers  | ✔      |          | ✔          |            |
-| local (Non-followers) | Public     |        | ✔        | ✔          | ✔          |
-|                       | Home       |        |          |            |            |
-|                       | Followers  |        |          |            |            |
-| Remote (Non-followers)| Public     |        |          |            | ✔          |
-|                       | Home       |        |          |            |            |
-|                       | Followers  |        |          |            |            |
+| 소스                 |             |    | 타임라인 |      |            |
+|----------------------|-------------|----|----------|------|------------|
+| 사용자               | 확인 가능성 | 홈 | 로컬     | 소셜 | 글로벌     |
+| 로컬 (팔로워)        | 공개        | ✔  | ✔        | ✔    | ✔          |
+|                      | 홈          | ✔  |          | ✔    |            |
+|                      | 팔로워      | ✔  |          | ✔    |            |
+| 리모트 (팔로워)      | 공개        | ✔  |          | ✔    | ✔          |
+|                      | 홈          | ✔  |          | ✔    |            |
+|                      | 팔로워      | ✔  |          | ✔    |            |
+| 로컬 (팔로워 제외)   | 공개        |    | ✔        | ✔    | ✔          |
+|                      | 홈          |    |          |      |            |
+|                      | 팔로워      |    |          |      |            |
+| 리모트 (팔로워 제외) | 공개        |    |          |      | ✔          |
+|                      | 홈          |    |          |      |            |
+|                      | 팔로워      |    |          |      |            |

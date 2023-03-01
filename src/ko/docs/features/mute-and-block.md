@@ -1,54 +1,50 @@
-# 뮤트 및 차단
-If you don't like a user, you can mute them to make them disappear from your timelines.
-Alternatively, you can block a user to prevent them from seeing your content or engaging with you in any way.
-People won't know that you have muted them, but they will know that you have blocked them. It is up to you to decide which option you prefer.
+# 뮤트와 차단
+사용자가 마음에 들지 않는다면 뮤트해 타임라인에서 표시되지 않도록 할 수 있습니다.
+또는 블록을 해 당신의 콘텐츠를 보거나 관련 활동을 하지 못하도록 할 수도 있습니다.
+상대방은 뮤트된 것은 알 수 없지만 차단된 것은 알 수 있습니다.
 
 ::: tip
-Mute and block can be used together.
+뮤트와 블록은 동시에 쓸 수도 있습니다.
 :::
 
 ::: warning
-Please consider reporting any unwanted users who violate the Terms of Use to the moderators.
+서비스 약관을 위반하는 사용자는 관리진에게 보고해 주세요.
 :::
 
-In Misskey Web, you can see the list of users you have muted or blocked by going to Settings > Mute & Block.
+Misskey Web에서 설정 > 뮤트 및 차단 메뉴로 들어가면 뮤트하거나 차단한 사용자의 목록을 볼 수 있습니다.
 
-## Muting
-If you mute a user, the following content about that user will no longer appear in Misskey:
+## 뮤트
+사용자를 뮤트하면, 사용자에 대한 다음 항목이 더이상 표시되지 않습니다:
+- 사용자의 게시물(해당 게시물에 대한 답글과 리노트 포함) 및 검색 결과
+- 해당 사용자로부터의 알림
+- 해당 사용자와의 Misskey 대화 기록 등
 
-- the user's posts (and replies and Renotes to those posts) in the timeline and post search results
-- notifications from that user
-- message history with the user in Misskey chat
-- etc.
-
-To mute a user in Misskey Web, open the menu on the user page of the user in question and press the "Mute" button.
+Misskey Web에서 사용자를 뮤트하려면, 사용자의 프로필 페이지에서 메뉴를 열어 "뮤트"를 선택하세요.
 
 ::: tip
-They will not be notified that you have muted them, and they will not know that you have muted them.
+뮤트를 했다는 알림은 발송되지 않으며, 뮤트된 사용자도 자신이 뮤트되었다는 사실을 알 수 없습니다.
 :::
 
-## Blocking
+## 차단
+사용자를 차단하면 차단된 사용자는 차단한 사용자의 콘텐츠를 확인할 수 없으며, 다음 작업도 수행할 수 없습니다:
+- 차단한 사용자를 팔로우
+- 차단한 사용자를 리스트에 추가
+- 차단한 사용자의 콘텐츠에 답장하거나 리노트
+- 반응을 게시하거나 투표
+- 메시지 전송 등
 
-If you block a user, they will not be able to see your content and they will not be able to do any the following actions:
+또한,
+- 팔로우하고 있는 사용자를 차단하면 팔로우가 해제됩니다.
+- 리스트에 있는 사용자를 차단하면 리스트에서 제거됩니다.
 
-- follow you
-- add to a user list
-- reply or renote
-- react or vote in a poll
-- send a message
-- etc.
-
-Also,
-
-- if the user is already following you when you block them, they will unfollow you.
-- if the user already has you in their user list when you block them, you will be removed from that list.
-
-To block a user on Misskey Web, open the menu on the user page of the user in question and press the "Block" button.
+Misskey Web에서 사용자를 차단하려면, 사용자의 프로필 페이지에서 메뉴를 열어 "차단"을 선택해 주세요.
 
 ::: warning
-You will not be notified that you have been blocked, but you will know indirectly that you have been blocked because you will not be able to take any of the above actions, such as following someone.
+상대방에게 차단되었다는 알림은 발송되지 않지만, 위에 언급된 모든 동작을 수행할 수 없기 때문에 간접적으로 알게 될 수 있습니다.
 :::
 
 ::: warning
-The other person will not be able to see your content, but they will be able to see it if they switch accounts or log out. This is only a simple, but useful feature.
+차단은 단순하지만 유용한 기능입니다. 차단된 사용자는 차단한 사용자의 콘텐츠를 확인할 수 없게 되지만, 계정을 변경하거나 로그아웃하면 여전히 확인할 수 있습니다.
+
+차단된 사용자가 콘텐츠를 확인하기 더 어렵게 하려면 기본 노트 게시 설정을 "팔로우"로 설정하고 팔로우를 수동으로 승인하도록 설정을 변경하는 것을 권장합니다.
 :::

@@ -1,195 +1,134 @@
-# Misskey Setup and Installation Guide
+# Misskey 수동 설치 가이드
 
-We thank you for your interest in setting up your Misskey server!
-This guide describes how to install and setup Misskey.
+이 가이드에서는 Misskey의 설치 및 준비 방법에 대해 설명합니다.
 
----
+::: danger
+한 번 사용을 시작한 인스턴스의 도메인 호스트 이름은 절대 변경하지 마세요!
+:::
 
-## _1._ Install dependencies
+::: tip 준비사항
+다음을 미리 설치해주세요:
+- [Node.js](https://nodejs.org) 18.13 이상
+- [PostgreSQL](https://www.postgresql.org) 15 이상
+- [Redis](https://redis.io)
+- [FFmpeg](https://www.ffmpeg.org)
 
-Please install and setup these softwares:
+GNU/Linux 환경이면 `build-essential` 패키지를 설치해 두면 좋습니다.
 
-#### Dependencies :package:
+또한 corepack이 활성화되어 있어야 합니다.
+```sh
+sudo corepack enable
+```
+:::
 
-- **[Node.js](https://nodejs.org/en/)** (16.x)
-- **[PostgreSQL](https://www.postgresql.org/)** (12.x / 13.x is preferred)
-- **[Redis](https://redis.io/)**
-
-##### Optional
-
-- [Yarn](https://yarnpkg.com/) _Optional but recommended for security reason. If you won't install it, use `npx yarn` instead of `yarn`._
-- [FFmpeg](https://www.ffmpeg.org/)
-
-## _2._ Create Misskey user
-
-Running misskey as root is not a good idea so we create a user for that.
-In debian for exemple :
+## 사용자 생성
+root로 Misskey를 실행하는 것은 좋은 생각이 아닙니다. 별도의 사용자를 만들어 설치하는 것이 좋습니다.
 
 ```sh
 adduser --disabled-password --disabled-login misskey
 ```
 
-## _3._ Install Misskey
+## Misskey 설치
+위에서 생성한 사용자로 전환해 Misskey 설치를 시작합니다.
 
-1. Connect to the `misskey` user
+```sh
+sudo -iu misskey
+git clone --recursive https://github.com/misskey-dev/misskey.git
+cd misskey
+git checkout master
+git submodule update --init
+NODE_ENV=production pnpm install --frozen-lockfile
+```
 
-   `sudo -iu misskey`
+## Misskey 설정
+설정 예시 파일(`.config/example.yml`)을 복사해 `default.yml` 파일을 만듭니다.
+```sh
+cp .config/example.yml .config/default.yml
+```
 
-2. Clone the Misskey repository
+텍스트 편집기를 이용해 `default.yml` 파일을 열어, 파일 내의 지시에 따라 수정합니다.
 
-   `git clone --recursive https://github.com/misskey-dev/misskey.git`
+## Misskey 빌드 및 초기화
+다음 명령을 실행해 Misskey를 빌드(`pnpm run build`)하고 데이터베이스를 초기화(`pnpm run init`)합니다. 본 작업은 시간이 소요되는 작업입니다.
+```sh
+NODE_ENV=production pnpm run build
+pnpm run init
+```
 
-3. Navigate to the repository
+## Misskey 실행
+Misskey의 실행을 위한 모든 준비가 끝났습니다. 이제 다음 명령을 통해 Misskey를 실행할 수 있습니다.
+```sh
+NODE_ENV=production pnpm run start
+```
 
-   `cd misskey`
+### details systemd를 이용한 관리
+우선 systemd 서비스 파일을 생성합니다.
 
-4. Check out the [latest release](https://github.com/misskey-dev/misskey/releases/latest)
+`/etc/systemd/system/misskey.service` 파일을 에디터로 열고 아래 코드를 작성해 넣습니다.
+```ini
+[Unit]
+Description=Misskey daemon
 
-   `git checkout master`
+[Service]
+Type=simple
+User=misskey
+ExecStart=/usr/bin/npm start
+WorkingDirectory=/home/misskey/misskey
+Environment="NODE_ENV=production"
+TimeoutSec=60
+StandardOutput=journal
+StandardError=journal
+SysLogIdentifier=misskey
+Restart=always
 
-5. Download submodules
+[Install]
+WantedBy=multi-user.target
+```
 
-   `git submodule update --init`
+::: warning
+CentOS에서 1024 이하의 포트를 이용해 Misskey를 실행하는 경우 `ExecStart=/usr/bin/sudo/usr/bin/npm start`로 변경해야 합니다.
+:::
 
-6. Install Misskey's dependencies
+이제 systemd를 다시 시작해 서비스를 활성화합니다.
+```sh
+sudo systemctl daemon-reload
+sudo systemctl enable misskey
+```
 
-   `pnpm install --frozen-lockfile`
+이렇게 하면 Misskey 서비스를 부팅할 수 있습니다.
+```sh
+sudo systemctl start misskey
+```
 
-## _4._ Configure Misskey
+::: tip
+이제 `systemctl status misskey` 명령어로 Misskey의 서비스 상태를 확인할 수 있습니다.
+:::
 
-1. Copy the `.config/example.yml` and rename it to `default.yml`.
+## Misskey 업데이트 방법
+::: warning
+업데이트 시 반드시 [변경사항](https://github.com/misskey-dev/misskey/blob/master/CHANGELOG.md)를 확인하고 변경사항이나 필요한 추가 작업을 미리 확인해 주십시오.
+:::
 
-   `cp .config/example.yml .config/default.yml`
+master를 다시 풇하고 설치, 빌드, DB 마이그레이션을 실시합니다.
+```sh
+git checkout master
+git pull
+git submodule update --init
+NODE_ENV=production pnpm install --frozen-lockfile
+NODE_ENV=production pnpm run build
+pnpm run migrate
+```
 
-2. Edit `default.yml`
+업데이트의 내용 및 DB 규모에 따라 시간이 소요될 수 있습니다.
 
-## _5._ Build Misskey
+업데이트가 완료되는 대로 Misskey를 다시 시작합니다.
+```sh
+sudo systemctl restart misskey
+```
 
-Build misskey with the following:
-
-`NODE_ENV=production pnpm run build`
-
-If you're on Debian, you will need to install the `build-essential`, `python` package.
-
-## _6._ Init DB
-
-1. Create the appropriate PostgreSQL users with respective passwords,
-   and empty database as named in the configuration file.
-   Make sure the database connection also works correctly when run from the
-   user that will later run Misskey, or it could cause problems later.
-   `sudo -u postgres psql`
-   `create database misskey;`
-   `create user misskey with encrypted password '{YOUR_PASSWORD}';`
-   `grant all privileges on database misskey to misskey;`
-   `\q`
-
-2. Run the database initialisation
-   `pnpm run init`
-
-## _7._ That is it.
-
-Well done! Now, you have an environment that run to Misskey.
-
-### Launch normally
-
-Just `NODE_ENV=production pnpm run start`. GLHF!
-
-### Launch with systemd
-
-1. Create a systemd service here
-
-   `/etc/systemd/system/misskey.service`
-
-2. Edit it, and paste this and save:
-
-   ::: details
-
-   ```
-   [Unit]
-   Description=Misskey daemon
-
-   [Service]
-   Type=simple
-   User=misskey
-   ExecStart=/usr/bin/npm start
-   WorkingDirectory=/home/misskey/misskey
-   Environment="NODE_ENV=production"
-   TimeoutSec=60
-   StandardOutput=syslog
-   StandardError=syslog
-   SyslogIdentifier=misskey
-   Restart=always
-
-   [Install]
-   WantedBy=multi-user.target
-   ```
-
-   :::
-
-3. Reload systemd and enable the misskey service.
-
-   `sudo systemctl daemon-reload; sudo systemctl enable misskey`
-
-4. Start the misskey service.
-
-   `sudo systemctl start misskey`
-
-You can check if the service is running with `systemctl status misskey`.
-
-### Launch with OpenRC
-
-1. Copy the following text to `/etc/init.d/misskey`:
-
-   ::: details
-
-   ```sh
-   #!/sbin/openrc-run
-
-   name=misskey
-   description="Misskey daemon"
-
-   command="/usr/bin/npm"
-   command_args="start"
-   command_user="misskey"
-
-   supervisor="supervise-daemon"
-   supervise_daemon_args=" -d /home/misskey/misskey -e NODE_ENV=\"production\""
-
-   pidfile="/run/${RC_SVCNAME}.pid"
-
-   depend() {
-   	need net
-   	use logger
-
-   	# alternatively, uncomment if using nginx reverse proxy
-   	#use logger nginx
-   }
-   ```
-
-   :::
-
-2. Set the service to start on boot
-
-   `rc-update add misskey`
-
-3. Start the Misskey service
-
-   `rc-service misskey start`
-
-You can check if the service is running with `rc-service misskey status`.
-
-### How to update your Misskey server to the latest version
-
-1. `git checkout master`
-2. `git pull`
-3. `git submodule update --init`
-4. `NODE_ENV=production pnpm install --frozen-lockfile`
-5. `NODE_ENV=production pnpm run build`
-6. `yarn migrate`
-7. Restart your Misskey process to apply changes
-8. Enjoy
-
-If you encounter any problems with updating, please try the following:
-
-1. `pnpm run clean` or `pnpm run clean-all`
-2. Retry update (Don't forget `pnpm install`)
+::: tip
+빌드 혹은 실행 중 오류가 발생한 경우 아래 명령을 실행해보세요.
+- `pnpm run clean` 또는 `pnpm run clean-all`
+   - 이 명령을 실행한 후에는 반드시 `pnpm install`을 다시 실행해주세요.
+- `pnpm rebuild`
+:::

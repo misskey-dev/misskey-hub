@@ -1,12 +1,18 @@
-# Nginx configuration example
+# Nginx 설정
+1. `/etc/nginx/conf.d/misskey.conf` 또는 `/etc/nginx/sites-available/misskey.conf` 파일을 만들고 다음 예시를 복사해 주세요.\
+   (파일 이름이 굳이 "misskey"일 필요는 없습니다.)
+2. 다음과 같이 수정해 주세요:
+   1. example.tld를 미리 준비해 둔 도메인으로 변경해주세요.\
+     `ssl_certificate`와 `ssl_certificate_key`는 Let's Encrypt로부터 받은 인증서 경로여야 합니다.
+	 2. Cloudflare와 같은 CDN을 활용하고 있다면, "If it's behind another reverse proxy or CDN, remove the following."으로부터 4줄을 지워주세요.
+3. `/etc/nginx/sites-available/misskey.conf` 파일을 만들었다면, symlink로 `/etc/nginx/sites-enabled/misskey.conf`에 연결해주세요.\
+   `sudo ln -s /etc/nginx/sites-available/misskey.conf /etc/nginx/sites-enabled/misskey.conf`
+4. `sudo nginx -t`를 실행해 설정 파일이 정상적으로 로드되는지 확인해주세요.
+5. `sudo systemctl restart nginx`를 실행해 nginx를 재실행해주세요.
+
+## Nginx 설정 예시
 
 ```nginx
-# Sample nginx configuration for Misskey
-#
-# 1. Replace example.tld to your domain
-# 2. Copy to /etc/nginx/sites-available/ and then symlink from /etc/nginx/sites-enabled/
-#    or copy to /etc/nginx/conf.d/
-
 # For WebSocket
 map $http_upgrade $connection_upgrade {
     default upgrade;
@@ -74,6 +80,7 @@ server {
         proxy_cache cache1;
         proxy_cache_lock on;
         proxy_cache_use_stale updating;
+        proxy_force_ranges on;
         add_header X-Cache $upstream_cache_status;
     }
 }
