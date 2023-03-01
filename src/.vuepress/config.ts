@@ -255,23 +255,35 @@ export default defineUserConfig<DefaultThemeOptions>({
                                 text: '기능', children: [
                                     '/ko/docs/features/note',
                                     '/ko/docs/features/reaction',
+                                    '/ko/docs/features/timeline',
                                     '/ko/docs/features/mfm',
                                     '/ko/docs/features/custom-emoji',
                                     '/ko/docs/features/drive',
+                                    '/ko/docs/features/deck',
+                                    '/ko/docs/features/charts',
                                     '/ko/docs/features/online-status',
                                     '/ko/docs/features/share-form',
+                                    '/ko/docs/features/ads',
                                     '/ko/docs/features/thread-mute',
                                     '/ko/docs/features/word-mute',
                                     '/ko/docs/features/mute-and-block',
                                     '/ko/docs/features/plugin',
+                                    '/ko/docs/features/antenna',
+                                    '/ko/docs/features/clip',
+                                    '/ko/docs/features/favorite',
+                                    '/ko/docs/features/follow',
+                                    '/ko/docs/features/pages',
+                                    '/ko/docs/features/theme',
+                                    '/ko/docs/features/thread-mute',
+                                    '/ko/docs/features/widgets',
                                 ]
                             },
                             {
                                 text: '개발자를 위하여', children: [
                                     '/ko/docs/api',
                                     '/ko/docs/api/streaming',
-                                    '/ko/docs/api/entity',
                                     '/ko/docs/api/endpoints.html',
+																		'/ko/docs/features/webhook',
                                 ]
                             },
                             {
@@ -283,6 +295,7 @@ export default defineUserConfig<DefaultThemeOptions>({
                                     '/ko/docs/admin/troubleshooting',
                                     '/ko/docs/tips/disable-timelines',
                                     '/ko/docs/admin/default-reaction',
+																		'/ko/docs/features/silence',
                                 ]
                             },
                         ]
