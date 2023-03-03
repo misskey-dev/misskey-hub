@@ -1,6 +1,6 @@
 {
-	summary: 'インスタンス・連合の統計を取得します。',
-	description: 'インスタンス・連合の統計を取得します。',
+	summary: 'サーバー・連合の統計を取得します。',
+	description: 'サーバー・連合の統計を取得します。',
 	tags: [
 		'federation',
 	],
@@ -13,7 +13,7 @@
 				minimum: 1,
 				maximum: 100,
 				default: 10,
-				description: '詳細を取得するインスタンスの最大数。',
+				description: '詳細を取得するサーバーの最大数。',
 			},
 		},
 		required: [],

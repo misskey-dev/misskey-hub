@@ -32,7 +32,7 @@
 					'combined',
 				],
 				default: 'combined',
-				description: 'ユーザーの所属インスタンスの区分。local, remoteにすると、それぞれローカル・リモートユーザーのみを取得します。combined（デフォルト）にすると、すべてのユーザーを対象にします。',
+				description: 'ユーザーの所属サーバーの区分。local, remoteにすると、それぞれローカル・リモートユーザーのみを取得します。combined（デフォルト）にすると、すべてのユーザーを対象にします。',
 			},
 			detail: {
 				type: 'boolean',

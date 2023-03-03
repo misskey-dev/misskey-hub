@@ -1,6 +1,6 @@
 {
-	summary: '自インスタンス情報を取得します。',
-	description: '自インスタンス情報を取得します。',
+	summary: '自サーバー情報を取得します。',
+	description: '自サーバー情報を取得します。',
 	tags: [
 		'meta',
 	],

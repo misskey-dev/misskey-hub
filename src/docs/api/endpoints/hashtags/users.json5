@@ -47,7 +47,7 @@
 					'remote',
 				],
 				default: 'local',
-				description: 'ユーザーの所属インスタンスの区分。local（デフォルト）, remoteにすると、それぞれローカル・リモートユーザーのみを取得します。combinedにすると、すべてのユーザーを対象にします。',
+				description: 'ユーザーの所属サーバーの区分。local（デフォルト）, remoteにすると、それぞれローカル・リモートユーザーのみを取得します。combinedにすると、すべてのユーザーを対象にします。',
 			},
 		},
 		required: [

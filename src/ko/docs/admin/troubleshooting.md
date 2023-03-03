@@ -76,7 +76,7 @@ URLとポート番号のしくみは、少し分かりにくいと思います�
 url: https://example.tld/
 ```
 
-**`url: `には、インスタンスにブラウザでアクセスしたときアドレスバーに表示される**(したい)**URLを書きます。**
+**`url: `には、サーバーにブラウザでアクセスしたときアドレスバーに表示される**(したい)**URLを書きます。**
 
 #### ポートと証明書の設定
 ```yml
@@ -86,7 +86,7 @@ url: https://example.tld/
 #### ポートと証明書の設定      ####################################
 #
 # Misskey supports two deployment options for public.
-# Misskeyは2つのインスタンス開設方法をサポートしています。
+# Misskeyは2つのサーバー開設方法をサポートしています。
 #
 
 # Option 1: With Reverse Proxy
@@ -196,7 +196,7 @@ redis-serverは起動していますか？
 - `default.yml`の`redis:`の`pass:`の行をコメントアウトする。
 
 ## 上部に「開発ビルドです」と書かれた赤いバーが表示される
-インスタンスを公開する場合は必ずproductionビルドを使いましょう。
+サーバーを公開する場合は必ずproductionビルドを使いましょう。
 
 製品ビルドにするには、環境変数が`NODE_ENV=production`になるように設定し`npm run build && npm start`します。
 

@@ -1,6 +1,6 @@
 {
-	summary: 'インスタンスの詳細を取得します。',
-	description: 'インスタンスの詳細を取得します。',
+	summary: 'サーバーの詳細を取得します。',
+	description: 'サーバーの詳細を取得します。',
 	tags: [
 		'federation',
 	],
@@ -10,7 +10,7 @@
 		properties: {
 			host: {
 				type: 'string',
-				description: 'インスタンスのホスト名。',
+				description: 'サーバーのホスト名。',
 			},
 		},
 		required: [
