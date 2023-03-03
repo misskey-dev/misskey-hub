@@ -1,23 +1,23 @@
 # 드라이브
-Drive is a feature that allows you to manage your files on Misskey.
+드라이브를 통해 Misskey에서 파일을 관리할 수 있습니다.
 
 ::: tip
-Technically speaking, the drive can be seen as an interface where all the files are centrally managed on Misskey's system, which is also open to users.
+기술적으로, 드라이브는 Misskey에서 현재 관리하고 있는 파일을 사용자에게 보여주는 인터페이스입니다.
 :::
 
-You can upload any file directly on the Drive page on Misskey Web, and any images you have set as your avatar or files you have attached to your notes will also be uploaded to the Drive.
+Misskey Web에서는 드라이브 페이지에서 파일을 바로 업로드할 수 있으며, 아바타로 설정한 이미지나 노트와 함께 업로드한 파일도 드라이브에 함께 업로드됩니다.
 
-Files uploaded to the drive can be downloaded at any time, or files can be reused by using 'attach files from drive' when creating notes.
+드라이브에 업로드된 파일은 언제든 다운로드할 수 있으며, 노트를 만들 때 "드라이브로부터 파일 첨부"를 선택할 수도 있습니다.
 
-You can also create folders on your drive to organise multiple files together.
+여러 파일을 정렬하기 위한 폴더를 만들 수도 있습니다.
 
 ::: warning
-At the moment, when you delete a file from your drive, **all the content (notes, pages, etc.)** attached to that file will also be deleted.
+현재로서는, 드라이브에서 파일을 지우면 해당 파일이 첨부된 모든 컨텐츠가 함께 삭제됩니다.
 :::
 
-## Warning (NSFW)
-Warning or NSFW (Not safe for work) is a flag that can be set on files in your drive.
-Files that have been flagged as unsafe to view will not be displayed without user interaction.
-This flag can be used, for example, to prevent images that are not suitable for viewing in the workplace or in public places from suddenly appearing.
+## 경고 (NSFW, CW)
+경고 혹은 NSFW 표시를 드라이브에서 파일별로 설정할 수 있습니다.
+안전하지 않다고 표시된 모든 파일은 사용자가 별도로 조작하지 않는 한 표시되지 않습니다.
+예를 들어, 일하는 곳에서 보는 게 맞지 않거나 공공장소에서 보기 부적절한 이미지에 설정할 수 있습니다.
 
-This flag can be toggled on and off manually, or it can be set at a moderator's discretion.
+이 표시는 직접 켜거나 끌 수 있고, 모더레이터도 설정할 수 있습니다.

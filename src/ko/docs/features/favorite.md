@@ -1,7 +1,6 @@
 # 즐겨찾기
+이 기능을 통해 [노트](./note.md)를 즐겨찾기 설정할 수 있습니다.
+즐겨찾기한 노트는 "즐겨찾기"(`/my/favorites`) 페이지에서 확인할 수 있습니다.
+다른 사용자는 이런 즐겨찾기에 대해 알림받지 않으며, 설정한 사용자만 확인이 가능합니다.
 
-This function allows you to mark a [note](./note) as a favorite.
-You can view your favorited notes on the [Favorite](./my/favorites) page.
-Other users will not be notified that you have added their note to your favorites, and only you can see your favorites.
-
-To favorite a note, press "Add to favorites" in the note's menu. To un-favorite a note, click "Remove from favorites" in the note's menu.
+노트의 메뉴에서 "즐겨찾기"를 선택해 즐겨찾기에 추가할 수 있습니다. "즐겨찾기에서 제거"를 선택해 취소할 수도 있습니다.

@@ -1,5 +1,8 @@
 # 공유 양식
-<!--삭제된 거 같기도 한데 MK12에서 확인 다시 해보고 번역할게요-->
+::: tip
+본 기능은 Misskey v13에서 이용할 수 없습니다. 다만 링크는 살아있는 것으로 확인되어 있습니다.
+:::
+
 When you open `/share` in Misskey Web, you can open a sharing submission form. This sharing form is useful if you want users to share the content of your page with Misskey from an external web page.
 
 You can specify a number of options for the URL, including the shared content as a query parameter.
