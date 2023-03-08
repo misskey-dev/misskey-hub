@@ -9,6 +9,14 @@ Misskey 인스턴스 구축에 관심을 가져 주셔서 감사합니다. 인�
 이용을 시작한 이후에는 도메인 이름(호스트명)을 변경하지 마세요!
 :::
 
+::: danger
+자신의 서버에 Cloudflare 를 사용하는 경우, Auto Minify 설정을 사용하지 마십시오.
+
+Cloudflare 가 최신 자바스크립트를 해석하지 않고 내부 소스코드를 파괴하기 때문에 Misskey가 정상적으로 작동하지 않습니다.
+
+자세한 내용은 여기 [misskey-dev/misskey #9791](https://github.com/misskey-dev/misskey/issues/9791)
+:::
+
 ## Docker를 통한 설치 (추천)
 [해당 문서 참고](./install/docker.md)
 
