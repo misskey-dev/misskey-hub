@@ -9,7 +9,7 @@
 					</el-input>
 				</el-form-item>
 				<el-form-item label="Endpoint" :rules="[{ required: true }]">
-					<el-input v-model="endpoint" placeholder="foo/bar">
+					<el-input v-model="endpoint" placeholder="foo/bar" readonly="true">
 						<template #prepend>https://{{ host }}/api/</template>
 					</el-input>
 				</el-form-item>
