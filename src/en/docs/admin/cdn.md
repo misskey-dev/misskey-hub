@@ -10,7 +10,7 @@ Misskey Web is completely static and does not require a server to run. Therefore
 The Misskey API cannot be cached.
 
 You need to configure the following settings in your CDN
-- Cache all requests except `/api/*`.
+- Cache all requests except `/api/*` and `/proxy/*`.
 
 ::: tip
 You don't need to clear the cache when you update Misskey.
