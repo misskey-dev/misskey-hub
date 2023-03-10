@@ -1,6 +1,6 @@
 {
-	summary: 'インスタンスからローカルユーザーへのフォローを取得します。',
-	description: 'インスタンスからローカルユーザーへのフォローを取得します。',
+	summary: 'サーバーからローカルユーザーへのフォローを取得します。',
+	description: 'サーバーからローカルユーザーへのフォローを取得します。',
 	tags: [
 		'federation',
 	],
@@ -10,7 +10,7 @@
 		properties: {
 			host: {
 				type: 'string',
-				description: 'インスタンスのホスト名。',
+				description: 'サーバーのホスト名。',
 			},
 			sinceId: {
 				type: 'string',

@@ -1,5 +1,5 @@
 # CDNの設定
-Misskeyインスタンスを公開するときは、[Cloudflare](https://www.cloudflare.com/)などのCDNを使用することを強くおすすめします。
+Misskeyサーバーを公開するときは、[Cloudflare](https://www.cloudflare.com/)などのCDNを使用することを強くおすすめします。
 
 CDNを使用することで、以下のようなメリットがあります。
 - 静的なコンテンツをキャッシュしてもらうことができ、サーバーの負荷が低減する

@@ -45,7 +45,7 @@
 					host: {
 						type: 'string',
 						nullable: true,
-						description: 'ユーザーが所属するインスタンスのホスト名（ドメインなど）。ローカルユーザーを対象にする場合はnullを指定します。',
+						description: 'ユーザーが所属するサーバーのホスト名（ドメインなど）。ローカルユーザーを対象にする場合はnullを指定します。',
 					},
 				},
 				required: [

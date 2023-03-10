@@ -377,7 +377,7 @@
 				items: {
 					type: 'string',
 				},
-				description: 'ミュートするインスタンスのアドレス。',
+				description: 'ミュートするサーバーのアドレス。',
 			},
 			mutingNotificationTypes: {
 				type: 'array',

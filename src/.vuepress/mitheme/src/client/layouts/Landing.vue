@@ -189,6 +189,7 @@
 			<div class="container">
 				<div class="title">{{ frontmatter.sections.sponsors.title }}</div>
 				<a class="rss3" title="RSS3" href="https://rss3.io/" target="_blank"><img src="/sponsors/rss3.svg" alt="RSS3"></a>
+				<a class="dcadvirth" title="DC Advirth" href="https://www.dotchain.ltd/advirth" target="_blank"><img src="/sponsors/dcadvirth.png" alt="DC Advirth"></a>
 			</div>
 		</div>
 	</div>

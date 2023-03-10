@@ -1,6 +1,6 @@
 {
-	summary: 'インスタンスの情報を取得します。',
-	description: 'インスタンスの情報を取得します。',
+	summary: 'サーバーの情報を取得します。',
+	description: 'サーバーの情報を取得します。',
 	tags: [
 		'meta',
 	],
@@ -18,7 +18,7 @@
 			originalNotesCount: {
 				type: 'number',
 				optional: false, nullable: false,
-				description: 'インスタンス内（ローカル）で作成された総ノート数です。',
+				description: 'サーバー内（ローカル）で作成された総ノート数です。',
 			},
 			usersCount: {
 				type: 'number',
@@ -28,7 +28,7 @@
 			originalUsersCount: {
 				type: 'number',
 				optional: false, nullable: false,
-				description: 'インスタンス内（ローカル）で作成された総ユーザ数です。',
+				description: 'サーバー内（ローカル）で作成された総ユーザ数です。',
 			},
 			instances: {
 				type: 'number',
