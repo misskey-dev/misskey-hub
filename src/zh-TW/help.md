@@ -1,3 +1,3 @@
-# ヘルプ
+# 說明
 
-- [機能一覧](./docs/features/index.md)
+- [功能一覽](./docs/features/index.md)
