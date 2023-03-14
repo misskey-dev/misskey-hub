@@ -6,7 +6,7 @@ You can install misskey on an Ubuntu server just by answering some questions.
 There is also an update script.
 
 [For v12](https://github.com/joinmisskey/bash-install/blob/a096e874f93d493aa68975a31be9ce12d644e767/README.en.md)  
-[**日本語版はこちら**](./README.md)
+[**日本語版はこちら**](/docs/install/bash.md)
 
 ## License
 [MIT License](./LICENSE)
@@ -110,7 +110,7 @@ systemdは、Docker Hubにイメージを上げるまでもないものの、フ
 ## nginxを使うかどうか
 サーバー1台でMisskeyを構築する場合は、nginxの使用をお勧めします。
 
-ロードバランサーを設置する場合にはnginxをインストールせず、[Misskeyのnginx設定](https://github.com/misskey-dev/misskey/blob/develop/docs/examples/misskey.nginx)を参考にロードバランサーを設定するのがよいと思います。
+ロードバランサーを設置する場合にはnginxをインストールせず、[Misskeyのnginx設定](/fr/docs/admin/nginx.html)を参考にロードバランサーを設定するのがよいと思います。
 
 ## Add more swaps!
 スワップを設定している場合、メモリが合計で3GB以上でなければスクリプトが動作しないようになっています。
