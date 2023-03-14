@@ -18,7 +18,7 @@ import PageNav from '@theme/PageNav.vue'
 		<MkRelatedPages/>
 
 		<MkDots :class="$style.footerDots"/>
-		<div :class="$style.footer">Copyright &copy; 2022 syuilo and other contributors</div>
+		<div :class="$style.footer">Copyright &copy; 2023 syuilo and other contributors</div>
   </main>
 </template>
 
