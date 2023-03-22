@@ -14,7 +14,7 @@ Fediverseと呼ばれる、非中央集権型で連合したソーシャルネ�
 
 ## AiScript
 (読み: あいすくりぷと)<br>
-Misskeyで使用できる、JavaScript上で動作するプログラミング言語です。詳しくは[こちら。](../advanced/aiscript)
+Misskeyで使用できる、JavaScript上で動作するプログラミング言語です。詳しくは[こちら。](../docs/advanced/aiscript)
 
 ## API
 (読み: えーぴーあい)<br>
@@ -33,13 +33,13 @@ Contents Warningの略。ノートの内容を、操作なしには表示しな�
 「Federated(Federation)」と「Universe」を組み合わせた造語。Misskeyを含む、様々な分散型ソフトウェアを実装したサーバーで構成された、非中央集権的で連合したソーシャルネットワーク。Misskey以外の分散型ソフトウェアとしては、MastodonやPleromaやPixelfedなどがあります。
 
 ## GTL
-グローバルタイムライン(Global TimeLine)の略。タイムラインについて、詳しくは[こちら。](../features/timeline)
+グローバルタイムライン(Global TimeLine)の略。タイムラインについて、詳しくは[こちら。](../docs/features/timeline)
 
 ## HTL
-ホームタイムライン(Home TimeLine)の略。タイムラインについて、詳しくは[こちら。](../features/timeline)
+ホームタイムライン(Home TimeLine)の略。タイムラインについて、詳しくは[こちら。](../docs/features/timeline)
 
 ## LTL
-ローカルタイムライン(Local TimeLine)の略。タイムラインについて、詳しくは[こちら。](../features/timeline)
+ローカルタイムライン(Local TimeLine)の略。タイムラインについて、詳しくは[こちら。](../docs/features/timeline)
 
 ## MFM
 (読み: えむえふえむ)<br>
@@ -58,7 +58,7 @@ Not Safe For Workの略。画像を「閲覧注意」扱いにし、操作なし
 既にあるノートを引用、もしくはそのノートを新しいノートとして共有する行為、またそれによって作成されたノート。詳しくは[こちら。](../docs/features/note.html#renote)
 
 ## STL
-ソーシャルタイムライン(Social TimeLine)の略。タイムラインについて、詳しくは[こちら。](../features/timeline)
+ソーシャルタイムライン(Social TimeLine)の略。タイムラインについて、詳しくは[こちら。](../docs/features/timeline)
 
 ## 藍
 (読み: あい)<br>
