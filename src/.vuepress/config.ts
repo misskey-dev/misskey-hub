@@ -418,6 +418,92 @@ export default defineUserConfig<DefaultThemeOptions>({
                     },
                 ], // Fine: navbar italiana
             },
+            '/zh-TW/': {
+                selectLanguageName: '繁體中文',
+                contributorsText: '貢獻者',
+                lastUpdatedText: '編輯日期',
+                editLinkText: '編輯本頁面',
+                relatedPagesText: '相關頁面',
+                readThisArticle: '閱讀本文章',
+                navbar: [
+                    { text: '部落格', link: '/zh-TW/blog/' },
+                    { text: '參與', children: ['/zh-TW/instances', '/zh-TW/plugins/', '/zh-TW/appendix/assets'] },
+                    {
+                        text: '說明文件', children: [
+                            '/zh-TW/docs/misskey',
+                            '/zh-TW/docs/releases',
+                            '/zh-TW/docs/misskey-hub',
+                            '/zh-TW/docs/faq',
+                            '/zh-TW/docs/glossary',
+                            '/zh-TW/docs/troubleshooting',
+                            {
+                                text: 'Features', children: [
+                                    '/zh-TW/docs/features/note',
+                                    '/zh-TW/docs/features/reaction',
+                                    '/zh-TW/docs/features/timeline',
+                                    '/zh-TW/docs/features/mfm',
+                                    '/zh-TW/docs/features/custom-emoji',
+                                    '/zh-TW/docs/features/drive',
+                                    '/zh-TW/docs/features/deck',
+                                    '/zh-TW/docs/features/charts',
+                                    '/zh-TW/docs/features/online-status',
+                                    '/zh-TW/docs/features/share-form',
+                                    '/zh-TW/docs/features/ads',
+                                    '/zh-TW/docs/features/thread-mute',
+                                    '/zh-TW/docs/features/word-mute',
+                                    '/zh-TW/docs/features/mute-and-block',
+                                    '/zh-TW/docs/features/plugin',
+                                    '/zh-TW/docs/features/antenna',
+                                    '/zh-TW/docs/features/clip',
+                                    '/zh-TW/docs/features/favorite',
+                                    '/zh-TW/docs/features/follow',
+                                    '/zh-TW/docs/features/pages',
+                                    '/zh-TW/docs/features/theme',
+                                    '/zh-TW/docs/features/widgets',
+                                ]
+                            },
+                            {
+                                text: '開發者', children: [
+                                    '/zh-TW/docs/api',
+                                    '/zh-TW/docs/api/streaming',
+                                    '/zh-TW/docs/api/endpoints.html',
+                                    '/zh-TW/docs/features/webhook',
+                                ]
+                            },
+                            {
+                                text: '管理員', children: [
+                                    '/zh-TW/docs/install',
+                                    '/zh-TW/docs/admin/emoji',
+                                    '/zh-TW/docs/admin/cdn',
+                                    '/zh-TW/docs/admin/nginx',
+                                    '/zh-TW/docs/admin/push-docker-hub',
+                                    '/zh-TW/docs/admin/troubleshooting',
+                                    '/zh-TW/docs/tips/disable-timelines',
+                                    '/zh-TW/docs/admin/default-reaction',
+                                    '/zh-TW/docs/features/silence',
+                                ]
+                            },
+                        ]
+                    },
+                    {
+                        text: '連結', children: [
+                            { text: '官方Discord', link: 'https://discord.gg/Wp8gVStHW3' },
+                            { text: '贊助 (Patreon)', link: 'https://www.patreon.com/syuilo' },
+                            { text: '翻譯 (Crowdin)', link: 'https://crowdin.com/project/misskey' },
+                            { text: '藍.moe (吉祥物藝廊)', link: 'https://xn--931a.moe' },
+                            { text: '帳戶', children: [{ text: '@repo@p1.a9z.dev', link: 'https://p1.a9z.dev/@repo' }] },
+                            {
+                                text: '儲存庫', children: [
+                                    { text: 'misskey', link: 'https://github.com/misskey-dev/misskey' },
+                                    { text: 'misskey.js', link: 'https://github.com/misskey-dev/misskey.js' },
+                                    { text: 'mfm.js', link: 'https://github.com/misskey-dev/mfm.js' },
+                                    { text: 'misskey-hub', link: 'https://github.com/misskey-dev/misskey-hub' },
+                                ]
+                            },
+                        ]
+                    },
+                ],
+            },
         },
         themePlugins: {
             activeHeaderLinks: false,
