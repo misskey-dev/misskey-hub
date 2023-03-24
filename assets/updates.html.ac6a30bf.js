@@ -1,0 +1,1 @@
+const t=JSON.parse('{"key":"v-8bd54716","path":"/zh-TW/updates.html","title":"\u6700\u8FD1\u7684\u66F4\u65B0","lang":"ja-JP","frontmatter":{},"excerpt":"","headers":[],"git":{"updatedTime":1679553679000,"contributors":[{"name":"Pacific Coast Highway","email":"103393164+pchxyz@users.noreply.github.com","commits":1}]},"filePathRelative":"zh-TW/updates.md"}');export{t as data};
