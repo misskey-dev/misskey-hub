@@ -1,3 +1,3 @@
-# Recent changes
+# Ostatnie zmiany
 
 <!--[RECENT_UPDATES]-->

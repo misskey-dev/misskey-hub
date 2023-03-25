@@ -1,49 +1,48 @@
 ---
-description: 'If you run into a problem, please check this page first.'
+description: 'Jeśli naportkasz na problem, proszę najpierw sprawdź tą stronę'
 ---
 
-# Troubleshooting
-::: tip
-Please also use the [Frequently asked questions](./faq.md) page.
+# Rozwiązywanie problemów
+::: Wskazówka
+Proszę równierz korzystać z strony z [często zadawanymi pytaniami(FAQ)](./faq.md)
+:::
+Jeżeli napotkasz problem, proszę najpierw sprwadź tą stronę. W przypadku kiedy nie możesz znaleść twojego problemu tutaj, albo kroki podane tutaj nie rozwiązują problemu, proszę skontakuj się z administratorem twojego serwera lub [Zgłoś błąd](./report-issue).
+
+## Klient się nie uruchamia
+W większości przypadków jest to spowodowane przez przestarzałą przeglądarkę lub system operacyjny. Proszę spróbuj zaktualizować twój system lub przeglądarkę do najnowszej wersji i wtedy spróbuj ponownie.
+
+Mimo iż to nie dzieje się zbyt często, jeżeli twój klient nadal się nie uruchamia, jest możliwe że cache/bufor może być problemem. W tym przypadku proszę wyczyść pamięć cache i spróbuj ponownie.
+
+## Strony nie mogą się załadować
+Jeżeli twój klient się uruchamia, ale widzisz błąd przy załadowaniu strony, proszę sprawdź twoje połączenie sieciowe w poszukiwaniu błędów. Na dodatek sprawdź czy serwer z którym chcesz się połączyć nie jest wyłączony.
+
+Mimo iż to nie dzieje się zbyt często, przypadki gdzie pamięć podręczna/cache/bufor mogą być problemem. W tym przypadku wyczyść ją i spróbuj ponownie.
+
+Wszystkie inne problemy najpewniej są związane z serwerem z którego chcesz skorzystać więc skontaktuj się z jego administratorem.
+
+## Klient jest wolny
+Proszę wypróbuj którąś z opcji:
+
+- Aktywuj "Redukuj animacje interfejsu" w ustawieniach klienta
+- Wyłącz "Użyj efektu rozmycja dla modułów" w ustawieniach klienta
+- Włącz akcelerację sprzętową w ustawieniach przeglądarki
+- Ulepsz specyfikację twojego urządzenia (heh)
+
+## Części interfejsu działają dziwnie (Na przykład: tło jest przezroczyste)
+Zepsuty interfejs może być spowodowany przez system buforów motywów kiedy interfejs jest zmieniony jako część aktualizacji. Korzystajnie z opcji "Wyczyść bufor" w ustawieniach powinno rozwiązać problem.
+
+::: Ostrzeżenie
+Wyczyść bufor/cache "Klienta". Nie czyść buforu/cache "Przeglądarki".
 :::
 
-If you run into a problem, please check this page first. In the case that you can't find your problem here, or the steps described here don't solve your issue, please contact your server's administrator or [Report it as a bug](./report-issue).
+## Migające światło powiadomień lub antena nie znika
+Migające światło pokazuje nieprzeczytane materiały. W przypadkach, gdy ta lampka nie znika, zazwyczaj jest to nieprzeczytana zawartość, która została wyparta przez nową, przychodzącą zawartość. Jeśli uważasz, że przeczytałeś całą zawartość, ale kontrolka nadal nie znika (prawdopodobnie jest to błąd), możesz siłą zaznaczyć całą zawartość jako przeczytaną w ustawieniach użytkownika.
 
-## The client does not start
-In most of the cases, this is due your used browser's or operating system's version being outdated. Please try updating your browser or operating system to the latest version and then try again.
+## Przycisk do renotowania jest zablokowany
+Postów udostępnionych tylko "dla obserwujących" nie można renotować
 
-Although this does not happen frequently, if your client will still not start after this, it is possible for the cache to be at fault.In this case, please try clearing your cache and then try again.
+## Określone części Przeglądarkowego Interfejsu Misskey are nie są wyświetlane
+Problemy tego typu mogą się pojawić jeżeli korzystasz z narzędzi do blokowania reklam(np. Adblock). Dla poprawnego działania Misskey spróbuj je wyłączyć.
 
-## Pages cannot be loaded
-If your client does boot, but you get an error when trying to load a page, please check your network connection for errors.In addition, check that the server you are trying to access is not down.
-
-Although this does not happen frequently, cases where the cache is at fault can happen.In this case, please try clearing your cache and then try again.
-
-Any remaining problems are likely related to the server you are trying to access, so please contact its administrator.
-
-## The client is slow
-Please try the following:
-
-- Activate "Reduce UI animations" in the client settings
-- Deactivate "Use blur effect for modals" in the client settings
-- Activate hardware acceleration in your browser's settings
-- Upgrade the specs of your used device
-
-## Parts of the UI are weird (For example, the background is transparent)
-Broken UI display may be caused by the theme cache system when the UI is changed as part of an update. Pressing "Clear cache" in the settings will fix this.
-
-::: warning
-Specifically clear the "Client's" cache. Don't clear the "Browser's" cache.
-:::
-
-## The blinking light of a notification or Antenna won't go away
-A blinking light indicates unread content.In cases where this light won't go away, there is usually unread content that has been pushed away by new incoming content. If you believe to have read all content, but the light still won't go away (likely a bug), you can forcibly mark all content as read via the user settings.
-
-## The renote button is blocked out
-Followers-only notes cannot be renoted.
-
-## Specific parts of the Misskey Web UI are not being displayed
-Problems like these can arise if you are using an Adblocker. For an optimized experience on Misskey, please turn it off.
-
-## Some parts of the Misskey Web UI are untranslated
-In most cases, this is simply a matter of the translation not having been done yet instead of being a bug.Please wait until the translation of this area has been completed. You can alternatively also [participate in translation](./misskey) yourself.
+## Niektóre części Interfejsu Przeglądarkowego Misskey nie są przetłumaczone
+W większości przypadków jest to powód tego że tłumaczenie nie jest jeszcze wykonane zamiast bycia błędem. Proszę poczekać dopóki tłumaczenie danej częsci zostanie ukończone. Możesz równierz samemu [przyłączyć się do tłumaczenia Interfejsu Misskey](./misskey).

@@ -1,108 +1,119 @@
 ---
-description: 'Misskey exposes an API that you can use to develop Misskey clients, Misskey-connected web services, bots, etc. ("Applications").'
+description: 'Misskey udostępnia API które możesz wykorzystać do tworzenia klientów do Misskey, usług internetowych połączonych z Misskey, botów, itp. ("Aplikacje").'
 ---
 
 # Misskey API
-Misskey exposes an API that you can use to develop Misskey clients, Misskey-connected web services, bots, etc. ("Applications").
-We also have a streaming API, so you can create applications with real-time capabilities.
 
-::: tip
-By using the official Misskey SDK or third party libraries, you can use the API more conveniently, for example by simplifying some of the steps described in this document.
-See [here](TODO) for more information about libraries.
+Misskey udostępnia API które możesz wykorzystać do tworzenia klientów do Misskey, usług internetowych połączonych z Misskey, botów, itp. ("Aplikacje").Posiadamy również API strumieniowe, dzięki czemu można tworzyć aplikacje z możliwością pracy w czasie rzeczywistym.
+
+::: Wskazówka
+Używając oficjalnego SDK Misskey lub bibliotek nieoficjalnych można wygodniej korzystać z API, na przykład upraszczając niektóre z kroków opisanych w tym dokumencie.
+Zobacz [tutaj](TODO) więcej informacji na temat bibliotek.
 :::
 
-To start using the API, you will need to obtain an **access token** associated with the account you wish to use the API with.
-This document will walk you through the process of obtaining an access token and then show you how to use the API in a basic way.
+Aby zacząć korzystać z API, musisz zdobć **token dostępu** powiązany z kontem którego chcesz używać z API.
+Ten dokument poprowadzi Cię przez proces zdobywania tokenu dostępu i pokaże jak korzystać z API.
 
-## Getting an access token
-The API generally requires an access token to make a request.
-An access token is a set of credentials associated with a user, which identifies the user using the API and controls what operations each access token is authorised to perform.
+## Zdobywanie tokenu dostępu
 
-::: tip
-There is a one-to-many relationship between a user and the access token associated with that user, and multiple access tokens can be issued for a given user.
+Zazwyczaj API wymaga Tokenu Dostępu żeby wykonać żądanie.
+Token dostępu jest to zestaw danych powiązanych z użytkownikem, które identyfikuje który użytkownik korzsta z API i kontroluje jakie dostęp do operacji każdego tokenu dostępu.
+
+::: Wskazówka
+Może być wiele relacji pomiędzy użytkownikiem a tokenem dostępu powiązanym z użytkownikiem i wiele tokenów dostępu może być wygenerowane dla danego użytkownika.
 :::
 
-You can easily [obtain an access token for yourself](#Manually-issue-an-access-token), or you can [obtain an access token for an user who will be using your application](#Request-an-access-token-to-be-issued).
+Możesz łatwo [zdobyć token dostępu dla siebie](#Manually-issue-an-access-token), lub możesz [zdobyć token dostępu dla użytkownika, który będzie korzystał z aplikacji](#Request-an-access-token-to-be-issued).
 
-### Manually issue an access token
-You can issue your own access token in Misskey Web under 'Settings > API'.
+### Manualnie stwórz token dostępu
 
-::: danger
-Please do not share your access token with anyone.
+Możesz manualnie stworzyć swój token dostępu w Przeglądarkowym Interfejsie Misskey w 'Ustawienia > API'.
+
+::: OSTRZEŻENIE
+NIKOMU NIE UDOŚTĘPNIAJ SWOJEGO TOKENU DOSTĘPU
 :::
 
-### Request an access token to be issued
-To obtain an access token for a user of the application ( simply "the user"), you can request it to be issued in the following way.
+### Zażadaj utworzenia tokenu
 
-::: tip
-The method described below is called MiAuth, ant it issues an instant access token without creating an app.
+Any uzyskać token dostępu dla użytkownika aplikacji (lub po prostu "użytkownika"), możesz zarządać by został stworzony w następujący sposób.
 
-You can still [create an app to obtain access token](./app.md).
+::: Wskazówka
+Metoda tutaj opisana nazywa się MiAuth i ona tworzy token dostępu bez tworzenia aplikacji.
+
+Nadal możesz [stworzyć aplikację by uzyskać token dostępu](./app.md).
 :::
 
-#### Step 1
-Generate a UUID. This will be referred to as the **session ID** from now on.
+#### Krok 1
 
-::: danger
-This session ID should be generated each time and should not be reused.
+Wygeneruj UUID. Od teraz będziemy na niego mówić **ID Sesji**.
+
+::: OSTRZEŻENIE
+ID Sesji powinien być generowany za każdym razem i nie powinien być ponownie używany.
 :::
 
-#### Step 2
-The application authentication form should be displayed in the user's browser. The authentication form can be opened with a URL similar to this:
+#### Krok 2
+
+Formularz uwierzytelniania aplikacji powinien zostac wyświetlony w przeglądarce użytkownika. Formularz uwierzytelniania może zostać otwarty za pomocą URL podobnego do tego:
 
 ```:no-line-numbers
 https://{host}/miauth/{session}
 ```
 
-where
-- `{host}` is the host of the user's instance (usually this is entered by the user) and
-- `{session}` is the session ID.
+gdzie:
 
-You can also set a few options as query parameters to the URL:
+- `{host}` to instancja użytkownika (zazwczaj manualnie wpisana przez niego).
+- `{session}` to jest ID Sesji.
 
-| name | description |
+Jest też kilka parametrów żądań w URL:
+
+| Nazwa | Opis |
 | ---- | ---- |
-| `name` | application name |
-| `icon` | application icon image URL。 |
-| `callback` | The URL to which the user will be redirected after authentication, with the session ID added to the redirect with the query parameter `session`. |
-| `permission` | The permissions that the application requires. <br>List the permissions to be requested, separated by `,`. The list of permissions can be found [here](TODO). |
+| `name` | Nazwa Aplikacji |
+| `icon` | Ikona Aplikacji。 |
+| `callback` | URL do którego użytkowink zostanie przekierowany po uwierzytelnieniu z ID Sesji dodanym by przekierować z parametrem żądania `session`. |
+| `permission` | Zgody których aplikacjia wymaga. <br>Lista zezwoleń które mogą być żądane, podzelona`,`. Lista zezwoleń jest dostępna [tutaj](TODO). |
 
-::: tip Example
+::: Wskazówka Przykład
+
 ```:no-line-numbers
 https://misskey.io/miauth/c1f6d42b-468b-4fd2-8274-e58abdedef6f?name=MyApp&callback=https%3A%2F%2Fmyapp.example.com%2Fcallback&permisson=write:notes,write:following,read:drive
 ```
+
 :::
 
-#### Step 3
-After the user has been granted application access, a POST request to a URL of the following form will return JSON containing the access token as a response.
+#### Krok 3
+
+Po tym jak użytkownik odtrzymał dostęp do aplikacji, żądanie POST do URL formularza zwróci wynik w JSON zawierający token dostępowy jako odpowiedź.
 
 ```:no-line-numbers
 https://{host}/api/miauth/{session}/check
 ```
 
-where
-- `{host}` is the host of the user's instance and
-- `{session}` is the session ID.
+gdzie:
 
-The properties included in the response are as follows:
+- `{host}` to instancja użytkownika (zazwczaj manualnie wpisana przez niego).
+- `{session}` to jest ID Sesji.- `{session}` is the session ID.
 
-| name | description |
+Właściwości zawarte w odpowiedzi:
+
+| Nazwa | Opis |
 | ---- | ---- |
-| `token` | access token for the user |
-| `user` | information about the user |
+| `token` | teoken dostępu użytkownika |
+| `user` | informacje na temat użytkownika |
 
-## Using the API
-Once you have your API access token, you can use the API by making requests to the various endpoints.
+## Używanie API
 
-::: tip
+Kiedy zdobędziesz token dostępu API możesz skorzystać z API tworząc rządania do różnych miejsc.
 
-- All HTTP APIs are POST, and both request and response are in JSON format (excluding drive/files/create).
-- Specify `Content-Type: application/json` in the request header.
-- The access token is included in the request body JSON with the parameter name `i`.
+::: Wskazówka
+
+- Wszytkie API HTTP są żądaniami POST, i zarówno żądanie jak i odpowiedź są w formacie JSON (wyjątkiem stanowią dysk/pliki/utwórz (drive/files/create)).
+- Określ `Content-Type: application/json` w nagłówku żądania.
+- Token dostępu jest zawarty w JSONie żądania z parametrem `i`.
 
 :::
 
-Example of a body with an access token (for meta):
+Przykład JSONa z tokenem dostępu:
 
 ```json
 {
@@ -111,16 +122,16 @@ Example of a body with an access token (for meta):
 }
 ```
 
-The access token is included in the request body JSON at the parameter `i`.
+Token dostępu jest zawarty w JSONie żądania z parametrem `i`.
 
-For more information on the API, see the [API Reference](./endpoints.html).
+Po więcej informacji na temat API zobacz [API Reference](./endpoints.html).
 
-::: warning
-Misskey does not use REST.
+::: UWAGA
+Misskey nie używa API typu REST.
 :::
 
-In addition to the HTTP API, Misskey also provides a streaming API. More information about the streaming API can be found [here](./streaming/).
+Oprócz interfejsu API HTTP, Misskey udostępnia również interfejs API strumieniowania. Więcej informacji o API strumieniowym można znaleźć [tutaj](./streaming/).
 
-::: tip
-Your Misskey instance also provides API documentation at `/api-doc`.
+::: Wskazówki
+Twoja instancja Misskey również zawiera dokumentacji api w `/api-doc`.
 :::

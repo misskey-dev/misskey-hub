@@ -1,2 +1,2 @@
-# Changing the default Reaction
-You can change the default reaction that is used when an ActivityPub "Like" is received from '👍' to '⭐' by changing the boolean value `meta.useStarForReactionFallback` in the databse respectively.
+# Zmienianie domyślnej Reakcji
+Możesz zmienić domyślną reakcję kiedy "Polub to" z ActivityPub jest zdobyte z '👍' na  na przykład :'⭐' zmieniając wartość `meta.useStarForReactionFallback` w bazie danych.

@@ -1,30 +1,30 @@
-# Create your own Misskey instance
-Thank you for your interest in building a Misskey instance 🚀
-There are several ways to create an instance, so please choose one below and read the guide.
+# Stwórz własną instancję Misskey
+Dziękujemy za twoje zainteresowanie w stworzeniu własnej instancji Misskey 🚀
+Jest kilka sposobów by stworzyć instancję, więc wybierz któryś z nich i przeczytaj poradnik.
 
-::: danger
-Never change the domain name (hostname) of an instance once you start using it!
+::: Ostrzeżenie
+Nigdy nie zmieniaj nazwy domeny (hostname) instancji odkąd zaczniej z niej korzystać!
 :::
 
-::: danger
-If you use Cloudflare for your own server, do not use the Auto Minify setting.
+::: Ostrzeżenie
+Jeśli korzystasz z Cloudflare na swoim serwerzę, nie korzystaj z ustawienia Automatycznej Minimalizacji (Auto Minify).
 
-Misskey will not work properly because Cloudflare will not interpret the latest JavaScript and will break the source code inside.
+Misskey nie będzie działać prawidłowo ponieważ Cloudflare nie zinterpretuje najnowszego kodu JavaScripta i złamie kod źródłowy wewnątrz.
 
-See also: [misskey-dev/misskey #9791](https://github.com/misskey-dev/misskey/issues/9791)
+Zobacz również: [misskey-dev/misskey #9791](https://github.com/misskey-dev/misskey/issues/9791)
 :::
 
-## Using Docker
-[See here](./install/docker.html)
+## Używając Dockera
+[Zobacz tutaj](./install/docker.html)
 
-## Using Bash Script
-[See here](./install/bash.html)
+## Używając skryptu BASH
+[Zobacz tutaj](./install/bash.html)
 
-## Manually
-[See here](./install/manual.html)
+## Manualnie
+[Zobacz tutaj](./install/manual.html)
 
-## Using Yunohost
-Misskey can be installed as an App on YunoHost. For more information see [the repository of the Misskey package for YunoHost](https://github.com/YunoHost-Apps/misskey_ynh).
+## Używając Yunohost
+Misskey może być zainstalowane jako Aplikacjia na YunoHost. Po więcej informacji zobacz [repozytorium paczki Misskey dla YunoHost](https://github.com/YunoHost-Apps/misskey_ynh).
 
-## Using Kubernetes/TrueNAS Scale
-[See here](./install/kubernetes.html)
+## Używając Kubernetesa/TrueNAS Scale
+[Zobacz tutaj](./install/kubernetes.html)

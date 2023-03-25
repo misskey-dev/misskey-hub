@@ -1,70 +1,70 @@
 ---
 layout: Landing
 
-description: "Misskey is an open source, decentralized social media platform that's free forever!"
-gettingStarted: "Get started!"
-learnMore: "Learn more"
+description: "Misskey jest otwartozródłową, zdecentalizowaną platformą social media która jest zawsze ZA DARMO!"
+gettingStarted: "Rozpocznij"
+learnMore: "Dowiedz się więcej"
 keyFeatures:
   open:
-    title: "Open"
-    description: "Misskey is open source software that anyone can contribute to and everyone can use for free whenever and wherever."
+    title: "Otwarta"
+    description: "Misskey jest to oprogramowanie open source do którego każdy może coś dodać oraz każdy może używać go za darmo kiedykolwiek i gdziekolwiek "
   federated:
-    title: "Federated"
-    description: "Misskey is a decentralized platform, so communities on different instances can connect with each other."
+    title: "Federowana"
+    description: "Misskey jest platformą zdecentralizowaną, więc społeczności z innych instancji mogą komunikować się z sobą."
   multifunction:
-    title: "Powerful"
-    description: "Misskey is both easy to understand for beginners and has powerful features for advanced users."
+    title: "Potężna"
+    description: "Misskey jest zarówno prosta do zrozumienia dla nowych użytkowników oraz zawiera potężne funkcje dla zaawansowanych użytkowników."
   customizable:
-    title: "Customizable"
-    description: "Make Misskey yours! With themes, widgets, layouts, and more, you make make Misskey just the way you like it."
+    title: "Personalizowalna"
+    description: "Dostosuj Misskey do siebie! Z motywami, widżetami, układami i więcej, możesz dostować je jak ci się żywnie podoba."
 sections:
   federatedSoftware:
-    title: "Misskey is a <b data-marker>decentralized</b> platform."
-    description: "Misskey is just a platform for server owners to make their own instances of Misskey, and they can all talk to each other! There's large instances for the masses, smaller ones for groups, fandoms, and subcultures, and even instances just for individuals and their friends. Want to have even more control? You can make your own instance on your server with relative ease, cutting ties from any large company who wants to spy on you and sell your data. Misskey is about community and sharing, not corporations and big tech. Have friends not on Misskey? No problem! Because Misskey is on the Fediverse (ActivityPub), you can interact with people on other platforms like Mastodon, PixelFed, PeerTube, and more!"
+    title: "Misskey jest <b data-marker>zdecentralizowaną</b> platformą."
+    description: "Misskey jest tylko platformą gdzie właściciele serwerów tworzą własne instancje Misskey i mogą one komunikować z sobą! Jest dużo instancji dla mas, mniejsze dla grup, fandomów, i subkultur, a nawet instancje dla osób i ich przyjaciół. Chcesz mieć większą kontrolę? Możesz w bardzo łatwy sposób zrobić swoją właną instancję na własnym serwerze, odcinając się od dużych korporacji chcących zbierać twoje dane i je sprzedawać. Misskey jest o społeczności i udostępnianiu, nie o korporacjach i gigantach technologicznych. Masz znajomych którzy nie używają Misskey? Nie ma problemu! Ponieważ Misskey jest częścią Fediwersum(ActivityPub), możesz komunikować się z ludźmi na innych platformach jak Mastodon, PixelFed, PeerTube i wiele innych!"
   features:
-    title: "Features"
-    description: "Misskey has a wide variety of unique features!"
+    title: "Funkcje"
+    description: "Misskey ma wiele wyjątkowych funkcji"
     list:
       note:
-        title: "Note"
-        description: "On Misskey, posts from users are called \"notes\". Reply, quote, add custom emojis, animated text, content warnings, attach multiple images, videos, GIFs, audio clips, or anything else!"
+        title: "Notki"
+        description: "Na Misskey, posty użytkowników są nazwane \"notkami\". Odpowiedzi, cytaty, dodaj dodatkowe emotikony, animowany tekst, ostrzeżenia, załączone obrazki, wideo, GIFy, klipy audio, lub cokolwiek innego!"
       reaction:
-        title: "Reactions"
-        description: "You can add emoji reactions to any post! No longer are you bound by a like button, show everyone exactly how you feel with the tap of a button."
+        title: "Reakcje"
+        description: "Możesz dodać reakcje w formie emotikonek do każdego posta! Nie jesteś już ograniczony tylko przyciskiem Polub to, pokaż każdemu co czujesz z kliknięciem przycisku."
       theme:
-        title: "Theme"
-        description: "Why be limited by just a Light or Dark theme when you can change all the colors? Use Misskey's intuitive theming functions to make Misskey just how you like it."
+        title: "Motywy"
+        description: "Po co ograniczać się wyłącznie Jasnym lub Ciemnym motywem kiedy możesz zmienić wszystkie kolory? Użyj intuicyjnych narzędzi Misskey do tworzenia motywów żeby spersonalizować Misskey tak jak ci się podoba."
       charts:
-        title: "Charts"
-        description: "For those who need to see everything, Misskey has powerful charts for both users and admins to see what exactly is going on in your instance in real time."
+        title: "Wykresy"
+        description: "Dla tych co chcą widzieć wszytko, Misskey ma bogate wykresy zarówno dla użytkowników jak i administratorów żeby widzieć co się dzieje na twojej instancji w czasie rzeczywistym."
       federation:
-        title: "Federation"
-        description: "Not on Misskey? No problem! Not only can Misskey instances talk to each other, but you can make friends with people on other networks like Mastodon and Pixelfed!"
+        title: "Federacja"
+        description: "Nie na Misskey? Nie ma problemu! Nie tylko instancje Misskey mogą z sobą się komunikować, ale możesz tworzyć znajomości z ludźmi na innych platformach jak Mastodon lub Pixelfed itp.!"
       drive:
-        title: "Drive"
-        description: "Hate not being able to find something you uploaded? With Drive, you get managed and powerful cloud storage right in your social media!"
+        title: "Dysk"
+        description: "Nie podoba ci się to że nie możesz znaleść tego co wysłałeś? Z Dyskiem odtrzymujesz zarządzalny i potężny dysk internetowy wewnątrz twojej aplikacji Social Media!"
       thread:
-        title: "Threads"
-        description: "Have a lot on your mind? Make a thread! Each post can have up to 3,000 characters by default, and you can keep the conversation going for hours."
+        title: "Wątki"
+        description: "Masz dużo na myśli? Utwórz wątek! Każdy post może mieć domyślnie aż 3,000 znaków więc możesz utrzymać konwersacje przez bardzo długi czas."
       widgets:
-        title: "Widgets"
-        description: "Have everything at your fingertips with over a dozen customizable widgets!"
+        title: "Widżety"
+        description: "Miej wszystko w zasięgu ręki z wieloma personalizowalnymi widżetami!"
   gettingStarted:
-    title: "Join Misskey today!"
+    title: "Dołącz już dziś na Misskey!"
     find:
-      title: "Find an instance!"
-      list: "List of instances"
+      title: "Znajdź instancję!"
+      list: "Lista instancji"
     create:
-      title: "Make your own instance"
-      guide: "Setup guide"
+      title: "Stwórz własną instancję"
+      guide: "Poradnik konfiguracji"
     docs:
-      title: "Learn more"
-      docs: "See docs"
+      title: "Dowiedz się więcej"
+      docs: "Zobacz dokumentacje"
   donation:
-    title: "Donation"
-    description: "Because Misskey is a non-profit, we rely on your donations to fund our development. If you like Misskey, please consider donating so that we can continue to make Misskey awesome for years to come!"
+    title: "Dotacje"
+    description: "Ponieważ Misskey jest organizacją non-profit, jesteśmy zależni na waszych dotacjach by fundować tworzenie Misskey. Jeśli uwielbiasz Misskey, proszę rozważ dotację żebyśmy mogli dalej pracować nad tym żeby Misskey było wspaniałe przez najbliższe lata!"
   sponsors:
-    title: "Sponsors"
+    title: "Sponsorzy"
 ---
 
 <!--

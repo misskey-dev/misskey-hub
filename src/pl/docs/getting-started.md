@@ -1,24 +1,22 @@
-# Getting Started with Misskey
-Misskey is a program and a project.
-The server running Misskey, which is open to the public on the Internet, is called an **instance**.
-To use Misskey, you need to create an account in one of the instances and use that instance.
+# Zacznij z  Misskey
+Misskey jest programem i projektem.
+Serwer na którym uruchomione jest Misskey, który jest otwarty do publicznego Internetu jest nazwany **Instancją**.
+Aby używać Misskey musisz utworzyć konto na jednej z instancji i korzystać z tej instancji.
+Możesz wybrać instancję twojego wyboru z [listy instancji](../instances.md).
 
-You can select an instance of your choice from the [instance list](../instances.md).
+::: Wskazówka
+Nie ważne jaką instancję wybierzesz, będziesz mógł komunikować się z użytkownikami z innych instancji
 
-::: tip
-No matter which instance you choose, you will be able to interact with users on other instances.
+::: Informacje
+Misskey ma możliwość federowania
 
-::: details
-Misskey has the ability to federate.
+Misskey ma wbudowane wsparcie dla federacji, co pozwala użytkownikom z innych instancji na obserwowanie, reagowanie i renotowanie w taki sam sposób jak użytkownicy z tej samej instancji.
 
-Misskey has built-in federation support, which allows users in different instances to follow, react, and renote in the same way as users on the same instance.
-
-Misskey's federation is based on an open common standard called ActivityPub, and is compatible with other software such as Mastodon and Pleroma.
+Federacja Misskey jest oparta na otwartym i znanym standardzie o nazwie ActivityPub i jest kompatybilna z innym oprogramowaniem jak Mastodon lub Plernoma.
 :::
 
-## Choosing an Instance
-### Instance Themes
-Some instances may have a specific theme, for example, "I like certain stuff and activities".
-It is recommended to find an instance of the theme that suits you best.
-
-### Instance user base
+## Wybieranie instancji
+### Motywy instancji
+Niektóre instancje mogą mieć określoną tematykę na przykład: "Lubie jakieś rzeczy i aktywności".
+Rekomendujemy znaleść instancje o tematycę która najlepiej do ciebie pasuje
+### Społeczność instancji
