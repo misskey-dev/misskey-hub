@@ -18,6 +18,10 @@
 	name: 'NixNet Social',
 	lang: 'en',
 }, {
+	host: 'jistflow.com',
+	name: 'Jistflow',
+	lang: 'en',
+}, {
   host: 'jigglypuff.club',
   name: 'Jigglypuff!',
   lang: 'en',
