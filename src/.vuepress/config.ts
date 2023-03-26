@@ -504,6 +504,92 @@ export default defineUserConfig<DefaultThemeOptions>({
                     },
                 ],
             },
+            '/pl/': {
+                selectLanguageName: 'Polski',
+                contributorsText: 'Współtwórcy',
+                lastUpdatedText: 'Ostatnio aktualizowane',
+                editLinkText: 'Edytuj tę stronę',
+                relatedPagesText: 'Powiązane strony',
+                readThisArticle: 'Przeczytaj ten artykuł',
+                navbar: [
+                    { text: 'Blog', link: '/pl/blog/' },
+                    { text: 'Brać udział', children: ['/pl/instances', '/pl/plugins/', '/pl/appendix/assets'] },
+                    {
+                        text: 'Dokumentacja', children: [
+                            '/pl/docs/misskey',
+                            '/pl/docs/releases',
+                            '/pl/docs/misskey-hub',
+                            '/pl/docs/faq',
+                            '/pl/docs/glossary',
+                            '/pl/docs/troubleshooting',
+                            {
+                                text: 'Funkcje', children: [
+                                    '/pl/docs/features/note',
+                                    '/pl/docs/features/reaction',
+                                    '/pl/docs/features/timeline',
+                                    '/pl/docs/features/mfm',
+                                    '/pl/docs/features/custom-emoji',
+                                    '/pl/docs/features/drive',
+                                    '/pl/docs/features/deck',
+                                    '/pl/docs/features/charts',
+                                    '/pl/docs/features/online-status',
+                                    '/pl/docs/features/share-form',
+                                    '/pl/docs/features/ads',
+                                    '/pl/docs/features/thread-mute',
+                                    '/pl/docs/features/word-mute',
+                                    '/pl/docs/features/mute-and-block',
+                                    '/pl/docs/features/plugin',
+                                    '/pl/docs/features/antenna',
+                                    '/pl/docs/features/clip',
+                                    '/pl/docs/features/favorite',
+                                    '/pl/docs/features/follow',
+                                    '/pl/docs/features/pages',
+                                    '/pl/docs/features/theme',
+                                    '/pl/docs/features/widgets',
+                                ]
+                            },
+                            {
+                                text: 'Dla Developerów', children: [
+                                    '/pl/docs/api',
+                                    '/pl/docs/api/streaming',
+                                    '/pl/docs/api/endpoints.html',
+                                    '/pl/docs/features/webhook',
+                                ]
+                            },
+                            {
+                                text: 'Dla Administratorów', children: [
+                                    '/pl/docs/install',
+                                    '/pl/docs/admin/emoji',
+                                    '/pl/docs/admin/cdn',
+                                    '/pl/docs/admin/nginx',
+                                    '/pl/docs/admin/push-docker-hub',
+                                    '/pl/docs/admin/troubleshooting',
+                                    '/pl/docs/tips/disable-timelines',
+                                    '/pl/docs/admin/default-reaction',
+                                    '/pl/docs/features/silence',
+                                ]
+                            },
+                        ]
+                    },
+                    {
+                        text: 'Linki', children: [
+                            { text: 'Oficialny Discord', link: 'https://discord.gg/Wp8gVStHW3' },
+                            { text: 'Dotacje (Patreon)', link: 'https://www.patreon.com/syuilo' },
+                            { text: 'Tłumaczenie (Crowdin)', link: 'https://crowdin.com/project/misskey' },
+                            { text: '藍.moe (Strona Maskotki)', link: 'https://xn--931a.moe' },
+                            { text: 'Konta', children: [{ text: '@repo@p1.a9z.dev', link: 'https://p1.a9z.dev/@repo' }] },
+                            {
+                                text: 'Repozytoria', children: [
+                                    { text: 'misskey', link: 'https://github.com/misskey-dev/misskey' },
+                                    { text: 'misskey.js', link: 'https://github.com/misskey-dev/misskey.js' },
+                                    { text: 'mfm.js', link: 'https://github.com/misskey-dev/mfm.js' },
+                                    { text: 'misskey-hub', link: 'https://github.com/misskey-dev/misskey-hub' },
+                                ]
+                            },
+                        ]
+                    },
+                ],
+            },
         },
         themePlugins: {
             activeHeaderLinks: false,

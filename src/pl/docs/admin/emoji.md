@@ -1,53 +1,52 @@
-# Managing Custom Emoji
+# Zarządzanie dodatkowymi emotikonami
 
-Custom emoji can be managed by administrators or moderators by going to the instance settings and then the custom emoji submenu.
-By default you will see a list of the current locally installed emoji.
-At the start this list will be empty, but you can add custom emoji in different ways.
+Dodatkowe emotikony są zarządzane przez administratorów lub moderatorów poprzez ustawienia instancji i menu z dodatkowymi emotkami.
+Domyślnie będzie widoczna lista lokalnie zainstalowanych emoji.
+Początek tej listy będzie pusty, ale możesz dodać dodatkowe emotki w różny sposób.
 
-## Copying Emoji from another Instance
+## Kopiowanie Emoji z innych instancji
 
-Emoji can be easily copied from another instance.
-To do this, switch to the "remote" tab in the custom emoji settings.
-You can search emoji by name and/or host they are from.
+Emoji mogą być łatwo kopiowane z innych instancji.
+Aby to wykonać przejdź do zakładki "zdalne" w ustawieniach dodatkowych emoji.
+Możesz wyszukać emoji po nazwie i/lub serwerze z którego one są.
 
-When you have found an emoji you want, click it to open a small menu which will allow you to import the emoji.
+Kiedy znajdziesz emoji które chcesz, kliknij aby otworzyć niewielkie menu, które pozwoli ci zaimportować emoji.
+Proszę pamiętać że Emotikony mogą być pokryte prawami autorskimi i twoją zasługą jest sprawdzenie legalności używania innej emotikony.
 
-Please note that Emoji may be subject to copyright and you are responsible for checking whether you may legally use another emoji.
+## Indywidualny import emoji
 
-## Individual Emoji Import
+Jeżeli masz plik z obrazkiem z którego chciałbyć zrobić dodatwkową emotikonę, możesz zaimportować obrazek jako emoji.
+To działa tak samo jak dodawanie pliku do posta:
+Możesz wybrać czy chcesz wysłać nowy plik, lub wybrać plik z Dysku Misskey albo wysłać plik z innego URL
 
-If you have an image file that you would like to turn into a custom emoji you can import the image as an emoji.
-This works just like attaching files to a note:
-You can choose to upload a new file, pick a file from your Misskey drive or upload a file from another URL.
-
-::: danger
-When you import emoji from your drive, the file will remain inside your drive.
-Misskey does not make a copy of this file so if you delete it, the emoji will be broken.
+::: UWAGA
+Kiedy importujesz emotikony z twojego dysku, pliki zostaną na dysku.
+Misskey nie tworzy kopii tego pliku więc jak go usuniesz, emotikona będzie zepsuta.
 :::
 
-The emoji will be added to the instance and you will then be able to edit or delete it as usual.
+Emoji zostanie dodane do instancji i wtedy będziesz mógł je edytować lub usunąć jak zawsze.
 
-## Bulk Emoji import
+## Hurtowe dodawanie emoji
 
-Emojis can be imported in bulk as packed ZIP files with a special format.
-This ability can be found in the three dots menu in the top right corner of the custom emoji menu.
+Emotikony mogą być dodane hurtowo, jako paczka ZIP w specjalnym formacie.
+Ta możliwość jest dostępna w menu z 3 kropkami w prawym górnym rogu menu z emoji.
 
-::: warning
-Bulk emoji import may overwrite existing emoji or otherwise mess up your instance.
-Be sure to only import emoji from trusted sources, ideally only ones you exported yourself.
+::: UWAGA
+Emoji dodane hurtowo mogą nadpisać istniejące emoji lub inaczej popsuć twoją instację.
+Bądź pewien że importujesz emoji tylko z zaufanych źródeł, najlepiej tylko te które wyexportowałeś sam.
 :::
 
-### Packed emoji format
+### Format paczek z emoji
 
-At the top level is a file called `meta.json` which contains information about the emoji contained in the packed file.
-A type definition for this file would look like this, where `Meta` is the structure of the whole file.
+Na najwyższym poziomie znajduje się plik o nazwie `meta.json`, który zawiera informacje o emoji zawartych w spakowanym pliku.
+Definicja typu dla tego pliku wyglądałaby tak, gdzie `Meta` to struktura całego pliku.
 
 ```typescript
 class Meta {
  metaVersion: number;
  host: string;
  /**
-  * Date and time representation returned by ECMAScript `Date.prototype.toString`.
+  * Data i czas reprezentowane zwrócone przez ECMAScript `Date.prototype.toString`.
   */
  exportedAt: string;
  emojis: Emoji[];
@@ -71,42 +70,42 @@ class Emoji {
 }
 ```
 
-The fields of `Meta` are currently not used or checked when importing emoji, except for the `emojis` field.
+Pola `Meta` nie są obecnie używane ani sprawdzane podczas importu emoji, z wyjątkiem pola `emojis`.
 
-For each `Emoji`:
+Dla każdego `Emoji`:
 
-- `downloaded`: should always be true. If the field is missing or not truthy, the emoji will not be imported.
-- `fileName`: name of the image file inside the packed file.
-- `emoji`: data associated with the emoji as it was stored in the database. Currently most of these fields are
-  not even checked for existence. The following are currently used:
-  - `name`: name of the emoji for the user, e.g. `blobfox` if a user should type in `:blobfox:` to get the emoji.
-    If a previous emoji with the same name exists, it **will be overwritten**!
-  - `category`: category of the emoji
-  - `aliases`: list of strings that should be added as aliases. The admin UI calls these "tags".
+- `downloaded`: powinno być zawsze 'True'. Jeśli brakuje tego pola lub nie jest ono prawdziwe, emoji nie zostanie zaimportowane.
+- `fileName`: nazwa pliku graficznego wewnątrz spakowanego pliku.
+- `emoji`: dane związane z emoji, tak jak było to zapisane w bazie danych. Obecnie większość z tych pól jest
+  nie jest nawet sprawdzana pod kątem istnienia. Obecnie używane są następujące:
+  - `name`: nazwa emoji dla użytkownika, np. `blobfox`, jeśli użytkownik powinien wpisać `:blobfox:`, aby uzyskać emoji.
+    Jeśli istnieje poprzedni emoji o tej samej nazwie, zostanie on **nadpisany**!
+  - `category`: kategoria emoji
+  - `aliases`: lista ciągów znaków, które powinny być dodane jako aliasy. W admin UI nazywa się to "tagami".
 
-## Editing and Deleting Emoji
+## Edytowanie i usuwanie emoji
 
-The properties of an emoji can be edited by clicking it in the list of local emoji.
-When you click on a custom emoji, a dialog for editing the properties will open.
-This dialog will also allow you to delete an emoji.
+Właściwości emoji mogą być edytowane klikając na nie w liście lokalnych emotek.
+Kiedy klikniesz na dodatkową emoji, dialog z edycją właściwości się otworzy.
+Ten dialog pozwoli ci również usunąć emoji.
 
-::: danger
-When you delete a custom emoji, old notes that contain it will still have the text name of the emoji in it.
-The emoji will no longer be rendered correctly.
+::: uwaga
+Kiedy usuniesz dodatkową emotkę, stare posty które ją zawierają nadal będą miały jej nazwe w nich.
+Ta emotka nie będzie się prawidłowo wyświetlać.
 :::
 
-Note that remote emoji can not be edited or deleted.
+Informacja - Emoji na innych serwerach nie mogą być edytowane lub usuwane.
 
-Each emoji can have a name and a category and several tags.
-The category is used for structuring the emoji picker.
-Meanwhile the tags can be used as alternate names by which the emoji can be found when searching in the emoji picker.
+Każda emotikona ma nazwę, kategorię i tagi.
+Kategoria jest używana w menu wyboru emotki.
+W międzyczasie tagi mogą być używane jako inne nazwy za pomocą których emoji może zostać znalezione kiedy jest wyszukiwane.
 
 When you are done editing, save your changes by clicking the check mark in the top right corner of the dialog.
 
-### Bulk Editing
+### Edytowanie hurtowe
 
-Emoji can be edited in bulk by checking the box below the search field.
-With this enabled, clicking on an emoji will select it instead of opening the editing dialog.
+Emoji mogą być edytowane hurtowo zaznaczająć opcje pod wyszukiwarką.
+Kiedy to jest włączone kliknięcie w emoji wybierze je, zamiast otwierać panel edycji.
 
-The Editing options will be displayed as buttons below the checkbox.
-To return to the normal behaviour just uncheck the box again.
+Opcje edycji będą wyświetlone jako przyciski pod polem wyboru.
+Aby wrócić do normalnego trybu wystarczy odznaczyć pole jeszcze raz.
