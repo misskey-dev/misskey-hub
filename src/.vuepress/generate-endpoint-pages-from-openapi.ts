@@ -3,6 +3,7 @@ import { App, createPage, Page } from '@vuepress/core';
 import glob from 'glob';
 import JSON5 from 'json5';
 const merge = require('deepmerge')
+var getDirName = require('path').dirname;
 
 const combineMerge = (target, source, options) => {
 	const destination = target.slice()
@@ -23,81 +24,37 @@ const openApiDefinition = JSON.parse(fs.readFileSync(__dirname + '/api.json', 'u
 const endpointPaths = Object.keys(openApiDefinition.paths);
 const endpointTags = Array.from(new Set(Object.values(openApiDefinition.paths).flatMap(x => x.post.tags ?? [])));
 
+function writeFile(path, contents, cb) {
+  fs.mkdir(getDirName(path), { recursive: true}, function (err) {
+    fs.writeFileSync(path, contents);
+  });
+}
+
 export async function generateEndpointPages(app: App) {
-	for (const locale of Object.keys(app.options.locales)) {
-		const defLocale = JSON5.parse(fs.readFileSync(__dirname + `/api.locale.${app.options.locales[locale].lang}.json5`, 'utf8'));
-		const _openApi = merge(openApiDefinition, defLocale, { arrayMerge: combineMerge });
-		const endpointsForComponent = Object.entries(_openApi.paths).map(([e, x]) => ({ name: e.substring(1), summary: x.post.summary, tags: x.post.tags ?? [] }));
-
-		const endpointsDir = locale + 'docs/api/endpoints/';
-
-		let indexContent = '# エンドポイント一覧\n';
-
-		indexContent += `
-<MkEndpoints :endpoints="${JSON.stringify(endpointsForComponent).replace(/"/g, '\'')}" :tags="${JSON.stringify(endpointTags).replace(/"/g, '\'')}"/>`;
-
-		for (const endpointPath of endpointPaths) {
-			const name = endpointPath.substring(1);
-			const def = _openApi.paths[endpointPath]['post'];
-			const requireCredential = def.security?.length > 0;
-	
-			let content = `# \`${name}\``;
-
-			if (requireCredential) {
-				content += `\n\nCredential required.\n`;
-			}
-
-			content += `\n${def.description}\n`;
-
-			// TODO: permission
-	
-			if (def.requestBody && Object.keys(def.requestBody.content['application/json']?.schema?.properties ?? {}).length > 0) {
-				content += `
-## Parameters
-<MkSchemaViewer :schema="${JSON.stringify(def.requestBody.content['application/json']?.schema).replace(/"/g, '\'')}">
-</MkSchemaViewer>
-`;
-			} else {
-				content += `
-## Parameters
-none
-`;
-			}
-	
-			if (def.responses['200']) {
-				const ref = def.responses['200'].content['application/json'].schema.$ref;
-				const schema = ref ? _openApi.components.schemas[ref.replace('#/components/schemas/', '')] : def.responses['200'].content['application/json'].schema;
-
-				content += `
-## Response
-<MkSchemaViewer :schema="${JSON.stringify(schema).replace(/"/g, '\'')}" :schemas="${JSON.stringify(_openApi.components.schemas).replace(/"/g, '\'')}">
-</MkSchemaViewer>
-`;
-			} else {
-				content += `
-## Response
-none
-`;
-			}
-
-			content += `
-## OpenAPI definition
-\`\`\` js
-${JSON5.stringify(def, null, '\t')}
-\`\`\`
-`;
-	
-			const page = await createPage(app, {
-				path: endpointsDir + name + '.html',
-				content: content,
-			});
-			app.pages.push(page);
+	for (const endpointPath of endpointPaths) {
+		const name = endpointPath.substring(1);
+		const def = openApiDefinition.paths[endpointPath]['post'];
+		const requireCredential = def.security?.length > 0;
+		const errors = {};
+		for (const e of Object.keys(def.responses['400']?.content['application/json'].examples)) {
+			const err = def.responses['400']?.content['application/json'].examples[e].value.error;
+			if (err.id === '3d81ceae-475f-4600-b2a8-2bc116157532') continue; // INVALID_PARAMは全API共通なため
+			errors[err.id] = {
+				id: err.id,
+				code: err.code,
+				description: '',
+			};
 		}
+		const data = {
+			summary: '',
+			description: '',
+			tags: def.tags,
+			requireCredential,
+			req: def.requestBody.content['application/json']?.schema ?? {},
+			res: def.responses['200']?.content['application/json'].schema ?? {},
+			errors,
+		};
 
-		const indexPage = await createPage(app, {
-			path: locale + 'docs/api/endpoints.html',
-			content: indexContent,
-		});
-		app.pages.push(indexPage);
+		writeFile(__dirname + `/_api_/${name}.json5`, JSON5.stringify(data, null, '\t'), 'utf8');
 	}
 }

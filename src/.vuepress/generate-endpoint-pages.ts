@@ -15,7 +15,7 @@ export async function generateEndpointPages(app: App) {
 			const name = endpointPath.slice(endpointPath.indexOf(endpointsDir)).replace(endpointsDir, '').replace('.json5', '');
 			const def = JSON5.parse(fs.readFileSync(endpointPath, 'utf-8'));
 			endpointsForIndex.push({
-			  name: name, summary: def.summary, tags: def.tags ?? []
+				name: name, summary: def.summary, tags: def.tags ?? []
 			});
 	
 			let content = `---
