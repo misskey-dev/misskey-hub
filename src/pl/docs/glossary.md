@@ -1,92 +1,119 @@
-# Glossary
-A glossary about terms related to Misskey.
+# Pojęcia
 
-## Acct
-TODO
+Pojęcia związane Misskey.
 
 ## ActivityPub
-The protocol (method) used for enabling the distributed nature of Misskey. By adhering to this protocol, communication with other instances that also follow it becomes possible, forming what is known as the Fediverse.
+
+Protokół(metoda) używana do osiągnięcia zdecentralizowanej natury Misskey.  Wykorzystanie jego pozwala instancjom na komunikacje między sobą, tworząc też rzecz nazywaną Fediwersum.
 
 ## AiScript
-A programming language available for use on Misskey. For details, see [here.](../advanced/aiscript)
+
+Język programowania stworzony z myślą o Misskey.  [Zobacz tutaj po więcej informacji](/src/docs/advanced/aiscript)
 
 ## API
-An interface that can be used for interacting with Misskey through a program, available for each individiual instance. For details, see [here.](../docs/api)
+
+Jest to interfejs pozwalający  na operowanie Misskey za pomocą programu, dostępne dla każdej instancji. [Więcej informacji](/src/pl/docs/api)
 
 ## Bot
-An account that is being controlled by a program.
+
+Konto kontrolowane przez program.
 
 ## CW
-An abbreviation of "Content Warning". A feature to hide the content of a note unless explicitly requested to be shown by a user. Mainly used to hide the content of long notes or to prevent posting spoilers publicly. For details, see [here.](../docs/features/note.html#cw)
 
-## Fediverse
-A network of instances composed of various different platforms that communicate with each other, including Misskey.
+Jest to skrót od "Ostrzeżenie o treści". Funkcja ukrywająca zawartość posta, chyba że użytkownik wyraźnie zażąda jej pokazania. Zazwyczaj używana do ukrywania treści długich postów, spojlerów albo materiałów kontrowersyjnych. [Więcej informacji](./src/pl/docs/features/note.html#cw)
+
+## Fediwersum
+
+Sieć różnych instancji korzystających z innych platform które komunikują się z sobą, zaliczając w to Misskey.
 
 ## GTL
-An abbreviation for "Global TimeLine". For details about timelines, please see [here](../features/timeline).
+
+Skrót od "Global TimeLine" - Globalna oś czasu - [więcej przeczytasz tutaj](/src/pl/docs/features/timeline).
 
 ## HTL
-An abbreviation for "Home TimeLine". For details about timelines, please see [here](../features/timeline)
+
+Skrót od "Home TimeLine" - Tablica domowa/główna, [więcej przeczytasz tutaj](/src/pl/docs/features/timeline)
 
 ## LTL
-An abbreviation for "Local TimeLine". For details about timelines, please see [here](../features/timeline)
+
+Skrót od "Local TimeLine" - Tablica lokalna, pokazuje wszystkie posty wysłane na instancji. [więcej przeczytasz tutaj](/src/pl/docs/features/timeline)
 
 ## MFM
-An abbreviation for "Markup language For Misskey", a markdown language available for use on Misskey. For details, see [here.](../features/mfm)
+
+Skrót od "Markup language For Misskey" - język znaczników do używania z Misskey - [więcej przeczytasz tutaj.](/src/pl/docs/features/mfm)
 
 ## NSFW
-An abbreviation for "Not Safe For Work". A feature to tag an image as "NSFW" and hide it unless explicitly requested to be shown by a user.
+
+Skrót od "Not Safe For Work" - funkcja pozwalająca otagować zdjęcie jako "NSFW"(Nie bezpieczne w pracy) i ukryć je za życzeniem użytkownika.
 
 ## Renote
-The act of quoting an existing note, sharing an existing note, or the note created as a result of these acts. For details, see [here.](../docs/features/note.html#renote)
+
+Cytowanie wysłanego już posta, udostępnianie istniejącego posta, lub post stworzony poprzez którąś z tych czynności - [więcej przeczytasz tutaj.](/src/pl/docs/docs/features/note.html#renote)
 
 ## STL
-An abbreviation for "Social TimeLine". For details about timelines, please see [here.](../features/timeline)
+
+Skrót od "Social TimeLine" - Pokazuje posty zarówno z lokalnej instancji, jak i od osób które obserwujesz. [więcej przeczytasz tutaj.](/src/pl/docs/features/timeline)
 
 ## Ai(藍)
-Ai(藍) is Misskey's official mascot.
 
-## Active users
-Those users amongst all existing ones who are continually using their account.
+Ai(藍) to oficjalna maskotka Misskey.
 
-## Instance
-TODO
+## Aktywni użytkownicy
 
-## Custom Emoji
-Emoji provided by your instance. Emoji that are not specifically provided by your instance but are available by default are called "Unicode Emoji". For details, see [here.](../docs/features/custom-emoji)
+Użytkownicy wsród wszytkich, którzy używają swojego konta
 
-## Control Panel
-TODO
+## Instancja
 
-## Silence
-A state in which the visibility of the notes by said user cannot be set to "Public" anymore. Can be set for individual users by the discretion of Moderators. For details, see [here.](../features/silence)
+Serwer otwarty do internetu, który udostępnia usługę jak na przykład Misskey.
 
-## Job Queue
-A system used for sequentially broadcasting activities to other instances etc.
+## Dodatkowe Emoji
 
-## Suspend
-A state which makes the account of a user unusable.
+Emoji dostarczone przez twoją instancje. Emoji które nie są dostarczone przez instacje, ale są dostępne są nazywane "Emotikonami Unicode"[Dowiedz się więcej](/src/pl/docs/docs/features/custom-emoji)
 
-## Drive
-A feature allowing users to organize the files they have uploaded to Misskey. For details, see [here.](../features/drive)
+## Panel sterowania
 
-## Notes
-Content which may include text, images, surveys and others that has been posted to Misskey. For details, see [here.](../docs/features/note)
+Panel z ustawieniami instancji dostępny dla Administratorów i moderatorów
 
-## Misskist
-Users of Misskey.
+## Wyciszenie
+
+Jest to stan kiedy posty użytkownika nie mogą być ustawione na "Publiczne". Może być nadane użytkownikowi przez Moderacje.[więcej przeczytasz tutaj.](/src/pl/docs/features/silence)
+
+## Kolejka zadań
+
+System używany do nadawania aktywności innych instancji itp.
+
+## Zawieszenie
+
+Stan który powoduje że konto użytkownika jest niedostępne.
+
+## Dysk
+
+Funkcja pozwalająca użytkownikowm organizować pliki jakie wrzucili do Misskey. [więcej przeczytasz tutaj.](/src/pl/docs/features/drive)
+
+## Notki
+
+Inaczej posty, mogą zawierać tekst, obrazy, ankiety i wszystko to co zostało wrzucone na Misskey. [więcej przeczytasz tutaj.](/src/pl/docs/docs/features/note)
+
+## Misskit
+
+Użytkownik Misskey.
 
 ## Moderator
-Users with the authority to manage the community of a instance by deactivating spam accounts, silencing users, deleting inappropriate posts, etc.
+
+Osoba zarządzająca społecznością instancji poprzez wyłącznie kont spam, wyciszając konta, usuwając nieodpowiednie posty itp.
 
 ## License
-TODO
 
-## Remote
-Used in context of instances separate from your own. Also used as prefix in other words like "Remote user". The opposite of "Local".
+Dokument który określał legalne wykorzystanie zasobu.
 
-## Federation
-The act of sharing information created on one's instance with other instances.
+## Remote/Zdalne
 
-## Local
-Used in context of your own instance.Also used as prefix in other words like "Local users", "local timeline". The opposite of "Remote".
+Używane w kontekście instancji innej niż twoja. Również używane jako prefiks w terminach "zdalny użytkownik". Przeciwieństwo "Lokalne"
+
+## Federacja
+
+Udostępnianie informacji stworzonych na jednej instancji z inną instancją.
+
+## Lokalne
+
+Używane w kontekście twojej instancji. Używane jako prefiks w terminach jak "Lokalni użytkownicy", "Lokalna oś czasu". Przeciwieństwo "zdalnej"
