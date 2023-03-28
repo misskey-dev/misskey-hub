@@ -1,8 +1,8 @@
-# Antenna
+# Antena
 
-Antenna is a feature that allows you to freely set conditions for a custom timeline and automatically collect matching notes.
+Antena jest to funkcja która pozwa stworzyć spersonalizowaną oś czasu.
 
-Antenna conditions can include conditions to include/exclude certain keywords and tags in different combinations as well as other options.
-When a note matching an antenna's conditions is posted, the note will automatically be added to that antenna's timeline.
+Filtry anteny mogą zawierać/ignorować określone słowa i tagi w różnych kombinacjach i innych opcjach.
+Kiedy post spełni wymagania anteny, on zostanie dodany tam automatycznie.
 
-To create an antenna, click "Add" in the Manage antennas page. Then fill in the options to customize your antenna.
+Aby utworzyć antenę, kliknij "Dodaj" w zakładce z antenami i uzupełnij opcje twojej anteny.

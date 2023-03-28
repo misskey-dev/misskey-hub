@@ -1,10 +1,8 @@
 # Clip
 
-Clip is a feature that allows you to create collections of notes.
-The notes can be your own or created by others.
-You can create multiple clips and manage them by giving a name and description to each.
-You can also choose to make your clips public to make them available to other users.
+Klipy jest to funkcja która pozwala utworzyć kolekcje notek.
+Notki w kolekcji mogą być twoje, lub kogoś innego, można nadać im nazwę i opis do każdego. Możesz też wybrać czy chcesz by klipy były publiczne żeby inni użytkownicy mogli je zobaczyć.
 
-To create a clip, click "Add" from the clip management page.
+Aby dodać clip skorzystaj z menu Clipów. Aby dodać notkę do clipu wybież opcję "Clip" w menu notki i wybierz Clip do którego chcesz dodać.
 
-To add notes to a clip, choose the "Clip" option on the note's menu. Then select the clip to add the note to.
+Tak to trochę tak jak zakładki.

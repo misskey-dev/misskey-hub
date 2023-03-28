@@ -1,72 +1,71 @@
-# Charts
+# Wykresy
 
-Misskey can generate and display charts for an instance's various federated data sources.
-Charts allow you to get a visual depiction of the usage, federation status, and activity of each user.
+Misskey może generować i wyświelać wykresy różnych źródeł. Wykresy pozwalają uzyskać wizualnie informacje na temat użycia, statusie federacji i aktywności użytkowników
 
-Instance charts can be viewed from the *instance information* page (accessible by clicking the instance logo in the navigation menu).
+Wykresy instancji są widoczne z strony z *informacjami instancji* (dostępna klikając w logo instancji w menu nawigacji)
 
-Below is a description of each chart and its contents.
+Poniżej jest opis każdego wykresu i jego zawartości:
 
-## Federation Chart
+## Wykres federacji
 
-This chart shows information about federated instances.
+Pokazuje informacje na temat federacji instancji/
 
 ### Pub
 
-The number of instances that this instance is publishing activities to.
+Ilość instancji do których publikowane są materiały
 
 ### Sub
 
-The number of instances that this instance is receiving activities from.
+Liczba instancji które odtrzymują dane od innych instancji
 
-### Received
+### Odebrane
 
-The number of instances that have sent an activity to this instance.
+Liczba instancji które wysłały materiał do tej instancji.
 
-### Delivered
+### Dostarczone
 
-The number of instances that this instance has delivered an activity to.
+Liczba instancji do których dostarczone zostały posty.
 
-### Stalled
+### Wstrzymane
 
-The number of instances where an error was encountered when delivering an activity.
+Liczba instancji które napotkały błąd przy dostarczaniu postów.
 
-## Active Users Chart
+## Wykres aktywnych użytkowników
 
-Chart of user activity on this instance.
+Wykres aktywności tej instacji
 
-### Read & Write
+### Odczyt i zapis
 
-The number of users that have read and written.
+Liczba ludzi którzy odczytali i napisali posty.
 
-### Read
+### Odczyt
 
-The number of users that have read.
+Liczba użytkowników która odczytała materiały.
 
-### Write
+### Zapis
 
-The number of users that have written.
+Liczba użytkowników która wykonałą wpisy
 
-### < Week
+### < Tydzień
 
-The number of users with an account less than one week old.
+Liczba użytkowników z kontem młodszym niż tydzień
 
-### < Month
+### < Miesiąc
 
-The number of users with an account less than one month old.
+Liczba użytkowników z kontem młodszym niż Miesiąc
 
-### < Year
+### < Rok
 
-The number of users with an account less than one year old.
+Liczba użytkowników z kontem młodszym niż rok
 
-### > Week
+### > Tydzień
 
-The number of users with an account older than one week.
+Liczba użytkowników z kontem starszym niż tydzień
 
-### > Month
+### > Miesiąc
 
-The number of users with an account older than one month.
+Liczba użytkowników z kontem starszym niż tydzień
 
-### > Year
+### > Rok
 
-The number of users with an account older than one year.
+Liczba użytkowników z kontem starszym niż rok
