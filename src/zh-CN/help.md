@@ -1,3 +1,3 @@
 # 帮助
 
-- [List of functions](./docs/features/index.md)
+- [功能列表](./docs/features/index.md)

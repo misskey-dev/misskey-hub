@@ -1,18 +1,18 @@
-Misskey Setup and Installation Guide
+Misskey 安装与配置教程
 ================================================================
 
-We thank you for your interest in setting up your Misskey server!
-This guide describes how to install and setup Misskey.
+感谢您对搭建 Misskey 服务器感兴趣！
+本篇教程叙述了如何安装和配置 Misskey。
 
 ----------------------------------------------------------------
 
 ::: danger
-Never change the domain name (hostname) of an instance once you start using it!
+请注意，一旦 Misskey 开始运行，不要更改域名和服务器的主机名。
 :::
 
-*1.* Install dependencies
+*1.* 安装依赖
 ----------------------------------------------------------------
-Please install and setup these softwares:
+请安装以下软件：
 
 #### Dependencies :package:
 * **[Node.js](https://nodejs.org/en/)** (18.13.x)
@@ -20,98 +20,106 @@ Please install and setup these softwares:
 * **[Redis](https://redis.io/)**
 * **[FFmpeg](https://www.ffmpeg.org/)**
 
-If you are using Debian/Ubuntu, you should install the `build-essential` package.
+在 Debian 和 Ubuntu 系统中，您还需要安装 `build-essential` 与 `python` 。
 
-corepack must be enabled.
+执行以下命令启用 corepack：
 ```sh
 sudo corepack enable
 ```
 
-*2.* Create Misskey user
+*2.* 创建一个运行 Misskey 的用户
 ----------------------------------------------------------------
-Running misskey as root is not a good idea so we create a user for that.
-In debian for exemple :
+在 root 下运行 Misskey 不是一个好主意，所以我们创建一个新用户 misskey。
+例如，在 Debian 中：
 
 ```sh
 adduser --disabled-password --disabled-login misskey
 ```
 
-*3.* Install Misskey
+*3.* 安装 Misskey
 ----------------------------------------------------------------
-1. Connect to the `misskey` user
+1. 切换至 `misskey` 用户：
 
 	`sudo -iu misskey`
 
-2. Clone the Misskey repository
+2. 将 Misskey 克隆至本地：
 
 	`git clone --recursive https://github.com/misskey-dev/misskey.git`
 
-3. Navigate to the repository
+3. 进入 misskey 仓库：
 
 	`cd misskey`
 
-4. Check out the [latest release](https://github.com/misskey-dev/misskey/releases/latest)
+4. 检查是否为 [最新版本](https://github.com/misskey-dev/misskey/releases/latest) （分支是否为 master）：
 
 	`git checkout master`
 
-5. Download submodules
+5. 下载子模块：
 
     `git submodule update --init`
 
-5. Install Misskey's dependencies
+5. 安装 Misskey 的依赖项：
 
 	`pnpm install --frozen-lockfile`
 
-*4.* Configure Misskey
+*4.* 配置 Misskey
 ----------------------------------------------------------------
-1. Copy the `.config/example.yml` and rename it to `default.yml`.
+1. 复制 `.config/example.yml` 并重命名为 `default.yml`.
 
-	`cp .config/example.yml .config/default.yml`
+```sh
+cp .config/example.yml .config/default.yml
+```
 
-2. Edit `default.yml`
+2. 编辑 `default.yml`
 
-*5.* Build Misskey
+```sh
+nano default.yml
+```
+
+
+*5.* 编译 Misskey
 ----------------------------------------------------------------
 
-Build misskey with the following:
+执行以下命令编译 Misskey：
 
-`NODE_ENV=production pnpm run build`
+```sh
+NODE_ENV=production pnpm run build
+```
 
-If you're on Debian, you will need to install the `build-essential`, `python` package.
+如果您使用 Debian，则需要安装 build-essential 和 python 软件包。
 
-*6.* Init DB
+*6.* 创建并初始化数据库
 ----------------------------------------------------------------
-1. Create the appropriate PostgreSQL users with respective passwords,
-	and empty database as named in the configuration file.
-	Make sure the database connection also works correctly when run from the
-	user that will later run Misskey, or it could cause problems later.
-	The encoding of the database should be UTF-8.
+1. 下面我们来新建数据库。输入以下命令切换至 postgres 用户并进入数据库：
 
 	```
 	sudo -u postgres psql
+	```
+	输入以下命令来新建数据库及用户（请注意，数据库需要以 UTF8 编码：
+	```
 	create database misskey with encoding = 'UTF8';
 	create user misskey with encrypted password '{YOUR_PASSWORD}';
 	grant all privileges on database misskey to misskey;
 	\q
 	```
 
-2. Run the database initialisation
+2. 执行以下命令来初始化数据库：
 	`pnpm run init`
 
-*7.* That is it.
+*7.* 环境配置完成！
 ----------------------------------------------------------------
-Well done! Now, you have an environment that run to Misskey.
+干得漂亮！现在，您有一个可以运行  Misskey 的环境了。
 
-### Launch normally
-Just `NODE_ENV=production pnpm run start`. GLHF!
+### 正常启动（前台，不可退出终端或 ssh）
+运行 `NODE_ENV=production pnpm run start`。
 
-### Launch with systemd
+### 以 systemd 方式启动
 
-1. Create a systemd service here
+1. 创建 systemd 服务：
 
-	`/etc/systemd/system/misskey.service`
+	`nano /etc/systemd/system/misskey.service`
 
-2. Edit it, and paste this and save:
+2. 将以下内容复制进去：
 
 	::: details
 	```
@@ -135,19 +143,19 @@ Just `NODE_ENV=production pnpm run start`. GLHF!
 	```
 	:::
 
-3. Reload systemd and enable the misskey service.
+3. 重载 systemd 并使 misskey service 开机自启：
 
 	`sudo systemctl daemon-reload; sudo systemctl enable misskey`
 
-4. Start the misskey service.
+4. 启动 misskey service：
 
 	`sudo systemctl start misskey`
 
-You can check if the service is running with `systemctl status misskey`.
+您可以执行 `systemctl status misskey`检查该服务项是否正在运行。
 
-### Launch with OpenRC
+### 使用 OpenRC 启动
 
-1. Copy the following text to `/etc/init.d/misskey`:
+1. 将以下文本复制到 `/etc/init.d/misskey`:
 
 	::: details
 	```sh
@@ -175,26 +183,27 @@ You can check if the service is running with `systemctl status misskey`.
 	```
 	:::
 
-2. Set the service to start on boot
+2. 设置开机自启：
 
 	`rc-update add misskey`
 
-3. Start the Misskey service
+3. 启动 Misskey service：
 
 	`rc-service misskey start`
 
-You can check if the service is running with `rc-service misskey status`.
+您可以执行 `rc-service misskey status`来检查该服务项是否正在运行。
 
-### How to update your Misskey server to the latest version
+### 如何更新 Misskey？
+执行以下命令：
 1. `git checkout master`
 2. `git pull`
 3. `git submodule update --init`
 4. `NODE_ENV=production pnpm install --frozen-lockfile`
 5. `NODE_ENV=production pnpm run build`
 6. `pnpm run migrate`
-7. Restart your Misskey process to apply changes
-8. Enjoy
+7. 重新启动 Misskey 进程以应用更改
+8. 开始使用吧～
 
-If you encounter any problems with updating, please try the following:
-1. `pnpm run clean` or `pnpm run clean-all`
-2. Retry update (Don't forget `pnpm install`
+如果更新遇到任何问题，请尝试以下操作：
+1. `pnpm run clean` 或 `pnpm run clean-all`
+2. 重新更新 (别忘了执行 `pnpm install`)

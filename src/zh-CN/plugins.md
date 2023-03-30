@@ -1,12 +1,12 @@
 # 插件中心
-A collection of [plugins](./docs/features/plugin.md) that you can install in the Misskey web UI.
+可以安装在 Misskey 中的插件列表 [插件](./docs/features/plugin.md) 
 
 ::: tip
-If you would like to see your plugin here, please see [the section on submitting plugins](#Submitting-Plugins).
+如果您想提交插件，请参阅 [提交插件](#Submitting-Plugins).
 :::
 
-## Plugins
+## 插件列表
 - TODO
 
-## Submitting Plugins
+## 提交插件
 TODO

@@ -92,143 +92,129 @@ sudo bash update.sh
 下面为安装时可能遇到的问题。
 
 ## 选择 Systemd 还是 Docker 呢?
-v1から、インストールメソッドにsystemdとDockerとを選べるようにしました。
 
-Dockerと言っても、**MisskeyだけをDockerで実行**し、RedisやPostgresなどはホストで直接実行します。  
-[docker-composeですべての機能を動かす方法については、mamemonongaさんが作成したこちらの記事がおすすめです。](https://gist.github.com/mamemomonga/5549bb69cad8e5618e5527593d4890e0)
+如果选择 Dcoker 版本（注意不是 docker-compose）的  Misskey，宿主机中仍须安装 Redis 和 Postgres。推荐选择 docker-compose 方式安装 Misskey，该方式将 Redis，Postgres 和 Misskey 都安装在了 docker 中，另请参阅 利用 docker-compose 安装 Misskey：
+另外，这里也有一片文章讲述了利用 docker-compose 功能：
+[mamemononga 的这篇文章被推荐用于如何使用 docker-compose 运行所有功能。](https://gist.github.com/mamemomonga/5549bb69cad8e5618e5527593d4890e0)
 
-Docker Hubイメージを使う設定であれば、Misskeyのビルドが不要になるため、**一番お勧めです**。  
-ただし、マイグレーションは必要なので、アップデート時にMisskeyを使えない時間がゼロになるわけではありません。  
-また、Misskeyのビルド環境を準備しない(git pullしない)ので、フォークを動かしたくなった時に設定が面倒になります。
+如果使用 Docker Hub 镜像，则不需要编译 Misskey。
+如果想对Misskey进行高度自定义（例如fork到本地修改），我们推荐选择编译安装 Misskey（systemd 方式），而不是docker。
 
-ローカルでDockerをビルドする方式は、パフォーマンス面で非推奨です。
-
-systemdは、Docker Hubにイメージを上げるまでもないものの、フォークを使いたい場合にお勧めです。
-
-お勧めする順番は次の通りです。
-
-1. Docker Hub
+三种方式的推荐度（从大到小排列）：
+1. Docker-compose (via docker hub)
 2. systemd
-3. Dockerビルド
+3. Docker 编译
 
-## nginxを使うかどうか
-サーバー1台でMisskeyを構築する場合は、nginxの使用をお勧めします。
+## 是否要使用 Nginx？
+如果您想仅用一台服务器搭建 Misskey，我们推荐使用 nginx。
 
-ロードバランサーを設置する場合にはnginxをインストールせず、[Misskeyのnginx設定](https://github.com/misskey-dev/misskey/blob/develop/docs/examples/misskey.nginx)を参考にロードバランサーを設定するのがよいと思います。
+如果您想配置负载均衡器，推荐不要使用 Nginx。 可以参考[Misskeyのnginx設定](https://github.com/misskey-dev/misskey/blob/develop/docs/examples/misskey.nginx)来设置负载均衡器。
 
-## Add more swaps!
-スワップを設定している場合、メモリが合計で3GB以上でなければスクリプトが動作しないようになっています。
+## SWAP 分区
+如果您设置了SWAP，除非您的总内存为 3GB 或更多，否则该脚本将无法运行。
 
-## 途中で失敗してまたスクリプトを実行する場合
-万が一途中で失敗してもう一度スクリプトを動作させる場合、次のことに注意してください。
+## 如果在途中失败并再次运行脚本
+如果中途失败后再次运行脚本，请注意以下事项：
 
-- RedisやPostgresのインストールが終わっている場合、「install locally」はNoにしてください。  
-  host・port設定はそのままEnterを押します。
-  ユーザー名やパスワードは、前回実行した際に指定したものを入力します。
+- 如果您已经安装了 Redis 或 Postgres，请将“Install locally” 设置为 No。
+保持主机名和端口设置不变，然后按 Enter。输入上次执行命令时指定的用户名和密码。
 
-## .envファイルについて
-インストールスクリプトは、2つの.envファイルを作成します。  
-アップデートの際に使用します。
+## 关于 .env 文件
+安装脚本创建了几个 .env 文件，这些文件在更新时有用。
 
 ### /root/.misskey.env
-misskeyを実行するユーザーを覚えておくために必要です。
+记住运行  Misskey 的用户。
 
 ### /home/(misskeyユーザー)/.misskey.env
-systemdの場合に生成されます。  
-主にディレクトリを覚えておくのに使用します。
+由 systemd 生成，主要用来记录运行目录。
 
 ### /home/(misskeyユーザー)/.misskey-docker.env
-Dockerの場合に生成されます。  
-実行されているコンテナとイメージの番号を保存しています。  
-コンテナの番号はアップデートの際に更新されます。古いイメージは削除されます。
+由 Docker 生成，其中存储有正在运行的容器和映像的编号。
+容器编号随着更新而更新，更新后，旧的映像会被删除。
 
-## 自分で管理する
-インストール後、構成を変更する際に役立つかもしれないメモです。
+## 自行更改配置文档
+在安装结束后，您可以自行探索本项目的配置文档，并依据自身情况进行修改。
 
-"example.com"を自分のドメインに置き換えて読んでください。
+### Misskey 安装目录 （该部分为机翻）
+Misskey的源代码会被克隆到 /home/user/dictionary 中。
+（user和dictionary的默认值都是misskey。）
 
-### Misskeyディレクトリ
-Misskeyのソースは`/home/ユーザー/ディレクトリ`としてcloneされます。  
-（ユーザー、ディレクトリの初期値はともにmisskeyです。）
-
-Misskeyディレクトリへは、以下のように移動するとよいでしょう。
+若要访问 Misskey 的安装目录，建议使用以下命令：
 
 ```
-sudo -iu ユーザー
-cd ディレクトリ
+sudo -iu user
+cd dictionary
 ```
 
-もとのユーザーに戻るにはexitを実行します。
+要返回之前的用户，执行以下命令：
 
 ```
 exit
 ```
 
-### systemd
-systemdのプロセス名はexample.comです。  
-たとえば再起動するには次のようにします。
+### systemd 中的 Misskey （仅限使用一键安装脚本安装的 Misskey）
+Misskey 在 systemd 中的进程名称为您设定的域名（例如，exmaple.com，仅限使用一键安装脚本安装的 Misskey）  
+若要重启 Misskey，执行以下命令：
 
 ```
 sudo systemctl restart example.com
 ```
 
-journalctlでログを確認できます。
+可以使用 journalctl 查看日志：
 
 ```
 journalctl -t example.com
 ```
 
-設定ファイルは`/etc/systemd/system/example.com.service`として保存されています。
+systemd的配置文件为：`/etc/systemd/system/example.com.service`
 
 ### Docker
-DockerはMisskeyユーザーでrootless実行されています。
+Docker 让 Misskey 以第三者用户运行
 
-sudo でMisskeyユーザーに入るときは、`XDG_RUNTIME_DIR`と`DOCKER_HOST`を変更する必要があります。
+如果要使用sudo进入Misskey用户，则需要更改XDG_RUNTIME_DIR和DOCKER_HOST。
 
 ```
-sudo -iu ユーザー
+sudo -iu user
 export XDG_RUNTIME_DIR=/run/user/$UID
 export DOCKER_HOST=unix://$XDG_RUNTIME_DIR/docker.sock
 
-# プロセス一覧を表示
+# 显示进程列表
 docker ps
 
-# ビルド (リポジトリ: local/misskey:latest)
+# 编译（仓库: local/misskey:latest)
 docker build -t local/misskey:latest ./misskey
 
 # docker run
 docker run -d -p 3000:3000 --add-host=docker_host:10.0.0.1 -v /home/misskey/misskey/files:/misskey/files -v "/home/misskey/misskey/.config/default.yml":/misskey/.config/default.yml:ro --restart unless-stopped -t "local/misskey:latest"
 
-# ログを表示
-docker logs --tail 50 -f コンテナID
+# 显示日志
+docker logs --tail 50 -f 容器ID
 ```
 
-ワンライナーなら次のようにします。
+下面的命令为上面的命令们的结合体（除了显示日志）：
 
 ```
-sudo -u ユーザー XDG_RUNTIME_DIR=/run/user/$(id -u ユーザー) DOCKER_HOST=unix:///run/user/$(id -u ユーザー)/docker.sock docker ps
+sudo -u user XDG_RUNTIME_DIR=/run/user/$(id -u user) DOCKER_HOST=unix:///run/user/$(id -u user)/docker.sock docker ps
 ```
 
 ### nginx
-nginxの設定は`/etc/nginx/conf.d/example.com.conf`として保存されています。
+Nginx 站点配置文档为：`/etc/nginx/conf.d/example.com.conf`
 
 ### Redis
-requirepassとbindを`/etc/redis/misskey.conf`で設定しています。
+已经在 `/etc/redis/misskey.conf` 设定了requirepass 与 bind。
 
-## Q. アップデート後に502でアクセスできない
-Dockerでは、起動後にマイグレーションをするため、すぐにアクセスできません。  
-マイグレーションが終わっているかどうか確認してみてください。
+## 升级实例后出现 502 无法访问错误
+如果使用 Docker，由于升级需要进行迁移，所以无法立即访问。请检查迁移是否完成。
 
-systemdの場合では、pnpm installに失敗している可能性があります。  
+如果使用 systemd，可能会出现 pnpm install 运行失败的情况：
 
-Misskeyディレクトリで次の内容を実行し、もう一度アップデートを実行してみてください。
+在 Misskey 的安装目录中运行以下命令，并再次尝试进行更新。
 
 ```
 pnpm run clean-all
 ```
 
-journalctlでログを確認すると、たいていre2が云々という記述が見当たります。
+如果查看 journalctl 日志，通常会看到有关re2的记录。
 
-## Q. 同じサーバーにもう1つMisskeyを建てたい
-スクリプトは同じサーバーに追加でMisskeyをインストールすることは想定していません。  
-幾つかの設定が上書きされるか、途中でエラーになってしまうでしょう。
+## 可以在同一台服务器上再建立一个Misskey实例吗？
+一键安装脚本不适用于在同一台服务器上安装另一个Misskey实例。因为某些设置可能会被覆盖，或者在过程中可能会发生错误。

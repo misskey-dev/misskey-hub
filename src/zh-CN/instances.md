@@ -5,7 +5,7 @@
 
 <MkInstances/>
 
-您也可以在 [unofficial list of instances](https://join.misskey.page/en-US/instances)中寻找更多实例。
+您也可以在 [非官方实例列表](https://join.misskey.page/en-US/instances)中寻找更多实例。
 
 <style>
 	.mkAd {
