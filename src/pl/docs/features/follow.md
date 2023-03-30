@@ -1,5 +1,5 @@
-# Follow
+# Obserwuj
 
-When you follow a user, you will see their posts on your home timeline; however, their replies to other users will not be included.
+Kiedy zaobserwujesz użytkownika, zobaczysz ich posty na twojej ośi czasu; jednakże, ich odpowiedzi na posty innych użytkowników nie będą widoczne.
 
-To follow a user, click the "Follow" button on the user's profile page. To unfollow a user, click the button again.
+Aby obserwować użytkownika, kliknij "Obserwuj" na stronie profilu użytkownika, aby przestać obserwować, kliknij jeszcze raz.

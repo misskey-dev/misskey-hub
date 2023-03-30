@@ -1,56 +1,57 @@
-# Muting and Blocking
+# Wyciszanie i blokowanie
 
-If you don't like a user, you can mute them to make them disappear from your timelines.
-Alternatively, you can block a user to prevent them from seeing your content or engaging with you in any way.
-People won't know that you have muted them, but they will know that you have blocked them. It is up to you to decide which option you prefer.
+Jeśli nie lubisz użytkownika, możesz go wyciszyć by zniknął z twojej ośi czasu.
+Poza tym, możesz też ich zablokować żeby uniemożliwić im widok na twoje materiały lub interakcję z tobą w każdy sposób.
+Użytkownicy nie będą wiedzieć że ich wyciszyłeś, ale będą wiedzieć że ich zablokowałeś.
 
-::: tip
-Mute and block can be used together.
+::: Wskazówka
+Wyciszanie i blokowanie może być używane jednocześnie.
 :::
 
-::: warning
-Please consider reporting any users who violate the Terms of Service to the moderators.
+::: Ostrzeżenie
+Proszę zgłaszać ludzi łamiących zasady instancji do jej administracji.
 :::
 
-In Misskey Web, you can see the list of users you have muted or blocked by going to Settings > Mute & Block.
+W Interfejsie Przeglądarkowym Misskey możesz zobaczyć listę użytkowników których zablokowałeś lub wyciszyłeś w Ustawieniach > Wyciszenia i Blokady.
 
-## Muting
+## Wyciszanie
 
-If you mute a user, the following content about that user will no longer appear in Misskey:
+Jeżeli wyciszysz użytkownika to podanych materiałów na twojej ośi czasu nie zobaczysz:
 
-- the user's posts (and replies and Renotes to those posts) in the timeline and post search results
-- notifications from that user
-- message history with the user in Misskey chat
-- etc.
+- WSZYSTKIE posty danego użytkownika
+- Powiadomienia od tego użytkownika
+- Historia wiadomości w Czasie Miskey
+- itp.
 
-To mute a user in Misskey Web, open the menu on the user's profile page and press the "Mute" button.
+Aby wyciszyć użytkownika poprostu kliknij Wycisz w opcjach użytkownika
 
-::: tip
-They will not be notified that you have muted them, and they will not know that you have muted them.
+::: Wskazówka
+Osoby wyciszone nie zostaną powiadomione że zostały wyciszone.
 :::
 
-## Blocking
-If you block a user, they will not be able to see your content and they will not be able to do any the following actions:
+## Blokowanie
 
-- follow you
-- add you to a user list
-- reply or renote you
-- react or vote in one of your polls
-- send a message to you
-- etc.
+Jeżeli zablokujesz użytkownika, to nie będzie mógł się z tobą komunikować, ani wykonywać jakichkolwiek akcji typu:
 
-Also,
+- Obserwować ciebię
+- dodać ciebię do list użytkowników
+- Odpowiedzieć lub renotować twoje materiały
+- Reagować lub głosować w ankietach
+- Wysłać tobie wiadomość
+- itp.
 
-- if the user is already following you when you block them, they will unfollow you
-- if the user has you in their user lists when you block them, you will be removed from those lists
+Poza tym,
 
-To block a user on Misskey Web, open the menu on the user's profile page and press the "Block" button.
+- jeżeli użytkownika który cię obserwował, zablokujesz to przestanie ciebię obserwować
+- jeżeli użytkownik ma ciebię w listach użytkowników to po zablokowaniu go, zostaniesz z nich usunięty
 
-::: warning
-You will not be notified that you have been blocked by someone, but you will know indirectly that you have been blocked because you will not be able to take any of the above actions, such as following someone.
+Aby zablokowac użytkownika - skorzystaj z opcji blokady w opcjach użytkownika
+
+::: Uwaga
+Jeżeli ktoś Cię zablokuje to nie zostaniesz o tym powiadomiony, jednak nie będziesz mógł dokonywać interakcji z osobą która cię zablokowała.
 :::
 
-::: warning
-The other person will not be able to see your content, but they will be able to see it if they switch accounts or log out. Blocking is only a simple, but useful feature.
-You can change your privacy settings in Settings > Privacy to make it more difficult for blocked users to view your content by requiring approval for follow requests and setting your default note visibility to "Followers".
+::: Uwaga
+Osoba zablokowania nie będzie mogła zobaczyć twoich materiałów, ale może użyć konta alternatywnego itp.
+Możesz zmienić w ustawieniach konta widoczność postów, żeby utrudnić osobom zablokowanym widok na twoje posty.
 :::

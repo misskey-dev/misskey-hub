@@ -1,60 +1,65 @@
 ---
-description: 'MFM is a dedicated markup language that can be used in various places on Misskey.'
+description: 'MFM jest to dedykowany język znaczników do używania z Misskey.'
 ---
 
 # MFM
-MFM, which stands for Misskey Flavoured Markdown, is a dedicated markup language that can be used in various places on Misskey.
 
-::: tip
-Some of the syntax is compatible with Markdown.
+MFM(Misskey Flavoured Markdown) jest to dedykowany język znaczników do używania z Misskey.
+
+::: Wskazówka
+Część składni jest kompatybilna z Markdown
 :::
 
-## examples of where misskey is allowed
-- note body
-- content warnings
-- user name
-- user profile
+## Przykłady gdzie można wykorzystać MFM
 
-## Syntax
-### Mentions
-::: tip
-For more information about Mentions, see [here](./mention.md).
+- treść notki
+- ostrzeżenia zawartości
+- nazwy użytkownika
+- profilu użytkownika
+
+## Składnia
+
+### Wspominanie
+
+::: Wskazówka
+Po więcej informacji zobacz [tutaj](./mention.md).
 :::
 
 ```:no-line-numbers
 @alice
 ```
+
 ```:no-line-numbers
 @alice@example.com
 ```
 
-### Hashtags
+### Hasztagi
 
-::: tip
-For more information about hashtags, see [here](./hashtag).
+::: Wzkazówka
+Po więcej informacji zobacz [tutaj](./hashtag).
 :::
 
 ```:no-line-numbers
 #misskey
 ```
 
-### Custom Emoji
+### Personalizowane Emoji
 
-::: tip
-For more information about custom emoji, see [here](./custom-emoji).
+::: Wskazówka
+Po więcej informacji zobacz [tutaj](./custom-emoji).
 :::
 
 ```:no-line-numbers
 :misskey:
 ```
 
-### Links
+### Linki
 
 ```:no-line-numbers
 [example link](https://example.com)
 ```
 
-### Bold
+### Pogrubienie
 
 ```:no-line-numbers
 **Bold**
@@ -62,11 +67,12 @@ For more information about custom emoji, see [here](./custom-emoji).
 
 ---
 
-::: tip
-More available syntax can be found in the **MFM cheat sheet** provided by the Misskey web UI under `/mfm-cheat-sheet` on your instance.
+::: Wskazówka
+Więcej składni można zobaczyć w ***Ściądze MFM** dostępnej w przeglądarkowym Menu Misskey pod `/mfm-cheat-sheet` twojej instancji.
 :::
 
-## Information for Developers
+## Informacje dla deweloperów
 
-The parser implementation of MFM is available as a library, making it easier to embed MFM in your clients.
-- [misskey-dev/mfm.js](https://github.com/misskey-dev/mfm.js) - parser implementation in JavaScript
+Implementacja parsera MFM jest dostępna jako biblioteka, dzięki czemu łatwiej jest osadzić MFM w swoich klientach.
+
+- [misskey-dev/mfm.js](https://github.com/misskey-dev/mfm.js) - implementacja parsera w JavaScript
