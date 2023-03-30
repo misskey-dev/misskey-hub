@@ -20,14 +20,14 @@ keyFeatures:
 sections:
   federatedSoftware:
     title: "Misskey 是一个 <b data-marker>去中心化</b> 的社交平台。"
-    description: "Misskey 是一个免费开放的社交平台，任何人都可以在部署自己的 Misskey 服务器。一台运行 Misskey 的服务器称为“实例”，现在，全球已有数百上千个 Misskey 实例。Misskey 最重要的特性是其又称为 <b data-marker>ActivityPub</b> 的分布式通讯协议，无论在哪台实例中，用户都可以与其他支持 ActivityPub 的实例（例如 Mastodon、PixelFed、PeerTube 等等）进行互动。使用者可以自定 Misskey 主题，每台实例都有着不同的使用群体，语言，兴趣爱好等等，寻找适合自己的实例或搭建自己的实例也是一种乐趣。"
+    description: "Misskey 是一个免费开放的社交平台，任何人都可以在部署自己的 Misskey 服务器。一台运行 Misskey 的服务器称为实例，现在，全球已有数百上千个 Misskey 实例。Misskey 最重要的特性是其又称为 <b data-marker>ActivityPub</b> 的分布式通讯协议，无论在哪台实例中，用户都可以与其他支持 ActivityPub 的实例（例如 Mastodon、PixelFed、PeerTube 等等）进行互动。使用者可以自定 Misskey 主题，每台实例都有着不同的使用群体，语言，兴趣爱好等等，寻找适合自己的实例或搭建自己的实例也是一种乐趣。"
   features:
     title: "主要特点"
     description: "由一般到特殊，Misskey 有着各式各样的功能，这里仅是一部分。"
     list:
       note:
         title: "帖子"
-        description: "在 Misskey 中，用户发出的投稿被称为“帖子"。您可以附加图片，视频，音频或其他任何文件，还可以引用其他的帖子。"
+        description: "在 Misskey 中，用户发出的投稿被称为“帖子”。您可以附加图片，视频，音频或其他任何文件，还可以引用其他的帖子。"
       reaction:
         title: "反应"
         description: "您可以对帖子做出“反映”，简单，轻松地表达自己的感受。"
