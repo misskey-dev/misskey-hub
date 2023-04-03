@@ -1,11 +1,11 @@
-# Notki
+# Wpisy/Notki
 
 Notki to główny koncept Misskey. Opiera on się na zawartości która może być tekstem, obrazem, ankietą itp. co zostało zapostowane na Misskey.
 
-Tworząc notkę, zostanie ona dodana na [oś czasu](./timeline) i wysłana do twoich obserwujących.
+Tworząc wpis, zostanie ona dodana na [oś czasu](./timeline) i wysłana do twoich obserwujących.
 
 Na Misskey można też dodawać [Reakcje](./reaction) notkom. Na dodatek możesz też komentować, udostępniać i cytować je.
-Możesz dodać notkę do [Ulubionych](./favorite) dzięki czemu łatwiej możesz ją znaleść.
+Możesz dodać wpis do [Ulubionych](./favorite) dzięki czemu łatwiej możesz ją znaleść.
 
 ## Tworzenie postów
 
@@ -19,7 +19,7 @@ Materiały które skopiowałeś do schowka możesz wkleić
 Możesz też kliknąć <kbd class="key">Control + Enter</kbd> aby opublikować notkę
 :::
 
-## Renote
+## Udostępnianie / Renote
 
 Cytowanie lub udostępnianie treści notki
 
@@ -27,7 +27,7 @@ Cytowanie lub udostępnianie treści notki
 Jeśli ustawiłeś widoczność posta na "tylko obserwujący" lub "bezpośrednio" to nie będzie można renotować posta
 :::
 
-Aby usunąć renote kliknij w opcję "usuń renote" w opcjach posta.
+Aby usunąć udostępnienie posta po prostu kliknij w opcję "usuń" w opcjach posta.
 
 ## CW
 

@@ -1,29 +1,27 @@
-# Reaction
+# Reakcje
 
-This feature allows you to easily convey your reactions to other people's notes by adding emojis.
-To react in Misskey Web, click the + icon on the note to show the picker and select an emoji.
-You can also react using [custom emoji](./custom-emoji.md).
+Ta funkcja pozwala reagować na posty innych użytkowników za pomocą emotek.
+W Misskey(Przeglądarkowym) kliknij ikonkę z + na wpisie aby pozakazać wybierałke i wybierzesz emotkę. Możesz też reagować używając [własnych emotek](./custom-emoji.md).
 
-## Customising the Reaction Picker
+## Personalizacja panelu reakcji
 
-In Misskey Web you can choose which emojis should appear in the picker and change the order they should appear in.
-You can set this in the "Reactions" section of the settings.
+W Misskey(przeglądarkowym) możesz wybrać emoji które powinny się pojawić w wybierałce i zmienić ich kolejność.
+Możesz ustawić to w sekcji "Reakcje" w ustawieniach.
 
-## Reactions to Remote Posts
+## Reakcjie do innych instancji
 
-Since Reactions are an original Misskey feature, most of the time the activity will be sent to other instances as a "Like" unless the remote instance supports them.
-Usually, ActivityPub's "Like" is implemented as a favorite.
+Z racji na to że reakcje to oryginalna funkcja Misskey, większość czasu aktywność zostanie wysłana do innych instancji jako "Like" chyba że zdalna instancja obsługuje je.
+Zazwyczaj "Like" z ActivityPub jest implementowany jako polubienie ale to już zależy od instancji..
 
-## Reactions from remote instances
+## Reakcje z innych instancji
 
-Since Misskey does not have likes, a "Like" from a remote instance will be displayed as a '👍' reaction.
+Z racji na to że Misskey nie posiada lajków, "Polubienie" z zdalnej instancji będzie wyświetlone jako reakcja '👍' (albo w nowszych wersjach ❤ - to już zależy od administratora instacji).
 
-::: tip
-Your instance administrator may change this to be displayed as a '⭐' reaction.
-If you are an admin, see [here](../admin/default-reaction.md).
+::: Wskazówka
+Administracja instancji może zmienić domyślną reakcję na "Like" w ustawieniach. Więcej o tym  [tutaj](../admin/default-reaction.md).
 :::
 
-## See a list of all your reactions
+## Zobacz listę wszytkich reakcji
 
-In Misskey Web, you can see the list of all the reactions you have made by opening the "Reactions" tab on your profile page.
-You can also choose to make this list public in the settings.
+W Misskey(Przeglądarkowym) możesz zobaczyć listę wszystkich twoich reakcji w zakładce "Reakcje" na swojej stronie profilu.
+W ustawieniach możesz też ustawić czy ta lista ma być publiczna.

@@ -1,9 +1,9 @@
-# Silence
+# Wyciszenie
 
-Silence is one of the states that an account can be set to.
+Wyciszenie to jeden z stanów konta, jakie mogą być ustawione przez moderatorów instancji.
 
-When your account is silenced, you cannot set the visibility of your notes to Public.
-Home, Followers, and Direct are still selectable, so even if your account is silenced, followers and direct visitors to your page will still be able to view your posts.
-They will just not be able to view them in the GTL (Global Timeline) or LTL (Local Timeline).
+Kiedy konto jest wyciszone, nie możesz tworzyć postów publicznych.
+Nadal jednak możesz tworzyć posty widoczne dla obserwujących i prywatne(w tym wiadomości prywatne).
+Po prostu nie będą mogli zobaczyć ich w Globalnej albo Lokalnej Ośi czasu
 
-The silence status of an account is set by the instance moderators.
+Wyciszenie może być nałożone przez moderacje instancji.

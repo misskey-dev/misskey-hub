@@ -1,30 +1,30 @@
-# Deck UI
+# Układ interfejsu
 
-Deck UI is one of the available UIs in Misskey. It is characterized by the ability to build highly customizable and informative UIs by displaying multiple views, called "columns", side by side.
-The deck option is only available on sufficiently large screens like a laptop computer.
+Układ interfejsu jest to jedna z funkcji personalizacji Misskey. Pozwala ona tworzyć niestandardowe i bardziej wypełnione informacjami interfejsy użytkownika, wyświetlając wiele widoków, zwanych "kolumnami", obok siebie.
+Ta opcja jest tylko dostępna na urządzeniach z ekranym odpowiednio wielkim - na przykład na komputerze lub laptopie.
 
-## Adding Columns
+## Dodawanie kolumn
 
-You can add a column by right-clicking on the deck background and selecting "Add Column". You can also click the '+' icon on the right side of the screen.
+Możesz dodać kolimnę klikając prawym przyciskiem myszy w tło decku i wybierając "Dodaj kolumnę". Możesz również kliknąć ikonę '+' po prawej stronie ekranu.
 
-## Move Columns
+## Przenoszenie kolumn
 
-Columns can be repositioned by drag-and-drop or by using the column menu "Move" option (right-click on the column header).
+Kolumny mogą być przenoszone poprzez przeciąganie i upuszczanie lub za pomocą opcji menu kolumny "Przenieś" (kliknij prawym przyciskiem myszy na nagłówku kolumny).
 
-## Horizontal Division of Columns
+## Poziomy podział kolumn
 
-Columns can be arranged vertically as well as horizontally. Open the column's menu and select "Stack with the left column" to move the current column below the column to its left.
-To unstack a column, select "Pop column to the right" from the column's menu.
+Kolumny mogą być podzielone wertykalnie jak i horyzontalnie. Otwórz menu kolumny i wybierz "Zestaw z kolumną po lewej" aby przenieść bieżącą kolumnę poniżej kolumny po lewej.
+Aby odstawić kolumnę wybierz "Odstaw kolumnę po prawej" z menu kolumny.
 
-## Configure Column Layout
+## Konfiguracja ułożenia kolumn
 
-Select "Column settings" in the column menu to edit column layout settings. Here you can change the column name and width.
-If the colum is set to flexible then it will expand beyond its set width to fill remaining horizontal space on the screen.
+Wybierz "ustawienia kolumn" w menu kolum aby zmienić ułożenie kolumn. Możesz tam też zmienić nazwę i szerokość kolumny.
+Jeżeli kolumna jest elastyczna, to zapełni całą wolną przestrzeń. Jeśli nie, to będzie miała określony rozmiar.
 
-## Deck Settings
+## Ustawienia decku
 
-Deck-related settings can be changed in the settings menu (click the gear icon in the bottom right of the screen.
+Ustawienia związane z ułożeniem decku są w ustawieniach. Możesz je znaleść w menu z kołem zembatym po lewej stronie ekranu.
 
-## Deck Profiles
+## Profile ustawień interfejsu
 
-You can create/load a deck profile by clicking on the menu in the top right of the screen. Choose "New profile" to create a new blank deck to customize. Select another profile to switch to it. The trash button deletes the current profile.
+Możesz tworzyć/ładować profile interfejsu klikając w menu w prawym górnym rogu ekranu. Wybierz "Nowy profil" aby stworzyć nowy pusty deck do personalizacji. Wybierz inny profil aby przełączyć się na niego. Przycisk kosza usuwa bieżący profil.

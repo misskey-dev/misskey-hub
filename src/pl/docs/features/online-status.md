@@ -1,39 +1,39 @@
-# Online Status
+# Status Online (Aktywności)
 
-A user's **online status** is an indication of their Misskey usage status.
-Your online status is displayed as an indicator in the corner of the user icon on your user page and elsewhere.
+**Status Online**  użytkownika jest to indykator użycia Misskey przez użytkownika.
+Status online jest wyświetlany jako indykator w rogu ikony użytkownika na jego stronie użytkownika i w innych miejscach.
 
 <table>
 	<tr>
-		<th>Colour</th>
-		<th>State</th>
-		<th>Description</th>
+		<th>Kolor</th>
+		<th>Stan</th>
+		<th>Opis</th>
 	</tr>
 	<tr>
-		<td>🟢 green</td>
-		<td>online</td>
-		<td>Misskey is being used right now.</td>
+		<td>🟢 Zielony</td>
+		<td>Online</td>
+		<td>Użytkownik właśnie korzysta z Misskey.</td>
 	</tr>
 	<tr>
-		<td>🟡 yellow</td>
-		<td>active</td>
-		<td>The user is absent but Misskey is still being used.</td>
+		<td>🟡 Żółty</td>
+		<td>Nieaktywny</td>
+		<td>Misskey jest używane, ale użytkownik jest nieaktywny.</td>
 	</tr>
 	<tr>
-		<td>🔴 red</td>
-		<td>offline</td>
-		<td>Misskey is not used.</td>
+		<td>🔴 Czerwony</td>
+		<td>Offline</td>
+		<td>Użytkownik nie korzysta z Misskey.</td>
 	</tr>
 	<tr>
-		<td>⚫ grey</td>
-		<td>unknown</td>
-		<td>The status is private or not available for remote users etc.</td>
+		<td>⚫ Szary</td>
+		<td>Nieznany</td>
+		<td>Status jest nieznany lub niedostępny dla użykownika z innego serwera itp.</td>
 	</tr>
 </table>
 
-Your online status will change automatically and cannot be set manually.
-You can set your online status to be private.
+Twój status online zostanie zmieniony automatycznie i niemoże być ustawiony manualnie.
+Możesz natomiast ustawić swój status jako prywatny.
 
-::: warning
-Some features, such as user suggestions, may be based on online status, so making your status private may make it harder for other users to find you.
+::: Uwaga
+Niektóre funkcje, jak sugestie użytkowników, mogą być oparte na twoim aktywnym statusie, więc ustawienie go jako prywatny może utrudnić innym użytkownikom znalezienie cię.
 :::

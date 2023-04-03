@@ -1,5 +1,5 @@
-# Plug-ins
+# Wtyczki
 
-Misskey Web has a plugin facility that allows users to extend the functionality of Misskey Web.
+Misskey (w Przeglądarce) posiada mechanizm wtyczek, który pozwala użytkownikom na rozszerzenie funkcjonalności Misskey (Przeglądarkowego).
 
-For information on how to create a plugin, see [this document](./advanced/create-plugin.md).
+Dla informacji na temat tworzenia wtczek, proszę zapoznać się z [tym dokumentem](./advanced/create-plugin.md).

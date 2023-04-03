@@ -13,7 +13,7 @@ Pliki z dysku mogą być pobrane lub ponownie użyte poprzez dodanie pliku z dys
 Pliki na dysku możesz też organizować za pomocą folderów.
 
 ::: warning
-Kiedy usuwasz materiały z dysku Misskey, **wszystko (notki, strony, itp.)** załączone też zostanie usunięte.
+Kiedy usuwasz materiały z dysku Misskey, **wszystko (wpisy, strony, itp.)** załączone też zostanie usunięte.
 :::
 
 ## OSTRZEŻENIE (NSFW)

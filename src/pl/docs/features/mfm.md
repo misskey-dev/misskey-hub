@@ -19,7 +19,7 @@ Część składni jest kompatybilna z Markdown
 
 ## Składnia
 
-### Wspominanie
+### Wspominanie użytkowników
 
 ::: Wskazówka
 Po więcej informacji zobacz [tutaj](./mention.md).

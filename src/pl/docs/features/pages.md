@@ -1,52 +1,47 @@
-# Pages
+# Strony
 
-Misskey Pages are a feature where you can create custom web pages. In them you can include different types of media and formatting. and even run programming scripts. Like with many other areas of Misskey, you can format your content using [MFM](./mfm.md).
+Strony na Misskey pozwalają utworzyć personalizowane strony internetowe. Możesz w nich zawrzeć dowolne media i formatowanie, a nawet uruchamiać zaprogramowane skrypty. Podobnie jak z wieloma innymi funcjami Misskey, możesz formatować swoją zawartość używając [MFM](./mfm.md).
 
-Pages in Misskey are composed of different types of Blocks, and the blocks can be moved around using drag-and-drop.
+Strony Misskey są składowe z różnych typów bloków, które możesz przeciągać i upuszczać.
 
-## Content Blocks
+## Bloki z zawartością
 
-Content blocks display different types of content to the user.
+Bloki z zawartością wyświetlają określoną treść użytkownikowi
 
-### Section
+### Sekcje
 
-A grouping block that can contain other blocks. Each content block has a title that it will display at its top.
+Grupowanie bloków w sekcje.
 
-### Text
+### Tekst
 
-Displays text content to the user. The text content can be formatted and can include variables interpolation (See Variables below).
+Wyświetla użytkownikowi tekst. Oczywiście ten tekst może też być formatowany za pomocą MFM.
 
-### Images
+### Obrazy
 
-Displays an image that you can select from your drive.
+Pokazuje obrazy wybrane z Dysku użytkownika
 
-### Text Area
+### Pole tekstowe
 
-Displays text in a text area tag. This block does not support MFM but variable interpolation is allowed.
+Wyświela pole tekstowe. Nie obsługuje formatowania
 
-### Embedded Note
+### Dołączona notka
 
-TODO
+Dołącza notkę do strony
 
-### Canvas
+## Bloki do uzupełnienia
 
-TODO
+Bloki do uzupełnienia pozwalają tworzyć interaktywne strony. Dane z tych bloków mogą być wykorzystane w skryptach i zmiennych
 
-## Input Blocks
+## Bloki specjalne
 
-Input blocks can be used to create interactive pages with form elements. These blocks can be used to interact with the variables and scripts in a page.
+Specjalne bloki pozwalają na tworzenie bardziej zaawansowanych stron. Można za pomocą nich automatycznie tworzyć wpis lub manipulować stroną.
 
-## Special Blocks
+## Zmienne
 
-Special blocks provide unique features for your page. This includes a note posting form and page control flow.
+Zmienne pozwalają tworzyć dynamiczne strony. Możesz dołączać wartości pisząc <b>{ nazwa zmiennej }</b> w tekście. Na przykład, w <b>Witaj { rzecz } świecie!</b>, jeśli wartość zmiennej (rzecz) to <b>ai</b>, to tekst zmieni się na <b>Witaj ai świecie!</b>.
 
-## Variables
+Wartości są obliczane od góry do dołu, więc nie możesz odwołać się do zmiennej zdefiniowanej poniżej w danej zmiennej. Na przykład, jeśli są trzy zmienne, <b>A, B, C</b>, które są zdefiniowane w tej kolejności, <b>A</b> i <b>B</b> mogą być odwoływane w definicji <b>C</b>; jednak <b>B</b> i <b>C</b> nie mogą być odwoływane w definicji <b>A</b>.
 
-Variables can be used to create dynamic pages. You can embed the value of a variable by writing <b>{ variable name }</b> in the text. For example, in <b>Hello { thing } world!</b>, if the value of the variable (thing) was <b>ai</b>, then the text would become <b>Hello ai world!</b>.
+Aby uzyskać wynik od użytkownika, umieść blok "Wejście" na stronie i ustaw "Nazwa zmiennej" na nazwę zmiennej, w której chcesz przechować wartość (zmienna zostanie automatycznie utworzona przez blok).
 
-Variables are evaluated from top to bottom, so you cannot refer to a variable defined below you in a given variable. For example, if there are three variables, <b>A, B, C</b>, that are defined in that order, <b>A</b> and <b>B</b> can be referenced inside of <b>C</b>'s definition; however, <b>B</b> and <b>C</b> cannot be referenced inside of <b>A</b>'s.
-
-To receive input from the user, place an "Input" block on the page and set the "Variable Name" to the name of the variable in which you want to store the value (the variable will automatically be created by the block).
-The variable can the be used to perform actions in response to user input.
-
-Functions can be used to encapsulate value calculations in a reusable form. To create a function, create a variable of type "Function". A function can have slots (arguments), and the values of the slots are available as variables within the function. There are also functions called higher-order functions that take another function as an argument. Functions can be predefined or instantiated in-line in slots of such higher order functions.
+Funkcje mogą być użyte w celu zgrupowania obliczeń w ponownie wykorzystywalnej formie. Aby utworzyć funkcję, utwórz zmienną typu "Funkcja". Funkcja może mieć sloty(Argumenty) i wartości w slotach są dostępne jako wartości funkcji. Poza tym są też funkcje wyższego stopnia które używają innych funkcji jako argument. Funkcje mogą być predefiniowane lub zdefiniowane z slotach wyższych funkcji.
