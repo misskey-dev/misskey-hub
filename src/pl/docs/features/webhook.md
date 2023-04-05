@@ -1,21 +1,21 @@
-# Webhook
+# Webhooki
 
-::: tip
-This feature is available as of Misskey version 12.109.0.
+::: Wskazówka
+Ta funkcja jest dostępna w Misskey od wersji 12.109.0.
 :::
 
-::: warning
-This is an experimental feature and may be unstable or subject to change in the future.
+::: Uwaga
+To jest funkcja eksperymentalna, nie jest ona stabilna, oraz w przyszłości może ulec zmianie.
 :::
 
-Misskey provides a webhook which allows you to receive various events from Misskey in real time.
+Misskey dostarcza webhook który pozwala na otrzymywanie różnych zdarzeń w czasie rzeczywistym.
 
-You can manage your webhooks by going to Settings > Webhook.
+Możesz zarządzać Webhookami w Ustawieniach > Webhooki.
 
-Once a webhook is registered, an HTTP request is sent to the specified URL each time the specified event occurs. The request method will be POST and contain JSON in its body.
-In addition, the request header will contain the secret that was set during registration with the name `X-Misskey-Hook-Secret`. You can use this secret to verify that the request is legitimate.
+Kiedy webhook jes zarejestrowany, żądanie HTTP jest wysłane do określonego URL za każdym razem kiedy określone zdarzenie nastąpi. Metoda żądania będzie POST i zawierać JSON w swoim ciele.
+Poza tym nagłówek żądania będzie zawierać sekret ustawiony w czasie rejestracji z nazwą `X-Misskey-Hook-Secret`. Możesz użyć tego sekretu do weryfikacji, czy żądanie jest autentyczne.
 
-The payload wil contain the following properties.
+Dane będą zawierać następujące pola:
 
 <MkSchemaViewerItemObject :schema="{
 	type: 'object',
@@ -47,17 +47,17 @@ The payload wil contain the following properties.
 	}
 }"/>
 
-If the destination server returns a 5XX error or does not respond, the request is resent after a time delay.
+Jeżeli serwer docelowy zwróci błąd 5XX lub nie odpowie, żądanie jest ponownie wysyłane po pewnym czasie.
 
-Webhooks can individually have their active status changed from the administration screen to temporarily stop sending requests.
+Webhooki mogą indywidualnie mieć ich aktywny status zmieniony z ekranu administracji, aby chwilowo zatrzymać wysyłanie żądań.
 
-## Event
+## Zdarzenia
 
-The following is a description and payload for each event type.
+Wykonanie jego wyśle webhook.
 
-### follow
+### Obserwacja
 
-Occurs when you follow someone.
+Zdarza się gdy kogoś zaobserwujesz.
 
 <MkSchemaViewerItemObject :schema="{
 	type: 'object',
@@ -69,9 +69,9 @@ Occurs when you follow someone.
 	}
 }"/>
 
-### followed
+### Zaobserwowany
 
-Occurs when you are followed by someone.
+Wykona się kiedy zostaniesz zaobserwowany.
 
 <MkSchemaViewerItemObject :schema="{
 	type: 'object',
@@ -83,9 +83,9 @@ Occurs when you are followed by someone.
 	}
 }"/>
 
-### unfollow
+### Przestań obserwować
 
-Occurs when you unfollow someone.
+Dzieje się kiedy przestaniesz obserwować kogoś.
 
 <MkSchemaViewerItemObject :schema="{
 	type: 'object',
@@ -97,9 +97,9 @@ Occurs when you unfollow someone.
 	}
 }"/>
 
-### note
+### Wpis
 
-Occurs when you post a note.
+Dzieje się kiedy zapostujesz notkę.
 
 <MkSchemaViewerItemObject :schema="{
 	type: 'object',
@@ -111,9 +111,9 @@ Occurs when you post a note.
 	}
 }"/>
 
-### reply
+### Odpowiedź
 
-Occurs when someone has replied to your note.
+Dzieje się kiedy ktoś odpowie na twoją notkę.
 
 <MkSchemaViewerItemObject :schema="{
 	type: 'object',
@@ -125,9 +125,9 @@ Occurs when someone has replied to your note.
 	}
 }"/>
 
-### renote
+### Renote
 
-Occurs when your note is renoted.
+Dzieje się kiedy ktoś zrepostuje twój post.
 
 <MkSchemaViewerItemObject :schema="{
 	type: 'object',
@@ -139,9 +139,9 @@ Occurs when your note is renoted.
 	}
 }"/>
 
-### mention
+### Wzmianka
 
-Occurs when someone has mentioned you.
+Dzieje się kiedy ktoś o tobie wspomni.
 
 <MkSchemaViewerItemObject :schema="{
 	type: 'object',

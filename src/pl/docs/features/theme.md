@@ -1,83 +1,83 @@
-# Theme
+# Motyw
 
-You can change the look and feel of the Missky client by applying a theme.
+Możesz zmienić motyw kolorystyczny Misskey zgodnie z własnym gustem.
 
-## Theme Settings
+## Ustawienia motywów
 
-Settings > Themes
+Ustawienia > Motywy
 
-## Creating a Theme
+## Tworzenie motywów
 
-The theme object code is written using JSON5.
-The theme has an object type like the one shown below.
+Motywy są pisane za pomocą JSON5.
+Motywy mają obiekty tak jak ten przykład:
 
 ``` js
 {
-	id: '17587283-dd92-4a2c-a22c-be0637c9e22a',
+ id: '17587283-dd92-4a2c-a22c-be0637c9e22a',
 
-	name: 'Danboard',
-	author: 'syuilo',
+ name: 'Danboard',
+ author: 'syuilo',
 
-	base: 'light',
+ base: 'light',
 
-	props: {
-		accent: 'rgb(218, 141, 49)',
-		bg: 'rgb(218, 212, 190)',
-		fg: 'rgb(115, 108, 92)',
-		panel: 'rgb(236, 232, 220)',
-		renote: 'rgb(100, 152, 106)',
-		link: 'rgb(100, 152, 106)',
-		mention: '@accent',
-		hashtag: 'rgb(100, 152, 106)',
-		header: 'rgba(239, 227, 213, 0.75)',
-		navBg: 'rgb(216, 206, 182)',
-		inputBorder: 'rgba(0, 0, 0, 0.1)',
-	},
+ props: {
+  accent: 'rgb(218, 141, 49)',
+  bg: 'rgb(218, 212, 190)',
+  fg: 'rgb(115, 108, 92)',
+  panel: 'rgb(236, 232, 220)',
+  renote: 'rgb(100, 152, 106)',
+  link: 'rgb(100, 152, 106)',
+  mention: '@accent',
+  hashtag: 'rgb(100, 152, 106)',
+  header: 'rgba(239, 227, 213, 0.75)',
+  navBg: 'rgb(216, 206, 182)',
+  inputBorder: 'rgba(0, 0, 0, 0.1)',
+ },
 }
 
 ```
 
-* `id` ... Unique theme ID. A UUID is recommended.
-* `name` ... Theme name
-* `author` ... Theme author
-* `desc` ... Theme description (Object)
-* `base` ... light or dark theme
-	* Use `light` for a light theme and `dark` for a dark theme.
-	* The theme inherits the base theme that is set here.
-* `props` ... Theme style definition. Explained in the following sections.
+* `id` ... ID Motywu. UUID jest rekomendowane.
+* `name` ... Nazwa motywu
+* `author` ... Autor motywu
+* `desc` ... Opis motywu (Object)
+* `base` ... tryb jasny czy ciemny?
+  * Użyj `light` dla jasnego i `dark` dla ciemnego trybu.
+  * Motyw używa bazy wyspecyfikowanej.
+* `props` ... Definicje stylu motywu. Wytłumacznone w następujących punktach.
 
-### Theme Style Definition
+### Definicje stylów motywu
 
-Define the theme style within the `props`.
-The keys are the names of CSS variables, and the values specify the contents.
-Furthermore, this `props` object inherits from the base theme.
-The base theme is [_light.json5] if the `base` of this theme is `light` and [_dark.json5] if `dark`.
-That is, if there is no `props` key named `panel` in this theme, then it is set to the `panel` in the base theme.
+Definiuj style motywów z `props`.
+Wartości to nazwy wartości CSS i one ustawiają materiały.The
+Poza tym `props` pobiera dane z bazowego motywu.
+Bazowy motyw to [_light.json5] jeśli `base` motywu jest `light` i [_dark.json5] jeśli `dark`.
+Jeśli nie ma wartości `props` nazwanej `panel` w motywie, to będzie użyta wartość `panel` z bazowego motywu.
 
 [_light.json5]: https://github.com/misskey-dev/misskey/blob/develop/packages/frontend/src/themes/_light.json5
 [_dark.json5]:  https://github.com/misskey-dev/misskey/blob/develop/packages/frontend/src/themes/_dark.json5
 
-#### Value Syntax
+#### Składnia wartości
 
-* Colors expressed with hexadecimal
-	* example: `#00ff00`
-* Colors expressed with `rgb(r, g, b)` format
-	* example: `rgb(0, 255, 0)`
-* Colors that contain alpha/transparency values expressed with `rgb(r, g, b, a)` format
-	* example: `rgba(0, 255, 0, 0.5)`
-* Other key value reference
-	* `@{key name}` is a reference to the value of another key. Replace `{key name}` with the name of the key you wish to reference.
-	* example: `@panel`
-* Constant (discussed below) reference
-	* `${constant name}` is a reference to a constant. Replace `{constant name}` with the name of the constant you with to reference.
-	* example: `$main`
-* Functions (discussed below)
-	* `:{関数名}<{引数}<{色}`
+* Kolory w formacie `#rrggbb`
+  * Na przykład: `#00ff00`
+* Kolory w formacie  `rgb(r, g, b)`
+  * Na przykład: `rgb(0, 255, 0)`
+* kolory w wartościach alfa/przezroczystość w formacie `rgb(r, g, b, a)`
+  * przykład: `rgba(0, 255, 0, 0.5)`
+* Inne wartości
+  * `@{key name}` Nazwa wartości z innego klucza. Zamień `{key name}` z nazwą klucza do którego chcesz nawiązać.
+  * example: `@panel`
+* Zmienne:
+  * `${constant name}` nawiązuje do stałej. Zamień `{constant name}` z nawą stałej do której chcesz nawiązać.
+  * przykład: `$main`
+* Funkcje:
+  * `:{nazwa funkcji}<{argumenty}}<{kod}`
 
-#### Constants
+#### Stałe
 
-Constants are useful when you have values that you do not want to output as CSS variables, but want to use as values for other CSS variables."I don't want to output it as a CSS variable, but I do want to use it as a value for other CSS variables.
+Stałe są przydatne kiedy masz wartości których nie chcesz wyświetlać jako zmienną CSS, ale chcesz użyć ich jako wartości dla innych zmiennych CSS.
 
-#### Functions
+#### Funkcje
 
-WIP
+WIP (TODO)

@@ -1,15 +1,15 @@
-# Thread mute
+# Wycisz wątek
 
-::: tip
-This feature is available since version 12.95.0.
+::: wskazówka
+Ta funkcja jest dostępna od wersji 12.95.0.
 :::
 
-Thread Mute mutes the thread of a given note. This includes all replies connected to the uppermost note.
+Wyciszenie wątku wycisza wszytko związane z wpisem, w tym powiadomienia o nowych komentarzasz, repostach i itd.
 
-If you mute a thread, you will no longer be notified of new replies to that thread, nor will any of the replies mention you.
+Jeżeli wyciszysz wątek, nie odtrzymasz jakich kolwiek powiadomień związanych z nim.
 
-To mute a thread in Misskey Web, open the menu of any note belonging to the thread in question or the note from which it originated and select 'Mute Thread'.
+Aby wyciszyć wątek kliknij na ikonę wyciszenia w opcjach jakiegokolwiek wpisu w wątku.
 
-::: warning
-The entire thread will be muted, regardless of which note in the thread the mute operation is performed from.
+::: Uwaga
+Cały wątek zostanie wyciszony, nieważne na jakim wpisie wybierzesz opcję wyciszenia.
 :::

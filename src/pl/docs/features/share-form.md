@@ -1,58 +1,58 @@
-# Share Form
+# Formularz udostępniania
 
-When you open `/share` in Misskey Web, you open a sharing submission form. This sharing form is useful if you want users to share the content of your page with Misskey from an external web page.
+Kiedy otworzysz `/share` w Misskey w Przeglądarce dostaniesz formularz udostepniania. Ten formularz jest przydatny jeśli chcesz aby użytkownicy udostępniali zawartość swojej strony z zewnątrz.
 
-You can specify a number of options in the URL, including the shared content, as a query parameters.
+Możesz też wyspecyfikować opcje w adresie, w tym udostępniana zawartość, jako parametry.
 
-## Query Parameters
+## Parametry
 
 ::: tip
-All parameters are **optional**.
+Wszystkie parametry są **opcjonalne**.
 :::
 
-| name | description |
+| Parametr | Opis |
 | ---- | ---- |
-| `title` | title, will be inserted before the main body in brackets |
-| `text` | main body |
-| `url` | URL, inserted after the main body |
+| `title` | tytuł umieszczony przed treścią materiału |
+| `text` | treść materiału |
+| `url` | Adres URL umieszczony po materiale |
 
-### Reply Information
+### Informacje odpowiedzi
 
-You can make the note being composed a reply to a given note by specifying one of the following.
+Możesz utworzyć wpis który jest odpowiedzią na inny wpis przy użyciu tych parametrów.
 
-| name | description |
+| Paramentr | Opis |
 | ---- | ---- |
-| `replyId` | ID of the note you are replying to |
-| `replyUri` | URL to reply to (specify the remote note object) |
+| `replyId` | ID wpisu na który odpowiadasz |
+| `replyUri` | URL do wpisu na który odpowiadasz (określa inny serwer) |
 
-### Renote Information
+### Informacje o repostowaniu
 
-You can make the note being composed a renote of a given note by specifying one of the following.
+Możesz utworzyć wpis który jest wpisem inne osoby przy użyciu tych parametrów.
 
-| name | description |
+| Parametr | Opis |
 | ---- | ---- |
-| `renoteId` | ID of the note to renote |
-| `renoteUri` | URL of the note to renote (specify the remote note object) |
+| `renoteId` | ID wpisu do repostowania |
+| `renoteUri` | URL wpisu do repostowania (określa serwer z którego jest wpis) |
 
-### Publication Scope
+### Widoczność
 
-The following options allow to select a scope.
+Podane opcje pozwalają ustalić widoczność.
 
-| name | description |
+| Parametr | Opis |
 | ---- | ---- |
-| `visibility` | one of `public`, `home`, `followers`, `specified` |
-| `localOnly` | 0(false) or 1(true) |
-| `visibleUserIds` | target user IDs |
-| `visibleAccts` | target user [acct](../glossary.md#acct)s (comma separated) |
+| `visibility` |  widoczność albo -  `public`, `home`, `followers`, `specified` |
+| `localOnly` | 0(nie) albo 1(tak) |
+| `visibleUserIds` | docelowe ID użytkowników |
+| `visibleAccts` | docelowy użytkownik [acct](../glossary.md#acct)s (podzielone przecinkiem) |
 
-::: warning
-If `visibility` is set to `specified`, either `visibleUserIds` or `visibleAccts` must be set too.
+::: uwaga
+jeżeli `visibility`(widoczność) jest `specified`(ustalona) to `visibleUserIds` i `visibleAccts` muszą też być ustawione.
 :::
 
-### Attachments
+### Załączniki
 
-You can specify attachments with the following options.
+Możesz załączyć załączniki do swojego wpisu.
 
-| name | description |
+| Parametr | Opis |
 | ---- | ---- |
-| `fileIds` | IDs of files to be attached (comma separated) |
+| `fileIds` | ID plików załączonych (podzielone przecinkami) |

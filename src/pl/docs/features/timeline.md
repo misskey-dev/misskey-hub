@@ -1,43 +1,43 @@
-# Timeline
+# Oś czasu
 
-The timeline displays [notes](.note) in reverse chronological order.
-There are different types of timelines as shown below, and the notes displayed differ depending on the type.
-Note that some types of timelines may be disabled by the instance.
+Oś czasu wyświetla [wpisy](.note) w kolejności chronologicznej.
+Jest kilka rodzajów ośi czasu, które się różnią widocznością.
+Niektóre typy ośi czasu mogą być wyłączone na serwerze.
 
-## Home
+## Domowa
 
-Posts by users you are following will be displayed. Abbreviated as HTL.
+Posty osób które obserwujesz. Skrócona jako HTL.
 
-## Local
+## Lokalna
 
-All local users' posts that do not have the visibility of "Home" will be shown. Abbreviated as LTL.
+Wszystkie lokalne posty które nie zaliczają się do ośi domowej będą widoczne. Inaczej LTL.
 
-## Social
+## Społecznościowa
 
-Posts of users you are following and all local users's posts that do not have the visibility of "Home" will be shown. Abbreviated as STL. Think of it as STL = HTL + LTL.
+Posty zarówno osób lokalnych, jak i tych któych obserwujesz. Inaczej STL. Traktuj jak STL = HTL + LTL.
 
-## Global
+## Globalna
 
-All local users' posts that do not have the visibility of "Home" and all remote users' posts that do not have the visibility of "Home" that reach the server. Abbreviated as GTL.
+Każdy publiczny post który sewer zauważy. Inaczej GTL.
 
-## Custom Timelines
+## Personalizowane osie czasu
 
-Misskey has other features where you can create timelines with more granularity. See [Lists](./list.md) and [Antennas](./antenna.md) for details.
+Misskey pozwala tworzyć spesonalizowane ośi czasu zgodnie z twoimi wymaganiami. Zobacz [Listy](./list.md) i [Anteny](./antenna.md) po więcej informacji.
 
-## Comparison
+## Porównanie
 
-| Source                |            |        |   Timeline |       |            |
+| Źródło             |            |        |   Oś czasu |       |            |
 |-----------------------|------------|--------|---------|------------|------------|
-| User                  | Visibility | Home   | Local    | Social     | Global |
-| Local (Followers)     | Public     | ✔      | ✔        | ✔          | ✔          |
-|                       | Home       | ✔      |          | ✔          |            |
-|                       | Followers  | ✔      |          | ✔          |            |
-| Remote (Followers)    | Public     | ✔      |          | ✔          | ✔          |
-|                       | Home       | ✔      |          | ✔          |            |
-|                       | Followers  | ✔      |          | ✔          |            |
-| local (Non-followers) | Public     |        | ✔        | ✔          | ✔          |
-|                       | Home       |        |          |            |            |
-|                       | Followers  |        |          |            |            |
-| Remote (Non-followers)| Public     |        |          |            | ✔          |
-|                       | Home       |        |          |            |            |
-|                       | Followers  |        |          |            |            |
+| Użytkownik                  | Widoczność | Domowy   | Lokalny    | Społecznościowy     | Globalny |
+| Lokalna (Obserwujący)     | Publiczny     | ✔      | ✔        | ✔          | ✔          |
+|                       | Domowy       | ✔      |          | ✔          |            |
+|                       | Obserwujący  | ✔      |          | ✔          |            |
+| Zdalny (Obserwujący)    | Publiczny     | ✔      |          | ✔          | ✔          |
+|                       | Domowy       | ✔      |          | ✔          |            |
+|                       | Obserwujący  | ✔      |          | ✔          |            |
+| lokalny (Nie obserwujący) | Publiczni     |        | ✔        | ✔          | ✔          |
+|                       | Domowy       |        |          |            |            |
+|                       | Obserwujący  |        |          |            |            |
+| Zdalny (Nie obserwujący)| Publiczni     |        |          |            | ✔          |
+|                       | Domowy      |        |          |            |            |
+|                       | Obserwujący  |        |          |            |            |

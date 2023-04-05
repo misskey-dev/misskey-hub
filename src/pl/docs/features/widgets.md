@@ -1,98 +1,97 @@
-# Widgets
+# Widżety
 
-A widget is a small display element that can be added to the Misskey UI to display and interact with information.
-By default they are displayed on the right side of the screen or accessed from the stack icon in the mobile web app navigation menu.
+Widżety to niewielkie elementy, które mogą zostać dodane do interfejsu Misskey, aby wyświetlać i interagować z informacjami.
+Domyślnie są one wyświetlane po prawej stronie ekranu, lub dostępne z ikony stosu w menu nawigacji w wersji mobilnej.
 
-To edit widgets, switch to widget edit mode at the bottom of the widget view. In widget edit mode you can add, delete, and reorder widgets.
+Aby edytować widżety przełącz się w tryb edycji na dole panelu widżetów. W tym trybie możesz dodać, usunąć i zmienić kolejność widżetów.
 
-After you close out of the widget layout editor, you can also configure settings for each widget's behavior.
+Kiedy zamkniesz edytor układu widżetów, możesz również skonfigurować ustawienia dla zachowania każdego widżetu.
 
-## List of Available Widgets
+## Lista dostępnych widżetów
 
-### Notifications
+### Powiadomienia
 
-Shows a list of your notifications. You can change the types of notifications shown by opening the notification widget menu. If you disable "User global settings" you can choose to only show certain types of notifications.
+Pokazuje powiadomienia związane z Twoim kontem.
+### Oś czasu
 
-### Timeline
+Wyświetlaj oś czasu. Wybierz jedną z standardowych ośi czasu,albo dowolnej personalizowanej.
 
-Display a timeline. You can choose from one of the standard timelines (Home, Local, Social, and Global) or one of your custom user [Lists](./list.md) or [Antennas](./antenna.md).
+### Czytnik RSS
 
-### RSS Reader
-
-Displays a list of items from an RSS feed. You can provide any valid RSS feed URL in the configuration.
+Wyświetla oś RSS po dodaniu adresu URL. Możesz również ustawić odświeżanie i inne ustawienia.
 
 ### RSS-Ticker
 
-Similar to the RSS Reader, but the ticker shows the feed as a scrolling ticker on a single line. There are also more options to customize how the the feed will be refreshed and displayed.
+Podobny do czytnika RSS, ale wyświetla wiadomości w pasku przewijania.
 
-### Trending
+### Trendy
 
-Displays trending [Hashtags](./hashtag.md) as well as statistics of how many users have mentioned it and a graph of that hashtag's activity.
+Wyświetla trendujące [Hashtagi](./hashtag.md) oraz statystyki, ile użytkowników użyło tego hashtagu oraz wykres aktywności tego hashtagu.
 
-### Activity
+### Aktywność
 
-Displays a visualization of activity over time.
+Wyświetla statystyki aktywności.
 
-### Online Users
+### Użytkownicy online
 
-Displays the number of users that are active on this instance.
+Wyświetla ilość użytkowników online na serwerze.
 
-### Photos
+### Zdjęcia
 
-Displays a gallery of your recent photos.
+Galeria ostatnio wrzuconych zdjęć.
 
-### Slideshow
+### Pokaz slajdów
 
-Displays a slideshow of photos one of your specified drive folders. To select the drive folder, left-click on the slideshow widget after you have exited the widget layout editor. Then select the checkbox of folders you want included in the slideshow and click the check mark to confirm.
+Pokaz slajdów z określonego folderu na dysku.
 
-### Calendar
+### Kalendarz
 
-Displays the current date as well as a graphic showing the date progression.
+Wyświetla datę i progress dnia.
 
-### Clock
+### Zegar
 
-Displays an analog clock. The analog clock has many options to customize its appearance.
+Wyświetla analogowy zegar, który można personalizować.
 
-### Digital Clock
+### Zegar cyfrowy
 
-Displays a digital clock.
+Wyświetla zegar cyfrowy
 
-### UNIX Clock
+### Zegar UNIXowy
 
-Displays the seconds elapsed since the UNIX Epoch (1970-01-01T00:00:00Z).
+Wyśietla czas od początku epoki UNIXa (1970-01-01T00:00:00Z).
 
-### Federation
+### Federacja
 
-List of federated instances and graphs of their recent activity.
+Wyświetla połączone serwery i ich aktywność.
 
-### Instance Cloud
+### Grafika instancji
 
-An interactive animation that shows federated instances.
+Interaktywna grafika instancji.
 
-### Sticky Notes
+### Notatki
 
-A text area where you can jot down short notes for yourself. You can save your sticky note and it will be available wherever you access Misskey Web.
+Miejsce na twoje notatki.
 
-### Posting Form
+### Tworzenie wpisu
 
-A widget form of the [Note](./note.md) composition menu.
+Widżet do tworzenia [wpisu](./note.md)
 
-### Server Metrics
+### Statystyki serwera
 
-A display of the server metrics. The type of metrics displayed can changed by clicking the arrows in the header of the widget.
+Wyświetla statystyki serwera.
 
-### Job Queue
+### Kolejka zadań
 
-A display of the server job queue statistics.
+Wyświetlanie kolejki zadań.
 
-### AiScript Console
+### Konsola AiScript
 
-A widget version that you can use to test and execute [AiScript](../advanced/aiscript.md) programs. This is a widget version of the Scratchpad page accessible through the help menu.
+Widżetowa wersja panelu do testowana i uruchamiania programów napisanych w [AiScript](../advanced/aiscript.md). Ten Widżet jest podobny do brudnopisu AiScript.
 
-### Button
+### Przycisk
 
-An interactive button that when clicked runs your own custom [AiScript](../advanced/aiscript.md) program.
+Interaktywny przycisk co uruchamia program napisany w [AiScript](../advanced/aiscript.md).
 
 ### Ai
 
-A digital version of the Misskey mascot, Ai, that will follow you around the site.
+Cyfrowa wersja maskotki Misskey - Ai, która będzie Ci towarzyszyć na stronie.
