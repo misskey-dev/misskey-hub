@@ -54,6 +54,7 @@ export default defineUserConfig<DefaultThemeOptions>({
         '/en/': { lang: 'en-US', description: 'Official website of Misskey project' },
         '/ko/': { lang: 'ko-KR', description: '오픈소스 분산형 마이크로블로깅 플랫폼 Misskey' },
         '/it/': { lang: 'it-IT', description: 'Sito ufficiale del progetto Misskey' },
+        '/pl/': { lang: 'pl-PL', description: 'Oficjalna strona projektu Misskey' },
     },
 
     theme: localTheme({
@@ -513,7 +514,7 @@ export default defineUserConfig<DefaultThemeOptions>({
                 readThisArticle: 'Przeczytaj ten artykuł',
                 navbar: [
                     { text: 'Blog', link: '/pl/blog/' },
-                    { text: 'Brać udział', children: ['/pl/instances', '/pl/plugins/', '/pl/appendix/assets'] },
+                    { text: 'Dołącz', children: ['/pl/instances', '/pl/plugins/', '/pl/appendix/assets'] },
                     {
                         text: 'Dokumentacja', children: [
                             '/pl/docs/misskey',
