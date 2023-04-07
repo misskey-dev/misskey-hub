@@ -54,6 +54,7 @@ export default defineUserConfig<DefaultThemeOptions>({
         '/en/': { lang: 'en-US', description: 'Official website of Misskey project' },
         '/ko/': { lang: 'ko-KR', description: '오픈소스 분산형 마이크로블로깅 플랫폼 Misskey' },
         '/it/': { lang: 'it-IT', description: 'Sito ufficiale del progetto Misskey' },
+				'/fr/': { lang: 'fr-FR', description: 'Site web officiel du projet Misskey' }
     },
 
     theme: localTheme({
@@ -504,6 +505,92 @@ export default defineUserConfig<DefaultThemeOptions>({
                     },
                 ],
             },
+						'/fr/': {
+							  selectLanguageName: 'Français',
+								contributorsText: 'éditeur',
+								lastUpdatedText: 'modifier la date et l\'heure',
+								editLinkText: 'Editer la page',
+								relatedPagesText: 'Pages connexes',
+								readThisArticle: 'Lire cet article',
+						navbar: [
+							{ text: 'blog', link: '/blog/' },
+							{ text: 'Plaisir', children: ['/fr/instances', '/fr/plugins/', '/fr/appendix/assets'] },
+							{
+								text: 'Document', children: [
+									'/fr/docs/misskey',
+									'/fr/docs/releases',
+									'/fr/docs/misskey-hub',
+									'/fr/docs/donate',
+									'/fr/docs/faq',
+									'/fr/docs/glossary',
+									'/fr/docs/notes',
+									'/fr/docs/troubleshooting',
+									{
+										text: 'Fonction', children: [
+											'/fr/docs/features/note',
+											'/fr/docs/features/reaction',
+											'/fr/docs/features/timeline',
+											'/fr/docs/features/mfm',
+											'/fr/docs/features/custom-emoji',
+											'/fr/docs/features/drive',
+											'/fr/docs/features/deck',
+											'/fr/docs/features/charts',
+											'/fr/docs/features/online-status',
+											'/fr/docs/features/share-form',
+											'/fr/docs/features/ads',
+											'/fr/docs/features/thread-mute',
+											'/fr/docs/features/word-mute',
+											'/fr/docs/features/mute-and-block',
+											'/fr/docs/features/plugin',
+											'/fr/docs/features/antenna',
+											'/fr/docs/features/clip',
+											'/fr/docs/features/favorite',
+											'/fr/docs/features/follow',
+											'/fr/docs/features/pages',
+											'/fr/docs/features/theme',
+											'/fr/docs/features/widgets',
+										]
+									},
+									{
+										text: 'Développeur', children: [
+											'/fr/docs/api',
+											'/fr/docs/api/streaming',
+											'/fr/docs/api/endpoints.html',
+											'/fr/docs/features/webhook',
+										]
+									},
+									{
+										text: 'Pour les opérateurs', children: [
+											'/fr/docs/install',
+											'/fr/docs/admin/cdn',
+											'/fr/docs/admin/nginx',
+											'/fr/docs/admin/push-docker-hub',
+											'/fr/docs/admin/troubleshooting',
+											'/fr/docs/tips/disable-timelines',
+											'/fr/docs/features/silence',
+										]
+									},
+								]
+							},
+							{
+								text: 'Lien', children: [
+									{ text: 'Discord officiel', link: 'https://discord.gg/Wp8gVStHW3' },
+									{ text: 'Donations (Patreon)', link: 'https://www.patreon.com/syuilo' },
+									{ text: 'Traduction (Crowdin)', link: 'https://crowdin.com/project/misskey' },
+									{ text: '藍.moe', link: 'https://xn--931a.moe' },
+									{ text: 'Compte', children: [{ text: '@repo@p1.a9z.dev', link: 'https://p1.a9z.dev/@repo' }] },
+									{
+										text: 'Repository', children: [
+											{ text: 'misskey', link: 'https://github.com/misskey-dev/misskey' },
+											{ text: 'misskey.js', link: 'https://github.com/misskey-dev/misskey.js' },
+											{ text: 'mfm.js', link: 'https://github.com/misskey-dev/mfm.js' },
+											{ text: 'misskey-hub', link: 'https://github.com/misskey-dev/misskey-hub' },
+										]
+									},
+								]
+							},
+						],
+					},
         },
         themePlugins: {
             activeHeaderLinks: false,
