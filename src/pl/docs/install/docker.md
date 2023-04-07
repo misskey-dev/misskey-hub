@@ -1,27 +1,31 @@
-Create Misskey instance with Docker Compose
+Skonfiguruj instancje Misskey za pomocą Docker Compose
 ================================================================
 
-This guide describes how to install and setup Misskey with Docker Compose.
+Ten poradnik opisze instalację i konfigurację Misskey za pomocą Docker Compose.
 
 ::: danger
-Never change the domain name (hostname) of an instance once you start using it!
+Nigdy nie zmieniaj nazwy domeny(hostname) instancji kiedy zaczniesz z niej korzystać!!
+
 :::
 
-::: tip Requirement
-- docker and dockercompose installed
+::: Wymagania
+
+- docker i dockercompose zainstalowane
 :::
 
-Get the repository
+Pobierz repozytorium
 ----------------------------------------------------------------
+
 ```sh
 git clone -b master https://github.com/misskey-dev/misskey.git
 cd misskey
 git checkout master
 ```
 
-Configure
+Skonfiguruj
 ----------------------------------------------------------------
-Copy example configuration files with following:
+
+Skopiuj pliki przykładowe:
 
 ```sh
 cp .config/docker_example.yml .config/default.yml
@@ -29,24 +33,24 @@ cp .config/docker_example.env .config/docker.env
 cp ./docker-compose.yml.example ./docker-compose.yml
 ```
 
-Edit `default.yml` and `docker.env` according to the instructions in the files.
+Edytuj `default.yml` i `docker.env` do instrkcji w pliku.
 
-Edit `docker-compose.yml` if necessary. (e.g. if you want to change the port).
+Edytuj `docker-compose.yml` jeśli wymagane. (kiedy na przykład: chcesz zmienić port).
 
-Build and initialize
+Zbuduj i zinicjuj
 ----------------------------------------------------------------
-The following command will build Misskey and initialize the database.
-This will take some time.
+
+Podana komenda zbuduje Misskey i uruchomi bazę danych. Zajmie to trochę czasu.
 
 ``` shell
 sudo docker compose build
 sudo docker compose run --rm web pnpm run init
 ```
 
-Launch
+Uruchom Misskey
 ----------------------------------------------------------------
-Well done! You can start Misskey with the following command.
 
+SUPER! Możesz uruchomić Misskey za pomocą poniższej komendy.
 
 ```sh
 sudo docker compose up -d
@@ -54,10 +58,11 @@ sudo docker compose up -d
 
 GLHF✨
 
-How to update your Misskey server
+Aktualizacja serwera Misskey
 ----------------------------------------------------------------
-::: warning
-When updating, be sure to check the [release notes](https://github.com/misskey-dev/misskey/blob/master/CHANGELOG.md) to know in advance the changes and whether or not additional work is required (in most cases, it is not).
+
+::: Uwaga
+Aktualizując proszę sprawdź [informacje o wydaniach](https://github.com/misskey-dev/misskey/blob/master/CHANGELOG.md) by wiedzieć wcześniej o zmianachoraz czy nie będzie trzeba wykonać jakiś dodatkowych zmian.(zazwyczaj nie trzeba).
 :::
 
 ```sh
@@ -70,10 +75,11 @@ sudo docker compose build
 sudo docker compose stop && sudo docker compose up -d
 ```
 
-It may take some time depending on the contents of the update and the size of the database.
+Może to potrwać trochę czasu w zależności od wielkości danych instancji.
 
-How to execute CLI command
+Wykonywanie komendy w CLI
 ----------------------------------------------------------------
+
 ```sh
 sudo docker compose run --rm web node packages/backend/built/tools/foo bar
 ```

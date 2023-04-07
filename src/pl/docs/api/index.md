@@ -6,7 +6,7 @@ description: 'Misskey udostępnia API które możesz wykorzystać do tworzenia k
 
 Misskey udostępnia API które możesz wykorzystać do tworzenia klientów do Misskey, usług internetowych połączonych z Misskey, botów, itp. ("Aplikacje").Posiadamy również API strumieniowe, dzięki czemu można tworzyć aplikacje z możliwością pracy w czasie rzeczywistym.
 
-::: Wskazówka
+::: tip
 Używając oficjalnego SDK Misskey lub bibliotek nieoficjalnych można wygodniej korzystać z API, na przykład upraszczając niektóre z kroków opisanych w tym dokumencie.
 Zobacz [tutaj](TODO) więcej informacji na temat bibliotek.
 :::
@@ -19,7 +19,7 @@ Ten dokument poprowadzi Cię przez proces zdobywania tokenu dostępu i pokaże j
 Zazwyczaj API wymaga Tokenu Dostępu żeby wykonać żądanie.
 Token dostępu jest to zestaw danych powiązanych z użytkownikem, które identyfikuje który użytkownik korzsta z API i kontroluje jakie dostęp do operacji każdego tokenu dostępu.
 
-::: Wskazówka
+::: tip
 Może być wiele relacji pomiędzy użytkownikiem a tokenem dostępu powiązanym z użytkownikiem i wiele tokenów dostępu może być wygenerowane dla danego użytkownika.
 :::
 
@@ -29,7 +29,7 @@ Możesz łatwo [zdobyć token dostępu dla siebie](#Manually-issue-an-access-tok
 
 Możesz manualnie stworzyć swój token dostępu w Przeglądarkowym Interfejsie Misskey w 'Ustawienia > API'.
 
-::: OSTRZEŻENIE
+::: warning
 NIKOMU NIE UDOŚTĘPNIAJ SWOJEGO TOKENU DOSTĘPU
 :::
 
@@ -37,7 +37,7 @@ NIKOMU NIE UDOŚTĘPNIAJ SWOJEGO TOKENU DOSTĘPU
 
 Any uzyskać token dostępu dla użytkownika aplikacji (lub po prostu "użytkownika"), możesz zarządać by został stworzony w następujący sposób.
 
-::: Wskazówka
+::: tip
 Metoda tutaj opisana nazywa się MiAuth i ona tworzy token dostępu bez tworzenia aplikacji.
 
 Nadal możesz [stworzyć aplikację by uzyskać token dostępu](./app.md).
@@ -47,7 +47,7 @@ Nadal możesz [stworzyć aplikację by uzyskać token dostępu](./app.md).
 
 Wygeneruj UUID. Od teraz będziemy na niego mówić **ID Sesji**.
 
-::: OSTRZEŻENIE
+::: warning
 ID Sesji powinien być generowany za każdym razem i nie powinien być ponownie używany.
 :::
 
@@ -73,7 +73,9 @@ Jest też kilka parametrów żądań w URL:
 | `callback` | URL do którego użytkowink zostanie przekierowany po uwierzytelnieniu z ID Sesji dodanym by przekierować z parametrem żądania `session`. |
 | `permission` | Zgody których aplikacjia wymaga. <br>Lista zezwoleń które mogą być żądane, podzelona`,`. Lista zezwoleń jest dostępna [tutaj](TODO). |
 
-::: Wskazówka Przykład
+::: tip
+
+Przykład:
 
 ```:no-line-numbers
 https://misskey.io/miauth/c1f6d42b-468b-4fd2-8274-e58abdedef6f?name=MyApp&callback=https%3A%2F%2Fmyapp.example.com%2Fcallback&permisson=write:notes,write:following,read:drive
@@ -105,7 +107,7 @@ Właściwości zawarte w odpowiedzi:
 
 Kiedy zdobędziesz token dostępu API możesz skorzystać z API tworząc rządania do różnych miejsc.
 
-::: Wskazówka
+::: tip
 
 - Wszytkie API HTTP są żądaniami POST, i zarówno żądanie jak i odpowiedź są w formacie JSON (wyjątkiem stanowią dysk/pliki/utwórz (drive/files/create)).
 - Określ `Content-Type: application/json` w nagłówku żądania.
@@ -126,12 +128,12 @@ Token dostępu jest zawarty w JSONie żądania z parametrem `i`.
 
 Po więcej informacji na temat API zobacz [API Reference](./endpoints.html).
 
-::: UWAGA
+::: info
 Misskey nie używa API typu REST.
 :::
 
 Oprócz interfejsu API HTTP, Misskey udostępnia również interfejs API strumieniowania. Więcej informacji o API strumieniowym można znaleźć [tutaj](./streaming/).
 
-::: Wskazówki
+::: tip
 Twoja instancja Misskey również zawiera dokumentacji api w `/api-doc`.
 :::

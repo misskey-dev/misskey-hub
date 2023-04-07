@@ -1,6 +1,6 @@
 # Jak korzystać z GitHub Actions by wysyłać do Docker Hub
 
-::: Uwaga
+::: warning
 Ta strona nie jest przetłumaczona, jeśli możesz to możesz edytować stronę w oparciu o stronę Japońską.
 
 :: Ten sam komunikat po angielsku

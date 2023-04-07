@@ -19,7 +19,7 @@ Jeżeli masz plik z obrazkiem z którego chciałbyć zrobić dodatwkową emotiko
 To działa tak samo jak dodawanie pliku do posta:
 Możesz wybrać czy chcesz wysłać nowy plik, lub wybrać plik z Dysku Misskey albo wysłać plik z innego URL
 
-::: UWAGA
+::: info
 Kiedy importujesz emotikony z twojego dysku, pliki zostaną na dysku.
 Misskey nie tworzy kopii tego pliku więc jak go usuniesz, emotikona będzie zepsuta.
 :::
@@ -31,7 +31,7 @@ Emoji zostanie dodane do instancji i wtedy będziesz mógł je edytować lub usu
 Emotikony mogą być dodane hurtowo, jako paczka ZIP w specjalnym formacie.
 Ta możliwość jest dostępna w menu z 3 kropkami w prawym górnym rogu menu z emoji.
 
-::: UWAGA
+::: warning
 Emoji dodane hurtowo mogą nadpisać istniejące emoji lub inaczej popsuć twoją instację.
 Bądź pewien że importujesz emoji tylko z zaufanych źródeł, najlepiej tylko te które wyexportowałeś sam.
 :::
@@ -89,7 +89,7 @@ Właściwości emoji mogą być edytowane klikając na nie w liście lokalnych e
 Kiedy klikniesz na dodatkową emoji, dialog z edycją właściwości się otworzy.
 Ten dialog pozwoli ci również usunąć emoji.
 
-::: uwaga
+::: tip
 Kiedy usuniesz dodatkową emotkę, stare posty które ją zawierają nadal będą miały jej nazwe w nich.
 Ta emotka nie będzie się prawidłowo wyświetlać.
 :::

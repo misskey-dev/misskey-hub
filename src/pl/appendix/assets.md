@@ -6,13 +6,13 @@ description: 'Kolekcja ikon, logo i innych materiałów Misskey.'
 
 To jest kolekcja ikon, logo i innych materiałów Misskey.
 
-::: Wskazówka
+::: tip
 Materiały są darmowe w użyciu na licencji **CC BY-NC-SA** (Uznanie autorstwa-Użycie niekomercyjne-Na tych samych warunkach)🎉
 
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="CC BY-NC-SA" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>
 :::
 
-::: Wskazówka
+::: tip
 Materiały są zarządzane na repozytorium [misskey-dev/assets](https://github.com/misskey-dev/assets).
 :::
 

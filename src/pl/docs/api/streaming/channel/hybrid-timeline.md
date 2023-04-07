@@ -1,20 +1,25 @@
 ---
-description: "Channel where nots from the social timeline are streamed."
+description: "Kanał gdzie posty społecznościowe są nadawane."
 ---
 
 # `hybridTimeline`
-Channel where nots from the social timeline are streamed.
 
-## Parameters
-none
+Kanał gdzie posty społecznościowe są nadawane.
 
-## Events
+## Parametry
+
+brak
+
+## Zdarzenia
+
 ### `note`
+
 <MkSchemaViewer :schema="{
-	$ref: 'misskey://Note'
+ $ref: 'misskey://Note'
 }"/>
 
-Occurs when a new note is added to the social timeline.
+Nowy post na tablicy społecznościowej
 
-## Operations
-none
+## Operacje
+
+Brak

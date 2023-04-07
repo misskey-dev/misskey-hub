@@ -39,7 +39,7 @@ sections:
         description: "Dla tych co chcą widzieć wszytko, Misskey ma bogate wykresy zarówno dla użytkowników jak i administratorów żeby widzieć co się dzieje na twojej instancji w czasie rzeczywistym."
       federation:
         title: "Federacja"
-        description: "Nie na Misskey? Nie ma problemu! Nie tylko instancje Misskey mogą z sobą się komunikować, ale możesz tworzyć znajomości z ludźmi na innych platformach jak Mastodon lub Pixelfed itp.!"
+        description: "Nie na Misskey? Nie ma problemu! Nie tylko instancje Misskey mogą z sobą się komunikować, ale możesz tworzyć znajomości z ludźmi z innych platform jak Mastodon, Pixelfed itp.!"
       drive:
         title: "Dysk"
         description: "Nie podoba ci się to że nie możesz znaleść tego co wysłałeś? Z Dyskiem odtrzymujesz zarządzalny i potężny dysk internetowy wewnątrz twojej aplikacji Social Media!"

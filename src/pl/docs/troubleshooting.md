@@ -3,7 +3,7 @@ description: 'Jeśli naportkasz na problem, proszę najpierw sprawdź tą stron�
 ---
 
 # Rozwiązywanie problemów
-::: Wskazówka
+::: tip
 Proszę równierz korzystać z strony z [często zadawanymi pytaniami(FAQ)](./faq.md)
 :::
 Jeżeli napotkasz problem, proszę najpierw sprwadź tą stronę. W przypadku kiedy nie możesz znaleść twojego problemu tutaj, albo kroki podane tutaj nie rozwiązują problemu, proszę skontakuj się z administratorem twojego serwera lub [Zgłoś błąd](./report-issue).
@@ -31,7 +31,7 @@ Proszę wypróbuj którąś z opcji:
 ## Części interfejsu działają dziwnie (Na przykład: tło jest przezroczyste)
 Zepsuty interfejs może być spowodowany przez system buforów motywów kiedy interfejs jest zmieniony jako część aktualizacji. Korzystajnie z opcji "Wyczyść bufor" w ustawieniach powinno rozwiązać problem.
 
-::: Ostrzeżenie
+::: warning
 Wyczyść bufor/cache "Klienta". Nie czyść buforu/cache "Przeglądarki".
 :::
 

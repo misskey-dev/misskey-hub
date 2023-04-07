@@ -1,20 +1,25 @@
 ---
-description: "Channel where nots from the global timeline are streamed."
+description: "Kanał gdzie strumieniowane są posty z ośi globalnej."
 ---
 
 # `globalTimeline`
-Channel where nots from the global timeline are streamed.
 
-## Parameters
-none
+Kanał gdzie strumieniowane są posty z ośi globalnej
 
-## Events
+## Parametry
+
+brak
+
+## Zdarzenia
+
 ### `note`
+
 <MkSchemaViewer :schema="{
-	$ref: 'misskey://Note'
+ $ref: 'misskey://Note'
 }"/>
 
-Occurs when a new note is added to the global timeline.
+Dzieje się kiedy nowy post jest dodany na globalną oś czasu.
 
-## Operations
-none
+## Operacje
+
+brak

@@ -1,6 +1,6 @@
 # Rozwiązywanie problemów
 
-::: Uwaga
+::: warning
 
 Ta strona nie jest przetłumaczona, jeśli możesz to możesz edytować stronę w oparciu o stronę Japońską.
 

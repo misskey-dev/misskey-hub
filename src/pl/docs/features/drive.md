@@ -2,7 +2,7 @@
 
 Dysk jest to funkcja która pozwala zarządzać plikami na Misskey.
 
-::: Wskazówka
+::: tip
 Teoretycznie dysk może być widziany jako miejesce gdzie pliki są zarządzane na Misskey, które jest również dostępne dla użytkowników.
 :::
 
@@ -12,7 +12,7 @@ Pliki z dysku mogą być pobrane lub ponownie użyte poprzez dodanie pliku z dys
 
 Pliki na dysku możesz też organizować za pomocą folderów.
 
-::: warning
+::: tip
 Kiedy usuwasz materiały z dysku Misskey, **wszystko (wpisy, strony, itp.)** załączone też zostanie usunięte.
 :::
 

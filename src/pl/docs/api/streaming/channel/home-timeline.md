@@ -1,20 +1,25 @@
 ---
-description: "Channel where nots from the home timeline are streamed."
+description: "Kanał gdzie posty gdzie posty z ośi domowej są strumieniowane."
 ---
 
 # `homeTimeline`
-Channel where nots from the home timeline are streamed.
 
-## Parameters
-none
+Kanał gdzie posty gdzie posty z ośi domowej są strumieniowane.
 
-## Events
+## Parametry
+
+brak
+
+## Zdarzenia
+
 ### `note`
+
 <MkSchemaViewer :schema="{
-	$ref: 'misskey://Note'
+ $ref: 'misskey://Note'
 }"/>
 
-Occurs when a new note is added to the home timeline.
+Dzieje się kiedy na tablicę domową dodano nowy post.
 
-## Operations
-none
+## Operacje
+
+brak

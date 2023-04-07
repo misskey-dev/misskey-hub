@@ -6,7 +6,7 @@ description: 'MFM jest to dedykowany język znaczników do używania z Misskey.'
 
 MFM(Misskey Flavoured Markdown) jest to dedykowany język znaczników do używania z Misskey.
 
-::: Wskazówka
+::: tip
 Część składni jest kompatybilna z Markdown
 :::
 
@@ -21,7 +21,7 @@ Część składni jest kompatybilna z Markdown
 
 ### Wspominanie użytkowników
 
-::: Wskazówka
+::: tip
 Po więcej informacji zobacz [tutaj](./mention.md).
 :::
 
@@ -35,7 +35,7 @@ Po więcej informacji zobacz [tutaj](./mention.md).
 
 ### Hasztagi
 
-::: Wzkazówka
+::: tip
 Po więcej informacji zobacz [tutaj](./hashtag).
 :::
 
@@ -45,7 +45,7 @@ Po więcej informacji zobacz [tutaj](./hashtag).
 
 ### Personalizowane Emoji
 
-::: Wskazówka
+::: tip
 Po więcej informacji zobacz [tutaj](./custom-emoji).
 :::
 
@@ -67,7 +67,7 @@ Po więcej informacji zobacz [tutaj](./custom-emoji).
 
 ---
 
-::: Wskazówka
+::: tip
 Więcej składni można zobaczyć w ***Ściądze MFM** dostępnej w przeglądarkowym Menu Misskey pod `/mfm-cheat-sheet` twojej instancji.
 :::
 

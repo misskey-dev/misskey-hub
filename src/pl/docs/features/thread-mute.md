@@ -1,6 +1,6 @@
 # Wycisz wątek
 
-::: wskazówka
+::: tip
 Ta funkcja jest dostępna od wersji 12.95.0.
 :::
 
@@ -10,6 +10,6 @@ Jeżeli wyciszysz wątek, nie odtrzymasz jakich kolwiek powiadomień związanych
 
 Aby wyciszyć wątek kliknij na ikonę wyciszenia w opcjach jakiegokolwiek wpisu w wątku.
 
-::: Uwaga
+::: warning
 Cały wątek zostanie wyciszony, nieważne na jakim wpisie wybierzesz opcję wyciszenia.
 :::

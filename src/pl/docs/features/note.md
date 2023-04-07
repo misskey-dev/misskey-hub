@@ -11,11 +11,11 @@ Możesz dodać wpis do [Ulubionych](./favorite) dzięki czemu łatwiej możesz j
 
 Aby utworzyć post kliknij ikonkę z ołówkiem aby otworzyć formularz postowania. Podaj jego treść. Wyślij post. Posty mogą zawierać tekst, pliki, [Ankiety](./poll). Na dodatek używając [MFM](./mfm) w tekście możesz korzystać z [wzmianek](./mention) i [Hasztagów](./hashtag). Poza tym są też inne tagi jak na przykład CW (Content Warning) lub widoczność posta.
 
-::: wskazówka
+::: tip
 Materiały które skopiowałeś do schowka możesz wkleić
 :::
 
-::: wskazówka
+::: tip
 Możesz też kliknąć <kbd class="key">Control + Enter</kbd> aby opublikować notkę
 :::
 
@@ -23,7 +23,7 @@ Możesz też kliknąć <kbd class="key">Control + Enter</kbd> aby opublikować n
 
 Cytowanie lub udostępnianie treści notki
 
-::: uwaga
+::: tip
 Jeśli ustawiłeś widoczność posta na "tylko obserwujący" lub "bezpośrednio" to nie będzie można renotować posta
 :::
 
@@ -41,7 +41,7 @@ Możesz zmienić widoczność każdej notki klikająć w ikonkę obok przycisku 
 
 Twój post będzie publiczny i będzie widoczny na każdej ośi czasów (Domowa, Lokalna, Społeczność, global).
 
-::: Uwaga
+::: warning
 Ta widoczność nie jest dostępna dla użykowników <a href="./silence">wyciszonych</a>.
 :::
 
@@ -73,7 +73,7 @@ Po wybraniu tej opcji, post nie będzie rozprowadzany na inne instancje
 
 Przypinając notkę do profilu będzie pierwszą widoczną notką na stronie profilu
 
-::: wskazówka
+::: tip
 Można przypiąć kilka postów
 :::
 

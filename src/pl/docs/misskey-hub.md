@@ -4,7 +4,7 @@ Staramy się zrobić z niego miejsce gdzie jest "wszytko do Misskey".
 
 Misskey Hub jest [open source](https://github.com/misskey-dev/misskey-hub).
 
-::: Wskazówka
+::: tip
 Misskey Hub jest stroną statyczną stworzoną za pomocą [VuePress](https://github.com/vuepress/vuepress-next).
 :::
 

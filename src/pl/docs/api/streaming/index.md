@@ -1,194 +1,213 @@
 ---
-description: 'The streaming API provides real-time information (e.g., new posts in the timeline, reactions, followers, etc.) and various other operations.'
+description: 'Strumieniowe API podaje informacje w czasie rzeczywistym (np: nowe posty na ośi czasu, reakcje, obserwujący itp.) i wiele innych'
 ---
 
-# Streaming API
+# Api strumieniowe
 
 ::: tip
-You should read the [Misskey API documentation](../index.md) first.
+Na początek powinieneś przeczytać [dokumentację API Misskey](../index.md).
 :::
 
-The streaming API provides real-time information (e.g., new posts in the timeline, reactions, followers, etc.) and various other operations.
+Strumieniowe API podaje informacje w czasie rzeczywistym (np: nowe posty na ośi czasu, reakcje, obserwujący itp.) i wiele innych.
 
-## Connecting to the stream.
+## Łączenie
 
-To use the streaming API, you have to connect to the Misskey server using **websocket**.
+Aby używać API strumieniowego, musisz połączyć się z serwerem Misskey za pomocą **websocket**.
 
-The websocket URL looks like this:
+O to przykładowy URL Websocketu:
 
 ```:no-line-numbers
 wss://{host}/streaming?i={token}
 ```
 
-where
-- `{host}` is the host of the instance you want to connect to.
-- `{token}` is the users access token.
+gdzie:
+
+- `{host}` instancja z którą chcesz się połączyć.
+- `{token}` token dostępowy użytkownika.
 
 ::: tip
-You can also connect without the access token, but this will limit the information you receive and operations you can perform.
+Możesz też się połączyć bez tokenu dostępu ale nie będziesz miał dostępu do wszystkich danych.
 :::
 
-Once you are connected to the stream, you can subscribe to posts as described below, but at this stage you cannot, for example, receive new posts from your timeline.
+Kiedy połączyłeś się, możesz subskrybować do postów opisanych poniżej, ale  nadal nie możesz odtrzymywać nowych postów na ośi czasu
 
-To receive such events, you need to join a **channel** on the stream, as described below.
+Aby odtrzymywać takie zdarzenia musisz połączyć się z **kanałem** jak opisano poniżej.
 
-**All data should be encoded as JSON.**
+**Wszystkie dane powinny być w JSONie.**
 
-## Channel
-Misskey's streaming API has the concept of channels. This is a mechanism for separating the information to be sent and received.
-By joining channels on the stream, you will be able to receive various kinds of information and send information.
+## Kanał
+
+API Strumieniowe Miskey używa kanałów. Jest to mechanizm do oddzielania informacji do wysłania i odbioru.
+Dołączając na kanał na strumieniu, będziesz mógł otrzymywać różne rodzaje informacji i wysyłać informacje.
 
 ::: tip
-You can join multiple channels simultaneously on a single stream connection.
+Możesz dołączyć do wielu kanałów na jednym strumieniu
 :::
 
-The following sections describe how to use the channels. To see what channels are available, please refer to the [Channel List](./channel/index.md).
+Ta sekcja opisuje jak używać kanałów. Aby sobaczyć jakie kanały są dostępne, zapoznaj się z [listą kanałów](./channel/index.md).
 
-### Joining a channel
-To join a channel, send the following JSON data on the stream:
+### Dołączanie do kanału
+
+Dołączając do kanału, wysyłasz strumieniem podane dane w JSONie:
 
 ```js
 {
-	type: 'connect',
-	body: {
-		channel: 'xxxxxxxx',
-		id: 'foobar',
-		params: {
-			...
-		}
-	}
+ type: 'connect',
+ body: {
+  channel: 'xxxxxxxx',
+  id: 'foobar',
+  params: {
+   ...
+  }
+ }
 }
 ```
 
-where
-- `channel` is the name of the channel you want to connect to. The types of channels are described later in this section.
-- `id` is an arbitrary ID for interacting with that channel. This is necessary to identify which channel the message is coming from, because a stream contains multiple channels. This ID can be something like a UUID or a random number.
-- `params` are parameters required when joining a channel. Different channels require different parameters when connecting. When connecting to a channel that does not require parameters, this property can be omitted.
+gdzie
+
+- `channel` to nazwa kanału z którym chcesz się połączyć. Rodzaje kanałów są opisane niżej w tym dokumencje.
+- `id` jest to arbitralne ID do wykonywania interakcji z kanałem. Jest ono wymagane do identyfikowania, z którego kanału jest wiadomość, ponieważ strumień zawiera wiele kanałów. To ID może być czymś w stylu UUID albo losową liczbą.
+- `params`  to parametry wymagane kiedy dołącza się na kanał. Różne kanały wymagają innych parametrów przy połączeniu. Kiedy kanał nie wymaga parametrów, można tą wartość zignorować.
 
 ::: tip
-The ID is not per channel but per channel connection, because a channel may be needed multiple times but with different parameters.
+ID nie jest co kanał, a co połączenie z kanałem, ponieważ kanał może być potrzebny kilka razy ale z innym parametrem.
 :::
 
-### Receiving messages from channels
-For example, a timeline channel will send out a message when there is a new post. By receiving the message, you will know in real time that a new post has been published on your timeline.
+### Zdobywanie wiadomości z kanałów
 
-When a channel issues a message, the following JSON data is sent:
+Na przykłąd, oś czasu kanału wyśle wiadomość kiedy jest nowy post. Zdobywając wiadomość, możesz wiedzieć w czasie rzeczywistym że nowy post został opublikowany na twojej ośi casu.
+
+Kiedy kanał wysyła wiadomość, podany JSON jest wysłany:
+
 ```js
 {
-	type: 'channel',
-	body: {
-		id: 'foobar',
-		type: 'something',
-		body: {
-			some: 'thing'
-		}
-	}
+ type: 'channel',
+ body: {
+  id: 'foobar',
+  type: 'something',
+  body: {
+   some: 'thing'
+  }
+ }
+}
+```
+
+gdzie
+
+- `id` to ID ustawionie kiedy łączono z kanałem jak podano wyżej. Pozwala wiedzieć z którego kanału jest wiadomość
+- `type` to jest rodzaj wiadomości. Rodzaje wiadomości zależą od tgo co jest wysyłane na kanał.
+- `body` zawiera zawartość wiadomości. Zawartość zależy od kanału.
+
+### Wysyłanie wiadomości na kanał
+
+Na niektórych kanałach jest możliwość wysyłąnia wiadomości i wykonywania innych operacji poza zdobywaniem wiadomości.
+
+Aby wysłać wiadomość, wyślij podane dane w JSONie na strumień:
+
+```js
+{
+ type: 'channel',
+ body: {
+  id: 'foobar',
+  type: 'something',
+  body: {
+   some: 'thing'
+  }
+ }
+}
+```
+
+gdzie:
+
+- `id` to ID ustawionie kiedy łączono z kanałem jak podano wyżej. Pozwala wiedzieć dla którego kanału jest to wiadomość.
+- `type` to jest rodzaj wiadomości. Rodzaje wiadomości zależą od kanału.
+- `body` zawiera zawartość wiadomości. Zawartość zależy od kanału.
+
+### Rozłączanie się z kanału
+
+Aby się rozłączyć z kanału (instantiation), wyślij podane dane JSONem na strumień:
+
+```js
+{
+ type: 'disconnect',
+ body: {
+  id: 'foobar'
+ }
 }
 ```
 
 where
-- `id` is the ID that you set when connecting to that channel as mentioned above. This lets you know from which channel (instantiation) this message is coming.
-- `type` is the type of message. The types of messages that get sent depend on the channel.
-- `body` holds the content of the message. The content of the message depends on the channel.
 
-### Sending a message to a channel
-On some channels, it is also possible to send messages and perform other operations in addition to receiving messages.
+- `id` to ID kanału do którego się łączyłeś i z którego chcesz się rozłączyć.
 
-To send a message to a channel, send the following JSON data to the stream:
+## Wyłapywanie postów
+
+Misskey udostępnia mechanizm zwany przechwytywaniem postów. Jest to zdolność do otrzymania strumienia zdarzeń dla danego wpisu.
+
+Na przykład, powiedzmy, że chwytasz oś czasu i wyświetlasz ją swoim użytkownikom. Powiedzmy, że ktoś reaguje na jeden z postów na osi czasu.
+Ponieważ jednak klient nie ma sposobu, aby wiedzieć, że notka została zareagowana, nie jest możliwe odzwierciedlenie reakcji na osi czasu w czasie rzeczywistym.
+
+Aby rozwiązać ten problem, Misskey zapewnia mechanizm przechwytywania wpisów. Gdy przechwycisz notkę, otrzymasz zdarzenia związane z tą notką i możesz wyświetlić reakcje na nią w czasie rzeczywistym.
+
+W kolejnych rozdziałach opisano, jak korzystać z funkcji przechwytywania notek. Aby zobaczyć, jakie zdarzenia przechwytywania są dostępne, zobacz listę [Capture Events List](./note-capture-events.md).
+
+### Wyłapanie posta
+
+Aby wyłapać post wyślij JSON na strumień:
+
 ```js
 {
-	type: 'channel',
-	body: {
-		id: 'foobar',
-		type: 'something',
-		body: {
-			some: 'thing'
-		}
-	}
+ type: 'subNote',
+ body: {
+  id: 'xxxxxxxxxxxxxxxx'
+ }
 }
 ```
 
-where
-- `id` is the ID that you set when connecting to that channel as mentioned above. This lets you determine which channel (instantiation) the message is for.
-- `type` is the type of message. Different channels accept different types of messages.
-- `body` contains the content of the message. Different channels accept different message contents.
+gdzie
 
-### Disconnecting from a channel
-To disconnect from a channel (instantiation), send the following JSON data to the stream:
+- `id` to ID posta do wyłapania.
+
+Kiedy wysyłasz wiadomość, prosisz Misskey o przechwycenie notki, a następnie zdarzenia związane z tą notką będą przesyłane do ciebie.
+
+Na przykład jak odtrzymasz reakcje to odtrzymasz taką odpowiedź JSONem
+
 ```js
 {
-	type: 'disconnect',
-	body: {
-		id: 'foobar'
-	}
+ type: 'noteUpdated',
+ body: {
+  id: 'xxxxxxxxxxxxxxxx',
+  type: 'reacted',
+  body: {
+   reaction: 'like',
+   userId: 'yyyyyyyyyyyyyyyy'
+  }
+ }
 }
 ```
 
-where
-- `id` is the ID that you set when connecting to that channel as mentioned above. This lets you determine which channel (instantiation) you want to disconnect from.
+gdzie
 
-## Capturing Notes
-Misskey provides a mechanism called note capture. This is the ability to receive a stream of events for a given note.
+- `body.id` to ID posta które spowodowało zdarzenie.
+- `body.type` typ zdarzenia.
+- `body.body` informacje o zdarzeniu.
 
-For example, let's say you grab a timeline and display it to your users. Let's say someone reacts to one of the posts in the timeline.
-However, since the client has no way of knowing that a note has been reacted to, it is not possible to reflect the reaction in the timeline in real time.
+### Usuwanie przechwytywania posta
 
-To solve this problem, Misskey provides a note capture mechanism. When you capture a note, you will receive events related to that note, and you can display reactions to it in real time.
+Jeśli nie chcesz już otrzymywać zdarzeń związanych z postem, np. gdy nie pojawia się ona już na ekranie, możesz usunąć żądanie przechwycenia.
 
-The following sections describe how to use the note capture function. To see what kind of capture events are available, see the [Capture Events List](./note-capture-events.md).
-
-### Capturing a Note
-
-To capture a note, send the following JSON data to the stream:
-```js
+Wyślij następujące dane JSON:
+``js
 {
-	type: 'subNote',
-	body: {
-		id: 'xxxxxxxxxxxxxxxx'
-	}
+ type: 'unsubNote',
+ body: {
+  id: 'xxxxxxxxxxxxxx'
+ }
 }
+
 ```
 
-where
-- `id` is the ID of the note you want to capture.
+gdzie
+- `id` to ID notatki, którą chcesz odhaczyć.
 
-When you send this message, you are asking Misskey to capture the note, and events related to that note will then be streamed to you.
-
-For example, when a note gets a reaction, you will see a message like the following:
-```js
-{
-	type: 'noteUpdated',
-	body: {
-		id: 'xxxxxxxxxxxxxxxx',
-		type: 'reacted',
-		body: {
-			reaction: 'like',
-			userId: 'yyyyyyyyyyyyyyyy'
-		}
-	}
-}
-```
-
-where
-- `body.id` will be set to the ID of the post that triggered the event.
-- `body.type` will be the type of the event.
-- `body.body` will contain the details of the event.
-
-### Un-capturing a Note
-
-If you no longer want to receive events related to a note, such as when it no longer appears on your screen, you can remove the capture request.
-
-Send the following JSON data:
-```js
-{
-	type: 'unsubNote',
-	body: {
-		id: 'xxxxxxxxxxxxxxxx'
-	}
-}
-```
-
-where
-- `id` is the ID of the note you want to uncapture.
-
-Once you send this message, no more events related to that note will be sent to you.
+Po wysłaniu tej wiadomości nie będą już wysyłane żadne zdarzenia związane z tą notką.

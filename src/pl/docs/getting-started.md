@@ -4,10 +4,10 @@ Serwer na którym uruchomione jest Misskey, który jest otwarty do publicznego I
 Aby używać Misskey musisz utworzyć konto na jednej z instancji i korzystać z tej instancji.
 Możesz wybrać instancję twojego wyboru z [listy instancji](../instances.md).
 
-::: Wskazówka
+::: tip
 Nie ważne jaką instancję wybierzesz, będziesz mógł komunikować się z użytkownikami z innych instancji
 
-::: Informacje
+::: info
 Misskey ma możliwość federowania
 
 Misskey ma wbudowane wsparcie dla federacji, co pozwala użytkownikom z innych instancji na obserwowanie, reagowanie i renotowanie w taki sam sposób jak użytkownicy z tej samej instancji.

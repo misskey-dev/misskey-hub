@@ -4,11 +4,11 @@ Jeśli nie lubisz użytkownika, możesz go wyciszyć by zniknął z twojej ośi 
 Poza tym, możesz też ich zablokować żeby uniemożliwić im widok na twoje materiały lub interakcję z tobą w każdy sposób.
 Użytkownicy nie będą wiedzieć że ich wyciszyłeś, ale będą wiedzieć że ich zablokowałeś.
 
-::: Wskazówka
+::: tip
 Wyciszanie i blokowanie może być używane jednocześnie.
 :::
 
-::: Ostrzeżenie
+::: warning
 Proszę zgłaszać ludzi łamiących zasady instancji do jej administracji.
 :::
 
@@ -25,7 +25,7 @@ Jeżeli wyciszysz użytkownika to podanych materiałów na twojej ośi czasu nie
 
 Aby wyciszyć użytkownika poprostu kliknij Wycisz w opcjach użytkownika
 
-::: Wskazówka
+::: tip
 Osoby wyciszone nie zostaną powiadomione że zostały wyciszone.
 :::
 
@@ -47,11 +47,11 @@ Poza tym,
 
 Aby zablokowac użytkownika - skorzystaj z opcji blokady w opcjach użytkownika
 
-::: Uwaga
+::: tip
 Jeżeli ktoś Cię zablokuje to nie zostaniesz o tym powiadomiony, jednak nie będziesz mógł dokonywać interakcji z osobą która cię zablokowała.
 :::
 
-::: Uwaga
+::: tip
 Osoba zablokowania nie będzie mogła zobaczyć twoich materiałów, ale może użyć konta alternatywnego itp.
 Możesz zmienić w ustawieniach konta widoczność postów, żeby utrudnić osobom zablokowanym widok na twoje posty.
 :::

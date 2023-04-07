@@ -1,20 +1,25 @@
 ---
-description: "Channel where nots from the local timeline are streamed."
+description: "Kanał gdzie posty z lokalnej Ośi czasu są nadawane."
 ---
 
 # `localTimeline`
-Channel where nots from the local timeline are streamed.
 
-## Parameters
-none
+Kanał gdzie posty z lokalnej Ośi czasu są nadawane.
 
-## Events
+## Parametery
+
+brak
+
+## Zdarzenia
+
 ### `note`
+
 <MkSchemaViewer :schema="{
-	$ref: 'misskey://Note'
+ $ref: 'misskey://Note'
 }"/>
 
-Occurs when a new note is added to the local timeline.
+Dzieje się kiedy nowy post jest nadany na Lokalną oś czasu.
 
-## Operations
-none
+## Operacje
+
+brak

@@ -1,93 +1,113 @@
 ---
-description: "This channel provides basic information."
+description: "Ten kanał zawiera podstawowe informacje."
 ---
 
 # `main`
-This channel provides basic information.
 
-## Parameters
-none
+Ten kanał zawiera podstawowe informacje.
 
-## Events
+## Parametery
+
+brak
+
+## Zdarzenia
+
 ### `notification`
+
 <MkSchemaViewer :schema="{
-	$ref: 'misskey://Notification'
+ $ref: 'misskey://Notification'
 }"/>
 
-Occurs when you receive a notification.
+Kiedy odtrzymasz wiadomość
 
 ### `mention`
+
 <MkSchemaViewer :schema="{
-	$ref: 'misskey://Note'
+ $ref: 'misskey://Note'
 }"/>
 
-Occurs when a message is sent.
+Kiedy wiadomość jest wysłana
 
 ### `reply`
+
 <MkSchemaViewer :schema="{
-	$ref: 'misskey://Note'
+ $ref: 'misskey://Note'
 }"/>
 
-Occurs when a reply is received.
+Kiedy odebrana jest odpowiedź
 
 ### `renote`
+
 <MkSchemaViewer :schema="{
-	$ref: 'misskey://Note'
+ $ref: 'misskey://Note'
 }"/>
 
-Occurs when one of your notes is renoted.
+Kiedy post jest zrepostowany
 
 ### `follow`
+
 <MkSchemaViewer :schema="{
-	$ref: 'misskey://User'
+ $ref: 'misskey://User'
 }"/>
 
-Occurs when you follow another user.
+Kiedy zaobserwujesz użytkownika.
 
 ### `followed`
+
 <MkSchemaViewer :schema="{
-	$ref: 'misskey://User'
+ $ref: 'misskey://User'
 }"/>
 
-Occurs when another user follows you.
+Kiedy inny użytkownik ciebie zaobserwuje
 
 ### `unfollow`
+
 <MkSchemaViewer :schema="{
-	$ref: 'misskey://User'
+ $ref: 'misskey://User'
 }"/>
 
-Occurs when you unfollow another user.
+Kiedy przestaniesz obserwować kogoś
 
 ### `messagingMessage`
+
 <MkSchemaViewer :schema="{
-	$ref: 'misskey://MessagingMessage'
+ $ref: 'misskey://MessagingMessage'
 }"/>
 
-Occurs when a chat message is received.
+Kiedy wiadomość czatu jest odebrana
 
 ### `readAllNotifications`
-Occurs when all notifications have been read.
+
+Wszytkie powiadomienia zostały przeczytane
 
 ### `unreadNotification`
-Occurs when there is a new notification.
+
+Nieprzeczytane powiadomienia
 
 ### `unreadMention`
-Occurs when there is a new mention.
+
+Nowa wzmianka.
 
 ### `readAllUnreadMentions`
-Occurs when all mentions have been seen.
+
+Wszystkie wzmianki były widziane.
 
 ### `unreadSpecifiedNote`
-Occurs when there is a new direct note.
+
+Nowa wiadomość bezpośrednia.
 
 ### `readAllUnreadSpecifiedNotes`
-Occurs when all direct notes have been read.
+
+Wszystkie posty bezpośrednie przeczytane.
 
 ### `unreadMessagingMessage`
-Occurs when there is a new  chat message.
+
+Nieprzeczytana wiadomość czatu.
 
 ### `readAllMessagingMessages`
-Occurs when all chat messages have been read.
 
-## Operations
-none
+Wszystkie wiadomości czatu przeczytane.
+
+## Operacje
+
+brak

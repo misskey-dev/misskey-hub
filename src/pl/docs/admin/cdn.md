@@ -16,6 +16,6 @@ Musisz więc na swoim CDNie skonfigurować następujące opcje
 
 - Buforuj wszystkie żądania poza żądaniami `/api/*`. ( Cache all requests except `/api/*`.)
 
-::: Wskazówka
+::: tip
 Nie musisz czyścić pamięci podręcznej/bufora aktualizując Misskey.
 ::::

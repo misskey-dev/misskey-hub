@@ -1,29 +1,36 @@
-# Create Misskey Instance with Kubernetes/TrueNAS
-This guide describes how to install and setup Misskey using Kubernetes and Helm charts.
+# Stwórz instancje Misskey przy użyciu Kubernetesa/TrueNAS Scale
+
+Ten poradnik opisze instalację i konfigurację Misskey przy użyciu Kubernetesa i Helm charts.
 
 ::: danger
-Never change the domain name (hostname) of an instance once you start using it!
+Nigdy nie zmieniaj nazwy domeny(hostname) instancji kiedy zaczniesz z niej korzystać!!
 :::
 
-## TrueCharts and TrueNAS Scale
-The Helm chart for Misskey is hosted on TrueCharts which is a repository designed to be used with TrueNAS Scale, but its charts can also be installed as normal Helm charts. The [TrueCharts](https://truecharts.org/charts/incubator/misskey/) site has a list of all the charts available as well as documentation on how to install. The TrueCharts [Discord](https://discord.gg/Ax9ZgzKx9t) server is also a resource that can be used if you have questions. Misskey is currently on the *incubator* train.
+## TrueCharts i TrueNAS Scale
 
-::: tip Requirements
+Helmy dla Misskey są hostowane na TrueCharts które jest repozytorium zaprojektowanym z myślą o TrueNAS Scale ale mogą one też być zainstalowane jako normalne Helmy. [TrueCharts](https://truecharts.org/charts/incubator/misskey/) ma listę wszystkich dostępnych Helmów oraz dokumentację na temat instalacji. [TrueCharts Discord](https://discord.gg/Ax9ZgzKx9t) jest również źródłem na którym możesz uzyskać pomoc. Misskey jest obecnie na *incubator*.
+
+::: tip Wymagania
+
 - TrueNAS Scale
-OR
-- Kubernetes cluster and Helm
+lub
+- Klaster Kubernetes i Helm
 :::
 
 ## TrueNAS Scale
-Follow the instructions on the [TrueCharts Guide](https://truecharts.org/manual/guides/Adding-TrueCharts/). Add the *incubator* train, and install the Misskey app. The only Misskey configuration option that is required is the instance URL. The app also uses the Traefik reverse proxy to expose the service to the outside world over HTTPS. TrueCharts integrates with Traefik by default, but other options can be used with manual configuration.
 
-## Manual Helm
-If you are not using TrueNAS Scale, you can install Misskey using Helm directly. The `misskey` object in the values.yaml file has the options that you will want to override as necessary. The `misskey.url` property is the only required change. A reverse proxy is recommended to secure access to the server as the chart does not currently support enabling TLS inside the Misskey container.
+Podążaj za instrukcjami na [TrueCharts Guide](https://truecharts.org/manual/guides/Adding-TrueCharts/). Dodaj *incubator* train i zainstaluj aplikację Misskey. Jedyna konfiguracja Misskey która jest wymagana to URL instancji. Aplikacja również używa reverse proxy Traefik aby udostępnić usługę na zewnątrz świata przez HTTPS. TrueCharts integruje się z Traefikiem domyślnie, ale inne opcje mogą być używane z ręczną konfiguracją.
+
+## Manualny Helm
+
+Jeżeli nie używasz TrueNAS Scale to możesz zainstalować Misskey używając Helm bezpośrednio. Obiekt `misskey` w pliku values.yaml ma opcje które chcesz nadpisać. Właściwość `misskey.url` jest jedyną wymaganą zmianą. Zalecane jest użycie reverse proxy aby zabezpieczyć dostęp do serwera ponieważ chart nie obsługuje włączania TLS wewnątrz kontenera Misskey.
+
 ```
 helm repo add TrueCharts https://charts.truecharts.org
 helm repo update
 helm install misskey TrueCharts/misskey
 ```
 
-## Upgrade Misskey
-To upgrade Misskey, use the upgrade feature built into TrueNAS Scale or if running kubernetes manually use [helm repo update](https://helm.sh/docs/helm/helm_repo_update/) and [helm upgrade](https://helm.sh/docs/helm/helm_upgrade/). It is highly recommended to create a snapshot of your data before upgrading in case there is an issue and you need to rollback.
+## Aktualizuj Misskey
+
+Aby zaktualizować Misskey, użyj funkcji wbudowanej do TrueNAS Scale albo jeżeli używasz kubernetesa to manualnie użyj [helm repo update](https://helm.sh/docs/helm/helm_repo_update/) i [helm upgrade](https://helm.sh/docs/helm/helm_upgrade/). Zalecane jest utworzenie kopii danych przed aktualizacją na wypadek gdyby coś poszło nie tak i trzeba byłob by powrócić do działającej wersji.
