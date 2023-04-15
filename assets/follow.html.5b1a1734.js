@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-3c0e6d70","path":"/pl/docs/features/follow.html","title":"Obserwuj","lang":"pl-PL","frontmatter":{},"excerpt":"","headers":[],"git":{"updatedTime":1681526736000,"contributors":[{"name":"Patryk","email":"63200231+parpok@users.noreply.github.com","commits":1}]},"filePathRelative":"pl/docs/features/follow.md"}');export{e as data};
