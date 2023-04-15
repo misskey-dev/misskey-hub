@@ -3,12 +3,12 @@
 	<el-collapse v-model="expands">
 		<el-collapse-item title="API Console" name="console">
 			<el-form :model="form" label-width="120px">
-				<el-form-item label="Host" :rules="[{ required: true }]">
+				<el-form-item label="Host" prop="host" :rules="[{ required: true }]">
 					<el-input v-model="host" placeholder="misskey.example.com">
 						<template #prepend>https://</template>
 					</el-input>
 				</el-form-item>
-				<el-form-item label="Endpoint" :rules="[{ required: true }]">
+				<el-form-item label="Endpoint" prop="endpoint" :rules="[{ required: true }]">
 					<el-input v-model="endpoint" placeholder="foo/bar">
 						<template #prepend>https://{{ host }}/api/</template>
 					</el-input>
@@ -65,6 +65,12 @@ const token = ref(localStorage.getItem('token') ?? '');
 const res = ref(null);
 const expands = ref([]);
 
+// for validation
+const form = ref({
+	host,
+	endpoint,
+})
+
 watch(host, () => {
 	localStorage.setItem('host', host.value)
 });
@@ -76,7 +82,7 @@ watch(token, () => {
 function request() {
 	const promise = new Promise((resolve, reject) => {
 		const data = {
-			...params.value,
+			...JSON5.parse(params.value),
 			i: token.value && token.value.trim() !== '' ? token.value : undefined,
 		};
 		fetch(`https://${host.value}/api/${endpoint.value}`, {
@@ -95,7 +101,7 @@ function request() {
 			} else if (res.status === 204) {
 				resolve();
 			} else {
-				reject(body.error);
+				resolve(body.error);
 			}
 		}).catch(reject);
 	});

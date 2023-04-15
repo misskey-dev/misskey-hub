@@ -6,6 +6,14 @@ There are several ways to create an instance, so please choose one below and rea
 Never change the domain name (hostname) of an instance once you start using it!
 :::
 
+::: danger
+If you use Cloudflare for your own server, do not use the Auto Minify setting.
+
+Misskey will not work properly because Cloudflare will not interpret the latest JavaScript and will break the source code inside.
+
+See also: [misskey-dev/misskey #9791](https://github.com/misskey-dev/misskey/issues/9791)
+:::
+
 ## Using Docker
 [See here](./install/docker.html)
 
