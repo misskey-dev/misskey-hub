@@ -11,43 +11,43 @@ import { getInstances } from './get-instances';
 import localTheme from './mitheme/src/node';
 
 const ssrTransformCustomDir = () => {
-    return {
-        props: [],
-        needRuntime: true,
-    };
+	return {
+		props: [],
+		needRuntime: true,
+	};
 };
 
 export default defineUserConfig<DefaultThemeOptions>({
-    // 独自ドメイン使う場合 '/' にする
-    // 独自ドメイン使わない場合 '/misskey-hub/' にする
-    base: '/',
+	// 独自ドメイン使う場合 '/' にする
+	// 独自ドメイン使わない場合 '/misskey-hub/' にする
+	base: '/',
 
-    lang: 'ja-JP',
-    title: 'Misskey Hub',
+	lang: 'ja-JP',
+	title: 'Misskey Hub',
 
-    head: [
-        [
-            'link',
-            {
-                rel: 'stylesheet',
-                href: 'https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c',
-            },
-        ],
-        [
-            'link',
-            {
-                rel: 'stylesheet',
-                href: 'https://fonts.googleapis.com/css2?family=Kosugi+Maru',
-            },
-        ],
-        [
-            'link',
-            {
-                rel: 'stylesheet',
-                href: 'https://use.fontawesome.com/releases/v5.15.3/css/all.css',
-            },
-        ],
-    ],
+	head: [
+		[
+			'link',
+			{
+				rel: 'stylesheet',
+				href: 'https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c',
+			},
+		],
+		[
+			'link',
+			{
+				rel: 'stylesheet',
+				href: 'https://fonts.googleapis.com/css2?family=Kosugi+Maru',
+			},
+		],
+		[
+			'link',
+			{
+				rel: 'stylesheet',
+				href: 'https://use.fontawesome.com/releases/v5.15.3/css/all.css',
+			},
+		],
+	],
 
     locales: {
         '/': { lang: 'ja-JP', description: 'オープンソースの分散型マイクロブログプラットフォーム、Misskeyの公式サイト' },
@@ -123,6 +123,7 @@ export default defineUserConfig<DefaultThemeOptions>({
                                     '/docs/admin/nginx',
                                     '/docs/admin/push-docker-hub',
                                     '/docs/admin/troubleshooting',
+																		'/docs/tips/scale-out',
                                     '/docs/tips/disable-timelines',
                                     '/docs/features/silence',
                                 ]
@@ -597,49 +598,49 @@ export default defineUserConfig<DefaultThemeOptions>({
         },
     }),
 
-    plugins: [
-        ['@vuepress/plugin-search'],
-        registerComponentsPlugin({ componentsDir: path.resolve(__dirname, './components/') }),
-        containerPlugin({
-            type: 'tip',
-            before: (info: string, type): string => `<div class="custom-container tip"><i class="fas fa-info"></i>${info ? `<p class="custom-container-title">${info}</p>` : ''}\n`,
-            after: (): string => '</div>\n',
-        }),
-        containerPlugin({
-            type: 'warning',
-            before: (info: string, type): string => `<div class="custom-container warning"><i class="fas fa-exclamation"></i>${info ? `<p class="custom-container-title">${info}</p>` : ''}\n`,
-            after: (): string => '</div>\n',
-        }),
-        containerPlugin({
-            type: 'danger',
-            before: (info: string, type): string => `<div class="custom-container danger"><i class="fas fa-times"></i>${info ? `<p class="custom-container-title">${info}</p>` : ''}\n`,
-            after: (): string => '</div>\n',
-        }),
-    ],
+	plugins: [
+		['@vuepress/plugin-search'],
+		registerComponentsPlugin({ componentsDir: path.resolve(__dirname, './components/') }),
+		containerPlugin({
+			type: 'tip',
+			before: (info: string, type): string => `<div class="custom-container tip"><i class="fas fa-info"></i>${info ? `<p class="custom-container-title">${info}</p>` : ''}\n`,
+			after: (): string => '</div>\n',
+		}),
+		containerPlugin({
+			type: 'warning',
+			before: (info: string, type): string => `<div class="custom-container warning"><i class="fas fa-exclamation"></i>${info ? `<p class="custom-container-title">${info}</p>` : ''}\n`,
+			after: (): string => '</div>\n',
+		}),
+		containerPlugin({
+			type: 'danger',
+			before: (info: string, type): string => `<div class="custom-container danger"><i class="fas fa-times"></i>${info ? `<p class="custom-container-title">${info}</p>` : ''}\n`,
+			after: (): string => '</div>\n',
+		}),
+	],
 
-    clientConfigFile: path.resolve(__dirname, './client.ts'),
+	clientConfigFile: path.resolve(__dirname, './client.ts'),
 
-    async onInitialized(app) {
-        await getInstances(app);
-        await generateEndpointPages(app);
-        await generateRecentUpdatesPage(app);
-        await getRelatedPages(app);
-        await getChildPages(app);
-    },
+	async onInitialized(app) {
+		await getInstances(app);
+		await generateEndpointPages(app);
+		await generateRecentUpdatesPage(app);
+		await getRelatedPages(app);
+		await getChildPages(app);
+	},
 
-    bundlerConfig: {
-        vuePluginOptions: {
-            template: {
-                ssr: true,
-                compilerOptions: {
-                    directiveTransforms: {
-                        'parallax': ssrTransformCustomDir,
-                        'fade-in': ssrTransformCustomDir,
-                    },
-                },
-            },
-        },
-    },
+	bundlerConfig: {
+		vuePluginOptions: {
+			template: {
+				ssr: true,
+				compilerOptions: {
+					directiveTransforms: {
+						'parallax': ssrTransformCustomDir,
+						'fade-in': ssrTransformCustomDir,
+					},
+				},
+			},
+		},
+	},
 
-    shouldPrefetch: false,
+	shouldPrefetch: false,
 });
