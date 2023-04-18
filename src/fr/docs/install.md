@@ -6,6 +6,14 @@ Il existe différentes façons de créer votre instance, choisissez en une en ba
 Ne changez jamais le nom de domaine (hostname) d’une instance une fois celle-ci lancée !
 :::
 
+::: danger
+Si vous utilisez Cloudflare, n'utilisez pas le paramètre Auto Minify.
+
+Misskey ne fonctionnera pas correctement car Cloudflare n'interprétera pas le dernier JavaScript et cassera le code source à l'intérieur.
+
+Pour plus d'informations [misskey-dev/misskey #9791](https://github.com/misskey-dev/misskey/issues/9791)
+:::
+
 ## Via Docker
 [Voir ici](./install/docker.html).
 
