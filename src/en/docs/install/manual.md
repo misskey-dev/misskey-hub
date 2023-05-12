@@ -92,6 +92,7 @@ If you're on Debian, you will need to install the `build-essential`, `python` pa
 	create database misskey with encoding = 'UTF8';
 	create user misskey with encrypted password '{YOUR_PASSWORD}';
 	grant all privileges on database misskey to misskey;
+	alter database misskey owner to misskey;
 	\q
 	```
 
