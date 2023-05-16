@@ -62,4 +62,8 @@
   host: 'msk.ilnk.info',
   name: 'えとねるん(EtonernROY)',
   lang: 'ja',
+}, {
+  host: 'thattakashi.me',
+  name: 'Hoshi',
+  lang: 'en',
 }]
