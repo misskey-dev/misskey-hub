@@ -17,7 +17,7 @@ export default {
     const page = usePageData();
 
     return {
-			themeLocale: useThemeLocaleData(),
+      themeLocale: useThemeLocaleData(),
       instances: page.value.instances || [],
     };
   },
