@@ -58,7 +58,7 @@ Not Safe For Workの略。画像を「閲覧注意」扱いにし、操作なし
 既にあるノートを引用、もしくはそのノートを新しいノートとして共有する行為、またそれによって作成されたノート。詳しくは[こちら。](../docs/features/note.html#renote)
 
 ## STL
-ソーシャルタイムライン(Social TimeLine)の略。タイムラインについて、詳しくは[こちら。](../docs/features/note.html#%E5%85%AC%E9%96%8B%E7%AF%84%E5%9B%B2)
+ソーシャルタイムライン(Social TimeLine)の略。タイムラインについて、詳しくは[こちら。](../docs/features/timeline.html)
 
 ## 藍
 (読み: あい)<br>
