@@ -33,13 +33,13 @@ Contents Warningの略。ノートの内容を、操作なしには表示しな�
 「Federated(Federation)」と「Universe」を組み合わせた造語。Misskeyを含む、様々な分散型ソフトウェアを実装したサーバーで構成された、非中央集権的で連合したソーシャルネットワーク。Misskey以外の分散型ソフトウェアとしては、MastodonやPleromaやPixelfedなどがあります。
 
 ## GTL
-グローバルタイムライン(Global TimeLine)の略。タイムラインについて、詳しくは[こちら。](../docs/features/note.html#%E5%85%AC%E9%96%8B%E7%AF%84%E5%9B%B2)
+グローバルタイムライン(Global TimeLine)の略。タイムラインについて、詳しくは[こちら。](../docs/features/timeline.html)
 
 ## HTL
-ホームタイムライン(Home TimeLine)の略。タイムラインについて、詳しくは[こちら。](../docs/features/note.html#%E5%85%AC%E9%96%8B%E7%AF%84%E5%9B%B2)
+ホームタイムライン(Home TimeLine)の略。タイムラインについて、詳しくは[こちら。](../docs/features/timeline.html)
 
 ## LTL
-ローカルタイムライン(Local TimeLine)の略。タイムラインについて、詳しくは[こちら。](../docs/features/note.html#%E5%85%AC%E9%96%8B%E7%AF%84%E5%9B%B2)
+ローカルタイムライン(Local TimeLine)の略。タイムラインについて、詳しくは[こちら。](../docs/features/timeline.html)
 
 ## MFM
 (読み: えむえふえむ)<br>
