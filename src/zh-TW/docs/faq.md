@@ -19,7 +19,7 @@ Misskey與Mastodon的API不相容，因此Misskey不能透過Mastodon的App或we
 misskey.io不是Misskey官方的伺服器，也不屬於Misskey專案。misskey.io是泛用的、無特定主題的、很容易註冊以及最大的Misskey伺服器。
 
 ## 「Misskey」名稱的由來？
-主要syuilo在考慮名稱時，偶然間聽到May'n的歌曲『Brain Diver』，取自其歌詞。
+主要開發者syuilo在考慮名稱時，偶然間聽到May'n的歌曲『Brain Diver』，取自其歌詞。
 
 ## 要怎麼追蹤其他的Misskey・Pleroma伺服器、Mastodon伺服器上的使用者？
 從選單中選擇搜索，並按照以下格式輸入使用者帳戶。使用者帳戶由使用者名稱與所屬的伺服器或伺服器主機名稱所組成。不限於Misskey，Mastodon和Pleroma等多數的分散式軟體，以下的使用者帳戶格式是很常見的。<br>
