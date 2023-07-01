@@ -1,6 +1,7 @@
 # プロジェクトへの寄付
 Misskeyはビジネスではなく、利用は無料であるため、収益は皆様からの寄付のみです。(サーバーによっては広告収入を得ているような場合もありますが、それは運営者の収入であり直接開発者への収入にはなりません)
 寄付をしていただければ、今後も開発を続けることが可能になり、プロジェクトへの貢献になります。以下の方法で受け付けています。
+- [Fanbox](https://syuilo.fanbox.cc/)
 - [PayPal](https://paypal.me/syuilo)
 - [Patreon](https://www.patreon.com/syuilo)
 - Kyash: @syuilo
