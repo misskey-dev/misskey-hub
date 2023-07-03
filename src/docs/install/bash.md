@@ -47,7 +47,7 @@ sudo apt update; sudo apt full-upgrade -y; sudo reboot
 ### 3. インストールをはじめる
 SSHを接続しなおして、Misskeyのインストールを始めましょう。
 
-ただ、インストール前に[Tips](#Tips)を読むことを強くお勧めします。
+ただ、インストール前に[Tips](#tips)を読むことを強くお勧めします。
 
 ```
 wget https://raw.githubusercontent.com/joinmisskey/bash-install/main/ubuntu.sh -O ubuntu.sh; sudo bash ubuntu.sh
