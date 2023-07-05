@@ -149,12 +149,12 @@ CREATE DATABASE mk1 OWNER misskey;
 
 ### Redis
 
-Redisは、NoSQLのインメモリデータベースソフトであり、データベースや連合との通信を管理するなどのために必要だ。  
+Redisは、NoSQLのインメモリデータベースソフトであり、データベースや連合との通信を管理するなどのために必要だ。
 redis.ioのドキュメントに従いインストールする。 https://redis.io/docs/getting-started/installation/install-redis-on-linux/
 
 ```sh
 sudo apt install -y curl ca-certificates gnupg2 lsb-release
-		
+
 curl -fsSL https://packages.redis.io/gpg | sudo gpg --dearmor -o /usr/share/keyrings/redis-archive-keyring.gpg
 
 echo "deb [signed-by=/usr/share/keyrings/redis-archive-keyring.gpg] https://packages.redis.io/deb $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/redis.list
@@ -524,7 +524,7 @@ CloudFlareのDNS設定が正しいIPアドレスになっているかもう一�
 
 ```sh
 exit
-```sh
+```
 
 /etc/systemd/system/misskey.serviceを作成する。
 
