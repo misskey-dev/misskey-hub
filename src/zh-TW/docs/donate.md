@@ -1,6 +1,7 @@
 # 捐助專案
 Misskey不是一家企業，由於它是免費使用的，開發者所能獲得的收入來自各位的捐款（某些伺服器可能會有廣告收入，但那是運營者的收入而不是直接給開發人員的收入）。
 您的捐款讓開發能夠持續下去並為本專案做出貢獻。我們接受以下的方式：
+- [Fanbox](https://syuilo.fanbox.cc/)
 - [PayPal](https://paypal.me/syuilo)
 - [Patreon](https://www.patreon.com/syuilo)
 - 虛擬貨幣：`0xF1121108E21C92aAC7814137DD67e0d48eAC7Fdc`
