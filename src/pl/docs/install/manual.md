@@ -17,7 +17,7 @@ Proszę zainstalować wymagane zależności i je skonfigurować:
 
 #### Dependencje :package
 
-* **[Node.js](https://nodejs.org/en/)** (18.13.x)
+* **[Node.js](https://nodejs.org/en/)** (20.4.x)
 * **[PostgreSQL](https://www.postgresql.org/)** (15.x)
 * **[Redis](https://redis.io/)**
 * **[FFmpeg](https://www.ffmpeg.org/)**

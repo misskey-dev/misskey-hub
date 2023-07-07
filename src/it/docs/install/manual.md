@@ -13,8 +13,8 @@ Never change the domain name (hostname) of an instance once you start using it!
 ::: tip
 Occorre installare il seguente software
 
-- **[Node.js](https://nodejs.org/en/)** (16.x o successivo)
-- **[PostgreSQL](https://www.postgresql.org/)** (10 o successivo)
+- **[Node.js](https://nodejs.org/en/)** (20.4 o successivo)
+- **[PostgreSQL](https://www.postgresql.org/)** (15 o successivo)
 - **[Redis](https://redis.io/)**
 - **[FFmpeg](https://www.ffmpeg.org/)**
 
