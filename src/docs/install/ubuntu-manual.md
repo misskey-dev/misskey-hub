@@ -137,7 +137,7 @@ Misskeyで使うユーザーを作成する。\
 （LinuxのユーザーとPostgreSQLのユーザーは別物なので、混同しないよう注意すること。）
 
 ```sql
-CREATE ROLE misskey LOGIN CREATEDB PASSWORD 'hoge';
+CREATE ROLE misskey LOGIN PASSWORD 'hoge';
 ```
 
 データベースを作成。データベース名をmk1としている。
