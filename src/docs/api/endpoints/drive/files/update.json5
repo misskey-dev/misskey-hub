@@ -25,7 +25,7 @@
 			},
 			isSensitive: {
 				type: 'boolean',
-				description: 'ファイルを閲覧注意に指定する場合はtrue, 外す場合はfalse。',
+				description: 'ファイルをセンシティブに指定する場合はtrue, 外す場合はfalse。',
 			},
 			comment: {
 				type: 'string',
