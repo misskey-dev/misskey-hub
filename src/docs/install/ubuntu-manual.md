@@ -356,7 +356,7 @@ git checkout master
 必要なnpmパッケージをインストール。
 
 ```sh
-NODE_ENV=production pnpm install --frozen-lockfile
+NODE_ENV=production pnpm install --frozen-lockfile --ignore-scripts --prod
 ```
 
 ## Misskeyを設定する
