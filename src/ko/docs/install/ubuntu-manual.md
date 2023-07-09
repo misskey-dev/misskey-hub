@@ -6,13 +6,13 @@
 
 ## 기타 Misskey 설치 방법
 
-- [기본 버전 Misskey 구축 가이드 (manual.html)](. /manual.html)
-- [기타 설치 방법 목록](... /install.html)
+- [기본 버전 Misskey 구축 가이드 (manual.html)](./manual.html)
+- [기타 설치 방법 목록](../install.html)
 
 ## 쉘 스크립트 안내
 
 복사, 붙여넣기만 하면 쉘 스크립트로 하면 되지 않느냐는 생각에 **쉘 스크립트로 거의 모든 작업을 해주는 것을 만들어 봤습니다! **\
-[쉘 스크립트에 대한 자세한 내용과 사용법은 여기에서 확인하세요! **](. /bash.html)
+[쉘 스크립트에 대한 자세한 내용과 사용법은 여기에서 확인하세요! **](./bash.html)
 
 ::: tip
 쉘 스크립트로 개발 환경에 설치하는 것은 권장하지 않습니다.
@@ -26,9 +26,9 @@
 
 ## 이 글에 대해
 
-이 글은 [Misskey 구축 가이드 (manual.html)](. /manual.html)에 소개된 대로 systemd에서 Misskey를 동작시키고 있습니다.
+이 글은 [Misskey 구축 가이드 (manual.html)](./manual.html)에 소개된 대로 systemd에서 Misskey를 동작시키고 있습니다.
 
-[docker-compose](. /docker.html)을 사용하면 수작업으로도 조금 더 쉽게 실행할 수 있을 것이다.
+[docker-compose](./docker.html)을 사용하면 수작업으로도 조금 더 쉽게 실행할 수 있을 것이다.
 
 ::: danger
 한번 사용하기 시작한 서버의 도메인/호스트 이름은 절대로 변경하지 마세요!
@@ -36,7 +36,7 @@
 
 ## 시작
 
-이 글에서는 [Misskey 구축 가이드 (manual.html)](. /manual.html)을 바탕으로 일반적인 우분투 서버에 Misskey를 설치하고 공개하는 방법을 하나하나 설명한다.
+이 글에서는 [Misskey 구축 가이드 (manual.html)](./manual.html)을 바탕으로 일반적인 우분투 서버에 Misskey를 설치하고 공개하는 방법을 하나하나 설명한다.
 
 Bash 명령어 입력, 몇 가지 설정 파일 편집, 그리고 브라우저 조작만으로 설정이 완료되도록 하고 있다. 설치하는 소프트웨어에 대해 간략하게 설명하고 있지만, 신경 쓸 필요는 없다.
 
@@ -182,7 +182,7 @@ nginx는 주로 리버스 프록시에 사용되는 웹 서버 소프트웨어�
 
 ::: tip
 개발 환경의 경우 nginx 설정이 필요하지 않습니다.
-:::: tip
+:::
 
 nginx.org의 문서 http://nginx.org/en/linux_packages.html#Ubuntu 에 따라 설치한다.
 
@@ -283,7 +283,7 @@ ufw는 netfilter(iptables)를 사람이 쉽게 조작할 수 있도록 하는 �
 
 CloudFlare는 자신의 도메인에 대해 DNS 서버, 리버스 프록시, CDN을 한 번에 제공해 주는 매우 편리한 서비스이다. \
 CloudFlare를 거치지 않고 서버를 공개하는 것도 가능하지만, 매우 편리하므로 도입하는 것을 추천한다.
-[**→ CDN 설정**](/docs/admin/cdn.html)
+[**→ CDN 설정**](../../admin/cdn.html)
 
 [CloudFlare에 가입](https://dash.cloudflare.com/sign-up)하고 구매한 도메인을 안내에 따라 등록한다.
 
