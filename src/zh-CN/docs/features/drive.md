@@ -16,9 +16,9 @@ You can also create folders on your drive to organize multiple files together.
 At the moment, when you delete a file from your drive, **all the content (notes, pages, etc.)** attached to that file will also be deleted.
 :::
 
-## Warning (NSFW)
+## Sensitive (NSFW)
 
-Warning or NSFW (Not safe for work) is a flag that can be set on files in your drive.
+Sensitive or NSFW (Not safe for work) is a flag that can be set on files in your drive.
 Files that have been flagged as unsafe to view will not be displayed without user interaction.
 This flag can be used, for example, to prevent images that are not suitable for viewing in the workplace or in public places from suddenly appearing.
 
