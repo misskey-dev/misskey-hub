@@ -15,7 +15,7 @@ Never change the domain name (hostname) of an instance once you start using it!
 Please install and setup these softwares:
 
 #### Dependencies :package:
-* **[Node.js](https://nodejs.org/en/)** (18.13.x)
+* **[Node.js](https://nodejs.org/en/)** (20.4.x)
 * **[PostgreSQL](https://www.postgresql.org/)** (15.x)
 * **[Redis](https://redis.io/)**
 * **[FFmpeg](https://www.ffmpeg.org/)**

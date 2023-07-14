@@ -8,7 +8,7 @@
 
 ::: tip 준비사항
 다음을 미리 설치해주세요:
-- [Node.js](https://nodejs.org) 18.13 이상
+- [Node.js](https://nodejs.org) 20.4 이상
 - [PostgreSQL](https://www.postgresql.org) 15 이상
 - [Redis](https://redis.io)
 - [FFmpeg](https://www.ffmpeg.org)

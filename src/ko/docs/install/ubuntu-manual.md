@@ -95,7 +95,7 @@ Node.jsは、サーバーサイドJavaScript環境であり、Misskeyの基本�
 ```sh
 sudo apt install -y curl
 
-curl -sL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+curl -sL https://deb.nodesource.com/setup_20.x | sudo -E bash -
 
 sudo apt install -y nodejs
 
@@ -106,7 +106,7 @@ node -v
 sudo corepack enable
 ```
 
-v18.x.xなどと表示されればOK。v8.x.xのように低いバージョンが表示された場合は、正しくインストールが行えていないため、サーバーを再起動してもう一度インストールし直すなどしてみよう。
+v20.x.xなどと表示されればOK。v8.x.xのように低いバージョンが表示された場合は、正しくインストールが行えていないため、サーバーを再起動してもう一度インストールし直すなどしてみよう。
 
 ### PostgreSQL
 

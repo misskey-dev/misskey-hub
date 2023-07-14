@@ -22,7 +22,7 @@
 			isSensitive: {
 				type: 'boolean',
 				default: false,
-				description: 'ファイルが閲覧注意であればtrueに設定します。',
+				description: 'ファイルがセンシティブであればtrueに設定します。',
 			},
 			comment: {
 				type: 'string',

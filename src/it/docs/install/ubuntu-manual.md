@@ -71,7 +71,7 @@ Si tratta di un linguaggio di programmazione lato server, basato su JavaScript. 
 ```
 sudo apt install -y curl
 
-curl -sL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+curl -sL https://deb.nodesource.com/setup_20.x | sudo -E bash -
 
 sudo apt install -y nodejs
 
@@ -80,7 +80,7 @@ node -v
 sudo corepack enable
 ```
 
-Ti occorre la versione `v18.x.y`. Se appare un'altra versione, come la `v8.x.y` allora l'installazione non è andata a buon fine. Potresti usare il [progetto Node Version Manager](https://github.com/nvm-sh/nvm#about).
+Ti occorre la versione `v20.x.y`. Se appare un'altra versione, come la `v8.x.y` allora l'installazione non è andata a buon fine. Potresti usare il [progetto Node Version Manager](https://github.com/nvm-sh/nvm#about).
 
 ### PostgreSQL
 
