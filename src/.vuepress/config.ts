@@ -250,8 +250,10 @@ export default defineUserConfig<DefaultThemeOptions>({
 							'/ko/docs/misskey',
 							'/ko/docs/releases',
 							'/ko/docs/misskey-hub',
+							'/ko/docs/donate',
 							'/ko/docs/faq',
 							'/ko/docs/glossary',
+							'/ko/docs/notes',
 							'/ko/docs/troubleshooting',
 							{
 								text: '기능', children: [
@@ -295,8 +297,8 @@ export default defineUserConfig<DefaultThemeOptions>({
 									'/ko/docs/admin/nginx',
 									'/ko/docs/admin/push-docker-hub',
 									'/ko/docs/admin/troubleshooting',
+									'/ko/docs/tips/scale-out',
 									'/ko/docs/tips/disable-timelines',
-									'/ko/docs/admin/default-reaction',
 									'/ko/docs/features/silence',
 								]
 							},
