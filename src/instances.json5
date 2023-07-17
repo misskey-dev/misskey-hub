@@ -46,8 +46,8 @@
   name: 'Kitsune.MOE',
   lang: 'de',
 }, {
-  host: 'misskey.cf',
-  name: 'misskey.cf',
+  host: 'misskey.gg',
+  name: 'misskey.gg',
   lang: 'ja',
 }, {
   host: 'misskey.kindworld.one',
