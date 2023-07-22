@@ -1,17 +1,17 @@
-Create Misskey instance with Docker Compose
+Docker Compose로 Misskey 인스턴스 만들기
 ================================================================
 
-This guide describes how to install and setup Misskey with Docker Compose.
+이 가이드에서는 Docker Compose를 사용해 Misskey를 설치하고 준비하는 과정을 설명하려 합니다.
 
 ::: danger
-Never change the domain name (hostname) of an instance once you start using it!
+인스턴스를 한 번이라도 시작하고 나서는 절대로 도메인 이름 (hostname)을 변경하지 마세요!
 :::
 
-::: tip Requirement
-- docker and dockercompose installed
+::: tip 요구사항
+- Docker와 Docker-compose가 설치되어 있어야 합니다.
 :::
 
-Get the repository
+레포지토리 가져오기
 ----------------------------------------------------------------
 ```sh
 git clone -b master https://github.com/misskey-dev/misskey.git
@@ -19,45 +19,47 @@ cd misskey
 git checkout master
 ```
 
-Configure
+설정
 ----------------------------------------------------------------
-Copy example configuration files with following:
+다음 명령어로 예시 설정 파일을 복사해 주세요.
 
 ```sh
-cp .config/example.yml .config/default.yml
+cp .config/docker_example.yml .config/default.yml
 cp .config/docker_example.env .config/docker.env
 cp ./docker-compose.yml.example ./docker-compose.yml
 ```
 
-Edit `default.yml` and `docker.env` according to the instructions in the files.
+그 다음, 복사된 `default.yml`과 `docker.env` 파일을 파일 안의 안내에 따라 수정해 주세요.
 
-Edit `docker-compose.yml` if necessary. (e.g. if you want to change the port).
+만약 포트 변경 등의 설정 수정이 필요하다면 `docker-compose.yml` 파일도 수정해 주세요.
 
-Build and initialize
+빌드 및 초기화
 ----------------------------------------------------------------
-The following command will build Misskey and initialize the database.
-This will take some time.
+다음으로 Misskey를 빌드하고 Misskey 데이터베이스를 초기화하기 위해 다음 명령어를 입력합니다.
+완료되는 데에 시간이 조금 걸릴 수 있습니다.
 
 ``` shell
 sudo docker compose build
 sudo docker compose run --rm web pnpm run init
 ```
 
-Launch
+실행하기
 ----------------------------------------------------------------
 Well done! You can start Misskey with the following command.
+여기까지 문제 없이 완료했다면, 다음 명령어로 Misskey를 시작할 수 있습니다!
 
 
 ```sh
 sudo docker compose up -d
 ```
 
-GLHF✨
+잘 하셨습니다! 이제 미스키를 즐겨 봐요.✨
 
 How to update your Misskey server
+미스키 서버 업데이트하기
 ----------------------------------------------------------------
 ::: warning
-When updating, be sure to check the [release notes](https://github.com/misskey-dev/misskey/blob/master/CHANGELOG.md) to know in advance the changes and whether or not additional work is required (in most cases, it is not).
+다음 버전으로 업데이트하기 전에 반드시 [릴리즈 노트](https://github.com/misskey-dev/misskey/blob/master/CHANGELOG.md)를 확인하고, 필요한 경우 몇 가지 추가 작업을 수행해 주세요(대부분의 경우 수행할 필요가 없긴 하지만요).
 :::
 
 ```sh
@@ -70,9 +72,9 @@ sudo docker compose build
 sudo docker compose stop && sudo docker compose up -d
 ```
 
-It may take some time depending on the contents of the update and the size of the database.
+데이터베이스에 업데이트 해야 될 컨텐츠의 양에 따라 약간의 시간이 걸릴 수 있습니다.
 
-How to execute CLI command
+CLI 명령어 실행하기
 ----------------------------------------------------------------
 ```sh
 sudo docker compose run --rm web node packages/backend/built/tools/foo bar
