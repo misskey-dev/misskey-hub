@@ -7,7 +7,7 @@ description: "Questa guida spiega come installare Misskey dentro Docker"
 Questa guida spiega come installare Misskey dentro Docker Compose
 
 ::: danger
-Never change the domain name (hostname) of an instance once you start using it!
+Do not recreate the database with the domain/hostname of the server once you have started using it!
 :::
 
 ::: tip
