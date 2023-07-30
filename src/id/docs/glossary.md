@@ -2,7 +2,9 @@
 Glosarium tentang kumpulan kata yang berhubungan dengan Misskey.
 
 ## Acct
+=======
 String dalam bentuk `@namapengguna@peladen` yang menunjukkan pengguna tertentu. Biasanya digunakan pada saat menyebut seseorang.
+
 
 ## ActivityPub
 Protokol (metode) yang dipakai untuk menghidupkan lingkungan terdistribusi Misskey. Dengan mengikuti protokol ini, komunikasi dengan instansi lain maupun dengan yang mengikuti instansi tersebut dapat terjadi, membentuk sesuatu yang dikenal sebagai Fediverse.
@@ -55,8 +57,7 @@ TODO
 ## Emoji Kustom
 Emoji yang disediakan oleh instansi kamu. Emoji yang tidak secara khusus disediakan oleh instansi kamu tapi tersedia secara bawaan disebut sebagai "Emoji Unicode". Detailnya, lihat [di sini](../docs/features/custom-emoji).
 
-
-## Panel Kontrol
+## Panel Kendali
 Menu pengaturan yang ditujukan untuk mengatur peladen Misskey.
 
 ## Senyap
