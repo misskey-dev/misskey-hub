@@ -15,5 +15,6 @@ description: '介紹 Misskey 可使用的 App。'
 - **Misscat** (iOS): 開發的目標是提供適合智慧型手機的直觀操作性。[官方網站](https://yuiga.dev/misscat/)。[App Store](https://apps.apple.com/app/id1505059993)。[原始碼](https://github.com/YuigaWada/MissCat)。
 - **SocialHub** (iOS): 支援 Misskey、Mastodon、Twitter、Slack、Tumblr 的付費 App。[原始碼](https://uakihir0.github.io/socialhub/)。[App Store](https://apps.apple.com/us/app/socialhub-socialmedia-client/id1474451582)。
 - **ZonePane** (Android): 可以將時間軸與清單、頻道等頁面化。具備優秀的已讀管理。Twitter App「TwitPane」的 Misskey 版，也支援 Mastodon。 [Google Play](https://play.google.com/store/apps/details?id=com.zonepane)。
+- **TootRain** (Mac): 將時間軸與清單的貼文即時地像評論一樣顯示的一款 Mac 應用程式。 [サイト](https://b123400.net/tootrain/ja)、[原始碼](https://github.com/b123400/TootRain)。
 
 然而，由於 Misskey 正在積極更新功能，對最新功能的支援可能會有所延遲。如果沒有特別的偏好，我們建議使用 Misskey Web。
