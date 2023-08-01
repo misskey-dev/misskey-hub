@@ -1,12 +1,12 @@
 ---
-description: '關於Misskey的用語集。'
+description: '關於 Misskey 的用語集。'
 ---
 
 # 用語集
-關於Misskey的用語集。
+關於 Misskey 的用語集。
 
 ## Acct
-標示特定使用者的`@username@host`形式的字串。提及的時候使用。
+標示特定使用者的 `@username@host` 形式的字串。提及的時候使用。
 
 ## ActivityPub
 <br>
@@ -14,11 +14,11 @@ description: '關於Misskey的用語集。'
 
 ## AiScript
 <br>
-在Misskey使用，在JavaScript上運作的程式語言。詳見[這裡。](../advanced/aiscript)
+在 Misskey 使用，在 JavaScript 上運作的程式語言。詳見[這裡。](../advanced/aiscript)
 
 ## API
 <br>
-在Misskey服務器公開，以程式處理Misskey的介面。詳見[這裡。](../docs/api)
+在 Misskey 服務器公開，以程式處理 Misskey 的介面。詳見[這裡。](../docs/api)
 
 ## Bot
 <br>
@@ -26,11 +26,11 @@ description: '關於Misskey的用語集。'
 
 ## CW
 <br>
-Contents Warning的縮寫。不需要操作就可以隱藏貼文內容的功能。主要用來隱藏較長的內容，或者防止劇透等。詳見[這裡。](../docs/features/note.html#cw)
+Contents Warning 的縮寫。不需要操作就可以隱藏貼文內容的功能。主要用來隱藏較長的內容，或者防止劇透等。詳見[這裡。](../docs/features/note.html#cw)
 
 ## Fediverse
 <br>
-「Federated(Federation)」與「Universe」的組合詞。包含Misskey在內，由執行各種分散式軟體的伺服器所組成的去中心化聯邦社交網路。Misskey以外的分散式軟體還包括Mastodon、Pleroma和Pixelfed等等。
+「Federated (Federation)」與「Universe」的組合詞。包含 Misskey 在內，由執行各種分散式軟體的伺服器所組成的去中心化聯邦社交網路。Misskey 以外的分散式軟體還包括 Mastodon、Pleroma 和 Pixelfed 等等。
 
 ## GTL
 世界時間軸 (Global TimeLine) 的縮寫。關於時間軸，詳見[這裡。](../features/timeline)
@@ -43,48 +43,48 @@ Contents Warning的縮寫。不需要操作就可以隱藏貼文內容的功能�
 
 ## MFM
 <br>
-Markup language For Misskey的縮寫，可以在Misskey上使用的標記語言。詳見[這裡。](../docs/features/mfm)
+Markup language For Misskey 的縮寫，可以在 Misskey 上使用的標記語言。詳見[這裡。](../docs/features/mfm)
 
 ## Misskey Web
 <br>
-Misskey官方的Web客戶端(介面)。從PC或智慧型手機等的網路瀏覽器訪問Misskey伺服器時，它會自動顯示。
+Misskey 官方的 Web 客戶端(介面)。從 PC 或智慧型手機等的網路瀏覽器訪問 Misskey 伺服器時，它會自動顯示。
 
 ## NSFW
 <br>
-Not Safe For Work的縮寫。可以將圖像當成「敏感內容」，防止未經操作就被顯示出來的功能。
+Not Safe For Work 的縮寫。可以將圖像當成「敏感內容」，防止未經操作就被顯示出來的功能。
 
 ## Renote
 (読み: りのーと)<br>
 引用現有的貼文，將該貼文分享為新貼文的行為，或者透過這樣的方式建立新的貼文。詳見[這裡。](../docs/features/note.html#renote)
 
 ## STL
-社交時間軸 (Social TimeLine) 的縮寫。關於時間軸，詳見[こちら。](../features/timeline)
+社交時間軸 (Social TimeLine) 的縮寫。關於時間軸，詳見[這裡。](../features/timeline)
 
 ## 藍
 (讀做：愛)<br>
-Misskey的看板娘(官方角色)。詳見[這裡。](https://xn--931a.moe/)
+Misskey 的看板娘 (官方角色)。詳見[這裡。](https://xn--931a.moe/)
 
 ## 伺服器
 todo
 
 ## 自訂表情符號
-由各Misskey伺服器的管理者和使用者獨創的表情符號。做為區別，非自訂表情符號的一般表情符號則稱為「Unicode表情符號」。詳見[這裡。](../docs/features/custom-emoji)
+由各 Misskey 伺服器的管理者和使用者獨創的表情符號。做為區別，非自訂表情符號的一般表情符號則稱為「Unicode 表情符號」。詳見[這裡。](../docs/features/custom-emoji)
 
 ## 控制台
-指Misskey伺服器的設定畫面。
+指 Misskey 伺服器的設定畫面。
 
 ## 凍結
 <br>
 表示讓帳戶無法使用的狀態。
 
 ## 雲端硬碟
-對於使用者上傳圖片、音樂等到Misskey伺服器的檔案管理功能。詳見[這裡。](../docs/features/drive)
+對於使用者上傳圖片、音樂等到 Misskey 伺服器的檔案管理功能。詳見[這裡。](../docs/features/drive)
 
 ## 貼文
-發布到Misskey伺服器的文章。可以包含Misskey獨有的內容，例如圖片、音樂和投票等。詳見[這裡。](../docs/features/note)
+發布到 Misskey 伺服器的文章。可以包含 Misskey 獨有的內容，例如圖片、音樂和投票等。詳見[這裡。](../docs/features/note)
 
 ## Misskist
-在Misskey伺服器擁有帳戶的使用者。或者指這其中重度使用者的詞。
+在 Misskey 伺服器擁有帳戶的使用者。或者指這其中重度使用者的詞。
 
 ## 審查員
 具有將濫發文者凍結、靜音，以及將不當的貼文刪除等與伺服器運作相關權限的使用者。在許多情況下，伺服器管理者會在伺服器內招募和任用審查員。

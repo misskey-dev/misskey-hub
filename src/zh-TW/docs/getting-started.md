@@ -1,7 +1,7 @@
-# 開始使用Misskey
-Misskey是軟體及其專案。
-對網路開放的運行Misskey的伺服器稱為**伺服器**。
-要使用Misskey，請在某個伺服器上建立帳戶，並使用那個伺服器。
+# 開始使用 Misskey
+Misskey 是軟體及其專案。
+對網路開放的運行 Misskey 的伺服器稱為**伺服器**。
+要使用 Misskey，請在某個伺服器上建立帳戶，並使用那個伺服器。
 
 可以從[伺服器列表](../instances.md)裡面選擇喜歡的伺服器。
 
@@ -9,11 +9,11 @@ Misskey是軟體及其專案。
 無論選擇哪個伺服器，都可以和其他伺服器上的使用者互動。
 
 ::: details
-Misskey具備聯邦功能。
+Misskey 具備聯邦功能。
 
 聯邦功能允許不同伺服器上的用戶就像在同一個伺服器上一樣地跟蹤、反應、轉發等。
 
-Misskey搭載的聯邦功能基於稱為ActivityPub的開放式通用標準，與Mastodon和Pleroma等軟體相容。
+Misskey 搭載的聯邦功能基於稱為 ActivityPub 的開放式通用標準，與 Mastodon 和 Pleroma 等軟體相容。
 :::
 
 ## 如何選擇伺服器
