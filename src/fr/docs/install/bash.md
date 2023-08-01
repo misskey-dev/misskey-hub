@@ -17,7 +17,7 @@ There is also an update script.
 3. A Cloudflare Account (recommended)
 
 ::: danger
-Never change the domain name (hostname) of an instance once you start using it!
+Do not recreate the database with the domain/hostname of the server once you have started using it!
 :::
 
 ## Configure Cloudflare

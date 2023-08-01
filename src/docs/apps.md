@@ -11,6 +11,7 @@ Misskey Webに慣れてきたら、有志が開発する非公式アプリを試
 
 - **Kaiteki** (Web, Android, Windows, Linux): 幅広いプラットフォームで動作する。Mastodon, Pleroma, Twitterにも対応。[公式サイト](https://kaiteki.app)。[ソースコード](https://github.com/Kaiteki-Fedi/Kaiteki)。
 - **Milktea** (Android): タイムラインや特定の検索結果にタブから素早くアクセスできる。他のユーザーにニックネームを与えることができる。[Google Play](https://play.google.com/store/apps/details?id=jp.panta.misskeyandroidclient)。[ソースコード](https://github.com/pantasystem/Milktea)。
+- **Miria** (iOS, Mac, Android): タブにカスタム絵文字を設定できる機能や、MFMの入力補完等のMisskeyに特化した独自機能を持つ。[公式サイト](https://shiosyakeyakini.info/miria_web/index.html)。[App Store](https://apps.apple.com/jp/app/miria/id6449201469)。[Google Play](https://play.google.com/store/apps/details?id=info.shiosyakeyakini.miria)。[ソースコード](https://github.com/shiosyakeyakini-info/miria)
 - **MissRirica** (iOS, Android): Misskey用iOS/Androidクライアント。ほぼMisskey Web(v13)のUI、Push通知が届く。[App Store](https://apps.apple.com/app/missririca/id1659214999)。[Google Play](https://play.google.com/store/apps/details?id=space.riinswork.missririca)。[ソースコード](https://github.com/fruitriin/missRirica-client)
 - **Misscat** (iOS): スマホに適した直感的な操作性を提供することを目標に開発されている。[公式サイト](https://yuiga.dev/misscat/)。[App Store](https://apps.apple.com/app/id1505059993)。[ソースコード](https://github.com/YuigaWada/MissCat)。
 - **SocialHub** (iOS): Misskey, Mastodon, Twitter, Slack, Tumblrにも対応した有料アプリ。[公式サイト](https://uakihir0.github.io/socialhub/)。[App Store](https://apps.apple.com/us/app/socialhub-socialmedia-client/id1474451582)。

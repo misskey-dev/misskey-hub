@@ -4,7 +4,7 @@ Create Misskey instance with Docker Compose
 This guide describes how to install and setup Misskey with Docker Compose.
 
 ::: danger
-Never change the domain name (hostname) of an instance once you start using it!
+Do not recreate the database with the domain/hostname of the server once you have started using it!
 :::
 
 ::: tip Requirement
