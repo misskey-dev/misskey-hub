@@ -4,7 +4,7 @@ description: 'アプリケーションが要求する権限の一覧'
 
 # 権限の一覧
 
-| Permisson             | Description                  |
+| Permission            | Description                  |
 | --------------------- | ---------------------------- |
 | `read:account`        | アカウントの情報を見る       |
 | `write:account`       | アカウントの情報を変更する   |
