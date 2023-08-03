@@ -37,4 +37,8 @@
   host: 'msk.ilnk.info',
   name: 'えとねるん(EtonernROY)',
   lang: 'ja',
+}, {
+  host: 'misskey.au',
+  name: 'Misskey.AU',
+  lang: 'en',
 }]
