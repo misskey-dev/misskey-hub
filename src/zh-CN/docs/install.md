@@ -1,30 +1,30 @@
-# Create your own Misskey instance
-Thank you for your interest in building a Misskey instance 🚀
-There are several ways to create an instance, so please choose one below and read the guide.
+# 创建您自己的Misskey实例
+感谢您对创建 Misskey 实例的关注 🚀
+创建实例有几种方法，请从下面选择一种并阅读指南。
 
 ::: danger
-Never change the domain name (hostname) of an instance once you start using it!
+开始使用数据库后，请勿使用服务器的域名/主机名重新创建数据库！
 :::
 
 ::: danger
-If you use Cloudflare for your own server, do not use the Auto Minify setting.
+如果你在自己的服务器上使用 Cloudflare，请不要使用 Auto Minify（自动压缩）设置。
 
-Misskey will not work properly because Cloudflare will not interpret the latest JavaScript and will break the source code inside.
+由于 Cloudflare 无法解析最新的 JavaScript，并会破坏内部源代码，所以 Misskey 将无法正常工作。
 
-See also: [misskey-dev/misskey #9791](https://github.com/misskey-dev/misskey/issues/9791)
+参见：[misskey-dev/misskey #9791](https://github.com/misskey-dev/misskey/issues/9791)
 :::
 
-## Using Docker
-[See here](./install/docker.html)
+## 使用 Docker
+[点击查看](./install/docker.html)
 
-## Using Bash Script
-[See here](./install/bash.html)
+## 使用 Bash 脚本
+[点击查看](./install/bash.html)
 
-## Manually
-[See here](./install/manual.html)
+## 手动安装
+[点击查看](./install/manual.html)
 
-## Using Yunohost
-Misskey can be installed as an App on YunoHost. For more information see [the repository of the Misskey package for YunoHost](https://github.com/YunoHost-Apps/misskey_ynh).
+## 使用 Yunohost
+Misskey 可以作为一个应用安装在 YunoHost 上。更多信息请查看 [YunoHost 的 Misskey 包的仓库 ↗](https://github.com/YunoHost-Apps/misskey_ynh).
 
-## Using Kubernetes/TrueNAS Scale
-[See here](./install/kubernetes.html)
+## 使用 Kubernetes/TrueNAS Scale
+[点击查看](./install/kubernetes.html)

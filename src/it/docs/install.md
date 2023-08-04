@@ -5,7 +5,7 @@ Grazie per il tuo interesse nel costruire una istanza Misskey 🚀
 Ci sono vari modi per crearne una, scegli tra quelli elencati e segui la relativa guida.
 
 ::: danger
-Never change the domain name (hostname) of an instance once you start using it!
+Do not recreate the database with the domain/hostname of the server once you have started using it!
 :::
 
 ::: danger

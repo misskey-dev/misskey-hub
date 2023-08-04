@@ -2,7 +2,7 @@
 This guide describes how to install and setup Misskey using Kubernetes and Helm charts.
 
 ::: danger
-Never change the domain name (hostname) of an instance once you start using it!
+Do not recreate the database with the domain/hostname of the server once you have started using it!
 :::
 
 ## TrueCharts and TrueNAS Scale

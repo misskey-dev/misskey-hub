@@ -22,11 +22,17 @@ If you mute a user, the following content about that user will no longer appear 
 - notifications from that user
 - message history with the user in Misskey chat
 - etc.
+- 
 
 To mute a user in Misskey Web, open the menu on the user's profile page and press the "Mute" button.
+To mute an instance, or a list of instances in Misskey Web, open your Settings page, and you should see an "Instance Mutes" section, right above the Mutes and Blocks section. In this page, you can enter a list of instances you want to mute, separated with a new line.
 
 ::: tip
-They will not be notified that you have muted them, and they will not know that you have muted them.
+Users and instances will not be notified that you have muted them, and they will not know that you have muted them.
+:::
+
+::: warning
+If you mute an instance, any notes / renotes from the instances on the list will be hidden / muted, including those of users replying to an user of a muted instance.
 :::
 
 ## Blocking
