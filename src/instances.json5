@@ -10,18 +10,6 @@
 	name: '𝙉𝙚𝙬𝙨𝙠𝙚𝙮.𝙘𝙘',
 	lang: 'ja',
 }, {
-	host: 'stop.voring.me',
-	name: 'ThoseFewCalculators',
-	lang: 'en',
-}, {
-	host: 'mk.nixnet.social',
-	name: 'NixNet Social',
-	lang: 'en',
-}, {
-  host: 'jigglypuff.club',
-  name: 'Jigglypuff!',
-  lang: 'en',
-}, {
   host: 'minidisc.tokyo',
   name: 'ミニディスク【Ｍｉｎｉ　Ｄｉｓｕｋｕ】',
   lang: 'en',
@@ -32,14 +20,6 @@
 }, {
   host: 'misskey.social',
   name: 'Misskey Social',
-  lang: 'it',
-}, {
-	host: 'fedi.mint.lgbt',
-	name: 'Fedimint',
-	lang: 'en',
-}, {
-  host: 'www.foxyhole.io',
-  name: 'FoxyHole',
   lang: 'it',
 }, {
   host: 'kitsune.moe',
@@ -53,11 +33,6 @@
   host: 'misskey.kindworld.one',
   name: 'KindWorld',
   lang: 'ja',
-},
- {
-  host: 'vrsocial.network',
-  name: 'VRSocial',
-  lang: 'en',
 }, {
   host: 'msk.ilnk.info',
   name: 'えとねるん(EtonernROY)',

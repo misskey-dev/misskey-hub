@@ -16,5 +16,6 @@ Misskey Webに慣れてきたら、有志が開発する非公式アプリを試
 - **Misscat** (iOS): スマホに適した直感的な操作性を提供することを目標に開発されている。[公式サイト](https://yuiga.dev/misscat/)。[App Store](https://apps.apple.com/app/id1505059993)。[ソースコード](https://github.com/YuigaWada/MissCat)。
 - **SocialHub** (iOS): Misskey, Mastodon, Twitter, Slack, Tumblrにも対応した有料アプリ。[公式サイト](https://uakihir0.github.io/socialhub/)。[App Store](https://apps.apple.com/us/app/socialhub-socialmedia-client/id1474451582)。
 - **ZonePane(ぞーぺん)** (Android): タイムラインやリスト、チャンネルをタブ化できる。既読管理が優秀。TwitterアプリTwitPaneのMisskey版でMastodonにも対応。 [Google Play](https://play.google.com/store/apps/details?id=com.zonepane)。
+- **TootRain** (Mac): タイムラインやリストの投稿をリアルタイムに、コメント風に画面上に表示するMacアプリです。 [サイト](https://b123400.net/tootrain/ja)、[ソースコード](https://github.com/b123400/TootRain)。
 
 とはいえ、Misskeyは活発に機能が更新されているため、最新の機能への対応が遅れることもあります。特にこだわりがなければMisskey Webの利用をおすすめします。

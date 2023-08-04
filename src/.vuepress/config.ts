@@ -52,6 +52,7 @@ export default defineUserConfig<DefaultThemeOptions>({
 	locales: {
 		'/': { lang: 'ja-JP', description: 'オープンソースの分散型マイクロブログプラットフォーム、Misskeyの公式サイト' },
 		'/en/': { lang: 'en-US', description: 'Official website of Misskey project' },
+		'/id/': { lang: 'id-ID', description: 'Situs resmi dari Misskey, platform mikroblog sumber terbuka yang terdistribusi'},
 		'/ko/': { lang: 'ko-KR', description: '오픈소스 분산형 마이크로블로깅 플랫폼 Misskey' },
 		'/it/': { lang: 'it-IT', description: 'Sito ufficiale del progetto Misskey' },
 		'/pl/': { lang: 'pl-PL', description: 'Oficjalna strona projektu Misskey' },
@@ -225,6 +226,93 @@ export default defineUserConfig<DefaultThemeOptions>({
 							{ text: 'Accounts', children: [{ text: '@repo@p1.a9z.dev', link: 'https://p1.a9z.dev/@repo' }] },
 							{
 								text: 'Repository', children: [
+									{ text: 'misskey', link: 'https://github.com/misskey-dev/misskey' },
+									{ text: 'misskey.js', link: 'https://github.com/misskey-dev/misskey.js' },
+									{ text: 'mfm.js', link: 'https://github.com/misskey-dev/mfm.js' },
+									{ text: 'misskey-hub', link: 'https://github.com/misskey-dev/misskey-hub' },
+								]
+							},
+						]
+					},
+				],
+			},
+			'/id/': {
+				selectLanguageName: 'Bahasa Indonesia',
+				contributorsText: 'Kontributor',
+				lastUpdatedText: 'Dimutakhirkan terakhir',
+				editLinkText: 'Sunting halaman ini',
+				relatedPagesText: 'Halaman terkait',
+				readThisArticle: 'Baca artikel ini',
+				navbar: [
+					{ text: 'Blog', link: '/id/blog/' },
+					{ text: 'Ikut serta', children: ['/id/instances', '/id/plugins/', '/id/appendix/assets'] },
+					{
+						text: 'Dokumentasi', children: [
+							'/id/docs/misskey',
+							'/id/docs/releases',
+							'/id/docs/misskey-hub',
+							'/id/docs/faq',
+							'/id/docs/glossary',
+							'/id/docs/troubleshooting',
+							{
+								text: 'Fitur', children: [
+									'/id/docs/features/note',
+									'/id/docs/features/reaction',
+									'/id/docs/features/timeline',
+									'/id/docs/features/mfm',
+									'/id/docs/features/custom-emoji',
+									'/id/docs/features/drive',
+									'/id/docs/features/deck',
+									'/id/docs/features/charts',
+									'/id/docs/features/online-status',
+									'/id/docs/features/share-form',
+									'/id/docs/features/ads',
+									'/id/docs/features/thread-mute',
+									'/id/docs/features/word-mute',
+									'/id/docs/features/mute-and-block',
+									'/id/docs/features/plugin',
+									'/id/docs/features/antenna',
+									'/id/docs/features/clip',
+									'/id/docs/features/favorite',
+									'/id/docs/features/follow',
+									'/id/docs/features/pages',
+									'/id/docs/features/theme',
+									'/id/docs/features/widgets',
+								]
+							},
+							{
+								text: 'Untuk Pengembang', children: [
+									'/id/docs/api',
+									'/id/docs/api/streaming',
+									'/id/docs/api/endpoints.html',
+									'/id/docs/features/webhook',
+								]
+							},
+							{
+								text: 'Untuk Admin', children: [
+									'/id/docs/install',
+									'/id/docs/admin/emoji',
+									'/id/docs/admin/cdn',
+									'/id/docs/admin/nginx',
+									'/id/docs/admin/push-docker-hub',
+									'/id/docs/admin/troubleshooting',
+									'/id/docs/tips/disable-timelines',
+									'/id/docs/admin/default-reaction',
+									'/id/docs/features/silence',
+									'/id/docs/tips/scale-out',
+								]
+							},
+						]
+					},
+					{
+						text: 'Tautan', children: [
+							{ text: 'Discord Resmi', link: 'https://discord.gg/Wp8gVStHW3' },
+							{ text: 'Donasi (Patreon)', link: 'https://www.patreon.com/syuilo' },
+							{ text: 'Penerjemahan (Crowdin)', link: 'https://crowdin.com/project/misskey' },
+							{ text: '藍.moe (Situs Maskot)', link: 'https://xn--931a.moe' },
+							{ text: 'Akun', children: [{ text: '@repo@p1.a9z.dev', link: 'https://p1.a9z.dev/@repo' }] },
+							{
+								text: 'Repositori', children: [
 									{ text: 'misskey', link: 'https://github.com/misskey-dev/misskey' },
 									{ text: 'misskey.js', link: 'https://github.com/misskey-dev/misskey.js' },
 									{ text: 'mfm.js', link: 'https://github.com/misskey-dev/mfm.js' },
