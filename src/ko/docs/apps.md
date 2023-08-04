@@ -16,5 +16,6 @@ Misskey Web에 익숙해졌다면 유저가 개발하는 비공식 앱을 사용
 - **Misscat** (iOS): 스마트폰에 적합한 직관적인 조작성을 제공하는 것을 목표로 개발되고 있었으나, 2021년 5월을 끝으로 개발이 중지되었습니다. [공식 사이트](https://yuiga.dev/misscat/) [App Store](https://apps.apple.com/app/id1505059993) [소스 코드](https://github.com/YuigaWada/MissCat)
 - **SocialHub** (iOS): Misskey, 마스토돈, 트위터, Slack, Tumblr 등을 지원하는 유료 앱입니다. [공식 사이트](https://uakihir0.github.io/socialhub/) [App Store](https://apps.apple.com/us/app/socialhub-socialmedia-client/id1474451582)
 - **ZonePane (Android)**: 타임라인, 리스트, 채널을 탭으로 구분할 수 있다. 트위터 앱 TwitPane의 Misskey 버전으로 Mastodon에도 대응한다. [Google Play](https://play.google.com/store/apps/details?id=com.zonepane)
+- **TootRain** (Mac): 타임라인이나 리스트의 게시물을 실시간으로, 댓글 형식으로 보여주는 Mac 앱. [공식 사이트](https://b123400.net/tootrain/ja) [소스 코드](https://github.com/b123400/TootRain)
 
 그럼에도, Misskey는 활발하게 기능이 업데이트되고 있어 최신 기능에 대한 대응이 늦어질 수 있습니다. 특별한 고집이 없다면 Misskey Web의 이용을 추천합니다.
