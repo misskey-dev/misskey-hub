@@ -343,12 +343,14 @@ export default defineUserConfig<DefaultThemeOptions>({
 							'/ko/docs/glossary',
 							'/ko/docs/notes',
 							'/ko/docs/troubleshooting',
+							'/ko/docs/apps',
 							{
 								text: '기능', children: [
 									'/ko/docs/features/note',
 									'/ko/docs/features/reaction',
 									'/ko/docs/features/timeline',
 									'/ko/docs/features/mfm',
+									'/ko/docs/features/mention',
 									'/ko/docs/features/custom-emoji',
 									'/ko/docs/features/drive',
 									'/ko/docs/features/deck',
