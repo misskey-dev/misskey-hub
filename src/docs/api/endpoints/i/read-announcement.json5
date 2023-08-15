@@ -1,0 +1,29 @@
+{
+	summary: 'お知らせを既読にします。',
+	description: 'お知らせを既読にします。',
+	tags: [
+		'account',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {
+			announcementId: {
+				type: 'string',
+				format: 'misskey:id',
+				description: '既読にするお知らせのid。',
+			},
+		},
+		required: [
+			'announcementId',
+		],
+	},
+	res: {},
+	errors: {
+		'184663db-df88-4bc2-8b52-fb85f0681939': {
+			id: '184663db-df88-4bc2-8b52-fb85f0681939',
+			code: 'NO_SUCH_ANNOUNCEMENT',
+			description: 'お知らせが存在しません。',
+		},
+	},
+}

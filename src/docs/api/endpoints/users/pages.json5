@@ -1,0 +1,51 @@
+{
+	summary: 'ユーザーが作成し、公開しているページを取得します。',
+	description: 'ユーザーが作成し、公開しているページを取得します。',
+	tags: [
+		'users',
+	],
+	requireCredential: false,
+	req: {
+		type: 'object',
+		properties: {
+			userId: {
+				type: 'string',
+				format: 'misskey:id',
+				description: 'ユーザーのid。',
+			},
+			limit: {
+				type: 'integer',
+				minimum: 1,
+				maximum: 100,
+				default: 10,
+				description: '取得するページの最大数。',
+			},
+			sinceId: {
+				type: 'string',
+				format: 'misskey:id',
+				description: '指定すると、idがその値よりも大きいページを返します。',
+			},
+			untilId: {
+				type: 'string',
+				format: 'misskey:id',
+				description: '指定すると、idがその値よりもc小さいページを返します。',
+			},
+		},
+		required: [
+			'userId',
+		],
+	},
+	res: {
+		type: 'array',
+		optional: false,
+		nullable: false,
+		items: {
+			type: 'object',
+			optional: false,
+			nullable: false,
+			ref: 'Page',
+			$ref: 'misskey://Page',
+		},
+	},
+	errors: {},
+}

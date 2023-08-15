@@ -1,0 +1,78 @@
+{
+	summary: '認識している他のサーバーの一覧を取得します。',
+	description: '認識している他のサーバーの一覧を取得します。各パラメータを指定しない場合、そのパラメータでの絞り込みは行われません。複数のパラメータを指定すると、それらの条件をすべて満たすサーバーを検索します。',
+	tags: [
+		'federation',
+	],
+	requireCredential: false,
+	req: {
+		type: 'object',
+		properties: {
+			host: {
+				type: 'string',
+				nullable: true,
+				description: 'サーバーのホスト名（ドメインやIPアドレス）か、その一部。ホスト名は部分一致で検索されます。',
+			},
+			blocked: {
+				type: 'boolean',
+				nullable: true,
+				description: 'trueにすると、ブロックしているサーバーのみを検索します。falseにすると、ブロックしていないサーバーのみを検索します。',
+			},
+			notResponding: {
+				type: 'boolean',
+				nullable: true,
+				description: 'trueにすると、応答のないサーバーのみを検索します。falseにすると、応答のあるサーバーのみを検索します。',
+			},
+			suspended: {
+				type: 'boolean',
+				nullable: true,
+				description: 'trueにすると、ローカルからの配信を停止しているサーバーのみを検索します。falseにすると、配信を停止していないサーバーのみを検索します。',
+			},
+			federating: {
+				type: 'boolean',
+				nullable: true,
+				description: 'trueにすると、ローカルのユーザーをフォローしているユーザーか、ローカルのユーザーにフォローされているユーザーが所属するサーバーのみを検索します。falseにすると、そのようなユーザーがいないサーバーのみを検索します。',
+			},
+			subscribing: {
+				type: 'boolean',
+				nullable: true,
+				description: 'trueにすると、ローカルユーザーからフォローされているユーザーが所属するサーバーのみを検索します。falseにすると、そのようなユーザーがいないサーバーのみを検索します。',
+			},
+			publishing: {
+				type: 'boolean',
+				nullable: true,
+				description: 'trueにすると、ローカルユーザーをフォローしているユーザーが所属するサーバーのみを検索します。falseにすると、そのようなユーザーがいないサーバーのみを検索します。',
+			},
+			limit: {
+				type: 'integer',
+				minimum: 1,
+				maximum: 100,
+				default: 30,
+				description: '取得するサーバーの最大数。',
+			},
+			offset: {
+				type: 'integer',
+				default: 0,
+				description: '検索結果の先頭offset個をスキップします。',
+			},
+			sort: {
+				type: 'string',
+				description: 'ソート順。+は降順（日時であれば新しい順）を、-は昇順（古い順）を示します。notesは投稿数です。usersはユーザー数です。followingはローカルユーザーへのフォローの数です。followersはローカルユーザーからのフォローの数です。pubSubはまずfollowingでソートを行い、同じフォロー数で並んだ場合、それらのサーバーはfollowersでさらにソートします。caughtAtはサーバーの発見時刻、lastCommunicatedAtは最後に通信を行った時刻です。',
+			},
+		},
+		required: [],
+	},
+	res: {
+		type: 'array',
+		optional: false,
+		nullable: false,
+		items: {
+			type: 'object',
+			optional: false,
+			nullable: false,
+			ref: 'FederationInstance',
+			$ref: 'misskey://FederationInstance',
+		},
+	},
+	errors: {},
+}

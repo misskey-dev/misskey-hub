@@ -1,0 +1,38 @@
+{
+	summary: 'ユーザー名が利用可能か確認します。',
+	description: 'ユーザー名が利用可能か確認します。',
+	tags: [
+		'users',
+	],
+	requireCredential: false,
+	req: {
+		type: 'object',
+		properties: {
+			username: {
+				type: 'string',
+				pattern: '^\\w{1,20}$',
+				description: 'ユーザー名',
+			},
+		},
+		required: [
+			'username',
+		],
+	},
+	res: {
+		type: 'object',
+		optional: false,
+		nullable: false,
+		properties: {
+			available: {
+				type: 'boolean',
+				optional: false,
+				nullable: false,
+				description: 'ユーザー名が利用可能であれば true です。',
+			},
+		},
+		required: [
+			'available',
+		],
+	},
+	errors: {},
+}

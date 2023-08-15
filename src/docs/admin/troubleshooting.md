@@ -42,8 +42,8 @@ Misskeyのビルドには、経験則上、最低でも2GBのメモリが必要�
 - これでもだめそうだったら、最初から[構築の手引き](/docs/install/manual.html)の手順に従ってやり直してみてください。
 
 ## バージョンアップ後に不具合が発生した
-- [構築の手引き](/docs/install/manual.html)をよく読みましょう。
-- Misskeyのバージョンアップ時にはしっかり`yarn install`や`npm run migrate`してください。それでも直らない場合、`npm run clean-all && yarn install`を試し、`npm run build && npm run migrate && npm start`してみてください。
+- [構築の手引き](/docs/install/manual.html)およびリリースノートをよく読みましょう。
+- Misskeyのバージョンアップ時にはしっかり`pnpm install`や`pnpm run migrate`してください。それでも直らない場合、`pnpm run clean-all && pnpm install`を試し、`pnpm run build && pnpm run migrate && pnpm start`してみてください。
 - これでもだめそうだったら、最初から[構築の手引き](/docs/install/manual.html)の手順に従ってやり直してみてください。
 
 ---
@@ -70,7 +70,7 @@ URLとポート番号のしくみは、少し分かりにくいと思います�
 url: https://example.tld/
 ```
 
-**`url: `には、インスタンスにブラウザでアクセスしたときアドレスバーに表示される**(したい)**URLを書きます。**
+**`url: `には、サーバーにブラウザでアクセスしたときアドレスバーに表示される**(したい)**URLを書きます。**
 
 #### ポートと証明書の設定
 ```yml
@@ -80,7 +80,7 @@ url: https://example.tld/
 #### ポートと証明書の設定      ####################################
 #
 # Misskey supports two deployment options for public.
-# Misskeyは2つのインスタンス開設方法をサポートしています。
+# Misskeyは2つのサーバー開設方法をサポートしています。
 #
 
 # Option 1: With Reverse Proxy
@@ -190,7 +190,7 @@ redis-serverは起動していますか？
 - `default.yml`の`redis:`の`pass:`の行をコメントアウトする。
 
 ## 上部に「開発ビルドです」と書かれた赤いバーが表示される
-インスタンスを公開する場合は必ずproductionビルドを使いましょう。
+サーバーを公開する場合は必ずproductionビルドを使いましょう。
 
 製品ビルドにするには、環境変数が`NODE_ENV=production`になるように設定し`npm run build && npm start`します。
 
@@ -236,4 +236,4 @@ Amazon S3に互換性のあるオブジェクトストレージであれば利�
 4. [Misskey Forum](https://forum.misskey.io/)を検索してみる。
 5. 検索してどうしても見つからなかったら、専門家に質問してみてください。
    1. Forumや[MisskeyのDiscordサーバー](https://discord.gg/P4yYqYBjEp)もしくは[「鯖缶工場」](https://discord.gg/mJJGAHv)で聞いてみる
-   2. 開発者（[aqz]](https://p1.a9z.dev/@aqz)やしゅいろ）にリプライやダイレクト投稿を送信して聞いてみる
+   2. 開発者（[aqz](https://p1.a9z.dev/@aqz)やしゅいろ）にリプライやダイレクト投稿を送信して聞いてみる

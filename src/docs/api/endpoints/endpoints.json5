@@ -1,0 +1,30 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'meta',
+	],
+	requireCredential: false,
+	req: {
+		type: 'object',
+		properties: {},
+		required: [],
+	},
+	res: {
+		type: 'array',
+		optional: false,
+		nullable: false,
+		items: {
+			type: 'string',
+			optional: false,
+			nullable: false,
+		},
+		example: [
+			'admin/abuse-user-reports',
+			'admin/accounts/create',
+			'admin/announcements/create',
+			'...',
+		],
+	},
+	errors: {},
+}

@@ -1,0 +1,26 @@
+{
+	summary: 'ログイン中のユーザーが作成したクリップの一覧を取得します。',
+	description: 'ログイン中のユーザーが作成したクリップの一覧を取得します。',
+	tags: [
+		'clips',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {},
+		required: [],
+	},
+	res: {
+		type: 'array',
+		optional: false,
+		nullable: false,
+		items: {
+			type: 'object',
+			optional: false,
+			nullable: false,
+			ref: 'Clip',
+			$ref: 'misskey://Clip',
+		},
+	},
+	errors: {},
+}

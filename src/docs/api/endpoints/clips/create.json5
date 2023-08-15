@@ -1,0 +1,42 @@
+{
+	summary: 'クリップを作成します。',
+	description: 'クリップを作成します。',
+	tags: [
+		'clips',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {
+			name: {
+				type: 'string',
+				minLength: 1,
+				maxLength: 100,
+				description: 'クリップの名前。',
+			},
+			isPublic: {
+				type: 'boolean',
+				default: false,
+				description: 'trueにすると、他のユーザーやログインしていないクライアントにクリップを公開します。'
+			},
+			description: {
+				type: 'string',
+				nullable: true,
+				minLength: 1,
+				maxLength: 2048,
+				description: 'クリップの説明。',
+			},
+		},
+		required: [
+			'name',
+		],
+	},
+	res: {
+		type: 'object',
+		optional: false,
+		nullable: false,
+		ref: 'Clip',
+		$ref: 'misskey://Clip',
+	},
+	errors: {},
+}

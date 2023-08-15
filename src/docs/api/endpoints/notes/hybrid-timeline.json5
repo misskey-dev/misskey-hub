@@ -1,0 +1,78 @@
+{
+	summary: 'ソーシャルタイムライン (STL) を取得します。',
+	description: 'ソーシャルタイムライン (STL) を取得します。ソーシャルタイムラインには、サーバー内の全てのパブリックなノートと自分のフォローしているユーザーのノートが含まれます。',
+	tags: [
+		'notes',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {
+			limit: {
+				type: 'integer',
+				minimum: 1,
+				maximum: 100,
+				default: 10,
+				description: '取得するノートの最大数。',
+			},
+			sinceId: {
+				type: 'string',
+				format: 'misskey:id',
+				description: '指定すると、idがその値よりも大きいノートを返します。',
+			},
+			untilId: {
+				type: 'string',
+				format: 'misskey:id',
+				description: '指定すると、idがその値よりも小さいノートを返します。',
+			},
+			sinceDate: {
+				type: 'integer',
+				description: 'エポック秒で日時を指定すると、その日時より後に作成されたノートを返します。',
+			},
+			untilDate: {
+				type: 'integer',
+				description: 'エポック秒で日時を指定すると、その日時より前に作成されたノートを返します。',
+			},
+			includeMyRenotes: {
+				type: 'boolean',
+				default: true,
+				description: 'trueにすると、ログイン中のユーザーが行ったRenoteを含めます。',
+			},
+			includeRenotedMyNotes: {
+				type: 'boolean',
+				default: true,
+				description: 'trueにすると、ログイン中のユーザーが投稿したノートのRenoteを含めます。',
+			},
+			includeLocalRenotes: {
+				type: 'boolean',
+				default: true,
+				description: 'trueにすると、ローカルのユーザーが行ったRenoteを含めます。',
+			},
+			withFiles: {
+				type: 'boolean',
+				default: false,
+				description: 'ファイルが添付されたノートのみ取得するか否か',
+			},
+		},
+		required: [],
+	},
+	res: {
+		type: 'array',
+		optional: false,
+		nullable: false,
+		items: {
+			type: 'object',
+			optional: false,
+			nullable: false,
+			ref: 'Note',
+			$ref: 'misskey://Note',
+		},
+	},
+	errors: {
+		'620763f4-f621-4533-ab33-0577a1a3c342': {
+			id: '620763f4-f621-4533-ab33-0577a1a3c342',
+			code: 'STL_DISABLED',
+			description: 'ソーシャルタイムラインが無効になっています。',
+		},
+	},
+}

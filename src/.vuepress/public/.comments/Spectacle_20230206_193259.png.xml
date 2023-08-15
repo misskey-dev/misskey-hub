@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<comment version="3.0">
+  <caption>The first hashtag tweet</caption>
+  <note>
+@online{messina_first_2007,
+	title = {The first hashtag tweet},
+	url = {https://twitter.com/chrismessina/status/223115412},
+	abstract = {how do you feel about using \# (pound) for groups. As in \#barcamp [msg]?},
+	titleaddon = {Twitter},
+	type = {Microblogging},
+	author = {Messina, Chris},
+	urldate = {2023-02-07},
+	date = {2007-08-23},
+	langid = {english},
+	note = {Publication Title: Twitter
+Archive: https://web.archive.org/web/20131109001441/https://twitter.com/chrismessina/status/223115412
+datetime: 2007-08-23T19:25:10.000Z
+Username: @chrismessina},
+}
+</note>
+  <place>https://twitter.com/chrismessina/status/223115412</place>
+  <time value="2007:08:23 19:25:10"/>
+  <categories>
+    <category value="twitter"/>
+    <category value="chrismessina"/>
+    <category value="chris"/>
+    <category value="messina"/>
+    <category value="tag"/>
+    <category value="tags"/>
+    <category value="hashtag"/>
+    <category value="hashtags"/>
+    <category value="first hashtag"/>
+    <category value="the first hashtag"/>
+    <category value="the first hashtag tweet"/>
+    <category value="hashtag tweet"/>
+    <category value="barcamp"/>
+    <category value="tweet"/>
+    <category value="pound"/>
+    <category value="pound sign"/>
+  </categories>
+</comment>

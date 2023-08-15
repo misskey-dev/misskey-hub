@@ -1,0 +1,51 @@
+{
+	summary: 'ノートへのリプライや引用を取得します。',
+	description: 'ノートへのリプライや引用を取得します。引用なしのRenoteは取得されません。',
+	tags: [
+		'notes',
+	],
+	requireCredential: false,
+	req: {
+		type: 'object',
+		properties: {
+			noteId: {
+				type: 'string',
+				format: 'misskey:id',
+				description: 'ノートのid。',
+			},
+			limit: {
+				type: 'integer',
+				minimum: 1,
+				maximum: 100,
+				default: 10,
+				description: '取得するノートの最大数。',
+			},
+			sinceId: {
+				type: 'string',
+				format: 'misskey:id',
+				description: '指定すると、idがその値よりも大きいノートを返します。'
+			},
+			untilId: {
+				type: 'string',
+				format: 'misskey:id',
+				description: '指定すると、idがその値よりも小さいノートを返します。',
+			},
+		},
+		required: [
+			'noteId',
+		],
+	},
+	res: {
+		type: 'array',
+		optional: false,
+		nullable: false,
+		items: {
+			type: 'object',
+			optional: false,
+			nullable: false,
+			ref: 'Note',
+			$ref: 'misskey://Note',
+		},
+	},
+	errors: {},
+}

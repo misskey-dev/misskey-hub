@@ -1,0 +1,29 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'admin',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {
+			to: {
+				type: 'string',
+			},
+			subject: {
+				type: 'string',
+			},
+			text: {
+				type: 'string',
+			},
+		},
+		required: [
+			'to',
+			'subject',
+			'text',
+		],
+	},
+	res: {},
+	errors: {},
+}

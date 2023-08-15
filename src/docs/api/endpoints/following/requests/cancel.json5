@@ -1,0 +1,40 @@
+{
+	summary: '送ったフォローリクエストを取り消します。',
+	description: 'ログイン中のユーザーが他のユーザーに送ったフォローリクエストを取り消します。',
+	tags: [
+		'following',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {
+			userId: {
+				type: 'string',
+				format: 'misskey:id',
+				description: 'フォローリクエストを送った相手ユーザーのid。',
+			},
+		},
+		required: [
+			'userId',
+		],
+	},
+	res: {
+		type: 'object',
+		optional: false,
+		nullable: false,
+		ref: 'UserLite',
+		$ref: 'misskey://UserLite',
+	},
+	errors: {
+		'4e68c551-fc4c-4e46-bb41-7d4a37bf9dab': {
+			id: '4e68c551-fc4c-4e46-bb41-7d4a37bf9dab',
+			code: 'NO_SUCH_USER',
+			description: 'ユーザーが存在しません。',
+		},
+		'089b125b-d338-482a-9a09-e2622ac9f8d4': {
+			id: '089b125b-d338-482a-9a09-e2622ac9f8d4',
+			code: 'FOLLOW_REQUEST_NOT_FOUND',
+			description: 'フォローリクエストがありません。',
+		},
+	},
+}

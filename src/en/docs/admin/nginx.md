@@ -7,10 +7,10 @@
 	 2. If using a CDN such as Cloudflare, remove 4 lines from "If it's behind another reverse proxy or CDN, remove the following."
 3. If you create `/etc/nginx/sites-available/misskey.conf`, create symlink as `/etc/nginx/sites-enabled/misskey.conf`.\
    `sudo ln -s /etc/nginx/sites-available/misskey.conf /etc/nginx/sites-enabled/misskey.conf`
-4. Run `nginx -t` to verify that the configuration file will be loaded successfully.
+4. Run `sudo nginx -t` to verify that the configuration file will be loaded successfully.
 5. Run `sudo systemctl restart nginx` to restart nginx.
 
-# Nginx cofig example
+# Nginx config example
 
 ```nginx
 # For WebSocket
@@ -80,6 +80,7 @@ server {
         proxy_cache cache1;
         proxy_cache_lock on;
         proxy_cache_use_stale updating;
+        proxy_force_ranges on;
         add_header X-Cache $upstream_cache_status;
     }
 }

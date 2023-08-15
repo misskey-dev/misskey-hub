@@ -1,0 +1,45 @@
+{
+	summary: 'ユーザーをブロックします。',
+	description: 'ユーザーをブロックします。',
+	tags: [
+		'account',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {
+			userId: {
+				type: 'string',
+				format: 'misskey:id',
+				description: 'ブロックするユーザーのid。',
+			},
+		},
+		required: [
+			'userId',
+		],
+	},
+	res: {
+		type: 'object',
+		optional: false,
+		nullable: false,
+		ref: 'UserDetailedNotMe',
+		$ref: 'misskey://UserDetailedNotMe',
+	},
+	errors: {
+		'7cc4f851-e2f1-4621-9633-ec9e1d00c01e': {
+			id: '7cc4f851-e2f1-4621-9633-ec9e1d00c01e',
+			code: 'NO_SUCH_USER',
+			description: 'ユーザーが存在しません。',
+		},
+		'88b19138-f28d-42c0-8499-6a31bbd0fdc6': {
+			id: '88b19138-f28d-42c0-8499-6a31bbd0fdc6',
+			code: 'BLOCKEE_IS_YOURSELF',
+			description: '自分をブロックしようとしました。',
+		},
+		'787fed64-acb9-464a-82eb-afbd745b9614': {
+			id: '787fed64-acb9-464a-82eb-afbd745b9614',
+			code: 'ALREADY_BLOCKING',
+			description: 'すでにブロックしています。',
+		},
+	},
+}

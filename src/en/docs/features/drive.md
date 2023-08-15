@@ -1,4 +1,5 @@
 # Drive
+
 Drive is a feature that allows you to manage your files on Misskey.
 
 ::: tip
@@ -9,13 +10,14 @@ You can upload any file directly on the Drive page on Misskey Web, and any image
 
 Files uploaded to the drive can be downloaded at any time, or files can be reused by using 'attach files from drive' when creating notes.
 
-You can also create folders on your drive to organise multiple files together.
+You can also create folders on your drive to organize multiple files together.
 
 ::: warning
 At the moment, when you delete a file from your drive, **all the content (notes, pages, etc.)** attached to that file will also be deleted.
 :::
 
 ## Warning (NSFW)
+
 Warning or NSFW (Not safe for work) is a flag that can be set on files in your drive.
 Files that have been flagged as unsafe to view will not be displayed without user interaction.
 This flag can be used, for example, to prevent images that are not suitable for viewing in the workplace or in public places from suddenly appearing.

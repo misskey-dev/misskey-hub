@@ -1,0 +1,57 @@
+{
+	summary: 'クリップに含まれるノートを取得します。',
+	description: 'クリップに含まれるノートを取得します。非公開のクリップは、作成したユーザーのみが閲覧できます。',
+	tags: [
+		'account',
+	],
+	requireCredential: false,
+	req: {
+		type: 'object',
+		properties: {
+			clipId: {
+				type: 'string',
+				format: 'misskey:id',
+				description: 'クリップのid。',
+			},
+			limit: {
+				type: 'integer',
+				minimum: 1,
+				maximum: 100,
+				default: 10,
+				description: '取得するノートの最大数。',
+			},
+			sinceId: {
+				type: 'string',
+				format: 'misskey:id',
+				description: '指定すると、idがその値よりも大きいノートを返します。',
+			},
+			untilId: {
+				type: 'string',
+				format: 'misskey:id',
+				description: '指定すると、idがその値より小さいノートを返します。',
+			},
+		},
+		required: [
+			'clipId',
+		],
+	},
+	res: {
+		type: 'array',
+		optional: false,
+		nullable: false,
+		items: {
+			type: 'object',
+			optional: false,
+			nullable: false,
+			ref: 'Note',
+			$ref: 'misskey://Note',
+		},
+	},
+	errors: {
+		'1d7645e6-2b6d-4635-b0fe-fe22b0e72e00': {
+			id: '1d7645e6-2b6d-4635-b0fe-fe22b0e72e00',
+			code: 'NO_SUCH_CLIP',
+			description: 'クリップが存在しないか、アクセスが許可されていません。',
+		},
+	},
+}

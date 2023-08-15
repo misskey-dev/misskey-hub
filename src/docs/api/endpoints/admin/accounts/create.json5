@@ -1,0 +1,43 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'admin',
+	],
+	requireCredential: false,
+	req: {
+		type: 'object',
+		properties: {
+			username: {
+				type: 'string',
+				pattern: '^\\w{1,20}$',
+			},
+			password: {
+				type: 'string',
+				minLength: 1,
+			},
+		},
+		required: [
+			'username',
+			'password',
+		],
+	},
+	res: {
+		type: 'object',
+		optional: false,
+		nullable: false,
+		ref: 'User',
+		properties: {
+			token: {
+				type: 'string',
+				optional: false,
+				nullable: false,
+			},
+		},
+		required: [
+			'token',
+		],
+		$ref: 'misskey://User',
+	},
+	errors: {},
+}

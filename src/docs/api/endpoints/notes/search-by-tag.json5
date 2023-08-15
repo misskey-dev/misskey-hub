@@ -1,0 +1,100 @@
+{
+	summary: '指定されたハッシュタグが付けられたノートを取得します。',
+	description: '指定されたハッシュタグが付けられたノートを取得します。複数のハッシュタグを組み合わせた検索条件を設定できます。',
+	tags: [
+		'notes',
+	],
+	requireCredential: false,
+	req: {
+		type: 'object',
+		properties: {
+			reply: {
+				type: 'boolean',
+				nullable: true,
+				default: null,
+				description: 'trueにすると返信だけを、falseにすると返信以外を取得します。値を設定しなければ返信であるかそうでないかに関係なくノートを取得します。',
+			},
+			renote: {
+				type: 'boolean',
+				nullable: true,
+				default: null,
+				description: 'trueにするとRenoteだけを、falseにするとRenote以外を取得します。値を設定しなければRenoteであるかそうでないかに関係なくノートを取得します。',
+			},
+			withFiles: {
+				type: 'boolean',
+				default: false,
+				description: 'trueにすると、ファイルが添付されたノートのみを取得します。',
+			},
+			poll: {
+				type: 'boolean',
+				nullable: true,
+				default: null,
+				description: 'trueにすると投票を含むノートだけを、falseにすると含まないノートだけを取得します。値を設定しなければ投票の有無にかかわらずノートを取得します。',
+			},
+			sinceId: {
+				type: 'string',
+				format: 'misskey:id',
+				description: '指定すると、idがその値よりも大きいノートを返します。',
+			},
+			untilId: {
+				type: 'string',
+				format: 'misskey:id',
+				description: '指定すると、idがその値よりも小さいノートを返します。',
+			},
+			limit: {
+				type: 'integer',
+				minimum: 1,
+				maximum: 100,
+				default: 10,
+				description: '取得するノートの最大数。',
+			},
+		},
+		anyOf: [
+			{
+				properties: {
+					tag: {
+						type: 'string',
+						minLength: 1,
+						description: '検索対象のハッシュタグ。ハッシュ（#）自身は含めません。',
+					},
+				},
+				required: [
+					'tag',
+				],
+			},
+			{
+				properties: {
+					query: {
+						type: 'array',
+						description: '検索の条件式。二次元配列で指定します。外側の配列の要素はORで、内側の配列の要素はANDで結合されます。たとえば、[["fediverse"], ["misskey", "ai"]] と指定すると、 #fediverse のみを含むノートと、 #misskey と #ai を両方含むノートが返されますが、 #misskey を含み #ai を含まないノートは返されません。',
+						items: {
+							type: 'array',
+							items: {
+								type: 'string',
+								minLength: 1,
+							},
+							minItems: 1,
+						},
+						minItems: 1,
+					},
+				},
+				required: [
+					'query',
+				],
+			},
+		],
+	},
+	res: {
+		type: 'array',
+		optional: false,
+		nullable: false,
+		items: {
+			type: 'object',
+			optional: false,
+			nullable: false,
+			ref: 'Note',
+			$ref: 'misskey://Note',
+		},
+	},
+	errors: {},
+}

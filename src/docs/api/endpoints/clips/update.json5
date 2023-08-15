@@ -1,0 +1,53 @@
+{
+	summary: 'クリップの情報を更新します。',
+	description: 'クリップの情報を更新します。',
+	tags: [
+		'clips',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {
+			clipId: {
+				type: 'string',
+				format: 'misskey:id',
+				description: 'クリップのid。',
+			},
+			name: {
+				type: 'string',
+				minLength: 1,
+				maxLength: 100,
+				description: 'クリップの名前。',
+			},
+			isPublic: {
+				type: 'boolean',
+				description: 'trueにすると、クリップが全体に公開されます。',
+			},
+			description: {
+				type: 'string',
+				nullable: true,
+				minLength: 1,
+				maxLength: 2048,
+				description: 'クリップの説明。',
+			},
+		},
+		required: [
+			'clipId',
+			'name',
+		],
+	},
+	res: {
+		type: 'object',
+		optional: false,
+		nullable: false,
+		ref: 'Clip',
+		$ref: 'misskey://Clip',
+	},
+	errors: {
+		'b4d92d70-b216-46fa-9a3f-a8c811699257': {
+			id: 'b4d92d70-b216-46fa-9a3f-a8c811699257',
+			code: 'NO_SUCH_CLIP',
+			description: 'クリップが存在しません。',
+		},
+	},
+}

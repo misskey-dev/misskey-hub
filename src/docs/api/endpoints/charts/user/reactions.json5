@@ -1,0 +1,61 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'charts',
+	],
+	requireCredential: false,
+	req: {
+		type: 'object',
+		properties: {
+			span: {
+				type: 'string',
+				enum: [
+					'day',
+					'hour',
+				],
+			},
+			limit: {
+				type: 'integer',
+				minimum: 1,
+				maximum: 500,
+				default: 30,
+			},
+			offset: {
+				type: 'integer',
+				nullable: true,
+				default: null,
+			},
+			userId: {
+				type: 'string',
+				format: 'misskey:id',
+			},
+		},
+		required: [
+			'span',
+			'userId',
+		],
+	},
+	res: {
+		type: 'object',
+		properties: {
+			'local.count': {
+				type: 'array',
+				items: {
+					type: 'number',
+				},
+			},
+			'remote.count': {
+				type: 'array',
+				items: {
+					type: 'number',
+				},
+			},
+		},
+		required: [
+			'local.count',
+			'remote.count',
+		],
+	},
+	errors: {},
+}

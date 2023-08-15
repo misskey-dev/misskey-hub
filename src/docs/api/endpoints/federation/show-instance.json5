@@ -1,0 +1,33 @@
+{
+	summary: 'サーバーの詳細を取得します。',
+	description: 'サーバーの詳細を取得します。',
+	tags: [
+		'federation',
+	],
+	requireCredential: false,
+	req: {
+		type: 'object',
+		properties: {
+			host: {
+				type: 'string',
+				description: 'サーバーのホスト名。',
+			},
+		},
+		required: [
+			'host',
+		],
+	},
+	res: {
+		oneOf: [
+			{
+				type: 'object',
+				ref: 'FederationInstance',
+				$ref: 'misskey://FederationInstance',
+			},
+			{
+				type: 'null',
+			},
+		],
+	},
+	errors: {},
+}

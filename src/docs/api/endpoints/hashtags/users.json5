@@ -1,0 +1,71 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'hashtags',
+	],
+	requireCredential: false,
+	req: {
+		type: 'object',
+		properties: {
+			tag: {
+				type: 'string',
+			},
+			limit: {
+				type: 'integer',
+				minimum: 1,
+				maximum: 100,
+				default: 10,
+				description: '取得するユーザーの最大数。'
+			},
+			sort: {
+				type: 'string',
+				enum: [
+					'+follower',
+					'-follower',
+					'+createdAt',
+					'-createdAt',
+					'+updatedAt',
+					'-updatedAt',
+				],
+				description: 'ソート順。+は降順を、-は昇順を示します。followerはユーザーのフォロワー数です。createdAt, updatedAtはそれぞれユーザーが登録した時刻、最後にアクティブだった時刻です。',
+			},
+			state: {
+				type: 'string',
+				enum: [
+					'all',
+					'alive',
+				],
+				default: 'all',
+				description: 'aliveにすると、5日間以内にアクティブであったユーザーのみを取得します。',
+			},
+			origin: {
+				type: 'string',
+				enum: [
+					'combined',
+					'local',
+					'remote',
+				],
+				default: 'local',
+				description: 'ユーザーの所属サーバーの区分。local（デフォルト）, remoteにすると、それぞれローカル・リモートユーザーのみを取得します。combinedにすると、すべてのユーザーを対象にします。',
+			},
+		},
+		required: [
+			'tag',
+			'sort',
+		],
+	},
+	res: {
+		type: 'array',
+		optional: false,
+		nullable: false,
+		items: {
+			type: 'object',
+			optional: false,
+			nullable: false,
+			ref: 'UserDetailed',
+			$ref: 'misskey://UserDetailed',
+		},
+	},
+	errors: {},
+}

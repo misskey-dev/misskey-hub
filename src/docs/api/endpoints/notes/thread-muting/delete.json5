@@ -1,0 +1,29 @@
+{
+	summary: 'スレッドのミュートを解除します。',
+	description: 'スレッドのミュートを解除します。',
+	tags: [
+		'notes',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {
+			noteId: {
+				type: 'string',
+				format: 'misskey:id',
+				description: 'ノートのid。このノートを含むスレッド全体のミュートが解除されます。',
+			},
+		},
+		required: [
+			'noteId',
+		],
+	},
+	res: {},
+	errors: {
+		'bddd57ac-ceb3-b29d-4334-86ea5fae481a': {
+			id: 'bddd57ac-ceb3-b29d-4334-86ea5fae481a',
+			code: 'NO_SUCH_NOTE',
+			description: 'ノートが存在しません。',
+		},
+	},
+}

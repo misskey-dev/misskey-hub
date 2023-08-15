@@ -1,0 +1,45 @@
+{
+	summary: 'ノートをクリップに追加します。',
+	description: 'ノートをクリップに追加します。',
+	tags: [
+		'account',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {
+			clipId: {
+				type: 'string',
+				format: 'misskey:id',
+				description: 'クリップのid。',
+			},
+			noteId: {
+				type: 'string',
+				format: 'misskey:id',
+				description: 'ノートのid。',
+			},
+		},
+		required: [
+			'clipId',
+			'noteId',
+		],
+	},
+	res: {},
+	errors: {
+		'd6e76cc0-a1b5-4c7c-a287-73fa9c716dcf': {
+			id: 'd6e76cc0-a1b5-4c7c-a287-73fa9c716dcf',
+			code: 'NO_SUCH_CLIP',
+			description: 'クリップが存在しません。',
+		},
+		'fc8c0b49-c7a3-4664-a0a6-b418d386bb8b': {
+			id: 'fc8c0b49-c7a3-4664-a0a6-b418d386bb8b',
+			code: 'NO_SUCH_NOTE',
+			description: 'ノートが存在しません。',
+		},
+		'734806c4-542c-463a-9311-15c512803965': {
+			id: '734806c4-542c-463a-9311-15c512803965',
+			code: 'ALREADY_CLIPPED',
+			description: 'すでにクリップに含まれています。',
+		},
+	},
+}

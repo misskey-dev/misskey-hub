@@ -1,0 +1,84 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'messaging',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {
+			limit: {
+				type: 'integer',
+				minimum: 1,
+				maximum: 100,
+				default: 10,
+			},
+			sinceId: {
+				type: 'string',
+				format: 'misskey:id',
+			},
+			untilId: {
+				type: 'string',
+				format: 'misskey:id',
+			},
+			markAsRead: {
+				type: 'boolean',
+				default: true,
+			},
+		},
+		anyOf: [
+			{
+				properties: {
+					userId: {
+						type: 'string',
+						format: 'misskey:id',
+					},
+				},
+				required: [
+					'userId',
+				],
+			},
+			{
+				properties: {
+					groupId: {
+						type: 'string',
+						format: 'misskey:id',
+					},
+				},
+				required: [
+					'groupId',
+				],
+			},
+		],
+	},
+	res: {
+		type: 'array',
+		optional: false,
+		nullable: false,
+		items: {
+			type: 'object',
+			optional: false,
+			nullable: false,
+			ref: 'MessagingMessage',
+			$ref: 'misskey://MessagingMessage',
+		},
+	},
+	errors: {
+		'11795c64-40ea-4198-b06e-3c873ed9039d': {
+			id: '11795c64-40ea-4198-b06e-3c873ed9039d',
+			code: 'NO_SUCH_USER',
+			description: '',
+		},
+		'c4d9f88c-9270-4632-b032-6ed8cee36f7f': {
+			id: 'c4d9f88c-9270-4632-b032-6ed8cee36f7f',
+			code: 'NO_SUCH_GROUP',
+			description: '',
+		},
+		'a053a8dd-a491-4718-8f87-50775aad9284': {
+			id: 'a053a8dd-a491-4718-8f87-50775aad9284',
+			code: 'GROUP_ACCESS_DENIED',
+			description: '',
+		},
+	},
+}

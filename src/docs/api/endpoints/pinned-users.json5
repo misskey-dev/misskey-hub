@@ -1,0 +1,26 @@
+{
+	summary: 'ピン留めされたユーザーを取得します。',
+	description: 'サーバーの管理者によってピン留めされたユーザーを取得します。',
+	tags: [
+		'users',
+	],
+	requireCredential: false,
+	req: {
+		type: 'object',
+		properties: {},
+		required: [],
+	},
+	res: {
+		type: 'array',
+		optional: false,
+		nullable: false,
+		items: {
+			type: 'object',
+			optional: false,
+			nullable: false,
+			ref: 'UserDetailed',
+			$ref: 'misskey://UserDetailed',
+		},
+	},
+	errors: {},
+}

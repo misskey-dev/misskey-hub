@@ -1,0 +1,47 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'admin',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {
+			url: {
+				type: 'string',
+				minLength: 1,
+			},
+			memo: {
+				type: 'string',
+			},
+			place: {
+				type: 'string',
+			},
+			priority: {
+				type: 'string',
+			},
+			ratio: {
+				type: 'integer',
+			},
+			expiresAt: {
+				type: 'integer',
+			},
+			imageUrl: {
+				type: 'string',
+				minLength: 1,
+			},
+		},
+		required: [
+			'url',
+			'memo',
+			'place',
+			'priority',
+			'ratio',
+			'expiresAt',
+			'imageUrl',
+		],
+	},
+	res: {},
+	errors: {},
+}

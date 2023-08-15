@@ -1,0 +1,15 @@
+{
+	summary: 'Webhookの一覧を取得します。',
+	description: 'ログイン中のユーザーが設定しているWebhookの一覧を取得します。',
+	tags: [
+		'webhooks',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {},
+		required: [],
+	},
+	res: {},
+	errors: {},
+}

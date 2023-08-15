@@ -1,0 +1,131 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'charts',
+	],
+	requireCredential: false,
+	req: {
+		type: 'object',
+		properties: {
+			span: {
+				type: 'string',
+				enum: [
+					'day',
+					'hour',
+				],
+			},
+			limit: {
+				type: 'integer',
+				minimum: 1,
+				maximum: 500,
+				default: 30,
+			},
+			offset: {
+				type: 'integer',
+				nullable: true,
+				default: null,
+			},
+			userId: {
+				type: 'string',
+				format: 'misskey:id',
+			},
+		},
+		required: [
+			'span',
+			'userId',
+		],
+	},
+	res: {
+		type: 'object',
+		properties: {
+			'local.followings.total': {
+				type: 'array',
+				items: {
+					type: 'number',
+				},
+			},
+			'local.followings.inc': {
+				type: 'array',
+				items: {
+					type: 'number',
+				},
+			},
+			'local.followings.dec': {
+				type: 'array',
+				items: {
+					type: 'number',
+				},
+			},
+			'local.followers.total': {
+				type: 'array',
+				items: {
+					type: 'number',
+				},
+			},
+			'local.followers.inc': {
+				type: 'array',
+				items: {
+					type: 'number',
+				},
+			},
+			'local.followers.dec': {
+				type: 'array',
+				items: {
+					type: 'number',
+				},
+			},
+			'remote.followings.total': {
+				type: 'array',
+				items: {
+					type: 'number',
+				},
+			},
+			'remote.followings.inc': {
+				type: 'array',
+				items: {
+					type: 'number',
+				},
+			},
+			'remote.followings.dec': {
+				type: 'array',
+				items: {
+					type: 'number',
+				},
+			},
+			'remote.followers.total': {
+				type: 'array',
+				items: {
+					type: 'number',
+				},
+			},
+			'remote.followers.inc': {
+				type: 'array',
+				items: {
+					type: 'number',
+				},
+			},
+			'remote.followers.dec': {
+				type: 'array',
+				items: {
+					type: 'number',
+				},
+			},
+		},
+		required: [
+			'local.followings.total',
+			'local.followings.inc',
+			'local.followings.dec',
+			'local.followers.total',
+			'local.followers.inc',
+			'local.followers.dec',
+			'remote.followings.total',
+			'remote.followings.inc',
+			'remote.followings.dec',
+			'remote.followers.total',
+			'remote.followers.inc',
+			'remote.followers.dec',
+		],
+	},
+	errors: {},
+}

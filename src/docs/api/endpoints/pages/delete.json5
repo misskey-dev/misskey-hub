@@ -1,0 +1,34 @@
+{
+	summary: 'ページを削除します。',
+	description: 'ページを削除します。',
+	tags: [
+		'pages',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {
+			pageId: {
+				type: 'string',
+				format: 'misskey:id',
+				description: 'ページのid。',
+			},
+		},
+		required: [
+			'pageId',
+		],
+	},
+	res: {},
+	errors: {
+		'eb0c6e1d-d519-4764-9486-52a7e1c6392a': {
+			id: 'eb0c6e1d-d519-4764-9486-52a7e1c6392a',
+			code: 'NO_SUCH_PAGE',
+			description: 'ページが存在しません。',
+		},
+		'8b741b3e-2c22-44b3-a15f-29949aa1601e': {
+			id: '8b741b3e-2c22-44b3-a15f-29949aa1601e',
+			code: 'ACCESS_DENIED',
+			description: 'ページを削除する権限がありません。所有するユーザのみがページを削除できます。',
+		},
+	},
+}

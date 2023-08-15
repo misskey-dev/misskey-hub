@@ -1,0 +1,67 @@
+{
+	summary: 'ノートのリアクションを取得します。',
+	description: 'ノートのリアクションを取得します。',
+	tags: [
+		'notes',
+	],
+	requireCredential: false,
+	req: {
+		type: 'object',
+		properties: {
+			noteId: {
+				type: 'string',
+				format: 'misskey:id',
+				description: 'ノートのid。',
+			},
+			type: {
+				type: 'string',
+				nullable: true,
+				description: 'リアクションの種類。リアクションはUnicode絵文字もしくはカスタム絵文字です。カスタム絵文字の場合はコロンで絵文字名を括ります。', 
+			},
+			limit: {
+				type: 'integer',
+				minimum: 1,
+				maximum: 100,
+				default: 10,
+				description: '取得するリアクションの最大数。',
+			},
+			offset: {
+				type: 'integer',
+				default: 0,
+				description: '検索結果の先頭 offset 個をスキップします。'
+			},
+			sinceId: {
+				type: 'string',
+				format: 'misskey:id',
+				description: '指定すると、idがその値よりも大きいリアクションを返します。',
+			},
+			untilId: {
+				type: 'string',
+				format: 'misskey:id',
+				description: '指定すると、idがその値よりも小さいリアクションを返します。',
+			},
+		},
+		required: [
+			'noteId',
+		],
+	},
+	res: {
+		type: 'array',
+		optional: false,
+		nullable: false,
+		items: {
+			type: 'object',
+			optional: false,
+			nullable: false,
+			ref: 'NoteReaction',
+			$ref: 'misskey://NoteReaction',
+		},
+	},
+	errors: {
+		'263fff3d-d0e1-4af4-bea7-8408059b451a': {
+			id: '263fff3d-d0e1-4af4-bea7-8408059b451a',
+			code: 'NO_SUCH_NOTE',
+			description: '指定されたノートが存在しないか、アクセスが許可されていません。',
+		},
+	},
+}

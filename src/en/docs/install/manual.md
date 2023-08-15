@@ -6,7 +6,28 @@ This guide describes how to install and setup Misskey.
 
 ----------------------------------------------------------------
 
-*1.* Create Misskey user
+::: danger
+Do not recreate the database with the domain/hostname of the server once you have started using it!
+:::
+
+*1.* Install dependencies
+----------------------------------------------------------------
+Please install and setup these softwares:
+
+#### Dependencies :package:
+* **[Node.js](https://nodejs.org/en/)** (20.4.x)
+* **[PostgreSQL](https://www.postgresql.org/)** (15.x)
+* **[Redis](https://redis.io/)**
+* **[FFmpeg](https://www.ffmpeg.org/)**
+
+If you are using Debian/Ubuntu, you should install the `build-essential` package.
+
+corepack must be enabled.
+```sh
+sudo corepack enable
+```
+
+*2.* Create Misskey user
 ----------------------------------------------------------------
 Running misskey as root is not a good idea so we create a user for that.
 In debian for exemple :
@@ -15,24 +36,11 @@ In debian for exemple :
 adduser --disabled-password --disabled-login misskey
 ```
 
-*2.* Install dependencies
-----------------------------------------------------------------
-Please install and setup these softwares:
-
-#### Dependencies :package:
-* **[Node.js](https://nodejs.org/en/)** (16.x)
-* **[PostgreSQL](https://www.postgresql.org/)** (12.x / 13.x is preferred)
-* **[Redis](https://redis.io/)**
-
-##### Optional
-* [Yarn](https://yarnpkg.com/) *Optional but recommended for security reason. If you won't install it, use `npx yarn` instead of `yarn`.*
-* [FFmpeg](https://www.ffmpeg.org/)
-
 *3.* Install Misskey
 ----------------------------------------------------------------
 1. Connect to the `misskey` user
 
-	`su - misskey`
+	`sudo -iu misskey`
 
 2. Clone the Misskey repository
 
@@ -46,9 +54,13 @@ Please install and setup these softwares:
 
 	`git checkout master`
 
+5. Download submodules
+
+    `git submodule update --init`
+
 5. Install Misskey's dependencies
 
-	`yarn install`
+	`pnpm install --frozen-lockfile`
 
 *4.* Configure Misskey
 ----------------------------------------------------------------
@@ -63,15 +75,9 @@ Please install and setup these softwares:
 
 Build misskey with the following:
 
-`NODE_ENV=production yarn build`
+`NODE_ENV=production pnpm run build`
 
 If you're on Debian, you will need to install the `build-essential`, `python` package.
-
-If you're still encountering errors about some modules, use node-gyp:
-
-1. `npx node-gyp configure`
-2. `npx node-gyp build`
-3. `NODE_ENV=production yarn build`
 
 *6.* Init DB
 ----------------------------------------------------------------
@@ -79,21 +85,26 @@ If you're still encountering errors about some modules, use node-gyp:
 	and empty database as named in the configuration file.
 	Make sure the database connection also works correctly when run from the
 	user that will later run Misskey, or it could cause problems later.
-	`sudo -u postgres psql`
-	`create database misskey;`
-	`create user misskey with encrypted password '{YOUR_PASSWORD}';`
-	`grant all privileges on database misskey to misskey;`
-	`\q`
+	The encoding of the database should be UTF-8.
+
+	```
+	sudo -u postgres psql
+	create database misskey with encoding = 'UTF8';
+	create user misskey with encrypted password '{YOUR_PASSWORD}';
+	grant all privileges on database misskey to misskey;
+	alter database misskey owner to misskey;
+	\q
+	```
 
 2. Run the database initialisation
-	`yarn run init`
+	`pnpm run init`
 
 *7.* That is it.
 ----------------------------------------------------------------
 Well done! Now, you have an environment that run to Misskey.
 
 ### Launch normally
-Just `NODE_ENV=production npm start`. GLHF!
+Just `NODE_ENV=production pnpm run start`. GLHF!
 
 ### Launch with systemd
 
@@ -115,8 +126,8 @@ Just `NODE_ENV=production npm start`. GLHF!
 	WorkingDirectory=/home/misskey/misskey
 	Environment="NODE_ENV=production"
 	TimeoutSec=60
-	StandardOutput=syslog
-	StandardError=syslog
+	StandardOutput=journal
+	StandardError=journal
 	SyslogIdentifier=misskey
 	Restart=always
 
@@ -127,11 +138,11 @@ Just `NODE_ENV=production npm start`. GLHF!
 
 3. Reload systemd and enable the misskey service.
 
-	`systemctl daemon-reload ; systemctl enable misskey`
+	`sudo systemctl daemon-reload; sudo systemctl enable misskey`
 
 4. Start the misskey service.
 
-	`systemctl start misskey`
+	`sudo systemctl start misskey`
 
 You can check if the service is running with `systemctl status misskey`.
 
@@ -179,16 +190,12 @@ You can check if the service is running with `rc-service misskey status`.
 1. `git checkout master`
 2. `git pull`
 3. `git submodule update --init`
-4. `yarn install`
-5. `NODE_ENV=production yarn build`
-6. `yarn migrate`
+4. `NODE_ENV=production pnpm install --frozen-lockfile`
+5. `NODE_ENV=production pnpm run build`
+6. `pnpm run migrate`
 7. Restart your Misskey process to apply changes
 8. Enjoy
 
 If you encounter any problems with updating, please try the following:
-1. `yarn clean` or `yarn cleanall`
-2. Retry update (Don't forget `yarn install`
-
-----------------------------------------------------------------
-
-If you have any questions or troubles, feel free to contact us!
+1. `pnpm run clean` or `pnpm run clean-all`
+2. Retry update (Don't forget `pnpm install`

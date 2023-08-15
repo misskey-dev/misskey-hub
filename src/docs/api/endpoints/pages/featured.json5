@@ -1,0 +1,27 @@
+{
+	summary: 'いいね数の上位10ページを取得します。',
+	description: 'いいね数の上位10ページを取得します。いいねをもらったページの数が10に満たない場合は、それらすべてが返されます。',
+	tags: [
+		'pages',
+	],
+	requireCredential: false,
+	req: {
+		type: 'object',
+		properties: {},
+		required: [],
+	},
+	res: {
+		type: 'array',
+		optional: false,
+		nullable: false,
+		items: {
+			type: 'object',
+			optional: false,
+			nullable: false,
+			ref: 'Page',
+			$ref: 'misskey://Page',
+		},
+		description: 'ページの一覧です。いいね数の降順にソートされています。',
+	},
+	errors: {},
+}

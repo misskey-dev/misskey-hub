@@ -1,0 +1,34 @@
+{
+	summary: 'ノートをお気に入りから解除します。',
+	description: 'ノートをお気に入りから解除します。',
+	tags: [
+		'notes',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {
+			noteId: {
+				type: 'string',
+				format: 'misskey:id',
+				description: 'ノートのid。',
+			},
+		},
+		required: [
+			'noteId',
+		],
+	},
+	res: {},
+	errors: {
+		'80848a2c-398f-4343-baa9-df1d57696c56': {
+			id: '80848a2c-398f-4343-baa9-df1d57696c56',
+			code: 'NO_SUCH_NOTE',
+			description: '指定されたノートが存在しないか、アクセスが許可されていません。',
+		},
+		'b625fc69-635e-45e9-86f4-dbefbef35af5': {
+			id: 'b625fc69-635e-45e9-86f4-dbefbef35af5',
+			code: 'NOT_FAVORITED',
+			description: 'お気に入り登録されていません。',
+		},
+	},
+}

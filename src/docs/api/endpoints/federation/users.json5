@@ -1,0 +1,50 @@
+{
+	summary: 'サーバーに所属するユーザーの一覧を取得します。',
+	description: 'サーバーに所属するユーザーの一覧を取得します。',
+	tags: [
+		'federation',
+	],
+	requireCredential: false,
+	req: {
+		type: 'object',
+		properties: {
+			host: {
+				type: 'string',
+				description: 'ユーザーが所属するホスト名。',
+			},
+			sinceId: {
+				type: 'string',
+				format: 'misskey:id',
+				description: '指定すると、idがその値よりも大きいユーザーを返します。'
+			},
+			untilId: {
+				type: 'string',
+				format: 'misskey:id',
+				description: '指定すると、idがその値よりも小さいユーザーを返します。'
+			},
+			limit: {
+				type: 'integer',
+				minimum: 1,
+				maximum: 100,
+				default: 10,
+				description: '取得するユーザーの最大数。',
+			},
+		},
+		required: [
+			'host',
+		],
+	},
+	res: {
+		type: 'array',
+		optional: false,
+		nullable: false,
+		items: {
+			type: 'object',
+			optional: false,
+			nullable: false,
+			ref: 'UserDetailedNotMe',
+			$ref: 'misskey://UserDetailedNotMe',
+		},
+	},
+	errors: {},
+}

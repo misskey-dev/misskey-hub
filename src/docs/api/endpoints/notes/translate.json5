@@ -1,0 +1,38 @@
+{
+	summary: 'ノートを翻訳します。',
+	description: 'ノートを翻訳します。',
+	tags: [
+		'notes',
+	],
+	requireCredential: false,
+	req: {
+		type: 'object',
+		properties: {
+			noteId: {
+				type: 'string',
+				format: 'misskey:id',
+				description: 'ノートのid。',
+			},
+			targetLang: {
+				type: 'string',
+				description: '翻訳先の言語。値がDeepL APIのv2/translateエンドポイントのtarget_langパラメータに渡されます。ただし、ハイフン以降は無視されます。例：JAを指定すると日本語、DEを指定するとドイツ語に翻訳します。EN-GB（イギリス英語）はEN（地域を限定しない「英語」）として扱われます。',
+			},
+		},
+		required: [
+			'noteId',
+			'targetLang',
+		],
+	},
+	res: {
+		type: 'object',
+		optional: false,
+		nullable: false,
+	},
+	errors: {
+		'bea9b03f-36e0-49c5-a4db-627a029f8971': {
+			id: 'bea9b03f-36e0-49c5-a4db-627a029f8971',
+			code: 'NO_SUCH_NOTE',
+			description: 'ノートが存在しません。',
+		},
+	},
+}

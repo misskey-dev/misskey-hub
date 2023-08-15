@@ -1,0 +1,30 @@
+{
+	summary: 'ワードミュートされたノートの数を取得します。',
+	description: 'ログイン中のユーザーの設定によりワードミュートされたノートの数を取得します。',
+	tags: [
+		'account',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {},
+		required: [],
+	},
+	res: {
+		type: 'object',
+		optional: false,
+		nullable: false,
+		properties: {
+			count: {
+				type: 'number',
+				optional: false,
+				nullable: false,
+				description: 'ワードミュートされたノートの数。',
+			},
+		},
+		required: [
+			'count',
+		],
+	},
+	errors: {},
+}

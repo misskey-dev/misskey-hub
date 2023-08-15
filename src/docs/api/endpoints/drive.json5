@@ -1,0 +1,35 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'drive',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {},
+		required: [],
+	},
+	res: {
+		type: 'object',
+		optional: false,
+		nullable: false,
+		properties: {
+			capacity: {
+				type: 'number',
+				optional: false,
+				nullable: false,
+			},
+			usage: {
+				type: 'number',
+				optional: false,
+				nullable: false,
+			},
+		},
+		required: [
+			'capacity',
+			'usage',
+		],
+	},
+	errors: {},
+}

@@ -1,0 +1,25 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'admin',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {
+			host: {
+				type: 'string',
+			},
+			isSuspended: {
+				type: 'boolean',
+			},
+		},
+		required: [
+			'host',
+			'isSuspended',
+		],
+	},
+	res: {},
+	errors: {},
+}

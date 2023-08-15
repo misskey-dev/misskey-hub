@@ -1,0 +1,55 @@
+{
+	summary: 'ファイルを取得します。',
+	description: 'ファイルを取得します。',
+	tags: [
+		'drive',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		anyOf: [
+			{
+				properties: {
+					fileId: {
+						type: 'string',
+						format: 'misskey:id',
+						description: 'ファイルのid。',
+					},
+				},
+				required: [
+					'fileId',
+				],
+			},
+			{
+				properties: {
+					url: {
+						type: 'string',
+						description: 'ファイルのURL。サムネイルやwebpublicのURLからも元ファイルを取得できます。',
+					},
+				},
+				required: [
+					'url',
+				],
+			},
+		],
+	},
+	res: {
+		type: 'object',
+		optional: false,
+		nullable: false,
+		ref: 'DriveFile',
+		$ref: 'misskey://DriveFile',
+	},
+	errors: {
+		'067bc436-2718-4795-b0fb-ecbe43949e31': {
+			id: '067bc436-2718-4795-b0fb-ecbe43949e31',
+			code: 'NO_SUCH_FILE',
+			description: 'ファイルが存在しません。',
+		},
+		'25b73c73-68b1-41d0-bad1-381cfdf6579f': {
+			id: '25b73c73-68b1-41d0-bad1-381cfdf6579f',
+			code: 'ACCESS_DENIED',
+			description: 'ファイルを取得する権限がありません。ファイルの取得は、ファイルを所有するユーザーか、サーバーの管理者あるいはモデレーターのみが行えます。',
+		},
+	},
+}

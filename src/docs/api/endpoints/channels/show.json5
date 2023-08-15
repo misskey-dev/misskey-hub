@@ -1,0 +1,34 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'channels',
+	],
+	requireCredential: false,
+	req: {
+		type: 'object',
+		properties: {
+			channelId: {
+				type: 'string',
+				format: 'misskey:id',
+			},
+		},
+		required: [
+			'channelId',
+		],
+	},
+	res: {
+		type: 'object',
+		optional: false,
+		nullable: false,
+		ref: 'Channel',
+		$ref: 'misskey://Channel',
+	},
+	errors: {
+		'6f6c314b-7486-4897-8966-c04a66a02923': {
+			id: '6f6c314b-7486-4897-8966-c04a66a02923',
+			code: 'NO_SUCH_CHANNEL',
+			description: '',
+		},
+	},
+}

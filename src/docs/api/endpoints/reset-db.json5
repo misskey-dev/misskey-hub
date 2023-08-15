@@ -1,0 +1,15 @@
+{
+	summary: 'データベースを初期化して、Redisのデータを消去します。',
+	description: 'データベースを初期化して、Redisのデータを消去します。NODE_ENV環境変数がtestingに設定されている場合のみ動作します。',
+	tags: [
+		'non-productive',
+	],
+	requireCredential: false,
+	req: {
+		type: 'object',
+		properties: {},
+		required: [],
+	},
+	res: {},
+	errors: {},
+}

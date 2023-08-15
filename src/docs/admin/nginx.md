@@ -7,7 +7,7 @@
 	 2. CloudflareなどのCDNを使う場合は、「If it's behind another reverse proxy or CDN, remove the following.」から4行を削除します。
 3. `/etc/nginx/sites-available/misskey.conf`を作成した場合は、`/etc/nginx/sites-enabled/misskey.conf`としてシンボリックリンクを作成します。\
    `sudo ln -s /etc/nginx/sites-available/misskey.conf /etc/nginx/sites-enabled/misskey.conf`
-4. `nginx -t` で設定ファイルが正常に読み込まれるか確認します。
+4. `sudo nginx -t` で設定ファイルが正常に読み込まれるか確認します。
 5. `sudo systemctl restart nginx` でnginxを再起動します。
 
 ## 設定例
@@ -80,6 +80,7 @@ server {
         proxy_cache cache1;
         proxy_cache_lock on;
         proxy_cache_use_stale updating;
+        proxy_force_ranges on;
         add_header X-Cache $upstream_cache_status;
     }
 }

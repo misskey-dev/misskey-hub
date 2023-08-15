@@ -1,0 +1,34 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'antennas',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {
+			antennaId: {
+				type: 'string',
+				format: 'misskey:id',
+			},
+		},
+		required: [
+			'antennaId',
+		],
+	},
+	res: {
+		type: 'object',
+		optional: false,
+		nullable: false,
+		ref: 'Antenna',
+		$ref: 'misskey://Antenna',
+	},
+	errors: {
+		'c06569fb-b025-4f23-b22d-1fcd20d2816b': {
+			id: 'c06569fb-b025-4f23-b22d-1fcd20d2816b',
+			code: 'NO_SUCH_ANTENNA',
+			description: '',
+		},
+	},
+}

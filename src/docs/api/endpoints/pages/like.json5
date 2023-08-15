@@ -1,0 +1,34 @@
+{
+	summary: 'ページにいいねをつけます。',
+	description: 'ページにいいねをつけます。',
+	tags: [
+		'pages',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {
+			pageId: {
+				type: 'string',
+				format: 'misskey:id',
+				description: 'ページのid。',
+			},
+		},
+		required: [
+			'pageId',
+		],
+	},
+	res: {},
+	errors: {
+		'cc98a8a2-0dc3-4123-b198-62c71df18ed3': {
+			id: 'cc98a8a2-0dc3-4123-b198-62c71df18ed3',
+			code: 'ALREADY_LIKED',
+			description: 'すでにいいねをつけています。',
+		},
+		'28800466-e6db-40f2-8fae-bf9e82aa92b8': {
+			id: '28800466-e6db-40f2-8fae-bf9e82aa92b8',
+			code: 'YOUR_PAGE',
+			description: '自身のページにいいねをつけようとしました。',
+		},
+	},
+}

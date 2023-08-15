@@ -1,0 +1,59 @@
+{
+	summary: 'ノートのアンケートに投票します。',
+	description: 'ノートのアンケートに投票します。複数の選択肢に投票するには、choiceを変更して複数回リクエストを行ってください。',
+	tags: [
+		'notes',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {
+			noteId: {
+				type: 'string',
+				format: 'misskey:id',
+				description: 'アンケートが添付されたノートのid。',
+			},
+			choice: {
+				type: 'integer',
+				description: '投票する選択肢。'
+			},
+		},
+		required: [
+			'noteId',
+			'choice',
+		],
+	},
+	res: {},
+	errors: {
+		'ecafbd2e-c283-4d6d-aecb-1a0a33b75396': {
+			id: 'ecafbd2e-c283-4d6d-aecb-1a0a33b75396',
+			code: 'NO_SUCH_NOTE',
+			description: 'ノートが存在しません。',
+		},
+		'5f979967-52d9-4314-a911-1c673727f92f': {
+			id: '5f979967-52d9-4314-a911-1c673727f92f',
+			code: 'NO_POLL',
+			description: 'ノートにアンケートが添付されていません。',
+		},
+		'e0cc9a04-f2e8-41e4-a5f1-4127293260cc': {
+			id: 'e0cc9a04-f2e8-41e4-a5f1-4127293260cc',
+			code: 'INVALID_CHOICE',
+			description: '選択肢が不正です。',
+		},
+		'0963fc77-efac-419b-9424-b391608dc6d8': {
+			id: '0963fc77-efac-419b-9424-b391608dc6d8',
+			code: 'ALREADY_VOTED',
+			description: 'すでに投票しています。',
+		},
+		'1022a357-b085-4054-9083-8f8de358337e': {
+			id: '1022a357-b085-4054-9083-8f8de358337e',
+			code: 'ALREADY_EXPIRED',
+			description: '投票期間を過ぎています。',
+		},
+		'85a5377e-b1e9-4617-b0b9-5bea73331e49': {
+			id: '85a5377e-b1e9-4617-b0b9-5bea73331e49',
+			code: 'YOU_HAVE_BEEN_BLOCKED',
+			description: 'ノートを投稿したユーザーにブロックされています。',
+		},
+	},
+}

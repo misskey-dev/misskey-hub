@@ -1,0 +1,52 @@
+{
+	summary: 'ログイン中のユーザに言及しているノートの一覧を取得します。',
+	description: 'ログイン中のユーザに言及 (mention) しているノートの一覧を取得します。',
+	tags: [
+		'notes',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {
+			following: {
+				type: 'boolean',
+				default: false,
+				description: 'trueの場合、ログイン中のユーザー自身か、フォローしているユーザーからの言及のみを取得します。',
+			},
+			limit: {
+				type: 'integer',
+				minimum: 1,
+				maximum: 100,
+				default: 10,
+				description: '取得するノートの最大数。',
+			},
+			sinceId: {
+				type: 'string',
+				format: 'misskey:id',
+				description: '指定すると、idがその値よりも大きいノートを返します。',
+			},
+			untilId: {
+				type: 'string',
+				format: 'misskey:id',
+				description: '指定すると、idがその値よりも小さいノートを返します。',
+			},
+			visibility: {
+				type: 'string',
+			},
+		},
+		required: [],
+	},
+	res: {
+		type: 'array',
+		optional: false,
+		nullable: false,
+		items: {
+			type: 'object',
+			optional: false,
+			nullable: false,
+			ref: 'Note',
+			$ref: 'misskey://Note',
+		},
+	},
+	errors: {},
+}

@@ -1,0 +1,45 @@
+{
+	summary: 'ユーザーのフォローを解除します。',
+	description: 'ユーザーのフォローを解除します。',
+	tags: [
+		'following',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {
+			userId: {
+				type: 'string',
+				format: 'misskey:id',
+				description: 'フォローを解除するユーザーのid。',
+			},
+		},
+		required: [
+			'userId',
+		],
+	},
+	res: {
+		type: 'object',
+		optional: false,
+		nullable: false,
+		ref: 'UserLite',
+		$ref: 'misskey://UserLite',
+	},
+	errors: {
+		'5b12c78d-2b28-4dca-99d2-f56139b42ff8': {
+			id: '5b12c78d-2b28-4dca-99d2-f56139b42ff8',
+			code: 'NO_SUCH_USER',
+			description: 'ユーザーが存在しません。',
+		},
+		'd9e400b9-36b0-4808-b1d8-79e707f1296c': {
+			id: 'd9e400b9-36b0-4808-b1d8-79e707f1296c',
+			code: 'FOLLOWEE_IS_YOURSELF',
+			description: '自分のフォローを解除しようとしました。',
+		},
+		'5dbf82f5-c92b-40b1-87d1-6c8c0741fd09': {
+			id: '5dbf82f5-c92b-40b1-87d1-6c8c0741fd09',
+			code: 'NOT_FOLLOWING',
+			description: 'フォローしていないユーザーです。',
+		},
+	},
+}

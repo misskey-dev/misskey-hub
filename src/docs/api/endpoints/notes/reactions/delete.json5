@@ -1,0 +1,34 @@
+{
+	summary: 'ノートのリアクションを解除します。',
+	description: 'ノートのリアクションを解除します。',
+	tags: [
+		'reactions',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {
+			noteId: {
+				type: 'string',
+				format: 'misskey:id',
+				description: 'ノートのid。',
+			},
+		},
+		required: [
+			'noteId',
+		],
+	},
+	res: {},
+	errors: {
+		'764d9fce-f9f2-4a0e-92b1-6ceac9a7ad37': {
+			id: '764d9fce-f9f2-4a0e-92b1-6ceac9a7ad37',
+			code: 'NO_SUCH_NOTE',
+			description: '指定されたノートが存在しないか、アクセスが許可されていません。',
+		},
+		'92f4426d-4196-4125-aa5b-02943e2ec8fc': {
+			id: '92f4426d-4196-4125-aa5b-02943e2ec8fc',
+			code: 'NOT_REACTED',
+			description: 'リアクションしていません。',
+		},
+	},
+}

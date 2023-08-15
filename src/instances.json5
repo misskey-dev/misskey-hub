@@ -9,7 +9,32 @@
 	host: 'newskey.cc',
 	name: '𝙉𝙚𝙬𝙨𝙠𝙚𝙮.𝙘𝙘',
 	lang: 'ja',
-},{
-	host: 'gorf.space',
-	lang: 'en',
-}, ]
+}, {
+  host: 'minidisc.tokyo',
+  name: 'ミニディスク【Ｍｉｎｉ　Ｄｉｓｕｋｕ】',
+  lang: 'en',
+}, {
+  host: 'miruku.cafe',
+  name: 'Miruku',
+  lang: 'en',
+}, {
+  host: 'misskey.social',
+  name: 'Misskey Social',
+  lang: 'it',
+}, {
+  host: 'kitsune.moe',
+  name: 'Kitsune.MOE',
+  lang: 'de',
+}, {
+  host: 'misskey.gg',
+  name: 'misskey.gg',
+  lang: 'ja',
+}, {
+  host: 'misskey.kindworld.one',
+  name: 'KindWorld',
+  lang: 'ja',
+}, {
+  host: 'msk.ilnk.info',
+  name: 'えとねるん(EtonernROY)',
+  lang: 'ja',
+}]

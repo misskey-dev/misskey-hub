@@ -1,0 +1,88 @@
+{
+	summary: 'ユーザーの情報を取得します。',
+	description: 'ユーザーの情報を取得します。',
+	tags: [
+		'users',
+	],
+	requireCredential: false,
+	req: {
+		type: 'object',
+		anyOf: [
+			{
+				properties: {
+					userId: {
+						type: 'string',
+						format: 'misskey:id',
+						description: 'ユーザーのid。',
+					},
+				},
+				required: [
+					'userId',
+				],
+			},
+			{
+				properties: {
+					userIds: {
+						type: 'array',
+						uniqueItems: true,
+						items: {
+							type: 'string',
+							format: 'misskey:id',
+							description: 'ユーザーのid。',
+						},
+					},
+				},
+				required: [
+					'userIds',
+				],
+			},
+			{
+				properties: {
+					username: {
+						type: 'string',
+						description: 'ユーザー名。',
+					},
+					host: {
+						type: 'string',
+						nullable: true,
+						description: 'ユーザーが所属するサーバーのホスト名（ドメインなど）。ローカルユーザーを対象にする場合はnullを指定します。',
+					},
+				},
+				required: [
+					'username',
+				],
+			},
+		],
+	},
+	res: {
+		optional: false,
+		nullable: false,
+		oneOf: [
+			{
+				type: 'object',
+				ref: 'UserDetailed',
+				$ref: 'misskey://UserDetailed',
+			},
+			{
+				type: 'array',
+				items: {
+					type: 'object',
+					ref: 'UserDetailed',
+					$ref: 'misskey://UserDetailed',
+				},
+			},
+		],
+	},
+	errors: {
+		'ef7b9be4-9cba-4e6f-ab41-90ed171c7d3c': {
+			id: 'ef7b9be4-9cba-4e6f-ab41-90ed171c7d3c',
+			code: 'FAILED_TO_RESOLVE_REMOTE_USER',
+			description: 'リモートユーザーの検索に失敗しました。',
+		},
+		'4362f8dc-731f-4ad8-a694-be5a88922a24': {
+			id: '4362f8dc-731f-4ad8-a694-be5a88922a24',
+			code: 'NO_SUCH_USER',
+			description: 'ユーザーが存在しません。',
+		},
+	},
+}

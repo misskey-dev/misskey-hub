@@ -1,0 +1,27 @@
+{
+	summary: 'ハッシュ値からファイルが存在するか確認します。',
+	description: 'ハッシュ値から、ログイン中のユーザのドライブにファイルが存在するか確認します。ファイルの内容を取得したい場合は、find-by-hashを使用してください。',
+	tags: [
+		'drive',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {
+			md5: {
+				type: 'string',
+				description: 'ファイルのMD5ハッシュ値。',
+			},
+		},
+		required: [
+			'md5',
+		],
+	},
+	res: {
+		type: 'boolean',
+		optional: false,
+		nullable: false,
+		description: 'ファイルが存在すればtrueです。',
+	},
+	errors: {},
+}

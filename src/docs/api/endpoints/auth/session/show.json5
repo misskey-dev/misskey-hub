@@ -1,0 +1,60 @@
+{
+	summary: 'セッションの情報を取得します。',
+	description: 'セッションの情報を取得します。',
+	tags: [
+		'auth',
+	],
+	requireCredential: false,
+	req: {
+		type: 'object',
+		properties: {
+			token: {
+				type: 'string',
+				description: 'セッションのトークン。',
+			},
+		},
+		required: [
+			'token',
+		],
+	},
+	res: {
+		type: 'object',
+		optional: false,
+		nullable: false,
+		properties: {
+			id: {
+				type: 'string',
+				optional: false,
+				nullable: false,
+				format: 'id',
+				description: 'セッションのID。',
+			},
+			app: {
+				type: 'object',
+				optional: false,
+				nullable: false,
+				ref: 'App',
+				$ref: 'misskey://App',
+				description: 'セッションを保持するアプリ。',
+			},
+			token: {
+				type: 'string',
+				optional: false,
+				nullable: false,
+				description: 'セッションのトークン。',
+			},
+		},
+		required: [
+			'id',
+			'app',
+			'token',
+		],
+	},
+	errors: {
+		'bd72c97d-eba7-4adb-a467-f171b8847250': {
+			id: 'bd72c97d-eba7-4adb-a467-f171b8847250',
+			code: 'NO_SUCH_SESSION',
+			description: 'セッションが存在しません。',
+		},
+	},
+}

@@ -1,0 +1,66 @@
+{
+	summary: 'アプリのアクセストークンを発行します。',
+	description: 'アプリのアクセストークンを発行します。',
+	tags: [
+		'auth',
+	],
+	requireCredential: false,
+	req: {
+		type: 'object',
+		properties: {
+			appSecret: {
+				type: 'string',
+				description: 'アプリのシークレットキー。',
+			},
+			token: {
+				type: 'string',
+				description: 'セッションのトークン。',
+			},
+		},
+		required: [
+			'appSecret',
+			'token',
+		],
+	},
+	res: {
+		type: 'object',
+		optional: false,
+		nullable: false,
+		properties: {
+			accessToken: {
+				type: 'string',
+				optional: false,
+				nullable: false,
+				description: 'ユーザーのアクセストークン。',
+			},
+			user: {
+				type: 'object',
+				optional: false,
+				nullable: false,
+				ref: 'UserDetailedNotMe',
+				$ref: 'misskey://UserDetailedNotMe',
+			},
+		},
+		required: [
+			'accessToken',
+			'user',
+		],
+	},
+	errors: {
+		'fcab192a-2c5a-43b7-8ad8-9b7054d8d40d': {
+			id: 'fcab192a-2c5a-43b7-8ad8-9b7054d8d40d',
+			code: 'NO_SUCH_APP',
+			description: 'アプリが存在しません。',
+		},
+		'5b5a1503-8bc8-4bd0-8054-dc189e8cdcb3': {
+			id: '5b5a1503-8bc8-4bd0-8054-dc189e8cdcb3',
+			code: 'NO_SUCH_SESSION',
+			description: 'セッションが存在しません。',
+		},
+		'8c8a4145-02cc-4cca-8e66-29ba60445a8e': {
+			id: '8c8a4145-02cc-4cca-8e66-29ba60445a8e',
+			code: 'PENDING_SESSION',
+			description: '',
+		},
+	},
+}

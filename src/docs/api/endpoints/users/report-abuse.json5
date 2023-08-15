@@ -1,0 +1,46 @@
+{
+	summary: 'ユーザーを通報します。',
+	description: 'ユーザーを通報します。',
+	tags: [
+		'users',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {
+			userId: {
+				type: 'string',
+				format: 'misskey:id',
+				description: '通報対象のユーザーのid。',
+			},
+			comment: {
+				type: 'string',
+				minLength: 1,
+				maxLength: 2048,
+				description: '通報の理由を説明する文章やリンク。',
+			},
+		},
+		required: [
+			'userId',
+			'comment',
+		],
+	},
+	res: {},
+	errors: {
+		'1acefcb5-0959-43fd-9685-b48305736cb5': {
+			id: '1acefcb5-0959-43fd-9685-b48305736cb5',
+			code: 'NO_SUCH_USER',
+			description: 'ユーザーが存在しません。',
+		},
+		'1e13149e-b1e8-43cf-902e-c01dbfcb202f': {
+			id: '1e13149e-b1e8-43cf-902e-c01dbfcb202f',
+			code: 'CANNOT_REPORT_YOURSELF',
+			description: '自身を通報しようとしました。',
+		},
+		'35e166f5-05fb-4f87-a2d5-adb42676d48f': {
+			id: '35e166f5-05fb-4f87-a2d5-adb42676d48f',
+			code: 'CANNOT_REPORT_THE_ADMIN',
+			description: '管理者を通報しようとしました。',
+		},
+	},
+}

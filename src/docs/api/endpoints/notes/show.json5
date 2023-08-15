@@ -1,0 +1,35 @@
+{
+	summary: 'ノートを取得します。',
+	description: 'ノートを取得します。',
+	tags: [
+		'notes',
+	],
+	requireCredential: false,
+	req: {
+		type: 'object',
+		properties: {
+			noteId: {
+				type: 'string',
+				format: 'misskey:id',
+				description: 'ノートのid。',
+			},
+		},
+		required: [
+			'noteId',
+		],
+	},
+	res: {
+		type: 'object',
+		optional: false,
+		nullable: false,
+		ref: 'Note',
+		$ref: 'misskey://Note',
+	},
+	errors: {
+		'24fcbfc6-2e37-42b6-8388-c29b3861a08d': {
+			id: '24fcbfc6-2e37-42b6-8388-c29b3861a08d',
+			code: 'NO_SUCH_NOTE',
+			description: '指定されたノートが存在しないか、アクセスが許可されていません。',
+		},
+	},
+}

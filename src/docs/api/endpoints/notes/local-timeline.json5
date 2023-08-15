@@ -1,0 +1,75 @@
+{
+	summary: 'ローカルタイムライン (LTL) を取得します。',
+	description: 'ローカルタイムライン (LTL) を取得します。ローカルタイムラインには、サーバー内の全てのパブリックなノートが含まれます。',
+	tags: [
+		'notes',
+	],
+	requireCredential: false,
+	req: {
+		type: 'object',
+		properties: {
+			withFiles: {
+				type: 'boolean',
+				default: false,
+				description: 'trueにすると、ファイルが添付されたノートのみを取得します。',
+			},
+			fileType: {
+				type: 'array',
+				items: {
+					type: 'string',
+				},
+				description: '指定された種類のファイルが添付された投稿のみを取得します。',
+			},
+			excludeNsfw: {
+				type: 'boolean',
+				default: false,
+				description: 'trueにすると、CWが付与されたノートと、NSFW指定されたファイルが添付されたノートを除外します。fileTypeが指定されている場合のみ有効です（添付ファイルのないCW付きのノートは除外されません）。',
+			},
+			limit: {
+				type: 'integer',
+				minimum: 1,
+				maximum: 100,
+				default: 10,
+				description: '取得するノートの最大数。',
+			},
+			sinceId: {
+				type: 'string',
+				format: 'misskey:id',
+				description: '指定すると、idがその値よりも大きいノートを返します。',
+			},
+			untilId: {
+				type: 'string',
+				format: 'misskey:id',
+				description: '指定すると、idがその値よりも小さいノートを返します。',
+			},
+			sinceDate: {
+				type: 'integer',
+				description: 'エポック秒で日時を指定すると、その日時より後に作成されたノートを返します。',
+			},
+			untilDate: {
+				type: 'integer',
+				description: 'エポック秒で日時を指定すると、その日時より前に作成されたノートを返します。',
+			},
+		},
+		required: [],
+	},
+	res: {
+		type: 'array',
+		optional: false,
+		nullable: false,
+		items: {
+			type: 'object',
+			optional: false,
+			nullable: false,
+			ref: 'Note',
+			$ref: 'misskey://Note',
+		},
+	},
+	errors: {
+		'45a6eb02-7695-4393-b023-dd3be9aaaefd': {
+			id: '45a6eb02-7695-4393-b023-dd3be9aaaefd',
+			code: 'LTL_DISABLED',
+			description: 'ローカルタイムラインが無効になっています。',
+		},
+	},
+}

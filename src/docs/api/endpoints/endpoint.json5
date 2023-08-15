@@ -1,0 +1,21 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'meta',
+	],
+	requireCredential: false,
+	req: {
+		type: 'object',
+		properties: {
+			endpoint: {
+				type: 'string',
+			},
+		},
+		required: [
+			'endpoint',
+		],
+	},
+	res: {},
+	errors: {},
+}

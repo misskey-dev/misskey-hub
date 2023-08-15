@@ -1,0 +1,26 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'lists',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {},
+		required: [],
+	},
+	res: {
+		type: 'array',
+		optional: false,
+		nullable: false,
+		items: {
+			type: 'object',
+			optional: false,
+			nullable: false,
+			ref: 'UserList',
+			$ref: 'misskey://UserList',
+		},
+	},
+	errors: {},
+}

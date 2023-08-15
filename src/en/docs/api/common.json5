@@ -1,0 +1,40 @@
+{
+	refs: {},
+	errors: {
+		'1384574d-a912-4b81-8601-c7b1c4085df1': {
+			id: '1384574d-a912-4b81-8601-c7b1c4085df1',
+			code: 'CREDENTIAL_REQUIRED',
+			description: 'Credential-required endpoint requested without credentials.',
+		},
+		'd5826d14-3982-4d2e-8011-b9e9f02499ef': {
+			id: 'd5826d14-3982-4d2e-8011-b9e9f02499ef',
+			code: 'RATE_LIMIT_EXCEEDED',
+			description: 'Temporarily unavailable due to rate limit restrictions.',
+		},
+		'56f35758-7dd5-468b-8439-5d6fb8ec9b8e': {
+			id: '56f35758-7dd5-468b-8439-5d6fb8ec9b8e',
+			code: 'ACCESS_DENIED',
+			description: 'You do not have access privileges.',
+		},
+		'1370e5b7-d4eb-4566-bb1d-7748ee6a1838': {
+			id: '1370e5b7-d4eb-4566-bb1d-7748ee6a1838',
+			code: 'PERMISSION_DENIED',
+			description: 'The given credential does not have the required permissions.',
+		},
+		'a8c724b3-6e9c-4b46-b1a8-bc3ed6258370': {
+			id: 'a8c724b3-6e9c-4b46-b1a8-bc3ed6258370',
+			code: 'YOUR_ACCOUNT_SUSPENDED',
+			description: 'Unavailable due to your account has been suspended.',
+		},
+		'3d81ceae-475f-4600-b2a8-2bc116157532': {
+			id: '3d81ceae-475f-4600-b2a8-2bc116157532',
+			code: 'INVALID_PARAM',
+			description: 'The request contains incorrect parameters.',
+		},
+		'5d37dbcb-891e-41ca-a3d6-e690c97775ac': {
+			id: '5d37dbcb-891e-41ca-a3d6-e690c97775ac',
+			code: 'INTERNAL_ERROR',
+			description: 'Internal error occurred. Please contact the administrator if the error persists.',
+		},
+	},
+}

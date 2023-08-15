@@ -1,0 +1,50 @@
+{
+	summary: 'ローカルユーザーからサーバーに所属するユーザーへのフォローを取得します。',
+	description: 'ローカルユーザーからサーバーに所属するユーザーへのフォローを取得します。',
+	tags: [
+		'federation',
+	],
+	requireCredential: false,
+	req: {
+		type: 'object',
+		properties: {
+			host: {
+				type: 'string',
+				description: 'ホスト名。',
+			},
+			sinceId: {
+				type: 'string',
+				format: 'misskey:id',
+				description: '指定すると、idがその値よりも大きいフォローを返します。',
+			},
+			untilId: {
+				type: 'string',
+				format: 'misskey:id',
+				description: '指定すると、idがその値よりも大きいフォローを返します。',
+			},
+			limit: {
+				type: 'integer',
+				minimum: 1,
+				maximum: 100,
+				default: 10,
+				description: '取得するフォローの最大数。',
+			},
+		},
+		required: [
+			'host',
+		],
+	},
+	res: {
+		type: 'array',
+		optional: false,
+		nullable: false,
+		items: {
+			type: 'object',
+			optional: false,
+			nullable: false,
+			ref: 'Following',
+			$ref: 'misskey://Following',
+		},
+	},
+	errors: {},
+}

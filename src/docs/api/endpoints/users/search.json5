@@ -1,0 +1,60 @@
+{
+	summary: '与えられたクエリからユーザーを検索します。',
+	description: '与えられたクエリからユーザーを検索します。30日間アクティブでないユーザーや、凍結されているユーザーは除外されます。結果はユーザーの最後の投稿が新しい順にソートされます。',
+	tags: [
+		'users',
+	],
+	requireCredential: false,
+	req: {
+		type: 'object',
+		properties: {
+			query: {
+				type: 'string',
+				description: '検索クエリ。@fooとすると、fooで始まるユーザー名を持つユーザーを検索します。それ以外の場合、名前やユーザー名、自己紹介にクエリが含まれるユーザーを検索します。',
+			},
+			offset: {
+				type: 'integer',
+				default: 0,
+				description: '検索結果の先頭offset個をスキップします。',
+			},
+			limit: {
+				type: 'integer',
+				minimum: 1,
+				maximum: 100,
+				default: 10,
+				description: '取得するユーザーの最大数。',
+			},
+			origin: {
+				type: 'string',
+				enum: [
+					'local',
+					'remote',
+					'combined',
+				],
+				default: 'combined',
+				description: 'ユーザーの所属サーバーの区分。local, remoteにすると、それぞれローカル・リモートユーザーのみを取得します。combined（デフォルト）にすると、すべてのユーザーを対象にします。',
+			},
+			detail: {
+				type: 'boolean',
+				default: true,
+				description: 'trueにすると、ユーザーの詳細な情報を返します。',
+			},
+		},
+		required: [
+			'query',
+		],
+	},
+	res: {
+		type: 'array',
+		optional: false,
+		nullable: false,
+		items: {
+			type: 'object',
+			optional: false,
+			nullable: false,
+			ref: 'User',
+			$ref: 'misskey://User',
+		},
+	},
+	errors: {},
+}

@@ -1,0 +1,60 @@
+{
+	summary: 'ユーザー名・ホスト名からユーザーを検索します。',
+	description: 'ユーザー名・ホスト名からユーザーを検索します。30日間投稿のないユーザーや、凍結されているユーザーは除外されます。結果はユーザーの最後の投稿が新しい順にソートされます。ログイン中であれば（＝認証情報が送信されれば）、フォローしているユーザーを優先的に検索します。',
+	tags: [
+		'users',
+	],
+	requireCredential: false,
+	req: {
+		type: 'object',
+		properties: {
+			username: {
+				type: 'string',
+				nullable: true,
+				description: 'ユーザー名。',
+			},
+			host: {
+				type: 'string',
+				nullable: true,
+				description: 'ユーザーが所属するサーバーのホスト名（ドメインなど）。ローカルユーザーを対象にする場合はnullを指定します。',
+			},
+			limit: {
+				type: 'integer',
+				minimum: 1,
+				maximum: 100,
+				default: 10,
+				description: '取得するユーザーの最大数。',
+			},
+			detail: {
+				type: 'boolean',
+				default: true,
+				description: 'trueにすると、ユーザーの詳細な情報を返します。',
+			},
+		},
+		anyOf: [
+			{
+				required: [
+					'username',
+				],
+			},
+			{
+				required: [
+					'host',
+				],
+			},
+		],
+	},
+	res: {
+		type: 'array',
+		optional: false,
+		nullable: false,
+		items: {
+			type: 'object',
+			optional: false,
+			nullable: false,
+			ref: 'User',
+			$ref: 'misskey://User',
+		},
+	},
+	errors: {},
+}

@@ -1,0 +1,51 @@
+{
+	summary: 'アプリを認証するためのトークンを作成します。',
+	description: 'アプリを認証するためのトークンを作成します。',
+	tags: [
+		'auth',
+	],
+	requireCredential: false,
+	req: {
+		type: 'object',
+		properties: {
+			appSecret: {
+				type: 'string',
+				description: 'アプリケーションのシークレットキー。',
+			},
+		},
+		required: [
+			'appSecret',
+		],
+	},
+	res: {
+		type: 'object',
+		optional: false,
+		nullable: false,
+		properties: {
+			token: {
+				type: 'string',
+				optional: false,
+				nullable: false,
+				description: 'セッションのトークン。',
+			},
+			url: {
+				type: 'string',
+				optional: false,
+				nullable: false,
+				format: 'url',
+				description: 'セッションのURL。',
+			},
+		},
+		required: [
+			'token',
+			'url',
+		],
+	},
+	errors: {
+		'92f93e63-428e-4f2f-a5a4-39e1407fe998': {
+			id: '92f93e63-428e-4f2f-a5a4-39e1407fe998',
+			code: 'NO_SUCH_APP',
+			description: 'アプリが存在しません。',
+		},
+	},
+}

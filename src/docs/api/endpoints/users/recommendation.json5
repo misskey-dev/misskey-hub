@@ -1,0 +1,39 @@
+{
+	summary: 'おすすめのユーザーを取得します。',
+	description: 'ログイン中のユーザーに対して、フォローをおすすめできるユーザーを取得します。',
+	tags: [
+		'users',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {
+			limit: {
+				type: 'integer',
+				minimum: 1,
+				maximum: 100,
+				default: 10,
+				description: '取得するユーザーの最大数。',
+			},
+			offset: {
+				type: 'integer',
+				default: 0,
+				description: '検索結果の先頭offset個をスキップします。'
+			},
+		},
+		required: [],
+	},
+	res: {
+		type: 'array',
+		optional: false,
+		nullable: false,
+		items: {
+			type: 'object',
+			optional: false,
+			nullable: false,
+			ref: 'UserDetailed',
+			$ref: 'misskey://UserDetailed',
+		},
+	},
+	errors: {},
+}

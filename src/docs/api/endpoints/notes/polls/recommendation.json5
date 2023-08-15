@@ -1,0 +1,39 @@
+{
+	summary: 'アンケート付きのおすすめのノートの一覧を取得します。',
+	description: 'アンケート付きのおすすめのノートの一覧を取得します。',
+	tags: [
+		'notes',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {
+			limit: {
+				type: 'integer',
+				minimum: 1,
+				maximum: 100,
+				default: 10,
+				description: '取得するノートの最大数。',
+			},
+			offset: {
+				type: 'integer',
+				default: 0,
+				description: '検索結果の先頭offset個をスキップします。',
+			},
+		},
+		required: [],
+	},
+	res: {
+		type: 'array',
+		optional: false,
+		nullable: false,
+		items: {
+			type: 'object',
+			optional: false,
+			nullable: false,
+			ref: 'Note',
+			$ref: 'misskey://Note',
+		},
+	},
+	errors: {},
+}

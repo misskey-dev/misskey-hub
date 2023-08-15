@@ -1,0 +1,34 @@
+{
+	summary: 'ノートを削除します。',
+	description: 'ノートを削除します。',
+	tags: [
+		'notes',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {
+			noteId: {
+				type: 'string',
+				format: 'misskey:id',
+				description: 'ノートのid。',
+			},
+		},
+		required: [
+			'noteId',
+		],
+	},
+	res: {},
+	errors: {
+		'490be23f-8c1f-4796-819f-94cb4f9d1630': {
+			id: '490be23f-8c1f-4796-819f-94cb4f9d1630',
+			code: 'NO_SUCH_NOTE',
+			description: 'ノートが存在しません。',
+		},
+		'fe8d7103-0ea8-4ec3-814d-f8b401dc69e9': {
+			id: 'fe8d7103-0ea8-4ec3-814d-f8b401dc69e9',
+			code: 'ACCESS_DENIED',
+			description: 'ノートを削除する権限がありません。ノートの削除は、ノートを作成したユーザーか、サーバーの管理者あるいはモデレーターのみが行えます。',
+		},
+	},
+}

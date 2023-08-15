@@ -1,0 +1,93 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'antennas',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {
+			name: {
+				type: 'string',
+				minLength: 1,
+				maxLength: 100,
+			},
+			src: {
+				type: 'string',
+				enum: [
+					'home',
+					'all',
+					'users',
+					'list',
+				],
+			},
+			userListId: {
+				type: 'string',
+				format: 'misskey:id',
+				nullable: true,
+			},
+			keywords: {
+				type: 'array',
+				items: {
+					type: 'array',
+					items: {
+						type: 'string',
+					},
+				},
+			},
+			excludeKeywords: {
+				type: 'array',
+				items: {
+					type: 'array',
+					items: {
+						type: 'string',
+					},
+				},
+			},
+			users: {
+				type: 'array',
+				items: {
+					type: 'string',
+				},
+			},
+			caseSensitive: {
+				type: 'boolean',
+			},
+			withReplies: {
+				type: 'boolean',
+			},
+			withFile: {
+				type: 'boolean',
+			},
+			notify: {
+				type: 'boolean',
+			},
+		},
+		required: [
+			'name',
+			'src',
+			'keywords',
+			'excludeKeywords',
+			'users',
+			'caseSensitive',
+			'withReplies',
+			'withFile',
+			'notify',
+		],
+	},
+	res: {
+		type: 'object',
+		optional: false,
+		nullable: false,
+		ref: 'Antenna',
+		$ref: 'misskey://Antenna',
+	},
+	errors: {
+		'95063e93-a283-4b8b-9aa5-bcdb8df69a7f': {
+			id: '95063e93-a283-4b8b-9aa5-bcdb8df69a7f',
+			code: 'NO_SUCH_USER_LIST',
+			description: '',
+		},
+	},
+}

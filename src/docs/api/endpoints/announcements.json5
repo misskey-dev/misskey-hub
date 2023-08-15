@@ -1,0 +1,97 @@
+{
+	summary: 'サーバーからのお知らせを取得します。',
+	description: 'サーバーからのお知らせを取得します。',
+	tags: [
+		'meta',
+	],
+	requireCredential: false,
+	req: {
+		type: 'object',
+		properties: {
+			limit: {
+				type: 'integer',
+				minimum: 1,
+				maximum: 100,
+				default: 10,
+				description: '取得するお知らせの最大数。',
+			},
+			withUnreads: {
+				type: 'boolean',
+				default: false,
+				description: 'trueにすると、未読のお知らせのみを取得します。falseにすると、すべてのお知らせを取得します。',
+			},
+			sinceId: {
+				type: 'string',
+				format: 'misskey:id',
+				description: '指定すると、idがその値よりも大きいお知らせを返します。',
+			},
+			untilId: {
+				type: 'string',
+				format: 'misskey:id',
+				description: '指定すると、idがその値よりも小さいお知らせを返します。',
+			},
+		},
+		required: [],
+	},
+	res: {
+		type: 'array',
+		optional: false,
+		nullable: false,
+		items: {
+			type: 'object',
+			optional: false,
+			nullable: false,
+			properties: {
+				id: {
+					type: 'string',
+					optional: false,
+					nullable: false,
+					format: 'id',
+					example: 'xxxxxxxxxx',
+				},
+				createdAt: {
+					type: 'string',
+					optional: false,
+					nullable: false,
+					format: 'date-time',
+				},
+				updatedAt: {
+					type: 'string',
+					optional: false,
+					nullable: true,
+					format: 'date-time',
+				},
+				text: {
+					type: 'string',
+					optional: false,
+					nullable: false,
+				},
+				title: {
+					type: 'string',
+					optional: false,
+					nullable: false,
+				},
+				imageUrl: {
+					type: 'string',
+					optional: false,
+					nullable: true,
+				},
+				isRead: {
+					type: 'boolean',
+					optional: true,
+					nullable: false,
+					description: 'お知らせが既読であればtrueになります。クレデンシャルを送信した場合のみ返されます。',
+				},
+			},
+			required: [
+				'id',
+				'createdAt',
+				'updatedAt',
+				'text',
+				'title',
+				'imageUrl',
+			],
+		},
+	},
+	errors: {},
+}

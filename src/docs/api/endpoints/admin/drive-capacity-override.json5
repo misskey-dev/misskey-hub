@@ -1,0 +1,27 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'admin',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {
+			userId: {
+				type: 'string',
+				format: 'misskey:id',
+			},
+			overrideMb: {
+				type: 'number',
+				nullable: true,
+			},
+		},
+		required: [
+			'userId',
+			'overrideMb',
+		],
+	},
+	res: {},
+	errors: {},
+}

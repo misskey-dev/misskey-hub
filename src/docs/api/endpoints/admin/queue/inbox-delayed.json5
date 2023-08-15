@@ -1,0 +1,40 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'admin',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {},
+		required: [],
+	},
+	res: {
+		type: 'array',
+		optional: false,
+		nullable: false,
+		items: {
+			type: 'array',
+			optional: false,
+			nullable: false,
+			items: {
+				anyOf: [
+					{
+						type: 'string',
+					},
+					{
+						type: 'number',
+					},
+				],
+			},
+		},
+		example: [
+			[
+				'example.com',
+				12,
+			],
+		],
+	},
+	errors: {},
+}

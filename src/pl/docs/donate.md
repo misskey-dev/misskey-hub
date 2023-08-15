@@ -1,0 +1,4 @@
+# Dotacje do projektu
+Misskey nie jest firmą i zawsze będzie darmowe w użyciu by zbierać dotacje od każdego.(W zależności od instancji, niektóre zarobki mogą być zdobyte przez wyświetlanie reklam, jednak te zarobki idą wprost do administratorów instancji a nie do twórców Misskey.) Dotację umożliwiają kontynuację nad pracą nad projektem, są one jednym z sposobów na wspieranie Misskey. Dotację są przyjmowane na [Patreon](https://www.patreon.com/syuilo). Przez przekazywanie dotacji o określoej wartości możesz mieć twoją nazwę użytkownika wyświetloną na [Stronie na temat](/about-misskey) Misskey.
+
+Na dodatek administratorzy serwera nie mówią o zarabianiu. Operowanie serwera kosztuje trochę, więc proszę rozważ wspieranie administratora twojego serwera. To nie jest związane z tworzeniem Misskey, ale istnienie tych serwerów jest tym co tworzy ten projekt, oznacza to że istnienie tych serwerów jest tak samo ważne jak sam projekt.

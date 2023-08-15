@@ -1,0 +1,21 @@
+{
+	summary: '',
+	description: '',
+	tags: [
+		'admin',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {
+			inbox: {
+				type: 'string',
+			},
+		},
+		required: [
+			'inbox',
+		],
+	},
+	res: {},
+	errors: {},
+}

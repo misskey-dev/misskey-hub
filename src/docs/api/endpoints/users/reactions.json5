@@ -1,0 +1,65 @@
+{
+	summary: 'ユーザーがつけたリアクションを取得します。',
+	description: 'ユーザーがつけたリアクションを取得します。',
+	tags: [
+		'users',
+	],
+	requireCredential: false,
+	req: {
+		type: 'object',
+		properties: {
+			userId: {
+				type: 'string',
+				format: 'misskey:id',
+				description: 'ユーザーのid。',
+			},
+			limit: {
+				type: 'integer',
+				minimum: 1,
+				maximum: 100,
+				default: 10,
+				description: '取得するリアクションの最大数。',
+			},
+			sinceId: {
+				type: 'string',
+				format: 'misskey:id',
+				description: '指定すると、idがその値よりも大きいリアクションを返します。',
+			},
+			untilId: {
+				type: 'string',
+				format: 'misskey:id',
+				description: '指定すると、idがその値よりも小さいファイルを返します。',
+			},
+			sinceDate: {
+				type: 'integer',
+				description: 'エポック秒で日時を指定すると、その日時より後作成されたリアクションを返します。',
+			},
+			untilDate: {
+				type: 'integer',
+				description: 'エポック秒で日時を指定すると、その日時より前に作成されたリアクションを返します。',
+			},
+		},
+		required: [
+			'userId',
+		],
+	},
+	res: {
+		type: 'array',
+		optional: false,
+		nullable: false,
+		items: {
+			type: 'object',
+			optional: false,
+			nullable: false,
+			ref: 'NoteReaction',
+			$ref: 'misskey://NoteReaction',
+		},
+	},
+	errors: {
+		'673a7dd2-6924-1093-e0c0-e68456ceae5c': {
+			id: '673a7dd2-6924-1093-e0c0-e68456ceae5c',
+			code: 'REACTIONS_NOT_PUBLIC',
+			description: 'リアクションが公開されていません。',
+		},
+	},
+}

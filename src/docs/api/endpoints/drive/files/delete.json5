@@ -1,0 +1,34 @@
+{
+	summary: 'ファイルを削除します。',
+	description: 'ファイルを削除します。',
+	tags: [
+		'drive',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {
+			fileId: {
+				type: 'string',
+				format: 'misskey:id',
+				description: 'ファイルのid。',
+			},
+		},
+		required: [
+			'fileId',
+		],
+	},
+	res: {},
+	errors: {
+		'908939ec-e52b-4458-b395-1025195cea58': {
+			id: '908939ec-e52b-4458-b395-1025195cea58',
+			code: 'NO_SUCH_FILE',
+			description: 'ファイルが存在しません。',
+		},
+		'5eb8d909-2540-4970-90b8-dd6f86088121': {
+			id: '5eb8d909-2540-4970-90b8-dd6f86088121',
+			code: 'ACCESS_DENIED',
+			description: 'ファイルを削除する権限がありません。ファイルの削除は、ファイルを所有するユーザーか、サーバーの管理者あるいはモデレーターのみが行えます。',
+		},
+	},
+}

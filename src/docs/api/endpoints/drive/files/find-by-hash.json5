@@ -1,0 +1,33 @@
+{
+	summary: '与えられたハッシュ値を持つファイルの一覧を取得します。',
+	description: '与えられたハッシュ値を持つファイルの一覧をログイン中のユーザのドライブから取得します。ファイルが存在するかどうかだけを知りたい場合には、 check-existenceを使用してください。',
+	tags: [
+		'drive',
+	],
+	requireCredential: true,
+	req: {
+		type: 'object',
+		properties: {
+			md5: {
+				type: 'string',
+				description: 'ファイルのMD5ハッシュ値。',
+			},
+		},
+		required: [
+			'md5',
+		],
+	},
+	res: {
+		type: 'array',
+		optional: false,
+		nullable: false,
+		items: {
+			type: 'object',
+			optional: false,
+			nullable: false,
+			ref: 'DriveFile',
+			$ref: 'misskey://DriveFile',
+		},
+	},
+	errors: {},
+}

@@ -1,0 +1,40 @@
+{
+	summary: 'ノートを含むクリップを取得します。',
+	description: 'ノートを含むクリップを取得します。',
+	tags: [
+		'clips',
+	],
+	requireCredential: false,
+	req: {
+		type: 'object',
+		properties: {
+			noteId: {
+				type: 'string',
+				format: 'misskey:id',
+				description: 'ノートのid。',
+			},
+		},
+		required: [
+			'noteId',
+		],
+	},
+	res: {
+		type: 'array',
+		optional: false,
+		nullable: false,
+		items: {
+			type: 'object',
+			optional: false,
+			nullable: false,
+			ref: 'Clip',
+			$ref: 'misskey://Clip',
+		},
+	},
+	errors: {
+		'47db1a1c-b0af-458d-8fb4-986e4efafe1e': {
+			id: '47db1a1c-b0af-458d-8fb4-986e4efafe1e',
+			code: 'NO_SUCH_NOTE',
+			description: 'ノートが存在しません。',
+		},
+	},
+}
