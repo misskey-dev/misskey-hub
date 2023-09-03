@@ -56,6 +56,7 @@ export default defineUserConfig<DefaultThemeOptions>({
 		'/ko/': { lang: 'ko-KR', description: '오픈소스 분산형 마이크로블로깅 플랫폼 Misskey' },
 		'/it/': { lang: 'it-IT', description: 'Sito ufficiale del progetto Misskey' },
 		'/pl/': { lang: 'pl-PL', description: 'Oficjalna strona projektu Misskey' },
+		'/zh-CN/': { lang: 'zh-CN', description: '开源分布式微博客平台 Misskey 的官方网站' },
 	},
 
 	theme: localTheme({
@@ -511,6 +512,92 @@ export default defineUserConfig<DefaultThemeOptions>({
 						], // Fine: menu links
 					},
 				], // Fine: navbar italiana
+			},
+			'/zh-CN/': {
+				selectLanguageName: '简体中文',
+				contributorsText: '贡献者',
+				lastUpdatedText: '上次更新于',
+				editLinkText: '编辑本页面',
+				relatedPagesText: '相关页面',
+				readThisArticle: '阅读本文',
+				navbar: [
+					{ text: '博客', link: '/zh-CN/blog/' },
+					{ text: '参与', children: ['/zh-CN/instances', '/zh-CN/plugins/', '/zh-CN/appendix/assets'] },
+					{
+						text: '文档', children: [
+							'/zh-CN/docs/misskey',
+							'/zh-CN/docs/releases',
+							'/zh-CN/docs/misskey-hub',
+							'/zh-CN/docs/faq',
+							'/zh-CN/docs/glossary',
+							'/zh-CN/docs/troubleshooting',
+							{
+								text: '功能', children: [
+									'/zh-CN/docs/features/note',
+									'/zh-CN/docs/features/reaction',
+									'/zh-CN/docs/features/timeline',
+									'/zh-CN/docs/features/mfm',
+									'/zh-CN/docs/features/custom-emoji',
+									'/zh-CN/docs/features/drive',
+									'/zh-CN/docs/features/deck',
+									'/zh-CN/docs/features/charts',
+									'/zh-CN/docs/features/online-status',
+									'/zh-CN/docs/features/share-form',
+									'/zh-CN/docs/features/ads',
+									'/zh-CN/docs/features/thread-mute',
+									'/zh-CN/docs/features/word-mute',
+									'/zh-CN/docs/features/mute-and-block',
+									'/zh-CN/docs/features/plugin',
+									'/zh-CN/docs/features/antenna',
+									'/zh-CN/docs/features/clip',
+									'/zh-CN/docs/features/favorite',
+									'/zh-CN/docs/features/follow',
+									'/zh-CN/docs/features/pages',
+									'/zh-CN/docs/features/theme',
+									'/zh-CN/docs/features/widgets',
+								]
+							},
+							{
+								text: '开发者文档', children: [
+									'/zh-CN/docs/api',
+									'/zh-CN/docs/api/streaming',
+									'/zh-CN/docs/api/endpoints.html',
+									'/zh-CN/docs/features/webhook',
+								]
+							},
+							{
+								text: '管理员文档', children: [
+									'/zh-CN/docs/install',
+									'/zh-CN/docs/admin/emoji',
+									'/zh-CN/docs/admin/cdn',
+									'/zh-CN/docs/admin/nginx',
+									'/zh-CN/docs/admin/push-docker-hub',
+									'/zh-CN/docs/admin/troubleshooting',
+									'/zh-CN/docs/tips/disable-timelines',
+									'/zh-CN/docs/admin/default-reaction',
+									'/zh-CN/docs/features/silence',
+								]
+							},
+						]
+					},
+					{
+						text: '相关链接', children: [
+							{ text: '官方 Discord', link: 'https://discord.gg/Wp8gVStHW3' },
+							{ text: '赞助 (Patreon)', link: 'https://www.patreon.com/syuilo' },
+							{ text: '翻译 (Crowdin)', link: 'https://crowdin.com/project/misskey' },
+							{ text: '藍.moe (看版娘作品网站)', link: 'https://xn--931a.moe' },
+							{ text: '账户', children: [{ text: '@repo@p1.a9z.dev', link: 'https://p1.a9z.dev/@repo' }] },
+							{
+								text: '仓库', children: [
+									{ text: 'misskey', link: 'https://github.com/misskey-dev/misskey' },
+									{ text: 'misskey.js', link: 'https://github.com/misskey-dev/misskey.js' },
+									{ text: 'mfm.js', link: 'https://github.com/misskey-dev/mfm.js' },
+									{ text: 'misskey-hub', link: 'https://github.com/misskey-dev/misskey-hub' },
+								]
+							},
+						]
+					},
+				],
 			},
 			'/zh-TW/': {
 				selectLanguageName: '繁體中文',
