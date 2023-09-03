@@ -1,5 +1,6 @@
 ---
 description: 'Misskeyが「ケータイ Watch」にて取り上げられました'
+createdTimeOverride: 1669593600000
 ---
 
 # メディアによる紹介: ケータイ Watch
