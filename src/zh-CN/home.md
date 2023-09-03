@@ -2,22 +2,22 @@
 home: true
 title: Misskey Hub
 heroImage: /banner.svg
-tagline: Official web site of open-source interplanetary micro-blogging platform Misskey
+tagline: 开源的星际微博客平台 Misskey 的官方网站
 footer: Copyright &copy; 2023 syuilo and other contributors
 actions:
-  - text: Getting started
+  - text: 让我们开始吧！
     link: ./docs/getting-started
     type: primary
-  - text: What is Misskey?
+  - text: Misskey 是什么？
     link: ./docs/misskey
     type: secondary
 features:
-  - title: Distributed 🪐
-    details: Independent communities are run on multiple servers, and these are interconnected.
-  - title: Lightweight 🚀
-    details: Because it uses Node.js, which runs at high speed, it is lightweight even when federated with a large number of servers.
-  - title: Fun 🍮
-    details: It has distinctive features such as reactions and a highly customizable UI.
+  - title: 分布式 🪐
+    details: 独立社区在多个服务器上运行，这些服务器相互连接。
+  - title: 轻量级 🚀
+    details: 由于它使用的是高速运行的 Node.js，因此即使与大量服务器联合，它也是轻量级的。
+  - title: 足够有趣 🍮
+    details: 它具有反馈和高度可定制的用户界面等独特功能。
 ---
 
 <ClientOnly>
@@ -26,7 +26,7 @@ features:
 
 <div class="contents">
 
-# Sponsors
+# 赞助者
 <div class="sponsors">
 	<a class="rss3" title="RSS3" href="https://rss3.io/" target="_blank"><img src="/sponsors/rss3.svg" alt="RSS3"></a>
 </div>
