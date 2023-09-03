@@ -1,5 +1,6 @@
 ---
 description: '診断メーカーにてMisskeyとの連携が可能に'
+createdTimeOverride: 1689638400000
 ---
 
 # NEWS: 診断メーカーにてMisskeyとの連携が可能に

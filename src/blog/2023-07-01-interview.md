@@ -1,5 +1,6 @@
 ---
 description: 'Nikkei AsiaによるMisskeyプロジェクトリーダー syuiloへのインタビューが公開されました'
+createdTimeOverride: 1688169600000
 ---
 
 # 被インタビュー: Nikkei Asia

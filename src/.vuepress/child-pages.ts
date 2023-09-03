@@ -41,9 +41,9 @@ export async function getChildPages(app: App) {
 				name: p.filePath.split('/').pop(),
 				title: p.title,
 				path: p.path,
-				summary: p.frontmatter.description || p.excerpt,
+				summary: p.frontmatter.description ?? p.excerpt,
 				updatedTime: times.updatedTime,
-				createdTime: times.createdTime,
+				createdTime: p.frontmatter.createdTimeOverride ?? times.createdTime,
 			};
 		}));
 	}

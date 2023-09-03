@@ -1,5 +1,6 @@
 ---
 description: 'Misskeyが「ITmedia NEWS」にて取り上げられました'
+createdTimeOverride: 1677888000000
 ---
 
 # メディアによる紹介: ITmedia NEWS

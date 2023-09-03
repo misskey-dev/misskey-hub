@@ -1,5 +1,6 @@
 ---
 description: 'レバテックLABによるMisskeyプロジェクトリーダー syuiloへのインタビューが公開されました'
+createdTimeOverride: 1688947200000
 ---
 
 # 被インタビュー: レバテックLAB
