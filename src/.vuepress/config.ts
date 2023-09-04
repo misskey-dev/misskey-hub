@@ -56,6 +56,7 @@ export default defineUserConfig<DefaultThemeOptions>({
 		'/ko/': { lang: 'ko-KR', description: '오픈소스 분산형 마이크로블로깅 플랫폼 Misskey' },
 		'/it/': { lang: 'it-IT', description: 'Sito ufficiale del progetto Misskey' },
 		'/pl/': { lang: 'pl-PL', description: 'Oficjalna strona projektu Misskey' },
+		'/zh-TW/': { lang: 'zh-TW', description: '開放原始碼的分散式微網誌平台「Misskey」的官方網站' },
 	},
 
 	theme: localTheme({
