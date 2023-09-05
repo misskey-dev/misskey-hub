@@ -18,6 +18,10 @@ Misskey公式のWebクライアント、Misskey Webをご利用ください。
 ## misskey.ioはMisskeyプロジェクトの公式サーバーですか？
 misskey.ioはMisskey公式サーバーではなく、またMisskeyプロジェクトには含まれません。misskey.ioは特定のテーマを持たず汎用的で、かつ気軽に登録できる、Misskeyで最も規模の大きいサーバーです。
 
+## 株式会社MisskeyHQとの関係は？
+株式会社MisskeyHQは、misskey.ioの運営を目的とした会社です。そのため、Misskey開発プロジェクトとの直接的な関係はありません。
+ただし、Misskeyプロジェクトリーダーであるsyuiloも役員として参加しており、協力してMisskeyを発展させていく関係です。
+
 ## 「Misskey」の名前の由来は何ですか？
 メイン開発者のsyuiloがその名前を考えていたときに偶然聴いていた、May'nの楽曲『Brain Diver』の歌詞から採られています。
 
