@@ -1,1 +1,0 @@
-const e=JSON.parse('{"key":"v-3b397e15","path":"/zh-CN/docs/admin/nginx.html","title":"\u914D\u7F6E Nginx","lang":"ja-JP","frontmatter":{},"excerpt":"","headers":[],"git":{"updatedTime":1681526768000,"contributors":[{"name":"Never","email":"33362783+Never2333@users.noreply.github.com","commits":1}]},"filePathRelative":"zh-CN/docs/admin/nginx.md"}');export{e as data};
