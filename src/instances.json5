@@ -37,4 +37,8 @@
   host: 'msk.ilnk.info',
   name: 'えとねるん(EtonernROY)',
   lang: 'ja',
+}, {
+  host: 'mk.chiwa.net',
+  name: 'ChwiaBots',
+  lang: 'zh',
 }]
