@@ -1,6 +1,57 @@
 # リリースノート
 Misskeyのリリースノートを掲載しています。
 
+## 2023.9.3
+リリース日: 2023/09/30
+
+### General
+- Enhance: ノートの翻訳機能の利用可否をロールで設定可能に
+
+### Client
+- Enhance: AiScriptでホストのアドレスを参照する定数`SERVER_URL`を追加
+- Enhance: モデレーションログ機能の強化
+- Enhance: ローカリゼーションの更新
+
+### Server
+- Fix: Redisに古いバージョンのキャッシュが残っている場合、キャッシュが消えるまでの間通知が届かなくなる問題を修正
+- Fix: 後方互換性の修正
+
+## 2023.9.2
+リリース日: 2023/09/29
+
+### General
+- Feat: ノートの編集をできるように
+	- ロールで編集可否を設定可能
+- Feat: 通知を種類ごとに 全員から受け取る/フォロー中のユーザーのみ受け取る/フォロワーのみ受け取る/相互のみ受け取る/指定したリストのメンバーのみ受け取る/受け取らない から選べるように
+- Enhance: タイムラインからRenoteを除外するオプションを追加
+- Enhance: ユーザーページのノート一覧でRenoteを除外できるように
+- Enhance: タイムラインでファイルが添付されたノートのみ表示するオプションを追加
+- Enhance: モデレーションログ機能の強化
+- Enhance: 依存関係の更新
+- Enhance: ローカリゼーションの更新
+
+### Client
+- Enhance: Plugin:register_post_form_actionを用いてCWを取得・変更できるように
+- Enhance: admin/ad/listにて掲載中の広告が絞り込めるように
+- Enhance: AiScriptにリモートサーバーのAPIを叩く用の関数を追加（`Mk:apiExternal`）
+
+### Server
+- Enhance: MasterプロセスのPIDを書き出せるように
+- Enhance: admin/ad/createにてレスポンス200、設定した広告情報を返すように
+
+## 2023.9.1
+リリース日: 2023/09/25
+
+### General
+- Enhance: モデレーションログ機能の強化
+
+### Client
+- Fix: ノートのメニューにある「詳細」ボタンの表示がログイン/ログアウト状態で統一されていない問題を修正
+
+### Server
+- Fix: お知らせのページネーションが機能しない
+- Fix: 「ユーザーの新規投稿」の通知設定を切り替えるとサーバー内部エラーが出る
+
 ## 2023.9.0
 リリース日: 2023/09/24
 
@@ -88,6 +139,7 @@ Misskeyのリリースノートを掲載しています。
 - Enhance: 自分へのメンション一覧を取得する際のパフォーマンスを向上
 - Enhance: Docker環境でjemallocを使用することでメモリ使用量を削減
 - Enhance: ID生成方式としてaidxを追加、かつデフォルトに
+- Enhance: Add address bind config option (outgoingAddress)
 - Fix: MK_ONLY_SERVERオプションを指定した際にクラッシュする問題を修正
 - Fix: notes/reactionsのページネーションが機能しない問題を修正
 - Fix: ノート検索 `notes/search` にてhostを指定した際に検索結果に反映されるように
