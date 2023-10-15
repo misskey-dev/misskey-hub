@@ -15,6 +15,8 @@ description: 'Misskey APIに関連するライブラリの一覧'
 ## Python
 
 - [Misskey.py](https://github.com/YuzuRyo61/Misskey.py)
+- [MiPA](https://github.com/yupix/MiPA)
+- [MiPAC](https://github.com/yupix/MiPAC)
 
 ## .Net
 
