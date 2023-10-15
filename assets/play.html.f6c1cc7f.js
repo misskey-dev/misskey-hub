@@ -1,1 +1,0 @@
-import{_ as a,o as t,c,a as e,d as o}from"./app.f4230cb7.js";const r={},s=e("h1",{id:"play",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#play","aria-hidden":"true"},"#"),o(" Play")],-1),_=e("p",null,"TODO",-1),l=[s,_];function n(d,i){return t(),c("div",null,l)}var p=a(r,[["render",n],["__file","play.html.vue"]]);export{p as default};
