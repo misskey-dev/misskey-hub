@@ -57,6 +57,7 @@ export default defineUserConfig<DefaultThemeOptions>({
 		'/it/': { lang: 'it-IT', description: 'Sito ufficiale del progetto Misskey' },
 		'/pl/': { lang: 'pl-PL', description: 'Oficjalna strona projektu Misskey' },
 		'/zh-CN/': { lang: 'zh-CN', description: '开源分布式微博客平台 Misskey 的官方网站' },
+		'/zh-TW/': { lang: 'zh-TW', description: '開源分散式微網誌平台 Misskey 的官方網站' },
 	},
 
 	theme: localTheme({
