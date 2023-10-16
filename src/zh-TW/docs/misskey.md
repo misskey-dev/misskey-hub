@@ -1,86 +1,124 @@
-# About Misskey
+---
+description: 'Misskeyについてのドキュメントです。'
+---
 
-Misskey is an open-source and distributed platform for microblogging. Development was started in 2014 by syuilo in Japan. It features an abundance of features such as Drive or Reactions as well as a very high UI customizability.
+# 關於 Misskey
 
-## History
-While Misskey started centered around Bulletin Boards as its main feature, the growth in popularity due to the addition of a timeline that let users post short messages and view them in chronological order lead to a gradual shift in the main focus of development towards this kind of functionality. Misskey was not always a decentralized service, but became decentralized through the adoption of ActivityPub in 2018. Since then, it has become a service that is acknowledged and used by many.
+Misskey 是一個開源分散式微網誌平台專案。
+由 syuilo 於 2014 年在日本發起開發。
+其特點是功能豐富，包括雲端硬碟和反應，以及高度可自訂的使用者介面。
 
-::: tip
-The name "Misskey" comes from a song called "Brain Diver" by a band that syuilo used to listen to at the time called May'n.
-:::
-
-With anyone being able to join its development, Misskey is still continually being actively developed.
-
-## What does "Distributed" mean?
-A <b>Distributed</b> service, also called a <b>Decentralized</b> service, refers to a service which features the division of a community into many servers that all mutually <b>communicate (federate)</b> with each other to share their contents, building a <b>network (Fediverse)</b>. Services for which only one server exists, or for which many independent server exist, are called centralized. Most services fall under the category of centralized, some examples for this are Twitter or Facebook. The advantage of distributed services is being able to select the administration or server theme that suits you freely.It's also possible for you to make your own server.Thanks to the federated nature, you will be able to access the same community, no matter which server you choose.
-
-## Always Open-Source
-Misskey has always been, and will always be, open source.Open source means, simply speaking, <b>making the source code of software (a program) publicly available</b>.This also includes being able to adjust or redistribute the source code in its definition. The entirety of Misskey's source code is [being licensed](https://github.com/misskey-dev) under an open-source license called [AGPL](https://github.com/misskey-dev/misskey/blob/develop/LICENSE), which means anyone can freely inspect, use, adjust, change or redistribute as they see fit. Open source has many merits, including allowing anyone being able to make changes as they like, to make sure the code does not include any harmful components and being able to easily participate in its development. For realizing the distributed nature of Misskey, this concept of open source is indispensable. Using the same example as before, most profit-oriented services like Twitter, Facebook etc. are not open source.
+## 歷史
+在開發之初，主要服務是公告板，但當增加了時間軸功能，用戶可以發布短消息，這些消息將按時間順序流動時，它變得更受歡迎，並逐漸成為服務的主要發展方向。
+起初，這項服務並不是去中心化的，但在 2018 年，ActivityPub 付諸實施，成為去中心化的服務，使這項服務得到更多人的認可和使用，也就是今天的這項服務。
 
 ::: tip
-Technically speaking, Misskey's source code is being managed via Git, and its repository is being hosted at [GitHub.](https://github.com/misskey-dev)
+Misskey 這個名字來自歌手 May'n 的歌曲 Brain Diver 的歌詞，syuilo 當時正在聽這首歌。
 :::
 
-## Joining development and supporting the project
-If you like Misskey, please support the project.Supporting the project can be done in many ways, with some of them introduced below.Some of these do not require programming skills, so anyone can feel free to support Misskey their own way.We're always waiting for you.
+任何人都可以參與開發，目前開發工作仍在積極進行中。
 
-### Adding features or fixing bugs
-If you possess software engineering skills, you can contribute to the project through editing its source code. For guidelines regarding this, please see [here](https://github.com/misskey-dev/misskey/blob/develop/CONTRIBUTING.md).
+## 什麼是分散式？
+<b>分散(distributed)式</b>，也稱去<b>中心化(decentralized)</b>，其特點是社群分佈在許多伺服器上，這些伺服器相互<b>通信(聯邦、federation)</b>，形成內容共享<b>網路(聯邦宇宙、Fediverse)</b>的服務。
+如果只有一個伺服器，或者有多個伺服器但彼此獨立，則稱為集中式服務，例如 Twitter 和 Facebook 等大多數服務就是這種情況。
+分散式系統的優點在於，您可以選擇最適合您的伺服器營運商和主題。您也可以建立自己的伺服器。透過聯邦，無論您選擇哪個伺服器，都可以存取同一個社群。
 
-### Participating in discussions
-You can contribute by sharing your opinion on new or existing features, as well as by reporting bugs. Such discussions can be held at [GitHub](https://github.com/misskey-dev) or the [Forums](https://forum.misskey.io/) etc.
+## 始終開放原始碼
+Misskey 一直並將繼續是開源的。簡單來說，開源就是<b>軟體的原始碼（程式）</b>是公開的。該定義還可以包括可以修改和重新分發原始程式碼。
+Misskey 的所有原始碼均在開放原始碼許可證[AGPL](https://github.com/misskey-dev/misskey/blob/develop/LICENSE)下[發布](https://github.com/misskey-dev) ，任何人都可以自由查看、使用、修改和重新發布。
+開放原始碼有很多優點，例如可以隨意更改，檢查是否包含有害程序，以及任何人都可以參與開發。
+開源對於上述分散式方法也至關重要。
+再舉一個例子，Twitter 和 Facebook 等大多數獲利服務都不是開源的。
 
-### Translating text
-Misskey is available in many languages (also called i18n, which is an abbreviation for Internationalization).While the original language is generally japanese, volunteers are translating Misskey into other languages. Helping out with this translation work is also a form of contributing. Misskey uses a service called [Crowdin to manage its translations.](https://crowdin.com/project/misskey)
+::: tip
+從技術上來說，Misskey 的原始碼用 Git 管理，託管在 [GitHub](https://github.com/misskey-dev)。 
+:::
 
-### Sharing your impressions
-Besides reporting bugs, please also feel free to share positive impressions such as which parts of Misskey you personally like, or things about Misskey that you find fun.As things like these serve as motivation for the developers, it also counts as indirect support for the project.
+## 參與開發和支援項目
+如果您喜歡 Misskey，請支持該項目。如下所述，有多種方式可以為專案做出貢獻。有些方法不需要任何開發技能，因此任何人都可以輕鬆加入並做出貢獻。我們期待您的參與。
 
-### Increasing the number of Misskists
-"Misskist" refers to the people using Misskey. By spreading the word about Misskey through introducing it to your acquaintances, the number of Misskists may increase, which serves as motivation for the developers.
+### 新增功能或修復錯誤
+如果您具備軟體工程技能，可以透過編輯原始碼的形式為專案做出貢獻。
+貢獻指南[在此](https://github.com/misskey-dev/misskey/blob/develop/CONTRIBUTING.md)。
 
-### Making donations
-[Please take a look here](./donate.md)
+### 加入討論
+您也可以透過評論新功能或現有功能或報告錯誤來做出貢獻。
+此類討論可以在 [GitHub](https://github.com/misskey-dev) 或 [論壇](https://forum.misskey.io/) 進行。
 
-## Frequently Asked Questions
-### What is this project aiming to achieve?
-To put it bluntly, while this is a bit vague, Misskey is aiming to be a widely-used all-purpose platform. Unlike other platforms, Misskey is not grounded in a specific idea (for example, anti-centralization) or vision and being developed with that in mind, so it's a bit "aimless" in this respect. On the other hand though, this creates a flexibility due to not being bound by a specific direction to go towards.
+### 翻譯文字
+Misskey 有多種語言版本（稱為 i18n - internationalization 的簡稱）。其原始語言基本上是日語，但已被志願者翻譯成其他語言。
+您也可以透過參與翻譯工作為 Misskey 做出貢獻。
+Misskey 使用一種名為[Crowdin](https://crowdin.com/project/misskey)的服務來管理翻譯工作。 
+
+### 發表您的想法
+除了報告錯誤之外，請分享您對 Misskey 的優點和令人愉快的方面的正面看法。這會鼓勵開發人員並間接為專案做出貢獻。
+
+### 增加 Misskist
+Misskist 是指使用 Misskey 的人。
+如果您透過向朋友和熟人介紹來宣傳 Misskey，就會增加 Misskist 的數量，開發的動力也會增加。
+
+### 捐款
+[請參考這裡](./donate.md)
+
+## 常見問題
+### 專案的目標是什麼？
+如果有什麼不同的話，那就是它的目標是成為一個被廣泛使用的通用平台，儘管它的目標很模糊。
+與其他項目不同的是，Misskey的開發並不基於任何意識形態（如反中心化）或願景，因此在這方面是扁平的。
+我們認為，這反過來又帶來了一種不受特定方向束縛的彈性。
 <!-- TODO: ここにロードマップへのリンク -->
 
-### Is Misskey being developed by a company?
-No.Misskey is being developed by an individual person and not commercialized through connection with any particular company. Development members are generally volunteers. Additionally, while there are some corporate sponsors, development is still centered around the community.
+### 它是由公司開發的嗎？
+沒有。 Misskey 是私人開發的，不具有商業性質，也沒有特定公司參與其中。
+開發成員基本上都是志工。
+在某些情況下，開發工作會得到企業的贊助，但即使在這種情況下，開發工作仍主要由個人群體完成。
 
-### Who is managing Misskey?
-Due to the distributed nature of Misskey, each individual server has their own administration.Therefore, not all of Misskey is managed by one individual person or company. This means that, as the development team does not control individual servers, for management-related questions you should contact your server's administration instead. You can verify who is managing your individual server on [this page](/about). If you were to create a server, then you would also become its administrator.
+### 誰負責營運？
+由於 Misskey 是分散式的，每個伺服器都有不同的運營者。因此，並非所有的 Misskey 都是由某個人或公司經營的。
+此外，由於 Misskey 並非由開發團隊經營，因此任何有關其營運的事宜都應與伺服器的營運商聯繫。
+您可以在伺服器的資訊頁面上找到伺服器的運營者。
+如果您創建了自己的伺服器，那麼您就是運營者。
 
-### Which server should I choose?
-[You can find an (incomplete) list of servers here.](../instances.md) Depending on the server, its community or central theme (for example, liking a show) may vary, so if there is a server that suits your interests, joining it would likely be a good choice. Besides that, server size, userbase, country or spoken language, reliance or trust in the administration team and many other things can also serve as criteria. There is however no single server that serves as the official server of Misskey.You also have the choice of creating a new server of your own.
+### 應該選擇哪個伺服器？
+[公開伺服器列表](../instances.md)
+有些伺服器可能有特定的社群主題（如喜歡某些事物、事物），因此如果有適合您的主題的伺服器，您不妨選擇該伺服器。
+其他考慮因素包括伺服器的規模、用戶群、國家和語言以及營運商是否值得信賴。
+請注意，Misskey 沒有官方伺服器。您可以選擇自己建立一個新伺服器。
 
-Generally speaking, no matter which server you join, you will still be able to connect with users from all other servers.
+基本上，無論您選擇哪個伺服器，都可以與所有其他伺服器上的使用者連接。
 
-### How can I create my own server?
-Thank you for having an interest in creating a Misskey server. In the current year of 2022 there is no specialized Misskey hosting service, so creating a new server requires a certain amount of knowledge. Please see [here](./install.md) for more information regarding this.
+### 如何建立伺服器？
+感謝您對創建 Misskey 伺服器的興趣。
+截至 2022 年，還沒有 Misskey 託管服務，因此建立伺服器需要一定的知識。
+有關如何建立伺服器的資訊請參考[這裡](/install.md)。
 
-### What kind of technology does Misskey use?
-As development on Misskey progressed, the technology it has used has changed greatly.In the beginning, it used a combination of MySQL + PHP + jQuery, but currently uses the following.
-- Server-side: Node.js
-- Database: PostgreSQL, Redis
-- UI Framework: Vue.js
-- Programming language: TypeScript
+### 使用了哪些技術？
+隨著Misskey的發展，所使用的技術也發生了很大的變化。開發之初，我們使用的是 MySQL + PHP + jQuery，但現在我們使用的是以下技術
+- 伺服器端：Node.js
+- 資料庫：PostgreSQL、Redis
+- 使用者介面框架：Vue.js
+- 程式語言：TypeScript
 
-In addition to this, from Misskey derived technology such as MFM or AiScript are also being used.
+我們也正在開發源自 Misskey 的專有技術，例如 MFM 和 AiScript。
 
-### Is this a fork of Mastodon?
-No.Misskey is a project completely different from Mastodon or other alike projects. It has been in development for a long time already.However, it only became a distributed network after the appearance of Mastodon. Besides both projects implementing the ActivityPub protocol, there is no relation between the two.
+### 是 Mastodon 的分支嗎？
+不，Misskey 是一個與 Mastodon 和其他專案完全獨立的專案。
+就開發而言，Misskey 的開發時間更長。不過，它只是在 Mastodon 出現後才開始實做分散化的。
+兩者之間沒有特別的聯繫，只是在去中心化方面採用了相同的 ActivityPub 協議。
 
-### Are there any apps for iOS / Android available?
-While no official Misskey app for either OS exists, there are several third-party applications. For details, please check [here](./apps).
+### 有 iOS/Android 的 App 嗎？
+官方尚未為此類作業系統開發應用程序，但有一些第三方應用程式可供使用。
+請參閱[這裡](/apps.md)以獲取更多信息。
 
-However, functionality of third-party applications will inevitably lag behind the official Web client, so unless you really want to use a native application, we recommend the official Web client instead. As the Misskey Web client supports PWA, it is also possible to make it act as if it was a native application instead. For details regarding this, please check [here](todo).
+不過，第三方應用程式在支援功能方面難免落後，因此如果沒有特別偏好，我們建議使用官方網路用戶端。
+Misskey 網頁用戶端相容於 PWA，因此可以像原生應用程式一樣運作。
+欲了解更多信息，請參閱[此處](todo)。
 
-### Where can I download Misskey's logo or icon?
-Please refer to the [assets collection](../appendix/assets.html).
+### 從哪裡可以獲得 Misskey 標誌和圖示？
+[這裡](../appendix/assets.md)
 
-### Who's that cute cat-eared girl that you see sometimes?
-It's Misskey's guardian deity, Ai.(They called Ai cute, yay!)
-<div class="info">ℹ️ To read more about Ai, check <a href="https://xn--931a.moe/" target="_blank">here</a> (Japanese-only).</div>
+### 那偶爾出現的漂亮貓耳女孩是誰？
+Misskey 的守護神小藍。
+
+::: tip
+有關小藍的更多訊息請[參考這裡](https://xn--931a.moe/)。
+:::
