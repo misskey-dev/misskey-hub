@@ -601,7 +601,7 @@ export default defineUserConfig<DefaultThemeOptions>({
 				],
 			},
 			'/zh-TW/': {
-				selectLanguageName: '繁體中文',
+				selectLanguageName: '繁體中文（臺灣）',
 				contributorsText: '貢獻者',
 				lastUpdatedText: '編輯日期',
 				editLinkText: '編輯本頁面',
