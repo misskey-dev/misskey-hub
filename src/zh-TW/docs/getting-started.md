@@ -1,24 +1,24 @@
-# Getting Started with Misskey
-Misskey is a program and a project.
-The server running Misskey, which is open to the public on the Internet, is called an **instance**.
-To use Misskey, you need to create an account in one of the instances and use that instance.
+# 開始使用 Misskey
+Misskey 是一個軟體及其專案。
+向網際網路開放並運行 Misskey 的伺服器稱為**伺服器**。
+要使用 Misskey，請在某個伺服器上建立帳戶並使用該伺服器。
 
-You can select an instance of your choice from the [instance list](../instances.md).
+您可以從[伺服器清單](../instances.md)中選擇您喜歡的伺服器。
 
 ::: tip
-No matter which instance you choose, you will be able to interact with users on other instances.
+無論您選擇哪個伺服器，您都可以與其他伺服器的使用者互動。
 
 ::: details
-Misskey has the ability to federate.
+Misskey 具有聯邦功能。
 
-Misskey has built-in federation support, which allows users in different instances to follow, react, and renote in the same way as users on the same instance.
+聯邦功能允許不同伺服器上的使用者以與同一伺服器上的使用者相同的方式關注、反應、轉發等。
 
-Misskey's federation is based on an open common standard called ActivityPub, and is compatible with other software such as Mastodon and Pleroma.
+Misskey 中包含的聯邦功能基於稱為 ActivityPub 的開放通用標準，並且與 Mastodon 和 Pleroma 等其他軟體相容。
 :::
 
-## Choosing an Instance
-### Instance Themes
-Some instances may have a specific theme, for example, "I like certain stuff and activities".
-It is recommended to find an instance of the theme that suits you best.
+## 如何選擇伺服器
+### 伺服器的主題
+有些伺服器可能有特定的主題，例如「喜歡某些東西和事物」。
+建議尋找一個主題適合您的伺服器。
 
-### Instance user base
+### 伺服器的用戶群
