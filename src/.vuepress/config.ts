@@ -619,7 +619,7 @@ export default defineUserConfig<DefaultThemeOptions>({
 							'/zh-TW/docs/glossary',
 							'/zh-TW/docs/troubleshooting',
 							{
-								text: 'Features', children: [
+								text: '功能', children: [
 									'/zh-TW/docs/features/note',
 									'/zh-TW/docs/features/reaction',
 									'/zh-TW/docs/features/timeline',
