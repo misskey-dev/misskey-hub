@@ -1,62 +1,51 @@
-# Muting and Blocking
-
-If you don't like a user, you can mute them to make them disappear from your timelines.
-Alternatively, you can block a user to prevent them from seeing your content or engaging with you in any way.
-People won't know that you have muted them, but they will know that you have blocked them. It is up to you to decide which option you prefer.
-
-::: tip
-Mute and block can be used together.
-:::
-
-::: warning
-Please consider reporting any users who violate the Terms of Service to the moderators.
-:::
-
-In Misskey Web, you can see the list of users you have muted or blocked by going to Settings > Mute & Block.
-
-## Muting
-
-If you mute a user, the following content about that user will no longer appear in Misskey:
-
-- the user's posts (and replies and Renotes to those posts) in the timeline and post search results
-- notifications from that user
-- message history with the user in Misskey chat
-- etc.
-- 
-
-To mute a user in Misskey Web, open the menu on the user's profile page and press the "Mute" button.
-To mute an instance, or a list of instances in Misskey Web, open your Settings page, and you should see an "Instance Mutes" section, right above the Mutes and Blocks section. In this page, you can enter a list of instances you want to mute, separated with a new line.
+# 靜音與封鎖
+如果有你不喜歡的用戶，你可以透過靜音你看不到他們的貼文。
+作為更有力的措施，你還可以封鎖一個用戶，讓他無法看到你的內容或與你互動。
+對方不會知道你被靜音了，但會知道你被封鎖了。您可以自行決定選擇其中一種方式。
 
 ::: tip
-Users and instances will not be notified that you have muted them, and they will not know that you have muted them.
+靜音和封鎖可以一起使用。
 :::
 
 ::: warning
-If you mute an instance, any notes / renotes from the instances on the list will be hidden / muted, including those of users replying to an user of a muted instance.
+如果有任何違反服務條款的惱人用戶，請考慮向管理者舉報。
 :::
 
-## Blocking
-If you block a user, they will not be able to see your content and they will not be able to do any the following actions:
+在 Misskey Web 上，您可以透過前往「設定」>「靜音和封鎖」來查看已靜音或封鎖的使用者清單。
 
-- follow you
-- add you to a user list
-- reply or renote you
-- react or vote in one of your polls
-- send a message to you
-- etc.
+## 靜音
+將使用者靜音後，Misskey 中將不會顯示該使用者的以下內容：
 
-Also,
+- 時間軸和貼文搜尋結果中的使用者貼文（以及對這些貼文的回覆和轉發）
+- 來自該用戶的通知
+- 通知訊息歷史清單中該使用者的通知訊息歷史記錄
 
-- if the user is already following you when you block them, they will unfollow you
-- if the user has you in their user lists when you block them, you will be removed from those lists
+若要在 Misskey Web 上將使用者靜音，請開啟該使用者個人檔案頁面上的選單，然後按下「靜音」按鈕。
 
-To block a user on Misskey Web, open the menu on the user's profile page and press the "Block" button.
+::: tip
+對方不會收到您將其靜音的通知，他們也不會知道已被您靜音。
+:::
+
+## 封鎖
+封鎖用戶會使該用戶無法看到您的內容，並阻止他們對您採取以下行動。
+
+- 追隨
+- 新增使用者到清單
+- 回覆或轉發貼文
+- 對您的貼文做出反應或參與投票活動
+- 發送提及給您
+
+除此之外，還會執行下列動作
+
+- 如果您封鎖用戶時該用戶已經追隨您，將被取消追隨。
+- 如果您封鎖該使用者時，該使用者的清單中已包含您，您將從該清單中刪除。
+
+若要在 Misskey Web 上封鎖用戶，請開啟該使用者個人檔案頁面的選單，然後按下「封鎖」按鈕。
 
 ::: warning
-You will not be notified that you have been blocked by someone, but you will know indirectly that you have been blocked because you will not be able to take any of the above actions, such as following someone.
+對方不會收到您已封鎖他們的通知，但他們會間接知道自己被封鎖，因為他們將無法執行上述操作（例如追隨您）。
 :::
 
 ::: warning
-The other person will not be able to see your content, but they will be able to see it if they switch accounts or log out. Blocking is only a simple, but useful feature.
-You can change your privacy settings in Settings > Privacy to make it more difficult for blocked users to view your content by requiring approval for follow requests and setting your default note visibility to "Followers".
+對方將無法看到您的內容，但如果他們切換帳戶或登出則可以看到您的內容。請將此作為一項簡單的輔助措施。
 :::

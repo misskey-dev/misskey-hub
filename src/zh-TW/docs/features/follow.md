@@ -1,5 +1,3 @@
-# Follow
-
-When you follow a user, you will see their posts on your home timeline; however, their replies to other users will not be included.
-
-To follow a user, click the "Follow" button on the user's profile page. To unfollow a user, click the button again.
+# 追隨
+當你追隨一個使用者時，你會在自己的時間軸上看到他的貼文。但是，對其他用戶的回覆將不包括在內。
+若要追隨某個用戶，請點選其使用者頁面上的「追隨」按鈕。若要取消追隨用戶，請再次點擊。

@@ -1,30 +1,21 @@
-# Deck UI
+# 多欄模式
 
-Deck UI is one of the available UIs in Misskey. It is characterized by the ability to build highly customizable and informative UIs by displaying multiple views, called "columns", side by side.
-The deck option is only available on sufficiently large screens like a laptop computer.
+多欄模式是可用的使用者介面之一。它的特點是可以透過並排顯示多個視圖（稱為「欄」）來建立高度可自訂且資訊豐富的使用者介面。
+請注意，如果新增了主欄，在頁面上查看貼文和個人檔案時，內容將顯示在主欄中。
 
-## Adding Columns
+## 增加欄位
+右鍵點選欄位背景並「新增欄位」，即可新增任何欄位。
 
-You can add a column by right-clicking on the deck background and selecting "Add Column". You can also click the '+' icon on the right side of the screen.
+## 移動欄位
+透過拖曳或使用欄位選單（右鍵單擊欄位標題），可將欄位與其他欄位重新定位。
 
-## Move Columns
+## 水平分割欄位
+欄位不僅可以左右堆疊，還可以上下堆疊。
+開啟「欄位」選單，選擇「向左堆疊」，即可將目前欄位移到左側欄位的下方。
+若要取消垂直分割，請在欄位選單中選擇「放至右側」。
 
-Columns can be repositioned by drag-and-drop or by using the column menu "Move" option (right-click on the column header).
+## 設定欄位
+選擇欄位選單中的「編輯」可編輯欄位設定。您可以重新命名欄位並變更其寬度。
 
-## Horizontal Division of Columns
-
-Columns can be arranged vertically as well as horizontally. Open the column's menu and select "Stack with the left column" to move the current column below the column to its left.
-To unstack a column, select "Pop column to the right" from the column's menu.
-
-## Configure Column Layout
-
-Select "Column settings" in the column menu to edit column layout settings. Here you can change the column name and width.
-If the colum is set to flexible then it will expand beyond its set width to fill remaining horizontal space on the screen.
-
-## Deck Settings
-
-Deck-related settings can be changed in the settings menu (click the gear icon in the bottom right of the screen.
-
-## Deck Profiles
-
-You can create/load a deck profile by clicking on the menu in the top right of the screen. Choose "New profile" to create a new blank deck to customize. Select another profile to switch to it. The trash button deletes the current profile.
+## 多欄模式的設定
+與多欄模式相關的設置可在 [settings/deck](/settings/deck) 中進行。

@@ -1,4 +1,4 @@
-# Nginx configuration
+# 設置 Nginx
 1. Create `/etc/nginx/conf.d/misskey.conf` or `/etc/nginx/sites-available/misskey.conf` and copy the following example to the file.\
    (The file name does not have to be "misskey".)
 2. Edit as follows:

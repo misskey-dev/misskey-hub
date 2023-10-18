@@ -1,25 +1,23 @@
-# Drive
-
-Drive is a feature that allows you to manage your files on Misskey.
+# 雲端硬碟
+雲端硬碟是一項允許您在 Misskey 管理上傳檔案的功能。
 
 ::: tip
-Technically speaking, the drive can be seen as an interface where all the files are centrally managed on Misskey's system, which is also open to users.
+從技術上來說，所有上傳檔案都由 Misskey 系統集中管理，向使用者提供這些資訊的介面可以視作一個雲端硬碟。
 :::
 
-You can upload any file directly on the Drive page on Misskey Web, and any images you have set as your avatar or files you have attached to your notes will also be uploaded to the Drive.
+您可以從 Misskey Web 上的雲端硬碟頁面上傳任何檔案，也可以將您設定為頭像的任何圖片和您貼文中附加的任何檔案上傳到雲端硬碟。
 
-Files uploaded to the drive can be downloaded at any time, or files can be reused by using 'attach files from drive' when creating notes.
+上傳到雲端硬碟的檔案可以隨時下載，或在建立貼文時透過「從雲端空間」重複使用檔案。
 
-You can also create folders on your drive to organize multiple files together.
+您也可以在硬碟中建立資料夾，將多個檔案組織在一起。
 
 ::: warning
-At the moment, when you delete a file from your drive, **all the content (notes, pages, etc.)** attached to that file will also be deleted.
+目前，如果從雲端硬碟中刪除一個檔案， **該檔案所依附的所有內容（貼文、頁面等）** 都會同時消失。
 :::
 
-## Warning (NSFW)
+## 敏感內容 (NSFW)
+敏感或NSFW（工作場所不宜）是可以在雲端硬碟中的檔案上設定的標記。
+設定了敏感標記的檔案在查看時，如果沒有查看者的主動操作則不可見。
+例如，在工作場所或公共場所不適合觀看的圖像上設定此標記，目的是防止突然顯示此類圖像。
 
-Warning or NSFW (Not safe for work) is a flag that can be set on files in your drive.
-Files that have been flagged as unsafe to view will not be displayed without user interaction.
-This flag can be used, for example, to prevent images that are not suitable for viewing in the workplace or in public places from suddenly appearing.
-
-This flag can be toggled on and off manually, or it can be set at a moderator's discretion.
+此標記可以手動開啟或關閉，也可以由審查員自行設定。

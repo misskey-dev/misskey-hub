@@ -1,5 +1,4 @@
-# Plug-ins
+# 外掛
+Misskey Web 有一個外掛程式功能，讓使用者可以擴充 Misskey Web 的功能。
 
-Misskey Web has a plugin facility that allows users to extend the functionality of Misskey Web.
-
-For information on how to create a plugin, see [this document](./advanced/create-plugin.md).
+關於建立外掛程式的方法，請參考[這裡](../advanced/create-plugin.md)。

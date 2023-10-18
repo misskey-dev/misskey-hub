@@ -1,4 +1,4 @@
-# Managing Custom Emoji
+# 管理自訂表情符號
 
 Custom emoji can be managed by administrators or moderators by going to the instance settings and then the custom emoji submenu.
 By default you will see a list of the current locally installed emoji.

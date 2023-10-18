@@ -1,4 +1,4 @@
-# Set up a CDN
+# 設定 CDN
 When publishing your Misskey instance, we strongly recommend using a CDN such as [Cloudflare](https://www.cloudflare.com/).
 
 Using a CDN has the following advantages

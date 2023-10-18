@@ -1,52 +1,65 @@
-# Pages
+# 頁面
 
-Misskey Pages are a feature where you can create custom web pages. In them you can include different types of media and formatting. and even run programming scripts. Like with many other areas of Misskey, you can format your content using [MFM](./mfm.md).
+您可以在 Misskey 上建立獨立於筆記的頁面。v13 以後專門用於靜態頁面。
 
-Pages in Misskey are composed of different types of Blocks, and the blocks can be moved around using drag-and-drop.
+::: warning
+從 v13 開始，需使用 Misskey Play 來建立動態頁面。
+:::
 
-## Content Blocks
+## 頁面設定
 
-Content blocks display different types of content to the user.
+設定與頁面相關的項目，包含：
 
-### Section
+- 標題
+- 頁面摘要
+- 頁面網址
+- 置中
+- 字型
+- 被置頂於個人資料時隱藏頁面標題
+- 封面影像
 
-A grouping block that can contain other blocks. Each content block has a title that it will display at its top.
+### 標題
+輸入該頁面的標題。它將顯示在列表中。
 
-### Text
+### 頁面摘要
+輸入簡短說明。它將顯示在列表中。
 
-Displays text content to the user. The text content can be formatted and can include variables interpolation (See Variables below).
+### 頁面網址
+`https://伺服器名/@使用者/pages/●●●` 的 `●●●` 可以任意設置。
 
-### Images
+### 置中
+如果啟用，內容將置中顯示。
 
-Displays an image that you can select from your drive.
+### 字型
+可選擇 **襯線體** 與 **無襯線體** 。
 
-### Text Area
+### 被置頂於個人資料時隱藏頁面標題
+被置頂於個人資料時隱藏頁面標題。
 
-Displays text in a text area tag. This block does not support MFM but variable interpolation is allowed.
+### 封面影像
+設定 **封面影像** 。它將顯示在列表中。
 
-### Embedded Note
+## 內容
 
-TODO
+編輯頁面正文。您可以透過組合以下一個或多個區塊來產生頁面。
 
-### Canvas
+- 區段
+- 文字
+- 圖片
+- 嵌入貼文
 
-TODO
+### 區段
 
-## Input Blocks
+可以設置專屬的標題，並且可在其中增加額外的區塊。
 
-Input blocks can be used to create interactive pages with form elements. These blocks can be used to interact with the variables and scripts in a page.
+### 文字
 
-## Special Blocks
+輸入文字正文。您可以使用 MFM 和自訂表情符號。
 
-Special blocks provide unique features for your page. This includes a note posting form and page control flow.
+### 圖片
 
-## Variables
+顯示圖像。使用雲端硬碟中的影像。
 
-Variables can be used to create dynamic pages. You can embed the value of a variable by writing <b>{ variable name }</b> in the text. For example, in <b>Hello { thing } world!</b>, if the value of the variable (thing) was <b>ai</b>, then the text would become <b>Hello ai world!</b>.
+### 嵌入貼文
 
-Variables are evaluated from top to bottom, so you cannot refer to a variable defined below you in a given variable. For example, if there are three variables, <b>A, B, C</b>, that are defined in that order, <b>A</b> and <b>B</b> can be referenced inside of <b>C</b>'s definition; however, <b>B</b> and <b>C</b> cannot be referenced inside of <b>A</b>'s.
-
-To receive input from the user, place an "Input" block on the page and set the "Variable Name" to the name of the variable in which you want to store the value (the variable will automatically be created by the block).
-The variable can the be used to perform actions in response to user input.
-
-Functions can be used to encapsulate value calculations in a reusable form. To create a function, create a variable of type "Function". A function can have slots (arguments), and the values of the slots are available as variables within the function. There are also functions called higher-order functions that take another function as an argument. Functions can be predefined or instantiated in-line in slots of such higher order functions.
+輸入貼文 ID 後，貼文就會顯示出來。如果要嵌入其他伺服器，請在搜尋中輸入其 URL，然後在顯示時貼上 ID。

@@ -1,4 +1,4 @@
-# Thread mute
+# 將貼文串設為靜音
 
 ::: tip
 This feature is available since version 12.95.0.

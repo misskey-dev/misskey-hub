@@ -1,4 +1,4 @@
-# Word Mute
+# 關鍵字靜音
 
 Through setting up word mutes, you can make notes matching certain conditions not appear on your timeline anymore.
 

@@ -1,7 +1,7 @@
-# Favorites
+# 我的最愛
 
-This function allows you to mark a [note](./note) as a favorite.
-You can view your favorited notes on the [Favorite](./my/favorites) page.
-Other users will not be notified that you have added their note to your favorites, and only you can see your favorites.
+將[貼文](./note)加入到最愛的收藏功能。
+登錄到最愛的貼文，可以在[我的最愛頁面](./my/favorites)上列出。
+對方不會收到您已將其添加到最愛的通知，只有您自己可以查看您的最愛。
 
-To favorite a note, press "Add to favorites" in the note's menu. To un-favorite a note, click "Remove from favorites" in the note's menu.
+若要將貼文新增到最愛，請按貼文選單中的「我的最愛」。若要取消收藏某一貼文，請按貼文選單中的「從我的最愛移除」。

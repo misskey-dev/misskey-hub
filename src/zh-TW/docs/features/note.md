@@ -1,83 +1,80 @@
-# Notes
-
-Notes are a central concept within Misskey, and refer to content that may include text, images, polls and more that has been posted to Misskey. In this context, "to note" is also used as a verb referring to the creation of a note.
-
-By composing a note, it will be added to the [timeline](./timeline) and sent to your followers and other users from your server.
-
-On Misskey, it is also possible to add [Reactions](./reaction) to notes. Additionally, you can reply to or quote notes.
-
-By adding a note to your [Favorites](./favorite), you can easily find it at a later point in time.
-
-## Composing Notes
-
-To compose a note, press one of the buttons with a pencil icon on your screen to open the posting form (either at the top of your timeline or at the bottom of the navigation menu). Enter the content you want to post in the form, and press the "Note" button to publish it. Notes can contain text, files such as images or videos, and [Polls](./poll). In addition, by using [MFM](./mfm) within your text, you can include [Mentions](./mention) and [Hashtags](./hashtag). There are also other settings such as CW (Content Warning) or note visibility that are explained below.
+# 貼文
+貼文是 Misskey 上發布的內容，包括文字、文件、投票等，是 Misskey 的核心概念。創建貼文的行為本身也稱為貼文。
 
 ::: tip
-If you are on a computer and have an image saved in your clipboard, you can attach it to your note by using the usual paste keyboard shortcut within the text box.
+貼文這個名字來自英文單字 note，意思是「簡短的記錄」。
+:::
+
+建立貼文後，它將被添加到[時間軸](./timeline)，您的[追隨者](./follow) 和伺服器的使用者都能看到。
+
+您可以對貼文執行[反應](./reaction)。您也可以回覆和引用。
+
+您可以將貼文加到[最愛](./favourite)，這樣您以後就可以輕鬆地回顧這些筆記。
+
+## 創建貼文
+若要在 Misskey Web 上建立貼文，請按下螢幕上的鉛筆符號按鈕開啟建立表單。在建立表單中輸入內容，然後按「貼文」按鈕建立貼文。
+您可以將圖像和影片等任意檔案以及[投票](./poll)附加到貼文中。另外，文本中可以使用[MFM](./mfm)，還可以包含[提及](./mention)和[主題標籤](./hashtag)。
+此外，您還可以配置CW和公開範圍等設定（詳細資訊將在後面解釋）。
+
+::: tip
+使用 Misskey Web，如果您的電腦剪貼簿上有圖像資料，您可以透過將圖像貼到表單的文字方塊中來附加圖像。
 :::
 
 ::: tip
-You can also press <kbd class="key">Ctrl + Enter</kbd> within the text box to publish your note.
+在 Misskey Web 上，您也可以透過在文字方塊中按下 <kbd class="key">Ctrl + Enter</kbd> 來發布。
 :::
 
-## Renote
-
-The act of quoting an existing note or sharing an existing note. The note created as a result of these acts are all called a Renote/RN (or "renoting" as verb). Most of the time, this is used when you want to share a note you like to your own followers, or when you want a share a note that you posted in the past once more. While it is possible to renote the same note multiple times, please be aware that doing so may be seen as annoying by others.
+## 轉發
+引用現有貼文或將該貼文作為新貼文共享的行為，以及由此創建的貼文，都稱為轉發。
+當你想與自己的追隨者分享你喜歡的使用者貼文時，或是當你想重新分享自己過去的貼文時，請使用此功能。
+您可以對同一個貼文進行無限次轉發，但要注意的是，過於頻繁地使用轉發可能會令人討厭。
 
 ::: warning
-If you've set your note's visibility to Followers-only or Direct, then others will not be able to renote it.
+公開範圍設定為追隨者或指定使用者的貼文無法被轉發。
 :::
 
-To take back a renote, press the "..." next to the renote timestamp and select "Take back Renote".
+若要在 Misskey Web 上刪除轉發，請按轉發貼文時間顯示旁邊的「...」，然後選擇「取消轉發」。
 
 ## CW
+內容警告（Contents Warning）的縮寫，是一種無需查看者採取任何操作即可隱藏貼文內容的功能。它主要用於隱藏冗長的內容或防止劇透。
+若要在 Misskey Web 上設定 CW，請按下表單上的「隱藏內容」按鈕（眼睛圖示）。然後將出現一個新的輸入區域，您可以在其中編寫內容摘要。
 
-An abbreviation of "Content Warning", resulting in the content of a note being hidden unless explicitly requested to be shown by a viewing user. It is mainly used to hide the content of long notes or to prevent posting spoilers publicly. To enable CW for a note, press the "Hide content" button (eye icon) in the post form. By doing so a new text input area will appear, where you can write a summary of the content hidden by the CW.
+## 公開範圍
+對於每個貼文，您可以設定該貼文公開的範圍。
+若要 Misskey Web 上設定貼文的可見性，請按下表單的「貼文」按鈕左側地球的圖示。
+公開範圍包含以下種類。
 
-## Visiblility
-
-It's possible to individually set where your note will be visible (Visibility) for each of your notes. By pressing the icon to the left of the "Note" button in the post form, you can choose from the visibility settings listed below.
-
-### Public
-
-Your note will be visible to all users and will show up on all timelines (home, local, social, global).
+### 公開
+除了向所有人公開貼文外，貼文還會伺服器上的所有時間軸（首頁、本地、社交和公開時間軸）顯示。
 
 ::: warning
-This visibility will be unavailable if your account is <a href="./silence">silenced</a>.
+當帳戶處於[沉默](./silence.md)狀態時，無法使用公開範圍。
 :::
 
-### Home
+### 首頁
+貼文將對所有人公開，但除追隨者外，貼文不會在本地、社交或公開時間軸顯示。
 
-Your note will be visible to all users, but will not show up on the local, social or global timeline for non-followers.
+### 追隨者
+只有您自己的追隨者才能看到該貼文。它將顯示在所有追隨者的時間軸。
 
-### Followers
+### 指定使用者
+針對指定使用者公開此貼文。將會顯示在指定使用者的所有時間軸。
 
-Your note will only be visible to those that are following you. The note will show up on all timelines of your followers.
+### 停用聯邦
+伺服器不會將使用此功能的貼文透過聯邦傳遞到遠端，也就是僅限本地。
+停用聯邦功能在創建貼文表單，「貼文」按鈕旁的火箭圖示。
 
-### Direct
-
-Your note will only be visible to individually specified users. The note will show up on all timelines of the specified users.
-
-### The "Local only" option
-
-If you enable this option, your note won't be federated to remote instances.
-
-### Visibility comparison
-
+### 公開範圍的比較
 <table>
-    <tr><th></th><th>Public</th><th>Home</th><th>Followers</th><th>Direct</th></tr>
-    <tr><th>LTL/STL/GTL of Followers</th><td>✔</td><td>✔</td><td>✔</td><td></td></tr>
-    <tr><th>LTL/STL/GTL of Others</th><td>✔</td><td></td><td></td><td></td></tr>
+	<tr><th></th><th>公開</th><th>首頁</th><th>追隨者</th><th>指定使用者</th></tr>
+	<tr><th>追隨者的LTL/STL/GTL</th><td>✔</td><td>✔</td><td>✔</td><td></td></tr>
+	<tr><th>非追隨者的LTL/STL/GTL</th><td>✔</td><td></td><td></td><td></td></tr>
 </table>
 
-## Pin to profile
-
-By pinning a note to your profile it will be constantly displayed on your profile page. To pin a note, open the note menu and press "Pin to profile".
+## 置頂
+被設定置頂的貼文，將會一律顯示在使用者個人資料頁面的上部。
+要在 Misskey Web 設定置頂，請打開貼文的選單，選擇「置頂」。
 
 ::: tip
-It's possible to pin multiple notes to your profile.
+可以同時置頂多個貼文，會按照點擊「置頂」的時間降冪排序。
 :::
-
-## Watch
-
-You can get notifications for replies, reactions etc. for a note that is not yours by watching it. To watch a note, select "Watch" from the note's menu.

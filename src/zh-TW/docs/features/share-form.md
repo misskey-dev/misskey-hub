@@ -1,4 +1,4 @@
-# Share Form
+# 分享表單
 
 When you open `/share` in Misskey Web, you open a sharing submission form. This sharing form is useful if you want users to share the content of your page with Misskey from an external web page.
 

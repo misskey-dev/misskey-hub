@@ -1,29 +1,18 @@
-# Reaction
+# 反應
+此功能可讓您透過添加表情符號，輕鬆傳達您對他人貼文的反應。
+若要在 Misskey Web 中做出反應，請點擊貼文中的 "+" 圖示以顯示選擇器，然後選擇表情符號。
+也可使用[自訂表情符號](./custom-emoji.md)作為反應。
 
-This feature allows you to easily convey your reactions to other people's notes by adding emojis.
-To react in Misskey Web, click the + icon on the note to show the picker and select an emoji.
-You can also react using [custom emoji](./custom-emoji.md).
+## 自訂反應選擇器
+在 Misskey Web 上，您可以根據自己的喜好自訂選擇器中顯示的表情符號。
+在設定的「反應」進行設定。
 
-## Customising the Reaction Picker
+## 對於遠端貼文的反應
+反應是 Misskey 的獨創功能，因此 Activity 幾乎總是以 "Like" 的形式發送，除非遠端伺服器是 Misskey。一般來說，"Like" 就相當於「最愛/打星」。
 
-In Misskey Web you can choose which emojis should appear in the picker and change the order they should appear in.
-You can set this in the "Reactions" section of the settings.
+## 從遠端來的反應
+當從遠端收到 "Like" 的 Activity 時，Miskey 會將其解釋為「❤️」反應。
 
-## Reactions to Remote Posts
-
-Since Reactions are an original Misskey feature, most of the time the activity will be sent to other instances as a "Like" unless the remote instance supports them.
-Usually, ActivityPub's "Like" is implemented as a favorite.
-
-## Reactions from remote instances
-
-Since Misskey does not have likes, a "Like" from a remote instance will be displayed as a '👍' reaction.
-
-::: tip
-Your instance administrator may change this to be displayed as a '⭐' reaction.
-If you are an admin, see [here](../admin/default-reaction.md).
-:::
-
-## See a list of all your reactions
-
-In Misskey Web, you can see the list of all the reactions you have made by opening the "Reactions" tab on your profile page.
-You can also choose to make this list public in the settings.
+## 查看自己的反應清單
+在 Misskey Web 上，您可以透過開啟自己的個人資料頁面上的「反應」標籤來查看反應清單。
+您也可以從隱私設定中公開反應清單。

@@ -1,4 +1,4 @@
-# Silence
+# 靜默
 
 Silence is one of the states that an account can be set to.
 

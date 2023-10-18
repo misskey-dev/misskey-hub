@@ -1,8 +1,7 @@
-# Custom Emoji
+# 自訂表情符號
+自訂表情符號是一種允許將伺服器提供的圖像用作表情符號的功能。
+可用於筆記、反應、聊天、自我介紹、名稱等。
+若要在這些地方使用自訂表情符號，請按表情符號選擇器按鈕（如果有）或鍵入 `:`，以顯示表情符號建議。
+如果在文字中發現形式為 `:foo:` 的字串，`foo` 部分會被解釋為自訂表情符號名稱，並在顯示時被對應的自訂表情符號取代。
 
-Custom Emojis are a feature that allows you to use any image provided by your instance as an emoji.
-You can use them in places like notes, reactions, chat, your profile, your name, etc.
-To use a custom emoji in one of those places, press the emoji picker button (if available) or type `:` to display emoji suggestions.
-If a string of the form `:foo:` is found in the text, the `foo` part will be interpreted as a custom emoji name and it will be replaced by the corresponding custom emoji when displayed.
-
-You can see which custom emojis are available on your instance by visiting `/emojis` on your instance's Misskey site.
+您可以存取 Misskey Web 上**伺服器資訊**中的**自訂表情符號** `/about#emojis`，查看伺服器上有哪些自訂表情符號。

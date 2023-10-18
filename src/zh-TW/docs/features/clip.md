@@ -1,10 +1,8 @@
-# Clip
+# 摘錄
 
-Clip is a feature that allows you to create collections of notes.
-The notes can be your own or created by others.
-You can create multiple clips and manage them by giving a name and description to each.
-You can also choose to make your clips public to make them available to other users.
+摘錄是一項允許您將多個貼文組合在一起的功能。無論這些貼文是您自己的還是別人的都沒關係。
+您可以建立多個摘錄，並透過為每個摘錄設定名稱和描述來管理它們。您也可以選擇是否向其他使用者提供摘錄。
 
-To create a clip, click "Add" from the clip management page.
+若要建立摘錄，請在摘錄管理頁面點選「新增」。
 
-To add notes to a clip, choose the "Clip" option on the note's menu. Then select the clip to add the note to.
+若要為摘錄新增貼文，請按一下目標註釋選單中的「摘錄」，然後選擇要新增貼文的摘錄。

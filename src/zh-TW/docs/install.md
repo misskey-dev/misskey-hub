@@ -1,4 +1,4 @@
-# Create your own Misskey instance
+# 建立您自己的 Misskey 站台
 Thank you for your interest in building a Misskey instance 🚀
 There are several ways to create an instance, so please choose one below and read the guide.
 

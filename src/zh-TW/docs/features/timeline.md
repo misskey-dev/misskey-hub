@@ -1,43 +1,33 @@
-# Timeline
+# 時間軸
+時間軸是按時間順序顯示[貼文](./note)的功能。
+時間軸有多種類型，如下所示，不同類型顯示的貼文也不同。
+請注意，伺服器可能會停用某些時間軸類型。
 
-The timeline displays [notes](.note) in reverse chronological order.
-There are different types of timelines as shown below, and the notes displayed differ depending on the type.
-Note that some types of timelines may be disabled by the instance.
+## 首頁
+您可以查看您追隨的使用者的貼文。縮寫為 HTL。
 
-## Home
+## 本地
+所有公開範圍未指定為「首頁」的本地使用者的貼文都會顯示在這。縮寫為 LTL。
 
-Posts by users you are following will be displayed. Abbreviated as HTL.
+## 社交
+您追隨的使用者發布的貼文以及所有公開範圍未指定為「首頁」的本地使用者發布的貼文都會顯示在這。縮寫為 STL。
 
-## Local
+## 公開
+所有公開範圍未指定為「首頁」本地與遠端使用者發布的貼文都會顯示在這。縮寫為 GTL。
 
-All local users' posts that do not have the visibility of "Home" will be shown. Abbreviated as LTL.
-
-## Social
-
-Posts of users you are following and all local users's posts that do not have the visibility of "Home" will be shown. Abbreviated as STL. Think of it as STL = HTL + LTL.
-
-## Global
-
-All local users' posts that do not have the visibility of "Home" and all remote users' posts that do not have the visibility of "Home" that reach the server. Abbreviated as GTL.
-
-## Custom Timelines
-
-Misskey has other features where you can create timelines with more granularity. See [Lists](./list.md) and [Antennas](./antenna.md) for details.
-
-## Comparison
-
-| Source                |            |        |   Timeline |       |            |
-|-----------------------|------------|--------|---------|------------|------------|
-| User                  | Visibility | Home   | Local    | Social     | Global |
-| Local (Followers)     | Public     | ✔      | ✔        | ✔          | ✔          |
-|                       | Home       | ✔      |          | ✔          |            |
-|                       | Followers  | ✔      |          | ✔          |            |
-| Remote (Followers)    | Public     | ✔      |          | ✔          | ✔          |
-|                       | Home       | ✔      |          | ✔          |            |
-|                       | Followers  | ✔      |          | ✔          |            |
-| local (Non-followers) | Public     |        | ✔        | ✔          | ✔          |
-|                       | Home       |        |          |            |            |
-|                       | Followers  |        |          |            |            |
-| Remote (Non-followers)| Public     |        |          |            | ✔          |
-|                       | Home       |        |          |            |            |
-|                       | Followers  |        |          |            |            |
+## 比較
+| 來源           |       |    | 時間軸 |    |    |
+|--------------|-------|----|-----|----|----|
+| 使用者          | 公開範圍  | 首頁 | 本地  | 社交 | 公開 |
+| 本地 (已追隨)     | 公開    | ✔  | ✔   | ✔  | ✔  |
+|              | 首頁   | ✔  |     | ✔  |    |
+|              | 追隨者 | ✔  |     | ✔  |    |
+| 遠端 (已追隨)  | 公開    | ✔  |     | ✔  | ✔  |
+|              | 首頁   | ✔  |     | ✔  |    |
+|              | 追隨者 | ✔  |     | ✔  |    |
+| 本地 (未追隨) | 公開    |    | ✔   | ✔  | ✔  |
+|              | 首頁   |    |     |    |    |
+|              | 追隨者 |    |     |    |    |
+| 遠端 (未追隨) | 公開    |    |     |    | ✔  |
+|              | 首頁   |    |     |    |    |
+|              | 追隨者 |    |     |    |    |

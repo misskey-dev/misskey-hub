@@ -1,13 +1,11 @@
-# Advertisements
-
-Misskey can display ads in the instance timeline and other places if enabled by the instance administrator.
-You can reduce how often an ad is shown by clicking in the upper right corner of it.
+# 廣告
+Misskey 可以在時間軸和其他區域顯示基於伺服器的廣告。
+點擊廣告右上角的圖標，您可以降低相關廣告的顯示頻率。
 
 ::: tip
-If the total number of ads being shown on the instance is small then an ad may still be shown to you often even after you choose to reduce how often it is displayed.
+如果廣告總數較少，即使降低展示頻率，也可能會繼續展示。
 :::
 
-## Configuring Ads (Admins)
-
-You can add, edit, and delete ads from the control panel of your instance.
-In there you can set any image, destination URL, shape, and display percentage for the ad.
+## 設定廣告（管理員）
+可以從伺服器的控制台新增、編輯和刪除廣告。
+廣告可配置任何圖片、目標 URL、形狀和顯示比例

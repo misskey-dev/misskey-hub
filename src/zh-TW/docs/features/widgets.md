@@ -1,4 +1,4 @@
-# Widgets
+# 小工具
 
 A widget is a small display element that can be added to the Misskey UI to display and interact with information.
 By default they are displayed on the right side of the screen or accessed from the stack icon in the mobile web app navigation menu.

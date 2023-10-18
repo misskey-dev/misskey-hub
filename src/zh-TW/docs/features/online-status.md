@@ -1,39 +1,38 @@
-# Online Status
-
-A user's **online status** is an indication of their Misskey usage status.
-Your online status is displayed as an indicator in the corner of the user icon on your user page and elsewhere.
+# 上線狀態
+使用者的上線狀態代表了使用者對 Misskey 的使用情況。
+上線狀態以指示器的形式顯示在使用者頭像的角落裡，例如在使用者個人資料頁面。
 
 <table>
 	<tr>
-		<th>Colour</th>
-		<th>State</th>
-		<th>Description</th>
+		<th>顏色</th>
+		<th>狀態</th>
+		<th>說明</th>
 	</tr>
 	<tr>
-		<td>🟢 green</td>
-		<td>online</td>
-		<td>Misskey is being used right now.</td>
+		<td>🟢綠</td>
+		<td>在線上</td>
+		<td>可以被認為正在使用 Misskey 的狀態</td>
 	</tr>
 	<tr>
-		<td>🟡 yellow</td>
-		<td>active</td>
-		<td>The user is absent but Misskey is still being used.</td>
+		<td>🟡黃</td>
+		<td>活躍的</td>
+		<td>目前不在線上，但最近使用過 Misskey 的狀態</td>
 	</tr>
 	<tr>
-		<td>🔴 red</td>
-		<td>offline</td>
-		<td>Misskey is not used.</td>
+		<td>🔴紅</td>
+		<td>離線</td>
+		<td>已經很長一段時間沒有上線與使用 Misskey 的狀態</td>
 	</tr>
 	<tr>
-		<td>⚫ grey</td>
-		<td>unknown</td>
-		<td>The status is private or not available for remote users etc.</td>
+		<td>⚫灰</td>
+		<td>不明</td>
+		<td>使用者設定隱藏上線狀態，或使用者來自遠端等情況</td>
 	</tr>
 </table>
 
-Your online status will change automatically and cannot be set manually.
-You can set your online status to be private.
+上線狀態會自動變化，無法手動設定。
+上線狀態可透過隱私設定變更為非公開。
 
 ::: warning
-Some features, such as user suggestions, may be based on online status, so making your status private may make it harder for other users to find you.
+某些功能（如使用者推薦）可能會根據線上狀態進行處理，因此將您的狀態設為非公開可能會增加其他使用者找到您的難度。
 :::

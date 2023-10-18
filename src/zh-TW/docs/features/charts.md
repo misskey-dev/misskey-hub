@@ -1,72 +1,57 @@
-# Charts
+# 圖表
+Misskey 能夠為伺服器上的各種資料來源產生並顯示圖表。
+透過使用圖表，您可以直觀地了解伺服器使用狀態、聯邦狀態、每個使用者的活動等。
 
-Misskey can generate and display charts for an instance's various federated data sources.
-Charts allow you to get a visual depiction of the usage, federation status, and activity of each user.
+可以從伺服器資訊頁面查看伺服器圖表。
 
-Instance charts can be viewed from the *instance information* page (accessible by clicking the instance logo in the navigation menu).
+以下是每個圖表及其項目的說明。
 
-Below is a description of each chart and its contents.
-
-## Federation Chart
-
-This chart shows information about federated instances.
+## 聯邦圖表
+這是關於聯邦伺服器的圖表。
 
 ### Pub
-
-The number of instances that this instance is publishing activities to.
+發送 Activity 的伺服器數量。
+換句話說，它表示遠端使用者在自己的伺服器上追蹤使用者時所屬伺服器的唯一計數。
 
 ### Sub
-
-The number of instances that this instance is receiving activities from.
+接收 Activity 的伺服器數量。
+換句話說，它表示您伺服器上的使用者所關注的遠端使用者數所屬伺服器的唯一計數。
 
 ### Received
-
-The number of instances that have sent an activity to this instance.
+已接收 Activity 的伺服器數量。
 
 ### Delivered
-
-The number of instances that this instance has delivered an activity to.
+已遞送 Activity 的伺服器數量。
 
 ### Stalled
+遞送 Activity 時遇到錯誤的伺服器數量。
 
-The number of instances where an error was encountered when delivering an activity.
-
-## Active Users Chart
-
-Chart of user activity on this instance.
+## Active users
+伺服器使用者使用狀況的圖表。
 
 ### Read & Write
-
-The number of users that have read and written.
+查看和撰寫的使用者數量。
 
 ### Read
-
-The number of users that have read.
+查看過的使用者數量。
 
 ### Write
-
-The number of users that have written.
+發文的使用者數量。
 
 ### < Week
-
-The number of users with an account less than one week old.
+帳戶建立日期和時間不足一週的瀏覽用戶數量。
 
 ### < Month
-
-The number of users with an account less than one month old.
+帳戶建立日期和時間不到一個月的瀏覽用戶數量。
 
 ### < Year
-
-The number of users with an account less than one year old.
+帳戶建立日期和時間不到一年的瀏覽用戶數量。
 
 ### > Week
-
-The number of users with an account older than one week.
+帳戶建立日期和時間超過一週的瀏覽用戶數量。
 
 ### > Month
-
-The number of users with an account older than one month.
+帳戶建立日期和時間超過一個月的瀏覽用戶數量。
 
 ### > Year
-
-The number of users with an account older than one year.
+帳戶建立日期和時間超過一年的瀏覽用戶數量。
