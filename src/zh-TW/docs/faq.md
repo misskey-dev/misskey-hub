@@ -1,5 +1,5 @@
 ---
-description: 'Misskeyを利用する際のよくある質問について掲載しています。'
+description: '此頁面包含使用 Misskey 時的常見問題。'
 ---
 
 # 常見問題
