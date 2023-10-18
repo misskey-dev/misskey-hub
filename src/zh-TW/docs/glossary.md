@@ -1,92 +1,87 @@
-# Glossary
-A glossary about terms related to Misskey.
+---
+description: '與 Misskey 相關的術語表。'
+---
+
+# 術語表
+與 Misskey 相關的術語表。
 
 ## Acct
-TODO
+格式為「@username@host」的字串，用於識別特定使用者。主要用於提及。
 
 ## ActivityPub
-The protocol (method) used for enabling the distributed nature of Misskey. By adhering to this protocol, communication with other instances that also follow it becomes possible, forming what is known as the Fediverse.
+一種開放式標準協定（規範），用於組成名為聯邦宇宙（Fediverse）的分散式社交網路。伺服器之間根據該協定相互連接，並在彼此的伺服器之間交換內容和通知等訊息，這對於形成聯邦宇宙網路至關重要。
 
 ## AiScript
-A programming language available for use on Misskey. For details, see [here.](../advanced/aiscript)
+一種可在 Misskey 中使用並在 JavaScript 上運行的程式語言。詳情參考[這裡](../advanced/aiscript)。
 
 ## API
-An interface that can be used for interacting with Misskey through a program, available for each individiual instance. For details, see [here.](../docs/api)
+Misskey 伺服器提供的界面，用於從您的程式中處理 Misskey 的相關功能。詳情參考[這裡](../docs/api)。
 
 ## Bot
-An account that is being controlled by a program.
+一個由程式操作的帳戶。
 
 ## CW
-An abbreviation of "Content Warning". A feature to hide the content of a note unless explicitly requested to be shown by a user. Mainly used to hide the content of long notes or to prevent posting spoilers publicly. For details, see [here.](../docs/features/note.html#cw)
+Contents Warning（內容警告）的縮寫。一種允許在不進行操作的情況下隱藏貼文內容的功能。主要用於隱藏冗長的內容或防止劇透。詳情參考[這裡](../docs/features/note.html#cw)。
 
 ## Fediverse
-A network of instances composed of various different platforms that communicate with each other, including Misskey.
+由 "Federated（聯邦）"和 "Universe（宇宙）"兩個字組合而成。一個去中心化的社交網絡，由實現各種去中心化軟體（包括 Misskey）的伺服器組成。除了 Misskey 之外，其他去中心化軟體還包括 Mastodon、Pleroma 和 Pixelfed。
 
 ## GTL
-An abbreviation for "Global TimeLine". For details about timelines, please see [here](../features/timeline).
+公開時間軸（Global TimeLine）的縮寫。關於時間軸的詳情可參考[這裡](../features/timeline)。
 
 ## HTL
-An abbreviation for "Home TimeLine". For details about timelines, please see [here](../features/timeline)
+首頁時間軸（Home TimeLine）的縮寫。關於時間軸的詳情可參考[這裡](../features/timeline)。
 
 ## LTL
-An abbreviation for "Local TimeLine". For details about timelines, please see [here](../features/timeline)
+本地時間軸（Local TimeLine）的縮寫。關於時間軸的詳情可參考[這裡](../features/timeline)。
 
 ## MFM
-An abbreviation for "Markup language For Misskey", a markdown language available for use on Misskey. For details, see [here.](../features/mfm)
+Markup language For Misskey的縮寫，一種可以在 Misskey 上使用的標記語言。詳情參考[這裡](../docs/features/mfm)。
+
+## Misskey Web
+Misskey 官方客戶端（介面）。透過個人電腦、智慧型手機或其他網路瀏覽器存取 Misskey 伺服器時，系統會自動顯示。
 
 ## NSFW
-An abbreviation for "Not Safe For Work". A feature to tag an image as "NSFW" and hide it unless explicitly requested to be shown by a user.
+Not Safe For Work（工作場所不宜）的縮寫。此功能可讓您將圖像視為「敏感」並防止它們在沒有互動的情況下顯示。
 
 ## Renote
-The act of quoting an existing note, sharing an existing note, or the note created as a result of these acts. For details, see [here.](../docs/features/note.html#renote)
+引用已有貼文或將該貼文作為新貼文共享的行為，以及由此創建的貼文。詳情參考[這裡](../docs/features/note.html#renote)。
 
 ## STL
-An abbreviation for "Social TimeLine". For details about timelines, please see [here.](../features/timeline)
+社交時間軸（Social TimeLine）的縮寫。關於時間軸的詳情可參考[這裡](../features/timeline)。
 
-## Ai(藍)
-Ai(藍) is Misskey's official mascot.
+## 藍
+Misskey的看板娘（官方代表人物）。詳情參考[這裡](https://xn--931a.moe/)。
 
-## Active users
-Those users amongst all existing ones who are continually using their account.
+## 伺服器
+todo
 
-## Instance
-TODO
+## 自訂表情符號
+由每個 Misskey 伺服器的管理員或使用者獨立建立的表情符號。非自訂表情符號的普通表情符號被稱為「Unicode表情符號」。詳情參考[這裡](../docs/features/custom-emoji)。
 
-## Custom Emoji
-Emoji provided by your instance. Emoji that are not specifically provided by your instance but are available by default are called "Unicode Emoji". For details, see [here.](../docs/features/custom-emoji)
+## 控制台
+這是指 Misskey 伺服器設定畫面。
 
-## Control Panel
-TODO
+## 凍結
+這意味著該帳戶已被停用。
 
-## Silence
-A state in which the visibility of the notes by said user cannot be set to "Public" anymore. Can be set for individual users by the discretion of Moderators. For details, see [here.](../features/silence)
+## 雲端硬碟
+這是管理 Misskey 伺服器上使用者上傳的圖像和音樂等檔案的功能。詳情參考[這裡](../docs/features/drive)。
 
-## Job Queue
-A system used for sequentially broadcasting activities to other instances etc.
-
-## Suspend
-A state which makes the account of a user unusable.
-
-## Drive
-A feature allowing users to organize the files they have uploaded to Misskey. For details, see [here.](../features/drive)
-
-## Notes
-Content which may include text, images, surveys and others that has been posted to Misskey. For details, see [here.](../docs/features/note)
+## 貼文
+使用者在 Misskey 伺服器上發布的文章。它可以包括各種 Misskey 自己的內容，如圖片、音樂和其他文件、投票等。詳情參考[這裡](../docs/features/note)。
 
 ## Misskist
-Users of Misskey.
+在 Misskey 伺服器上擁有帳戶的使用者。或者說是最沈迷其中的使用者。
 
-## Moderator
-Users with the authority to manage the community of a instance by deactivating spam accounts, silencing users, deleting inappropriate posts, etc.
+## 審查員
+有權操作伺服器的用戶，包括凍結帳號和刪除垃圾與不當貼文。伺服器管理員經常在其伺服器內招募和僱用審查員。
 
-## License
-TODO
+## 遠端
+指的是其他伺服器。也用作前綴，例如遠端使用者。這與本地相反。
 
-## Remote
-Used in context of instances separate from your own. Also used as prefix in other words like "Remote user". The opposite of "Local".
+## 聯邦
+指多個伺服器或相互連接並相互交換內容和通知等資訊的伺服器的集合。
 
-## Federation
-The act of sharing information created on one's instance with other instances.
-
-## Local
-Used in context of your own instance.Also used as prefix in other words like "Local users", "local timeline". The opposite of "Remote".
+## 本地
+指的是你自己的伺服器。也可用作前綴，如本地用戶、本地時間軸等。它與遠端相反。
