@@ -1,49 +1,66 @@
 ---
-description: 'If you run into a problem, please check this page first.'
+description: '如果您遇到問題，請先檢查此處。'
 ---
 
-# Troubleshooting
+# 故障排除
 ::: tip
-Please also use the [Frequently asked questions](./faq.md) page.
+也請參考[常見問題](./faq.md)。
 :::
 
-If you run into a problem, please check this page first. In the case that you can't find your problem here, or the steps described here don't solve your issue, please contact your server's administrator or [Report it as a bug](./report-issue).
+如果您遇到問題，請先檢查此處。
+如果沒有適用的項目，或嘗試這些步驟後問題仍未解決，請聯絡伺服器管理員或[報告錯誤](./report-issue)。
 
-## The client does not start
-In most of the cases, this is due your used browser's or operating system's version being outdated. Please try updating your browser or operating system to the latest version and then try again.
+## 客戶端無法啟動
+大多數情況下，這是由於瀏覽器或作業系統版本過時造成的。
+請將瀏覽器和作業系統更新到最新版本，然後再試一次。
 
-Although this does not happen frequently, if your client will still not start after this, it is possible for the cache to be at fault.In this case, please try clearing your cache and then try again.
+儘管這種情況很少見，但如果仍然無法啟動，則您的快取可能是罪魁禍首。請清除瀏覽器快取並重試。
 
-## Pages cannot be loaded
-If your client does boot, but you get an error when trying to load a page, please check your network connection for errors.In addition, check that the server you are trying to access is not down.
+## 頁面無法載入
+如果出現用戶端啟動但無法載入頁面的錯誤，請檢查網路是否有問題。也要檢查伺服器是否當機。
 
-Although this does not happen frequently, cases where the cache is at fault can happen.In this case, please try clearing your cache and then try again.
+儘管這種情況很少見，但這可能是由快取引起的。請清除瀏覽器快取並重試。
 
-Any remaining problems are likely related to the server you are trying to access, so please contact its administrator.
+如果您仍然遇到問題，請聯絡您的伺服器管理員，因為這可能是伺服器問題。
 
-## The client is slow
-Please try the following:
+## 客戶端運作緩慢
+檢查網路服務供應商的故障或維護計劃，檢查網路通訊速度狀態和網路設置，並檢查伺服器端是否有任何問題或維護，然後嘗試或確認以下設定：
 
-- Activate "Reduce UI animations" in the client settings
-- Deactivate "Use blur effect for modals" in the client settings
-- Activate hardware acceleration in your browser's settings
-- Upgrade the specs of your used device
+1.Misskey Web的設定
 
-## Parts of the UI are weird (For example, the background is transparent)
-Broken UI display may be caused by the theme cache system when the UI is changed as part of an update. Pressing "Clear cache" in the settings will fix this.
+從選單中開啟設定，開啟客戶端設定的「一般」，然後嘗試以下設定：
+
+- 在外觀啟用「減少界面的動態視覺」
+- 在外觀停用「在 UI 上使用模糊效果」
+- 在外觀啟用「使用系統預設的字型」
+- 在外觀的「表情符號的風格」選擇「原生」（預設是Twemoji）
+
+2.網路瀏覽器設定
+- 在網頁瀏覽器設定中啟用硬體加速
+- 檢查您的網頁瀏覽器外掛程式和擴充功能設定或將其關閉
+- 檢查網頁瀏覽器的其他設定
+
+3.其他
+- 檢查您的電腦或智慧型手機的系統設置
+
+## Misskey Web UI 的一些顯示很奇怪（背景是透明的等）
+當UI因更新而修改時，由於主題的快取系統，可能會出現這樣的顯示。可以透過客戶端設定中的「清除快取資料」來修復此問題。
 
 ::: warning
-Specifically clear the "Client's" cache. Don't clear the "Browser's" cache.
+是清除「客戶端」的快取。請不要清除「瀏覽器」的快取。
 :::
 
-## The blinking light of a notification or Antenna won't go away
-A blinking light indicates unread content.In cases where this light won't go away, there is usually unread content that has been pushed away by new incoming content. If you believe to have read all content, but the light still won't go away (likely a bug), you can forcibly mark all content as read via the user settings.
+## 閃爍的通知、天線等不會消失
+閃爍表示有未讀內容。通常情況下，如果閃爍沒有消失，代表較早的時間仍有未讀內容。
+如果您認為已經閱讀了所有內容，但閃爍仍在繼續（可能是故障），您可以透過設定強制將所有內容標記為已讀。
 
-## The renote button is blocked out
-Followers-only notes cannot be renoted.
+## 無法轉發貼文
+僅限追隨者可見的貼文和私訊無法轉發。
 
-## Specific parts of the Misskey Web UI are not being displayed
-Problems like these can arise if you are using an Adblocker. For an optimized experience on Misskey, please turn it off.
+## 某些元素在 Misskey Web UI 上不可見
+如果您在網路瀏覽器上使用廣告攔截器等附加元件或擴充程序，則可能會出現此類問題。請檢查這些設定或將其關閉
 
-## Some parts of the Misskey Web UI are untranslated
-In most cases, this is simply a matter of the translation not having been done yet instead of being a bug.Please wait until the translation of this area has been completed. You can alternatively also [participate in translation](./misskey) yourself.
+## Misskey Web UI 上有未翻譯的部分。
+大多數情況下，這是由於 Misskey Web UI 沒有及時翻譯所致，因此不是故障。對不起，請稍等片刻，等待翻譯完成。
+
+如果您有興趣進一步了解 Misskey 的翻譯工作，當然也可以[參與翻譯](./misskey.html)。
