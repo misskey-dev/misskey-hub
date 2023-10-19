@@ -1,9 +1,7 @@
-# 靜默
+# 禁言
+禁言是可以對帳號設定的一種狀態。
 
-Silence is one of the states that an account can be set to.
+一旦帳戶被禁言，就無法將貼文的公開範圍設為公開，可選擇的是首頁、追隨者和指定使用者。 
+因此即使您被禁言，追隨者和您使用者頁面的直接訪客仍能查看您的貼文，但這些貼文不會在GTL（公開時間軸）或LTL（本地時間軸）顯示。
 
-When your account is silenced, you cannot set the visibility of your notes to Public.
-Home, Followers, and Direct are still selectable, so even if your account is silenced, followers and direct visitors to your page will still be able to view your posts.
-They will just not be able to view them in the GTL (Global Timeline) or LTL (Local Timeline).
-
-The silence status of an account is set by the instance moderators.
+帳戶的禁言狀態可由伺服器的審查員啟用和停用。

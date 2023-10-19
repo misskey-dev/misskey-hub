@@ -1,98 +1,138 @@
 # 小工具
+小工具是可以放置在 Misskey UI 上用於顯示資訊和執行操作的工具。
 
-A widget is a small display element that can be added to the Misskey UI to display and interact with information.
-By default they are displayed on the right side of the screen or accessed from the stack icon in the mobile web app navigation menu.
+若要編輯小工具，請切換到小工具編輯模式。切換方法因 UI 而異。
+在小工具編輯模式下，您可以新增、刪除和重新排列小工具，以及配置每個小工具的設定。
 
-To edit widgets, switch to widget edit mode at the bottom of the widget view. In widget edit mode you can add, delete, and reorder widgets.
+## 可用小工具列表
 
-After you close out of the widget layout editor, you can also configure settings for each widget's behavior.
+- 個人檔案
+- 伺服器資訊
+- 便利貼
+- 時間軸
+- 日曆
+- RSS 閱讀器
+- RSS 跑馬燈
+- 趨勢
+- 時鐘
+- 動態
+- 照片
+- 電子時鐘
+- UNIX 時鐘
+- 聯邦宇宙
+- 實例雲
+- 發文視窗
+- 幻燈片
+- 伺服器指標
+- 上線使用者
+- 佇列
+- 按鈕
+- AiScript 控制台
+- AiScript App
+- 小藍
+- 使用者列表
+- 點擊器
 
-## List of Available Widgets
+### 個人檔案
 
-### Notifications
+顯示名稱、使用者名稱、頭像和橫幅圖片。在使用多個帳戶時，可以更輕鬆地查看您使用的使用者名稱。
 
-Shows a list of your notifications. You can change the types of notifications shown by opening the notification widget menu. If you disable "User global settings" you can choose to only show certain types of notifications.
+### 伺服器資訊
 
-### Timeline
+顯示伺服器名稱、網域、圖示圖像和橫幅圖像。
 
-Display a timeline. You can choose from one of the standard timelines (Home, Local, Social, and Global) or one of your custom user [Lists](./list.md) or [Antennas](./antenna.md).
+### 便利貼
 
-### RSS Reader
+可以儲存文字。
 
-Displays a list of items from an RSS feed. You can provide any valid RSS feed URL in the configuration.
+### 時間軸
 
-### RSS-Ticker
+顯示時間軸。您可以在首頁、本地、社交和公開之間切換。
 
-Similar to the RSS Reader, but the ticker shows the feed as a scrolling ticker on a single line. There are also more options to customize how the the feed will be refreshed and displayed.
+### 日曆
 
-### Trending
+顯示今天的日期，以及以百分比形式顯示今天的年、月、日已經過得比例。包含在預設 UI 中。
 
-Displays trending [Hashtags](./hashtag.md) as well as statistics of how many users have mentioned it and a graph of that hashtag's activity.
+### RSS 閱讀器
 
-### Activity
+顯示 RSS 訂閱來源的標題。
 
-Displays a visualization of activity over time.
+### RSS 跑馬燈
 
-### Online Users
+以跑馬燈形式顯示 RSS 訂閱來源的標題。
 
-Displays the number of users that are active on this instance.
+### 趨勢
 
-### Photos
+顯示最近頻繁被使用的主題標籤。
 
-Displays a gallery of your recent photos.
+### 時鐘
 
-### Slideshow
+在類比時鐘上顯示目前時間。
 
-Displays a slideshow of photos one of your specified drive folders. To select the drive folder, left-click on the slideshow widget after you have exited the widget layout editor. Then select the checkbox of folders you want included in the slideshow and click the check mark to confirm.
+### 動態
 
-### Calendar
+以點的形式顯示活動狀態。
 
-Displays the current date as well as a graphic showing the date progression.
+### 照片
 
-### Clock
+顯示最近的雲端硬碟內容。
 
-Displays an analog clock. The analog clock has many options to customize its appearance.
+### 電子時鐘
 
-### Digital Clock
+在電子時鐘上顯示目前時間。
 
-Displays a digital clock.
+### Unix 時鐘
 
-### UNIX Clock
+以 UNIX 時間顯示目前時間。
 
-Displays the seconds elapsed since the UNIX Epoch (1970-01-01T00:00:00Z).
+### 聯邦宇宙
 
-### Federation
+顯示主要與之通訊的其他伺服器。
 
-List of federated instances and graphs of their recent activity.
+### 實例雲
 
-### Instance Cloud
+以球形方式顯示其他伺服器。
 
-An interactive animation that shows federated instances.
+### 發文視窗
 
-### Sticky Notes
+固定顯示發文視窗。
 
-A text area where you can jot down short notes for yourself. You can save your sticky note and it will be available wherever you access Misskey Web.
+### 幻燈片
 
-### Posting Form
+依序顯示雲端硬碟中的特定資料夾
 
-A widget form of the [Note](./note.md) composition menu.
+### 伺服器指標
 
-### Server Metrics
+顯示伺服器的CPU、記憶體、網路收發、儲存容量等。根據伺服器環境，可能無法顯示。
 
-A display of the server metrics. The type of metrics displayed can changed by clicking the arrows in the header of the widget.
+### 上線使用者
 
-### Job Queue
+顯示目前上線的使用者數。
 
-A display of the server job queue statistics.
+### 佇列
 
-### AiScript Console
+顯示從其他伺服器傳送和接收的貼文的佇列狀態。
 
-A widget version that you can use to test and execute [AiScript](../advanced/aiscript.md) programs. This is a widget version of the Scratchpad page accessible through the help menu.
+### 按鈕
 
-### Button
+顯示按鈕。將使用 AIScript 來描述該操作。
 
-An interactive button that when clicked runs your own custom [AiScript](../advanced/aiscript.md) program.
+### AiScript 控制台
 
-### Ai
+顯示可以執行 AiScript 的控制台。
 
-A digital version of the Misskey mascot, Ai, that will follow you around the site.
+### AiScript App
+
+使用 AIScript 原始碼顯示應用程式。使用者介面與 Misskey Play 相同。從 v13 版開始新增。
+
+### 小藍
+
+顯示小藍。視線會追隨滑鼠指標。
+
+### 使用者列表
+
+列出特定「清單」所包含的使用者。
+
+### 點擊器
+
+顯示餅乾。點擊/輕敲顯示的餅乾。

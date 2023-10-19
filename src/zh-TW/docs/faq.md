@@ -35,7 +35,7 @@ MisskeyHQ 有限公司是一家以營運 misskey.io 為宗旨的公司。因此�
 
 ## 如何刪除轉發
 點擊在轉發貼文時間顯示旁邊的「...」，點擊「取消轉發」。<br>
-有關轉發的更多信息，請參閱[此處](../docs/features/note.html#renote)。
+有關轉發的更多信息，請參閱[此處](./features/note.html#renote)。
 
 ## 不要在貼文中顯示 URL 的預覽
 MFM（Markup language For Misskey）是 Misskey 自己的標記語言，它有一種語法可以停用 URL 預覽。要了解更多信息，請參閱 MFM cheatsheet，在您所屬的伺服器上鍵入以下地址即可查看。 https://你的伺服器網址/mfm-cheat-sheet
@@ -44,7 +44,7 @@ MFM（Markup language For Misskey）是 Misskey 自己的標記語言，它有�
 只有您所屬伺服器的管理員可以新增、編輯或刪除自訂表情符號。如果您想這樣做，請直接聯絡您的伺服器管理員。
 
 ## 想開發 Bot
-可以使用 Misskey API 開發機器人。有關更多信息，請參閱[此處](../docs/api)。
+可以使用 Misskey API 開發機器人。有關更多信息，請參閱[此處](./api)。
 
 ## 貼文的翻譯功能使用哪種服務？
 可使用[DeepL翻譯](https://www.deepl.com/)。

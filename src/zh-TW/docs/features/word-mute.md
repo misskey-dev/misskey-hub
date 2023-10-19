@@ -1,23 +1,22 @@
-# 關鍵字靜音
+# 文字靜音
 
-Through setting up word mutes, you can make notes matching certain conditions not appear on your timeline anymore.
+如果設定了文字靜音，則符合條件的貼文將不再顯示。
 
-There are two types of word mutes: soft and hard. Below is an explanation of the setup process and effect of both.
+文字靜音有兩種類型：軟文字靜音和硬文字靜音。以下將解釋每個的設定方法和行為。
 
-## Soft Word Mute
+## 軟文字靜音
+軟文字靜音是在客戶端（app）端決定是否靜音的文字靜音。
 
-With soft mutes, the word mute is processed within the client (app) you are using.
+如果貼文滿足您設定的條件，它將被隱藏，並顯示訊息「（使用者名稱）說了些什麼」。
+按一下可顯示原始貼文。
 
-When a note meets the set conditions, it will be hidden behind text stating "(username) said something".  
-You can display the hidden note contents by clicking on this text.
+## 硬文字靜音
+跟天線的功能一樣，硬文字靜音讓伺服器確認新貼文是否靜音的條件，並將目標貼文排除在時間軸之外。
 
-## Hard Word Mute
+也就是說，硬文字靜音有以下特點：
 
-With hard mutes, the server judges whether the content of a new incoming note meets the set conditions similar to antennas, and will completely exclude it from your timeline if so.
+- 設定條件後，只有新貼文才會被靜音。
+- 即使您更改條件，過去硬靜音的貼文仍將保持靜音。
+- 時間線不會充滿「XX說了些什麼」。
+- 即使應用程式不支援軟靜音，也會應用硬靜音。
 
-To summarize, a hard word mute has the following features:
-
-- Only new notes created after configuration will be affected by the mute.
-- If the conditions are changed, previously hard muted notes will still remain muted.
-- Timelines will not be filled with "(...) said something".
-- Hard mutes will function even for apps without functionality for soft mutes.

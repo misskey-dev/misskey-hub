@@ -1,58 +1,53 @@
 # 分享表單
+Misskey Webの`/share`を開くと、共有用の投稿フォームを開くことができます。この共有フォームを利用すると、外部のWebページから、ページの内容をユーザーにMisskeyで共有してもらいたいときに便利です。
 
-When you open `/share` in Misskey Web, you open a sharing submission form. This sharing form is useful if you want users to share the content of your page with Misskey from an external web page.
+URLにクエリパラメータとして共有内容をはじめとするいくつかのオプションを指定できます。
 
-You can specify a number of options in the URL, including the shared content, as a query parameters.
-
-## Query Parameters
+## クエリパラメータ
 
 ::: tip
-All parameters are **optional**.
+すべてのパラメータは**オプション**であり、必須ではありません。
 :::
 
-| name | description |
+| 名前 | 説明 |
 | ---- | ---- |
-| `title` | title, will be inserted before the main body in brackets |
-| `text` | main body |
-| `url` | URL, inserted after the main body |
+| `title` | タイトル。本文の先頭に[ … ]と挿入されます。 |
+| `text` | 本文。 |
+| `url` | URL。本文の末尾に挿入されます。 |
 
-### Reply Information
+### リプライ情報
+以下のいずれかを指定すると、指定のノートに対するリプライにすることができます。
 
-You can make the note being composed a reply to a given note by specifying one of the following.
-
-| name | description |
+| 名前 | 説明 |
 | ---- | ---- |
-| `replyId` | ID of the note you are replying to |
-| `replyUri` | URL to reply to (specify the remote note object) |
+| `replyId` | リプライ先のノートID。 |
+| `replyUri` | リプライ先のURL。（リモートのノートオブジェクトを指定） |
 
-### Renote Information
+### Renote情報
+以下のいずれかを指定すると、指定のノートに対するRenote(引用)にすることができます。
 
-You can make the note being composed a renote of a given note by specifying one of the following.
-
-| name | description |
+| 名前 | 説明 |
 | ---- | ---- |
-| `renoteId` | ID of the note to renote |
-| `renoteUri` | URL of the note to renote (specify the remote note object) |
+| `renoteId` | Renote先のノートID。 |
+| `renoteUri` | Renote先のURL。（リモートのノートオブジェクトを指定） |
 
-### Publication Scope
+### 公開範囲
+以下のオプションで公開範囲の指定を行えます。
 
-The following options allow to select a scope.
-
-| name | description |
+| 名前 | 説明 |
 | ---- | ---- |
-| `visibility` | one of `public`, `home`, `followers`, `specified` |
+| `visibility` | `public`, `home`, `followers`, `specified` のいずれか |
 | `localOnly` | 0(false) or 1(true) |
-| `visibleUserIds` | target user IDs |
-| `visibleAccts` | target user [acct](../glossary.md#acct)s (comma separated) |
+| `visibleUserIds` | 対象ユーザーID(カンマ区切り) |
+| `visibleAccts` | 対象ユーザー[acct](../glossary.md#acct)(カンマ区切り) |
 
 ::: warning
-If `visibility` is set to `specified`, either `visibleUserIds` or `visibleAccts` must be set too.
+`visibility`に`specified`を指定した場合は、`visibleUserIds`または`visibleAccts`の指定も必要です。
 :::
 
-### Attachments
+### 添付ファイル
+以下のオプションで添付ファイルの指定を行えます。
 
-You can specify attachments with the following options.
-
-| name | description |
+| 名前 | 説明 |
 | ---- | ---- |
-| `fileIds` | IDs of files to be attached (comma separated) |
+| `fileIds` | 添付するファイルのID(カンマ区切り) |

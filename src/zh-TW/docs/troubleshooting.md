@@ -63,4 +63,4 @@ description: '如果您遇到問題，請先檢查此處。'
 ## Misskey Web UI 上有未翻譯的部分。
 大多數情況下，這是由於 Misskey Web UI 沒有及時翻譯所致，因此不是故障。對不起，請稍等片刻，等待翻譯完成。
 
-如果您有興趣進一步了解 Misskey 的翻譯工作，當然也可以[參與翻譯](./misskey.html)。
+如果您有興趣進一步了解 Misskey 的翻譯工作，當然也可以[參與翻譯](./misskey.html#翻譯文字)。

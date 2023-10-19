@@ -1,16 +1,13 @@
 # 外觀主題
 
-You can change the look and feel of the Missky client by applying a theme.
+テーマを設定して、Misskeyクライアントの見た目を変更できます。
 
-## Theme Settings
+## テーマの設定
+設定 > テーマ
 
-Settings > Themes
-
-## Creating a Theme
-
-The theme object code is written using JSON5.
-The theme has an object type like the one shown below.
-
+## テーマを作成する
+テーマコードはJSON5で記述されたテーマオブジェクトです。
+テーマは以下のようなオブジェクトです。
 ``` js
 {
 	id: '17587283-dd92-4a2c-a22c-be0637c9e22a',
@@ -37,47 +34,62 @@ The theme has an object type like the one shown below.
 
 ```
 
-* `id` ... Unique theme ID. A UUID is recommended.
-* `name` ... Theme name
-* `author` ... Theme author
-* `desc` ... Theme description (Object)
-* `base` ... light or dark theme
-	* Use `light` for a light theme and `dark` for a dark theme.
-	* The theme inherits the base theme that is set here.
-* `props` ... Theme style definition. Explained in the following sections.
+* `id` ... テーマの一意なID。UUIDをおすすめします。
+* `name` ... テーマ名
+* `author` ... テーマの作者
+* `desc` ... テーマの説明(オプション)
+* `base` ... 明るいテーマか、暗いテーマか
+	* `light`にすると明るいテーマになり、`dark`にすると暗いテーマになります。
+	* テーマはここで設定されたベーステーマを継承します。
+* `props` ... テーマのスタイル定義。これから説明します。
 
-### Theme Style Definition
-
-Define the theme style within the `props`.
-The keys are the names of CSS variables, and the values specify the contents.
-Furthermore, this `props` object inherits from the base theme.
-The base theme is [_light.json5] if the `base` of this theme is `light` and [_dark.json5] if `dark`.
-That is, if there is no `props` key named `panel` in this theme, then it is set to the `panel` in the base theme.
+### テーマのスタイル定義
+`props`下にはテーマのスタイルを定義します。
+キーがCSSの変数名になり、バリューで中身を指定します。
+なお、この`props`オブジェクトはベーステーマから継承されます。
+ベーステーマは、このテーマの`base`が`light`なら[_light.json5]で、`dark`なら[_dark.json5]です。
+つまり、このテーマ内の`props`に`panel`というキーが無くても、そこにはベーステーマの`panel`があると見なされます。
 
 [_light.json5]: https://github.com/misskey-dev/misskey/blob/develop/packages/frontend/src/themes/_light.json5
 [_dark.json5]:  https://github.com/misskey-dev/misskey/blob/develop/packages/frontend/src/themes/_dark.json5
 
-#### Value Syntax
-
-* Colors expressed with hexadecimal
-	* example: `#00ff00`
-* Colors expressed with `rgb(r, g, b)` format
-	* example: `rgb(0, 255, 0)`
-* Colors that contain alpha/transparency values expressed with `rgb(r, g, b, a)` format
-	* example: `rgba(0, 255, 0, 0.5)`
-* Other key value reference
-	* `@{key name}` is a reference to the value of another key. Replace `{key name}` with the name of the key you wish to reference.
-	* example: `@panel`
-* Constant (discussed below) reference
-	* `${constant name}` is a reference to a constant. Replace `{constant name}` with the name of the constant you with to reference.
-	* example: `$main`
-* Functions (discussed below)
+#### バリューで使える構文
+* 16進数で表された色
+	* 例: `#00ff00`
+* `rgb(r, g, b)`形式で表された色
+	* 例: `rgb(0, 255, 0)`
+* `rgb(r, g, b, a)`形式で表された透明度を含む色
+	* 例: `rgba(0, 255, 0, 0.5)`
+* 他のキーの値の参照
+	* `@{キー名}`と書くと他のキーの値の参照になります。`{キー名}`は参照したいキーの名前に置き換えます。
+	* 例: `@panel`
+* 定数(後述)の参照
+	* `${定数名}`と書くと定数の参照になります。`{定数名}`は参照したい定数の名前に置き換えます。
+	* 例: `$main`
+* 関数(後述)
 	* `:{関数名}<{引数}<{色}`
 
-#### Constants
+#### 定数
+「CSS変数として出力はしたくないが、他のCSS変数の値として使いまわしたい」値があるときは、定数を使うと便利です。
+キー名を`$`で始めると、そのキーはCSS変数として出力されません。
 
-Constants are useful when you have values that you do not want to output as CSS variables, but want to use as values for other CSS variables."I don't want to output it as a CSS variable, but I do want to use it as a value for other CSS variables.
+#### 関数
+「ボタンの上にカーソルを合わせたときだけ色を明るくしたい」のように、既存の色から少し変更した色を使いたい場合に、関数を使うと便利です。
 
-#### Functions
+`:{関数名}<{引数}<{色や他のキーの参照}`の形で使うことができます。
 
-WIP
+```js
+props: {
+	accent: '#86b300',
+	accentDarken: ':darken<10<#86b300',
+	accentLighten: ':lighten<10<@accent'
+}
+```
+
+##### 使用できる関数
+* `lighten` ... 渡された色の輝度(0~100)に対して引数(0~100)を加算した色を返します。
+* `darken` ... 渡された色の輝度(0~100)に対して引数(0~100)を減算した色を返します。
+* `alpha` ... 渡された色の透明度を引数(0.0~1.0)に設定した色を返します。
+	* 0.0のとき完全に透明、1.0で完全に不透明になります。
+* `hue` ... 渡された色の色相(-360~360)に対して引数(-360~360)の値だけ回転させた色を返します。
+* `saturate` ... 渡された色の彩度(0~100)に対して引数(0~100)を加算した色を返します。

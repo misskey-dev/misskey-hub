@@ -1,5 +1,5 @@
 ---
-description: 'Misskeyについてのドキュメントです。'
+description: '關於 Misskey 的說明文件。'
 ---
 
 # 關於 Misskey
@@ -43,12 +43,12 @@ Misskey 的所有原始碼均在開放原始碼許可證[AGPL](https://github.co
 
 ### 加入討論
 您也可以透過評論新功能或現有功能或報告錯誤來做出貢獻。
-此類討論可以在 [GitHub](https://github.com/misskey-dev) 或 [論壇](https://forum.misskey.io/) 進行。
+此類討論可以在 [論壇](https://github.com/misskey-dev/misskey/discussions) 進行。
 
 ### 翻譯文字
 Misskey 有多種語言版本（稱為 i18n - internationalization 的簡稱）。其原始語言基本上是日語，但已被志願者翻譯成其他語言。
 您也可以透過參與翻譯工作為 Misskey 做出貢獻。
-Misskey 使用一種名為[Crowdin](https://crowdin.com/project/misskey)的服務來管理翻譯工作。 
+Misskey 使用一種名為 [Crowdin](https://crowdin.com/project/misskey) 的服務來管理翻譯工作。 
 
 ### 發表您的想法
 除了報告錯誤之外，請分享您對 Misskey 的優點和令人愉快的方面的正面看法。這會鼓勵開發人員並間接為專案做出貢獻。
@@ -89,7 +89,7 @@ Misskist 是指使用 Misskey 的人。
 ### 如何建立伺服器？
 感謝您對創建 Misskey 伺服器的興趣。
 截至 2022 年，還沒有 Misskey 託管服務，因此建立伺服器需要一定的知識。
-有關如何建立伺服器的資訊請參考[這裡](/install.md)。
+有關如何建立伺服器的資訊請參考[這裡](./install.md)。
 
 ### 使用了哪些技術？
 隨著Misskey的發展，所使用的技術也發生了很大的變化。開發之初，我們使用的是 MySQL + PHP + jQuery，但現在我們使用的是以下技術
@@ -107,7 +107,7 @@ Misskist 是指使用 Misskey 的人。
 
 ### 有 iOS/Android 的 App 嗎？
 官方尚未為此類作業系統開發應用程序，但有一些第三方應用程式可供使用。
-請參閱[這裡](/apps.md)以獲取更多信息。
+請參閱[這裡](./apps.md)以獲取更多信息。
 
 不過，第三方應用程式在支援功能方面難免落後，因此如果沒有特別偏好，我們建議使用官方網路用戶端。
 Misskey 網頁用戶端相容於 PWA，因此可以像原生應用程式一樣運作。
