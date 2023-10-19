@@ -1,46 +1,46 @@
 # 管理自訂表情符號
 
-Custom emoji can be managed by administrators or moderators by going to the instance settings and then the custom emoji submenu.
-By default you will see a list of the current locally installed emoji.
-At the start this list will be empty, but you can add custom emoji in different ways.
+管理員或審查員可以透過前往實例設置，然後前往自訂表情符號子選單來管理自訂表情符號。
+預設情況下，您將看到目前本機安裝的表情符號清單。
+最初此列表沒有任何東西，但您可以透過不同的方式添加自訂表情符號。
 
-## Copying Emoji from another Instance
+## 從另一個實例複製表情符號
 
-Emoji can be easily copied from another instance.
-To do this, switch to the "remote" tab in the custom emoji settings.
-You can search emoji by name and/or host they are from.
+表情符號可以輕鬆地從另一個實例複製。
+為此，請切換到自訂表情符號設定中的「遠端」標籤。
+您可以按名稱和/或主機來搜尋表情符號。
 
-When you have found an emoji you want, click it to open a small menu which will allow you to import the emoji.
+當您找到所需的表情符號後，按一下它以開啟一個小選單，可以匯入表情符號。
 
-Please note that Emoji may be subject to copyright and you are responsible for checking whether you may legally use another emoji.
+請注意，表情符號可能受版權保護，您有責任檢查您是否可以合法使用其他表情符號。
 
-## Individual Emoji Import
+## 單獨的表情符號導入
 
-If you have an image file that you would like to turn into a custom emoji you can import the image as an emoji.
-This works just like attaching files to a note:
-You can choose to upload a new file, pick a file from your Misskey drive or upload a file from another URL.
+如果您有一個圖像檔案想要轉換為自訂表情符號，您可以將該圖像匯入為表情符號。
+這就像將檔案附加到貼文一樣：
+您可以選擇上傳新檔案、從 Misskey 雲端硬碟選擇檔案或從其他 URL 上傳檔案。
 
 ::: danger
-When you import emoji from your drive, the file will remain inside your drive.
-Misskey does not make a copy of this file so if you delete it, the emoji will be broken.
+當您從雲端硬碟匯入表情符號時，該檔案將保留在你的雲端硬碟中。
+Misskey 不會複製該檔案，因此如果刪除它，表情符號將會損壞。
 :::
 
-The emoji will be added to the instance and you will then be able to edit or delete it as usual.
+表情符號將被添加到實例中，然後您就可以像往常一樣編輯或刪除它。
 
-## Bulk Emoji import
+## 批次導入表情符號
 
-Emojis can be imported in bulk as packed ZIP files with a special format.
-This ability can be found in the three dots menu in the top right corner of the custom emoji menu.
+表情符號可以作為特殊格式的打包 ZIP 檔案批次匯入。
+此功能可以在自訂表情符號選單右上角的三點選單中找到。
 
 ::: warning
-Bulk emoji import may overwrite existing emoji or otherwise mess up your instance.
-Be sure to only import emoji from trusted sources, ideally only ones you exported yourself.
+批次表情符號匯入可能會覆寫現有的表情符號或以其他方式弄亂您的實例。
+請務必僅從可信來源匯入表情符號，最好是您自己匯出的表情符號。
 :::
 
-### Packed emoji format
+### 打包的表情符號格式
 
-At the top level is a file called `meta.json` which contains information about the emoji contained in the packed file.
-A type definition for this file would look like this, where `Meta` is the structure of the whole file.
+頂層是一個名為 `meta.json` 的文件，其中包含有關打包文件中表情符號的資訊。
+該文件的類型定義如下所示，其中 `Meta` 是整個文件的結構。
 
 ```typescript
 class Meta {
@@ -71,41 +71,40 @@ class Emoji {
 }
 ```
 
-The fields of `Meta` are currently not used or checked when importing emoji, except for the `emojis` field.
+匯入表情符號時，目前不使用或檢查 `Meta` 欄位， `emojis` 欄位除外。
 
-For each `Emoji`:
-- `downloaded`: should always be true. If the field is missing or not truthy, the emoji will not be imported.
-- `fileName`: name of the image file inside the packed file.
-- `emoji`: data associated with the emoji as it was stored in the database. Currently most of these fields are
-  not even checked for existence. The following are currently used:
-  - `name`: name of the emoji for the user, e.g. `blobfox` if a user should type in `:blobfox:` to get the emoji.
-    If a previous emoji with the same name exists, it **will be overwritten**!
-  - `category`: category of the emoji
-  - `aliases`: list of strings that should be added as aliases. The admin UI calls these "tags".
+每一個 `Emoji`:
+- `downloaded`: 應該永遠是 `true` 。如果該欄位缺失或 `false` ，則不會匯入表情符號。
+- `fileName`: 打包文件內圖像文件的名稱。
+- `emoji`: 與儲存在資料庫中的表情符號相關的資料。目前，大多數這些字段甚至沒有被檢查是否存在。目前使用的有以下幾種：
+  - `name`: 自訂表情符號的名稱，例如 `blobfox`。如果使用者輸入 `:blobfox:` 就會轉換為表情符號。
+    如果之前存在同名表情符號，它**將被覆蓋**！
+  - `category`: 表情符號的類別
+  - `aliases`: 應添加為別名的字串清單。管理 UI 將這些稱為「標籤」。
 
-## Editing and Deleting Emoji
+## 編輯和刪除表情符號
 
-The properties of an emoji can be edited by clicking it in the list of local emoji.
-When you click on a custom emoji, a dialog for editing the properties will open.
-This dialog will also allow you to delete an emoji.
+可以透過在本機表情符號清單中點選該表情符號來編輯該表情符號的屬性。
+當您按一下自訂表情符號時，將會開啟一個用於編輯屬性的對話方塊。
+此對話方塊還允許您刪除表情符號。
 
 ::: danger
-When you delete a custom emoji, old notes that contain it will still have the text name of the emoji in it.
-The emoji will no longer be rendered correctly.
+當您刪除自訂表情符號時，包含該表情符號的舊筆記中仍將包含該表情符號的文字名稱。
+表情符號將不再正確呈現。
 :::
 
-Note that remote emoji can not be edited or deleted.
+請注意，遠端表情符號無法編輯或刪除。
 
-Each emoji can have a name and a category and several tags.
-The category is used for structuring the emoji picker.
-Meanwhile the tags can be used as alternate names by which the emoji can be found when searching in the emoji picker.
+每個表情符號可以有一個名稱、一個類別和多個標籤。
+此類別用於建立表情符號選擇器。
+同時，標籤可以用作備用名稱，在表情符號選擇器中搜尋時可以透過這些名稱找到表情符號。
 
-When you are done editing, save your changes by clicking the check mark in the top right corner of the dialog.
+完成編輯後，透過點擊對話框右上角的複選標記來儲存變更。
 
-### Bulk Editing
+### 批次編輯
 
-Emoji can be edited in bulk by checking the box below the search field.
-With this enabled, clicking on an emoji will select it instead of opening the editing dialog.
+可以透過選取搜尋欄位下方的方塊來批次編輯表情符號。
+啟用此功能後，按一下表情符號將選擇它，而不是開啟編輯對話方塊。
 
-The Editing options will be displayed as buttons below the checkbox.
-To return to the normal behaviour just uncheck the box again.
+編輯選項將顯示為複選框下方的按鈕。
+若要恢復正常行為，只需再次取消選取該方塊即可。

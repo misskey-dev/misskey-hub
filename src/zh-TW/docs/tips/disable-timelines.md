@@ -1,10 +1,13 @@
 # 停用 LTL/STL/GTL
-In Misskey, it's possible to individually deactivate the LTL/STL/GTL.You can enable or disable these individual timelines via the instance control panel.
+Misskey 允許分別停用 LTL/STL/GTL。若要啟用/停用，請在伺服器控制面板進行設定。
 
-As all posts across your instance can be seen in both the LTL and STL, they have the advantage of making it easy for new users to find others that they are interested in without having to use the manual user search. At the same time however, this means that following other users to see their posts is less important and inappropriate posts may be shown to users more frequently. Additionally, the experience becomes more alike that of a Chatroom, which in turn may make it more difficult for new users to join in one conversations with those who have been taking part for a long time. As the weight of these advantages and disadvantages may vary from server to server, the choice of using or not using them has been left to each individual instance. If you feel like the demerits outweigh the merits, please consider deactivating these respective timelines.
+LTL 和 STL 的優點在於，新用戶無需搜尋用戶，因為他們可以看到該伺服器上所有人的貼文，從而更容易找到感興趣的用戶。
+但同時，它也有一些缺點，例如追隨功能利用率不高，不適當的貼文變得更加顯眼，像聊天般的性質會形成一個內部圈子，這反過來又會使新用戶更難加入。
+由於優點/缺點可能因伺服器而異，因此可以作為選項停用它。
+如果您認為弊大於利，請考慮停用這些時間軸。
 
 ::: warning
-Disabling timelines can lead to confusion and possibly to a short-time drop in users.Therefore, please carefully consider the effects of disabling a timeline, and explain the reasoning for doing so in advance, so that your users can prepare by e.g. following users they often talk with on the LTL/STL.
+停用可能會使用戶感到困惑，並在短期內減少用戶數量。因此，建議仔細考慮禁用的影響，並留出一定的時間提前解釋和安排後續工作。
 :::
 
-Additionally, Administrators / Moderators will be able to continue viewing these timelines even after they have been disabled.
+請注意，這些時間軸的停用狀態不適用於管理員/審查員，他們可以繼續使用這些時間軸。
