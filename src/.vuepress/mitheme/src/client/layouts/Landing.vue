@@ -188,10 +188,13 @@
 		<div class="supporters">
 			<div class="container">
 				<div class="title">{{ frontmatter.sections.sponsors.title }}</div>
-				<a style="display: block;" class="masknetwork" title="MaskNetwork" href="https://mask.io/" target="_blank"><img src="/sponsors/masknetwork.png" alt="MaskNetwork" style="width: 180px;"></a>
-				<a style="display: block;" class="rss3" title="RSS3" href="https://rss3.io/" target="_blank"><img src="/sponsors/rss3.svg" alt="RSS3" style="width: 130px;"></a>
-				<a style="display: block;" class="skeb" title="Skeb" href="https://skeb.jp/" target="_blank"><img src="/sponsors/skeb.svg" alt="Skeb" style="width: 180px;"></a>
-				<a style="display: block;" class="dcadvirth" title="DC Advirth" href="https://www.dotchain.ltd/advirth" target="_blank"><img src="/sponsors/dcadvirth.png" alt="DC Advirth" style="width: 100px;"></a>
+				<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); grid-gap: 24px; align-items: center; max-width: 1000px; margin: auto;">
+					<a :class="$style.suponserLogo" class="masknetwork" title="MaskNetwork" href="https://mask.io/" target="_blank"><img :class="$style.suponserLogoImg" src="/sponsors/masknetwork.png" alt="MaskNetwork"></a>
+					<a :class="$style.suponserLogo" class="rss3" title="RSS3" href="https://rss3.io/" target="_blank"><img :class="$style.suponserLogoImg" src="/sponsors/rss3.svg" alt="RSS3"></a>
+					<a :class="$style.suponserLogo" class="xserver" title="Xserver" href="https://www.xserver.ne.jp/" target="_blank"><img :class="$style.suponserLogoImg" src="/sponsors/xserver.png" alt="Xserver"></a>
+					<a :class="$style.suponserLogo" class="skeb" title="Skeb" href="https://skeb.jp/" target="_blank"><img :class="$style.suponserLogoImg" src="/sponsors/skeb.svg" alt="Skeb"></a>
+					<a :class="$style.suponserLogo" class="dcadvirth" title="DC Advirth" href="https://www.dotchain.ltd/advirth" target="_blank"><img :class="$style.suponserLogoImg" src="/sponsors/dcadvirth.png" alt="DC Advirth"></a>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -1102,5 +1105,13 @@ html.dark #root {
 	height: 600px;
 	border: none;
 	pointer-events: none;
+}
+
+.suponserLogo {
+	display: block;
+}
+
+.suponserLogoImg {
+	max-width: 100%;
 }
 </style>
