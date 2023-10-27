@@ -23,6 +23,11 @@ Cloudflare が最新の JavaScript を解釈せず、中のソースコードを
 ## bashスクリプトを使ったインストール
 [こちら](./install/bash.html)
 
+## Xserver VPSでインストール
+[Xserver VPS](https://vps.xserver.ne.jp/)では標準でMisskeyのアプリイメージが提供されているため、簡単にMisskeyサーバーを作成することが可能です。
+
+詳細については、[「Misskeyアプリイメージを利用する」](https://vps.xserver.ne.jp/support/manual/man_server_app_use_misskey.php)をご覧ください。
+
 ## 全部自力でインストール
 [基本編](./install/manual.html)\
 [Ubuntu版詳細説明](./install/ubuntu-manual.html)
