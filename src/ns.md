@@ -80,6 +80,8 @@ Misskey handles these kinds of messages specially, e.g. it will apply different 
 
 This field can only take the value of `true` (or be absent).
 
+<a name="isCat" />
+
 ## `isCat`
 
 - compact IRI: `misskey:isCat`
