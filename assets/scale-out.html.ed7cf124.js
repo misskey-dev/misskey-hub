@@ -1,0 +1,33 @@
+import{_ as a,o as n,c as e,e as s}from"./app.0e282d90.js";const i={},t=s(`<h1 id="meningkatkan-skala-peladen-misskey" tabindex="-1"><a class="header-anchor" href="#meningkatkan-skala-peladen-misskey" aria-hidden="true">#</a> Meningkatkan skala peladen Misskey</h1><p>Seiring bertambahnya jumlah pengguna dalam peladen instansimu, menjadi sebuah kebutuhan untuk meningkatkan meningkatkan spesifikasi mesin peladen atau meningkatkan jumlah mesin peladen untuk menanggung beban. Artikel ini akan menjelaskan tips untuk meningkatkan skala peladen Misskey kamu.</p><h2 id="replikasi-postgresql" tabindex="-1"><a class="header-anchor" href="#replikasi-postgresql" aria-hidden="true">#</a> Replikasi PostgreSQL</h2><p>Replikasi PostgreSQL memungkinkan kamu untuk mendistribusikan beban basis data ke beberapa mesin peladen. Untuk informasi mengenai replikasi, mohon merujuk ke dokumentasi PostgreSQL. Misskey mendukung replikasi PostgreSQL dan dapat dikonfigurasikan dalam berkas config sebagai berikut:</p><div class="language-yaml ext-yml line-numbers-mode"><pre class="language-yaml"><code><span class="token comment"># Atur ke \`true\` apabila replikasi digunakan</span>
+<span class="token key atrule">dbReplications</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+
+<span class="token comment"># Atur daftar replika \`read\` disini (berapapun jumlah replika yang dimiliki tulis di sini)</span>
+<span class="token key atrule">dbSlaves</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span>
+    <span class="token key atrule">host</span><span class="token punctuation">:</span> foo
+    <span class="token key atrule">port</span><span class="token punctuation">:</span> <span class="token number">5432</span>
+    <span class="token key atrule">db</span><span class="token punctuation">:</span> misskey
+    <span class="token key atrule">user</span><span class="token punctuation">:</span> xxxxx
+    <span class="token key atrule">pass</span><span class="token punctuation">:</span> xxxxx
+  <span class="token punctuation">-</span>
+    <span class="token key atrule">host</span><span class="token punctuation">:</span> bar
+    <span class="token key atrule">port</span><span class="token punctuation">:</span> <span class="token number">5432</span>
+    <span class="token key atrule">db</span><span class="token punctuation">:</span> misskey
+    <span class="token key atrule">user</span><span class="token punctuation">:</span> xxxxx
+    <span class="token key atrule">pass</span><span class="token punctuation">:</span> xxxxx
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>Dengan pengaturan seperti ini, ketika Misskey melakukan kueri baca ke basis data, Misskey akan secara acak memilih replika <code>read</code> dari <code>dbSlaves</code> yang dikonfigurasi dan mengirimkan kueri tersebut. Dengan begitu beban yang didapatkan oleh basis data terdistribusikan.</p><h2 id="membagi-redis-sesuai-perannya" tabindex="-1"><a class="header-anchor" href="#membagi-redis-sesuai-perannya" aria-hidden="true">#</a> Membagi Redis sesuai perannya</h2><p>Misskey menggunakan Redis untuk berbagai tujuan, diantaranya:</p><ul><li>Mengelola antrian kerja</li><li>Mengelola batasan rate</li><li>Caching</li><li>Menyimpan notifikasi dan informasi lainnya</li><li>Pub/Sub dari event global</li></ul><p>Misskey dapat dikonfigurasikan untuk menggunakan peladen Redis yang berbeda dalam setiap penggunaan. Dengan begitu beban peladen dapat terdistribusikan ke beberapa mesin peladen. Konfigurasikan pengaturan berikut dalam berkas config.</p><div class="language-yaml ext-yml line-numbers-mode"><pre class="language-yaml"><code><span class="token key atrule">redisForPubsub</span><span class="token punctuation">:</span>
+  <span class="token key atrule">host</span><span class="token punctuation">:</span> foo
+  <span class="token key atrule">port</span><span class="token punctuation">:</span> <span class="token number">6379</span>
+  <span class="token comment">#family: 0  # 0=Both, 4=IPv4, 6=IPv6</span>
+  <span class="token comment">#pass: example-pass</span>
+  <span class="token comment">#prefix: example-prefix</span>
+  <span class="token comment">#db: 1</span>
+
+<span class="token key atrule">redisForJobQueue</span><span class="token punctuation">:</span>
+  <span class="token key atrule">host</span><span class="token punctuation">:</span> bar
+  <span class="token key atrule">port</span><span class="token punctuation">:</span> <span class="token number">6379</span>
+  <span class="token comment">#family: 0  # 0=Both, 4=IPv4, 6=IPv6</span>
+  <span class="token comment">#pass: example-pass</span>
+  <span class="token comment">#prefix: example-prefix</span>
+  <span class="token comment">#db: 1</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>Untuk saat ini penambahan peladen Redis hanya dapat dikonfigurasikan untuk &#39;Pub/Sub dari Event Global&#39; dan &#39;Manajemen antrian kerja&#39; saja seperti contoh di atas.</p><h2 id="menonaktifkan-bagan-grafik-remote" tabindex="-1"><a class="header-anchor" href="#menonaktifkan-bagan-grafik-remote" aria-hidden="true">#</a> Menonaktifkan bagan grafik remote</h2><p>Apabila kamu tidak memerlukan bagan grafik seperti aktivitas untuk pengguna remote atau bagan grafik untuk peladen remote, kamu dapat menonaktifkannya dengan menonaktifkan &quot;Buat bagan untuk pengguna remote&quot; dan &quot;Buat bagan untuk peladen remote&quot; dari panel kendali. Dengan menonaktifkan bagan grafik tersebut, kinerja performa peladen akan meningkat.</p>`,14),l=[t];function p(u,r){return n(),e("div",null,l)}var d=a(i,[["render",p],["__file","scale-out.html.vue"]]);export{d as default};
