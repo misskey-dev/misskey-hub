@@ -60,6 +60,62 @@
 				},
 			},
 		},
+		channel: {
+			type: 'object',
+			properties: {
+				id: {
+					type: 'string',
+				},
+				createAt: {
+					type: 'string',
+				},
+				lastNotedAt: {
+					type: 'string',
+				},
+				name: {
+					type: 'string',
+				},
+				description: {
+					type: 'string',
+				},
+				bannerUrl: {
+					type: 'string',
+				},
+				isArchived: {
+					type: 'boolean',
+				},
+				notedCount: {
+					type: 'number',
+				},
+				usersCount: {
+					type: 'number',
+				},
+				isFollowing: {
+					type: 'boolean',
+				},
+				isFavorite: {
+					type: 'boolean',
+				},
+				userId: {
+					type: 'string',
+				},
+				pinnedNoteIds: {
+					type: 'array',
+					items: {
+						type: 'string',
+					},
+				},
+				color: {
+					type: 'string',
+				},
+				isSensitive: {
+					type: 'boolean',
+				},
+				allowRenoteToExternal: {
+					type: 'boolean',
+				},
+			}
+		}
 	},
 	errors: {
 		'1384574d-a912-4b81-8601-c7b1c4085df1': {
