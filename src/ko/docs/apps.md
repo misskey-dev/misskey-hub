@@ -9,7 +9,7 @@ Misskey를 사용하기 위한 앱(클라이언트)을 소개합니다.
 
 Misskey Web에 익숙해졌다면 유저가 개발하는 비공식 앱을 사용해보는 것도 좋습니다. 여기에는 널리 사용되는 앱을 알파벳 순으로 소개합니다.
 
-- **Kaiteki** (웹, Android, Windows, Linux): 광범위한 플랫폼에서 작동합니다. 마스토돈, Pleroma, 트위터에도 대응. [공식 사이트](https://craftplacer.moe/projects/kaiteki/) [소스 코드](https://github.com/Kaiteki-Fedi/Kaiteki)
+- **Kaiteki** (웹, Android, Windows, Linux): 광범위한 플랫폼에서 작동합니다. 마스토돈, Pleroma, 트위터에도 대응. [공식 사이트](https://kaiteki.app) [소스 코드](https://github.com/Kaiteki-Fedi/Kaiteki)
 - **Milktea** (Android): 타임라인과 특정 검색 결과를 탭에서 빠르게 액세스할 수 있습니다. 다른 사용자에게 별명을 지정할 수도 있습니다. [Google Play](https://play.google.com/store/apps/details?id=jp.panta.misskeyandroidclient) [소스 코드](https://github.com/pantasystem/Milktea)
 - **Miria** (iOS, Mac, Android): 탭에 커스텀 이모티콘을 설정하거나 MFM의 입력을 보조하는 등 Misskey에 특화된 독자 기능을 가지고 있습니다. [공식 사이트](https://shiosyakeyakini.info/miria_web/) [App Store](https://apps.apple.com/jp/app/miria/id6449201469) [Google Play](https://play.google.com/store/apps/details?id=info.shiosyakeyakini.miria) [소스 코드](https://github.com/shiosyakeyakini-info/miria)
 - **MissRirica** (iOS, Android): Misskey용 iOS/안드로이드 클라이언트. Misskey v13의 UI를 바탕으로, 푸시 알림을 수신할 수 있습니다. [App Store](https://apps.google.com/app/missririca/id1659214999) [Google Play](https://play.google.com/store/apps/details?id=space.riinswork.missririca) [소스 코드](https://github.com/fruitriin/missRirica-client)
