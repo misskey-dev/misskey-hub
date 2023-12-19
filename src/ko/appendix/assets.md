@@ -16,13 +16,13 @@ Misskey의 에셋은 **CC BY-NC-SA**에 따라 자유롭게 사용하실 수 있
 :::
 
 ## 로고
-<a class="asset" href="https://raw.githubusercontent.com/misskey-dev/assets/main/misskey.svg" target="_blank" download>
-<img src="https://raw.githubusercontent.com/misskey-dev/assets/main/misskey.svg">
+<a class="asset" href="https://assets.misskey-hub.net/public/misskey.svg" target="_blank" download>
+<img src="https://assets.misskey-hub.net/public/misskey.svg">
 </a>
 
 ## 아이콘
-<a class="asset" href="https://raw.githubusercontent.com/misskey-dev/assets/main/icon.png" target="_blank" download>
-<img src="https://raw.githubusercontent.com/misskey-dev/assets/main/icon.png">
+<a class="asset" href="https://assets.misskey-hub.net/public/icon.png" target="_blank" download>
+<img src="https://assets.misskey-hub.net/public/icon.png">
 </a>
 
 <style>

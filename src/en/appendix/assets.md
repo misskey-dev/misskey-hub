@@ -17,13 +17,13 @@ All assets are managed in [misskey-dev/assets](https://github.com/misskey-dev/as
 :::
 
 ## Logo
-<a class="asset" href="https://raw.githubusercontent.com/misskey-dev/assets/main/misskey.svg" target="_blank" download>
-<img src="https://raw.githubusercontent.com/misskey-dev/assets/main/misskey.svg">
+<a class="asset" href="https://assets.misskey-hub.net/public/misskey.svg" target="_blank" download>
+<img src="https://assets.misskey-hub.net/public/misskey.svg">
 </a>
 
 ## Icon
-<a class="asset" href="https://raw.githubusercontent.com/misskey-dev/assets/main/icon.png" target="_blank" download>
-<img src="https://raw.githubusercontent.com/misskey-dev/assets/main/icon.png">
+<a class="asset" href="https://assets.misskey-hub.net/public/icon.png" target="_blank" download>
+<img src="https://assets.misskey-hub.net/public/icon.png">
 </a>
 
 <style>
