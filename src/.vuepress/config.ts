@@ -62,7 +62,7 @@ export default defineUserConfig<DefaultThemeOptions>({
 	theme: localTheme({
 		repo: 'misskey-dev/misskey-hub',
 		docsDir: 'src',
-		logo: 'https://raw.githubusercontent.com/misskey-dev/assets/main/favicon.png',
+		logo: 'https://assets.misskey-hub.net/public/favicon.png',
 		locales: {
 			'/': {
 				selectLanguageName: '日本語',
