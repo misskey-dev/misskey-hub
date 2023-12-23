@@ -73,19 +73,16 @@ sections:
     title: "Sponsor"
 ---
 
-<!--
 <style>
-	.ai {
-		display: none;
-	}
 	.screenshot.desktop {
-		content: url("/screenshot-desktop-en.png");
+		content: url("/screenshot-desktop-it.png");
 	}
 	.screenshot.mobile {
-		content: url("/screenshot-mobile-en.png");
+		content: url("/screenshot-mobile-it.png");
 	}
+/**
 	.widgets {
-		content: url("/top-features-widgets-en.png");
+		content: url("/top-features-widgets-it.png");
 	}
+**/
 </style>
--->
