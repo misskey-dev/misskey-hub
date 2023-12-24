@@ -27,7 +27,7 @@ description: 'アプリケーションが要求する権限の一覧'
 | `write:votes`         | 投票する                     |
 | `read:pages`          | ページを見る                 |
 | `write:pages`         | ページを操作する             |
-| `write:page-likes`    | ページのいいねを操作する     |
 | `read:page-likes`     | ページのいいねを見る         |
-| `write:gallery-likes` | ギャラリーのいいねを操作する |
+| `write:page-likes`    | ページのいいねを操作する     |
 | `read:gallery-likes`  | ギャラリーのいいねを見る     |
+| `write:gallery-likes` | ギャラリーのいいねを操作する |
