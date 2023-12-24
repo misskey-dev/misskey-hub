@@ -1,6 +1,6 @@
 {
-	summary: '',
-	description: '',
+	summary: 'ログイン中のユーザーが作成したチャンネルの一覧を取得します。',
+	description: 'ログイン中のユーザーが作成したチャンネルの一覧を取得します。',
 	tags: [
 		'channels',
 	],
@@ -11,16 +11,19 @@
 			sinceId: {
 				type: 'string',
 				format: 'misskey:id',
+				description: '指定すると、idがその値よりも大きいチャンネルを返します。',
 			},
 			untilId: {
 				type: 'string',
 				format: 'misskey:id',
+				description: '指定すると、idがその値よりも小さいチャンネルを返します。',
 			},
 			limit: {
 				type: 'integer',
 				minimum: 1,
 				maximum: 100,
 				default: 5,
+				description: '取得するチャンネルの最大数。',
 			},
 		},
 		required: [],

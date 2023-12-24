@@ -1,6 +1,6 @@
 {
-	summary: '',
-	description: '',
+	summary: 'チャンネルを作成します。',
+	description: 'チャンネルを作成します。',
 	tags: [
 		'channels',
 	],
@@ -12,17 +12,20 @@
 				type: 'string',
 				minLength: 1,
 				maxLength: 128,
+				description: 'チャンネルの名前。',
 			},
 			description: {
 				type: 'string',
 				nullable: true,
 				minLength: 1,
 				maxLength: 2048,
+				description: 'チャンネルの説明。',
 			},
 			bannerId: {
 				type: 'string',
 				format: 'misskey:id',
 				nullable: true,
+				description: 'チャンネルのバナーに使用する、ドライブ上の画像ファイルのid。ログイン中のユーザー自身がアップロードしたものを指定してください。',
 			},
 		},
 		required: [
@@ -40,7 +43,7 @@
 		'cd1e9f3e-5a12-4ab4-96f6-5d0a2cc32050': {
 			id: 'cd1e9f3e-5a12-4ab4-96f6-5d0a2cc32050',
 			code: 'NO_SUCH_FILE',
-			description: '',
+			description: 'ファイルが存在しないか、ログイン中のユーザー以外によってアップロードされたものです。', 
 		},
 	},
 }

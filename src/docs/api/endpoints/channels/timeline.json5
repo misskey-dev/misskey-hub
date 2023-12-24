@@ -1,6 +1,6 @@
 {
-	summary: '',
-	description: '',
+	summary: 'チャンネルに投稿されたノートの一覧を取得します。',
+	description: 'チャンネルに投稿されたノートの一覧を取得します。',
 	tags: [
 		'notes',
 	],
@@ -11,26 +11,32 @@
 			channelId: {
 				type: 'string',
 				format: 'misskey:id',
+				description: 'チャンネルのid。',
 			},
 			limit: {
 				type: 'integer',
 				minimum: 1,
 				maximum: 100,
 				default: 10,
+				description: '取得するチャンネルの最大数。',
 			},
 			sinceId: {
 				type: 'string',
 				format: 'misskey:id',
+				description: '指定すると、idがその値よりも大きいノートを返します。',
 			},
 			untilId: {
 				type: 'string',
 				format: 'misskey:id',
+				description: '指定すると、idがその値よりも小さいノートを返します。',
 			},
 			sinceDate: {
 				type: 'integer',
+				description: 'エポック秒で日時を指定すると、その日時より後に作成されたノートを返します。',
 			},
 			untilDate: {
 				type: 'integer',
+				description: 'エポック秒で日時を指定すると、その日時より前に作成されたノートを返します。',
 			},
 		},
 		required: [
@@ -53,7 +59,7 @@
 		'4d0eeeba-a02c-4c3c-9966-ef60d38d2e7f': {
 			id: '4d0eeeba-a02c-4c3c-9966-ef60d38d2e7f',
 			code: 'NO_SUCH_CHANNEL',
-			description: '',
+			description: 'チャンネルが存在しません',
 		},
 	},
 }

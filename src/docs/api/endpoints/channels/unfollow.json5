@@ -1,6 +1,6 @@
 {
-	summary: '',
-	description: '',
+	summary: 'チャンネルのフォローを解除します。',
+	description: 'チャンネルのフォローを解除します。',
 	tags: [
 		'channels',
 	],
@@ -11,6 +11,7 @@
 			channelId: {
 				type: 'string',
 				format: 'misskey:id',
+				description: 'チャンネルのid。',
 			},
 		},
 		required: [
@@ -22,7 +23,7 @@
 		'19959ee9-0153-4c51-bbd9-a98c49dc59d6': {
 			id: '19959ee9-0153-4c51-bbd9-a98c49dc59d6',
 			code: 'NO_SUCH_CHANNEL',
-			description: '',
+			description: 'チャンネルが存在しません。',
 		},
 	},
 }
