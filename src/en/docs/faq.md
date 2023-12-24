@@ -24,5 +24,8 @@ Only administrators can add, edit or delete custom emoji. If you'd like to do ei
 ## "I want to develop a Bot."
 It is possible to develop a Bot using the Misskey API. Please, [see here](../docs/api).
 
-## Which service does the note translation function use?
+## "Which service does the note translation function use?"
 [DeepL](https://www.deepl.com/) is being used for this.
+
+## "How do you increase the base 100mb of storage for users?"
+Control Panel -> Roles -> Role template and type "Drive" into the search box. There you can set it for all users to be more. You can also while in that section, give set it higher for certain roles if need be.
