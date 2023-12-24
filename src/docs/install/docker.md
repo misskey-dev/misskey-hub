@@ -30,7 +30,7 @@ git checkout master
 ```sh
 cp .config/docker_example.yml .config/default.yml
 cp .config/docker_example.env .config/docker.env
-cp ./docker-compose.yml.example ./docker-compose.yml
+cp ./docker-compose_example.yml ./docker-compose.yml
 ```
 
 `default.yml`と`docker.env`をファイル内の説明に従って編集してください。  
