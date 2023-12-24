@@ -1,49 +1,68 @@
 ---
-description: 'If you run into a problem, please check this page first.'
+description: '如果遇到了问题，请先阅读这里。'
 ---
 
-# Troubleshooting
+# 故障排除
 ::: tip
-Please also use the [Frequently asked questions](./faq.md) page.
+也请参考[常见问题](./faq.md)页面。
 :::
 
-If you run into a problem, please check this page first. In the case that you can't find your problem here, or the steps described here don't solve your issue, please contact your server's administrator or [Report it as a bug](./report-issue).
+如果遇到了问题，请先在此页看看有没有解决方法。
 
-## The client does not start
-In most of the cases, this is due your used browser's or operating system's version being outdated. Please try updating your browser or operating system to the latest version and then try again.
+如果遇到的问题在此没有列出，又或者按照步骤操作后仍然不能解决问题，请联系服务器管理员，或者[向我们报告这个问题](./report-issue)。
 
-Although this does not happen frequently, if your client will still not start after this, it is possible for the cache to be at fault.In this case, please try clearing your cache and then try again.
+## 客户端无法启动
+大部份的原因是所用的浏览器或操作系统太旧了。将浏览器和操作系统更新到最新版本之后再试一试。
 
-## Pages cannot be loaded
-If your client does boot, but you get an error when trying to load a page, please check your network connection for errors.In addition, check that the server you are trying to access is not down.
+极少数的情况，如果客户端仍然无法启动，则可能是缓存有问题。请清除浏览器的缓存后再试一试。
 
-Although this does not happen frequently, cases where the cache is at fault can happen.In this case, please try clearing your cache and then try again.
+## 页面无法加载
+如果客户端能够启动，但是收到了页面无法加载的错误，请先检查网络状况。另外也需要检查下服务器是否运作正常。
 
-Any remaining problems are likely related to the server you are trying to access, so please contact its administrator.
+极少数的情况，缓存可能有问题。请清除浏览器的缓存后再试一试。
 
-## The client is slow
-Please try the following:
+如果还是有问题，则服务器可能出了什么错。请联系服务器管理员。
 
-- Activate "Reduce UI animations" in the client settings
-- Deactivate "Use blur effect for modals" in the client settings
-- Activate hardware acceleration in your browser's settings
-- Upgrade the specs of your used device
+## 客户端太慢了
+检查下 ISP 是否有故障或者维护计划，检查下网速和网络设定，确认下服务器是否有故障或者维护计划。如果都没有，则试试以下的设定：
+1：Misskey web 的设定
 
-## Parts of the UI are weird (For example, the background is transparent)
-Broken UI display may be caused by the theme cache system when the UI is changed as part of an update. Pressing "Clear cache" in the settings will fix this.
+在菜单里打开「设置」，从「客户端设置」里打开「常规设置」，然后试试下面的设定：
+- 打开「外观」下的「减少 UI 动画」选项
+- 关闭「外观」下的「对话框使用模糊效果」选项
+- 打开「外观」下的「使用系统默认字体」选项
+- 将「emoji 的样式」设置为「原生」
+
+请注意下面的选项可能会让 Misskey 的部分功能无法工作，但也可以试试：
+- 关闭「显示帖子」下的「启用 MFM 动画」选项
+
+2：浏览器的设定
+- 打开浏览器的硬件加速选项
+- 检查浏览器已经安装的扩展，如有需要将其关闭
+- 检查浏览器的其它设定
+
+3：其它设定
+- 检查使用的电脑或者手机的系统设定
+
+## Misskey web 的一部份 UI 显示得很奇怪（如背景是透明的之类）
+当因为更新而导致 UI 发生改变时，主题的缓存系统可能会导致这个问题。设置里的「清除缓存」可以解决这个问题。
 
 ::: warning
-Specifically clear the "Client's" cache. Don't clear the "Browser's" cache.
+注意是清除「客户端的」缓存，不是「浏览器的」缓存。
 :::
 
-## The blinking light of a notification or Antenna won't go away
-A blinking light indicates unread content.In cases where this light won't go away, there is usually unread content that has been pushed away by new incoming content. If you believe to have read all content, but the light still won't go away (likely a bug), you can forcibly mark all content as read via the user settings.
+## 通知或天线之类的有圆点一直在闪
+闪烁的圆点表示有未读的内容。如果闪烁的圆点一直不消失，一般来说这表示有消息还未读。
 
-## The renote button is blocked out
-Followers-only notes cannot be renoted.
+如果觉得已经读了所有的消息，但是这还是不消失（这可能是个 bug），可以在设定里将所有的通知或者帖子标记为已读。
 
-## Specific parts of the Misskey Web UI are not being displayed
-Problems like these can arise if you are using an Adblocker. For an optimized experience on Misskey, please turn it off.
+## 无法转帖
+公开范围为仅关注者及 DM 的帖子无法转帖。
 
-## Some parts of the Misskey Web UI are untranslated
-In most cases, this is simply a matter of the translation not having been done yet instead of being a bug.Please wait until the translation of this area has been completed. You can alternatively also [participate in translation](./misskey) yourself.
+## Misskey web 的 UI 不显示某些元素
+如果使用了广告拦截插件则可能出现这种问题。检查下插件的设置或者把它关掉。
+
+## Misskey UI 上有未翻译的部分
+大部份情况是因为 Misskey web UI 的翻译没有及时跟上。这不是 bug。在翻译完成之前请耐心等待。
+
+如果您对 Misskey 的翻译感兴趣并希望[成为一名译者](./misskey)，我们十分欢迎。
