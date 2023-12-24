@@ -5,4 +5,4 @@
 
 <MkInstances/>
 
-或者，您可以從[自動產生的伺服器列表](https://join.misskey.page/ja-JP/instances) 搜索伺服器。
+或者，您可以從[自動產生的伺服器列表](https://join.misskey.page/zh-TW/instances) 搜索伺服器。

@@ -57,6 +57,7 @@ export default defineUserConfig<DefaultThemeOptions>({
 		'/it/': { lang: 'it-IT', description: 'Sito ufficiale del progetto Misskey' },
 		'/pl/': { lang: 'pl-PL', description: 'Oficjalna strona projektu Misskey' },
 		'/zh-CN/': { lang: 'zh-CN', description: '开源分布式微博客平台 Misskey 的官方网站' },
+		'/zh-TW/': { lang: 'zh-TW', description: '開源分散式微網誌平台 Misskey 的官方網站' },
 	},
 
 	theme: localTheme({
@@ -600,7 +601,7 @@ export default defineUserConfig<DefaultThemeOptions>({
 				],
 			},
 			'/zh-TW/': {
-				selectLanguageName: '繁體中文',
+				selectLanguageName: '繁體中文（臺灣）',
 				contributorsText: '貢獻者',
 				lastUpdatedText: '編輯日期',
 				editLinkText: '編輯本頁面',
@@ -618,7 +619,7 @@ export default defineUserConfig<DefaultThemeOptions>({
 							'/zh-TW/docs/glossary',
 							'/zh-TW/docs/troubleshooting',
 							{
-								text: 'Features', children: [
+								text: '功能', children: [
 									'/zh-TW/docs/features/note',
 									'/zh-TW/docs/features/reaction',
 									'/zh-TW/docs/features/timeline',
