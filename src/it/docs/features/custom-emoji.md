@@ -8,4 +8,4 @@ Per usare un emoji personalizzato, utilizza il selettore di emoji, se è disponi
 
 Ogni volta che verrà trovata una parte di testo, ad esempio, identica a `:gattino_rosa:`, verrà sostituita con l'emoji corrispondente.
 
-Per scoprire quali emoji personalizzati siano disponibili nella tua istanza, visita la pagina `/emojis`.
+Per scoprire quali emoji personalizzati siano disponibili nella tua istanza, visita la pagina `/about#emojis`.
