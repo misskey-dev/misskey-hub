@@ -10,7 +10,7 @@ L'interfaccia web di Misskey è completamente statica e non necessita del server
 
 Però non tutta Misskey può essere "cachata", le API non devono esserlo. Dunque, devi configurare la seguente eccezione nella tua CDN:
 
-- Metti in cache tutte le richieste, tranne: `/api/*`.
+- Metti in cache tutte le richieste, tranne: `/api/*`, `/proxy/*`.
 
 ::: tip
 Non è necessario svuotare la cache quando aggiorni Misskey.
