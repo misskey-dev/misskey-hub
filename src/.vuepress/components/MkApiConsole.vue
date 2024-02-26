@@ -47,14 +47,29 @@ const params = ref();
 
 const endpointBody = {};
 if (props.def.req) {
+	const getDefault = function(type) {
+		return (
+			type === 'string' ? '' :
+			type === 'integer' ? 0 :
+			type === 'boolean' ? false :
+			type === 'array' ? [] :
+			type === 'object' ? {} :
+			null
+		);
+	}
 	for (const [k, v] of Object.entries(props.def.req.properties ?? {})) {
-		endpointBody[k] =
-			v.type === 'string' ? '' :
-			v.type === 'integer' ? 0 :
-			v.type === 'boolean' ? false :
-			v.type === 'array' ? [] :
-			v.type === 'object' ? {} :
-			null;
+		if (v.type === 'array' && 'items' in v) {
+			if (v.items.type === 'object'){
+				let itemProperty = [];
+				for (const [i, j] of Object.entries(v.items.properties)) {
+					itemProperty.push([i, getDefault(j.type)]);
+				}
+				let required = Object.fromEntries(new Map(itemProperty));
+				endpointBody[k] = [required];
+				continue;
+			}
+		}
+		endpointBody[k] = getDefault(v.type)
 	}
 }
 params.value = JSON5.stringify(endpointBody, null, 2);
