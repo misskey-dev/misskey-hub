@@ -22,7 +22,7 @@ All local users' posts that do not have the visibility of "Home" and all remote 
 
 ## Custom Timelines
 
-Misskey has other features where you can create timelines with more granularity. See [Lists](./list.md) and [Antennas](./antenna.md) for details.
+Misskey has other features where you can create timelines with more granularity. See [Antennas](./antenna.md) for details.
 
 ## Comparison
 
