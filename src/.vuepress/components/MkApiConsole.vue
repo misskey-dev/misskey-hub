@@ -57,7 +57,7 @@ if (props.def.req) {
 			null;
 	}
 }
-params.value = JSON5.stringify(endpointBody, null, 2);
+params.value = JSON.stringify(endpointBody, null, 2);
 
 const endpoint = ref(props.name);
 const host = ref(localStorage.getItem('host') ?? '');
@@ -85,6 +85,7 @@ function request() {
 			...JSON5.parse(params.value),
 			i: token.value && token.value.trim() !== '' ? token.value : undefined,
 		};
+
 		fetch(`https://${host.value}/api/${endpoint.value}`, {
 			method: 'POST',
 			body: JSON.stringify(data),
@@ -111,7 +112,8 @@ function request() {
 
 async function onSubmit() {
 	const _res = await request();
-	res.value = JSON5.stringify(_res, null, '\t');
+
+	res.value = JSON.stringify(_res, null, '\t');
 }
 </script>
 
