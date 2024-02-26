@@ -106,7 +106,7 @@ systemdは、Docker Hubにイメージを上げるまでもないものの、フ
 ## nginxを使うかどうか
 サーバー1台でMisskeyを構築する場合は、nginxの使用をお勧めします。
 
-ロードバランサーを設置する場合にはnginxをインストールせず、[Misskeyのnginx設定](https://github.com/misskey-dev/misskey/blob/develop/docs/examples/misskey.nginx)を参考にロードバランサーを設定するのがよいと思います。
+ロードバランサーを設置する場合にはnginxをインストールせず、[Misskeyのnginx設定](/ko/docs/admin/nginx.html)を参考にロードバランサーを設定するのがよいと思います。
 
 ## Add more swaps!
 スワップを設定している場合、メモリが合計で3GB以上でなければスクリプトが動作しないようになっています。

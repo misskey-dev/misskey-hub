@@ -7,7 +7,7 @@ Misskeyを簡単にインストールするためのシェルスクリプトが�
 また、アップデートスクリプトもあります。
 
 [v12の場合はこちら](https://github.com/joinmisskey/bash-install/blob/a096e874f93d493aa68975a31be9ce12d644e767/README.md)  
-[**English version**](./README.en.md)
+[**English version**](/en/docs/install/bash.md)
 
 ## ライセンス
 [MIT License](./LICENSE)
